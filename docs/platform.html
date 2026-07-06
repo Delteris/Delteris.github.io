@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Platform — WeldTrack by FacTrack</title>
+    <meta name="description" content="The full WeldTrack capability set: zero-friction work capture, dual project views, access control, qualification tracking, asset management, and data sovereignty.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <canvas id="network-canvas" aria-hidden="true"></canvas>
+
+    <nav aria-label="Main navigation">
+        <a href="index.html" class="logo" aria-label="FacTrack home">Fac<span>Track</span></a>
+
+        <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
+
+        <div class="nav-links" id="nav-links">
+            <a href="platform.html" aria-current="page">Platform</a>
+            <a href="index.html#security">Security</a>
+            <a href="deployment.html">Deployment</a>
+            <a href="deployment.html" class="btn-small">Contact Us Now</a>
+        </div>
+    </nav>
+
+    <header class="page-hero">
+        <div class="hero-content">
+            <p class="hero-eyebrow">Platform Capabilities</p>
+            <h1>Everything the Floor Needs.<br><span class="text-glow">Nothing It Doesn&rsquo;t.</span></h1>
+            <p class="hero-sub">Six capability pillars covering the full production loop &mdash; from the first pasted BOM to the final audit-ready ledger.</p>
+        </div>
+    </header>
+
+    <section class="container page-section">
+        <div class="feature-grid">
+
+            <article class="glass-card feature-block" id="capture">
+                <span class="feature-index">01</span>
+                <h3>Zero-Friction Work Capture</h3>
+                <p class="feature-lead">Built to get out of the worker&rsquo;s way &mdash; fast, precise, and highly practical.</p>
+                <ul class="feature-list">
+                    <li><strong>10-Second Navigation:</strong> A streamlined mobile-first interface gets operators to the right project step and inputting data in 10 seconds or less.</li>
+                    <li><strong>Universal Work Templates:</strong> Track more than welding. Define custom work types &mdash; fit-up, cutting, assembly &mdash; save them as organization-wide templates, and capture any floor activity without slowing the team down.</li>
+                    <li><strong>Pragmatic Parameter Tracking:</strong> Logs custom parameters and dates instantly, without bottlenecking the floor with digital signatures for routine entries.</li>
+                </ul>
+            </article>
+
+            <article class="glass-card feature-block" id="views">
+                <span class="feature-index">02</span>
+                <h3>One Project, Two Live Views</h3>
+                <p class="feature-lead">The tree and the flowchart are two windows onto the same project &mdash; switch whenever you want.</p>
+                <ul class="feature-list">
+                    <li><strong>Switch Views at Will:</strong> Every project is editable as a Tree or a Flowchart, toggled with one click. Edits in one view appear instantly in the other &mdash; no import, export, or conversion step.</li>
+                    <li><strong>Tree View:</strong> A clear, left-indented project tree for detailed and one-off structures.</li>
+                    <li><strong>Flowchart View:</strong> A visual editor for standardized, highly repeatable project structures.</li>
+                    <li><strong>One-Paste BOM Import:</strong> Copy your BOM straight out of Tekla or your CAD package and paste it into an Excel-like grid. WeldTrack auto-detects columns, maps every field, and builds your project structure in seconds. An afternoon of data entry becomes a single paste.</li>
+                </ul>
+            </article>
+
+            <article class="glass-card feature-block" id="management">
+                <span class="feature-index">03</span>
+                <h3>Management &amp; Access Control</h3>
+                <p class="feature-lead">Top-down control that stays clean as your operation grows.</p>
+                <ul class="feature-list">
+                    <li><strong>Anti-Bloat Manager Interface:</strong> The management app automatically hides any feature or data a user lacks permission to see &mdash; every screen stays clean and free of administrative clutter.</li>
+                    <li><strong>Live Project Editing:</strong> Modify in-progress projects by adding nodes or deleting empty ones. The system automatically locks and protects any node that already contains captured work.</li>
+                    <li><strong>Global Custom Roles:</strong> Create fully custom roles and manage access top-down, eliminating project-by-project permission headaches.</li>
+                    <li><strong>One-Click Document Generator:</strong> Pulls captured node data straight into your company&rsquo;s paperwork templates for immediate printing &mdash; reusable across one project or the entire organization.</li>
+                    <li><strong>Role-Sensitive Notifications:</strong> An in-app dashboard filters critical warnings &mdash; expirations, maintenance &mdash; strictly by role, keeping leaders informed without spamming phones.</li>
+                </ul>
+            </article>
+
+            <article class="glass-card feature-block" id="qualifications">
+                <span class="feature-index">04</span>
+                <h3>Qualifications &amp; Procedures</h3>
+                <p class="feature-lead">Deep, automatic tracking of the credentials that keep you compliant.</p>
+                <ul class="feature-list">
+                    <li><strong>Qualification Engine:</strong> Deep tracking for welder and non-welder qualifications. Automatically logs 6-month continuity from actual floor entries and warns before expirations.</li>
+                    <li><strong>End-to-End WPS/PQR Workflow:</strong> Define a preliminary WPS in the app, capture actual PQR parameters on the shop floor, import real values back, adjust ranges, and export a finalized WPS &mdash; with official files uploaded or linked at any stage.</li>
+                    <li><strong>Live WPQ Integration:</strong> Capture Welder Performance Qualification parameters on the floor and see them reflected in the management app instantly.</li>
+                    <li><strong>Fast Heat Propagation:</strong> Heat numbers are captured, linked to their parent MTRs, and automatically propagated down the project tree &mdash; full traceability without database bloat.</li>
+                    <li><strong>Strict Admin-Controlled Versioning:</strong> Every document, parameter, and consumable is versioned the moment it is captured. Records are locked against direct editing &mdash; strict compliance with no administrative bottleneck.</li>
+                </ul>
+            </article>
+
+            <article class="glass-card feature-block" id="assets">
+                <span class="feature-index">05</span>
+                <h3>Floor Asset &amp; Consumable Control</h3>
+                <p class="feature-lead">Proactive management of the tools and materials that keep the floor running.</p>
+                <ul class="feature-list">
+                    <li><strong>In-App Maintenance Hub:</strong> Four urgency tiers. Workers raise maintenance requests from the floor app; maintenance personnel manage the whole workflow from the management app.</li>
+                    <li><strong>Universal Machine Tracking:</strong> Certifications and maintenance schedules for any machine &mdash; not just welding gear &mdash; with attached certification documents and automated renewal alerts.</li>
+                    <li><strong>Consumable Batch Tracking:</strong> Granular inventory logging for storage and reheat rules, with customizable low-stock alerts.</li>
+                    <li><strong>On-Demand Offline Access:</strong> Workers save crucial WPS or construction plans with one click for instant access anywhere on the floor &mdash; even in total Wi-Fi dead zones.</li>
+                </ul>
+            </article>
+
+            <article class="glass-card feature-block" id="sovereignty">
+                <span class="feature-index">06</span>
+                <h3>Bulletproof Data Sovereignty</h3>
+                <p class="feature-lead">Enterprise-grade security without the enterprise IT headaches.</p>
+                <ul class="feature-list">
+                    <li><strong>On-Premise Appliance:</strong> Runs on a dedicated, containerized local server &mdash; fully insulated from forced OS updates and external cloud outages.</li>
+                    <li><strong>Absolute Data Ownership:</strong> Data stays on your physical hardware. Cancel anytime and retain permanent view-only access to all historical data for audits.</li>
+                    <li><strong>Optional Remote Access Module:</strong> Reach the management app or capture work from home, over mobile data, or in the field &mdash; as a small monthly add-on.</li>
+                    <li><strong>Post-Quantum-Safe Encryption:</strong> All internal network routing and the remote access module are secured with Post-Quantum Safe Encryption (PQSE).</li>
+                    <li><strong>Automated Local Backups:</strong> Customizable, frequent backups to isolated physical storage guarantee business continuity.</li>
+                </ul>
+            </article>
+
+        </div>
+    </section>
+
+    <section id="roadmap" class="container">
+        <div class="roadmap-panel">
+            <p class="eyebrow">Active Roadmap</p>
+            <h2>Software That Evolves With Your Operation</h2>
+            <p>We are dedicated to improving European manufacturing compliance and drastically reducing paperwork through an intuitive, visually clear platform. WeldTrack grows with your company &mdash; we ship updates continuously to reflect the realities of the shop floor. Upcoming milestones include full offline data capture and deep, granular Non-Destructive Testing (NDT) tracking.</p>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="cta-band">
+            <h2>Seen Enough?</h2>
+            <p>Deployment slots this quarter are limited and going fast. The teams that move now go live now &mdash; everyone else joins the queue.</p>
+            <div class="cta-group">
+                <a href="deployment.html" class="btn btn-primary">Secure Your Deployment Slot</a>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="logo">Fac<span>Track</span></div>
+            <p>Engineered for the European industrial sector.</p>
+            <p class="footer-cta-text">Ready to optimize your traceability?</p>
+            <a href="mailto:board@factrack.eu" class="btn btn-primary">Contact the Founders</a>
+        </div>
+
+        <div class="leadership-section">
+            <div class="leader-profile">
+                <strong>Flávio Brites</strong>
+                <span class="title">Co-Founder &amp; CEO</span>
+                <span class="credential">CTeSP Welding &amp; Metal Construction</span>
+            </div>
+            <div class="leader-profile">
+                <strong>Rodrigo Ferreira</strong>
+                <span class="title">Co-Founder &amp; CTO</span>
+                <span class="credential">MSc Telecom &amp; IT Engineering</span>
+            </div>
+        </div>
+
+        <div class="copyright">
+            &copy; 2026 FacTrack. All rights reserved. | <a href="https://www.factrack.eu">www.factrack.eu</a><br>
+            Lisbon, Portugal
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
