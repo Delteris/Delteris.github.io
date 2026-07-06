@@ -12,11 +12,10 @@
 </head>
 <body>
 
-    <!-- Ambient network background -->
     <canvas id="network-canvas" aria-hidden="true"></canvas>
 
     <nav aria-label="Main navigation">
-        <a href="#top" class="logo" aria-label="FacTrack home">Fac<span>Track</span></a>
+        <a href="index.html" class="logo" aria-label="FacTrack home">Fac<span>Track</span></a>
 
         <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
             <span class="nav-toggle-bar"></span>
@@ -25,11 +24,10 @@
         </button>
 
         <div class="nav-links" id="nav-links">
-            <a href="#platform">Platform</a>
-            <a href="#compliance">Compliance</a>
+            <a href="platform.html">Platform</a>
             <a href="#security">Security</a>
-            <a href="#roadmap">Roadmap</a>
-            <a href="#deployment" class="btn-small">Secure a Deployment</a>
+            <a href="deployment.html">Deployment</a>
+            <a href="deployment.html" class="btn-small">Contact Us Now</a>
         </div>
     </nav>
 
@@ -39,9 +37,10 @@
             <h1>Unbreakable Traceability.<br><span class="text-glow">Uninterrupted Production.</span></h1>
             <p class="hero-sub">WeldTrack is the on-premise quality assurance and project-workflow platform for heavy industry. It automates ISO and ASME&nbsp;IX compliance, captures shop-floor data in seconds, and keeps every byte of your manufacturing data on your own hardware.</p>
             <div class="cta-group">
-                <a href="#deployment" class="btn btn-primary">Secure a Deployment</a>
-                <a href="#platform" class="btn btn-secondary">Explore the Platform</a>
+                <a href="deployment.html" class="btn btn-primary">Secure a Deployment</a>
+                <a href="platform.html" class="btn btn-secondary">Explore the Platform</a>
             </div>
+            <p class="hero-urgency">Every appliance is installed on-site by our own engineers &mdash; deployment slots each quarter are strictly limited.</p>
             <ul class="hero-proof" aria-label="Key guarantees">
                 <li>100% on-premise appliance</li>
                 <li>Automated ISO &amp; ASME&nbsp;IX ledgers</li>
@@ -57,89 +56,54 @@
         </div>
     </section>
 
-    <section id="platform" class="container">
+    <section id="pillars" class="container">
         <div class="section-header">
-            <p class="eyebrow">Platform Capabilities</p>
+            <p class="eyebrow">Platform Overview</p>
             <h2>Built for the Floor. Trusted in the Boardroom.</h2>
-            <p class="subtitle">Six capability pillars, engineered so that operators move faster, managers see everything, and auditors leave satisfied.</p>
+            <p class="subtitle">Six capability pillars, engineered so operators move faster, managers see everything, and auditors leave satisfied.</p>
         </div>
 
-        <div class="feature-grid">
-
-            <article class="glass-card feature-block">
+        <div class="pillar-grid">
+            <a href="platform.html#capture" class="glass-card pillar-card">
                 <span class="feature-index">01</span>
                 <h3>Zero-Friction Work Capture</h3>
-                <p class="feature-lead">Built to get out of the worker&rsquo;s way &mdash; fast, precise, and highly practical.</p>
-                <ul class="feature-list">
-                    <li><strong>10-Second Navigation:</strong> A streamlined mobile-first interface gets operators to the right project step and inputting data in 10 seconds or less.</li>
-                    <li><strong>Universal Work Templates:</strong> Track more than welding. Define custom work types &mdash; fit-up, cutting, assembly &mdash; save them as organization-wide templates, and capture any floor activity without slowing the team down.</li>
-                    <li><strong>Pragmatic Parameter Tracking:</strong> Logs custom parameters and dates instantly, without bottlenecking the floor with digital signatures for routine entries.</li>
-                </ul>
-            </article>
-
-            <article class="glass-card feature-block">
+                <p>Operators reach the right project step and log data in 10 seconds or less &mdash; welding, fit-up, cutting, or any custom work type.</p>
+                <span class="pillar-link">See details &rarr;</span>
+            </a>
+            <a href="platform.html#views" class="glass-card pillar-card">
                 <span class="feature-index">02</span>
                 <h3>One Project, Two Live Views</h3>
-                <p class="feature-lead">The tree and the flowchart are two windows onto the same project &mdash; switch whenever you want.</p>
-                <ul class="feature-list">
-                    <li><strong>Switch Views at Will:</strong> Every project is editable as a Tree or a Flowchart, toggled with one click. Edits in one view appear instantly in the other &mdash; no import, export, or conversion step.</li>
-                    <li><strong>Tree View:</strong> A clear, left-indented project tree for detailed and one-off structures.</li>
-                    <li><strong>Flowchart View:</strong> A visual editor for standardized, highly repeatable project structures.</li>
-                    <li><strong>One-Paste BOM Import:</strong> Copy your BOM straight out of Tekla or your CAD package and paste it into an Excel-like grid. WeldTrack auto-detects columns, maps every field, and builds your project structure in seconds. An afternoon of data entry becomes a single paste.</li>
-                </ul>
-            </article>
-
-            <article class="glass-card feature-block">
+                <p>Edit any project as a Tree or a Flowchart and switch instantly. Paste a BOM straight from Tekla or CAD and build the structure in seconds.</p>
+                <span class="pillar-link">See details &rarr;</span>
+            </a>
+            <a href="platform.html#management" class="glass-card pillar-card">
                 <span class="feature-index">03</span>
                 <h3>Management &amp; Access Control</h3>
-                <p class="feature-lead">Top-down control that stays clean as your operation grows.</p>
-                <ul class="feature-list">
-                    <li><strong>Anti-Bloat Manager Interface:</strong> The management app automatically hides any feature or data a user lacks permission to see &mdash; every screen stays clean and free of administrative clutter.</li>
-                    <li><strong>Live Project Editing:</strong> Modify in-progress projects by adding nodes or deleting empty ones. The system automatically locks and protects any node that already contains captured work.</li>
-                    <li><strong>Global Custom Roles:</strong> Create fully custom roles and manage access top-down, eliminating project-by-project permission headaches.</li>
-                    <li><strong>One-Click Document Generator:</strong> Pulls captured node data straight into your company&rsquo;s paperwork templates for immediate printing &mdash; reusable across one project or the entire organization.</li>
-                    <li><strong>Role-Sensitive Notifications:</strong> An in-app dashboard filters critical warnings &mdash; expirations, maintenance &mdash; strictly by role, keeping leaders informed without spamming phones.</li>
-                </ul>
-            </article>
-
-            <article class="glass-card feature-block">
+                <p>Global custom roles, live project editing with automatic node locking, one-click document generation, and role-filtered notifications.</p>
+                <span class="pillar-link">See details &rarr;</span>
+            </a>
+            <a href="platform.html#qualifications" class="glass-card pillar-card">
                 <span class="feature-index">04</span>
                 <h3>Qualifications &amp; Procedures</h3>
-                <p class="feature-lead">Deep, automatic tracking of the credentials that keep you compliant.</p>
-                <ul class="feature-list">
-                    <li><strong>Qualification Engine:</strong> Deep tracking for welder and non-welder qualifications. Automatically logs 6-month continuity from actual floor entries and warns before expirations.</li>
-                    <li><strong>End-to-End WPS/PQR Workflow:</strong> Define a preliminary WPS in the app, capture actual PQR parameters on the shop floor, import real values back, adjust ranges, and export a finalized WPS &mdash; with official files uploaded or linked at any stage.</li>
-                    <li><strong>Live WPQ Integration:</strong> Capture Welder Performance Qualification parameters on the floor and see them reflected in the management app instantly.</li>
-                    <li><strong>Fast Heat Propagation:</strong> Heat numbers are captured, linked to their parent MTRs, and automatically propagated down the project tree &mdash; full traceability without database bloat.</li>
-                    <li><strong>Strict Admin-Controlled Versioning:</strong> Every document, parameter, and consumable is versioned the moment it is captured. Records are locked against direct editing &mdash; strict compliance with no administrative bottleneck.</li>
-                </ul>
-            </article>
-
-            <article class="glass-card feature-block">
+                <p>Automatic 6-month continuity tracking, an end-to-end WPS/PQR workflow, live WPQ capture, and heat propagation down the project tree.</p>
+                <span class="pillar-link">See details &rarr;</span>
+            </a>
+            <a href="platform.html#assets" class="glass-card pillar-card">
                 <span class="feature-index">05</span>
                 <h3>Floor Asset &amp; Consumable Control</h3>
-                <p class="feature-lead">Proactive management of the tools and materials that keep the floor running.</p>
-                <ul class="feature-list">
-                    <li><strong>In-App Maintenance Hub:</strong> Four urgency tiers. Workers raise maintenance requests from the floor app; maintenance personnel manage the whole workflow from the management app.</li>
-                    <li><strong>Universal Machine Tracking:</strong> Certifications and maintenance schedules for any machine &mdash; not just welding gear &mdash; with attached certification documents and automated renewal alerts.</li>
-                    <li><strong>Consumable Batch Tracking:</strong> Granular inventory logging for storage and reheat rules, with customizable low-stock alerts.</li>
-                    <li><strong>On-Demand Offline Access:</strong> Workers save crucial WPS or construction plans with one click for instant access anywhere on the floor &mdash; even in total Wi-Fi dead zones.</li>
-                </ul>
-            </article>
-
-            <article class="glass-card feature-block">
+                <p>A 4-tier maintenance hub, certification tracking for any machine, batch-level consumable inventory, and one-click offline document access.</p>
+                <span class="pillar-link">See details &rarr;</span>
+            </a>
+            <a href="platform.html#sovereignty" class="glass-card pillar-card">
                 <span class="feature-index">06</span>
                 <h3>Bulletproof Data Sovereignty</h3>
-                <p class="feature-lead">Enterprise-grade security without the enterprise IT headaches.</p>
-                <ul class="feature-list">
-                    <li><strong>On-Premise Appliance:</strong> Runs on a dedicated, containerized local server &mdash; fully insulated from forced OS updates and external cloud outages.</li>
-                    <li><strong>Absolute Data Ownership:</strong> Data stays on your physical hardware. Cancel anytime and retain permanent view-only access to all historical data for audits.</li>
-                    <li><strong>Optional Remote Access Module:</strong> Reach the management app or capture work from home, over mobile data, or in the field &mdash; as a small monthly add-on.</li>
-                    <li><strong>Post-Quantum-Safe Encryption:</strong> All internal network routing and the remote access module are secured with Post-Quantum Safe Encryption (PQSE).</li>
-                    <li><strong>Automated Local Backups:</strong> Customizable, frequent backups to isolated physical storage guarantee business continuity.</li>
-                </ul>
-            </article>
+                <p>A containerized on-premise appliance, absolute data ownership, post-quantum-safe encryption, and automated local backups.</p>
+                <span class="pillar-link">See details &rarr;</span>
+            </a>
+        </div>
 
+        <div class="section-footer-cta">
+            <a href="platform.html" class="btn btn-secondary">Explore the Full Platform</a>
         </div>
     </section>
 
@@ -175,54 +139,15 @@
         </div>
     </section>
 
-    <section id="roadmap" class="container">
-        <div class="roadmap-panel">
-            <p class="eyebrow">Active Roadmap</p>
-            <h2>Software That Evolves With Your Operation</h2>
-            <p>We are dedicated to improving European manufacturing compliance and drastically reducing paperwork through an intuitive, visually clear platform. WeldTrack grows with your company &mdash; we ship updates continuously to reflect the realities of the shop floor. Upcoming milestones include full offline data capture and deep, granular Non-Destructive Testing (NDT) tracking.</p>
-        </div>
-    </section>
-
-    <section id="deployment" class="container">
-        <div class="section-header">
-            <p class="eyebrow">Get Started</p>
-            <h2>Secure a Deployment</h2>
-            <p class="subtitle">A structured, low-friction path from first conversation to a live appliance on your floor.</p>
-        </div>
-
-        <div class="deploy-steps">
-            <div class="glass-card deploy-step">
-                <span class="step-number">1</span>
-                <h3>Scoping Session</h3>
-                <p>A focused call with our founders to map your project structures, compliance requirements, and floor workflows &mdash; and confirm WeldTrack fits your operation.</p>
+    <section id="cta" class="container">
+        <div class="cta-band">
+            <p class="eyebrow">Deployment Calendar</p>
+            <h2>Demand Is Outpacing Our Calendar</h2>
+            <p>Every WeldTrack appliance is delivered, installed, and configured on-site by our own team &mdash; which means we take a strictly limited number of deployments per quarter, and the calendar is filling fast. Companies that reach out this quarter deploy this quarter. After that, the queue is measured in months.</p>
+            <div class="cta-group">
+                <a href="deployment.html" class="btn btn-primary">Secure Your Deployment Slot</a>
             </div>
-            <div class="glass-card deploy-step">
-                <span class="step-number">2</span>
-                <h3>On-Site Installation</h3>
-                <p>Our team delivers and configures the hardware-secured server appliance directly at your facility. A formal agreement guarantees absolute legal and industrial data confidentiality.</p>
-            </div>
-            <div class="glass-card deploy-step">
-                <span class="step-number">3</span>
-                <h3>Onboarding &amp; Go-Live</h3>
-                <p>We import your first projects, configure roles and templates with your managers, and train floor personnel &mdash; production continues uninterrupted throughout.</p>
-            </div>
-        </div>
-
-        <div class="glass-card deploy-guarantees">
-            <div class="grid-2 deploy-grid">
-                <div>
-                    <h3>Zero Lock-In Risk</h3>
-                    <p>Your data lives on your hardware from day one. Cancel at any time and retain permanent view-only access to all historical records for audits &mdash; no hostage data, ever.</p>
-                </div>
-                <div>
-                    <h3>Founding Partner Advantages</h3>
-                    <p>Early deployment partners secure lifetime priority support, the Secure Remote Access module free of charge, and unmetered user onboarding for all active personnel at implementation.</p>
-                </div>
-            </div>
-            <div class="deploy-cta">
-                <a href="mailto:board@factrack.eu?subject=WeldTrack%20Deployment" class="btn btn-primary">Secure a Deployment</a>
-                <p class="deploy-note">Direct line to the founders &mdash; no sales layers, no call queues.</p>
-            </div>
+            <p class="deploy-note">Direct line to the founders &mdash; no sales layers, no call queues.</p>
         </div>
     </section>
 
