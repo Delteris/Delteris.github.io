@@ -1,6 +1,0 @@
-Update this github pages website, this has to be professional and ready to get sales B2B with management, upper management and C-suite. Make it stable and work well on mobile devices and laptops.
-Update the features with the feature list in the PDF (#3b82f6)
-Update the blue colour to match the one on the pdf.
-Secure a deployment instead of pilot. Make it good.
-QR code integration can be removed it isn't an available feature yet.
-FacGuard is an openziti zero trust PQS network overlay multitenancy and secure.
