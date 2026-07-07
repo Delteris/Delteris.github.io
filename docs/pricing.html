@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing — WeldTrack by FacTrack</title>
+    <meta name="description" content="Transparent WeldTrack pricing for heavy industry: one flat monthly price, enterprise-grade software, military-level security, and excellent support. No hidden fees, ever.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <canvas id="network-canvas" aria-hidden="true"></canvas>
+
+    <nav aria-label="Main navigation">
+        <a href="index.html" class="logo" aria-label="FacTrack home">Fac<span>Track</span></a>
+
+        <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
+
+        <div class="nav-links" id="nav-links">
+            <a href="platform.html">Platform</a>
+            <a href="index.html#security">Security</a>
+            <a href="pricing.html" aria-current="page">Pricing</a>
+            <a href="deployment.html">Deployment</a>
+            <a href="deployment.html" class="btn-small">Contact Us Now</a>
+        </div>
+    </nav>
+
+    <header class="page-hero">
+        <div class="hero-content">
+            <p class="hero-eyebrow">Pricing</p>
+            <h1>Priced in the Open.<br><span class="text-glow">No Hidden Fees.</span></h1>
+            <p class="hero-sub">Enterprise-grade software and military-level security shouldn&rsquo;t come with a mystery invoice. One flat monthly price, every add-on published in plain euros, and direct support from the people who built the platform &mdash; so you can budget the whole thing before you ever contact us.</p>
+        </div>
+    </header>
+
+    <!-- ============================ Tiers ============================ -->
+    <section class="container" id="plans">
+        <div class="section-header">
+            <p class="eyebrow">Plans</p>
+            <h2>One Plan Available Today. Two on the Way.</h2>
+            <p class="subtitle">Every WeldTrack plan is a fully on-premise appliance installed on-site by our own engineers &mdash; no cloud tier, no watered-down edition.</p>
+        </div>
+
+        <div class="pricing-grid">
+
+            <!-- Lite — coming soon -->
+            <article class="price-card soon" aria-label="Lite plan, coming soon">
+                <span class="price-badge">Coming Soon</span>
+                <h3 class="price-name">Lite</h3>
+                <div class="price-amount-row">
+                    <span class="price-amount price-amount-tba">TBA</span>
+                </div>
+                <p class="price-includes">Right-sized for smaller shops</p>
+                <p class="price-blurb">A leaner tier for single-cell teams and smaller fabrication shops that want the same sovereign appliance and security, scoped to a smaller floor.</p>
+                <ul class="feature-list price-feature-list">
+                    <li>Features list coming soon</li>
+                </ul>
+                <span class="price-cta price-cta-soon" aria-disabled="true">Coming soon</span>
+            </article>
+
+            <!-- Standard — available now -->
+            <article class="price-card featured" aria-label="Standard plan, available now">
+                <span class="price-badge price-badge-live">Available Now</span>
+                <h3 class="price-name">Standard</h3>
+                <div class="price-amount-row">
+                    <span class="price-amount">&euro;880</span>
+                    <span class="price-per">/ month</span>
+                </div>
+                <p class="price-includes"><strong>50 workers</strong> included</p>
+                <p class="price-blurb">The complete WeldTrack platform, installed and supported end to end. Everything the floor and the boardroom need, at one predictable price.</p>
+                <ul class="feature-list price-feature-list">
+                    <li><strong>Full platform</strong> &mdash; all six capability pillars, no feature gating</li>
+                    <li><strong>On-site installation</strong>, onboarding &amp; floor training</li>
+                    <li>Automated <strong>ISO &amp; ASME&nbsp;IX</strong> compliance ledgers</li>
+                    <li><strong>FacGuard</strong> zero-trust, post-quantum-safe networking</li>
+                    <li>Automated local backups &amp; absolute data sovereignty</li>
+                    <li><strong>Direct founder support</strong> &mdash; no ticket queues, no sales layers</li>
+                </ul>
+                <a href="deployment.html" class="price-cta price-cta-primary">Secure Your Deployment</a>
+            </article>
+
+            <!-- Premium — coming soon -->
+            <article class="price-card soon" aria-label="Premium plan, coming soon">
+                <span class="price-badge">Coming Soon</span>
+                <h3 class="price-name">Premium</h3>
+                <div class="price-amount-row">
+                    <span class="price-amount price-amount-tba">TBA</span>
+                </div>
+                <p class="price-includes">Built for scale and excellence</p>
+                <p class="price-blurb">Coming soon</p>
+                <ul class="feature-list price-feature-list">
+                    <li>Features list coming soon</li>
+                </ul>
+                <span class="price-cta price-cta-soon" aria-disabled="true">Coming soon</span>
+            </article>
+
+        </div>
+
+        <p class="price-footnote">Prices are per appliance, per month, excluding VAT. Hardware and on-site installation are arranged during your scoping session.</p>
+    </section>
+
+    <!-- ============================ Add-ons ============================ -->
+    <section class="container" id="addons">
+        <div class="section-header">
+            <p class="eyebrow">Add-Ons</p>
+            <h2>Scale On Your Terms &mdash; Every Price Published</h2>
+            <p class="subtitle">Add only what you need, when you need it. No bundles you&rsquo;ll never use, no surprise line items at renewal.</p>
+        </div>
+
+        <div class="addon-grid">
+            <div class="glass-card addon-card">
+                <h3 class="addon-name">Remote Access Module</h3>
+                <p class="addon-price">&euro;200<span class="addon-per">/ month</span></p>
+                <p class="addon-desc">Reach the management app or capture work from home, over mobile data, or in the field &mdash; through a post-quantum-safe encrypted tunnel.</p>
+            </div>
+            <div class="glass-card addon-card">
+                <h3 class="addon-name">Additional Workers</h3>
+                <p class="addon-price">&euro;90<span class="addon-per">/ 10 workers</span></p>
+                <p class="addon-desc">Grow past your included 50 in clean blocks of ten. Add seats as the floor scales &mdash; the same flat rate every time.</p>
+            </div>
+            <div class="glass-card addon-card">
+                <h3 class="addon-name">Remote Bandwidth</h3>
+                <p class="addon-price">&euro;20<span class="addon-per">/ 100&nbsp;GB</span></p>
+                <p class="addon-desc">Top up remote-access data whenever you need it. Pay for what you use, in transparent 100&nbsp;GB increments.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================ No hidden fees ============================ -->
+    <section class="container" id="transparency">
+        <div class="no-fees-panel">
+            <p class="eyebrow">Total Cost, No Surprises</p>
+            <h2>What You Won&rsquo;t Find on Your Invoice</h2>
+            <p class="no-fees-intro">The industry standard is enterprise software with enterprise-grade opacity: per-audit charges, forced upgrade cycles, and quotes that only appear after three sales calls. We priced WeldTrack the way finance actually wants to buy it.</p>
+            <ul class="no-fees-grid" aria-label="Fees we don't charge">
+                <li>No per-audit or per-report fees</li>
+                <li>No forced upgrade charges</li>
+                <li>No cloud or usage surcharges</li>
+                <li>No price gauging increases </li>
+                <li>No lock-in &mdash; cancel anytime, keep view-only access for audits</li>
+                <li>No opaque &ldquo;enterprise&rdquo; quote &mdash; the number is right here</li>
+            </ul>
+            <p class="no-fees-close">Enterprise-grade software. Military-level security. Excellent support. At a price you can put in a budget line today.</p>
+        </div>
+    </section>
+
+    <!-- ============================ CTA ============================ -->
+    <section class="container" id="cta">
+        <div class="cta-band">
+            <p class="eyebrow">Deployment</p>
+            <h2>Ready When You Are</h2>
+            <p>Deployment slots each quarter are strictly limited because our engineers install every appliance on-site. Contact us today to talk pricing for your floor and ensure your spot in the queue.</p>
+            <div class="cta-group">
+                <a href="deployment.html" class="btn btn-primary">Secure Your Deployment</a>
+                <a href="mailto:board@factrack.eu?subject=WeldTrack%20Pricing" class="btn btn-secondary">Contact Us Now</a>
+            </div>
+            <p class="deploy-note">Contact the founders &mdash; no sales layers, no call queues.</p>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="logo">Fac<span>Track</span></div>
+            <p>Engineering the technology for Europe's future.</p>
+            <p class="footer-cta-text">Ready to optimize your traceability?</p>
+            <a href="mailto:board@factrack.eu" class="btn btn-primary">Contact the Founders</a>
+        </div>
+
+        <div class="leadership-section">
+            <div class="leader-profile">
+                <strong>Flávio Brites</strong>
+                <span class="title">Co-Founder &amp; CEO</span>
+                <span class="credential">CTeSP Welding &amp; Metal Construction</span>
+            </div>
+            <div class="leader-profile">
+                <strong>Rodrigo Ferreira</strong>
+                <span class="title">Co-Founder &amp; CTO</span>
+                <span class="credential">MSc Telecom &amp; IT Engineering</span>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>© 2026 FacTrack. All rights reserved. | factrack.eu</p>
+            <p>Portugal&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>    
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
