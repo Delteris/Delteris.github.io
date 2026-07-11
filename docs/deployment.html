@@ -3,116 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Secure Your Deployment — Elenchon by Delteris</title>
-    <meta name="description" content="Secure a Elenchon deployment: a structured path from scoping call to a live on-premise appliance on your factory floor. Slots per quarter are limited.">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <title>Deployment | Elenchon by Delteris</title>
+    <meta name="description" content="Secure a Elenchon deployment. Every appliance is delivered, installed, and configured on-site by our own engineers.">
+    <link rel="canonical" href="https://delteris.com/deployment.html">
+
+    <link rel="icon" type="image/png" href="./logos/Delteris.png">
+    <link rel="apple-touch-icon" href="./logos/Delteris.png">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://delteris.com/deployment.html">
+    <meta property="og:title" content="Deployment | Elenchon by delteris">
+    <meta property="og:description" content="Secure a Elenchon deployment. Every appliance is delivered, installed, and configured on-site by our own engineers.">
+    <meta property="og:image" content="https://delteris.com/logos/Delteris.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Deployment",
+      "url": "https://delteris.com/deployment.html",
+      "publisher": { "@id": "https://delteris.com/#organization" }
+    }
+    </script>
+
+    <link rel="stylesheet" href="./style.css">
+    <script src="./main.js" defer></script>
 </head>
 <body>
-
     <canvas id="network-canvas" aria-hidden="true"></canvas>
 
-    <nav aria-label="Main navigation">
-        <a href="index.html" class="logo" aria-label="Delteris home">Fac<span>Track</span></a>
-
-        <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+    <nav>
+        <a href="/" class="logo" style="display: flex; align-items: center; gap: 0.6rem; text-decoration: none;">
+            <img src="./logos/Delteris.png" alt="Delteris Logo" style="height: 32px; width: auto; object-fit: contain;">
+            <span>D<span style="color: var(--accent-blue);">elteris</span></span>
+        </a>
+        <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-label="Open menu">
             <span class="nav-toggle-bar"></span>
             <span class="nav-toggle-bar"></span>
             <span class="nav-toggle-bar"></span>
         </button>
-
         <div class="nav-links" id="nav-links">
             <a href="platform.html">Platform</a>
             <a href="index.html#security">Security</a>
             <a href="pricing.html">Pricing</a>
             <a href="deployment.html" aria-current="page">Deployment</a>
-            <a href="mailto:contact@delteris.com?subject=Elenchon%20Deployment" class="btn-small">Contact Us Now</a>
+            <a href="contact.html" class="btn btn-small">Contact Us Now</a>
         </div>
     </nav>
 
     <header class="page-hero">
         <div class="hero-content">
-            <p class="hero-eyebrow">Deployment Program</p>
-            <h1>Secure a <br><span class="text-glow"> Deployment.</span></h1>
+            <span class="hero-eyebrow">Deployment Program</span>
+            <h1 class="text-glow">Secure a <br>Deployment.</h1>
             <p class="hero-sub">Every Elenchon appliance is delivered, installed, and configured on-site by our own engineers. That hands-on standard is why deployments per quarter are limited.</p>
-            <div class="cta-group">
-                <a href="mailto:contact@delteris.com?subject=Elenchon%20Deployment" class="btn btn-primary">Contact Us Now</a>
+            <div class="cta-group" style="margin-top: 2rem;">
+                <a href="contact.html" class="btn btn-primary">Contact Us Now</a>
             </div>
         </div>
     </header>
 
-    <section class="container page-section">
-        <div class="section-header">
-            <p class="eyebrow">How It Works</p>
-            <h2>From First Call to Live Floor</h2>
-            <p class="subtitle">A structured, low-friction path &mdash; your production never stops while we work.</p>
-        </div>
+    <section class="page-section container" style="margin-bottom: 4rem;">
+        <div class="dark-panel">
+            <div class="section-header">
+                <span class="eyebrow">How It Works</span>
+                <h2 class="text-glow">From First Call to Live Floor</h2>
+                <p class="subtitle">A structured, low-friction path — your production never stops while we work.</p>
+            </div>
 
-        <div class="deploy-steps">
-            <div class="glass-card deploy-step">
-                <span class="step-number">1</span>
-                <h3>Scoping Session</h3>
-                <p>A focused call with our founders to map your project structures, compliance requirements, and floor workflows &mdash; and confirm Elenchon fits your operation.</p>
+            <div class="deploy-steps">
+                <div class="deploy-step">
+                    <span class="step-number">1</span>
+                    <h3>Scoping Session</h3>
+                    <p>A focused call with our founders to map your project structures, compliance requirements, and floor workflows — and confirm Elenchon fits your operation.</p>
+                </div>
+                <div class="deploy-step">
+                    <span class="step-number">2</span>
+                    <h3>On-Site Installation</h3>
+                    <p>Our team delivers and configures the hardware-secured server appliance directly at your facility. A formal agreement guarantees absolute legal and industrial data confidentiality.</p>
+                </div>
+                <div class="deploy-step">
+                    <span class="step-number">3</span>
+                    <h3>Onboarding & Go-Live</h3>
+                    <p>We import your first projects, configure roles and templates with your managers, and train floor personnel — production continues uninterrupted throughout.</p>
+                </div>
             </div>
-            <div class="glass-card deploy-step">
-                <span class="step-number">2</span>
-                <h3>On-Site Installation</h3>
-                <p>Our team delivers and configures the hardware-secured server appliance directly at your facility. A formal agreement guarantees absolute legal and industrial data confidentiality.</p>
-            </div>
-            <div class="glass-card deploy-step">
-                <span class="step-number">3</span>
-                <h3>Onboarding &amp; Go-Live</h3>
-                <p>We import your first projects, configure roles and templates with your managers, and train floor personnel &mdash; production continues uninterrupted throughout.</p>
-            </div>
-        </div>
 
-        <div class="glass-card deploy-guarantees">
-            <div class="grid-2 deploy-grid">
+            <div class="deploy-guarantees grid-2 align-center deploy-grid">
                 <div>
                     <h3>Zero Lock-In Risk</h3>
-                    <p>Your data lives on your hardware from day one. Cancel at any time and retain permanent view-only access to all historical records for audits &mdash; no hostage data, ever.</p>
+                    <p>Your data lives on your hardware from day one. Cancel at any time and retain permanent view-only access to all historical records for audits — no hostage data, ever.</p>
                 </div>
                 <div>
                     <h3>Limited Capacity, By Design</h3>
-                    <p>We don&rsquo;t ship boxes and wish you luck. Every deployment gets our engineers on your floor, which caps how many we take per quarter. Contact us today to ensure your spot in the queue &mdash; when the quarter&rsquo;s slots are gone, they&rsquo;re gone.</p>
+                    <p>We don’t ship boxes and wish you luck. Every deployment gets our engineers on your floor, which caps how many we take per quarter. Contact us today to ensure your spot in the queue — when the quarter’s slots are gone, they’re gone.</p>
                 </div>
             </div>
+
             <div class="deploy-cta">
-                <a href="mailto:contact@delteris.com?subject=Elenchon%20Deployment" class="btn btn-primary">Secure Your Deployment</a>
-                <p class="deploy-note">Contact the founders &mdash; no sales layers, no call queues.</p>
+                <a href="contact.html" class="btn btn-primary">Secure Your Deployment</a>
+                <p class="deploy-note">Contact the founders — no sales layers, no call queues.</p>
             </div>
         </div>
     </section>
 
-    <footer id="contact">
+    <footer>
         <div class="footer-content">
-            <div class="logo">Fac<span>Track</span></div>
+            <h2 class="logo">D<span>elteris</span></h2>
             <p>Engineering the technology for Europe's future.</p>
             <p class="footer-cta-text">Ready to optimize your traceability?</p>
-            <a href="mailto:contact@delteris.com" class="btn btn-primary">Contact the Founders</a>
+            <a href="contact.html" class="btn btn-primary">Contact the Founders</a>
         </div>
-
         <div class="leadership-section">
             <div class="leader-profile">
                 <strong>Flávio Brites</strong>
-                <span class="title">Co-Founder &amp; CEO</span>
-                <span class="credential">CTeSP Welding &amp; Metal Construction</span>
+                <span class="title">Co-Founder & CEO</span>
+                <span class="credential">CTeSP Welding & Metal Construction</span>
             </div>
             <div class="leader-profile">
                 <strong>Rodrigo Ferreira</strong>
-                <span class="title">Co-Founder &amp; CTO</span>
-                <span class="credential">MSc Telecom &amp; IT Engineering</span>
+                <span class="title">Co-Founder & CTO</span>
+                <span class="credential">MSc Telecom & IT Engineering</span>
             </div>
         </div>
-
         <div class="copyright">
-            <p>© 2026 Delteris. All rights reserved. | delteris.com</p>
-            <p>Portugal&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>    
+            <p>© 2026 Delteris. All rights reserved. | <a href="https://delteris.com">delteris.com</a></p>
+            <p>Portugal</p>
         </div>
     </footer>
-
-    <script src="main.js"></script>
 </body>
 </html>

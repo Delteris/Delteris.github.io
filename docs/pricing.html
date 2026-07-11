@@ -4,214 +4,208 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pricing | Elenchon by Delteris</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Transparent, flat-rate pricing for the Elenchon on-premise QA platform. Enterprise-grade software with zero hidden fees.">
+    <link rel="canonical" href="https://delteris.com/pricing.html">
+
+    <link rel="icon" type="image/png" href="./logos/Delteris.png">
+    <link rel="apple-touch-icon" href="./logos/Delteris.png">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://delteris.com/pricing.html">
+    <meta property="og:title" content="Pricing | Elenchon by Delteris">
+    <meta property="og:description" content="Transparent, flat-rate pricing for the Elenchon on-premise QA platform. Enterprise-grade software with zero hidden fees.">
+    <meta property="og:image" content="https://delteris.com/logos/Delteris.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Pricing",
+      "url": "https://delteris.com/pricing.html",
+      "publisher": { "@id": "https://delteris.com/#organization" }
+    }
+    </script>
+
+    <link rel="stylesheet" href="./style.css">
+    <script src="./main.js" defer></script>
 </head>
 <body>
-    
-    <canvas id="network-canvas"></canvas>
+    <canvas id="network-canvas" aria-hidden="true"></canvas>
 
     <nav>
-        <a href="index.html" class="logo">Fac<span>Track</span></a>
-        
+        <a href="/" class="logo" style="display: flex; align-items: center; gap: 0.6rem; text-decoration: none;">
+            <img src="./logos/Delteris.png" alt="Delteris Logo" style="height: 32px; width: auto; object-fit: contain;">
+            <span>D<span style="color: var(--accent-blue);">elteris</span></span>
+        </a>
         <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-label="Open menu">
             <span class="nav-toggle-bar"></span>
             <span class="nav-toggle-bar"></span>
             <span class="nav-toggle-bar"></span>
         </button>
-
         <div class="nav-links" id="nav-links">
             <a href="platform.html">Platform</a>
             <a href="index.html#security">Security</a>
             <a href="pricing.html" aria-current="page">Pricing</a>
             <a href="deployment.html">Deployment</a>
-            <a href="deployment.html" class="btn btn-small">Contact Us Now</a>
+            <a href="contact.html" class="btn btn-small">Contact Us Now</a>
         </div>
     </nav>
 
-    <div class="page-hero">
+    <header class="page-hero">
         <div class="hero-content">
-            <h1>Priced in the Open.<br><span class="text-glow">No Hidden Fees.</span></h1>
+            <h1 class="text-glow">Priced in the Open.<br>No Hidden Fees.</h1>
             <p class="hero-sub">Enterprise-grade software and military-level security shouldn’t come with a mystery invoice. One flat monthly price, every add-on published in plain euros, and direct support from the people who built the platform — so you can budget the whole thing before you ever contact us.</p>
         </div>
-    </div>
+    </header>
 
-    <div class="container">
-    
-        <div class="page-section">
-            <div class="section-header">
-                <h2>Plans</h2>
-                <p class="subtitle">One Plan Available Today. Two on the Way.</p>
-                <p class="subtitle" style="margin-top: 1rem;">Every Elenchon plan is a fully on-premise appliance installed on-site by our own engineers — no cloud tier, no watered-down edition.</p>
-            </div>
-
-            <div class="grid-2">
-
-                <div class="glass-card" style="opacity: 0.6;">
-                    <span class="feature-index">Coming Soon</span>
-                    <h3>Lite</h3>
-                    <p class="hero-urgency" style="margin-top: 0.5rem; font-size: 1.5rem;">TBA</p>
-                    <p class="feature-lead" style="margin-top: 0.5rem; font-weight: 600;">Right-sized for smaller shops</p>
-                    <p class="feature-lead">A leaner tier for single-cell teams and smaller fabrication shops that want the same sovereign appliance and security, scoped to a smaller floor.</p>
-
-                    <ul class="feature-list">
-                        <li>Features list coming soon</li>
-                    </ul>
-                    
-                    <div style="margin-top: 2rem;">
-                        <button class="btn btn-secondary" disabled style="width: 100%; opacity: 0.5; cursor: not-allowed;">Coming soon</button>
-                    </div>
-                </div>
-
-                <div class="glass-card" style="border-color: rgba(59, 130, 246, 0.5); transform: translateY(-5px); box-shadow: 0 10px 30px rgba(59, 130, 246, 0.1);">
-                    <span class="feature-index">Available Now</span>
-                    <h3>Standard</h3>
-                    <p class="hero-urgency" style="margin-top: 0.5rem; font-size: 2rem; color: #fff;">€880 <span style="font-size: 1rem; color: var(--text-muted); font-weight: 400;">/ month</span></p>
-                    <p class="feature-lead" style="margin-top: 0.5rem; font-weight: 600;">50 workers included</p>
-                    <p class="feature-lead">The complete Elenchon platform, installed and supported end to end. Everything the floor and the boardroom need, at one predictable price.</p>
-
-                    <ul class="feature-list">
-                        <li><strong>Full platform</strong> — all six capability pillars, no feature gating</li>
-                        <li><strong>On-site installation</strong>, onboarding & floor training</li>
-                        <li><strong>Automated ISO & ASME IX</strong> compliance ledgers</li>
-                        <li><strong>Prakton zero-trust</strong>, post-quantum-safe networking</li>
-                        <li><strong>Automated local backups</strong> & absolute data sovereignty</li>
-                        <li><strong>Direct founder support</strong> — no ticket queues, no sales layers</li>
-                    </ul>
-
-                    <div style="margin-top: 2rem;">
-                        <a href="deployment.html" class="btn btn-primary" style="display: block; width: 100%;">Secure Your Deployment</a>
-                    </div>
-                </div>
-
-                <div class="glass-card" style="opacity: 0.6;">
-                    <span class="feature-index">Coming Soon</span>
-                    <h3>Premium</h3>
-                    <p class="hero-urgency" style="margin-top: 0.5rem; font-size: 1.5rem;">TBA</p>
-                    <p class="feature-lead" style="margin-top: 0.5rem; font-weight: 600;">Built for scale and excellence</p>
-                    <p class="feature-lead">Coming soon</p>
-
-                    <ul class="feature-list">
-                        <li>Features list coming soon</li>
-                    </ul>
-
-                    <div style="margin-top: 2rem;">
-                        <button class="btn btn-secondary" disabled style="width: 100%; opacity: 0.5; cursor: not-allowed;">Coming soon</button>
-                    </div>
-                </div>
-
-            </div>
-
-            <p style="text-align: center; color: var(--text-muted); font-size: 0.85rem; margin-top: 2.5rem;">Prices are per appliance, per month, excluding VAT. Hardware and on-site installation are arranged during your scoping session.</p>
+    <section class="page-section container" style="padding-top: 0;">
+        <div class="section-header">
+            <span class="eyebrow">Plans</span>
+            <h2>One Plan Available Today. Two on the Way.</h2>
+            <p class="subtitle">Every Elenchon plan is a fully on-premise appliance installed on-site by our own engineers — no cloud tier, no watered-down edition.</p>
         </div>
 
+        <div class="pricing-grid">
 
-        <div class="page-section">
-            <div class="section-header">
-                <h2>Add-Ons</h2>
-                <p class="subtitle">Scale On Your Terms — Every Price Published</p>
-                <p class="subtitle" style="margin-top: 1rem;">Add only what you need, when you need it. No bundles you’ll never use, no surprise line items at renewal.</p>
-            </div>
-
-            <div class="grid-2">
-                <div class="glass-card">
-                    <h3>Remote Access Module</h3>
-                    <p class="hero-urgency" style="margin-top: 0; margin-bottom: 1rem;">€200 / month</p>
-                    <p class="feature-lead">Reach the management app or capture work from home, over mobile data, or in the field — through a post-quantum-safe encrypted tunnel. Includes free 100GB of Bandwidth.</p>
-                </div>
-
-                <div class="glass-card">
-                    <h3>Additional Workers</h3>
-                    <p class="hero-urgency" style="margin-top: 0; margin-bottom: 1rem;">€90 / month — 10 workers</p>
-                    <p class="feature-lead">Grow past your included 50 in clean blocks of ten. Add seats as the floor scales — the same flat rate every time.</p>
-                </div>
-
-                <div class="glass-card">
-                    <h3>Remote Bandwidth</h3>
-                    <p class="hero-urgency" style="margin-top: 0; margin-bottom: 1rem;">€30 / 100 GB</p>
-                    <p class="feature-lead">Top up or add a monthly recurring payment for remote-access data whenever you need it. Pay for what you use, in transparent 100 GB increments.</p>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="page-section">
-            <div class="section-header">
-                <h2>One-Time Setup & Hardware</h2>
-                <p class="subtitle">Transparent implementation costs. No hardware markups, no surprise integration fees.</p>
-            </div>
-
-            <div class="grid-2">
-                <div class="glass-card">
-                    <h3>On-Site Deployment</h3>
-                    <p class="hero-urgency" style="margin-top: 0; margin-bottom: 1rem;">€850 / one-time</p>
-                    <p class="feature-lead">Physical delivery, secure network integration, and full Phrakton appliance configuration at your facility by our engineering team.</p>
-                </div>
-
-                <div class="glass-card">
-                    <h3>Floor Training</h3>
-                    <p class="hero-urgency" style="margin-top: 0; margin-bottom: 1rem;">€850 / one-time</p>
-                    <p class="feature-lead">Mandatory hands-on training for your operators and managers to ensure zero-friction adoption from day one.</p>
-                </div>
-
-                <div class="glass-card">
-                    <h3>Server Appliance</h3>
-                    <p class="hero-urgency" style="margin-top: 0; margin-bottom: 1rem;">~€300 - €400 (At Cost)</p>
-                    <p class="feature-lead">Enterprise-grade refurbished hardware. We pass the exact purchase and delivery cost directly to you with zero markup.</p>
-                </div>
-
-                <div class="glass-card">
-                    <h3>On-Site Commute Fee</h3>
-                    <p class="hero-urgency" style="margin-top: 0; margin-bottom: 1rem;">€150 / visit</p>
-                    <p class="feature-lead">On-site commute — Scoping evaluation, deployment, training and custom remote access module installations.</p>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="page-section">
-            <div class="compliance-panel">
-                <h2>Total Cost, No Surprises</h2>
-                <p style="margin-bottom: 2rem;">What You Won’t Find on Your Invoice</p>
-                <p style="color: var(--text-muted); margin-bottom: 2rem;">The industry standard is enterprise software with enterprise-grade opacity: per-audit charges, forced upgrade cycles, and quotes that only appear after three sales calls. We priced Elenchon the way finance actually wants to buy it.</p>
-
-                <ul class="feature-list" style="text-align: left; max-width: 600px; margin: 0 auto 2.5rem;">
-                    <li><strong>No per-audit or per-report fees</strong></li>
-                    <li><strong>No forced upgrade charges</strong></li>
-                    <li><strong>No cloud or usage surcharges</strong></li>
-                    <li><strong>No price gouging increases</strong></li>
-                    <li><strong>No lock-in</strong> — cancel anytime, keep view-only access for audits</li>
-                    <li><strong>No opaque “enterprise” quote</strong> — the number is right here</li>
+            <div class="price-card soon">
+                <span class="price-badge">Coming Soon</span>
+                <h3 class="price-name">Lite</h3>
+                <div class="price-amount-row"><span class="price-amount-tba">TBA</span></div>
+                <p class="price-includes">Right-sized for smaller shops</p>
+                <p class="price-blurb">A leaner tier for single-cell teams and smaller fabrication shops that want the same sovereign appliance and security, scoped to a smaller floor.</p>
+                <ul class="feature-list price-feature-list">
+                    <li>Features list coming soon</li>
                 </ul>
-
-                <p style="font-weight: 500; color: #fff;">Enterprise-grade software. Military-level security. Excellent support. At a price you can put in a budget line today.</p>
+                <a href="#" class="price-cta price-cta-soon">Coming soon</a>
             </div>
-        </div>
 
-
-        <div class="page-section">
-            <div class="cta-band">
-                <h2>Ready When You Are</h2>
-                <p>Deployment slots each quarter are strictly limited because our engineers install every appliance on-site. Contact us today to talk pricing for your floor and ensure your spot in the queue.</p>
-                
-                <div class="cta-group" style="margin-top: 2rem;">
-                    <a href="deployment.html" class="btn btn-primary">Secure Your Deployment</a>
-                    <a href="deployment.html" class="btn btn-secondary">Contact Us Now</a>
+            <div class="price-card featured">
+                <span class="price-badge price-badge-live">Available Now</span>
+                <h3 class="price-name">Standard</h3>
+                <div class="price-amount-row">
+                    <span class="price-amount">€880</span><span class="price-per">/ month</span>
                 </div>
-                <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 1.5rem;">Contact the founders — no sales layers, no call queues.</p>
+                <p class="price-includes"><strong>50 workers</strong> included</p>
+                <p class="price-blurb">The complete Elenchon platform, installed and supported end to end. Everything the floor and the boardroom need, at one predictable price.</p>
+                <ul class="feature-list price-feature-list">
+                    <li><strong>Full platform</strong> — all six capability pillars, no feature gating</li>
+                    <li>On-site installation, onboarding & floor training</li>
+                    <li>Automated ISO & ASME IX compliance ledgers</li>
+                    <li>Phrakton zero-trust, post-quantum-safe networking</li>
+                    <li>Automated local backups & absolute data sovereignty</li>
+                    <li>Direct founder support — no ticket queues, no sales layers</li>
+                </ul>
+                <a href="deployment.html" class="price-cta price-cta-primary">Secure Your Deployment</a>
             </div>
+
+            <div class="price-card soon">
+                <span class="price-badge">Coming Soon</span>
+                <h3 class="price-name">Premium</h3>
+                <div class="price-amount-row"><span class="price-amount-tba">TBA</span></div>
+                <p class="price-includes">Built for scale and excellence</p>
+                <p class="price-blurb">Coming soon</p>
+                <ul class="feature-list price-feature-list">
+                    <li>Features list coming soon</li>
+                </ul>
+                <a href="#" class="price-cta price-cta-soon">Coming soon</a>
+            </div>
+
+        </div>
+        <p class="price-footnote">Prices are per appliance, per month, excluding VAT. Hardware and on-site installation are arranged during your scoping session.</p>
+    </section>
+
+    <section class="page-section container">
+        <div class="section-header">
+            <span class="eyebrow">Add-Ons</span>
+            <h2>Scale On Your Terms — Every Price Published</h2>
+            <p class="subtitle">Add only what you need, when you need it. No bundles you’ll never use, no surprise line items at renewal.</p>
         </div>
 
-    </div>
+        <div class="addon-grid">
+            <div class="glass-card addon-card">
+                <h3 class="addon-name">Remote Access Module</h3>
+                <div class="addon-price">€200 <span class="addon-per">/ month</span></div>
+                <p class="addon-desc">Reach the management app or capture work from home, over mobile data, or in the field — through a post-quantum-safe encrypted tunnel. Includes free 100GB of Bandwidth.</p>
+            </div>
+            <div class="glass-card addon-card">
+                <h3 class="addon-name">Additional Workers</h3>
+                <div class="addon-price">€90 <span class="addon-per">/ month — 10 workers</span></div>
+                <p class="addon-desc">Grow past your included 50 in clean blocks of ten. Add seats as the floor scales — the same flat rate every time.</p>
+            </div>
+            <div class="glass-card addon-card">
+                <h3 class="addon-name">Remote Bandwidth</h3>
+                <div class="addon-price">€30 <span class="addon-per">/ 100 GB</span></div>
+                <p class="addon-desc">Top up or add a monthly recurring payment for remote-access data whenever you need it. Pay for what you use, in transparent 100 GB increments.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-section container">
+        <div class="section-header">
+            <span class="eyebrow">One-Time Setup & Hardware</span>
+            <p class="subtitle">Transparent implementation costs. No hardware markups, no surprise integration fees.</p>
+        </div>
+
+        <div class="addon-grid">
+            <div class="glass-card addon-card">
+                <h3 class="addon-name">On-Site Deployment</h3>
+                <div class="addon-price">€850 <span class="addon-per">/ one-time</span></div>
+                <p class="addon-desc">Physical delivery, secure network integration, and full Phrakton appliance configuration at your facility by our engineering team.</p>
+            </div>
+            <div class="glass-card addon-card">
+                <h3 class="addon-name">Floor Training</h3>
+                <div class="addon-price">€850 <span class="addon-per">/ one-time</span></div>
+                <p class="addon-desc">Mandatory hands-on training for your operators and managers to ensure zero-friction adoption from day one.</p>
+            </div>
+            <div class="glass-card addon-card">
+                <h3 class="addon-name">Server Appliance</h3>
+                <div class="addon-price">~€300 - €400 <span class="addon-per">(At Cost)</span></div>
+                <p class="addon-desc">Enterprise-grade refurbished hardware. We pass the exact purchase and delivery cost directly to you with zero markup.</p>
+            </div>
+            <div class="glass-card addon-card">
+                <h3 class="addon-name">On-Site Commute Fee</h3>
+                <div class="addon-price">€150 <span class="addon-per">/ visit</span></div>
+                <p class="addon-desc">On-site commute — Scoping evaluation, deployment, training and custom remote access module installations.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-section container">
+        <div class="no-fees-panel">
+            <span class="eyebrow">Total Cost, No Surprises</span>
+            <h2 class="text-glow">What You Won’t Find on Your Invoice</h2>
+            <p class="no-fees-intro">The industry standard is enterprise software with enterprise-grade opacity: per-audit charges, forced upgrade cycles, and quotes that only appear after three sales calls. We priced Elenchon the way finance actually wants to buy it.</p>
+            <ul class="no-fees-grid">
+                <li>No per-audit or per-report fees</li>
+                <li>No forced upgrade charges</li>
+                <li>No cloud or usage surcharges</li>
+                <li>No price gouging increases</li>
+                <li>No lock-in — cancel anytime, keep view-only access for audits</li>
+                <li>No opaque “enterprise” quote — the number is right here</li>
+            </ul>
+            <p class="no-fees-close">Enterprise-grade software. Military-level security. Excellent support. At a price you can put in a budget line today.</p>
+        </div>
+    </section>
+
+    <section class="page-section container" style="margin-bottom: 3rem;">
+        <div class="cta-band">
+            <span class="eyebrow">Ready When You Are</span>
+            <p style="margin-bottom: 2rem;">Deployment slots each quarter are strictly limited because our engineers install every appliance on-site. Contact us today to talk pricing for your floor and ensure your spot in the queue.</p>
+            <div class="cta-group">
+                <a href="deployment.html" class="btn btn-primary">Secure Your Deployment</a>
+                <a href="contact.html" class="btn btn-secondary">Contact Us Now</a>
+            </div>
+            <p class="hero-urgency" style="margin-top: 1.5rem;">Contact the founders — no sales layers, no call queues.</p>
+        </div>
+    </section>
 
     <footer>
         <div class="footer-content">
-            <a href="index.html" class="logo" style="font-size: 1.8rem; margin-bottom: 1rem; display: inline-block;">Fac<span>Track</span></a>
+            <h2 class="logo">D<span>teris</span></h2>
             <p>Engineering the technology for Europe's future.</p>
             <p class="footer-cta-text">Ready to optimize your traceability?</p>
-            <a href="deployment.html" class="btn btn-secondary btn-small">Contact the Founders</a>
+            <a href="contact.html" class="btn btn-primary">Contact the Founders</a>
         </div>
-
         <div class="leadership-section">
             <div class="leader-profile">
                 <strong>Flávio Brites</strong>
@@ -224,13 +218,10 @@
                 <span class="credential">MSc Telecom & IT Engineering</span>
             </div>
         </div>
-
         <div class="copyright">
-            <p>&copy; 2026 Delteris. All rights reserved. | <a href="https://delteris.com">delteris.eu</a></p>
-            <p style="margin-top: 0.5rem;">Portugal</p>
+            <p>© 2026 Delteris. All rights reserved. | <a href="https://delteris.com">delteris.com</a></p>
+            <p>Portugal</p>
         </div>
     </footer>
-
-    <script src="main.js"></script>
 </body>
 </html>
