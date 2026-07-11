@@ -69,10 +69,14 @@
             <div style="background: rgba(5, 10, 20, 0.55); border: 1px solid rgba(59, 130, 246, 0.35); border-radius: var(--radius); padding: 3rem 2rem; display: inline-block; width: 100%; max-width: 500px; box-shadow: inset 0 0 30px rgba(59, 130, 246, 0.05);">
                 <span style="display: block; font-family: 'Space Grotesk', sans-serif; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem;">Email Us Directly</span>
                 
-                <a href="mailto:contact@delteris.com" style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(1.4rem, 4vw, 2.2rem); font-weight: 700; color: var(--text-main); text-decoration: none; display: block; margin-bottom: 2.5rem; text-shadow: 0 0 20px rgba(59, 130, 246, 0.4); transition: color 0.3s ease;" onmouseover="this.style.color='var(--accent-blue)'" onmouseout="this.style.color='var(--text-main)'">
+                <a href="javascript:void(0)" 
+                  onclick="navigator.clipboard.writeText('contact@delteris.com'); const el = this; const original = 'contact@delteris.com'; el.innerText = 'contact@delteris.com'; setTimeout(() => el.innerText = original, 2000);" 
+                  style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(1.4rem, 4vw, 2.2rem); font-weight: 700; color: var(--text-main); text-decoration: none; display: block; margin-bottom: 2.5rem; text-shadow: 0 0 20px rgba(59, 130, 246, 0.4); transition: color 0.3s ease; cursor: pointer;" 
+                  onmouseover="this.style.color='var(--accent-blue)'" 
+                  onmouseout="this.style.color='var(--text-main)'"
+                  title="Click to copy email">
                     contact@delteris.com
                 </a>
-                
                 <a href="mailto:contact@delteris.com" class="btn btn-primary" style="width: 100%;">Open Email Client</a>
             </div>
             
