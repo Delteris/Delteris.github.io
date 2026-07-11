@@ -1,0 +1,17 @@
+{
+  "name": "Delteris — Elenchon",
+  "short_name": "Delteris",
+  "description": "Sovereign on-premise QA and traceability platform for heavy industry.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#050a14",
+  "theme_color": "#050a14",
+  "icons": [
+    {
+      "src": "/logos/DelterisCrest.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

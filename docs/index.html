@@ -3,18 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elenchon by Delteris</title>
+    <title>Elenchon by Delteris — On-Premise QA & Traceability Platform for Heavy Industry</title>
     <meta name="description" content="Elenchon is the sovereign on-premise quality assurance and project-workflow platform for heavy industry. Automate ISO & ASME IX compliance with post-quantum encryption.">
+    <meta name="author" content="Delteris">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <meta name="theme-color" content="#050a14">
     <link rel="canonical" href="https://delteris.com/">
 
-    <link rel="icon" type="image/png" href="./logos/DelterisCrest_.png">
-    <link rel="apple-touch-icon" href="./logos/DelterisCrest.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./logos/favicon-32.png">
+    <link rel="apple-touch-icon" href="./logos/apple-touch-icon.png">
+    <link rel="manifest" href="./site.webmanifest">
 
     <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Delteris">
+    <meta property="og:locale" content="en_US">
     <meta property="og:url" content="https://delteris.com/">
     <meta property="og:title" content="Elenchon by Delteris | Unbreakable Traceability">
     <meta property="og:description" content="Sovereign on-premise quality assurance for heavy industry. Zero-trust network, post-quantum safe, and automated compliance.">
     <meta property="og:image" content="https://delteris.com/logos/DelterisCrest.png">
+    <meta property="og:image:alt" content="Delteris crest logo">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Elenchon by Delteris | Unbreakable Traceability">
+    <meta name="twitter:description" content="Sovereign on-premise quality assurance for heavy industry. Zero-trust network, post-quantum safe, and automated compliance.">
+    <meta name="twitter:image" content="https://delteris.com/logos/DelterisCrest.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;600;700&display=swap">
 
     <script type="application/ld+json">
     {
@@ -26,20 +42,41 @@
           "name": "Delteris",
           "url": "https://delteris.com/",
           "logo": "https://delteris.com/logos/DelterisCrest.png",
+          "email": "contact@delteris.com",
           "description": "Engineering the technology for Europe's future. Creators of Elenchon and the Phrakton secure network overlay.",
+          "address": { "@type": "PostalAddress", "addressCountry": "PT" },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "contact@delteris.com",
+            "contactType": "sales",
+            "availableLanguage": ["English", "Portuguese"]
+          },
           "founder": [
             { "@type": "Person", "name": "Flávio Brites", "jobTitle": "Co-Founder & CEO" },
             { "@type": "Person", "name": "Rodrigo Ferreira", "jobTitle": "Co-Founder & CTO" }
           ]
         },
         {
+          "@type": "WebSite",
+          "@id": "https://delteris.com/#website",
+          "url": "https://delteris.com/",
+          "name": "Delteris",
+          "publisher": { "@id": "https://delteris.com/#organization" }
+        },
+        {
           "@type": "SoftwareApplication",
           "name": "Elenchon",
           "applicationCategory": "BusinessApplication",
           "operatingSystem": "Linux/Appliance",
-          "description": "On-premise quality assurance and project-workflow platform for heavy industry welding.",
-          "offers": { "@type": "Offer", "price": "880.00", "priceCurrency": "EUR" },
-          "provider": {"@id": "https://delteris.com/#organization"}
+          "description": "On-premise quality assurance and project-workflow platform for heavy industry welding. Automates ISO and ASME IX compliance with post-quantum-safe, zero-trust networking.",
+          "offers": {
+            "@type": "Offer",
+            "price": "880.00",
+            "priceCurrency": "EUR",
+            "url": "https://delteris.com/pricing.html",
+            "availability": "https://schema.org/InStock"
+          },
+          "provider": { "@id": "https://delteris.com/#organization" }
         }
       ]
     }
@@ -49,11 +86,12 @@
     <script src="./main.js" defer></script>
 </head>
 <body>
+    <a class="skip-link" href="#main">Skip to content</a>
     <canvas id="network-canvas" aria-hidden="true"></canvas>
 
-    <nav>
+    <nav aria-label="Main navigation">
         <a href="/" class="logo" style="display: flex; align-items: center; gap: 0.6rem; text-decoration: none;">
-        <img src="./logos/DelterisCrest.png" alt="Delteris Logo" style="height: 32px; width: auto; object-fit: contain;">
+        <img src="./logos/DelterisCrest.png" alt="Delteris Logo" width="32" height="32" style="height: 32px; width: auto; object-fit: contain;">
             <span>D<span style="color: var(--accent-blue);">elteris</span></span>
         </a>
         <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-label="Open menu">
@@ -70,6 +108,7 @@
         </div>
     </nav>
 
+    <main id="main">
     <header class="hero">
         <div class="hero-content">
             <span class="hero-eyebrow">Elenchon — On-Premise Traceability & QA Platform</span>
@@ -211,10 +250,11 @@
             <p class="hero-urgency" style="margin-top: 1.5rem;">Contact the founders — no sales layers, no call queues.</p>
         </div>
     </section>
+    </main>
 
     <footer>
         <div class="footer-content">
-            <h2 class="logo">D<span>elteris</span></h2>
+            <h2 class="logo"><span>Delteris</span></h2>
             <p>Engineering the technology for Europe's future.</p>
             <p class="footer-cta-text">Ready to optimize your traceability?</p>
             <a href="contact.html" class="btn btn-primary">Contact the Founders</a>

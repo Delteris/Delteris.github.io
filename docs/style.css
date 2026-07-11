@@ -57,6 +57,24 @@ button:focus-visible {
     border-radius: 4px;
 }
 
+/* Keyboard-accessible skip link (visible only on focus) */
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    z-index: 2000;
+    background: var(--accent-blue);
+    color: #04101f;
+    padding: 0.6rem 1.1rem;
+    border-radius: 0 0 6px 0;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.skip-link:focus {
+    left: 0;
+}
+
 /* ------------------------------------------------------------
    Ambient background canvas
    ------------------------------------------------------------ */

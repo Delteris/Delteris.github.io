@@ -2,20 +2,32 @@
 
 > Engineering the technology for Europe's future.
 
-Elenchon is an on-premise quality assurance and project-workflow platform for heavy industry. It automates ISO and ASME IX compliance, captures shop-floor data in seconds, and keeps every byte of manufacturing data on the client's own hardware via Phrakton — our zero-trust network overlay secured with post-quantum cryptography.
+Elenchon is an on-premise quality assurance and project-workflow platform for heavy industry (welding, metal fabrication, and general shop-floor work). It automates ISO and ASME IX compliance, captures shop-floor data in seconds, and keeps every byte of manufacturing data on the client's own hardware via Phrakton — Delteris's zero-trust network overlay built on OpenZiti and secured with post-quantum cryptography.
 
 ## Core Pillars
-- Zero-Friction Work Capture
-- One Project, Two Live Views (Tree & Flowchart)
-- Management & Access Control
-- Qualifications & Procedures (WPS/PQR tracking)
-- Floor Asset & Consumable Control
-- Bulletproof Data Sovereignty
+- Zero-Friction Work Capture (10-second navigation, universal work templates)
+- One Project, Two Live Views (Tree & Flowchart, one-paste BOM import from Tekla/CAD)
+- Management & Access Control (global custom roles, one-click document generation)
+- Qualifications & Procedures (WPS/PQR/WPQ workflow, 6-month continuity tracking, heat propagation)
+- Floor Asset & Consumable Control (maintenance hub, machine certification tracking, batch inventory)
+- Bulletproof Data Sovereignty (on-premise appliance, automated local backups, post-quantum-safe encryption)
+
+## Pricing (EUR, per appliance, per month, excl. VAT)
+- Standard plan: €880/month, 50 workers included, full platform, on-site installation and training. Lite and Premium tiers coming soon.
+- Add-ons: Remote Access Module €200/month (incl. 100 GB), Additional Workers €90/month per block of 10, Remote Bandwidth €30 per 100 GB.
+- One-time: On-Site Deployment €850, Floor Training €850, Server Appliance ~€300–400 at cost, On-Site Commute Fee €150/visit.
+- No per-audit fees, no lock-in — customers who cancel keep permanent view-only access to historical data for audits.
+
+## Deployment
+Three steps: scoping session with the founders, on-site installation of the hardware appliance, then onboarding and go-live. Deployment slots per quarter are limited because every appliance is installed on-site by Delteris engineers.
 
 ## Links
+- Home: https://delteris.com/
 - Platform: https://delteris.com/platform.html
 - Pricing: https://delteris.com/pricing.html
 - Deployment: https://delteris.com/deployment.html
+- Contact: https://delteris.com/contact.html
 
-Founders: Flávio Brites (CEO) & Rodrigo Ferreira (CTO).
+Founders: Flávio Brites (Co-Founder & CEO) & Rodrigo Ferreira (Co-Founder & CTO).
+Contact: contact@delteris.com
 Location: Portugal.
