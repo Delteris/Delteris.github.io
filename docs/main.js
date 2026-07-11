@@ -1,5 +1,5 @@
 /* ==========================================================
-   WeldTrack by FacTrack — landing page behavior
+   Elenchon by Delteris — landing page behavior
    1. Ambient network canvas (brand blue #3b82f6)
    2. Mobile navigation toggle
    ========================================================== */

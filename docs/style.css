@@ -1,5 +1,5 @@
 /* ==========================================================
-   WeldTrack by FacTrack — Landing page styles
+   Elenchon by Delteris — Landing page styles
    Accent: #3b82f6 (brand blue)
    Pages: index.html · platform.html · deployment.html · pricing.html
    ========================================================== */
@@ -532,7 +532,7 @@ nav {
 }
 
 /* ------------------------------------------------------------
-   Security (FacGuard) section
+   Security (Phrakton) section
    ------------------------------------------------------------ */
 .dark-panel {
     background: var(--bg-panel);

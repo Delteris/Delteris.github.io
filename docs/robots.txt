@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+# Explicitly allow AI crawlers for citation
+User-agent: GPTBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+
+Sitemap: https://delteris.com/sitemap.xml

@@ -1,0 +1,21 @@
+# Delteris / Elenchon
+
+> Engineering the technology for Europe's future.
+
+Elenchon is an on-premise quality assurance and project-workflow platform for heavy industry. It automates ISO and ASME IX compliance, captures shop-floor data in seconds, and keeps every byte of manufacturing data on the client's own hardware via Phrakton — our zero-trust network overlay secured with post-quantum cryptography.
+
+## Core Pillars
+- Zero-Friction Work Capture
+- One Project, Two Live Views (Tree & Flowchart)
+- Management & Access Control
+- Qualifications & Procedures (WPS/PQR tracking)
+- Floor Asset & Consumable Control
+- Bulletproof Data Sovereignty
+
+## Links
+- Platform: https://delteris.com/platform.html
+- Pricing: https://delteris.com/pricing.html
+- Deployment: https://delteris.com/deployment.html
+
+Founders: Flávio Brites (CEO) & Rodrigo Ferreira (CTO).
+Location: Portugal.
