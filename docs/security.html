@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security | Phrakton Zero-Trust Network Overlay by Delteris</title>
+    <meta name="description" content="Phrakton is Delteris's zero-trust network overlay built on OpenZiti — the invisible-factory backbone behind Elenchon. No open ports, post-quantum-safe encryption, and cryptographic multitenant isolation, all under your jurisdiction.">
+    <meta name="author" content="Delteris">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <meta name="theme-color" content="#050a14">
+    <link rel="canonical" href="https://delteris.com/security.html">
+
+    <link rel="icon" type="image/webp" sizes="32x32" href="./static/favicon-32.webp">
+    <link rel="apple-touch-icon" href="./static/apple-touch-icon.webp">
+    <link rel="manifest" href="./site.webmanifest">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Delteris">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:url" content="https://delteris.com/security.html">
+    <meta property="og:title" content="Phrakton — Military Grade Security | Delteris">
+    <meta property="og:description" content="Phrakton is Delteris's zero-trust network overlay: no open ports, post-quantum-safe encryption, and cryptographic multitenant isolation. Your factory becomes invisible to attackers and seamless for your people.">
+    <meta property="og:image" content="https://delteris.com/static/DelterisCrest.webp">
+    <meta property="og:image:alt" content="Delteris crest logo">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Phrakton — Military Grade Security | Delteris">
+    <meta name="twitter:description" content="Zero-trust network overlay for heavy industry: no open ports, post-quantum-safe encryption, cryptographic multitenant isolation, absolute data sovereignty.">
+    <meta name="twitter:image" content="https://delteris.com/static/DelterisCrest.webp">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;600;700&display=swap">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "name": "Security — Phrakton Zero-Trust Network Overlay",
+          "url": "https://delteris.com/security.html",
+          "description": "Phrakton is Delteris's zero-trust network overlay built on OpenZiti, providing the invisible-factory security layer behind Elenchon.",
+          "publisher": { "@id": "https://delteris.com/#organization" }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://delteris.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Security", "item": "https://delteris.com/security.html" }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <link rel="stylesheet" href="./style.css">
+    <script src="./main.js" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <canvas id="network-canvas" aria-hidden="true"></canvas>
+
+    <nav aria-label="Main navigation">
+        <a href="/" class="logo" style="display: flex; align-items: center; gap: 0.6rem; text-decoration: none;">
+            <img src="./static/DelterisCrest.webp" alt="Delteris Logo" width="32" height="32" style="height: 32px; width: auto; object-fit: contain;">
+            <span>D<span style="color: var(--accent-blue);">elteris</span></span>
+        </a>
+        <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-label="Open menu">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
+        <div class="nav-links" id="nav-links">
+            <a href="platform.html">Platform</a>
+            <a href="security.html" aria-current="page">Security</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="deployment.html">Deployment</a>
+            <a href="contact.html" class="btn btn-small">Contact Us Now</a>
+        </div>
+    </nav>
+
+    <main id="main">
+    <header class="page-hero">
+        <div class="hero-content">
+            <span class="hero-eyebrow">Powered by Phrakton</span>
+            <h1 class="text-glow">Military Grade Security.<br>Seamless for You. Unreachable for Them.</h1>
+            <p class="hero-sub">Phrakton is Delteris’s zero-trust network overlay, built on OpenZiti. It abstracts your network away entirely: your factory infrastructure becomes invisible to external threat actors while remaining seamlessly accessible to authorized personnel — with post-quantum-safe encryption end to end and full cryptographic isolation between facilities.</p>
+            <div class="cta-group">
+                <a href="deployment.html" class="btn btn-primary">Secure a Deployment</a>
+                <a href="pricing.html" class="btn btn-secondary">See the Uptime Guarantee</a>
+            </div>
+            <ul class="hero-proof">
+                <li>No open ports · no public attack surface</li>
+                <li>Post-quantum-safe encryption</li>
+                <li>Cryptographic multitenant isolation</li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="page-section container" id="what-is-phrakton">
+        <div class="summary-panel">
+            <h2 class="text-glow">A Network That Isn’t There</h2>
+            <p>Conventional network security guards the door: firewalls, VPNs, and open ports that must be defended around the clock. Phrakton removes the door. Your services have no listening ports exposed to the public internet — there is nothing to scan, nothing to probe, and nothing to move laterally through. Connections are established outbound-only and brokered by cryptographic identity, so a resource is reachable only after a device has proven who it is. To everyone else, your factory simply does not exist on the network.</p>
+        </div>
+    </section>
+
+    <section class="page-section container" id="principles">
+        <div class="section-header">
+            <span class="eyebrow">Core Principles</span>
+            <h2>Zero Trust, End to End</h2>
+            <p class="subtitle">Every capability of the platform runs on top of Phrakton — so security isn’t a feature you switch on, it’s the ground the whole system stands on.</p>
+        </div>
+
+        <div class="pillar-grid">
+            <div class="glass-card pillar-card">
+                <span class="feature-index">01</span>
+                <h3>The Invisible Factory</h3>
+                <p>Services are unreachable from the public internet — no open ports, no exposed attack surface, no lateral network movement, no room for corporate espionage.</p>
+            </div>
+            <div class="glass-card pillar-card">
+                <span class="feature-index">02</span>
+                <h3>Identity, Not Location</h3>
+                <p>Access is granted to verified cryptographic identities, never to an IP address or a network position. A stolen credential on an unknown device reaches nothing.</p>
+            </div>
+            <div class="glass-card pillar-card">
+                <span class="feature-index">03</span>
+                <h3>Multitenant by Design</h3>
+                <p>Each facility operates inside its own cryptographically isolated tenant. Strict separation between sites, centrally managed, with no shared plane to cross.</p>
+            </div>
+            <div class="glass-card pillar-card">
+                <span class="feature-index">04</span>
+                <h3>Post-Quantum-Safe</h3>
+                <p>Traffic is protected with post-quantum-hybrid key exchange, closing the door on “harvest now, decrypt later” — the data you protect today stays protected tomorrow.</p>
+            </div>
+            <div class="glass-card pillar-card">
+                <span class="feature-index">05</span>
+                <h3>Secure Remote Oversight</h3>
+                <p>Monitor operations and conduct audits from home, on mobile data, or abroad — through a post-quantum-safe encrypted tunnel, with the floor never exposed.</p>
+            </div>
+            <div class="glass-card pillar-card">
+                <span class="feature-index">06</span>
+                <h3>Absolute Data Sovereignty</h3>
+                <p>Your manufacturing data never touches a shared cloud server. The physical hardware, and the jurisdiction it sits in, remain entirely yours.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-section container" id="how-it-works">
+        <div class="dark-panel grid-2 align-center">
+            <div>
+                <span class="eyebrow">How It Works</span>
+                <h2 class="text-glow">Deny by Default. Prove to Connect.</h2>
+                <p class="security-intro">Phrakton is built on OpenZiti, an open-source zero-trust networking fabric. Rather than opening your network and then trying to defend it, Phrakton keeps everything closed and grants access one verified identity at a time.</p>
+                <ul class="feature-list">
+                    <li><strong>Outbound-only connections:</strong> Your appliance dials out to the fabric. It never accepts an inbound connection from the open internet, so there is no port for an attacker to find.</li>
+                    <li><strong>Brokered by the controller:</strong> A central controller authenticates every identity and authorizes every session before a single byte of application data flows.</li>
+                    <li><strong>Encrypted edge-to-edge:</strong> Traffic is encrypted the moment it leaves one endpoint and only decrypted at the other — never in transit, never on a shared server.</li>
+                    <li><strong>Least privilege by construction:</strong> An identity can reach only the specific services it has been granted. There is no wider network to explore.</li>
+                </ul>
+            </div>
+            <div class="graphic-placeholder">
+                <div class="pulse-ring delay-2"></div>
+                <div class="pulse-ring delay-1"></div>
+                <div class="pulse-ring"></div>
+                <div class="pulse-core"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-section container" id="post-quantum">
+        <div class="compliance-panel">
+            <span class="eyebrow">Post-Quantum Defense</span>
+            <h2 class="text-glow">Protected Against Tomorrow’s Attacks, Today</h2>
+            <p>Adversaries already capture encrypted traffic now, intending to decrypt it once quantum computers mature — a strategy known as “harvest now, decrypt later.” For manufacturing IP with a decade-long lifespan, that is a live threat, not a future one. Phrakton defends against it with post-quantum-hybrid key exchange, pairing a proven classical algorithm with a quantum-resistant one so your tunnels stay secure even against an adversary who breaks one of them. Your intellectual property is encrypted for the threat landscape of the next decade, not the last one.</p>
+        </div>
+    </section>
+
+    <section class="page-section container" id="reliability">
+        <div class="dark-panel grid-2 align-center">
+            <div>
+                <span class="eyebrow">Reliability</span>
+                <h2 class="text-glow">Security You Can Depend On — In Writing</h2>
+                <p class="security-intro">Invisible is only useful if it’s also available. We run the Phrakton fabric ourselves, so we own its uptime and put a number on it: a 99.9% monthly availability commitment, backed by automatic service credits on any month we fall short. No claim to file, no argument — the credit simply appears on your invoice.</p>
+                <div class="cta-group">
+                    <a href="pricing.html#uptime" class="btn btn-secondary">See the Full Uptime Guarantee</a>
+                </div>
+            </div>
+            <div class="graphic-placeholder">
+                <div class="pulse-ring delay-2"></div>
+                <div class="pulse-ring delay-1"></div>
+                <div class="pulse-ring"></div>
+                <div class="pulse-core"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-section container" id="security-cta" style="margin-bottom: 3rem;">
+        <div class="cta-band">
+            <span class="eyebrow">Deployment</span>
+            <h2 class="text-glow">Make Your Factory Invisible</h2>
+            <p style="margin-bottom: 2rem;">Every Phrakton appliance is installed and configured on-site by our own engineers, which means deployment slots each quarter are strictly limited. Contact us today to secure yours — or reach out for a deeper technical walkthrough of the architecture.</p>
+            <div class="cta-group">
+                <a href="deployment.html" class="btn btn-primary">Secure Your Deployment</a>
+                <a href="contact.html" class="btn btn-secondary">Contact Us Now</a>
+            </div>
+            <p class="hero-urgency" style="margin-top: 1.5rem;">Contact the founders — no sales layers, no call queues.</p>
+        </div>
+    </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <h2 class="logo"><span>Delteris</span></h2>
+            <p>Engineering the technology for Europe's future.</p>
+            <p class="footer-cta-text">Ready to optimize your traceability?</p>
+            <a href="contact.html" class="btn btn-primary">Contact the Founders</a>
+        </div>
+        <div class="leadership-section">
+            <div class="leader-profile">
+                <strong>Flávio Brites</strong>
+                <span class="title">Co-Founder & CEO</span>
+                <span class="credential">CTeSP Welding & Metal Construction</span>
+            </div>
+            <div class="leader-profile">
+                <strong>Rodrigo Ferreira</strong>
+                <span class="title">Co-Founder & CTO</span>
+                <span class="credential">MSc Telecom & IT Engineering</span>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2026 Delteris. All rights reserved. | <a href="https://delteris.com">delteris.com</a></p>
+            <p>Portugal</p>
+        </div>
+    </footer>
+</body>
+</html>
