@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+  ============================================================================
+  DRAFT — NOT LEGAL ADVICE. Review with a Portuguese lawyer before publishing.
+  Complete every [[PLACEHOLDER]] below with the registered company details.
+  ============================================================================
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service | Delteris</title>
+    <meta name="description" content="The terms governing Elenchon subscriptions and use of the Delteris website: plans and worker limits, billing, the uptime credit scale, data ownership, and cancellation with permanent view-only access.">
+    <meta name="author" content="Delteris">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#050a14">
+    <link rel="canonical" href="https://delteris.com/terms.html">
+
+    <link rel="icon" type="image/webp" sizes="32x32" href="./static/favicon-32.webp">
+    <link rel="apple-touch-icon" href="./static/apple-touch-icon.webp">
+    <link rel="manifest" href="./site.webmanifest">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Delteris">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:url" content="https://delteris.com/terms.html">
+    <meta property="og:title" content="Terms of Service | Delteris">
+    <meta property="og:description" content="The terms governing Elenchon subscriptions and use of the Delteris website: plans and worker limits, billing, the uptime credit scale, data ownership, and cancellation with permanent view-only access.">
+    <meta property="og:image" content="https://delteris.com/static/DelterisCrest.webp">
+    <meta property="og:image:alt" content="Delteris crest logo">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Terms of Service | Delteris">
+    <meta name="twitter:description" content="The terms governing Elenchon subscriptions and use of the Delteris website: plans and worker limits, billing, the uptime credit scale, data ownership, and cancellation with permanent view-only access.">
+    <meta name="twitter:image" content="https://delteris.com/static/DelterisCrest.webp">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;600;700&display=swap">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "name": "Terms of Service",
+          "url": "https://delteris.com/terms.html",
+          "publisher": { "@id": "https://delteris.com/#organization" }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://delteris.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Terms of Service", "item": "https://delteris.com/terms.html" }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <link rel="stylesheet" href="./style.css">
+    <script src="./main.js" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <canvas id="network-canvas" aria-hidden="true"></canvas>
+
+    <nav aria-label="Main navigation">
+        <a href="/" class="logo" style="display: flex; align-items: center; gap: 0.6rem; text-decoration: none;">
+            <img src="./static/DelterisCrest.webp" alt="Delteris Logo" width="32" height="32" style="height: 32px; width: auto; object-fit: contain;">
+            <span>D<span style="color: var(--accent-blue);">elteris</span></span>
+        </a>
+        <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-label="Open menu">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
+        <div class="nav-links" id="nav-links">
+            <a href="platform.html">Platform</a>
+            <a href="security.html">Security</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="deployment.html">Deployment</a>
+            <a href="contact.html" class="btn btn-small">Contact Us Now</a>
+        </div>
+    </nav>
+
+    <main id="main">
+    <header class="page-hero" style="min-height: 46vh;">
+        <div class="hero-content">
+            <span class="hero-eyebrow">Terms of Service</span>
+            <h1 class="text-glow">The Contract,<br>Written to Be Read.</h1>
+            <p class="hero-sub">Same principle as our pricing: if you have to hire someone to find out what you agreed to, it was written badly. Here are the terms, in the plainest English the law allows.</p>
+        </div>
+    </header>
+
+    <section class="page-section container" style="padding-top: 0; margin-bottom: 4rem;">
+        <div class="legal-body">
+            <span class="legal-meta">Last updated: 24 July 2026 &nbsp;·&nbsp; These terms govern use of the Delteris website and the supply of the Elenchon platform.</span>
+
+            <div class="legal-callout">
+                <p><strong>Plain summary.</strong> You subscribe monthly to an Elenchon appliance we install in your facility. You own your data and the hardware. We keep the software and the Phrakton fabric running, and credit you when the fabric misses its uptime target. There is no minimum term and no exit fee &mdash; if you leave, your historical records stay readable for audits.</p>
+                <p>The summary is for orientation only. Sections 1 to 19 are what actually applies.</p>
+            </div>
+
+            <h2>1. Who these terms are between</h2>
+            <p>These terms form an agreement between [[LEGAL ENTITY NAME]], registered in Portugal under number [[NIPC]] with its registered office at [[REGISTERED ADDRESS]] ("Delteris", "we"), and the business customer identified in the order ("Customer", "you"). Elenchon is supplied to businesses only; we do not contract with consumers.</p>
+            <p>Where a signed order form or written quotation conflicts with these terms, the order form prevails for that engagement.</p>
+
+            <h2>2. Definitions</h2>
+            <ul>
+                <li><strong>Appliance</strong> &mdash; the physical server installed at your site that runs the Elenchon software.</li>
+                <li><strong>Platform</strong> &mdash; the Elenchon software, in the plan you have subscribed to.</li>
+                <li><strong>Fabric</strong> &mdash; Phrakton, the zero-trust network overlay we operate to broker remote access to the Appliance.</li>
+                <li><strong>Worker</strong> &mdash; an individual account able to log in and record work on the Platform.</li>
+                <li><strong>Customer Data</strong> &mdash; everything you or your workers enter into or generate on the Appliance.</li>
+            </ul>
+
+            <h2>3. What we supply</h2>
+            <p>We deliver, install and configure the Appliance at your facility, license you the Platform for the duration of your subscription, and operate the Fabric that carries remote access. The Platform executes entirely on the Appliance. There is no cloud instance of your deployment, and no functionality is withheld pending a network connection to us.</p>
+
+            <h2>4. Plans, workers and add-ons</h2>
+            <p>Current plans, included worker counts and add-on prices are published at <a href="pricing.html">delteris.com/pricing.html</a> and form part of these terms.</p>
+            <ul>
+                <li><strong>Lite</strong> includes 20 Workers and may be expanded by a single block of ten, to a maximum of 30 Workers. Beyond that, an upgrade to Standard is required.</li>
+                <li><strong>Standard</strong> includes 50 Workers and may be expanded by unlimited blocks of ten.</li>
+                <li>Each expansion block of ten Workers carries 20 GB of recurring remote bandwidth per month at no additional charge.</li>
+                <li>Additional remote bandwidth is sold in blocks of 100 GB, as a one-off top-up or a recurring monthly allowance.</li>
+                <li>Unused bandwidth does not roll over between billing periods.</li>
+            </ul>
+
+            <h3>4.1 Changing your plan</h3>
+            <p>Upgrades, downgrades and add-on changes are applied remotely over the Fabric at no charge. No engineer visit is required and no commute fee arises. Upgrades take effect on request and are invoiced pro rata for the remainder of the current period. Downgrades take effect at the start of your next billing period, and we do not refund the current one. If a downgrade would leave you with more active Workers than the target plan allows, you must deactivate the excess before the change is applied.</p>
+
+            <h2>5. Fees, invoicing and payment</h2>
+            <p>Subscription fees are quoted per Appliance, per month, excluding VAT, and are invoiced monthly in advance. VAT is applied at the rate in force in Portugal, or reverse-charged where you supply a valid EU VAT identification number. Invoices are payable within 30 days of issue.</p>
+            <p>Overdue amounts accrue statutory commercial interest under Decreto-Lei n.&ordm; 62/2013. If an invoice remains unpaid 30 days after a written reminder, we may suspend remote access and support. We will not disable the Appliance or lock you out of your own data over a payment dispute.</p>
+            <p>We may revise published prices with 60 days' written notice. A price increase entitles you to terminate at the end of the notice period without penalty.</p>
+
+            <h2>6. Deployment, training and travel</h2>
+            <p>One-time deployment, training and travel charges are published on the pricing page and quoted before any work begins.</p>
+            <ul>
+                <li>The <strong>Standard</strong> engagement includes a pre-deployment scoping visit, on-site installation, and a floor training programme that may be run as many times as your rollout needs.</li>
+                <li>The <strong>Lite</strong> deployment and training package is a single fixed price that covers installation and one training session. It does not include a pre-deployment scoping visit, and further training sessions are charged at the published rate plus travel.</li>
+                <li>Travel is charged per visit at the published commute rate.</li>
+            </ul>
+            <p>Deployment dates are agreed in writing. Capacity is limited because our own engineers perform every installation; we schedule in the order that deposits are received.</p>
+
+            <h2>7. Hardware</h2>
+            <p>Hardware is supplied at our documented acquisition and delivery cost with no markup, and title passes to you on payment. It is yours: you may service it, relocate it or dispose of it. Manufacturer warranties pass through to you, and we make no separate hardware warranty of our own. You may also supply your own hardware, provided it meets the specification we publish for the deployment.</p>
+
+            <h2>8. Uptime commitment</h2>
+            <p>We commit to 99.9% monthly availability of the Fabric and issue invoice credits automatically when we miss it, on the scale published at <a href="pricing.html#uptime">delteris.com/pricing.html#uptime</a>. No claim, ticket or argument is required. The commitment covers the Fabric &mdash; controller and edge routers &mdash; and is measured by our telemetry across each calendar month. It excludes your local internet uplink, pre-notified maintenance windows, and events outside our reasonable control. Because the Platform runs locally, an outage of the Fabric does not stop work on the shop floor.</p>
+            <p>These credits are your sole financial remedy for availability shortfalls.</p>
+
+            <h2>9. Your responsibilities</h2>
+            <ul>
+                <li>Provide the power, rack space, network uplink and physical security the Appliance needs.</li>
+                <li>Control who has physical access to the Appliance and who holds administrator credentials.</li>
+                <li>Keep your own copies of the automated local backups, or hold us to a written backup arrangement.</li>
+                <li>Use the Platform lawfully, and make sure your workers do too.</li>
+                <li>Not reverse-engineer, decompile, sublicense, resell or copy the Platform, except where such a restriction is void under applicable law.</li>
+            </ul>
+
+            <h2>10. Customer Data</h2>
+            <p>Customer Data is and remains yours. We claim no ownership of it and no licence to use it, aggregate it, or train anything on it. It resides on your Appliance.</p>
+            <p>Where our engineers access the Appliance for support at your request, we act as processor on your instructions, and the data protection terms in our <a href="privacy.html">Privacy Policy</a> and, where signed, our data processing agreement apply.</p>
+
+            <h2>11. Intellectual property</h2>
+            <p>The Platform and the Fabric are licensed, not sold. All intellectual property in them, including any improvements arising from work done for you, remains with Delteris. Your licence is non-exclusive, non-transferable, limited to your own internal business operations at the site of the Appliance, and lasts as long as your subscription.</p>
+            <p>Feedback you give us is welcome and we may act on it freely, without obligation or payment.</p>
+
+            <h2>12. Term, cancellation and what happens after</h2>
+            <p>Subscriptions run month to month with no minimum term. Either party may cancel with 30 days' written notice, effective at the end of the following billing period. We may terminate immediately for material breach that remains uncured 30 days after written notice.</p>
+            <p>On termination your licence to use the full Platform ends, but the Appliance stays in your facility and your historical records remain readable in a permanent view-only mode, so you can satisfy audits without a live subscription. We will not remotely disable, wipe or repossess the Appliance. On request, and at the published rate, we will attend to export your data in a documented open format.</p>
+
+            <h2>13. Support</h2>
+            <p>Support is provided directly by the founders and engineering team by email, and by telephone for Standard subscriptions, during Portuguese business hours. We aim to acknowledge within one business day. There are no support tiers to buy and no ticket queues to sit in.</p>
+
+            <h2>14. Warranties</h2>
+            <p>We warrant that we will provide the services with reasonable skill and care, and that the Platform will perform materially as described in the documentation current at the time of your deployment. We do not warrant that the Platform is error-free, nor that it will make you compliant with ISO, ASME IX or any other standard by itself &mdash; it records, structures and evidences your process, but conformity remains your responsibility and your auditor's judgment. Except as stated here, all implied warranties are excluded to the fullest extent the law allows.</p>
+
+            <h2>15. Liability</h2>
+            <p>Neither party excludes liability for death or personal injury caused by negligence, for fraud, or for anything else that cannot lawfully be excluded.</p>
+            <p>Subject to that, we are not liable for loss of profit, loss of production, loss of contracts or indirect or consequential loss, and our total aggregate liability arising in any twelve-month period is limited to the subscription fees you paid us in that period.</p>
+
+            <h2>16. Confidentiality</h2>
+            <p>Each party will keep the other's non-public information confidential, use it only for the purposes of this agreement, and protect it with at least reasonable care. This survives termination by three years. It does not apply to information that is public through no fault of the recipient, independently developed, or required to be disclosed by law.</p>
+
+            <h2>17. Force majeure</h2>
+            <p>Neither party is liable for failure to perform caused by events beyond its reasonable control, including natural disasters, war, industrial action, national infrastructure failure, or state action. Payment obligations already accrued are not suspended.</p>
+
+            <h2>18. Changes to these terms</h2>
+            <p>We may update these terms with 30 days' written notice to active customers. If a change materially disadvantages you, you may terminate before it takes effect without penalty. Continued use after the notice period constitutes acceptance. Changes affecting website visitors take effect on publication.</p>
+
+            <h2>19. Governing law and jurisdiction</h2>
+            <p>These terms are governed by Portuguese law. The courts of [[JUDICIAL DISTRICT &mdash; e.g. Lisboa]], Portugal have exclusive jurisdiction, without prejudice to any mandatory statutory forum. If any provision is held unenforceable, the rest stands.</p>
+
+            <h2>20. Website terms of use</h2>
+            <p>This website is provided for information. We work to keep it accurate, but published specifications and prices may change and nothing here constitutes a binding offer until confirmed in a written quotation. Content, branding and the Delteris and Elenchon names are our property; you may quote and link to the site with attribution, but not republish it wholesale or scrape it for commercial resale. Automated agents are welcome to read and cite it &mdash; see <a href="/llms.txt">llms.txt</a>.</p>
+
+            <h2>21. Contact</h2>
+            <p>[[LEGAL ENTITY NAME]] &mdash; [[REGISTERED ADDRESS]], Portugal.<br>
+            Commercial registry [[CONSERVAT&Oacute;RIA / REGISTRY NUMBER]] &nbsp;·&nbsp; NIPC [[NIPC]]<br>
+            <a href="mailto:contact@delteris.com">contact@delteris.com</a></p>
+        </div>
+    </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <h2 class="logo"><span>Delteris</span></h2>
+            <p>Engineering the technology for Europe's future.</p>
+            <p class="footer-cta-text">Ready to optimize your traceability?</p>
+            <a href="contact.html" class="btn btn-primary">Contact the Founders</a>
+        </div>
+        <div class="leadership-section">
+            <div class="leader-profile">
+                <strong>Flávio Brites</strong>
+                <span class="title">Co-Founder & CEO</span>
+                <span class="credential">CTeSP Welding & Metal Construction</span>
+            </div>
+            <div class="leader-profile">
+                <strong>Rodrigo Ferreira</strong>
+                <span class="title">Co-Founder & CTO</span>
+                <span class="credential">MSc Telecom & IT Engineering</span>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2026 Delteris. All rights reserved. | <a href="https://delteris.com">delteris.com</a></p>
+            <p>Portugal</p>
+            <p class="footer-legal"><a href="terms.html">Terms of Service</a> &nbsp;·&nbsp; <a href="privacy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="contact.html">Contact</a></p>
+        </div>
+    </footer>
+</body>
+</html>
