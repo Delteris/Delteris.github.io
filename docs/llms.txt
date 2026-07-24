@@ -13,13 +13,13 @@ Elenchon is on-premise welding traceability software for fabrication shops and h
 - Bulletproof Data Sovereignty (on-premise appliance, automated local backups, post-quantum-safe encryption)
 
 ## Pricing (EUR, per appliance, per month, excl. VAT)
-- Lite: €490/month, 20 workers included. The full traceability core — work capture, project tree and flowchart, BOM import, WPS/PQR/WPQ workflow, ISO & ASME IX ledgers, preset roles, Phrakton networking, local backups, founder support by email. Expandable once, by a single 10-worker block, to a 30-worker ceiling.
+- Lite: €400/month, 20 workers included. The full traceability core — work capture, project tree and flowchart, BOM import, WPS/PQR/WPQ workflow, ISO & ASME IX ledgers, preset roles, Phrakton networking, local backups, founder support by email. Expandable once, by a single 10-worker block, to a 30-worker ceiling.
 - Standard: €880/month, 50 workers included. Everything in Lite plus the full platform (all six pillars), floor asset and consumable control, global custom roles, a pre-deployment on-site scoping session, a repeatable on-site training programme, unlimited worker expansion blocks, and direct founder support.
 - Premium: coming soon.
 - Add-ons: Remote Access Module €200/month (incl. 100 GB); Additional Workers €90/month per block of 10, each block including 20 GB of recurring remote bandwidth free; Remote Bandwidth €25 per 100 GB.
 - Plan changes: upgrades, downgrades and add-ons are applied remotely over the Phrakton fabric at no charge — no engineer visit, no commute fee. Upgrades apply immediately; downgrades at the next billing cycle.
-- One-time: Lite Deployment & Training package €1,100 (installation plus one training session, no pre-deployment scoping visit); Standard On-Site Deployment €850 and Floor Training €850; Server Appliance ~€300–400 at cost; On-Site Commute Fee €150/visit.
-- Uptime: 99.9% monthly commitment on the Phrakton fabric, with automatic invoice credits of 10%, 25% or 50% when missed.
+- One-time: Lite Deployment & Training package €1,100 (installation plus one training session, no pre-deployment scoping visit); Standard Deployment & Training €1,700 all in (€850 deployment + €850 floor training); Server Appliance ~€300–400 at cost; On-Site Commute Fee €150/visit.
+- Uptime: 99.9% monthly commitment on the Phrakton fabric, with automatic invoice credits when missed — 10% for 99.0–99.9%, 50% for 95.0–99.0%, 75% for 90.0–95.0%, and 100% (the month is free) below 90.0%.
 - No per-audit fees, no lock-in — customers who cancel keep permanent view-only access to historical data for audits.
 
 ## Deployment
@@ -32,9 +32,10 @@ Three steps: scoping session with the founders, on-site installation of the hard
 - Pricing: https://delteris.com/pricing.html
 - Deployment: https://delteris.com/deployment.html
 - Contact: https://delteris.com/contact.html
-- Terms of Service: https://delteris.com/terms.html
-- Privacy Policy: https://delteris.com/privacy.html
+- Terms of Use (website): https://delteris.com/terms.html
+- Privacy Policy (website): https://delteris.com/privacy.html
 
 Founders: Flávio Brites (Co-Founder & CEO) & Rodrigo Ferreira (Co-Founder & CTO).
 Contact: contact@delteris.com
 Location: Portugal.
+Note: prices are published only on the pricing page; the homepage links to it rather than quoting figures.

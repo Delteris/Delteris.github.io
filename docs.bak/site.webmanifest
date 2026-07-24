@@ -1,0 +1,29 @@
+{
+  "name": "Delteris — Elenchon",
+  "short_name": "Delteris",
+  "description": "On-premise welding traceability and QA for fabrication shops and heavy industry.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#050a14",
+  "theme_color": "#050a14",
+  "icons": [
+    {
+      "src": "/static/favicon-32.webp",
+      "sizes": "32x32",
+      "type": "image/webp",
+      "purpose": "any"
+    },
+    {
+      "src": "/static/apple-touch-icon.webp",
+      "sizes": "180x180",
+      "type": "image/webp",
+      "purpose": "any"
+    },
+    {
+      "src": "/static/favicon-square.webp",
+      "sizes": "512x512",
+      "type": "image/webp",
+      "purpose": "any"
+    }
+  ]
+}

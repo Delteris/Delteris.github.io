@@ -70,11 +70,7 @@
           "operatingSystem": "Linux/Appliance",
           "description": "On-premise welding traceability software for fabrication shops and heavy industry. Runs the WPS, PQR and WPQ qualification workflow and automates ISO and ASME IX compliance ledgers, with post-quantum-safe, zero-trust networking.",
           "offers": {
-            "@type": "AggregateOffer",
-            "lowPrice": "490.00",
-            "highPrice": "880.00",
-            "priceCurrency": "EUR",
-            "offerCount": 2,
+            "@type": "Offer",
             "url": "https://delteris.com/pricing.html",
             "availability": "https://schema.org/InStock"
           },
@@ -92,9 +88,9 @@
     <canvas id="network-canvas" aria-hidden="true"></canvas>
 
     <nav aria-label="Main navigation">
-        <a href="/" class="logo" style="display: flex; align-items: center; gap: 0.6rem; text-decoration: none;">
-        <img src="./static/DelterisCrest.webp" alt="Delteris Logo" width="32" height="32" style="height: 32px; width: auto; object-fit: contain;">
-            <span>D<span style="color: var(--accent-blue);">elteris</span></span>
+        <a href="/" class="logo nav-logo">
+        <img src="./static/DelterisCrest.webp" alt="Delteris" width="32" height="32">
+            <span class="logo-text">D<span class="logo-accent">elteris</span></span>
         </a>
         <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-label="Open menu">
             <span class="nav-toggle-bar"></span>
@@ -139,7 +135,7 @@
     <section class="page-section container" id="overview">
         <div class="section-header">
             <span class="eyebrow">Platform Overview</span>
-            <h2>Built for the Floor. Trusted in the Boardroom.</h2>
+            <h2>Built for the Floor. Auditable from the Boardroom.</h2>
             <p class="subtitle">Six capability pillars, engineered so operators move faster, managers see everything, and auditors leave satisfied.</p>
         </div>
 
@@ -199,11 +195,11 @@
         <div class="dark-panel grid-2 align-center">
             <div>
                 <span class="eyebrow">Powered by Phrakton</span>
-                <h2 class="text-glow">Military-Grade Protection for Your IP</h2>
-                <p class="security-intro">Elenchon’s uncompromising local performance is protected by Phrakton, our zero-trust network overlay built on OpenZiti. Phrakton abstracts the network layer entirely: your factory infrastructure becomes invisible to external threat actors while remaining seamlessly accessible to authorized personnel — with full multitenant isolation between facilities and post-quantum-safe encryption end to end.</p>
+                <h2 class="text-glow">A Factory the Internet Cannot See</h2>
+                <p class="security-intro">Elenchon is protected by Phrakton, our zero-trust network overlay built on OpenZiti. Phrakton abstracts the network layer entirely: the appliance opens no inbound ports and advertises no reachable address, so there is nothing for an external scan to find — while authorised personnel connect seamlessly, through mutually authenticated, post-quantum-safe tunnels with cryptographic isolation between facilities.</p>
                 <ul class="feature-list">
                     <li><strong>The Invisible Factory:</strong> Services are unreachable from the public internet — no open ports, no attack surface, no lateral network movement, no corporate espionage.</li>
-                    <li><strong>Secure Remote Oversight:</strong> Monitor operations and conduct audits from home or abroad through a post-quantum-safe encrypted tunnel.</li>
+                    <li><strong>Secure Remote Oversight:</strong> Monitor operations and conduct audits from home or abroad through a post-quantum-safe encrypted tunnel, with every session authenticated and logged.</li>
                     <li><strong>Multitenant by Design:</strong> Each facility operates in its own cryptographically isolated tenant — strict separation, centrally managed.</li>
                     <li><strong>Absolute Data Sovereignty:</strong> Your manufacturing data never touches a shared cloud server. The physical hardware remains entirely under your jurisdiction.</li>
                 </ul>
@@ -221,22 +217,36 @@
         <div class="price-teaser">
             <div class="price-teaser-copy">
                 <span class="eyebrow">Transparent Pricing</span>
-                <h2 class="text-glow">Two Plans. Both Published. No Hidden Fees.</h2>
-                <p>Most industrial platforms hide the real cost behind per-seat traps, mandatory "implementation" charges, and opaque enterprise quotes. We don’t. Elenchon is one flat monthly price for military-level security, the full platform, and direct founder support — every add-on published in plain euros, so you can budget the total before you ever email us.</p>
+                <h2 class="text-glow">Every Price, Published in the Open.</h2>
+                <p>Most industrial platforms hide the real cost behind per-seat traps, mandatory implementation charges, and quotes that only appear after three sales calls. We publish ours. One flat monthly rate per appliance, every add-on and one-time fee listed in plain euros, and a written uptime credit scale — so your finance team can model the total cost of ownership before you ever email us.</p>
                 <ul class="price-teaser-points">
-                    <li>Military-level, post-quantum-safe security</li>
-                    <li>Excellent, direct-from-the-founders support</li>
-                    <li>Flat, published pricing — zero hidden fees</li>
+                    <li>Flat monthly rate per appliance — no per-seat traps</li>
+                    <li>Every add-on and setup fee published up front</li>
+                    <li>Contractual uptime credits, applied automatically</li>
+                    <li>No minimum term, no exit fee, no lock-in</li>
                 </ul>
                 <div class="cta-group price-teaser-cta">
                     <a href="pricing.html" class="btn btn-secondary">Check Pricing</a>
-                    <a href="platform.html" class="btn btn-secondary" style="border-color: transparent;">See What’s Included</a>
+                    <a href="platform.html" class="btn btn-secondary">See What’s Included</a>
                 </div>
             </div>
             <div class="price-teaser-figure">
-                <span class="price-teaser-label">Plans start at</span>
-                <span class="price-teaser-amount">€490<span class="price-teaser-per">/mo</span></span>
-                <span class="price-teaser-detail">Lite — 20 workers, full traceability core.<br>Standard — €880/mo, 50 workers, the whole platform.</span>
+                <span class="price-teaser-label">Available Plans</span>
+                <ul class="plan-strip">
+                    <li>
+                        <span class="plan-strip-name">Lite<span class="plan-strip-note">Smaller shops and single-cell teams</span></span>
+                        <span class="plan-strip-state">Available</span>
+                    </li>
+                    <li>
+                        <span class="plan-strip-name">Standard<span class="plan-strip-note">The complete platform, unlimited expansion</span></span>
+                        <span class="plan-strip-state">Available</span>
+                    </li>
+                    <li>
+                        <span class="plan-strip-name">Premium<span class="plan-strip-note">Built for scale</span></span>
+                        <span class="plan-strip-state is-pending">In Development</span>
+                    </li>
+                </ul>
+                <a href="pricing.html" class="btn btn-primary btn-block">See Full Pricing</a>
             </div>
         </div>
     </section>
@@ -245,11 +255,11 @@
         <div class="cta-band">
             <span class="eyebrow">Deployment</span>
             <h2 class="text-glow">Contact Us Now</h2>
-            <p>Every Elenchon appliance is delivered, installed, and configured on-site by our own team — which means we take a strictly limited number of deployments, don't miss out. Contact us today to secure a deployment and ensure your spot in the queue — or reach out for more information, we are here to help.</p>
+            <p>Every Elenchon appliance is delivered, installed and configured on-site by our own engineers, so we take a strictly limited number of deployments each quarter. Get in touch to reserve a slot, request a scoping call, or simply ask the technical questions your team needs answered first.</p>
             <div class="cta-group">
                 <a href="deployment.html" class="btn btn-primary">Secure Your Deployment</a>
             </div>
-            <p class="hero-urgency" style="margin-top: 1.5rem;">Contact the founders — no sales layers, no call queues.</p>
+            <p class="hero-urgency u-gap-top">Contact the founders — no sales layers, no call queues.</p>
         </div>
     </section>
     </main>
@@ -274,9 +284,13 @@
             </div>
         </div>
         <div class="copyright">
+            <p class="footer-company">
+                <!-- Statutory identification (Decreto-Lei 7/2004) — complete before publishing -->
+                [[LEGAL ENTITY NAME]] &nbsp;·&nbsp; NIPC [[NIPC]] &nbsp;·&nbsp; [[REGISTERED ADDRESS]], Portugal<br>
+                <a href="mailto:contact@delteris.com">contact@delteris.com</a>
+            </p>
             <p>© 2026 Delteris. All rights reserved. | <a href="https://delteris.com">delteris.com</a></p>
-            <p>Portugal</p>
-            <p class="footer-legal"><a href="terms.html">Terms of Service</a> &nbsp;·&nbsp; <a href="privacy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="contact.html">Contact</a></p>
+            <p class="footer-legal"><a href="terms.html">Terms of Use</a> &nbsp;·&nbsp; <a href="privacy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="security.html">Security</a> &nbsp;·&nbsp; <a href="contact.html">Contact</a></p>
         </div>
     </footer>
 </body>
