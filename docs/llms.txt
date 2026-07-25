@@ -1,10 +1,13 @@
-# Delteris / Elenchon
+# Delteris
 
-> Engineering the technology for Europe's future.
+> Delteris is a Portuguese technology company engineering sovereign, on-premise software for industry. It builds two products: Elenchon, on-premise welding traceability and management software for fabrication shops and heavy industry, and Phrakton, a zero-trust post-quantum-safe network overlay that replaces the VPN for any company.
 
-Elenchon is on-premise welding traceability software for fabrication shops and heavy industry. It runs the full WPS/PQR/WPQ qualification workflow, automates ISO and ASME IX compliance ledgers, captures shop-floor data in seconds, and keeps every weld record on the client's own hardware via Phrakton — Delteris's zero-trust network overlay built on OpenZiti and secured with post-quantum cryptography.
+Every Delteris product follows the same principle: the software runs on hardware the customer owns, the data never leaves the customer's premises, and access is governed by cryptographic identity. Pricing is published in the open.
 
-## Core Pillars
+## Product: Elenchon — On-Premise Welding Traceability Software
+Elenchon is on-premise welding traceability software for fabrication shops and heavy industry. It runs the full WPS/PQR/WPQ welder-qualification workflow, automates ISO and ASME IX compliance ledgers, captures shop-floor data in seconds, and keeps every weld record on the client's own hardware. It is delivered as an appliance installed on-site by Delteris engineers and secured by Phrakton.
+
+Core pillars:
 - Zero-Friction Work Capture (10-second navigation, universal work templates)
 - One Project, Two Live Views (Tree & Flowchart, one-paste BOM import from Tekla/CAD)
 - Management & Access Control (global custom roles, one-click document generation)
@@ -12,7 +15,10 @@ Elenchon is on-premise welding traceability software for fabrication shops and h
 - Floor Asset & Consumable Control (maintenance hub, machine certification tracking, batch inventory)
 - Bulletproof Data Sovereignty (on-premise appliance, automated local backups, post-quantum-safe encryption)
 
-## Pricing (EUR, per appliance, per month, excl. VAT)
+## Product: Phrakton — Zero-Trust, Post-Quantum-Safe Network Overlay
+Phrakton is a zero-trust network overlay built on OpenZiti — a modern VPN replacement sold standalone to any company and shipped built-in with every Elenchon appliance. Staff reach internal applications on local servers or in the cloud through clean per-application domain URLs, from the LAN or remotely, while the infrastructure opens no inbound ports and stays invisible to the public internet. Access is granted per application to verified cryptographic identities (never to IPs), every tunnel uses post-quantum-hybrid key exchange (closing harvest-now-decrypt-later), connectivity is outbound-only over standard TLS (works behind strict corporate firewalls with no inbound rules), and each customer operates in a cryptographically isolated tenant. Delteris operates the fabric under a 99.9% monthly uptime commitment with automatic invoice credits. Standalone Phrakton is priced as a service, quoted per deployment (applications, users, sites) — contact for a quote.
+
+## Elenchon Pricing (EUR, per appliance, per month, excl. VAT)
 - Lite: €400/month, 20 workers included. The full traceability core — work capture, project tree and flowchart, BOM import, WPS/PQR/WPQ workflow, ISO & ASME IX ledgers, preset roles, Phrakton networking, local backups, founder support by email. Expandable by up to two 10-worker blocks, to a 40-worker ceiling.
 - Standard: €880/month, 50 workers included. Everything in Lite plus the full platform (all six pillars), floor asset and consumable control, global custom roles, a pre-deployment on-site scoping session, on-site training run as two 3-hour blocks, unlimited worker expansion blocks, and direct founder support.
 - Premium: coming soon.
@@ -20,17 +26,21 @@ Elenchon is on-premise welding traceability software for fabrication shops and h
 - Plan changes: upgrades, downgrades and add-ons are applied remotely over the Phrakton fabric at no charge. Give at least 15 days' notice. Upgrades apply immediately; downgrades at the next billing cycle.
 - One-time: Lite Deployment & Training package €1,100 (installation plus one training session of two 2-hour blocks, no pre-deployment scoping visit); Standard Deployment & Training €1,700 all in (€850 deployment + €850 floor training, training run as two 3-hour blocks); Server Appliance ~€300–400 at cost; On-Site Commute Fee €150/visit.
 - Professional services: Extra Training Session €500 (half day of two 2-hour blocks, or full day of two 3-hour blocks); Network Consulting €500 half day / €850 full day; PQS (post-quantum security) Consulting €500 half day / €850 full day.
-- Uptime: 99.9% monthly commitment on the Phrakton fabric, with automatic invoice credits when missed — 10% for 99.0–99.8%, 25% for 97.0–99.0%, 50% for 90.0–97.0%, and 100% (the month is free) below 89.9%.
 - No per-audit fees, no lock-in — customers who cancel keep permanent view-only access to historical data for audits.
+
+## Uptime / SLA (applies to Elenchon remote access and standalone Phrakton)
+99.9% monthly uptime commitment on the Phrakton fabric, with automatic invoice credits when missed — 10% for 99.0–99.8%, 25% for 97.0–99.0%, 50% for 90.0–97.0%, and 100% (the month is free) below 89.9%. Because Elenchon runs locally on the appliance, a fabric outage never stops shop-floor work — it only affects access from outside the facility.
 
 ## Deployment
 Three steps: scoping session with the founders, on-site installation of the hardware appliance, then onboarding and go-live. Deployment slots per quarter are limited because every appliance is installed on-site by Delteris engineers. Lite deployments skip the pre-deployment scoping visit and include a single training session of two 2-hour blocks; Standard training runs as two 3-hour blocks.
 
 ## Links
-- Home: https://delteris.com/
-- Platform: https://delteris.com/platform.html
+- Home (Delteris): https://delteris.com/
+- Elenchon overview: https://delteris.com/elenchon.html
+- Elenchon platform capabilities: https://delteris.com/platform.html
 - Welding Qualification Software (WPS/PQR/WPQ): https://delteris.com/welding-qualification-software.html
-- Security (Phrakton): https://delteris.com/security.html
+- Phrakton overview: https://delteris.com/phrakton.html
+- Phrakton security architecture: https://delteris.com/security.html
 - Pricing: https://delteris.com/pricing.html
 - Deployment: https://delteris.com/deployment.html
 - Contact: https://delteris.com/contact.html
@@ -40,4 +50,4 @@ Three steps: scoping session with the founders, on-site installation of the hard
 Founders: Flávio Brites (Co-Founder & CEO) & Rodrigo Ferreira (Co-Founder & CTO).
 Contact: contact@delteris.com
 Location: Portugal.
-Note: prices are published only on the pricing page; the homepage links to it rather than quoting figures.
+Note: Elenchon prices are published only on the pricing page; other pages link to it rather than quoting figures. Standalone Phrakton is quoted per deployment.
