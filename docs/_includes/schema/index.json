@@ -1,0 +1,92 @@
+{
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://delteris.com/#organization",
+          "name": "Delteris",
+          "url": "https://delteris.com/",
+          "logo": "https://delteris.com/static/DelterisCrest.webp",
+          "email": "contact@delteris.com",
+          "description": "Engineering the technology for Europe's future. Creators of Elenchon and the Phrakton secure network overlay.",
+          "address": { "@type": "PostalAddress", "addressCountry": "PT" },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "contact@delteris.com",
+            "contactType": "sales",
+            "availableLanguage": ["English", "Portuguese"]
+          },
+          "founder": [
+            { "@type": "Person", "name": "Flávio Brites", "jobTitle": "Co-Founder & CEO" },
+            { "@type": "Person", "name": "Rodrigo Ferreira", "jobTitle": "Co-Founder & CTO" }
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://delteris.com/#website",
+          "url": "https://delteris.com/",
+          "name": "Delteris",
+          "publisher": { "@id": "https://delteris.com/#organization" }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "Elenchon",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "Linux/Appliance",
+          "applicationSubCategory": "Welding Management Software",
+          "description": "Elenchon is on-premise welding management software for fabrication shops and heavy industry. It runs the WPS, PQR and WPQ welder-qualification workflow, tracks welds and welder continuity, and automates ISO and ASME IX compliance ledgers — a sovereign, on-premise alternative to cloud welding software.",
+          "keywords": "welding management software, welding traceability software, welder qualification software, weld tracking software, WPS PQR WPQ software, welding equipment management software, welding machine calibration software, consumable inventory and filler metal traceability, ISO 3834 software, EN 1090 software, ASME IX software, on-premise welding software",
+          "featureList": [
+            "Welder qualification workflow (WPS, PQR, WPQ)",
+            "6-month welder continuity tracking with expiry alerts",
+            "Weld tracking and BOM import from Tekla/CAD",
+            "Equipment, calibration and consumable batch tracking with renewal alerts",
+            "Automated ISO and ASME IX compliance ledgers",
+            "On-premise appliance with full data sovereignty",
+            "Zero-trust, post-quantum-safe remote access via Phrakton"
+          ],
+          "offers": {
+            "@type": "Offer",
+            "url": "https://delteris.com/pricing.html",
+            "availability": "https://schema.org/InStock"
+          },
+          "provider": { "@id": "https://delteris.com/#organization" }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://delteris.com/#faq",
+          "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is welding management software?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Welding management software digitizes a fabrication shop's welding records — welder qualifications (WPS, PQR, WPQ), weld tracking and mapping, procedure control and inspection history — so every joint is traceable and audit-ready. Elenchon does this entirely on-premise, keeping the full weld record on hardware you own." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Elenchon cloud-based or on-premise?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Elenchon is a 100% on-premise appliance installed in your facility — the sovereign alternative to cloud welding software. Your manufacturing data never touches a shared server, there are no forced updates, and an internet outage cannot stop production." }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Elenchon manage welder qualification (WPS, PQR, WPQ)?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Elenchon runs the full WPS/PQR/WPQ qualification workflow with live WPQ capture, automatic 6-month welder continuity tracking and expiry alerts — so you never miss a requalification or weld outside an approved range." }
+        },
+        {
+          "@type": "Question",
+          "name": "How does it help with ISO 3834 and ASME IX compliance?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Elenchon turns shop-floor activity into immutable, version-pinned compliance ledgers. Every qualification, variable and process is verified and locked the moment it is captured, so audit evidence for codes such as ISO 3834 and ASME IX is instant and undisputed." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can we access an on-premise system remotely?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes, through Phrakton, our zero-trust network overlay. Authorised staff and auditors connect over mutually authenticated, post-quantum-safe tunnels, while the appliance opens no inbound ports and stays invisible to the public internet." }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does Elenchon cost?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Pricing is published in the open: a flat monthly rate per appliance — Lite from €400/month, Standard from €880/month — with every add-on listed in plain euros and no per-seat traps or lock-in. See the pricing page for the full breakdown." }
+        }
+          ]
+        }
+      ]
+    }

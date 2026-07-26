@@ -1,0 +1,32 @@
+{
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "ContactPage",
+          "name": "Contact Delteris",
+          "url": "https://delteris.com/contact.html",
+          "publisher": { "@id": "https://delteris.com/#organization" }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://delteris.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://delteris.com/contact.html" }
+          ]
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://delteris.com/#organization",
+          "name": "Delteris",
+          "url": "https://delteris.com/",
+          "email": "contact@delteris.com",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "contact@delteris.com",
+            "contactType": "sales",
+            "areaServed": "EU",
+            "availableLanguage": ["English", "Portuguese"]
+          }
+        }
+      ]
+    }

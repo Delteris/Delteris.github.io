@@ -1,0 +1,31 @@
+{
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "name": "Platform Capabilities",
+          "url": "https://delteris.com/platform.html",
+          "description": "Elenchon's six capability pillars covering the full production loop — from BOM import to automated ISO & ASME IX compliance ledgers.",
+          "publisher": { "@id": "https://delteris.com/#organization" }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://delteris.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Platform", "item": "https://delteris.com/platform.html" }
+          ]
+        },
+        {
+          "@type": "ItemList",
+          "name": "Elenchon capability pillars",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Zero-Friction Work Capture", "url": "https://delteris.com/platform.html#work-capture" },
+            { "@type": "ListItem", "position": 2, "name": "One Project, Two Live Views", "url": "https://delteris.com/platform.html#live-views" },
+            { "@type": "ListItem", "position": 3, "name": "Management & Access Control", "url": "https://delteris.com/platform.html#management" },
+            { "@type": "ListItem", "position": 4, "name": "Qualifications & Procedures", "url": "https://delteris.com/platform.html#qualifications" },
+            { "@type": "ListItem", "position": 5, "name": "Floor Asset & Consumable Control", "url": "https://delteris.com/platform.html#assets" },
+            { "@type": "ListItem", "position": 6, "name": "Bulletproof Data Sovereignty", "url": "https://delteris.com/platform.html#sovereignty" }
+          ]
+        }
+      ]
+    }

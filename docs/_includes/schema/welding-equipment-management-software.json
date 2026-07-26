@@ -1,0 +1,68 @@
+{
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://delteris.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Welding Equipment Management Software", "item": "https://delteris.com/welding-equipment-management-software.html" }
+          ]
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "Elenchon — Welding Equipment & Calibration Management Software",
+          "applicationCategory": "BusinessApplication",
+          "applicationSubCategory": "Welding Equipment Management Software",
+          "operatingSystem": "Linux/Appliance",
+          "description": "On-premise welding equipment management software that tracks machine certification and calibration, manages consumable batch inventory and filler-metal traceability, runs a shop-floor maintenance hub, and keeps equipment records audit-ready for ISO 3834, EN 1090 and ASME IX.",
+          "keywords": "welding equipment management software, welding machine calibration software, welding equipment calibration tracking, machine certification tracking software, welding consumable inventory software, filler metal traceability software, welding equipment maintenance software, ISO 17662 calibration",
+          "featureList": [
+            "Machine certification and calibration tracking with renewal alerts",
+            "Universal equipment register for any machine, not just welding gear",
+            "Consumable batch inventory with storage and reheat rules",
+            "Filler-metal and heat-number traceability",
+            "Four-tier shop-floor maintenance hub",
+            "Equipment records audit-ready for ISO 3834, EN 1090 and ASME IX",
+            "On-premise appliance with full data sovereignty"
+          ],
+          "offers": { "@type": "Offer", "url": "https://delteris.com/pricing.html", "availability": "https://schema.org/InStock" },
+          "provider": { "@id": "https://delteris.com/#organization" }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://delteris.com/welding-equipment-management-software.html#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is welding equipment management software?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Welding equipment management software keeps a live register of the machines, tools and consumables on a fabrication floor and the records that prove they are fit for use — calibration and certification status, maintenance history, and consumable batch traceability. Elenchon runs that whole register on-premise, so equipment evidence stays on hardware you own and is ready the moment an auditor asks." }
+            },
+            {
+              "@type": "Question",
+              "name": "How does Elenchon track welding machine calibration and certification?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Every machine carries its own certification and calibration schedule with attached documents and automated renewal alerts, so a welding power source, positioner, oven or crane never runs past its due date unnoticed. This supports calibration, verification and validation of equipment used for welding under ISO 17662 and the equipment records expected by ISO 3834." }
+            },
+            {
+              "@type": "Question",
+              "name": "Can it trace welding consumables and filler metals by batch?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Yes. Elenchon logs consumables at batch level with customizable storage and reheat rules and low-stock alerts, and heat numbers are captured, linked to their parent MTRs and propagated down the project tree — so filler-metal and material traceability runs from goods-in to the finished weld." }
+            },
+            {
+              "@type": "Question",
+              "name": "Does the maintenance hub work from the shop floor?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Yes. Workers raise maintenance requests directly from the floor app across four urgency tiers, and maintenance personnel manage the whole workflow from the management app, with role-filtered notifications so the right people are alerted without spamming everyone." }
+            },
+            {
+              "@type": "Question",
+              "name": "Which standards does equipment and calibration tracking help with?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Equipment and consumable control underpins quality codes such as ISO 3834 (quality requirements for fusion welding), EN 1090 (execution of steel and aluminium structures) and ASME IX, as well as ISO 17662 for the calibration of welding equipment. Elenchon turns the underlying records into immutable, version-pinned ledgers that make audit evidence instant." }
+            },
+            {
+              "@type": "Question",
+              "name": "Is equipment data stored on-premise or in the cloud?",
+              "acceptedAnswer": { "@type": "Answer", "text": "On-premise. Elenchon is a containerized appliance installed in your facility, so equipment, calibration and consumable records never touch a shared cloud server. Authorised staff and auditors can still connect remotely through Phrakton, a zero-trust, post-quantum-safe overlay, while the appliance opens no inbound ports to the public internet." }
+            }
+          ]
+        }
+      ]
+    }
