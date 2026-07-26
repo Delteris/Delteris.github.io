@@ -1,87 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy | Delteris</title>
-    <meta name="description" content="How delteris.com handles personal data: no cookies, no analytics, no tracking. What the server logs, what happens when you email us, and how to exercise your GDPR rights.">
-    <meta name="author" content="Delteris">
-    <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#050a14">
-    <link rel="canonical" href="https://delteris.com/privacy.html">
-
-    <link rel="icon" href="./favicon.ico" sizes="any">
-    <link rel="icon" type="image/png" sizes="96x96" href="./static/favicon-96.png">
-    <link rel="icon" type="image/png" sizes="48x48" href="./static/favicon-48.png">
-    <link rel="apple-touch-icon" href="./static/apple-touch-icon.png">
-    <link rel="manifest" href="./site.webmanifest">
-
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Delteris">
-    <meta property="og:locale" content="en_US">
-    <meta property="og:url" content="https://delteris.com/privacy.html">
-    <meta property="og:title" content="Privacy Policy | Delteris">
-    <meta property="og:description" content="How delteris.com handles personal data: no cookies, no analytics, no tracking. What the server logs, what happens when you email us, and how to exercise your GDPR rights.">
-    <meta property="og:image" content="https://delteris.com/static/DelterisCrest.webp">
-    <meta property="og:image:alt" content="Delteris crest logo">
-
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Privacy Policy | Delteris">
-    <meta name="twitter:description" content="How delteris.com handles personal data: no cookies, no analytics, no tracking. What the server logs, what happens when you email us, and how to exercise your GDPR rights.">
-    <meta name="twitter:image" content="https://delteris.com/static/DelterisCrest.webp">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;600;700&display=swap">
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "WebPage",
-          "name": "Privacy Policy",
-          "url": "https://delteris.com/privacy.html",
-          "publisher": { "@id": "https://delteris.com/#organization" }
-        },
-        {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://delteris.com/" },
-            { "@type": "ListItem", "position": 2, "name": "Privacy Policy", "item": "https://delteris.com/privacy.html" }
-          ]
-        }
-      ]
-    }
-    </script>
-
-    <link rel="stylesheet" href="./style.css">
-    <script src="./main.js" defer></script>
-</head>
-<body>
-    <a class="skip-link" href="#main">Skip to content</a>
-    <canvas id="network-canvas" aria-hidden="true"></canvas>
-
-    <nav aria-label="Main navigation">
-        <a href="/" class="logo nav-logo">
-            <img src="./static/DelterisCrest.webp" alt="Delteris" width="32" height="32">
-            <span class="logo-text"> <span class="logo-accent">Delteris</span></span>
-        </a>
-        <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-label="Open menu">
-            <span class="nav-toggle-bar"></span>
-            <span class="nav-toggle-bar"></span>
-            <span class="nav-toggle-bar"></span>
-        </button>
-        <div class="nav-links" id="nav-links">
-            <a href="platform.html">Platform</a>
-            <a href="security.html">Security</a>
-            <a href="pricing.html">Pricing</a>
-            <a href="deployment.html">Deployment</a>
-            <a href="contact.html" class="btn btn-small">Contact Us Now</a>
-        </div>
-    </nav>
-
-    <main id="main">
+---
+layout: default
+title: "Privacy Policy | Delteris"
+description: "How delteris.com handles personal data: no cookies, no analytics, no tracking. What the server logs, what happens when you email us, and how to exercise your GDPR rights."
+og_image: "/static/DelterisCrest.webp"
+schema: schema/privacy.json
+---
     <header class="page-hero is-short">
         <div class="hero-content">
             <span class="hero-eyebrow">Privacy</span>
@@ -162,36 +85,3 @@
             <a href="mailto:contact@delteris.com">contact@delteris.com</a></p>
         </div>
     </section>
-    </main>
-
-    <footer>
-        <div class="footer-content">
-            <h2 class="logo"><span>Delteris</span></h2>
-            <p>Engineering the technology for Europe's future.</p>
-            <p class="footer-cta-text">Ready to optimize your traceability?</p>
-            <a href="contact.html" class="btn btn-primary">Contact the Founders</a>
-        </div>
-        <div class="leadership-section">
-            <div class="leader-profile">
-                <strong>Flávio Brites</strong>
-                <span class="title">Co-Founder & CEO</span>
-                <span class="credential">CTeSP Welding & Metal Construction</span>
-            </div>
-            <div class="leader-profile">
-                <strong>Rodrigo Ferreira</strong>
-                <span class="title">Co-Founder & CTO</span>
-                <span class="credential">MSc Telecom & IT Engineering</span>
-            </div>
-        </div>
-        <div class="copyright">
-            <p class="footer-company">
-                <!-- Statutory identification (Decreto-Lei 7/2004) — complete before publishing -->
-                [[LEGAL ENTITY NAME]] &nbsp;·&nbsp; NIPC [[NIPC]] &nbsp;·&nbsp; [[REGISTERED ADDRESS]], Portugal<br>
-                <a href="mailto:contact@delteris.com">contact@delteris.com</a>
-            </p>
-            <p>© 2026 Delteris. All rights reserved. | <a href="https://delteris.com">delteris.com</a></p>
-            <p class="footer-legal"><a href="terms.html">Terms of Use</a> &nbsp;·&nbsp; <a href="privacy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="security.html">Security</a> &nbsp;·&nbsp; <a href="contact.html">Contact</a></p>
-        </div>
-    </footer>
-</body>
-</html>

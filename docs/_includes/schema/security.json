@@ -1,0 +1,19 @@
+{
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "name": "Security — Phrakton Zero-Trust Network Overlay",
+          "url": "https://delteris.com/security.html",
+          "description": "Phrakton is Delteris's zero-trust network overlay built on OpenZiti, providing the invisible-factory security layer behind Elenchon.",
+          "publisher": { "@id": "https://delteris.com/#organization" }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://delteris.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Security", "item": "https://delteris.com/security.html" }
+          ]
+        }
+      ]
+    }

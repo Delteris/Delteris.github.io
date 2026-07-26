@@ -1,0 +1,25 @@
+# Delteris marketing site — built by GitHub Pages (Jekyll) from /docs
+url: "https://delteris.com"
+baseurl: ""
+timezone: Europe/Lisbon
+
+plugins:
+  - jekyll-sitemap   # auto-generates /sitemap.xml with lastmod (whitelisted on GitHub Pages)
+
+# Keep non-site files out of the build output
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
+
+# Copy these through untouched
+include:
+  - llms.txt
+  - robots.txt
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default

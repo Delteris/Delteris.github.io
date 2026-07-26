@@ -1,0 +1,28 @@
+{
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "name": "Deployment",
+          "url": "https://delteris.com/deployment.html",
+          "description": "How an Elenchon deployment works: scoping session, on-site installation, and onboarding & go-live.",
+          "publisher": { "@id": "https://delteris.com/#organization" }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://delteris.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Deployment", "item": "https://delteris.com/deployment.html" }
+          ]
+        },
+        {
+          "@type": "HowTo",
+          "name": "How an Elenchon deployment works",
+          "step": [
+            { "@type": "HowToStep", "position": 1, "name": "Scoping Session", "text": "A focused call with the founders to map project structures, compliance requirements, and floor workflows." },
+            { "@type": "HowToStep", "position": 2, "name": "On-Site Installation", "text": "The Delteris team delivers and configures the hardware-secured server appliance directly at your facility." },
+            { "@type": "HowToStep", "position": 3, "name": "Onboarding & Go-Live", "text": "First projects imported, roles and templates configured, and floor personnel trained — production continues uninterrupted." }
+          ]
+        }
+      ]
+    }

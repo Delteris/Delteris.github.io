@@ -1,45 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Not Found | Delteris</title>
-    <meta name="robots" content="noindex">
-    <meta name="theme-color" content="#050a14">
-    <link rel="icon" href="./favicon.ico" sizes="any">
-    <link rel="icon" type="image/png" sizes="96x96" href="./static/favicon-96.png">
-    <link rel="icon" type="image/png" sizes="48x48" href="./static/favicon-48.png">
-    <link rel="apple-touch-icon" href="./static/apple-touch-icon.png">
-    <link rel="manifest" href="./site.webmanifest">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;600;700&display=swap">
-    <link rel="stylesheet" href="./style.css">
-    <script src="./main.js" defer></script>
-</head>
-<body>
-    <canvas id="network-canvas" aria-hidden="true"></canvas>
-
-    <nav aria-label="Main navigation">
-        <a href="/" class="logo nav-logo">
-            <img src="./static/DelterisCrest.webp" alt="Delteris" width="32" height="32">
-            <span class="logo-text">D<span class="logo-accent">elteris</span></span>
-        </a>
-        <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-label="Open menu">
-            <span class="nav-toggle-bar"></span>
-            <span class="nav-toggle-bar"></span>
-            <span class="nav-toggle-bar"></span>
-        </button>
-        <div class="nav-links" id="nav-links">
-            <a href="platform.html">Platform</a>
-            <a href="security.html">Security</a>
-            <a href="pricing.html">Pricing</a>
-            <a href="deployment.html">Deployment</a>
-            <a href="contact.html" class="btn btn-small">Contact Us Now</a>
-        </div>
-    </nav>
-
-    <main id="main">
+---
+layout: default
+title: "Page Not Found | Delteris"
+noindex: true
+minimal_head: true
+hide_footer: true
+sitemap: false
+permalink: /404.html
+---
     <header class="page-hero is-medium">
         <div class="hero-content">
             <span class="hero-eyebrow">Error 404</span>
@@ -51,6 +18,3 @@
             </div>
         </div>
     </header>
-    </main>
-</body>
-</html>
