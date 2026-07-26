@@ -1,0 +1,6 @@
+# Jekyll build output & local dev artifacts — never commit
+_site/
+.jekyll-cache/
+.jekyll-metadata
+vendor/
+Gemfile.lock
