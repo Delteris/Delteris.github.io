@@ -30,6 +30,7 @@ Three steps: scoping session with the founders, on-site installation of the hard
 - Home: https://delteris.com/
 - Platform: https://delteris.com/platform.html
 - Welding Qualification Software (WPS/PQR/WPQ): https://delteris.com/welding-qualification-software.html
+- Welding Equipment & Calibration Management (equipment register, calibration/certification tracking, consumable batch traceability, maintenance): https://delteris.com/welding-equipment-management-software.html
 - Security (Phrakton): https://delteris.com/security.html
 - Pricing: https://delteris.com/pricing.html
 - Deployment: https://delteris.com/deployment.html
