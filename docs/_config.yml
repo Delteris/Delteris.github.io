@@ -9,6 +9,7 @@ plugins:
 # Keep non-site files out of the build output
 exclude:
   - Gemfile
+  - serve.sh
   - Gemfile.lock
   - README.md
   - vendor
