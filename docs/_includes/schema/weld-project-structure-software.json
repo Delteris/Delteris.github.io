@@ -1,0 +1,62 @@
+{
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://delteris.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Weld Project Structure & BOM Import Software", "item": "https://delteris.com/weld-project-structure-software.html" }
+          ]
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "Elenchon — Weld Project Structure & BOM Import Software",
+          "applicationCategory": "BusinessApplication",
+          "applicationSubCategory": "Weld Project Structure Software",
+          "operatingSystem": "Linux/Appliance",
+          "description": "On-premise weld project structure software: build any project as an indented tree or an editable flowchart from one source of truth, and paste a BOM straight from Tekla or CAD to build the whole structure in seconds, with automatic column detection.",
+          "keywords": "weld project structure software, weld BOM import, Tekla BOM import welding, welding project software, tree flowchart welding, repeatable weld batch software",
+          "featureList": [
+            "Tree and flowchart authoring over one source of truth",
+            "One-paste BOM import from Tekla or CAD with automatic column detection",
+            "Repeatable batches and bespoke one-offs in one model",
+            "Live in-progress project editing with automatic node locking",
+            "Heat-number propagation down the project tree",
+            "On-premise appliance with full data sovereignty"
+          ],
+          "offers": { "@type": "Offer", "url": "https://delteris.com/pricing.html", "availability": "https://schema.org/InStock" },
+          "provider": { "@id": "https://delteris.com/#organization" }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://delteris.com/weld-project-structure-software.html#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is weld project structure software?",
+              "acceptedAnswer": { "@type": "Answer", "text": "It is the tool that models a fabrication project — assemblies, parts and the joints between them — so every weld and work entry has a place to live and a traceable path upward to the finished piece. Elenchon runs it on-premise, on hardware you own." }
+            },
+            {
+              "@type": "Question",
+              "name": "Can I import a BOM from Tekla or CAD?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Yes. Copy your BOM straight out of Tekla or your CAD package and paste it into an Excel-like grid. Elenchon auto-detects the columns, maps every field, and builds the project structure in seconds — no special export format needed." }
+            },
+            {
+              "@type": "Question",
+              "name": "What is the difference between the tree and flowchart views?",
+              "acceptedAnswer": { "@type": "Answer", "text": "They are two editable windows onto the same project. The tree is a left-indented outline suited to detailed one-off structures; the flowchart is a visual, drag-to-connect editor suited to standardized, repeatable ones. Edit either and the other updates instantly." }
+            },
+            {
+              "@type": "Question",
+              "name": "Can I edit a project after work has started?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Yes. You can add nodes or remove empty ones on an in-progress project, while any node that already contains captured work is automatically locked and protected — so the structure evolves without rewriting history." }
+            },
+            {
+              "@type": "Question",
+              "name": "Does it handle repeatable batches and one-offs?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Both. Define an assembly once and deploy identical copies in quantity for batch production, or build a fully bespoke tree for a one-off — welds defined once on a repeated assembly apply to every copy." }
+            }
+          ]
+        }
+      ]
+    }
