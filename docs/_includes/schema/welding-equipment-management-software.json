@@ -21,7 +21,7 @@
             "Universal equipment register for any machine, not just welding gear",
             "Consumable batch inventory with storage and reheat rules",
             "Filler-metal and heat-number traceability",
-            "Four-tier shop-floor maintenance hub",
+            "Five-level shop-floor maintenance hub with role-gated critical tiers",
             "Equipment records audit-ready for ISO 3834, EN 1090 and ASME IX",
             "On-premise appliance with full data sovereignty"
           ],
@@ -50,7 +50,7 @@
             {
               "@type": "Question",
               "name": "Does the maintenance hub work from the shop floor?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Yes. Workers raise maintenance requests directly from the floor app across four urgency tiers, and maintenance personnel manage the whole workflow from the management app, with role-filtered notifications so the right people are alerted without spamming everyone." }
+              "acceptedAnswer": { "@type": "Answer", "text": "Yes. Workers raise maintenance requests directly from the floor app across five priority levels, from routine to emergency, with the critical tiers locked to authorised roles, and maintenance personnel manage the whole workflow from the management app, with role-filtered notifications so the right people are alerted without spamming everyone." }
             },
             {
               "@type": "Question",

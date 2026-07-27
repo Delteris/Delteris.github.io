@@ -36,7 +36,7 @@
 {%- endif %}
     <meta property="og:image:alt" content="{{ page.og_image_alt | default: 'Delteris crest logo' }}">
 
-    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="{% if page.twitter_large %}summary_large_image{% else %}summary{% endif %}">
     <meta name="twitter:title" content="{{ page.og_title | default: page.title }}">
     <meta name="twitter:description" content="{{ page.og_description | default: page.description }}">
     <meta name="twitter:image" content="{{ page.og_image | default: '/static/favicon-512.png' | absolute_url }}">
