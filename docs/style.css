@@ -10,6 +10,8 @@
     --accent-blue: #3b82f6;
     --accent-blue-strong: #2563eb;
     --accent-blue-soft: rgba(59, 130, 246, 0.15);
+    --link: #7db3ff;
+    --link-hover: #a9ccff;
     --text-main: #f1f5f9;
     --text-muted: #94a3b8;
     --glass-bg: rgba(15, 23, 42, 0.45);
@@ -260,6 +262,33 @@ nav {
 .btn-secondary:hover {
     background-color: var(--accent-blue-soft);
     border-color: var(--accent-blue);
+}
+
+/* Capstone CTA — the one destination that should feel primary above the pillars */
+.btn-capstone {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 1.02rem;
+    box-shadow: 0 4px 20px rgba(59, 130, 246, 0.35);
+}
+
+.btn-capstone:hover {
+    box-shadow: 0 8px 28px rgba(59, 130, 246, 0.45);
+}
+
+.section-sublink {
+    margin-top: 1rem;
+    font-size: 0.92rem;
+}
+
+.section-sublink a {
+    color: var(--link);
+    text-decoration: none;
+}
+
+.section-sublink a:hover {
+    color: var(--link-hover);
+    text-decoration: underline;
 }
 
 .btn-small {
@@ -556,6 +585,11 @@ nav {
 .feature-list {
     list-style: none;
     color: var(--text-muted);
+}
+
+/* Give a CTA that follows a bullet list room to breathe */
+.feature-list + .cta-group {
+    margin-top: 2rem;
 }
 
 .feature-list li {
@@ -1301,7 +1335,53 @@ a.glass-card:hover h3 {
 }
 
 .feature-out a {
-    color: var(--accent-blue);
+    color: var(--link);
+}
+
+/* ---------- Inline prose links (readable on dark bg, never purple) ---------- */
+.summary-panel p a,
+.compliance-panel p a,
+.feature-lead a,
+.feature-list a,
+.security-intro a,
+.hero-sub a,
+.subtitle a,
+.glass-card p a,
+.faq-card p a,
+main p a {
+    color: var(--link);
+    text-decoration: underline;
+    text-decoration-color: rgba(125, 179, 255, 0.5);
+    text-underline-offset: 2px;
+    transition: color 0.15s ease;
+}
+
+.summary-panel p a:hover,
+.compliance-panel p a:hover,
+.feature-lead a:hover,
+.feature-list a:hover,
+.security-intro a:hover,
+.hero-sub a:hover,
+.subtitle a:hover,
+.glass-card p a:hover,
+.faq-card p a:hover,
+main p a:hover {
+    color: var(--link-hover);
+    text-decoration-color: var(--link-hover);
+}
+
+/* Kill the browser default purple visited state on all prose links */
+.summary-panel p a:visited,
+.compliance-panel p a:visited,
+.feature-lead a:visited,
+.feature-list a:visited,
+.security-intro a:visited,
+.hero-sub a:visited,
+.subtitle a:visited,
+.glass-card p a:visited,
+.faq-card p a:visited,
+main p a:visited {
+    color: var(--link);
 }
 
 /* ---------- Pricing page: no-hidden-fees panel ---------- */
