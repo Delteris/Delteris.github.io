@@ -28,10 +28,16 @@ Three steps: scoping session with the founders, on-site installation of the hard
 
 ## Links
 - Home: https://delteris.com/
-- Platform: https://delteris.com/platform.html
-- Welding Qualification Software (WPS/PQR/WPQ): https://delteris.com/welding-qualification-software.html
-- Welding Equipment & Calibration Management (equipment register, calibration/certification tracking, consumable batch traceability, maintenance): https://delteris.com/welding-equipment-management-software.html
-- Security (Phrakton): https://delteris.com/security.html
+- Platform (all six capabilities): https://delteris.com/platform.html
+- Welding Traceability Software (capstone — heat-number-to-finished-piece chain, weld tracking): https://delteris.com/welding-traceability-software.html
+- Shop-Floor Weld Data Capture Software (10-second capture, universal work types, offline capture): https://delteris.com/welding-work-capture-software.html
+- Weld Project Structure & BOM Import Software (tree/flowchart, one-paste BOM import from Tekla/CAD): https://delteris.com/weld-project-structure-software.html
+- Welding QMS & Access-Control Software (custom roles, permission-filtered UI, document generation): https://delteris.com/welding-qms-access-control-software.html
+- Welding Qualification Software (WPS/PQR/WPQ workflow, welder continuity): https://delteris.com/welding-qualification-software.html
+- Welding Equipment & Calibration Management (equipment register, ISO 17662 calibration, consumable batch traceability, five-level maintenance hub): https://delteris.com/welding-equipment-management-software.html
+- On-Premise & Offline Welding Software (data ownership, no cloud fees, offline capture): https://delteris.com/on-premise-welding-software.html
+- On-Premise vs. Cloud Welding Software (honest comparison, no competitor names): https://delteris.com/welding-software-on-premise-vs-cloud.html
+- Security (Phrakton — zero-trust, post-quantum): https://delteris.com/security.html
 - Pricing: https://delteris.com/pricing.html
 - Deployment: https://delteris.com/deployment.html
 - Contact: https://delteris.com/contact.html
