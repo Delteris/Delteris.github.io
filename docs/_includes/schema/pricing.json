@@ -23,12 +23,12 @@
           "offers": {
             "@type": "Offer",
             "url": "https://delteris.com/pricing.html",
-            "price": "400.00",
+            "price": "390.00",
             "priceCurrency": "EUR",
             "availability": "https://schema.org/InStock",
             "priceSpecification": {
               "@type": "UnitPriceSpecification",
-              "price": "400.00",
+              "price": "390.00",
               "priceCurrency": "EUR",
               "unitText": "per appliance, per month, excluding VAT"
             }
@@ -42,12 +42,12 @@
           "offers": {
             "@type": "Offer",
             "url": "https://delteris.com/pricing.html",
-            "price": "880.00",
+            "price": "790.00",
             "priceCurrency": "EUR",
             "availability": "https://schema.org/InStock",
             "priceSpecification": {
               "@type": "UnitPriceSpecification",
-              "price": "880.00",
+              "price": "790.00",
               "priceCurrency": "EUR",
               "unitText": "per appliance, per month, excluding VAT"
             }
@@ -61,7 +61,7 @@
               "name": "How much does Elenchon cost?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Elenchon Lite is \u20ac400 per month and includes 20 workers. Elenchon Standard is \u20ac880 per month and includes 50 workers. Both are flat rates per appliance, per month, excluding VAT."
+                "text": "Elenchon Lite is \u20ac390 per month and includes 20 workers. Elenchon Standard is \u20ac790 per month and includes 50 workers, which stays under \u20ac1,000 a month including Portuguese VAT. Both are flat rates per appliance, per month, and extra workers beyond the included block are \u20ac9 each per month."
               }
             },
             {

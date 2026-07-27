@@ -17,6 +17,12 @@
     --glass-bg: rgba(15, 23, 42, 0.45);
     --glass-border: rgba(59, 130, 246, 0.15);
     --radius: 10px;
+    /* Metallic gold — used only as a rare ornamental accent (edges, rules).
+       The gradient's bright centre band is what makes it read as gold, not
+       flat yellow. Gold lettering is reserved for the future Premium tier. */
+    --gold-sheen: linear-gradient(90deg, #5c4a1a 0%, #a9832f 20%, #f4e3a1 44%, #fff6d8 50%, #f4e3a1 56%, #a9832f 80%, #5c4a1a 100%);
+    --gold-sheen-v: linear-gradient(180deg, #5c4a1a 0%, #a9832f 20%, #f4e3a1 44%, #fff6d8 50%, #f4e3a1 56%, #a9832f 80%, #5c4a1a 100%);
+    --gold-solid: #c9a53f;
 }
 
 * {
@@ -619,6 +625,40 @@ nav {
     transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
+/* ------------------------------------------------------------
+   Gold accent — rare, ornamental, never interactive.
+   .gold-edge: a thin metallic top hairline on a signature card.
+   .gold-rule: a short metallic rule under a heading.
+   Gold LETTERING is held in reserve for the future Premium tier.
+   ------------------------------------------------------------ */
+.gold-edge {
+    position: relative;
+}
+
+.gold-edge::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 1px;
+    right: 1px;
+    height: 1px;
+    border-radius: var(--radius) var(--radius) 0 0;
+    background: var(--gold-sheen);
+}
+
+.gold-rule {
+    width: 44px;
+    height: 1px;
+    border: 0;
+    margin: 0 0 1.1rem;
+    background: linear-gradient(90deg, #7a5f20 0%, #f4e3a1 50%, #7a5f20 100%);
+}
+
+.section-header .gold-rule {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .glass-card:hover {
     transform: translateY(-2px);
     border-color: rgba(59, 130, 246, 0.4);
@@ -1088,17 +1128,38 @@ footer {
     box-shadow: 0 0 10px var(--accent-blue);
 }
 
+.price-teaser-reveal {
+    margin: 1.5rem 0 1.75rem;
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: var(--text-main);
+    border-left: 2px solid var(--accent-blue);
+    padding-left: 0.9rem;
+}
+
 .price-teaser-cta {
     justify-content: flex-start;
 }
 
 .price-teaser-figure {
+    position: relative;
     text-align: center;
     border: 1px solid rgba(59, 130, 246, 0.35);
     border-radius: var(--radius);
     background: rgba(5, 10, 20, 0.55);
     padding: 2.25rem 1.5rem;
     box-shadow: inset 0 0 30px rgba(59, 130, 246, 0.12);
+}
+
+.price-teaser-figure::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 1px;
+    right: 1px;
+    height: 1px;
+    border-radius: var(--radius) var(--radius) 0 0;
+    background: var(--gold-sheen);
 }
 
 .price-teaser-label {
@@ -1162,6 +1223,17 @@ footer {
     border-color: rgba(59, 130, 246, 0.45);
     background: linear-gradient(160deg, rgba(59, 130, 246, 0.09) 0%, rgba(10, 18, 36, 0.62) 100%);
     box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.18), 0 14px 40px rgba(2, 6, 16, 0.5);
+}
+
+.price-card.featured::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 1px;
+    right: 1px;
+    height: 1px;
+    border-radius: var(--radius) var(--radius) 0 0;
+    background: var(--gold-sheen);
 }
 
 .price-card.featured:hover {
