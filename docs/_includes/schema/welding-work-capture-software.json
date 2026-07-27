@@ -1,0 +1,62 @@
+{
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://delteris.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Shop-Floor Weld Data Capture Software", "item": "https://delteris.com/welding-work-capture-software.html" }
+          ]
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "Elenchon — Shop-Floor Weld Data Capture Software",
+          "applicationCategory": "BusinessApplication",
+          "applicationSubCategory": "Welding Traceability App",
+          "operatingSystem": "Linux/Appliance",
+          "description": "On-premise shop-floor weld data capture software: a mobile-first floor app that logs welding, fit-up, cutting and any custom work type in ten seconds, captures work offline with automatic sync, and keeps every record on hardware you own.",
+          "keywords": "shop floor weld data capture, welding traceability app, weld data capture software, offline welding capture, mobile welding app, welding work capture software",
+          "featureList": [
+            "10-second mobile-first work capture with touch-and-PIN sign-in",
+            "Universal custom work types (welding, fit-up, cutting, assembly)",
+            "Offline work capture with durable on-device queue and automatic sync",
+            "Attributed, timestamped, version-pinned entries",
+            "Automated ISO 3834, EN 1090 and ASME IX compliance ledgers",
+            "On-premise appliance with full data sovereignty"
+          ],
+          "offers": { "@type": "Offer", "url": "https://delteris.com/pricing.html", "availability": "https://schema.org/InStock" },
+          "provider": { "@id": "https://delteris.com/#organization" }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://delteris.com/welding-work-capture-software.html#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is shop-floor weld data capture software?",
+              "acceptedAnswer": { "@type": "Answer", "text": "It is the app welders use to record work as it happens — which joint, which parameters, by whom, and when — so every weld is traceable back to the person and procedure behind it. Elenchon runs that capture on-premise, keeping the record on hardware you own." }
+            },
+            {
+              "@type": "Question",
+              "name": "How fast is data entry on the floor?",
+              "acceptedAnswer": { "@type": "Answer", "text": "The mobile-first interface is built to get an operator to the right project step and inputting data in ten seconds or less, using touch-and-PIN sign-in so entries are attributed without slowing anyone down." }
+            },
+            {
+              "@type": "Question",
+              "name": "Can it capture work when there is no Wi-Fi?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Yes. Offline work capture holds entries in a durable on-device queue and syncs them automatically, in order, when the connection returns — so nothing is lost in a dead zone. It is included on the Standard plan; the offline document viewer is available on every plan." }
+            },
+            {
+              "@type": "Question",
+              "name": "Does it only track welding?",
+              "acceptedAnswer": { "@type": "Answer", "text": "No. You can define custom work types — fit-up, cutting, assembly, or any process — save them as organization-wide templates, and capture any floor activity in the same traceable structure as your welds." }
+            },
+            {
+              "@type": "Question",
+              "name": "Is captured data stored on-premise or in the cloud?",
+              "acceptedAnswer": { "@type": "Answer", "text": "On-premise. Elenchon is a containerized appliance installed in your facility, so captured work never touches a shared cloud server. Authorised staff and auditors can still connect remotely through Phrakton, a zero-trust, post-quantum-safe overlay." }
+            }
+          ]
+        }
+      ]
+    }
