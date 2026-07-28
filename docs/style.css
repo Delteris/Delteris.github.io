@@ -277,6 +277,12 @@ nav {
 /* ------------------------------------------------------------
    Buttons
    ------------------------------------------------------------ */
+.btn,
+.btn:visited,
+.btn:hover {
+    color: var(--text-main);
+}
+
 .btn {
     display: inline-flex;
     align-items: center;
@@ -297,7 +303,8 @@ nav {
     -webkit-tap-highlight-color: transparent;
 }
 
-.btn-primary {
+.btn-primary,
+.btn-primary:visited {
     background-color: var(--accent-blue);
     border-color: var(--accent-blue);
     color: #04101f;

@@ -64,7 +64,7 @@
         {
           "@type": "Question",
           "name": "Is Elenchon cloud-based or on-premise?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Elenchon is a 100% on-premise appliance installed in your facility — the sovereign alternative to cloud welding software. Your manufacturing data never touches a shared server, there are no forced updates, and an internet outage cannot stop production." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Elenchon is a 100% on-premise appliance installed in your facility — the sovereign alternative to cloud welding software. Your manufacturing data never touches a shared server, there are no forced updates, and you don't depend on a vendor's cloud to reach your own records." }
         },
         {
           "@type": "Question",
