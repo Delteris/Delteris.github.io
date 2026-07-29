@@ -703,11 +703,12 @@ nav {
 .gold-edge::before {
     content: "";
     position: absolute;
+    /* Inset to the corner radius so the straight hairline's ends don't spill
+       past the card's rounded corners (shows as overflow on mobile). */
     top: 0;
-    left: 1px;
-    right: 1px;
+    left: var(--radius);
+    right: var(--radius);
     height: 1px;
-    border-radius: var(--radius) var(--radius) 0 0;
     background: var(--gold-sheen);
 }
 
@@ -1090,7 +1091,10 @@ footer {
     .hero {
         /* Shorter than the viewport on mobile so the next section peeks above
            the fold — a passive cue that there's more below, paired with the
-           active .scroll-cue indicator. */
+           active .scroll-cue indicator. Anchor content to the top so the
+           reserved bottom padding stays clear for the cue (no overlap with
+           the CTA buttons). */
+        justify-content: flex-start;
         min-height: 82vh;
         min-height: 82svh;
         padding-top: calc(var(--nav-h) + 2rem);
@@ -1102,7 +1106,10 @@ footer {
     }
 
     .page-hero {
-        padding: 8rem 5% 2rem;
+        /* Anchor content to the top and reserve bottom padding so the scroll
+           cue never lands on top of the hero CTA buttons. */
+        justify-content: flex-start;
+        padding: calc(var(--nav-h) + 2rem) 5% 5.5rem;
     }
 
     .cta-group .btn {
@@ -1130,6 +1137,22 @@ footer {
         gap: 2rem;
         align-items: center;
         text-align: center;
+    }
+
+    /* Mobile Chrome fails to paint backdrop-filter for the part of an element
+       that extends beyond one viewport height, so tall glass cards appear to
+       "spill" their text past the card border. Drop the blur on mobile and use
+       an opaque-enough background instead — the effect is barely visible on a
+       phone anyway, and this removes the clipping entirely. */
+    .glass-card,
+    .summary-panel,
+    .compliance-panel,
+    .roadmap-panel,
+    .price-card,
+    .no-fees-panel {
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        background-color: rgba(12, 19, 36, 0.92);
     }
 }
 
@@ -1235,10 +1258,9 @@ footer {
     content: "";
     position: absolute;
     top: 0;
-    left: 1px;
-    right: 1px;
+    left: var(--radius);
+    right: var(--radius);
     height: 1px;
-    border-radius: var(--radius) var(--radius) 0 0;
     background: var(--gold-sheen);
 }
 
@@ -1308,11 +1330,13 @@ footer {
 .price-card.featured::before {
     content: "";
     position: absolute;
+    /* Sit the hairline just inside the rounded corners so its straight ends
+       don't poke out past the curve (visible on mobile's tighter radius). */
     top: 0;
-    left: 1px;
-    right: 1px;
-    height: 1px;
-    border-radius: var(--radius) var(--radius) 0 0;
+    left: var(--radius);
+    right: var(--radius);
+    height: 2px;
+    border-radius: 0 0 2px 2px;
     background: var(--gold-sheen);
 }
 
