@@ -17,6 +17,11 @@
     --glass-bg: rgba(15, 23, 42, 0.45);
     --glass-border: rgba(59, 130, 246, 0.15);
     --radius: 10px;
+    /* Nav bar height, in rem so it scales cleanly with browser zoom / user
+       font-size. Everything that must clear the fixed nav (scroll anchors,
+       the mobile dropdown offset, hero top padding) is derived from this so
+       they stay in lockstep when the page is zoomed. */
+    --nav-h: 4.5rem;
     /* Metallic gold — used only as a rare ornamental accent (edges, rules).
        The gradient's bright centre band is what makes it read as gold, not
        flat yellow. Gold lettering is reserved for the future Premium tier. */
@@ -33,7 +38,9 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 5.5rem;
+    /* Derived from the nav height so anchored sections clear the fixed nav at
+       any zoom level, not just at 100%. */
+    scroll-padding-top: calc(var(--nav-h) + 1rem);
 }
 
 html, body {
@@ -191,7 +198,8 @@ nav {
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
-    padding: 1rem 5%;
+    min-height: var(--nav-h);
+    padding: 0.5rem 5%;
     background: rgba(5, 10, 20, 0.88);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
@@ -408,21 +416,71 @@ nav {
    Hero (home) & page hero (subpages)
    ------------------------------------------------------------ */
 .hero {
+    position: relative;
     min-height: 88vh;
     min-height: 88svh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 7rem 5% 4rem;
+    padding: calc(var(--nav-h) + 2.5rem) 5% 4rem;
+}
+
+/* ------------------------------------------------------------
+   Scroll cue — signals the hero scrolls. Most valuable on mobile,
+   where the hero fills the viewport and there's no visible hint of
+   content below. Fades out once the user starts scrolling (main.js).
+   ------------------------------------------------------------ */
+.scroll-cue {
+    position: absolute;
+    left: 50%;
+    bottom: 1.4rem;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.45rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    opacity: 0.85;
+    transition: opacity 0.4s ease;
+    z-index: 2;
+}
+.scroll-cue.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+.scroll-cue-text {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.66rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+}
+.scroll-cue-chevron {
+    width: 0.7rem;
+    height: 0.7rem;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: rotate(45deg);
+    animation: scroll-cue-bounce 1.8s ease-in-out infinite;
+}
+.scroll-cue:hover {
+    opacity: 1;
+    color: var(--accent-blue);
+}
+@keyframes scroll-cue-bounce {
+    0%, 100% { transform: rotate(45deg) translate(0, 0); }
+    50%      { transform: rotate(45deg) translate(3px, 3px); }
 }
 
 .page-hero {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 9.5rem 5% 3rem;
+    padding: 9.5rem 5% 4.5rem;
 }
 
 .hero-content {
@@ -976,7 +1034,7 @@ footer {
 
     .nav-links {
         position: fixed;
-        top: 64px;
+        top: var(--nav-h);
         left: 0;
         right: 0;
         flex-direction: column;
@@ -986,6 +1044,11 @@ footer {
         -webkit-backdrop-filter: blur(16px);
         border-bottom: 1px solid rgba(59, 130, 246, 0.2);
         padding: 0.75rem 5% 1.25rem;
+        /* If zoom or a long menu makes the dropdown taller than the space
+           below the nav, scroll it instead of clipping items off-screen. */
+        max-height: calc(100vh - var(--nav-h));
+        max-height: calc(100svh - var(--nav-h));
+        overflow-y: auto;
         display: none;
     }
 
@@ -1025,7 +1088,17 @@ footer {
     }
 
     .hero {
-        padding-top: 6.5rem;
+        /* Shorter than the viewport on mobile so the next section peeks above
+           the fold — a passive cue that there's more below, paired with the
+           active .scroll-cue indicator. */
+        min-height: 82vh;
+        min-height: 82svh;
+        padding-top: calc(var(--nav-h) + 2rem);
+        padding-bottom: 5.5rem;
+    }
+
+    .scroll-cue {
+        bottom: 1rem;
     }
 
     .page-hero {
@@ -1843,3 +1916,126 @@ a.glass-card:hover h3 {
 .page-hero.is-medium { min-height: 70vh; }
 .u-gap-top-lg { margin-top: 2rem; }
 .u-tight-bottom-lg { margin-bottom: 4rem; }
+
+/* ==========================================================
+   Encryption-layers interactive (security.html #encryption-layers)
+   Ported from the Phrakton cryptography visual, re-themed to the
+   site palette. Everything is scoped under .cl- to avoid collisions.
+   ========================================================== */
+:root {
+    --cl-link: #43c08f;  --cl-link-d: #0e2a1f;
+    --cl-e2e:  #ecab45;  --cl-e2e-d:  #2c2109;
+    --cl-app:  #54a9ec;  --cl-app-d:  #0a2338;
+    --cl-panel: rgba(15, 23, 42, 0.55);
+    --cl-edge: rgba(59, 130, 246, 0.22);
+    --cl-faint: #5f7189;
+    --cl-muted: var(--text-muted);
+}
+
+.cl-stage { position: relative; max-width: 540px; margin: 2.4rem auto 0; }
+.cl-wirehint {
+    font-family: 'Space Grotesk', monospace; font-size: 0.65rem; color: var(--cl-faint);
+    margin: 0 0 0.5rem 2px; letter-spacing: .03em; text-transform: uppercase;
+}
+.cl-layer {
+    position: relative; border: 1.5px solid; border-radius: 16px;
+    padding: 3rem 1.25rem 1.25rem; transition: filter .3s;
+}
+.cl-tab {
+    position: absolute; top: 0.8rem; left: 1rem; right: 0.9rem; display: flex;
+    align-items: center; gap: 0.55rem; flex-wrap: wrap; font-family: 'Space Grotesk', monospace;
+}
+.cl-idx {
+    font-size: 0.7rem; font-weight: 600; width: 1.2rem; height: 1.2rem; border-radius: 6px;
+    display: grid; place-items: center; color: #0a121c; flex: none;
+}
+.cl-nm  { font-size: 0.82rem; font-weight: 600; color: var(--text-main); }
+.cl-alg { font-size: 0.63rem; color: var(--cl-muted); }
+.cl-pq  {
+    font-size: 0.56rem; font-weight: 700; letter-spacing: .04em; padding: 2px 6px;
+    border-radius: 5px; margin-left: auto; white-space: nowrap;
+}
+.cl-link { border-color: var(--cl-link); background: linear-gradient(180deg, rgba(67,192,143,.09), rgba(67,192,143,.03)); }
+.cl-link .cl-idx { background: var(--cl-link); }  .cl-link .cl-pq { background: var(--cl-link); color: var(--cl-link-d); }
+.cl-e2e { border-color: var(--cl-e2e); background: linear-gradient(180deg, rgba(236,171,69,.09), rgba(236,171,69,.03)); }
+.cl-e2e .cl-idx { background: var(--cl-e2e); }  .cl-e2e .cl-pq { background: var(--cl-e2e); color: var(--cl-e2e-d); }
+.cl-app { border-color: var(--cl-app); background: linear-gradient(180deg, rgba(84,169,236,.10), rgba(84,169,236,.03)); }
+.cl-app .cl-idx { background: var(--cl-app); }  .cl-app .cl-pq { background: var(--cl-app); color: var(--cl-app-d); }
+
+.cl-payload {
+    border: 1.5px dashed #55677e; border-radius: 11px; padding: 1.1rem; text-align: center;
+    background: radial-gradient(120px 60px at 50% 50%, rgba(147,164,187,.16), transparent 70%); transition: opacity .3s;
+}
+.cl-big   { font-family: 'Space Grotesk', monospace; font-size: 0.88rem; font-weight: 600; letter-spacing: .14em; color: #e7eef7; }
+.cl-small { font-family: 'Space Grotesk', monospace; font-size: 0.63rem; color: var(--cl-muted); margin-top: 0.25rem; }
+
+.cl-seal {
+    position: absolute; inset: 0; border-radius: 15px; display: none;
+    align-items: center; justify-content: center; flex-direction: column; gap: 0.45rem; z-index: 3;
+    background: repeating-linear-gradient(135deg, rgba(9,15,24,.9) 0 9px, rgba(15,23,35,.9) 9px 18px);
+}
+.cl-layer.is-sealed > .cl-seal { display: flex; }
+.cl-layer.is-sealed { filter: saturate(.55); }
+.cl-lk  { font-size: 1.15rem; opacity: .9; }
+.cl-txt {
+    font-family: 'Space Grotesk', monospace; font-size: 0.66rem; color: #b7c2d4;
+    letter-spacing: .04em; text-align: center; max-width: 240px; line-height: 1.45; padding: 0 12px;
+}
+
+.cl-control { margin: 1.4rem auto 0; max-width: 540px; }
+.cl-lbl { font-family: 'Space Grotesk', monospace; font-size: 0.66rem; letter-spacing: .06em; color: var(--cl-faint); margin: 0 0 0.65rem; }
+.cl-vbtns { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.5rem; }
+.cl-vbtn {
+    cursor: pointer; background: var(--cl-panel); border: 1px solid var(--cl-edge); border-radius: 10px;
+    padding: 0.65rem 0.5rem; color: var(--text-main); font-family: inherit; text-align: center;
+    transition: border-color .2s, background .2s;
+}
+.cl-vbtn:hover { border-color: var(--accent-blue); }
+.cl-em { font-size: 1rem; display: block; margin-bottom: 0.2rem; }
+.cl-t  { font-size: 0.7rem; font-weight: 600; line-height: 1.1; display: block; }
+.cl-vbtn[aria-pressed="true"] { background: var(--accent-blue-soft); border-color: var(--accent-blue); }
+.cl-vbtn[aria-pressed="true"] .cl-t { color: #eaf2fb; }
+
+.cl-verdict {
+    margin: 0.9rem auto 0; max-width: 540px; border: 1px solid var(--cl-edge);
+    border-left-width: 4px; border-radius: 11px; padding: 0.85rem 1rem; background: rgba(10, 18, 36, 0.6);
+}
+.cl-vh { font-family: 'Space Grotesk', monospace; font-size: 0.7rem; letter-spacing: .05em; text-transform: uppercase; font-weight: 600; color: var(--text-main); margin: 0 0 0.35rem; }
+.cl-verdict p:last-child { margin: 0; font-size: 0.83rem; line-height: 1.5; color: var(--cl-muted); }
+.cl-verdict p b { color: var(--text-main); font-weight: 600; }
+
+.cl-section-h {
+    font-family: 'Space Grotesk', monospace; font-size: 0.7rem; letter-spacing: .09em;
+    text-transform: uppercase; color: var(--cl-faint); margin: 2.6rem 0 1rem; font-weight: 500;
+    display: flex; align-items: center; gap: 0.65rem;
+}
+.cl-section-h::after { content: ""; flex: 1; height: 1px; background: var(--cl-edge); }
+
+.cl-board {
+    background: linear-gradient(180deg, rgba(16,26,40,.6), rgba(10,18,34,.6)); border: 1px solid var(--cl-edge);
+    border-radius: 16px; padding: 0.6rem 0.5rem 0.25rem; overflow-x: auto;
+}
+.cl-board svg { display: block; width: 100%; min-width: 620px; height: auto; }
+.cl-cap { font-family: 'Space Grotesk', monospace; font-size: 0.68rem; color: var(--cl-faint); text-align: center; padding: 0.6rem 0.5rem 0; line-height: 1.5; }
+
+.cl-tablecard { margin-top: 1.6rem; background: var(--cl-panel); border: 1px solid var(--cl-edge); border-radius: 14px; padding: 1.1rem 1.25rem; overflow-x: auto; }
+.cl-tablecard table { width: 100%; border-collapse: collapse; font-size: 0.8rem; min-width: 520px; }
+.cl-tablecard th, .cl-tablecard td { text-align: left; padding: 0.55rem 0.6rem; vertical-align: top; border-bottom: 1px solid rgba(59,130,246,.15); }
+.cl-tablecard tr:last-child td { border-bottom: none; }
+.cl-tablecard th { font-family: 'Space Grotesk', monospace; font-size: 0.62rem; letter-spacing: .06em; text-transform: uppercase; color: var(--cl-faint); font-weight: 500; }
+.cl-layercell { font-weight: 600; white-space: nowrap; }
+.cl-layercell.cl-muted { color: var(--cl-muted); }
+.cl-sw { display: inline-block; width: 9px; height: 9px; border-radius: 2px; margin-right: 7px; vertical-align: middle; }
+.cl-mono { font-family: 'Space Grotesk', monospace; font-size: 0.7rem; color: var(--cl-muted); }
+.cl-tg { font-family: 'Space Grotesk', monospace; font-size: 0.62rem; font-weight: 700; padding: 1px 6px; border-radius: 4px; white-space: nowrap; }
+.cl-tg-pq { color: var(--cl-link-d); background: var(--cl-link); }
+.cl-tg-e2e-pq { color: var(--cl-e2e-d); background: var(--cl-e2e); }
+.cl-tg-au { color: var(--cl-muted); background: rgba(34,48,63,.6); border: 1px solid var(--cl-edge); }
+
+@media (prefers-reduced-motion: no-preference) {
+    .cl-payload { animation: cl-corepulse 3.6s ease-in-out infinite; }
+    @keyframes cl-corepulse { 0%,100% { box-shadow: 0 0 0 0 rgba(147,164,187,0); } 50% { box-shadow: 0 0 24px 0 rgba(120,150,190,.15); } }
+}
+@media (max-width: 620px) {
+    .cl-vbtns { grid-template-columns: repeat(3, 1fr); }
+}

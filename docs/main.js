@@ -29,6 +29,22 @@
         });
     }
 
+    /* ---------- Hero scroll cue (fade out once scrolling starts) ---------- */
+    const scrollCue = document.querySelector('.scroll-cue');
+    if (scrollCue) {
+        let cueHidden = false;
+        const hideCue = function () {
+            if (cueHidden) return;
+            if (window.scrollY > 40) {
+                scrollCue.classList.add('is-hidden');
+                cueHidden = true;
+                window.removeEventListener('scroll', hideCue);
+            }
+        };
+        window.addEventListener('scroll', hideCue, { passive: true });
+        hideCue();
+    }
+
     /* ---------- Copy-to-clipboard (contact page) ---------- */
     const copyBtn = document.getElementById('copy-email');
 
@@ -185,4 +201,98 @@
     } else {
         animate();
     }
+})();
+
+/* ==========================================================
+   Encryption-layers interactive (security.html)
+   Observer selector — seals the layers an observer cannot read
+   and spotlights where it sits on the path. All three tunnels are
+   post-quantum-safe and opened only at the endpoints.
+   ========================================================== */
+(function () {
+    'use strict';
+
+    var stage = document.getElementById('L-link');
+    if (!stage) return; // only on the security page
+
+    var V = {
+        all: {
+            sealed: [], tone: 'var(--cl-app)', spot: null,
+            h: 'All three layers',
+            b: 'Three nested post-quantum-safe tunnels — Link TLS (green), Ziti E2E (amber) and App TLS (blue). Each one is opened only at the endpoints, never on the network.'
+        },
+        internet: {
+            sealed: ['link', 'e2e', 'app'], tone: 'var(--cl-link)',
+            spot: { x: 368, y: 196, w: 192, h: 20, color: '#43c08f', lx: 464, ly: 190, t: 'quantum-safe ciphertext only' },
+            h: 'On the wire',
+            b: 'A recorder on the network captures only the outer <b>Link TLS</b>, which is <b>quantum-safe</b>. There are no keys here to open — so recording now to decrypt later does not work.',
+            seals: { link: 'quantum-safe ciphertext — all that crosses the network' }
+        },
+        phrakton: {
+            sealed: ['e2e', 'app'], tone: 'var(--cl-e2e)',
+            spot: { x: 248, y: 150, w: 120, h: 86, color: '#ecab45', lx: 308, ly: 144, t: 'opens Link TLS only' },
+            h: 'A Phrakton router or host',
+            b: 'A router terminates <b>Link TLS</b>, but the traffic stays sealed inside <b>Ziti E2E</b> and <b>App TLS</b>. Routers relay it without holding those keys, so the operator cannot read a tenant’s app data.',
+            seals: { e2e: 'still sealed — routers relay, they don’t hold this key' }
+        },
+        box: {
+            sealed: [], tone: 'var(--danger, #e86f60)',
+            spot: { x: 552, y: 170, w: 284, h: 70, color: '#e86f60', lx: 694, ly: 164, t: 'endpoint — reaches the data' },
+            h: 'A breached box',
+            b: 'Ziti E2E and App TLS both terminate on the box, so control of the box means access to the data — <b>for that one tenant only</b>. This is an insider or physical-access risk, not a network one.'
+        },
+        device: {
+            sealed: [], tone: 'var(--cl-muted)',
+            spot: { x: 30, y: 178, w: 110, h: 54, color: '#93a4bb', lx: 85, ly: 172, t: 'the intended reader' },
+            h: 'The worker’s own device',
+            b: 'The worker’s browser is the far end of every layer and holds the keys to its <b>own</b> data. This is the intended reader — nothing unexpected.'
+        }
+    };
+
+    var layers = ['link', 'e2e', 'app'];
+    var $ = function (id) { return document.getElementById(id); };
+
+    function apply(v) {
+        var c = V[v];
+        layers.forEach(function (id) {
+            var n = $('L-' + id);
+            n.classList.toggle('is-sealed', c.sealed.indexOf(id) !== -1);
+            var seal = n.querySelector('[data-seal="' + id + '"]');
+            seal.textContent = (c.seals && c.seals[id]) ? c.seals[id] : 'sealed — cannot open';
+        });
+        $('L-data').style.opacity = c.sealed.indexOf('app') !== -1 ? '.22' : '1';
+        $('cl-v-h').textContent = c.h;
+        $('cl-v-b').innerHTML = c.b;
+        $('cl-verdict').style.borderLeftColor = c.tone;
+
+        var A = $('cl-spotA'), L = $('cl-spotL');
+        if (c.spot) {
+            A.setAttribute('x', c.spot.x); A.setAttribute('y', c.spot.y);
+            A.setAttribute('width', c.spot.w); A.setAttribute('height', c.spot.h);
+            A.setAttribute('stroke', c.spot.color); A.setAttribute('stroke-width', '2');
+            A.setAttribute('fill', c.spot.color); A.setAttribute('fill-opacity', '.09'); A.setAttribute('opacity', '1');
+            L.setAttribute('x', c.spot.lx); L.setAttribute('y', c.spot.ly);
+            L.setAttribute('fill', c.spot.color); L.textContent = c.spot.t; L.setAttribute('opacity', '1');
+        } else {
+            A.setAttribute('opacity', '0'); L.setAttribute('opacity', '0');
+        }
+        document.querySelectorAll('.cl-vbtn').forEach(function (b) {
+            b.setAttribute('aria-pressed', String(b.dataset.v === v));
+        });
+    }
+
+    document.querySelectorAll('.cl-vbtn').forEach(function (b) {
+        b.addEventListener('click', function () { apply(b.dataset.v); });
+    });
+
+    if (!window.matchMedia || !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        var o = 0;
+        var f = document.querySelectorAll('.cl-flow');
+        setInterval(function () {
+            o = (o - 1) % 10;
+            f.forEach(function (x) { x.style.strokeDashoffset = o; });
+        }, 70);
+    }
+
+    apply('all');
 })();
