@@ -715,14 +715,14 @@ nav {
     top: 0;
     left: 0;
     right: 0;
-    height: 72px;
+    height: 21px;
     border-top-left-radius: var(--radius);
     border-top-right-radius: var(--radius);
     background:
         linear-gradient(180deg,
             rgba(244, 227, 161, 0.16) 0%,
-            rgba(201, 165, 63, 0.06) 22%,
-            rgba(201, 165, 63, 0) 70%),
+            rgba(201, 165, 63, 0.06) 45%,
+            rgba(201, 165, 63, 0) 100%),
         linear-gradient(90deg,
             rgba(92, 74, 26, 0) 0%,
             rgba(169, 131, 47, 0.9) 22%,
@@ -1281,14 +1281,14 @@ footer {
     top: 0;
     left: 0;
     right: 0;
-    height: 72px;
+    height: 21px;
     border-top-left-radius: var(--radius);
     border-top-right-radius: var(--radius);
     background:
         linear-gradient(180deg,
             rgba(244, 227, 161, 0.16) 0%,
-            rgba(201, 165, 63, 0.06) 22%,
-            rgba(201, 165, 63, 0) 70%),
+            rgba(201, 165, 63, 0.06) 45%,
+            rgba(201, 165, 63, 0) 100%),
         linear-gradient(90deg,
             rgba(92, 74, 26, 0) 0%,
             rgba(169, 131, 47, 0.9) 22%,
@@ -1369,14 +1369,14 @@ footer {
     top: 0;
     left: 0;
     right: 0;
-    height: 72px;
+    height: 21px;
     border-top-left-radius: var(--radius);
     border-top-right-radius: var(--radius);
     background:
         linear-gradient(180deg,
             rgba(244, 227, 161, 0.16) 0%,
-            rgba(201, 165, 63, 0.06) 22%,
-            rgba(201, 165, 63, 0) 70%),
+            rgba(201, 165, 63, 0.06) 45%,
+            rgba(201, 165, 63, 0) 100%),
         linear-gradient(90deg,
             rgba(92, 74, 26, 0) 0%,
             rgba(169, 131, 47, 0.9) 22%,
