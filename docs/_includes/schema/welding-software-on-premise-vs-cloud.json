@@ -1,48 +1,76 @@
 {
-      "@context": "https://schema.org",
-      "@graph": [
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
         {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://delteris.com/" },
-            { "@type": "ListItem", "position": 2, "name": "On-Premise vs. Cloud Welding Software", "item": "https://delteris.com/welding-software-on-premise-vs-cloud.html" }
-          ]
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://delteris.com/"
         },
         {
-          "@type": "FAQPage",
-          "@id": "https://delteris.com/welding-software-on-premise-vs-cloud.html#faq",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "Is on-premise welding software harder to run than cloud?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Less than shops expect. Elenchon ships as a containerized appliance that our own engineers deliver, install and configure on-site, so there's no IT project to staff. Day to day, users just open the app on the local network." }
-            },
-            {
-              "@type": "Question",
-              "name": "Is cloud welding software less secure?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Not inherently — reputable cloud vendors invest heavily in security. The difference is exposure: a cloud service is reachable on the public internet and holds your data on shared infrastructure, while an on-premise appliance keeps data in your building and, with Elenchon, opens no inbound ports at all." }
-            },
-            {
-              "@type": "Question",
-              "name": "How does cost compare over time?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Cloud pricing is often per-seat or usage-based, so the bill grows as you add people or data. Elenchon is a flat, published rate per appliance with hardware at cost, which makes total cost of ownership predictable years out. Which is cheaper depends on your size and horizon, but only one of them is knowable in advance." }
-            },
-            {
-              "@type": "Question",
-              "name": "Can on-premise software still be reached remotely?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Yes. Elenchon's optional Phrakton overlay lets authorised staff and auditors connect through mutually authenticated, post-quantum-safe tunnels, without the appliance exposing any public address — remote access without cloud exposure." }
-            },
-            {
-              "@type": "Question",
-              "name": "What happens to my data if I stop paying?",
-              "acceptedAnswer": { "@type": "Answer", "text": "With Elenchon, the data is on your hardware and you keep permanent view-only access to your history for audits. With many cloud tools, access ends when the subscription does — worth confirming with any vendor you consider." }
-            },
-            {
-              "@type": "Question",
-              "name": "Does on-premise mean fewer features?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Not with Elenchon. It runs the full platform on-premise — traceability, the WPS/PQR/WPQ workflow, floor capture, equipment control and more — not a reduced local edition." }
-            }
-          ]
+          "@type": "ListItem",
+          "position": 2,
+          "name": "On-Premise vs. Cloud Welding Software",
+          "item": "https://delteris.com/welding-software-on-premise-vs-cloud.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://delteris.com/welding-software-on-premise-vs-cloud.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How does cost compare over time?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cloud pricing is often per-seat or usage-based, so the bill grows as you add people or data. Elenchon is a flat, published rate per appliance with hardware at cost, which makes total cost of ownership predictable years out. Which is cheaper depends on your size and horizon, but only one of them is knowable in advance."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can on-premise software still be reached remotely?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Elenchon's optional Phrakton overlay lets authorised staff and auditors connect through mutually authenticated, post-quantum-safe tunnels, without the appliance exposing any public address — remote access without cloud exposure."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens to my data if I stop paying?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "With Elenchon, the data is on your hardware and you keep permanent view-only access to your history for audits. With many cloud tools, access ends when the subscription does — worth confirming with any vendor you consider."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is on-premise welding software harder to run than cloud?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Less than shops expect. Elenchon ships as a containerized appliance that our own engineers deliver, install and configure on-site, so there's no IT project to staff. Day to day, users just open the app on the local network."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does on-premise mean fewer features?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not with Elenchon. It runs the full platform on-premise — traceability, the WPS/PQR/WPQ workflow, floor capture, equipment control and more — not a reduced local edition."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is cloud welding software less secure?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not inherently — reputable cloud vendors invest heavily in security. The difference is exposure: a cloud service is reachable on the public internet and holds your data on shared infrastructure, while an on-premise appliance keeps data in your building and, with Elenchon, opens no inbound ports at all."
+          }
         }
       ]
     }
+  ]
+}

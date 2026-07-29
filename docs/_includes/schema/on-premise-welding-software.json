@@ -1,67 +1,101 @@
 {
-      "@context": "https://schema.org",
-      "@graph": [
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
         {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://delteris.com/" },
-            { "@type": "ListItem", "position": 2, "name": "On-Premise & Offline Welding Software", "item": "https://delteris.com/on-premise-welding-software.html" }
-          ]
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://delteris.com/"
         },
         {
-          "@type": "SoftwareApplication",
-          "name": "Elenchon — On-Premise & Offline Welding Software",
-          "applicationCategory": "BusinessApplication",
-          "applicationSubCategory": "On-Premise Welding Software",
-          "operatingSystem": "Linux/Appliance",
-          "description": "On-premise, offline-capable welding software delivered as a containerized appliance installed in your facility: full data ownership, no forced cloud updates or outages, offline work capture, automated local backups, and flat published pricing with no per-seat cloud fees.",
-          "keywords": "on-premise welding software, offline welding software, self-hosted welding software, welding data sovereignty, sovereign welding software, cloud welding software alternative",
-          "featureList": [
-            "Containerized on-premise appliance installed in your facility",
-            "Absolute data ownership with permanent view-only access after cancellation",
-            "Offline-capable work capture with automatic sync",
-            "Automated local backups to isolated physical storage",
-            "Flat published pricing per appliance with hardware passed through at cost",
-            "Zero-trust, post-quantum-safe remote access via Phrakton with no open inbound ports"
-          ],
-          "offers": { "@type": "Offer", "url": "https://delteris.com/pricing.html", "availability": "https://schema.org/InStock" },
-          "provider": { "@id": "https://delteris.com/#organization" }
+          "@type": "ListItem",
+          "position": 2,
+          "name": "On-Premise & Offline Welding Software",
+          "item": "https://delteris.com/on-premise-welding-software.html"
+        }
+      ]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Elenchon — On-Premise & Offline Welding Software",
+      "applicationCategory": "BusinessApplication",
+      "applicationSubCategory": "On-Premise Welding Software",
+      "operatingSystem": "Linux/Appliance",
+      "description": "On-premise, offline-capable welding software delivered as a containerized appliance installed in your facility: full data ownership, no forced cloud updates or outages, offline work capture, automated local backups, and flat published pricing with no per-seat cloud fees.",
+      "keywords": "on-premise welding software, offline welding software, self-hosted welding software, welding data sovereignty, sovereign welding software, cloud welding software alternative",
+      "featureList": [
+        "Containerized on-premise appliance installed in your facility",
+        "Absolute data ownership with permanent view-only access after cancellation",
+        "Offline-capable work capture with automatic sync",
+        "Automated local backups to isolated physical storage",
+        "Flat published pricing per appliance with hardware passed through at cost",
+        "Zero-trust, post-quantum-safe remote access via Phrakton with no open inbound ports"
+      ],
+      "offers": {
+        "@type": "Offer",
+        "url": "https://delteris.com/pricing.html",
+        "availability": "https://schema.org/InStock"
+      },
+      "provider": {
+        "@id": "https://delteris.com/#organization"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://delteris.com/on-premise-welding-software.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Does it work offline?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The platform runs on your local network, and offline work capture queues entries on-device during a network drop and syncs them automatically on reconnect. The offline document viewer, for saving a WPS or plan for instant access, is available on every plan."
+          }
         },
         {
-          "@type": "FAQPage",
-          "@id": "https://delteris.com/on-premise-welding-software.html#faq",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "What is on-premise welding software?",
-              "acceptedAnswer": { "@type": "Answer", "text": "It is welding software installed on hardware inside your own facility, rather than accessed as a cloud service. Your weld records live on your server, under your control, and the system keeps working whether or not you have an internet connection. Elenchon is delivered exactly this way." }
-            },
-            {
-              "@type": "Question",
-              "name": "Is Elenchon cloud-based or on-premise?",
-              "acceptedAnswer": { "@type": "Answer", "text": "On-premise. Elenchon is a containerized appliance installed in your facility — the sovereign alternative to cloud welding software. Your data never touches a shared server, there are no forced updates, and you don't depend on a vendor's cloud to reach your own records." }
-            },
-            {
-              "@type": "Question",
-              "name": "Does it work offline?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Yes. The platform runs on your local network, and offline work capture queues entries on-device during a network drop and syncs them automatically on reconnect. The offline document viewer, for saving a WPS or plan for instant access, is available on every plan." }
-            },
-            {
-              "@type": "Question",
-              "name": "How does on-premise affect cost?",
-              "acceptedAnswer": { "@type": "Answer", "text": "It makes cost predictable. You pay one published, flat rate per appliance with no per-seat scaling, the hardware is passed through at cost, and every add-on and fee is listed in plain euros — so your finance team can model total cost of ownership up front instead of watching a subscription grow." }
-            },
-            {
-              "@type": "Question",
-              "name": "What happens to our data if we cancel?",
-              "acceptedAnswer": { "@type": "Answer", "text": "It stays with you. The data is on your physical hardware, and you keep permanent view-only access to all historical records for audits. There is no lock-in and no exit fee." }
-            },
-            {
-              "@type": "Question",
-              "name": "Can staff still access it remotely?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Yes, securely. Authorised staff and auditors connect through Phrakton, a zero-trust, post-quantum-safe overlay, while the appliance opens no inbound ports to the public internet — remote reach without exposing your factory." }
-            }
-          ]
+          "@type": "Question",
+          "name": "How does on-premise affect cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It makes cost predictable. You pay one published, flat rate per appliance with no per-seat scaling, the hardware is passed through at cost, and every add-on and fee is listed in plain euros — so your finance team can model total cost of ownership up front instead of watching a subscription grow."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens to our data if we cancel?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It stays with you. The data is on your physical hardware, and you keep permanent view-only access to all historical records for audits. There is no lock-in and no exit fee."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can staff still access it remotely?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, securely. Authorised staff and auditors connect through Phrakton, a zero-trust, post-quantum-safe overlay, while the appliance opens no inbound ports to the public internet — remote reach without exposing your factory."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is on-premise welding software?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It is welding software installed on hardware inside your own facility, rather than accessed as a cloud service. Your weld records live on your server, under your control, and the system keeps working whether or not you have an internet connection. Elenchon is delivered exactly this way."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Elenchon cloud-based or on-premise?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "On-premise. Elenchon is a containerized appliance installed in your facility — the sovereign alternative to cloud welding software. Your data never touches a shared server, there are no forced updates, and you don't depend on a vendor's cloud to reach your own records."
+          }
         }
       ]
     }
+  ]
+}
