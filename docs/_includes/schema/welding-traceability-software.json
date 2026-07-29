@@ -34,16 +34,6 @@
           "mainEntity": [
             {
               "@type": "Question",
-              "name": "What is welding traceability software?",
-              "acceptedAnswer": { "@type": "Answer", "text": "It is software that records the full chain of custody behind every weld — the base material and its heat number, the person who welded it, the procedure they followed, and the result — so any joint can be traced from finished piece back to raw material, and forward again. Elenchon runs that traceability on-premise, on hardware you own." }
-            },
-            {
-              "@type": "Question",
-              "name": "How is weld traceability different from weld tracking?",
-              "acceptedAnswer": { "@type": "Answer", "text": "They are usually the same idea: weld tracking tends to emphasise following a weld's status through production, while traceability emphasises the full evidence chain behind it. Elenchon does both — it tracks work as it happens and preserves the traceable chain that proves it." }
-            },
-            {
-              "@type": "Question",
               "name": "How does heat-number traceability work?",
               "acceptedAnswer": { "@type": "Answer", "text": "Base material is captured with its heat number and linked to its parent MTR, then propagated down the project tree so every part and assembly built from it inherits the link — giving you material traceability from goods-in to the finished weld without duplicating data everywhere." }
             },
@@ -56,6 +46,16 @@
               "@type": "Question",
               "name": "Does it help with ISO 3834 and ASME IX audits?",
               "acceptedAnswer": { "@type": "Answer", "text": "Yes. Because traceability is captured and version-pinned as work happens, it doubles as audit evidence for codes such as ISO 3834, EN 1090 and ASME IX — following any weld to its materials, welder and procedure is instant." }
+            },
+            {
+              "@type": "Question",
+              "name": "How is weld traceability different from weld tracking?",
+              "acceptedAnswer": { "@type": "Answer", "text": "They are usually the same idea: weld tracking tends to emphasise following a weld's status through production, while traceability emphasises the full evidence chain behind it. Elenchon does both — it tracks work as it happens and preserves the traceable chain that proves it." }
+            },
+            {
+              "@type": "Question",
+              "name": "What is welding traceability software?",
+              "acceptedAnswer": { "@type": "Answer", "text": "It is software that records the full chain of custody behind every weld — the base material and its heat number, the person who welded it, the procedure they followed, and the result — so any joint can be traced from finished piece back to raw material, and forward again. Elenchon runs that traceability on-premise, on hardware you own." }
             },
             {
               "@type": "Question",

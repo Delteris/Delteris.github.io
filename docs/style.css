@@ -2143,6 +2143,46 @@ a.glass-card:hover h3,
     .cl-payload { animation: cl-corepulse 3.6s ease-in-out infinite; }
     @keyframes cl-corepulse { 0%,100% { box-shadow: 0 0 0 0 rgba(147,164,187,0); } 50% { box-shadow: 0 0 24px 0 rgba(120,150,190,.15); } }
 }
+/* ----- Encryption section: mobile ----------------------------------------
+   The stage/control are already rem-based and capped at 540px, so they scale
+   down cleanly. These rules handle the pieces that need help on small screens:
+   the nested layer tabs (algorithm text + QUANTUM-SAFE badge overflowing the
+   box), the observer button grid, and the SVG board (which stays a horizontal-
+   scroll canvas — a viewBox can't reflow, so we keep it legible and swipeable
+   and signal that with a subtle edge fade + hint). */
+@media (max-width: 768px) {
+    .cl-layer { padding: 3.25rem 0.85rem 0.85rem; }
+    .cl-tab {
+        left: 0.75rem; right: 0.75rem; top: 0.7rem;
+        gap: 0.35rem 0.5rem;
+    }
+    /* The algorithm string is the least critical part of the tab — let it drop
+       to its own line so the layer name + QUANTUM-SAFE badge never collide. */
+    .cl-alg { flex-basis: 100%; order: 3; margin-top: 0.1rem; }
+    .cl-pq  { margin-left: 0; order: 2; }
+
+    .cl-verdict, .cl-control, .cl-stage { max-width: 100%; }
+
+    /* Make the diagram's horizontal-scroll nature obvious on touch. */
+    .cl-board { position: relative; }
+    .cl-board::after {
+        content: "swipe to see the full path →";
+        display: block; text-align: right;
+        font-family: 'Space Grotesk', monospace; font-size: 0.6rem;
+        color: var(--cl-faint); padding: 0.15rem 0.25rem 0.35rem;
+    }
+    .cl-board svg { min-width: 34rem; }
+}
+
 @media (max-width: 620px) {
+    /* 5 observers → a tidy grid instead of a ragged 3+2 wrap. */
     .cl-vbtns { grid-template-columns: repeat(3, 1fr); }
+    .cl-vbtn { padding: 0.55rem 0.35rem; }
+    .cl-em { font-size: 0.95rem; }
+    .cl-t  { font-size: 0.62rem; }
+}
+
+@media (max-width: 400px) {
+    .cl-vbtns { grid-template-columns: repeat(2, 1fr); }
+    .cl-board svg { min-width: 30rem; }
 }

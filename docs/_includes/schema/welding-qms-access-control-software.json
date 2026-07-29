@@ -1,62 +1,93 @@
 {
-      "@context": "https://schema.org",
-      "@graph": [
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
         {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://delteris.com/" },
-            { "@type": "ListItem", "position": 2, "name": "Welding QMS & Access-Control Software", "item": "https://delteris.com/welding-qms-access-control-software.html" }
-          ]
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://delteris.com/"
         },
         {
-          "@type": "SoftwareApplication",
-          "name": "Elenchon — Welding QMS & Access-Control Software",
-          "applicationCategory": "BusinessApplication",
-          "applicationSubCategory": "Welding QMS Software",
-          "operatingSystem": "Linux/Appliance",
-          "description": "On-premise welding QMS and document-control software: global custom roles, a permission-filtered interface that hides what a user cannot see, one-click document generation into your own templates, and role-filtered notifications, all on hardware you own.",
-          "keywords": "welding QMS software, welding document control software, welding access control software, welding quality management software, role based welding software",
-          "featureList": [
-            "Global custom roles with top-down permission management",
-            "Permission-filtered interface that hides unauthorised features and data",
-            "One-click document generation into your own templates",
-            "Role-filtered notifications for expirations and maintenance",
-            "Version-pinned, locked records for ISO 3834, EN 1090 and ASME IX",
-            "On-premise appliance with full data sovereignty"
-          ],
-          "offers": { "@type": "Offer", "url": "https://delteris.com/pricing.html", "availability": "https://schema.org/InStock" },
-          "provider": { "@id": "https://delteris.com/#organization" }
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Welding QMS & Access-Control Software",
+          "item": "https://delteris.com/welding-qms-access-control-software.html"
+        }
+      ]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Elenchon — Welding QMS & Access-Control Software",
+      "applicationCategory": "BusinessApplication",
+      "applicationSubCategory": "Welding QMS Software",
+      "operatingSystem": "Linux/Appliance",
+      "description": "On-premise welding QMS and document-control software: global custom roles, a permission-filtered interface that hides what a user cannot see, one-click document generation into your own templates, and role-filtered notifications, all on hardware you own.",
+      "keywords": "welding QMS software, welding document control software, welding access control software, welding quality management software, role based welding software",
+      "featureList": [
+        "Global custom roles with top-down permission management",
+        "Permission-filtered interface that hides unauthorised features and data",
+        "One-click document generation into your own templates",
+        "Role-filtered notifications for expirations and maintenance",
+        "Version-pinned, locked records for ISO 3834, EN 1090 and ASME IX",
+        "On-premise appliance with full data sovereignty"
+      ],
+      "offers": {
+        "@type": "Offer",
+        "url": "https://delteris.com/pricing.html",
+        "availability": "https://schema.org/InStock"
+      },
+      "provider": {
+        "@id": "https://delteris.com/#organization"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://delteris.com/welding-qms-access-control-software.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How does access control work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You create fully custom roles and manage permissions top-down for the whole organization, not project by project. The interface then automatically hides any feature or data a user lacks permission to see, keeping every screen clean."
+          }
         },
         {
-          "@type": "FAQPage",
-          "@id": "https://delteris.com/welding-qms-access-control-software.html#faq",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "What is welding QMS software?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Welding QMS software runs the quality-management side of a fabrication shop — who is authorised to do what, which documents are produced, and how records are controlled and versioned. Elenchon does this on-premise, keeping the whole quality system on hardware you own." }
-            },
-            {
-              "@type": "Question",
-              "name": "How does access control work?",
-              "acceptedAnswer": { "@type": "Answer", "text": "You create fully custom roles and manage permissions top-down for the whole organization, not project by project. The interface then automatically hides any feature or data a user lacks permission to see, keeping every screen clean." }
-            },
-            {
-              "@type": "Question",
-              "name": "Can it generate documents into our own templates?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Yes. The one-click document generator pulls captured node data straight into your company's paperwork templates for immediate printing, reusable across one project or the entire organization." }
-            },
-            {
-              "@type": "Question",
-              "name": "How are notifications kept from becoming noise?",
-              "acceptedAnswer": { "@type": "Answer", "text": "An in-app dashboard filters critical warnings — such as qualification expirations and maintenance events — strictly by role, so leaders are informed without every phone on the floor being spammed." }
-            },
-            {
-              "@type": "Question",
-              "name": "Is our quality data stored on-premise or in the cloud?",
-              "acceptedAnswer": { "@type": "Answer", "text": "On-premise. Elenchon is a containerized appliance installed in your facility, so roles, templates and records never touch a shared cloud server. Authorised staff and auditors can still connect remotely through Phrakton, a zero-trust, post-quantum-safe overlay." }
-            }
-          ]
+          "@type": "Question",
+          "name": "Can it generate documents into our own templates?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The one-click document generator pulls captured node data straight into your company's paperwork templates for immediate printing, reusable across one project or the entire organization."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How are notifications kept from becoming noise?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "An in-app dashboard filters critical warnings — such as qualification expirations and maintenance events — strictly by role, so leaders are informed without every phone on the floor being spammed."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is welding QMS software?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Welding QMS software runs the quality-management side of a fabrication shop — who is authorised to do what, which documents are produced, and how records are controlled and versioned. Elenchon does this on-premise, keeping the whole quality system on hardware you own."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is our quality data stored on-premise or in the cloud?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "On-premise. Elenchon is a containerized appliance installed in your facility, so roles, templates and records never touch a shared cloud server. Authorised staff and auditors can still connect remotely through Phrakton, a zero-trust, post-quantum-safe overlay."
+          }
         }
       ]
     }
+  ]
+}

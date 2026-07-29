@@ -33,11 +33,6 @@
           "mainEntity": [
             {
               "@type": "Question",
-              "name": "What is shop-floor weld data capture software?",
-              "acceptedAnswer": { "@type": "Answer", "text": "It is the app welders use to record work as it happens — which joint, which parameters, by whom, and when — so every weld is traceable back to the person and procedure behind it. Elenchon runs that capture on-premise, keeping the record on hardware you own." }
-            },
-            {
-              "@type": "Question",
               "name": "How fast is data entry on the floor?",
               "acceptedAnswer": { "@type": "Answer", "text": "The mobile-first interface is built to get an operator to the right project step and inputting data in ten seconds or less, using touch-and-PIN sign-in so entries are attributed without slowing anyone down." }
             },
@@ -50,6 +45,11 @@
               "@type": "Question",
               "name": "Does it only track welding?",
               "acceptedAnswer": { "@type": "Answer", "text": "No. You can define custom work types — fit-up, cutting, assembly, or any process — save them as organization-wide templates, and capture any floor activity in the same traceable structure as your welds." }
+            },
+            {
+              "@type": "Question",
+              "name": "What is shop-floor weld data capture software?",
+              "acceptedAnswer": { "@type": "Answer", "text": "It is the app welders use to record work as it happens — which joint, which parameters, by whom, and when — so every weld is traceable back to the person and procedure behind it. Elenchon runs that capture on-premise, keeping the record on hardware you own." }
             },
             {
               "@type": "Question",
