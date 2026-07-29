@@ -703,13 +703,24 @@ nav {
 .gold-edge::before {
     content: "";
     position: absolute;
-    /* Inset to the corner radius so the straight hairline's ends don't spill
-       past the card's rounded corners (shows as overflow on mobile). */
+    /* Gold hairline that runs the full width and curves down into the rounded
+       top corners, stopping exactly at the blue edge — no straight ends past
+       the corner, and no vertical side line. The overlay is only as tall as
+       the corner radius: the top + corner arcs render in gold, and because the
+       box ends right where the curve finishes, there's nothing left to draw a
+       vertical border below it. */
     top: 0;
-    left: var(--radius);
-    right: var(--radius);
-    height: 1px;
-    background: var(--gold-sheen);
+    left: 0;
+    right: 0;
+    height: var(--radius);
+    border: 2px solid transparent;
+    border-bottom: 0;
+    border-top-color: var(--gold-solid);
+    border-left-color: var(--gold-solid);
+    border-right-color: var(--gold-solid);
+    border-top-left-radius: var(--radius);
+    border-top-right-radius: var(--radius);
+    pointer-events: none;
 }
 
 .gold-rule {
@@ -1257,11 +1268,20 @@ footer {
 .price-teaser-figure::before {
     content: "";
     position: absolute;
+    /* Full-width gold hairline curving into the top corners, capped at the
+       edge with no vertical side line (see .gold-edge::before). */
     top: 0;
-    left: var(--radius);
-    right: var(--radius);
-    height: 1px;
-    background: var(--gold-sheen);
+    left: 0;
+    right: 0;
+    height: var(--radius);
+    border: 2px solid transparent;
+    border-bottom: 0;
+    border-top-color: var(--gold-solid);
+    border-left-color: var(--gold-solid);
+    border-right-color: var(--gold-solid);
+    border-top-left-radius: var(--radius);
+    border-top-right-radius: var(--radius);
+    pointer-events: none;
 }
 
 .price-teaser-label {
@@ -1330,14 +1350,20 @@ footer {
 .price-card.featured::before {
     content: "";
     position: absolute;
-    /* Sit the hairline just inside the rounded corners so its straight ends
-       don't poke out past the curve (visible on mobile's tighter radius). */
+    /* Full-width gold hairline curving into the top corners, capped at the
+       blue edge with no vertical side line (see .gold-edge::before). */
     top: 0;
-    left: var(--radius);
-    right: var(--radius);
-    height: 2px;
-    border-radius: 0 0 2px 2px;
-    background: var(--gold-sheen);
+    left: 0;
+    right: 0;
+    height: var(--radius);
+    border: 2px solid transparent;
+    border-bottom: 0;
+    border-top-color: var(--gold-solid);
+    border-left-color: var(--gold-solid);
+    border-right-color: var(--gold-solid);
+    border-top-left-radius: var(--radius);
+    border-top-right-radius: var(--radius);
+    pointer-events: none;
 }
 
 .price-card.featured:hover {
