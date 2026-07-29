@@ -703,12 +703,12 @@ nav {
 .gold-edge::before {
     content: "";
     position: absolute;
-    /* A flat horizontal metallic gold whisper resting JUST INSIDE the card,
-       a few px below the top blue border — the blue frame stays a complete,
-       unbroken rounded rectangle and the gold never overlaps or sits on top
-       of it. 1px, straight, inset from both sides. The --gold-sheen gradient's
-       bright centre band makes it read as gold, not flat yellow. */
-    top: 8px;
+    /* A flat horizontal metallic gold whisper flush at the top, sitting just
+       inside the top blue border — the blue frame stays a complete, unbroken
+       rounded rectangle and the gold never overlaps it. 1px, straight, inset
+       from both sides so it clears the rounded corners. The --gold-sheen
+       gradient's bright centre band makes it read as gold, not flat yellow. */
+    top: 1px;
     left: var(--radius);
     right: var(--radius);
     height: 1px;
@@ -1262,9 +1262,9 @@ footer {
 .price-teaser-figure::before {
     content: "";
     position: absolute;
-    /* Flat horizontal metallic gold whisper resting just inside the card,
-       below the top border. See .gold-edge::before. */
-    top: 8px;
+    /* Flat horizontal metallic gold whisper flush at the top, just inside the
+       top border. See .gold-edge::before. */
+    top: 1px;
     left: var(--radius);
     right: var(--radius);
     height: 1px;
@@ -1339,9 +1339,9 @@ footer {
 .price-card.featured::before {
     content: "";
     position: absolute;
-    /* Flat horizontal metallic gold whisper resting just inside the card,
-       below the top border, marking the price. See .gold-edge::before. */
-    top: 8px;
+    /* Flat horizontal metallic gold whisper flush at the top, just inside the
+       top border, marking the price. See .gold-edge::before. */
+    top: 1px;
     left: var(--radius);
     right: var(--radius);
     height: 1px;
