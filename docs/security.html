@@ -140,13 +140,14 @@ schema: schema/security.json
             <p class="cl-section-h">Where each layer reaches on the path</p>
 
             <div class="cl-board">
-                <svg viewBox="0 0 960 340" role="img" aria-label="Network path and encryption-layer reach">
+                <svg viewBox="0 0 980 420" role="img" aria-label="Network path and encryption-layer reach">
                     <defs>
                         <marker id="cl-chev" markerWidth="7" markerHeight="7" refX="3.5" refY="3.5" orient="auto">
                             <path d="M1,1 L5,3.5 L1,6" fill="none" stroke="#9fb4d0" stroke-width="1.2" opacity=".8"/></marker>
                         <style>
                             .cl-zone{fill:none;stroke:#3a536e;stroke-width:1.2;stroke-dasharray:5 5}
                             .cl-zl{font-family:'Space Grotesk',monospace;font-size:10px;letter-spacing:.09em;fill:#7f93ab}
+                            .cl-zsub{font-family:'Space Grotesk',monospace;font-size:8px;fill:#5f7189}
                             .cl-svgnode{fill:#111c30;stroke:#2f4a6e;stroke-width:1.3}
                             .cl-nl{font-family:'Space Grotesk',monospace;font-size:11px;fill:#dbe6f3;font-weight:500}
                             .cl-ns{font-family:'Space Grotesk',monospace;font-size:8.5px;fill:#8698ad}
@@ -155,69 +156,79 @@ schema: schema/security.json
                         </style>
                     </defs>
 
+                    <!-- Legend -->
                     <rect x="24" y="20" width="11" height="11" rx="2.5" fill="#43c08f"/>
                     <text class="cl-kt" x="42" y="29">Link TLS — quantum-safe · re-wraps at each router</text>
-                    <rect x="24" y="38" width="11" height="11" rx="2.5" fill="#ecab45"/>
-                    <text class="cl-kt" x="42" y="47">Ziti E2E — quantum-safe · opens only at the endpoints</text>
-                    <rect x="24" y="56" width="11" height="11" rx="2.5" fill="#54a9ec"/>
-                    <text class="cl-kt" x="42" y="65">App TLS — quantum-safe · carries the actual data</text>
+                    <rect x="24" y="40" width="11" height="11" rx="2.5" fill="#ecab45"/>
+                    <text class="cl-kt" x="42" y="49">Ziti E2E — quantum-safe · opens only at the endpoints</text>
+                    <rect x="24" y="60" width="11" height="11" rx="2.5" fill="#54a9ec"/>
+                    <text class="cl-kt" x="42" y="69">App TLS — quantum-safe · carries the actual data</text>
 
-                    <rect x="120" y="103" width="570" height="11" rx="5.5" fill="#ecab45" opacity=".85"/>
-                    <rect x="120" y="119" width="668" height="11" rx="5.5" fill="#54a9ec" opacity=".9"/>
-                    <rect x="120" y="87"  width="118" height="11" rx="5.5" fill="#43c08f" opacity=".9"/>
-                    <rect x="300" y="87"  width="238" height="11" rx="5.5" fill="#43c08f" opacity=".9"/>
-                    <rect x="600" y="87"  width="90"  height="11" rx="5.5" fill="#43c08f" opacity=".9"/>
-                    <line x1="130" y1="124.5" x2="778" y2="124.5" stroke="#0c141f" stroke-width="2" stroke-dasharray="2 8" marker-end="url(#cl-chev)" class="cl-flow"/>
-                    <text class="cl-fl" x="694" y="112" style="fill:#c79a3f">box</text>
-                    <text class="cl-fl" x="792" y="128" style="fill:#5b96c9">Caddy</text>
+                    <!-- Reach bars (band y 100–150) -->
+                    <rect x="120" y="122" width="640" height="11" rx="5.5" fill="#ecab45" opacity=".85"/>
+                    <rect x="120" y="138" width="700" height="11" rx="5.5" fill="#54a9ec" opacity=".9"/>
+                    <rect x="120" y="106" width="120" height="11" rx="5.5" fill="#43c08f" opacity=".9"/>
+                    <rect x="300" y="106" width="250" height="11" rx="5.5" fill="#43c08f" opacity=".9"/>
+                    <rect x="620" y="106" width="140" height="11" rx="5.5" fill="#43c08f" opacity=".9"/>
+                    <line x1="130" y1="143.5" x2="810" y2="143.5" stroke="#0c141f" stroke-width="2" stroke-dasharray="2 8" marker-end="url(#cl-chev)" class="cl-flow"/>
+                    <text class="cl-fl" x="766" y="131" style="fill:#c79a3f">→ box</text>
+                    <text class="cl-fl" x="826" y="147" style="fill:#5b96c9">→ Caddy</text>
 
-                    <rect class="cl-zone" x="248" y="150" width="120" height="86" rx="12"/>
-                    <text class="cl-zl" x="258" y="168">PHRAKTON</text>
-                    <text class="cl-zl" x="258" y="180" style="font-size:8px;fill:#5f7189">VPS network</text>
-                    <rect class="cl-zone" x="560" y="150" width="384" height="170" rx="12"/>
-                    <text class="cl-zl" x="572" y="168">CLIENT LAN</text>
-                    <text class="cl-zl" x="572" y="180" style="font-size:8px;fill:#5f7189">behind your firewall</text>
-                    <line x1="540" y1="150" x2="540" y2="316" stroke="#e86f60" stroke-width="1.3" stroke-dasharray="6 5" opacity=".5"/>
-                    <text x="546" y="312" class="cl-fl" style="fill:#c0705f">firewall · dials OUT</text>
-                    <text x="200" y="250" class="cl-fl" text-anchor="middle" style="fill:#5c6f88">public internet</text>
+                    <!-- Zones (drawn behind nodes; labels in a header strip well above the node lane at y 210) -->
+                    <rect class="cl-zone" x="250" y="184" width="120" height="96" rx="12"/>
+                    <text class="cl-zl" x="262" y="200">PHRAKTON</text>
+                    <text class="cl-zsub" x="262" y="212">VPS network</text>
+                    <rect class="cl-zone" x="566" y="184" width="392" height="196" rx="12"/>
+                    <text class="cl-zl" x="578" y="200">CLIENT LAN</text>
+                    <text class="cl-zsub" x="578" y="212">behind your firewall</text>
 
+                    <!-- Firewall boundary between public internet and the client LAN -->
+                    <line x1="546" y1="188" x2="546" y2="376" stroke="#e86f60" stroke-width="1.3" stroke-dasharray="6 5" opacity=".5"/>
+                    <text x="480" y="356" class="cl-fl" text-anchor="middle" style="fill:#c0705f">firewall · dials OUT ↑</text>
+                    <text x="200" y="300" class="cl-fl" text-anchor="middle" style="fill:#5c6f88">public internet</text>
+
+                    <!-- Spotlight (observer highlight) -->
                     <rect id="cl-spotA" x="0" y="0" width="0" height="0" rx="12" opacity="0"/>
                     <text id="cl-spotL" x="0" y="0" class="cl-fl" style="font-size:9px;font-weight:600" text-anchor="middle" opacity="0"></text>
 
-                    <rect class="cl-svgnode" id="n-rworker" x="30" y="178" width="110" height="54" rx="8"/>
-                    <text class="cl-nl" x="85" y="200" text-anchor="middle">remote</text>
-                    <text class="cl-nl" x="85" y="214" text-anchor="middle">worker</text>
+                    <!-- Node lane (y 224, height 56) -->
+                    <rect class="cl-svgnode" id="n-rworker" x="30" y="224" width="110" height="56" rx="8"/>
+                    <text class="cl-nl" x="85" y="247" text-anchor="middle">remote</text>
+                    <text class="cl-nl" x="85" y="261" text-anchor="middle">worker</text>
 
-                    <rect class="cl-svgnode" id="n-trouter" x="258" y="178" width="110" height="54" rx="8"/>
-                    <text class="cl-nl" x="313" y="200" text-anchor="middle">tenant-</text>
-                    <text class="cl-nl" x="313" y="214" text-anchor="middle">router</text>
+                    <rect class="cl-svgnode" id="n-trouter" x="260" y="224" width="110" height="56" rx="8"/>
+                    <text class="cl-nl" x="315" y="247" text-anchor="middle">tenant-</text>
+                    <text class="cl-nl" x="315" y="261" text-anchor="middle">router</text>
 
-                    <rect class="cl-svgnode" id="n-brouter" x="560" y="178" width="104" height="54" rx="8"/>
-                    <text class="cl-nl" x="612" y="200" text-anchor="middle">box-</text>
-                    <text class="cl-nl" x="612" y="214" text-anchor="middle">router</text>
+                    <rect class="cl-svgnode" id="n-brouter" x="578" y="224" width="110" height="56" rx="8"/>
+                    <text class="cl-nl" x="633" y="247" text-anchor="middle">box-</text>
+                    <text class="cl-nl" x="633" y="261" text-anchor="middle">router</text>
 
-                    <rect class="cl-svgnode" id="n-caddy" x="700" y="178" width="120" height="54" rx="8"/>
-                    <text class="cl-nl" x="760" y="200" text-anchor="middle">boxctl·</text>
-                    <text class="cl-nl" x="760" y="214" text-anchor="middle">Caddy</text>
+                    <rect class="cl-svgnode" id="n-caddy" x="720" y="224" width="128" height="56" rx="8"/>
+                    <text class="cl-nl" x="784" y="247" text-anchor="middle">boxctl ·</text>
+                    <text class="cl-nl" x="784" y="261" text-anchor="middle">Caddy</text>
 
-                    <rect class="cl-svgnode" id="n-apps" x="856" y="178" width="72" height="54" rx="8" style="fill:#0d1a2b"/>
-                    <text class="cl-ns" x="892" y="202" text-anchor="middle" style="fill:#a9b9cc;font-weight:600;font-size:10px">apps</text>
-                    <text class="cl-ns" x="892" y="214" text-anchor="middle">workflow·manage</text>
+                    <rect class="cl-svgnode" id="n-apps" x="878" y="224" width="76" height="56" rx="8" style="fill:#0d1a2b"/>
+                    <text class="cl-ns" x="916" y="248" text-anchor="middle" style="fill:#a9b9cc;font-weight:600;font-size:10px">apps</text>
+                    <text class="cl-ns" x="916" y="261" text-anchor="middle">workflow·manage</text>
 
-                    <rect class="cl-svgnode" id="n-lworker" x="560" y="266" width="104" height="50" rx="8"/>
-                    <text class="cl-nl" x="612" y="286" text-anchor="middle">LAN</text>
-                    <text class="cl-nl" x="612" y="300" text-anchor="middle">worker</text>
+                    <rect class="cl-svgnode" id="n-lworker" x="578" y="312" width="110" height="52" rx="8"/>
+                    <text class="cl-nl" x="633" y="333" text-anchor="middle">LAN</text>
+                    <text class="cl-nl" x="633" y="347" text-anchor="middle">worker</text>
 
-                    <line x1="140" y1="205" x2="258" y2="205" stroke="#33465c" stroke-width="1.4"/>
-                    <line x1="368" y1="205" x2="560" y2="205" stroke="#33465c" stroke-width="1.4"/>
-                    <line x1="664" y1="205" x2="700" y2="205" stroke="#33465c" stroke-width="1.4"/>
-                    <line x1="820" y1="205" x2="856" y2="205" stroke="#33465c" stroke-width="1.4" stroke-dasharray="3 3"/>
-                    <text x="838" y="248" class="cl-fl" text-anchor="middle" style="fill:#7d8fa5">HTTP</text>
-                    <line x1="608" y1="266" x2="608" y2="232" stroke="#43c08f" stroke-width="2"/>
-                    <line x1="612" y1="266" x2="612" y2="232" stroke="#ecab45" stroke-width="2"/>
-                    <line x1="616" y1="266" x2="616" y2="232" stroke="#54a9ec" stroke-width="2"/>
-                    <text x="672" y="292" class="cl-fl" style="fill:#7f93ab">same 3 layers,</text>
-                    <text x="672" y="303" class="cl-fl" style="fill:#7f93ab">one on-LAN hop</text>
+                    <!-- Connectors along the node lane (baseline y 252) -->
+                    <line x1="140" y1="252" x2="260" y2="252" stroke="#33465c" stroke-width="1.4"/>
+                    <line x1="370" y1="252" x2="578" y2="252" stroke="#33465c" stroke-width="1.4"/>
+                    <line x1="688" y1="252" x2="720" y2="252" stroke="#33465c" stroke-width="1.4"/>
+                    <line x1="848" y1="252" x2="878" y2="252" stroke="#33465c" stroke-width="1.4" stroke-dasharray="3 3"/>
+                    <text x="863" y="300" class="cl-fl" text-anchor="middle" style="fill:#7d8fa5">plain HTTP</text>
+
+                    <!-- LAN worker's own three-layer hop up to the box-router -->
+                    <line x1="629" y1="312" x2="629" y2="280" stroke="#43c08f" stroke-width="2"/>
+                    <line x1="633" y1="312" x2="633" y2="280" stroke="#ecab45" stroke-width="2"/>
+                    <line x1="637" y1="312" x2="637" y2="280" stroke="#54a9ec" stroke-width="2"/>
+                    <text x="700" y="335" class="cl-fl" style="fill:#7f93ab">same 3 layers,</text>
+                    <text x="700" y="347" class="cl-fl" style="fill:#7f93ab">one on-LAN hop</text>
                 </svg>
             </div>
             <p class="cl-cap">The bars show how far each layer travels. Link TLS (green) is re-established at every router; Ziti E2E (amber) and App TLS (blue) run unbroken from the worker to the box and are never opened in between.</p>
