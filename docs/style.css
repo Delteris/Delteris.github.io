@@ -703,23 +703,17 @@ nav {
 .gold-edge::before {
     content: "";
     position: absolute;
-    /* Gold hairline that runs the full width and curves down into the rounded
-       top corners, stopping exactly at the blue edge — no straight ends past
-       the corner, and no vertical side line. The overlay is only as tall as
-       the corner radius: the top + corner arcs render in gold, and because the
-       box ends right where the curve finishes, there's nothing left to draw a
-       vertical border below it. */
-    top: 0;
-    left: 0;
-    right: 0;
-    height: var(--radius);
-    border: 2px solid transparent;
-    border-bottom: 0;
-    border-top-color: var(--gold-solid);
-    border-left-color: var(--gold-solid);
-    border-right-color: var(--gold-solid);
-    border-top-left-radius: var(--radius);
-    border-top-right-radius: var(--radius);
+    /* A flat horizontal metallic gold whisper resting JUST INSIDE the card,
+       a few px below the top blue border — the blue frame stays a complete,
+       unbroken rounded rectangle and the gold never overlaps or sits on top
+       of it. 1px, straight, inset from both sides. The --gold-sheen gradient's
+       bright centre band makes it read as gold, not flat yellow. */
+    top: 8px;
+    left: var(--radius);
+    right: var(--radius);
+    height: 1px;
+    background: var(--gold-sheen);
+    filter: drop-shadow(0 0 5px rgba(244, 227, 161, 0.3));
     pointer-events: none;
 }
 
@@ -1268,19 +1262,14 @@ footer {
 .price-teaser-figure::before {
     content: "";
     position: absolute;
-    /* Full-width gold hairline curving into the top corners, capped at the
-       edge with no vertical side line (see .gold-edge::before). */
-    top: 0;
-    left: 0;
-    right: 0;
-    height: var(--radius);
-    border: 2px solid transparent;
-    border-bottom: 0;
-    border-top-color: var(--gold-solid);
-    border-left-color: var(--gold-solid);
-    border-right-color: var(--gold-solid);
-    border-top-left-radius: var(--radius);
-    border-top-right-radius: var(--radius);
+    /* Flat horizontal metallic gold whisper resting just inside the card,
+       below the top border. See .gold-edge::before. */
+    top: 8px;
+    left: var(--radius);
+    right: var(--radius);
+    height: 1px;
+    background: var(--gold-sheen);
+    filter: drop-shadow(0 0 5px rgba(244, 227, 161, 0.3));
     pointer-events: none;
 }
 
@@ -1350,19 +1339,14 @@ footer {
 .price-card.featured::before {
     content: "";
     position: absolute;
-    /* Full-width gold hairline curving into the top corners, capped at the
-       blue edge with no vertical side line (see .gold-edge::before). */
-    top: 0;
-    left: 0;
-    right: 0;
-    height: var(--radius);
-    border: 2px solid transparent;
-    border-bottom: 0;
-    border-top-color: var(--gold-solid);
-    border-left-color: var(--gold-solid);
-    border-right-color: var(--gold-solid);
-    border-top-left-radius: var(--radius);
-    border-top-right-radius: var(--radius);
+    /* Flat horizontal metallic gold whisper resting just inside the card,
+       below the top border, marking the price. See .gold-edge::before. */
+    top: 8px;
+    left: var(--radius);
+    right: var(--radius);
+    height: 1px;
+    background: var(--gold-sheen);
+    filter: drop-shadow(0 0 5px rgba(244, 227, 161, 0.3));
     pointer-events: none;
 }
 
@@ -1578,12 +1562,14 @@ a.addon-card {
 }
 
 a.addon-card .addon-name,
-a.glass-card h3 {
+a.glass-card h3,
+.faq-card h3 {
     transition: color 0.3s ease;
 }
 
 a.addon-card:hover .addon-name,
-a.glass-card:hover h3 {
+a.glass-card:hover h3,
+.faq-card:hover h3 {
     color: var(--accent-blue);
 }
 
@@ -1597,13 +1583,32 @@ a.glass-card:hover h3 {
     letter-spacing: 0.3px;
 }
 
+/* FAQ cards can't be a single <a> — their answers contain inline links, and
+   nested anchors are invalid HTML (the browser auto-closes the outer <a>,
+   collapsing the card). So the card is a <div> and the bottom .card-link is
+   the real anchor, stretched over the whole card to keep it fully clickable. */
 .faq-card {
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .faq-card p {
     margin-bottom: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.faq-card p a {
+    position: relative;
+    z-index: 2;
+}
+
+.faq-card .card-link::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
 }
 
 .feature-out {
