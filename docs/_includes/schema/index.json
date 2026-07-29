@@ -74,7 +74,7 @@
         {
           "@type": "Question",
           "name": "How does it help with ISO 3834 and ASME IX compliance?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Elenchon turns shop-floor activity into immutable, version-pinned compliance ledgers. Every qualification, variable and process is verified and locked the moment it is captured, so audit evidence for codes such as ISO 3834 and ASME IX is instant and undisputed." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Elenchon turns shop-floor activity into version-pinned compliance ledgers. Every qualification, variable and process is verified and attributed the moment it is captured, so audit evidence for codes such as ISO 3834 and ASME IX is instant and undisputed." }
         },
         {
           "@type": "Question",

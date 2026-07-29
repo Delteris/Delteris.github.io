@@ -55,7 +55,7 @@
             {
               "@type": "Question",
               "name": "Does it help with ISO 3834 and ASME IX audits?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Yes. Because traceability is captured and locked as work happens, it doubles as immutable audit evidence for codes such as ISO 3834, EN 1090 and ASME IX — following any weld to its materials, welder and procedure is instant." }
+              "acceptedAnswer": { "@type": "Answer", "text": "Yes. Because traceability is captured and version-pinned as work happens, it doubles as audit evidence for codes such as ISO 3834, EN 1090 and ASME IX — following any weld to its materials, welder and procedure is instant." }
             },
             {
               "@type": "Question",
