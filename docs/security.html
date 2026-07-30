@@ -140,7 +140,7 @@ schema: schema/security.json
             <p class="cl-section-h">Where each layer reaches on the path</p>
 
             <div class="cl-board">
-                <svg viewBox="0 0 1100 420" role="img" aria-label="Network path and encryption-layer reach">
+                <svg viewBox="0 0 1110 420" role="img" aria-label="Network path and encryption-layer reach">
                     <defs>
                         <marker id="cl-chev" markerWidth="7" markerHeight="7" refX="3.5" refY="3.5" orient="auto">
                             <path d="M1,1 L5,3.5 L1,6" fill="none" stroke="#9fb4d0" stroke-width="1.2" opacity=".8"/></marker>
@@ -167,12 +167,12 @@ schema: schema/security.json
                     <text class="cl-kt" x="42" y="69">App TLS — quantum-safe · carries the actual data</text>
 
                     <!-- Zones (drawn behind nodes; labels in a header strip well above the node lane at y 210) -->
-                    <rect class="cl-zone" x="250" y="184" width="120" height="112" rx="12"/>
+                    <rect class="cl-zone" x="250" y="184" width="120" height="101" rx="12"/>
                     <text class="cl-zl" x="262" y="200">PHRAKTON</text>
                     <text class="cl-zsub" x="262" y="212">VPS network</text>
-                    <rect class="cl-zone" x="566" y="184" width="512" height="196" rx="12"/>
-                    <text class="cl-zl" x="1066" y="200" text-anchor="end">CLIENT LAN</text>
-                    <text class="cl-zsub" x="1066" y="212" text-anchor="end">behind your firewall</text>
+                    <rect class="cl-zone" x="566" y="184" width="526" height="196" rx="12"/>
+                    <text class="cl-zl" x="1078" y="200" text-anchor="end">CLIENT LAN</text>
+                    <text class="cl-zsub" x="1078" y="212" text-anchor="end">behind your firewall</text>
 
                     <!-- The appliance: box-router, boxctl·Caddy and the apps are all ONE physical
                          box (unlike the LAN worker, a separate device on the LAN). Group them in a
@@ -228,31 +228,31 @@ schema: schema/security.json
                     <!-- remote worker → tenant-router: 3 layers (public internet) -->
                     <line x1="140" y1="247" x2="255" y2="247" stroke="#43c08f" stroke-width="2"/>
                     <line x1="140" y1="252" x2="255" y2="252" stroke="#ecab45" stroke-width="2"/>
-                    <line x1="140" y1="257" x2="254" y2="257" stroke="#54a9ec" stroke-width="2" marker-end="url(#cl-arrow)"/>
+                    <line x1="140" y1="257" x2="251" y2="257" stroke="#54a9ec" stroke-width="2" marker-end="url(#cl-arrow)"/>
 
                     <!-- tenant-router → box-router: 3 layers -->
                     <line x1="365" y1="247" x2="590" y2="247" stroke="#43c08f" stroke-width="2"/>
                     <line x1="365" y1="252" x2="590" y2="252" stroke="#ecab45" stroke-width="2"/>
-                    <line x1="365" y1="257" x2="589" y2="257" stroke="#54a9ec" stroke-width="2" marker-end="url(#cl-arrow)"/>
+                    <line x1="365" y1="257" x2="586" y2="257" stroke="#54a9ec" stroke-width="2" marker-end="url(#cl-arrow)"/>
 
                     <!-- box-router → box tunneler: all 3 layers. The router re-wraps Link TLS (green)
                          per hop; Ziti E2E (amber) and App TLS (blue) ride inside, untouched. -->
                     <line x1="686" y1="247" x2="712" y2="247" stroke="#43c08f" stroke-width="2"/>
                     <line x1="686" y1="252" x2="712" y2="252" stroke="#ecab45" stroke-width="2"/>
-                    <line x1="686" y1="257" x2="711" y2="257" stroke="#54a9ec" stroke-width="2" marker-end="url(#cl-arrow)"/>
+                    <line x1="686" y1="257" x2="708" y2="257" stroke="#54a9ec" stroke-width="2" marker-end="url(#cl-arrow)"/>
 
                     <!-- box tunneler → boxctl·Caddy: tunneler unwraps Link TLS AND Ziti E2E and
                          splices only App TLS (blue) to Caddy (SNI survives the raw splice). -->
-                    <line x1="816" y1="252" x2="841" y2="252" stroke="#54a9ec" stroke-width="2" marker-end="url(#cl-arrow)"/>
+                    <line x1="816" y1="252" x2="838" y2="252" stroke="#54a9ec" stroke-width="2" marker-end="url(#cl-arrow)"/>
 
                     <!-- boxctl·Caddy → apps: App TLS terminated at Caddy — plain data on the box -->
-                    <line x1="946" y1="252" x2="971" y2="252" stroke="#5f7fa6" stroke-width="1.6" stroke-dasharray="3 3" marker-end="url(#cl-arrow)"/>
+                    <line x1="946" y1="252" x2="968" y2="252" stroke="#5f7fa6" stroke-width="1.6" stroke-dasharray="3 3" marker-end="url(#cl-arrow)"/>
 
                     <!-- LAN worker → box tunneler: all three layers reach the tunneler directly in
                          one on-LAN hop. Arrow points up to the tunneler. -->
                     <line x1="760" y1="312" x2="760" y2="284" stroke="#43c08f" stroke-width="2"/>
                     <line x1="768" y1="312" x2="768" y2="284" stroke="#54a9ec" stroke-width="2"/>
-                    <line x1="764" y1="312" x2="764" y2="280" stroke="#ecab45" stroke-width="2" marker-end="url(#cl-arrow)"/>
+                    <line x1="764" y1="312" x2="764" y2="283" stroke="#ecab45" stroke-width="2" marker-end="url(#cl-arrow)"/>
                     <text x="830" y="335" class="cl-fl" style="fill:#7f93ab">same 3 layers,</text>
                     <text x="830" y="347" class="cl-fl" style="fill:#7f93ab">one on-LAN hop</text>
                 </svg>
