@@ -1,4 +1,5 @@
 # Jekyll build output & local dev artifacts — never commit
+_r_*.html
 _site/
 .jekyll-cache/
 .jekyll-metadata
