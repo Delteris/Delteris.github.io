@@ -144,8 +144,8 @@ schema: schema/security.json
                     <defs>
                         <marker id="cl-chev" markerWidth="7" markerHeight="7" refX="3.5" refY="3.5" orient="auto">
                             <path d="M1,1 L5,3.5 L1,6" fill="none" stroke="#9fb4d0" stroke-width="1.2" opacity=".8"/></marker>
-                        <marker id="cl-arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
-                            <path d="M1,1 L7,4 L1,7 Z" fill="context-stroke"/></marker>
+                        <marker id="cl-arrow" markerWidth="9" markerHeight="9" refX="5.5" refY="4" orient="auto">
+                            <path d="M1.5,1.2 L6,4 L1.5,6.8" fill="none" stroke="context-stroke" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker>
                         <style>
                             .cl-zone{fill:none;stroke:#3a536e;stroke-width:1.2;stroke-dasharray:5 5}
                             .cl-zl{font-family:'Space Grotesk',monospace;font-size:11px;letter-spacing:.09em;fill:#7f93ab}
@@ -167,7 +167,7 @@ schema: schema/security.json
                     <text class="cl-kt" x="42" y="69">App TLS — quantum-safe · carries the actual data</text>
 
                     <!-- Zones (drawn behind nodes; labels in a header strip well above the node lane at y 210) -->
-                    <rect class="cl-zone" x="250" y="184" width="120" height="96" rx="12"/>
+                    <rect class="cl-zone" x="250" y="184" width="120" height="112" rx="12"/>
                     <text class="cl-zl" x="262" y="200">PHRAKTON</text>
                     <text class="cl-zsub" x="262" y="212">VPS network</text>
                     <rect class="cl-zone" x="566" y="184" width="496" height="196" rx="12"/>
@@ -177,7 +177,7 @@ schema: schema/security.json
                     <!-- The appliance: box-router, boxctl·Caddy and the apps are all ONE physical
                          box (unlike the LAN worker, a separate device on the LAN). Group them in a
                          solid container so the shared machine reads as one unit. -->
-                    <rect x="568" y="218" width="496" height="72" rx="10" fill="rgba(84,169,236,0.05)" stroke="#3a6ea5" stroke-width="1.1"/>
+                    <rect x="576" y="218" width="478" height="72" rx="10" fill="rgba(84,169,236,0.05)" stroke="#3a6ea5" stroke-width="1.1"/>
                     <text class="cl-zl" x="816" y="176" text-anchor="middle" style="fill:#6f86a3">THE BOX — ONE APPLIANCE</text>
 
                     <!-- Firewall boundary between public internet and the client LAN -->
