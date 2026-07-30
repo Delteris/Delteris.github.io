@@ -718,15 +718,17 @@ nav {
        The overlay follows the card's rounded top corners (matching radius), so
        the gold curves with the card instead of floating as a detached bar. It
        reads as a stylist's rim-light — integrated, drawing the eye up.
-       Radius is bumped +1px vs the card so the gold's corner arc rides just
-       OUTSIDE the card's inner corner, covering the dark crescent (the "void")
-       without moving the overlay off the top edge. */
+       The absolute overlay is positioned against the padding box (inside the
+       1px border), so its corner radius must be 1px TIGHTER than the card's to
+       sit exactly on the card's inner corner. Radius --radius − 1px, position
+       kept at 0, closes the dark corner crescent (the "void") without shifting
+       the gold off the top edge. */
     top: 0;
     left: 0;
     right: 0;
     height: 21px;
-    border-top-left-radius: calc(var(--radius) + 1px);
-    border-top-right-radius: calc(var(--radius) + 1px);
+    border-top-left-radius: calc(var(--radius) - 1px);
+    border-top-right-radius: calc(var(--radius) - 1px);
     background:
         linear-gradient(180deg,
             rgba(244, 227, 161, 0.16) 0%,
@@ -1296,13 +1298,13 @@ footer {
     content: "";
     position: absolute;
     /* Gold rim-light on the card's own top edge. See .gold-edge::before.
-       Radius +1px vs the card so the gold covers the inner-corner crescent. */
+       Radius -1px vs the card: the overlay is positioned inside the border (absolute box = padding box), so its corner must be 1px tighter to sit on the card's inner corner and close the crescent. Position stays at 0. */
     top: 0;
     left: 0;
     right: 0;
     height: 21px;
-    border-top-left-radius: calc(var(--radius) + 1px);
-    border-top-right-radius: calc(var(--radius) + 1px);
+    border-top-left-radius: calc(var(--radius) - 1px);
+    border-top-right-radius: calc(var(--radius) - 1px);
     background:
         linear-gradient(180deg,
             rgba(244, 227, 161, 0.16) 0%,
@@ -1384,14 +1386,14 @@ footer {
     content: "";
     position: absolute;
     /* Gold rim-light on the card's own top edge, marking the price. See
-       .gold-edge::before. Radius +1px vs the card so the gold covers the
-       inner-corner crescent. */
+       .gold-edge::before. Radius -1px vs the card (overlay sits inside the
+       border) so the corner sits on the card's inner corner, closing the void. */
     top: 0;
     left: 0;
     right: 0;
     height: 21px;
-    border-top-left-radius: calc(var(--radius) + 1px);
-    border-top-right-radius: calc(var(--radius) + 1px);
+    border-top-left-radius: calc(var(--radius) - 1px);
+    border-top-right-radius: calc(var(--radius) - 1px);
     background:
         linear-gradient(180deg,
             rgba(244, 227, 161, 0.16) 0%,
