@@ -237,7 +237,7 @@
         },
         box: {
             sealed: [], tone: 'var(--danger, #e86f60)',
-            spot: { x: 576, y: 210, w: 478, h: 88, color: '#e86f60', lx: 815, ly: 306, t: 'endpoint — reaches the data' },
+            spot: { x: 572, y: 210, w: 498, h: 88, color: '#e86f60', lx: 821, ly: 306, t: 'endpoint — reaches the data' },
             h: 'A breached box',
             b: 'Ziti E2E and App TLS both terminate on the box, so control of the box means access to the data — <b>for that one tenant only</b>. This is an insider or physical-access risk, not a network one.'
         },
