@@ -911,6 +911,15 @@ nav {
     font-size: 1.02rem;
 }
 
+/* The small note that sits BELOW the button row in a cta-band needs a
+   little breathing room from the buttons — .cta-band p above zeroes the
+   top margin (correct for the intro paragraph), which also caught this
+   note and pinned it too close to the buttons. */
+.cta-band .cta-group + .hero-urgency {
+    margin-top: 1.75rem;
+    margin-bottom: 0;
+}
+
 /* ------------------------------------------------------------
    Deployment page
    ------------------------------------------------------------ */
