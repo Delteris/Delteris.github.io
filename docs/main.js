@@ -230,14 +230,14 @@
         },
         phrakton: {
             sealed: ['e2e', 'app'], tone: 'var(--cl-e2e)',
-            spot: { x: 250, y: 184, w: 120, h: 96, color: '#ecab45', lx: 310, ly: 300, t: 'opens Link TLS only' },
+            spot: { x: 238, y: 184, w: 140, h: 110, color: '#ecab45', lx: 308, ly: 306, t: 'opens Link TLS only' },
             h: 'A Phrakton router or host',
             b: 'A router terminates <b>Link TLS</b>, but the traffic stays sealed inside <b>Ziti E2E</b> and <b>App TLS</b>. Routers relay it without holding those keys, so the operator cannot read a tenant’s app data.',
             seals: { e2e: 'still sealed — routers relay, they don’t hold this key' }
         },
         box: {
             sealed: [], tone: 'var(--danger, #e86f60)',
-            spot: { x: 572, y: 210, w: 498, h: 88, color: '#e86f60', lx: 821, ly: 306, t: 'endpoint — reaches the data' },
+            spot: { x: 580, y: 208, w: 542, h: 88, color: '#e86f60', lx: 851, ly: 306, t: 'endpoint — reaches the data' },
             h: 'A breached box',
             b: 'Ziti E2E and App TLS both terminate on the box, so control of the box means access to the data — <b>for that one tenant only</b>. This is an insider or physical-access risk, not a network one.'
         },
