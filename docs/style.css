@@ -981,7 +981,16 @@ nav {
     text-align: center;
     margin-top: 2.5rem;
     padding-top: 2.25rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    /* Gold separator — the one gold accent on the deployment page, drawing the
+       eye down to the final CTA. A metallic sheen that fades in from the edges
+       so it reads as gold light on the rule, not a hard yellow bar. */
+    border-top: 1px solid transparent;
+    border-image: linear-gradient(90deg,
+        rgba(201, 165, 63, 0) 0%,
+        rgba(169, 131, 47, 0.55) 28%,
+        rgba(255, 246, 216, 0.9) 50%,
+        rgba(169, 131, 47, 0.55) 72%,
+        rgba(201, 165, 63, 0) 100%) 1;
 }
 
 .deploy-note {
