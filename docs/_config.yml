@@ -3,6 +3,10 @@ url: "https://delteris.com"
 baseurl: ""
 timezone: Europe/Lisbon
 
+# Cloudflare Web Analytics: paste the token from your CF dashboard beacon snippet.
+# Leave blank to disable. When set, the beacon is injected on every page via _layouts/default.html.
+cloudflare_analytics_token: ""
+
 plugins:
   - jekyll-sitemap   # auto-generates /sitemap.xml with lastmod (whitelisted on GitHub Pages)
 
