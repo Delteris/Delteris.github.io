@@ -1,0 +1,293 @@
+---
+layout: default
+title: "Pricing | Elenchon On-Premise Welding Management Software"
+description: "Published flat-rate pricing, no sales calls: Lite €390/mo (20 workers), Standard €790/mo (50 workers), extra seats €9/mo. Every add-on in plain euros — no hidden fees."
+og_title: "Pricing | Elenchon — On-Premise Welding Traceability"
+og_description: "Published, flat-rate pricing for Elenchon on-premise welding traceability. Lite from €390/month, Standard €790/month — zero hidden fees."
+og_image: "/static/DelterisCrest.webp"
+schema: schema/pricing.json
+---
+    <header class="page-hero">
+        <div class="hero-content">
+            <h1 class="text-glow">Priced in the Open.<br>No Hidden Fees.</h1>
+            <p class="hero-sub">Industrial software should not come with a mystery invoice. Every plan, add-on, setup fee and service credit on this page is the real number, published in plain euros — so your finance team can model total cost of ownership before you ever contact us.</p>
+        </div>
+    </header>
+
+    <section class="page-section container u-flush-top">
+        <div class="section-header">
+            <span class="eyebrow">Plans</span>
+            <h2>Two Plans Available Today. One on the Way.</h2>
+            <p class="subtitle">Every Elenchon plan is a fully on-premise appliance installed on-site by our own engineers — no cloud tier, no watered-down edition. Lite is the same platform on a smaller floor, not a crippled one.</p>
+        </div>
+
+        <div class="pricing-grid">
+
+            <div class="price-card">
+                <span class="price-badge price-badge-live">Available Now</span>
+                <h3 class="price-name">Lite</h3>
+                <div class="price-amount-row">
+                    <span class="price-amount">€390</span><span class="price-per">/ month</span>
+                </div>
+                <p class="price-includes"><strong>20 workers</strong> included</p>
+                <p class="price-blurb">The full welding traceability core, right-sized for single-cell teams and smaller fabrication shops — the same sovereign appliance and the same security, scoped to a smaller floor.</p>
+                <ul class="feature-list price-feature-list">
+                    <li><strong>Full traceability core</strong> — work capture, project tree &amp; flowchart, BOM import</li>
+                    <li>Complete WPS / PQR / WPQ qualification workflow</li>
+                    <li>Audit-ready ISO &amp; ASME IX records</li>
+                    <li>Global custom roles and granular permissions</li>
+                    <li>Elastic templates — your paperwork adapted and built into your deployment</li>
+                    <li>Phrakton zero-trust, post-quantum-safe networking</li>
+                    <li>Automated local backups &amp; absolute data sovereignty</li>
+                    <li>Expandable by up to two blocks of 10 workers (40 max)</li>
+                    <li>Direct founder support by email</li>
+                </ul>
+                <a href="deployment.html" class="price-cta price-cta-primary">Secure Your Deployment</a>
+            </div>
+
+            <div class="price-card featured">
+                <span class="price-badge price-badge-live">Available Now</span>
+                <h3 class="price-name">Standard</h3>
+                <div class="price-amount-row">
+                    <span class="price-amount">€790</span><span class="price-per">/ month</span>
+                </div>
+                <p class="price-includes"><strong>50 workers</strong> included</p>
+                <p class="price-blurb">The complete Elenchon platform, installed and supported end to end. Everything the floor and the boardroom need, at one predictable price.</p>
+                <ul class="feature-list price-feature-list">
+                    <li><strong>Everything in Lite</strong>, plus:</li>
+                    <li><strong>Offline work capture</strong> — welders keep recording with no connection; entries sync automatically on reconnect</li>
+                    <li><strong>In-app maintenance hub</strong> — five priority tiers, floor-raised requests, also offline-compatible</li>
+                    <li>Machine certification &amp; calibration tracking</li>
+                    <li>Consumable traceability — batch, heat and expiry, traced into welds</li>
+                    <li>Pre-deployment on-site scoping session</li>
+                    <li>On-site training — two 3-hour blocks</li>
+                    <li>Unlimited 10-worker expansion blocks</li>
+                    <li>Direct founder support — no ticket queues, no sales layers</li>
+                </ul>
+                <a href="deployment.html" class="price-cta price-cta-primary">Secure Your Deployment</a>
+            </div>
+
+            <div class="price-card soon">
+                <span class="price-badge">Coming Soon</span>
+                <h3 class="price-name">Premium</h3>
+                <div class="price-amount-row"><span class="price-amount-tba">TBA</span></div>
+                <p class="price-includes">Built for scale and excellence</p>
+                <p class="price-blurb">Coming soon</p>
+                <ul class="feature-list price-feature-list">
+                    <li>Features list coming soon</li>
+                </ul>
+                <span class="price-cta price-cta-soon" role="note">Coming soon</span>
+            </div>
+
+        </div>
+        <p class="price-footnote">Prices are per appliance, per month, excluding VAT. Move between Lite and Standard at any time — plan changes are applied remotely, at no charge, with 15 days’ notice. Hardware and on-site installation are quoted separately, below.</p>
+    </section>
+
+    <section class="page-section container">
+        <div class="section-header">
+            <span class="eyebrow">Add-Ons</span>
+            <h2>Scale On Your Terms — Every Price Published</h2>
+            <p class="subtitle">Add only what you need, when you need it. No bundles you’ll never use, no surprise line items at renewal.</p>
+        </div>
+
+        <div class="addon-grid">
+            <a href="security.html" class="glass-card addon-card">
+                <h3 class="addon-name">Remote Access Module</h3>
+                <div class="addon-price">€200 <span class="addon-per">/ month</span></div>
+                <p class="addon-desc">Reach the management app or capture work from home, over mobile data, or in the field — through a post-quantum-safe encrypted tunnel. Includes free 100GB of Bandwidth.</p>
+                <span class="card-link">How remote access is secured →</span>
+            </a>
+            <div class="glass-card addon-card">
+                <h3 class="addon-name">10 Additional Workers</h3>
+                <div class="addon-price">€90 <span class="addon-per">/ month — 10 workers</span></div>
+                <p class="addon-desc">Grow your floor in clean blocks of ten — the same flat rate every time. <strong>Every block includes 20 GB of recurring remote bandwidth, free.</strong> Standard takes as many blocks as you need; Lite takes up to two, to a 40-worker ceiling.</p>
+            </div>
+            <div class="glass-card addon-card">
+                <h3 class="addon-name">Remote Bandwidth</h3>
+                <div class="addon-price">€25 <span class="addon-per">/ 100 GB</span></div>
+                <p class="addon-desc">Top up once or add a monthly recurring block for remote-access data whenever you need it. Pay for what you use, in transparent 100 GB increments — on top of whatever your plan and worker blocks already include.</p>
+            </div>
+
+            <div class="glass-card addon-card">
+                <h3 class="addon-name">Plan Changes</h3>
+                <div class="addon-price">€0 <span class="addon-per">/ remote, any time</span></div>
+                <p class="addon-desc">Upgrades, downgrades and capacity changes are applied remotely over the Phrakton fabric. Give us 15 days’ notice. Upgrades apply immediately; downgrades take effect at your next billing cycle.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-section container">
+        <div class="section-header">
+            <span class="eyebrow">One-Time Setup & Hardware</span>
+            <h2>Installed by the People Who Built It</h2>
+            <p class="subtitle">Transparent implementation costs. No hardware markups, no surprise integration fees.</p>
+        </div>
+
+        <div class="addon-grid">
+            <a href="deployment.html" class="glass-card addon-card">
+                <h3 class="addon-name">Lite Deployment &amp; Training</h3>
+                <div class="addon-price">€950 <span class="addon-per">/ one-time, all in</span></div>
+                <p class="addon-desc">Deployment and training in one price, with transport to your site free within our national range. One on-site trip instead of two — Lite has no separate scoping visit — with training run as two 2-hour blocks. Priced below Standard accordingly.</p>
+                <span class="card-link">See the deployment program →</span>
+            </a>
+            <a href="deployment.html" class="glass-card addon-card">
+                <h3 class="addon-name">Standard Deployment &amp; Training</h3>
+                <div class="addon-price">€1,700 <span class="addon-per">/ one-time, all in</span></div>
+                <p class="addon-desc">€850 deployment plus €850 floor training, in one price, with transport to your site free within our national range. Includes a separate scoping visit (about half a day on-site), physical delivery, secure network integration, and full appliance configuration, plus operator and manager training run as two 3-hour blocks.</p>
+                <span class="card-link">See the deployment program →</span>
+            </a>
+            <a href="platform.html#sovereignty" class="glass-card addon-card">
+                <h3 class="addon-name">Server Appliance</h3>
+                <div class="addon-price">~€300–€400 <span class="addon-per">(At Cost)</span></div>
+                <p class="addon-sub">…or your hardware choice</p>
+                <p class="addon-desc">Enterprise-grade refurbished hardware at exact purchase and delivery cost, zero markup. Brand-new hardware sourced to spec on the same terms — at cost, no markup.</p>
+                <span class="card-link">How the appliance works →</span>
+            </a>
+            <a href="contact.html" class="glass-card addon-card">
+                <h3 class="addon-name">Data Migration (by request)</h3>
+                <div class="addon-price">POA <span class="addon-per">/ custom-quoted</span></div>
+                <p class="addon-desc">Most shops enter their own projects and WPS/PQR library — the app is built for exactly that, and it's the path we recommend. For those who would rather arrive fully loaded, we take on bespoke data migration by selective request: your structure and procedure library keyed in before go-live, quoted to the volume. It sits outside a standard deployment and we accept it at our discretion — a considered extra for those who need it.</p>
+                <span class="card-link">Ask about data migration →</span>
+            </a>
+            <a href="deployment.html" class="glass-card addon-card">
+                <h3 class="addon-name">On-Site Commute Fee</h3>
+                <div class="addon-price">€150 <span class="addon-per">/ visit</span></div>
+                <p class="addon-desc">A nominal transport fee for standalone on-site visits within our national range — extra training or hands-on support. Deployment transport is free nationally, so it's never added there. International and out-of-range sites don't get free deployment transport; they're quoted a single custom travel fee up front instead.</p>
+                <span class="card-link">See the deployment program →</span>
+            </a>
+        </div>
+    </section>
+
+    <section class="page-section container" id="services">
+        <div class="section-header">
+            <span class="eyebrow">Professional Services</span>
+            <h2>Our Engineers, Booked by the Day</h2>
+            <p class="subtitle">Extra training and specialist consulting, priced by the half day or full day. Same published rates, same people who built the platform — no partner network, no subcontractors.</p>
+        </div>
+
+        <div class="addon-grid">
+            <div class="glass-card addon-card">
+                <h3 class="addon-name">Extra Training Session</h3>
+                <div class="addon-price">€500 <span class="addon-per">/ half day · €850 / full day</span></div>
+                <p class="addon-desc">Additional on-site training beyond your deployment package — for new hires, a second shift, or a new production cell. Half day is a single 3-hour session; full day is two 3-hour blocks, at a lower hourly rate.</p>
+            </div>
+            <div class="glass-card addon-card">
+                <h3 class="addon-name">Network and Security Consulting</h3>
+                <div class="addon-price">€500 <span class="addon-per">/ half day · €850 / full day</span></div>
+                <p class="addon-desc">Hands-on work on your industrial network with our CTO: segmentation and VLAN design, zero-trust rollout, firewall and network security, performance and reachability improvements, threat model documentation and assessment.</p>
+            </div>
+            <div class="glass-card addon-card">
+                <h3 class="addon-name">Post Quantum Safe Consulting</h3>
+                <div class="addon-price">€500 <span class="addon-per">/ half day · €850 / full day</span></div>
+                <p class="addon-desc">Post-quantum security assessment and migration planning and compliance: inventory of the cryptography you run today and vulnerability assessment, exposure to harvest-now-decrypt-later risk, and a staged path to post-quantum-safe transport across your facility.</p>
+            </div>
+        </div>
+        <p class="price-footnote">Consulting and training days are quoted excluding VAT. Network and post-quantum security consulting stand on their own — no need to run Elenchon to book them. Travel is billed per the on-site commute fee above. Every engagement is accepted at our discretion and subject to available timeslots.</p>
+    </section>
+
+    <section class="page-section container" id="uptime">
+        <div class="section-header">
+            <span class="eyebrow">Service Level Commitment</span>
+            <h2>99.9% Uptime, or We Pay You Back</h2>
+            <p class="subtitle">The Phrakton zero-trust fabric carries every connection to your appliance, so its availability is something we take seriously and put in writing. We run it ourselves, commit to 99.9% monthly uptime, and engineer for as close to 100% as the technology allows. On any month we fall short, the credit below is applied to your invoice automatically: no claim to file, no ticket to raise, no argument to have.</p>
+        </div>
+
+        <div class="addon-grid">
+            <div class="glass-card addon-card">
+                <h3 class="addon-name">99.0% – 99.8%</h3>
+                <div class="addon-price">10% <span class="addon-per">credit</span></div>
+            </div>
+            <div class="glass-card addon-card">
+                <h3 class="addon-name">97.0% – 99.0%</h3>
+                <div class="addon-price">25% <span class="addon-per">credit</span></div>
+            </div>
+            <div class="glass-card addon-card">
+                <h3 class="addon-name">90.0% – 97.0%</h3>
+                <div class="addon-price">50% <span class="addon-per">credit</span></div>
+            </div>
+            <div class="glass-card addon-card">
+                <h3 class="addon-name">Below 89.9%</h3>
+                <div class="addon-price">100% <span class="addon-per">credit</span></div>
+            </div>
+        </div>
+        <p class="price-footnote">Uptime is measured on the Phrakton fabric — controller and edge routers — by our own telemetry, across each calendar month. At or above 99.9%, the standard rate applies. Excludes your local internet uplink, pre-notified maintenance windows, and events outside our reasonable control. Credits apply to your next monthly invoice in full.</p>
+    </section>
+
+    <section class="page-section container" id="faq">
+        <div class="section-header">
+            <span class="eyebrow">Common Questions</span>
+            <h2>Pricing, Answered Before You Ask</h2>
+            <p class="subtitle">The questions we get on every first call — answered here so you don’t have to make the call to get them.</p>
+        </div>
+
+        <div class="addon-grid">
+            <div class="glass-card addon-card">
+                <h3 class="addon-name">When does billing start?</h3>
+                <p class="addon-desc">Not at deployment. Installation and training are the only charges up front; the monthly subscription begins after you're live. Your first monthly invoice lands on the 1st or the 15th — whichever falls furthest from your go-live date, so your first period is never short-changed. From there it's twelve invoices a year, one per calendar month. No 28-day cycles, no thirteenth invoice — the honest way to bill.</p>
+            </div>
+            <div class="glass-card addon-card">
+                <h3 class="addon-name">Can I change my plan later?</h3>
+                <p class="addon-desc">Yes, and it costs nothing. Upgrades, downgrades and add-ons are applied remotely over the Phrakton fabric — give us 15 days’ notice. Upgrades apply immediately; downgrades take effect at your next billing cycle.</p>
+            </div>
+            <div class="glass-card addon-card">
+                <h3 class="addon-name">Can one appliance run multiple factories?</h3>
+                <p class="addon-desc">A full factory, no — each one gets its own appliance. That's the sovereignty model: every site's records stay cryptographically isolated, separately backed up, and under that site's own control. Stretching one appliance across real facilities invites the mess we refuse to ship — records that can taint each other, backups and support that no longer map cleanly to a single site. Two facilities, two appliances, secured to the same standard. The one exception: a genuinely small satellite operation can, at our discretion, run remote off an existing appliance — tell us at deployment and we'll scope it. Project, seasonal, or other field work isn't a satellite operation and is fully covered by the Remote Access Module.</p>
+            </div>
+            <div class="glass-card addon-card">
+                <h3 class="addon-name">How large a floor does Lite cover?</h3>
+                <p class="addon-desc">Lite includes 20 workers and takes up to two expansion blocks of ten — a 40-worker ceiling. Past that you move to Standard, which includes 50 and expands without limit. Moving up is a remote plan change, not a re-installation.</p>
+            </div>
+            <div class="glass-card addon-card">
+                <h3 class="addon-name">What comes with a worker block?</h3>
+                <p class="addon-desc">€90 per month adds ten workers, and every block carries 20 GB of recurring remote bandwidth at no extra charge. If you need more than that, bandwidth is €25 per 100 GB.</p>
+            </div>
+            <div class="glass-card addon-card">
+                <h3 class="addon-name">Will we need to buy bandwidth?</h3>
+                <p class="addon-desc">Almost certainly not. The bandwidth included with the Remote Access Module and each worker block is sized for normal remote use — a floor working over the fabric day to day stays comfortably inside it. Extra bandwidth exists for genuine outliers, not the everyday case; unless you're moving remote data far beyond ordinary work, the included allowance is enough and you never touch a pack.</p>
+            </div>
+            <a href="deployment.html" class="glass-card addon-card">
+                <h3 class="addon-name">What does installation cost?</h3>
+                <p class="addon-desc">Standard is €1,700 all in — €850 deployment and €850 floor training, quoted as one line. Lite is a single €950 package covering both, lower for its one on-site trip versus two. Extra training sessions are €500. Hardware is passed through at cost — roughly €300–€400 — with zero markup.</p>
+                <span class="card-link">See the deployment program →</span>
+            </a>
+            <a href="security.html" class="glass-card addon-card">
+                <h3 class="addon-name">What if the fabric goes down?</h3>
+                <p class="addon-desc">The fabric is the access path to your appliance, so we treat its uptime as our responsibility and back it in writing. We commit to 99.9% monthly and engineer for as near 100% as possible; on any shortfall the credit is automatic — 10% below 99.9% uptime, 25% below 99%, 50% below 97%, and the full month free below 89.9%.</p>
+                <span class="card-link">See the security architecture →</span>
+            </a>
+            <a href="platform.html#sovereignty" class="glass-card addon-card">
+                <h3 class="addon-name">What happens if we cancel?</h3>
+                <p class="addon-desc">There is no lock-in and no exit fee. The appliance is yours and the data never left it, so you keep view-only access to your historical records for audits.</p>
+                <span class="card-link">How data sovereignty works →</span>
+            </a>
+        </div>
+    </section>
+
+    <section class="page-section container">
+        <div class="no-fees-panel">
+            <span class="eyebrow">Total Cost, No Surprises</span>
+            <h2 class="text-glow">What You Won’t Find on Your Invoice</h2>
+            <p class="no-fees-intro">The industry standard is enterprise software with enterprise-grade opacity: per-audit charges, forced upgrade cycles, and quotes that only appear after three sales calls. We priced Elenchon the way finance actually wants to buy it.</p>
+            <ul class="no-fees-grid">
+                <li>No per-audit or per-report fees</li>
+                <li>No forced upgrade charges</li>
+                <li>No cloud or usage surcharges</li>
+                <li>No price gouging increases</li>
+                <li>No lock-in — cancel anytime, keep view-only access for audits</li>
+                <li>No opaque “enterprise” quote — the number is right here</li>
+            </ul>
+            <p class="no-fees-close">Enterprise-grade software. Zero-trust, post-quantum security. Founder-direct support. At a price you can put in a budget line today.</p>
+        </div>
+    </section>
+
+    <section class="page-section container u-tight-bottom">
+        <div class="cta-band">
+            <h2 class="text-glow">Ready When You Are</h2>
+            <p class="u-stack-sm">We run a deliberately limited number of deployments each quarter because our own engineers install every appliance on-site — the cap is set by the standard we hold, not by demand. Contact us to talk pricing for your floor and find the quarter that suits you.</p>
+            <div class="cta-group">
+                <a href="deployment.html" class="btn btn-primary">Secure Your Deployment</a>
+                <a href="contact.html" class="btn btn-secondary">Contact Us Now</a>
+            </div>
+            <p class="hero-urgency u-gap-top">Contact the founders — no sales layers, no call queues.</p>
+        </div>
+    </section>
