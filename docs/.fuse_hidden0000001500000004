@@ -131,7 +131,7 @@ schema: schema/weld-project-structure-software.json
             </div>
             <div class="glass-card">
                 <h3>How does this fit the wider platform?</h3>
-                <p>The structure is the backbone. Elenchon is full <a href="/">welding management software</a> — the project structure feeds <a href="welding-work-capture-software.html">shop-floor capture</a>, the <a href="welding-qualification-software.html">WPS/WPQR/WPQ workflow</a>, the <a href="welding-traceability-software.html">weld traceability chain</a>, and <a href="platform.html">much more</a>.</p>
+                <p>The structure is the backbone. Elenchon is full <a href="/">welding management software</a> — the project structure feeds <a href="welding-work-capture-software.html">shop-floor capture</a>, the <a href="welding-qualification-software.html">WPS/PQR/WPQ workflow</a>, the <a href="welding-traceability-software.html">weld traceability chain</a>, and <a href="platform.html">much more</a>.</p>
             </div>
             <div class="glass-card">
                 <h3>What is weld project structure software?</h3>

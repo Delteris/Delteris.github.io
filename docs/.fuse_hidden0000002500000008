@@ -81,7 +81,7 @@ schema: schema/welding-software-on-premise-vs-cloud.json
             </div>
             <div class="glass-card">
                 <h3>Does on-premise mean fewer features?</h3>
-                <p>Not with Elenchon. It runs the full platform on-premise — <a href="welding-traceability-software.html">traceability</a>, the <a href="welding-qualification-software.html">WPS/WPQR/WPQ workflow</a>, <a href="welding-work-capture-software.html">floor capture</a>, <a href="welding-equipment-management-software.html">equipment control</a> and more — not a reduced local edition.</p>
+                <p>Not with Elenchon. It runs the full platform on-premise — <a href="welding-traceability-software.html">traceability</a>, the <a href="welding-qualification-software.html">WPS/PQR/WPQ workflow</a>, <a href="welding-work-capture-software.html">floor capture</a>, <a href="welding-equipment-management-software.html">equipment control</a> and more — not a reduced local edition.</p>
             </div>
             <div class="glass-card">
                 <h3>Is cloud welding software less secure?</h3>

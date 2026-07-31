@@ -1,9 +1,9 @@
 ---
 layout: default
 title: "On-Premise Welding Management Software | Elenchon"
-description: "On-premise welding management software: WPS/WPQR (PQR)/WPQ qualification, weld traceability, and audit-ready ISO &amp; ASME IX evidence — on hardware you own, not the cloud."
+description: "On-premise welding management software: WPS/PQR/WPQ qualification, weld traceability, and audit-ready ISO &amp; ASME IX evidence — on hardware you own, not the cloud."
 og_title: "Welding Management Software, On-Premise | Elenchon"
-og_description: "On-premise welding management software for fabrication shops. Welder qualification (WPS/WPQR (PQR)/WPQ), weld tracking, audit-ready ISO &amp; ASME IX records. The sovereign alternative to cloud welding software."
+og_description: "On-premise welding management software for fabrication shops. Welder qualification (WPS/PQR/WPQ), weld tracking, audit-ready ISO &amp; ASME IX records. The sovereign alternative to cloud welding software."
 og_image_alt: "Elenchon by Delteris — on-premise welding management software"
 og_image_dims: true
 schema: schema/index.json
@@ -12,7 +12,7 @@ schema: schema/index.json
         <div class="hero-content">
             <span class="hero-eyebrow">Elenchon by Delteris</span>
             <h1 class="text-glow"><span class="h1-lead">On-Premise Welding Management Software</span>Unbreakable Traceability.<br>Uninterrupted Production.</h1>
-            <p class="hero-sub">Elenchon is on-premise welding traceability and management software for fabrication shops. It runs the full WPS, WPQR and WPQ workflow, turns floor capture into audit-ready ISO and ASME IX evidence, captures shop-floor data in seconds, and keeps every weld record on your own hardware.</p>
+            <p class="hero-sub">Elenchon is on-premise welding traceability and management software for fabrication shops. It runs the full WPS, PQR and WPQ workflow, turns floor capture into audit-ready ISO and ASME IX evidence, captures shop-floor data in seconds, and keeps every weld record on your own hardware.</p>
             <p class="hero-credibility">Built by founders who have stood on the shop floor and fought weld traceability by hand — and priced entirely in the open.</p>
             <ul class="hero-proof">
                 <li>100% on-premise appliance</li>
@@ -72,7 +72,7 @@ schema: schema/index.json
                 <span class="feature-index">04</span>
                 <h3>Qualifications & Procedures</h3>
                 <p>Automatic 6-month continuity tracking, an end-to-end WPS/WPQR workflow, live WPQR capture on the floor, and heat propagation down the project tree.</p>
-                <span class="pillar-link">See the WPS/WPQR/WPQ workflow →</span>
+                <span class="pillar-link">See the WPS/PQR/WPQ workflow →</span>
             </a>
             <a href="welding-equipment-management-software.html" class="glass-card pillar-card">
                 <span class="feature-index">05</span>
@@ -167,7 +167,7 @@ schema: schema/index.json
         <div class="pillar-grid">
             <div class="glass-card faq-card">
                 <h3>What is welding management software?</h3>
-                <p>Welding management software digitizes a fabrication shop's welding records — welder qualifications (WPS, WPQR, WPQ), <a href="welding-traceability-software.html">weld tracking and traceability</a>, procedure control and inspection history — so every joint is traceable and audit-ready. Elenchon does this entirely on-premise, keeping the full weld record on hardware you own.</p>
+                <p>Welding management software digitizes a fabrication shop's welding records — welder qualifications (WPS, PQR, WPQ), <a href="welding-traceability-software.html">weld tracking and traceability</a>, procedure control and inspection history — so every joint is traceable and audit-ready. Elenchon does this entirely on-premise, keeping the full weld record on hardware you own.</p>
                 <a href="platform.html" class="card-link">Explore the platform →</a>
             </div>
             <div class="glass-card faq-card">

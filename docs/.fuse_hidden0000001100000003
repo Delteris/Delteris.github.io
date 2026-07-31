@@ -33,7 +33,7 @@ schema: schema/pricing.json
                 <p class="price-blurb">The full welding traceability core, right-sized for single-cell teams and smaller fabrication shops — the same sovereign appliance and the same security, scoped to a smaller floor.</p>
                 <ul class="feature-list price-feature-list">
                     <li><strong>Full traceability core</strong> — work capture, project tree &amp; flowchart, BOM import</li>
-                    <li>Complete WPS / WPQR / WPQ qualification workflow</li>
+                    <li>Complete WPS / PQR / WPQ qualification workflow</li>
                     <li>Audit-ready ISO &amp; ASME IX records</li>
                     <li>Global custom roles and granular permissions</li>
                     <li>Elastic templates — your paperwork adapted and built into your deployment</li>
@@ -146,7 +146,7 @@ schema: schema/pricing.json
             <a href="contact.html" class="glass-card addon-card">
                 <h3 class="addon-name">Data Migration (by request)</h3>
                 <div class="addon-price">POA <span class="addon-per">/ custom-quoted</span></div>
-                <p class="addon-desc">Most shops enter their own projects and WPS/WPQR library — the app is built for exactly that, and it's the path we recommend. For those who would rather arrive fully loaded, we take on bespoke data migration by selective request: your structure and procedure library keyed in before go-live, quoted to the volume. It sits outside a standard deployment and we accept it at our discretion — a considered extra for those who need it.</p>
+                <p class="addon-desc">Most shops enter their own projects and WPS/PQR library — the app is built for exactly that, and it's the path we recommend. For those who would rather arrive fully loaded, we take on bespoke data migration by selective request: your structure and procedure library keyed in before go-live, quoted to the volume. It sits outside a standard deployment and we accept it at our discretion — a considered extra for those who need it.</p>
                 <span class="card-link">Ask about data migration →</span>
             </a>
             <a href="deployment.html" class="glass-card addon-card">

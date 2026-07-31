@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Welding Software Features &amp; Capabilities | Elenchon"
-description: "Six capabilities behind on-premise welding traceability: 10-second floor capture, BOM import, the WPS/WPQR (PQR)/WPQ workflow, and audit-ready ISO &amp; ASME IX records."
+description: "Six capabilities behind on-premise welding traceability: 10-second floor capture, BOM import, the WPS/PQR/WPQ workflow, and audit-ready ISO &amp; ASME IX records."
 og_title: "Platform Capabilities | Elenchon Welding Traceability"
 og_description: "Explore Elenchon's six capability pillars covering the full production loop — from BOM import to audit-ready ISO &amp; ASME IX records."
 og_image: "/static/DelterisCrest.webp"
@@ -64,12 +64,12 @@ schema: schema/platform.json
                 <p class="feature-lead">Deep, automatic tracking of the credentials that keep you compliant.</p>
                 <ul class="feature-list">
                     <li><strong>Qualification Engine:</strong> Deep tracking for welder and non-welder qualifications. Automatically logs 6-month continuity from actual floor entries and warns before expirations.</li>
-                    <li><strong>End-to-End WPS/WPQR Workflow:</strong> Define a preliminary WPS in the app, capture actual WPQR parameters on the shop floor, import real values back, adjust ranges, and export a finalized WPS — with official files uploaded or linked at any stage.</li>
+                    <li><strong>End-to-End WPS/PQR Workflow:</strong> Define a preliminary WPS in the app, capture actual PQR parameters on the shop floor, import real values back, adjust ranges, and export a finalized WPS — with official files uploaded or linked at any stage.</li>
                     <li><strong>Live WPQR Capture:</strong> Capture Welding Procedure Qualification Record parameters on the floor and see them reflected in the management app instantly.</li>
                     <li><strong>Fast Heat Propagation:</strong> Heat numbers are captured, linked to their parent MTRs, and automatically propagated down the project tree — full traceability without database bloat.</li>
                     <li><strong>Versioned as Captured:</strong> Every document, parameter, and consumable is versioned and verified the moment it is captured. Corrections are versioned too and stay visible to managers — a clean history without an administrative bottleneck.</li>
                 </ul>
-                <p class="feature-out"><a href="welding-qualification-software.html">See our dedicated welding qualification software (WPS, WPQR &amp; WPQ) &rarr;</a></p>
+                <p class="feature-out"><a href="welding-qualification-software.html">See our dedicated welding qualification software (WPS, PQR &amp; WPQ) &rarr;</a></p>
             </div>
 
             <div class="glass-card feature-block" id="assets">

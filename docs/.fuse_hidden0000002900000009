@@ -78,8 +78,8 @@ schema: schema/welding-traceability-software.json
             <a href="welding-qualification-software.html" class="glass-card pillar-card">
                 <span class="feature-index">04</span>
                 <h3>Qualifications &amp; Procedures</h3>
-                <p>The WPS, WPQR and WPQ each weld links to — proof the joint was made to a qualified procedure by a qualified welder.</p>
-                <span class="pillar-link">See the WPS/WPQR/WPQ workflow &rarr;</span>
+                <p>The WPS, PQR and WPQ each weld links to — proof the joint was made to a qualified procedure by a qualified welder.</p>
+                <span class="pillar-link">See the WPS/PQR/WPQ workflow &rarr;</span>
             </a>
             <a href="welding-equipment-management-software.html" class="glass-card pillar-card">
                 <span class="feature-index">05</span>

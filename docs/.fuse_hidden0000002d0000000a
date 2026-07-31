@@ -134,7 +134,7 @@ schema: schema/welding-work-capture-software.json
             </div>
             <div class="glass-card">
                 <h3>How does this fit the wider platform?</h3>
-                <p>Capture is the front door. Elenchon is full <a href="/">welding management software</a> — the captured data flows into <a href="weld-project-structure-software.html">your project structure</a>, the <a href="welding-qualification-software.html">WPS/WPQR/WPQ workflow</a>, the <a href="welding-traceability-software.html">weld traceability chain</a>, and <a href="platform.html">much more</a>.</p>
+                <p>Capture is the front door. Elenchon is full <a href="/">welding management software</a> — the captured data flows into <a href="weld-project-structure-software.html">your project structure</a>, the <a href="welding-qualification-software.html">WPS/PQR/WPQ workflow</a>, the <a href="welding-traceability-software.html">weld traceability chain</a>, and <a href="platform.html">much more</a>.</p>
             </div>
             <div class="glass-card">
                 <h3>What is shop-floor weld data capture software?</h3>

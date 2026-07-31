@@ -155,7 +155,7 @@ schema: schema/welding-equipment-management-software.json
             </div>
             <div class="glass-card">
                 <h3>Is equipment management included in the main platform?</h3>
-                <p>Yes — it's a built-in part of Elenchon, not a separate product or paid add-on. Elenchon is one full <a href="/">welding management platform</a>: <a href="welding-work-capture-software.html">shop-floor work capture</a>, <a href="weld-project-structure-software.html">project structure and BOM import</a>, <a href="welding-traceability-software.html">weld traceability</a> and the <a href="welding-qualification-software.html">WPS/WPQR/WPQ qualification workflow</a>, with machines, calibration and consumables managed in the same system rather than bolted on beside it.</p>
+                <p>Yes — it's a built-in part of Elenchon, not a separate product or paid add-on. Elenchon is one full <a href="/">welding management platform</a>: <a href="welding-work-capture-software.html">shop-floor work capture</a>, <a href="weld-project-structure-software.html">project structure and BOM import</a>, <a href="welding-traceability-software.html">weld traceability</a> and the <a href="welding-qualification-software.html">WPS/PQR/WPQ qualification workflow</a>, with machines, calibration and consumables managed in the same system rather than bolted on beside it.</p>
             </div>
             <div class="glass-card">
                 <h3>What is welding equipment management software?</h3>
