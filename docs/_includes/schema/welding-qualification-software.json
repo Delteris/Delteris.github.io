@@ -14,12 +14,12 @@
           "applicationCategory": "BusinessApplication",
           "applicationSubCategory": "Welding Qualification Software",
           "operatingSystem": "Linux/Appliance",
-          "description": "On-premise welding qualification software that runs the full WPS, PQR and WPQ workflow — define and qualify welding procedures, capture procedure and welder qualification data on the shop floor, track welder continuity, and automate ISO and ASME IX compliance ledgers.",
+          "description": "On-premise welding qualification software that runs the full WPS, WPQR and WPQ workflow — define and qualify welding procedures, capture WPQR procedure data on the shop floor, track welder continuity (WPQ), and automate ISO and ASME IX compliance ledgers.",
           "keywords": "welding qualification software, WPS software, PQR software, WPQ software, welder qualification software, welding procedure specification software, procedure qualification record software",
           "featureList": [
             "WPS (Welding Procedure Specification) authoring and range management",
-            "PQR (Procedure Qualification Record) capture on the shop floor",
-            "WPQ (Welder Performance Qualification) live capture",
+            "WPQR (Welding Procedure Qualification Record, equivalent to ASME PQR) capture on the shop floor",
+            "WPQ (Welder Performance Qualification) continuity tracking",
             "Automatic 6-month welder continuity tracking with expiry alerts",
             "Version-pinned, locked qualification records",
             "Automated ISO and ASME IX compliance ledgers",
@@ -34,13 +34,13 @@
           "mainEntity": [
             {
               "@type": "Question",
-              "name": "What is the difference between a WPS and a PQR?",
-              "acceptedAnswer": { "@type": "Answer", "text": "A PQR (Procedure Qualification Record) documents the actual parameters used to weld a test coupon and the results of testing it. A WPS (Welding Procedure Specification) is the qualified, written procedure a welder follows in production, with its ranges supported by one or more PQRs. In short: the PQR proves it, the WPS instructs it. Elenchon links the two so every WPS is traceable to the PQR evidence behind it." }
+              "name": "What is the difference between a WPS and a WPQR?",
+              "acceptedAnswer": { "@type": "Answer", "text": "A WPQR (Welding Procedure Qualification Record — the ISO term, equivalent to an ASME PQR) documents the actual parameters used to weld a test coupon and the results of testing it. A WPS (Welding Procedure Specification) is the qualified, written procedure a welder follows in production, with its ranges supported by one or more WPQRs. In short: the WPQR proves it, the WPS instructs it. Elenchon links the two so every WPS is traceable to the WPQR evidence behind it." }
             },
             {
               "@type": "Question",
-              "name": "Can Elenchon generate a WPS from PQR test data?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Yes. You define a preliminary WPS in the app, capture the actual PQR parameters on the shop floor, import those real values back, adjust the qualified ranges, and export a finalized WPS — with the official files uploaded or linked at any stage." }
+              "name": "Can Elenchon generate a WPS from WPQR test data?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Yes. You define a preliminary WPS in the app, capture the actual WPQR parameters on the shop floor, import those real values back, adjust the qualified ranges, and export a finalized WPS — with the official files uploaded or linked at any stage." }
             },
             {
               "@type": "Question",
@@ -50,12 +50,12 @@
             {
               "@type": "Question",
               "name": "What is welding qualification software?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Welding qualification software manages the records that prove welds are made by qualified people to qualified procedures — Welding Procedure Specifications (WPS), Procedure Qualification Records (PQR) and Welder Performance Qualifications (WPQ). Elenchon runs that whole workflow on-premise, so qualification data stays on hardware you own and audit evidence is always a click away." }
+              "acceptedAnswer": { "@type": "Answer", "text": "Welding qualification software manages the records that prove welds are made by qualified people to qualified procedures — Welding Procedure Specifications (WPS), Welding Procedure Qualification Records (WPQR, equivalent to an ASME PQR) and Welder Performance Qualifications (WPQ). Elenchon runs that whole workflow on-premise, so qualification data stays on hardware you own and audit evidence is always a click away." }
             },
             {
               "@type": "Question",
               "name": "Is my qualification data stored on-premise or in the cloud?",
-              "acceptedAnswer": { "@type": "Answer", "text": "On-premise. Elenchon is a containerized appliance installed in your facility, so WPS, PQR and WPQ records never touch a shared cloud server. Authorised staff and auditors can still connect remotely through Phrakton, a zero-trust, post-quantum-safe overlay, while the appliance opens no inbound ports to the public internet." }
+              "acceptedAnswer": { "@type": "Answer", "text": "On-premise. Elenchon is a containerized appliance installed in your facility, so WPS, WPQR and WPQ records never touch a shared cloud server. Authorised staff and auditors can still connect remotely through Phrakton, a zero-trust, post-quantum-safe overlay, while the appliance opens no inbound ports to the public internet." }
             }
           ]
         }

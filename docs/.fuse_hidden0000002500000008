@@ -1,0 +1,104 @@
+---
+layout: default
+title: "On-Premise vs. Cloud Welding Software | Elenchon"
+description: "On-premise vs. cloud welding software, compared fairly: data ownership, pricing, offline capability and lock-in — where each wins, and why shops choose on-premise."
+og_description: "On-premise vs. cloud welding software, compared fairly: ownership, pricing, offline capability, lock-in and continuity — and where each one wins."
+og_image_alt: "Elenchon by Delteris — on-premise vs. cloud welding software"
+og_image_dims: true
+schema: schema/welding-software-on-premise-vs-cloud.json
+---
+    <header class="page-hero">
+        <div class="hero-content">
+            <span class="hero-eyebrow">On-Premise vs. Cloud</span>
+            <h1 class="text-glow">On-Premise vs. Cloud<br>Welding Software.</h1>
+            <p class="hero-sub">The real question isn't which tool has more features — it's who owns the data, how the bill behaves over the years, and whether your records stay in your hands. Cloud welding software is capable, but on those questions an on-premise appliance like Elenchon comes out ahead. Here's the honest case.</p>
+            <div class="cta-group">
+                <a href="deployment.html" class="btn btn-primary">Secure a Deployment</a>
+                <a href="pricing.html" class="btn btn-secondary">See Our Open Pricing</a>
+            </div>
+        </div>
+        <a class="scroll-cue" href="#overview" aria-label="Scroll to see more">
+            <span class="scroll-cue-text">Scroll</span>
+            <span class="scroll-cue-chevron" aria-hidden="true"></span>
+        </a>
+    </header>
+
+    <section class="page-section container" id="overview">
+        <div class="summary-panel">
+            <h2 class="text-glow">What Actually Separates Them</h2>
+            <p><strong>The practical difference between on-premise and cloud welding software is not the feature list — it is where your records physically live, how access is priced over the years, and whether your records stay reachable when the internet doesn't.</strong> Both can run a good traceability operation, and we won't pretend a capable cloud tool isn't capable. But those three questions — ownership, cost, and lasting access to your own records — don't show up in a feature checklist, and they're the ones that decide how the system serves you for years after you sign. On every one of them, on-premise is the stronger answer.</p>
+        </div>
+    </section>
+
+    <section class="page-section container" id="where-onprem-wins">
+        <div class="section-header">
+            <span class="eyebrow">The Structural Difference</span>
+            <h2>Why Shops Choose On-Premise</h2>
+            <p class="subtitle">Advantages that come from where the software runs — not a feature list a cloud tool can simply match.</p>
+        </div>
+        <div class="glass-card feature-block">
+            <p class="feature-lead">Cloud welding tools are capable, and if you have no wish to own hardware, one may suit you — we won't pretend otherwise. But for a shop that takes ownership, cost control and continuity seriously, these follow from the architecture itself, and they hold up over the life of the system.</p>
+            <ul class="feature-list">
+                <li><strong>You own the data, physically:</strong> Your records live on hardware in your building, never on a shared server. When a cloud service is down, your records are simply unreachable. Here the data lives in your factory, on your computers — yours to open at any time. Cancel anytime and keep view-only access for audits — no export scramble, no hostage data. A cloud subscription that ends can take your access with it.</li>
+                <li><strong>A bill with no surprises:</strong> A flat rate per appliance with a generous block of workers included, additional seats at €9/month — substantially lower than industry alternatives — and hardware at cost, every figure up front. No hidden usage fees, no surcharge you didn't sign up for, no quote that only appears after a sales call.</li>
+                <li><strong>Offline-first, reachable anywhere:</strong> Capture is built offline-first, so the floor keeps recording even when the connection drops and syncs on reconnect — a public-URL tool simply stops when its link does. Authorised devices reach the appliance through Phrakton's encrypted fabric, and the optional Remote Access Module extends that reach from home, mobile data or abroad.</li>
+                <li><strong>Sovereign by design:</strong> With no data leaving the building and no open inbound ports, you sidestep the third-party-processor and cross-border questions a cloud service inevitably raises — and stay invisible to the public internet.</li>
+                <li><strong>The full platform, no lock-in:</strong> Every capability runs on-premise — not a stripped-down local edition — with no minimum term and no exit fee. What you build stays yours.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="page-section container" id="who">
+        <div class="compliance-panel gold-edge">
+            <span class="eyebrow">Honest Guidance</span>
+            <h2 class="text-glow">Which Should You Choose?</h2>
+            <p>If you care about owning your data outright, a cost your finance team can fix in advance, and a floor that keeps capturing — and records that stay reachable — whether or not the internet does, an on-premise appliance is the better fit — and Elenchon delivers the full platform, not a stripped-down local edition. Cloud has its place: if you have no wish to own any hardware and are comfortable with your records on a vendor's infrastructure and a bill that scales with your team, it will serve you. But for most fabrication shops that take audits, cost and continuity seriously, the ownership and predictability of on-premise is decisive — which is exactly what we built.</p>
+        </div>
+    </section>
+
+    <section class="page-section container" id="faq">
+        <div class="section-header">
+            <span class="eyebrow">Questions &amp; Answers</span>
+            <h2>On-Premise vs. Cloud, Answered</h2>
+            <p class="subtitle">The practical questions shops ask when weighing the two.</p>
+        </div>
+        <div class="pillar-grid">
+            <div class="glass-card">
+                <h3>How does cost compare over time?</h3>
+                <p>Cloud pricing is often per-seat or usage-based behind a quote, so the bill is hard to predict and grows as you add people or data. Elenchon publishes everything: a flat rate per appliance with 20 or 50 workers included, extra seats at €9/month, and hardware at cost. Both charge for scale — the difference is that ours is knowable in advance, down to the euro.</p>
+            </div>
+            <div class="glass-card">
+                <h3>Can on-premise software still be reached remotely?</h3>
+                <p>Yes. Elenchon's optional Phrakton overlay lets authorised staff — and even auditors — connect through mutually authenticated, post-quantum-safe tunnels, without the appliance exposing any public address — remote access without cloud exposure.</p>
+            </div>
+            <div class="glass-card">
+                <h3>What happens to my data if I stop paying?</h3>
+                <p>With Elenchon, the data is on your hardware and you keep view-only access to your history for audits. With many cloud tools, access ends when the subscription does — worth confirming with any vendor you consider.</p>
+            </div>
+            <div class="glass-card">
+                <h3>Is on-premise welding software harder to run than cloud?</h3>
+                <p>Less than shops expect. Elenchon ships as a containerized appliance that our own engineers deliver, install and configure on-site, so there's no IT project to staff. After that, your only job is to keep it powered on: we connect in remotely over Phrakton to apply updates and monitor it — your team never patches anything — and we resolve the large majority of issues without anyone leaving their desk. For a critical problem that genuinely can't be fixed remotely, we come on-site to fix it free of charge, anywhere in the world. Day to day, on-site users just open the app on your network, and — with the optional Remote Access Module — anyone off-site reaches it just as easily through Phrakton. On-premise ownership, without an on-premise maintenance burden.</p>
+            </div>
+            <div class="glass-card">
+                <h3>Does on-premise mean fewer features?</h3>
+                <p>Not with Elenchon. It runs the full platform on-premise — <a href="welding-traceability-software.html">traceability</a>, the <a href="welding-qualification-software.html">WPS/PQR/WPQ workflow</a>, <a href="welding-work-capture-software.html">floor capture</a>, <a href="welding-equipment-management-software.html">equipment control</a> and more — not a reduced local edition.</p>
+            </div>
+            <div class="glass-card">
+                <h3>Is cloud welding software less secure?</h3>
+                <p>In a real sense, yes. A cloud service is reachable on the public internet and sits on shared infrastructure — that exposure is built into the architecture, no matter how much the vendor invests in defending it. Elenchon removes the exposure: data stays in your building, the appliance opens no inbound ports at all, and every connection runs over Phrakton's post-quantum-safe tunnels. A well-run cloud can be secure; it cannot be un-exposed.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-section container" id="deployment-cta">
+        <div class="cta-band">
+            <span class="eyebrow">Deployment</span>
+            <h2 class="text-glow">See the On-Premise Difference for Yourself</h2>
+            <p>Every Elenchon appliance is delivered, installed and configured on-site by our own engineers, so we take a deliberately limited number of deployments each quarter. Get in touch to reserve a slot, request a scoping call, or ask the technical questions your team needs answered first.</p>
+            <div class="cta-group">
+                <a href="deployment.html" class="btn btn-primary">Secure Your Deployment</a>
+                <a href="on-premise-welding-software.html" class="btn btn-secondary">Why On-Premise Wins</a>
+            </div>
+            <p class="hero-urgency u-gap-top">Contact the founders — no sales layers, no call queues.</p>
+        </div>
+    </section>
