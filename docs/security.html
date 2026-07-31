@@ -140,12 +140,8 @@ schema: schema/security.json
             <p class="cl-section-h">Where each layer reaches on the path</p>
 
             <div class="cl-board">
-                <svg viewBox="0 0 1150 420" role="img" aria-label="Network path and encryption-layer reach">
+                <svg viewBox="0 0 1150 428" role="img" aria-label="Network path and encryption-layer reach">
                     <defs>
-                        <marker id="cl-chev" markerWidth="7" markerHeight="7" refX="3.5" refY="3.5" orient="auto">
-                            <path d="M1,1 L5,3.5 L1,6" fill="none" stroke="#9fb4d0" stroke-width="1.2" opacity=".8"/></marker>
-                        <marker id="cl-arrow" markerWidth="9" markerHeight="9" refX="5.5" refY="4" orient="auto">
-                            <path d="M1.5,1.2 L6,4 L1.5,6.8" fill="none" stroke="context-stroke" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker>
                         <style>
                             .cl-zone{fill:none;stroke:#3a536e;stroke-width:1.2;stroke-dasharray:5 5}
                             .cl-zl{font-family:'Space Grotesk',monospace;font-size:11px;letter-spacing:.09em;fill:#7f93ab}
@@ -166,25 +162,24 @@ schema: schema/security.json
                     <rect x="24" y="60" width="11" height="11" rx="2.5" fill="#54a9ec"/>
                     <text class="cl-kt" x="42" y="69">App TLS — quantum-safe · carries the actual data</text>
 
-                    <!-- Zones. One spacing system: 14px padding around a zone's contents, 26px
-                         gap between nodes, arrow tip flush at each node edge. -->
-                    <rect class="cl-zone" x="238" y="172" width="140" height="122" rx="12"/>
+                    <!-- Zones. 14px padding around a zone's contents, 26px gap between nodes. -->
+                    <rect class="cl-zone" x="238" y="172" width="140" height="208" rx="12"/>
                     <text class="cl-zl" x="252" y="188">PHRAKTON</text>
-                    <text class="cl-zsub" x="252" y="200">VPS network</text>
+                    <text class="cl-zsub" x="252" y="200">server network</text>
                     <rect class="cl-zone" x="570" y="172" width="562" height="208" rx="12"/>
                     <text class="cl-zl" x="1118" y="188" text-anchor="end">CLIENT LAN</text>
                     <text class="cl-zsub" x="1118" y="200" text-anchor="end">behind your firewall</text>
 
                     <!-- The appliance: box-router, boxctl·tunneler, Caddy and the apps are all ONE
-                         physical box (unlike the LAN worker, a separate device on the LAN). Group
-                         them in a solid container so the shared machine reads as one unit. -->
+                         physical box (unlike the LAN worker, a separate device on the LAN). -->
                     <rect x="582" y="210" width="538" height="84" rx="10" fill="rgba(84,169,236,0.05)" stroke="#3a6ea5" stroke-width="1.1"/>
-                    <text class="cl-zl" x="851" y="160" text-anchor="middle" style="fill:#6f86a3">THE BOX — ONE APPLIANCE</text>
+                    <text class="cl-zl" x="851" y="160" text-anchor="middle" style="fill:#6f86a3">PHRAKTON BOX</text>
 
-                    <!-- Firewall boundary between public internet and the client LAN -->
-                    <line x1="546" y1="188" x2="546" y2="376" stroke="#e86f60" stroke-width="1.3" stroke-dasharray="6 5" opacity=".5"/>
-                    <text x="480" y="356" class="cl-fl" text-anchor="middle" style="fill:#c0705f">firewall · dials OUT ↑</text>
-                    <text x="200" y="300" class="cl-fl" text-anchor="middle" style="fill:#5c6f88">public internet</text>
+                    <!-- Firewall boundary. The box holds the connection open from the inside:
+                         it only ever dials OUT on 443 and never accepts an inbound connection,
+                         so no port is exposed to the internet. -->
+                    <line x1="546" y1="188" x2="546" y2="376" stroke="#e86f60" stroke-width="1.3" stroke-dasharray="6 5" opacity=".55"/>
+                    <text x="546" y="392" class="cl-fl" text-anchor="middle" style="fill:#c0705f">firewall</text>
 
                     <!-- Spotlight (observer highlight) -->
                     <rect id="cl-spotA" x="0" y="0" width="0" height="0" rx="12" opacity="0"/>
@@ -198,6 +193,11 @@ schema: schema/security.json
                     <rect class="cl-svgnode" id="n-trouter" x="252" y="224" width="112" height="56" rx="8"/>
                     <text class="cl-nl" x="308" y="246" text-anchor="middle">tenant-</text>
                     <text class="cl-nl" x="308" y="262" text-anchor="middle">router</text>
+
+                    <!-- ziti controller sits under the tenant-router on the Phrakton server network. -->
+                    <rect class="cl-svgnode" id="n-zctrl" x="252" y="312" width="112" height="52" rx="8"/>
+                    <text class="cl-nl" x="308" y="333" text-anchor="middle">ziti</text>
+                    <text class="cl-nl" x="308" y="347" text-anchor="middle">controller</text>
 
                     <rect class="cl-svgnode" id="n-brouter" x="596" y="224" width="108" height="56" rx="8"/>
                     <text class="cl-nl" x="650" y="247" text-anchor="middle">box-</text>
@@ -219,41 +219,44 @@ schema: schema/security.json
                     <text class="cl-nl" x="784" y="333" text-anchor="middle">LAN</text>
                     <text class="cl-nl" x="784" y="347" text-anchor="middle">worker</text>
 
-                    <!-- Connectors ARE the encryption layers. Each hop shows the stack that
-                         travels it (green Link TLS, amber Ziti E2E, blue App TLS), so the path
-                         itself tells you what is on the wire. Layers drop off as they terminate:
-                         all 3 reach the box tunneler, which unwraps Link TLS AND Ziti E2E and
-                         splices only App TLS to Caddy; Caddy terminates App TLS; the final app
-                         hop is plain data on the box. Arrowheads point toward the app. -->
+                    <!-- Dial-out behaviour of the Phrakton box, captioned beneath the box block. -->
+                    <text x="851" y="398" class="cl-fl" text-anchor="middle" style="fill:#c0705f">box dials OUT only · outbound 443 · never inbound</text>
+                    <text x="851" y="411" class="cl-fl" text-anchor="middle" style="fill:#7f93ab">no port exposed to the internet</text>
 
-                    <!-- remote worker → tenant-router: 3 layers (public internet) -->
+                    <!-- Connectors ARE the encryption layers. Each hop shows the stack that travels
+                         it (green Link TLS, amber Ziti E2E, blue App TLS). Layers drop off as they
+                         terminate: all 3 reach the box tunneler, which unwraps Link TLS AND Ziti
+                         E2E and splices only App TLS to Caddy; Caddy terminates App TLS; the final
+                         app hop is plain data on the box. -->
+
+                    <!-- remote worker → tenant-router: 3 layers -->
                     <line x1="152" y1="247" x2="252" y2="247" stroke="#43c08f" stroke-width="2"/>
                     <line x1="152" y1="252" x2="252" y2="252" stroke="#ecab45" stroke-width="2"/>
-                    <line x1="152" y1="257" x2="249" y2="257" stroke="#54a9ec" stroke-width="2" marker-end="url(#cl-arrow)"/>
+                    <line x1="152" y1="257" x2="252" y2="257" stroke="#54a9ec" stroke-width="2"/>
 
                     <!-- tenant-router → box-router: 3 layers -->
                     <line x1="364" y1="247" x2="596" y2="247" stroke="#43c08f" stroke-width="2"/>
                     <line x1="364" y1="252" x2="596" y2="252" stroke="#ecab45" stroke-width="2"/>
-                    <line x1="364" y1="257" x2="593" y2="257" stroke="#54a9ec" stroke-width="2" marker-end="url(#cl-arrow)"/>
+                    <line x1="364" y1="257" x2="596" y2="257" stroke="#54a9ec" stroke-width="2"/>
 
                     <!-- box-router → box tunneler: all 3 layers. The router re-wraps Link TLS (green)
                          per hop; Ziti E2E (amber) and App TLS (blue) ride inside, untouched. -->
                     <line x1="704" y1="247" x2="730" y2="247" stroke="#43c08f" stroke-width="2"/>
                     <line x1="704" y1="252" x2="730" y2="252" stroke="#ecab45" stroke-width="2"/>
-                    <line x1="704" y1="257" x2="727" y2="257" stroke="#54a9ec" stroke-width="2" marker-end="url(#cl-arrow)"/>
+                    <line x1="704" y1="257" x2="730" y2="257" stroke="#54a9ec" stroke-width="2"/>
 
                     <!-- box tunneler → Caddy: tunneler unwraps Link TLS AND Ziti E2E and
                          splices only App TLS (blue) to Caddy (SNI survives the raw splice). -->
-                    <line x1="838" y1="252" x2="861" y2="252" stroke="#54a9ec" stroke-width="2" marker-end="url(#cl-arrow)"/>
+                    <line x1="838" y1="252" x2="864" y2="252" stroke="#54a9ec" stroke-width="2"/>
 
                     <!-- Caddy → apps: App TLS terminated at Caddy — plain data on the box -->
-                    <line x1="972" y1="252" x2="995" y2="252" stroke="#5f7fa6" stroke-width="1.6" stroke-dasharray="3 3" marker-end="url(#cl-arrow)"/>
+                    <line x1="972" y1="252" x2="998" y2="252" stroke="#5f7fa6" stroke-width="1.6" stroke-dasharray="3 3"/>
 
                     <!-- LAN worker → box tunneler: all three layers reach the tunneler directly in
-                         one on-LAN hop. Arrow points up to the tunneler. -->
-                    <line x1="780" y1="312" x2="780" y2="292" stroke="#43c08f" stroke-width="2"/>
-                    <line x1="788" y1="312" x2="788" y2="292" stroke="#54a9ec" stroke-width="2"/>
-                    <line x1="784" y1="312" x2="784" y2="283" stroke="#ecab45" stroke-width="2" marker-end="url(#cl-arrow)"/>
+                         one on-LAN hop. -->
+                    <line x1="780" y1="312" x2="780" y2="280" stroke="#43c08f" stroke-width="2"/>
+                    <line x1="788" y1="312" x2="788" y2="280" stroke="#54a9ec" stroke-width="2"/>
+                    <line x1="784" y1="312" x2="784" y2="280" stroke="#ecab45" stroke-width="2"/>
                     <text x="854" y="335" class="cl-fl" style="fill:#7f93ab">same 3 layers,</text>
                     <text x="854" y="347" class="cl-fl" style="fill:#7f93ab">one on-LAN hop</text>
                 </svg>
