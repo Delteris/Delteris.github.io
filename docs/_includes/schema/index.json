@@ -34,10 +34,10 @@
           "applicationCategory": "BusinessApplication",
           "operatingSystem": "Linux/Appliance",
           "applicationSubCategory": "Welding Management Software",
-          "description": "Elenchon is on-premise welding management software for fabrication shops and heavy industry. It runs the WPS, PQR and WPQ welder-qualification workflow, tracks welds and welder continuity, and automates ISO and ASME IX compliance ledgers — a sovereign, on-premise alternative to cloud welding software.",
+          "description": "Elenchon is on-premise welding management software for fabrication shops and heavy industry. It runs the WPS, WPQR and WPQ welder-qualification workflow, tracks welds and welder continuity, and automates ISO and ASME IX compliance ledgers — a sovereign, on-premise alternative to cloud welding software.",
           "keywords": "welding management software, welding traceability software, welder qualification software, weld tracking software, WPS PQR WPQ software, welding equipment management software, welding machine calibration software, consumable inventory and filler metal traceability, ISO 3834 software, EN 1090 software, ASME IX software, on-premise welding software",
           "featureList": [
-            "Welder qualification workflow (WPS, PQR, WPQ)",
+            "Welder qualification workflow (WPS, WPQR, WPQ)",
             "6-month welder continuity tracking with expiry alerts",
             "Weld tracking and BOM import from Tekla/CAD",
             "Equipment, calibration and consumable batch tracking with renewal alerts",
@@ -59,7 +59,7 @@
         {
           "@type": "Question",
           "name": "What is welding management software?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Welding management software digitizes a fabrication shop's welding records — welder qualifications (WPS, PQR, WPQ), weld tracking and mapping, procedure control and inspection history — so every joint is traceable and audit-ready. Elenchon does this entirely on-premise, keeping the full weld record on hardware you own." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Welding management software digitizes a fabrication shop's welding records — welder qualifications (WPS, WPQR, WPQ), weld tracking and mapping, procedure control and inspection history — so every joint is traceable and audit-ready. Elenchon does this entirely on-premise, keeping the full weld record on hardware you own." }
         },
         {
           "@type": "Question",
@@ -68,8 +68,8 @@
         },
         {
           "@type": "Question",
-          "name": "Does Elenchon manage welder qualification (WPS, PQR, WPQ)?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Elenchon runs the full WPS/PQR/WPQ qualification workflow with live WPQ capture, automatic 6-month welder continuity tracking and expiry alerts — so you never miss a requalification or weld outside an approved range." }
+          "name": "Does Elenchon manage welder qualification (WPS, WPQR, WPQ)?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Elenchon runs the full WPS/WPQR/WPQ qualification workflow with live WPQR capture on the floor, automatic 6-month welder continuity tracking and expiry alerts — so you never miss a requalification or weld outside an approved range." }
         },
         {
           "@type": "Question",

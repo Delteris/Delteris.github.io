@@ -1,0 +1,161 @@
+---
+layout: default
+title: "Welding Qualification Software (WPS, PQR, WPQ) | Elenchon"
+description: "On-premise welding qualification software for WPS, PQR &amp; WPQ: build and qualify procedures, capture data on the floor, and produce audit-ready ISO &amp; ASME IX evidence."
+og_description: "On-premise welding qualification software for WPS, PQR and WPQ records. Build procedures, capture qualification data on the floor, produce audit-ready ISO &amp; ASME IX evidence."
+og_image_alt: "Elenchon by Delteris — on-premise welding qualification software"
+og_image_dims: true
+schema: schema/welding-qualification-software.json
+---
+    <header class="page-hero">
+        <div class="hero-content">
+            <span class="hero-eyebrow">Welding Qualification Software</span>
+            <h1 class="text-glow">Welding Qualification Software<br>for WPS, PQR &amp; WPQ.</h1>
+            <p class="hero-sub">Build and qualify welding procedures, capture WPQR data on the shop floor, and keep welder continuity (WPQ) audit-ready — all on an on-premise appliance you own.</p>
+            <div class="cta-group">
+                <a href="deployment.html" class="btn btn-primary">Secure a Deployment</a>
+                <a href="#faq" class="btn btn-secondary">View FAQ</a>
+            </div>
+        </div>
+        <a class="scroll-cue" href="#overview" aria-label="Scroll to see more">
+            <span class="scroll-cue-text">Scroll</span>
+            <span class="scroll-cue-chevron" aria-hidden="true"></span>
+        </a>
+    </header>
+
+    <section class="page-section container" id="overview">
+        <div class="summary-panel">
+            <h2 class="text-glow">One Workflow, From Procedure to Proof</h2>
+            <p><strong>Welding qualification software manages the records that prove your welds are made by qualified people to qualified procedures — Welding Procedure Specifications (WPS), Welding Procedure Qualification Records (WPQR — the ISO term, equivalent to an ASME __KEEPPQR__), and Welder Performance Qualifications (WPQ).</strong> Elenchon runs that entire workflow inside your facility, on hardware you own, so qualification data never leaves the shop and audit evidence is always a click away. It is the sovereign, excellence-first standard for welding qualification — the full WPS, PQR and WPQ workflow on hardware you own.</p>
+        </div>
+    </section>
+
+    <section class="page-section container" id="wps">
+        <div class="section-header">
+            <span class="eyebrow">Welding Procedure Specification</span>
+            <h2>WPS Software</h2>
+            <p class="subtitle">The qualified, written procedure your welders follow in production — authored, ranged, and version-locked.</p>
+        </div>
+        <div class="glass-card feature-block">
+            <p class="feature-lead">A WPS tells a welder exactly how to make a production weld: process, base and filler materials, joint design, position, and the qualified parameter ranges. Elenchon manages that document end to end.</p>
+            <ul class="feature-list">
+                <li><strong>Author in-app:</strong> Define a preliminary WPS (pWPS) directly in Elenchon, then adjust qualified ranges as real data comes in from the floor.</li>
+                <li><strong>Export a finalized WPS:</strong> Turn a qualified procedure into a clean, exportable WPS, with the official files uploaded or linked at any stage.</li>
+                <li><strong>Versioned revisions:</strong> Every WPS revision is versioned and verified as it is captured, and corrections stay visible to managers — a clean revision history without an administrative bottleneck.</li>
+                <li><strong>Offline on the floor:</strong> Workers save a WPS with one click for instant access anywhere on the floor, even in total Wi-Fi dead zones.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="page-section container" id="pqr">
+        <div class="section-header">
+            <span class="eyebrow">Procedure Qualification Record</span>
+            <h2>PQR Software</h2>
+            <p class="subtitle">The evidence behind every WPS — captured from the real weld, not typed up after the fact.</p>
+        </div>
+        <div class="glass-card feature-block">
+            <p class="feature-lead">A PQR records the actual parameters used to weld a test coupon and the results of testing it. It is the proof that qualifies a WPS. Elenchon captures that proof at the source.</p>
+            <ul class="feature-list">
+                <li><strong>Capture on the shop floor:</strong> Record actual PQR parameters where the weld happens, then import those real values straight back into the procedure.</li>
+                <li><strong>Qualify your ranges:</strong> Use captured PQR data to set and adjust the qualified ranges that become the finalized WPS.</li>
+                <li><strong>Fully linked:</strong> Every WPS stays traceable to the PQR evidence that supports it, so an auditor can follow the chain from procedure to proof.</li>
+                <li><strong>Heat traceability:</strong> Heat numbers are captured, linked to their parent MTRs, and propagated down the project tree — full traceability without database bloat.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="page-section container" id="wpq">
+        <div class="section-header">
+            <span class="eyebrow">Welder Performance Qualification</span>
+            <h2>WPQ &amp; Welder Continuity Software</h2>
+            <p class="subtitle">Know that every welder is qualified for the work in front of them — automatically.</p>
+        </div>
+        <div class="glass-card feature-block">
+            <p class="feature-lead">A WPQ qualifies an individual welder to produce sound welds within a defined range, and most codes require ongoing continuity. Elenchon tracks both without paperwork.</p>
+            <ul class="feature-list">
+                <li><strong>WPQ on file, welds surfaced automatically:</strong> Upload a welder's qualification and Elenchon surfaces the qualifying welds behind it, so a supervisor can verify continuity in the app instead of chasing paper.</li>
+                <li><strong>Automatic 6-month continuity:</strong> Continuity is logged from actual floor entries — not a separate spreadsheet — and the system warns you before it lapses.</li>
+                <li><strong>Expiry alerts:</strong> Get notified before a qualification expires, so no welder ever works outside an approved range.</li>
+                <li><strong>Deep qualification engine:</strong> Track welder and non-welder qualifications alike, each with its own credentials and renewal rules.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="page-section container" id="compliance">
+        <div class="compliance-panel gold-edge">
+            <span class="eyebrow">Audit Readiness</span>
+            <h2 class="text-glow">Audit-Ready ISO &amp; ASME IX Evidence</h2>
+            <p>Every qualification, variable and process is verified and attributed the moment it is captured. When the auditors arrive, your WPS, PQR and WPQ evidence is instant, undisputed, and ready to read straight off the record — for codes such as ISO 3834 and ASME IX.</p>
+        </div>
+    </section>
+
+    <section class="page-section container" id="on-premise">
+        <div class="dark-panel grid-2 align-center">
+            <div>
+                <span class="eyebrow">On-Premise, Not Cloud</span>
+                <h2 class="text-glow">Your Qualification Data Never Leaves the Shop</h2>
+                <p class="security-intro">Most welding qualification software is cloud software: your WPS, PQR and WPQ records live on someone else's server, behind someone else's outages and forced updates. Elenchon is the opposite — a containerized appliance installed in your facility, fully under your jurisdiction.</p>
+                <ul class="feature-list">
+                    <li><strong>Absolute data ownership:</strong> Qualification records stay on your physical hardware. Cancel anytime and keep view-only access for audits.</li>
+                    <li><strong>No forced updates, no cloud dependency:</strong> A vendor cloud outage can never lock you out of your own records — they live on your appliance, not someone else's server.</li>
+                    <li><strong>Secure remote access, optional:</strong> Reach the app from home or the field through Phrakton, a zero-trust, post-quantum-safe overlay — while the appliance opens no inbound ports to the public internet.</li>
+                </ul>
+                <div class="cta-group">
+                    <a href="security.html" class="btn btn-secondary">How Phrakton Works</a>
+                </div>
+            </div>
+            <div class="graphic-placeholder">
+                <div class="pulse-ring delay-2"></div>
+                <div class="pulse-ring delay-1"></div>
+                <div class="pulse-ring"></div>
+                <div class="pulse-core"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-section container" id="faq">
+        <div class="section-header">
+            <span class="eyebrow">Questions &amp; Answers</span>
+            <h2>Welding Qualification Software, Answered</h2>
+            <p class="subtitle">WPS, PQR and WPQ — what they are, and how Elenchon handles them on your own hardware.</p>
+        </div>
+        <div class="pillar-grid">
+            <div class="glass-card">
+                <h3>What is the difference between a WPS and a WPQR?</h3>
+                <p>A WPQR — the ISO procedure record, equivalent to an ASME __KEEPPQR__ — documents the actual parameters used to weld and test a coupon. A WPS is the qualified written procedure a welder follows in production, with its ranges supported by one or more WPQRs. The WPQR proves it; the WPS instructs it. Elenchon links the two so every WPS is traceable to its evidence.</p>
+            </div>
+            <div class="glass-card">
+                <h3>Can Elenchon generate a WPS from PQR test data?</h3>
+                <p>Yes. Define a preliminary WPS in the app, capture the actual PQR parameters on the floor, import those real values back, adjust the qualified ranges, and export a finalized WPS — with official files uploaded or linked at any stage.</p>
+            </div>
+            <div class="glass-card">
+                <h3>How does welder continuity (WPQ) tracking work?</h3>
+                <p>A welder's WPQ is held on file, and Elenchon surfaces the qualifying welds behind it from real floor entries — logging 6-month continuity automatically and warning you before a qualification expires, so no welder works outside an approved range.</p>
+            </div>
+            <div class="glass-card">
+                <h3>Is welder qualification included in the main platform?</h3>
+                <p>Yes — the WPS/PQR/WPQ workflow is a built-in part of Elenchon, not a separate product or paid add-on. Elenchon is one full <a href="/">welding management platform</a>: <a href="welding-work-capture-software.html">shop-floor work capture</a>, <a href="weld-project-structure-software.html">project structure and BOM import</a>, <a href="welding-traceability-software.html">weld traceability</a> and <a href="welding-equipment-management-software.html">equipment and consumable control</a>, with qualification managed in the same system rather than bolted on beside it.</p>
+            </div>
+            <div class="glass-card">
+                <h3>What is welding qualification software?</h3>
+                <p>Welding qualification software manages the records that prove welds are made by qualified people to qualified procedures — WPS, PQR and WPQ. Elenchon runs that whole workflow on-premise, so qualification data stays on hardware you own and audit evidence is always a click away.</p>
+            </div>
+            <div class="glass-card">
+                <h3>Do you lose anything by keeping qualification records on-premise?</h3>
+                <p>No — you gain control without losing reach. Your WPS, PQR and WPQ records live on an appliance in your facility rather than a shared cloud server, so the evidence auditors care about is under your jurisdiction, not a vendor's. Authorised staff — and even auditors — still reach it from anywhere through Phrakton's zero-trust, post-quantum-safe overlay.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-section container" id="deployment-cta">
+        <div class="cta-band">
+            <span class="eyebrow">Deployment</span>
+            <h2 class="text-glow">Put Your Qualifications on Your Own Hardware</h2>
+            <p>Every Elenchon appliance is delivered, installed and configured on-site by our own engineers, so we take a deliberately limited number of deployments each quarter. Get in touch to reserve a slot, request a scoping call, or ask the technical questions your team needs answered first.</p>
+            <div class="cta-group">
+                <a href="deployment.html" class="btn btn-primary">Secure Your Deployment</a>
+                <a href="pricing.html" class="btn btn-secondary">See Pricing</a>
+            </div>
+            <p class="hero-urgency u-gap-top">Contact the founders — no sales layers, no call queues.</p>
+        </div>
+    </section>
