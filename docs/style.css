@@ -2317,12 +2317,14 @@ a.glass-card:hover h3,
     position: relative;
 }
 
-/* Gold hairline on the Standard column's top edge — matches the overview
-   card's gold rim-light. A 1px metallic band, not a fill or a highlight. */
+/* Gold hairline under the Standard column header — sits on the boundary
+   between the "Standard" label and the rows it vouches for, so it introduces
+   the recommended column rather than capping the table (and clears the table's
+   top corner). A 1px metallic band, not a fill or a highlight. */
 .feature-matrix thead th.fm-featured::after {
     content: "";
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
     right: 0;
     height: 1px;
