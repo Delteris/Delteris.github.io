@@ -2313,17 +2313,29 @@ a.glass-card:hover h3,
 }
 
 .feature-matrix thead th.fm-featured {
-    color: #f4e3a1;
+    color: #fff;
     background:
-        linear-gradient(180deg, rgba(201, 165, 63, 0.14) 0%, rgba(11, 20, 40, 0) 90%),
+        linear-gradient(180deg, rgba(59, 130, 246, 0.10) 0%, rgba(11, 20, 40, 0) 90%),
         #0b1428;
-    box-shadow: inset 0 2px 0 0 rgba(255, 246, 216, 0.7);
+    box-shadow: inset 0 2px 0 0 var(--accent-blue);
 }
 
 .feature-matrix thead th.fm-soon {
     color: var(--text-muted);
     font-weight: 600;
 }
+
+.fm-soon-tag {
+    display: block;
+    margin-top: 0.25rem;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.6rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+}
+
 
 /* Category band rows */
 .feature-matrix .fm-group th {
