@@ -2312,29 +2312,23 @@ a.glass-card:hover h3,
     color: var(--accent-blue);
 }
 
+/* Standard column header: white label, plus a gold hairline on its own
+   bottom border — sitting on the boundary between the "Standard" label and
+   the rows it vouches for, so it introduces the recommended column rather
+   than capping the table (and clears the table's top corner). Painted as a
+   border-image on the bottom border the thead th already carries, which
+   renders reliably on this collapsed-border, position:sticky header where an
+   absolutely-positioned ::after does not. A 1px metallic band, not a fill. */
 .feature-matrix thead th.fm-featured {
     color: #fff;
     position: relative;
-}
-
-/* Gold hairline under the Standard column header — sits on the boundary
-   between the "Standard" label and the rows it vouches for, so it introduces
-   the recommended column rather than capping the table (and clears the table's
-   top corner). A 1px metallic band, not a fill or a highlight. */
-.feature-matrix thead th.fm-featured::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: linear-gradient(90deg,
+    border-bottom: 1px solid #a9832f;
+    border-image: linear-gradient(90deg,
         rgba(122, 95, 32, 0) 0%,
         #a9832f 22%,
         #fff6d8 50%,
         #a9832f 78%,
-        rgba(122, 95, 32, 0) 100%);
-    pointer-events: none;
+        rgba(122, 95, 32, 0) 100%) 1;
 }
 
 .feature-matrix thead th.fm-soon {
