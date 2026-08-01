@@ -1580,6 +1580,9 @@ footer {
     display: flex;
     flex-direction: column;
     text-align: left;
+    /* Fill the grid cell so cards in a row match height, even when one answer
+       is longer than the others. */
+    height: 100%;
 }
 
 .addon-name {
