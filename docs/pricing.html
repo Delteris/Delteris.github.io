@@ -98,7 +98,7 @@ schema: schema/pricing.json
                         <th scope="col" class="fm-feature-head">Capability</th>
                         <th scope="col">Lite</th>
                         <th scope="col" class="fm-featured">Standard</th>
-                        <th scope="col" class="fm-soon">Premium</th>
+                        <th scope="col" class="fm-soon">Premium<span class="fm-soon-tag">Coming soon</span></th>
                     </tr>
                 </thead>
 
@@ -111,19 +111,13 @@ schema: schema/pricing.json
                         <td data-plan="Premium" class="fm-soon"><span class="fm-tba" aria-label="To be announced">—</span></td>
                     </tr>
                     <tr>
-                        <th scope="row"><span class="fm-name">PQR coupon &amp; mechanical-test tracking</span><span class="fm-desc">Record destructive coupon tests — tensile, bend, macro — against each PQR, held pending until the lab reports back, then certified. An "awaiting results" queue surfaces what's still open.</span></th>
-                        <td data-plan="Lite"><span class="fm-yes" aria-label="Included">✓</span></td>
-                        <td data-plan="Standard" class="fm-featured"><span class="fm-yes" aria-label="Included">✓</span></td>
-                        <td data-plan="Premium" class="fm-soon"><span class="fm-tba" aria-label="To be announced">—</span></td>
-                    </tr>
-                    <tr>
                         <th scope="row"><span class="fm-name">Qualification engine (welder &amp; non-welder)</span><span class="fm-desc">Deep tracking for every credential, with automatic 6-month continuity logged from real floor entries and in-app warnings before expiry — no spreadsheet of expiry dates.</span></th>
                         <td data-plan="Lite"><span class="fm-yes" aria-label="Included">✓</span></td>
                         <td data-plan="Standard" class="fm-featured"><span class="fm-yes" aria-label="Included">✓</span></td>
                         <td data-plan="Premium" class="fm-soon"><span class="fm-tba" aria-label="To be announced">—</span></td>
                     </tr>
                     <tr>
-                        <th scope="row"><span class="fm-name">Live WPQ capture on the floor</span><span class="fm-desc">Capture Welder Performance Qualification parameters in the workflow app and see them reflected in management instantly.</span></th>
+                        <th scope="row"><span class="fm-name">Live WPQR capture on the floor</span><span class="fm-desc">Weld a coupon against a pWPS in the workflow app and capture the achieved WPQR parameters pass by pass, reflected in management instantly.</span></th>
                         <td data-plan="Lite"><span class="fm-yes" aria-label="Included">✓</span></td>
                         <td data-plan="Standard" class="fm-featured"><span class="fm-yes" aria-label="Included">✓</span></td>
                         <td data-plan="Premium" class="fm-soon"><span class="fm-tba" aria-label="To be announced">—</span></td>
@@ -137,7 +131,7 @@ schema: schema/pricing.json
                         <td data-plan="Premium" class="fm-soon"><span class="fm-tba" aria-label="To be announced">—</span></td>
                     </tr>
                     <tr>
-                        <th scope="row"><span class="fm-name">Heat-treatment (PWHT) tracking</span><span class="fm-desc">Log post-weld heat-treatment events against nodes and roll them up the assembly, so the thermal history travels with the finished piece.</span></th>
+                        <th scope="row"><span class="fm-name">Cumulative PWHT tracking</span><span class="fm-desc">Define a PWHT work type and Elenchon totals the post-weld heat-treatment cycles and cumulative time each assembly has seen, with a link back to every step where it was recorded. Tracking follows from that work type — it isn't inferred on its own.</span></th>
                         <td data-plan="Lite"><span class="fm-yes" aria-label="Included">✓</span></td>
                         <td data-plan="Standard" class="fm-featured"><span class="fm-yes" aria-label="Included">✓</span></td>
                         <td data-plan="Premium" class="fm-soon"><span class="fm-tba" aria-label="To be announced">—</span></td>
@@ -149,7 +143,7 @@ schema: schema/pricing.json
                         <td data-plan="Premium" class="fm-soon"><span class="fm-tba" aria-label="To be announced">—</span></td>
                     </tr>
                     <tr>
-                        <th scope="row"><span class="fm-name">Tamper-evident activity log</span><span class="fm-desc">Key actions are written to a hash-chained activity log with a built-in verify step, giving cryptographic evidence the record wasn't altered after the fact.</span></th>
+                        <th scope="row"><span class="fm-name">Tamper-evident activity log</span><span class="fm-desc">Weighty management-console actions — creating, editing, archiving, restoring or permanently deleting a project, and scrapping a capture — are written to a hash-chained log with a built-in verify step, giving cryptographic evidence those records weren't altered after the fact. Routine floor entries are not logged here.</span></th>
                         <td data-plan="Lite"><span class="fm-yes" aria-label="Included">✓</span></td>
                         <td data-plan="Standard" class="fm-featured"><span class="fm-yes" aria-label="Included">✓</span></td>
                         <td data-plan="Premium" class="fm-soon"><span class="fm-tba" aria-label="To be announced">—</span></td>
@@ -187,7 +181,7 @@ schema: schema/pricing.json
                         <td data-plan="Premium" class="fm-soon"><span class="fm-tba" aria-label="To be announced">—</span></td>
                     </tr>
                     <tr>
-                        <th scope="row"><span class="fm-name">Live project editing, protected</span><span class="fm-desc">Add new nodes or delete empty ones on an in-progress project; any node that already holds captured work is automatically locked so history can't be rewritten.</span></th>
+                        <th scope="row"><span class="fm-name">Live project editing, protected</span><span class="fm-desc">Add new nodes or delete empty ones on an in-progress project; any node that already holds captured work is automatically locked.</span></th>
                         <td data-plan="Lite"><span class="fm-yes" aria-label="Included">✓</span></td>
                         <td data-plan="Standard" class="fm-featured"><span class="fm-yes" aria-label="Included">✓</span></td>
                         <td data-plan="Premium" class="fm-soon"><span class="fm-tba" aria-label="To be announced">—</span></td>

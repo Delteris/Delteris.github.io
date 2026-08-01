@@ -8,9 +8,9 @@ Elenchon is on-premise welding traceability software for fabrication shops and h
 - Zero-Friction Work Capture (10-second navigation, universal work templates)
 - One Project, Two Live Views (Tree & Flowchart, one-paste BOM import from Tekla or most CAD packages, joint types & joining sequence, repeatable-batch bulk instantiation)
 - Management & Access Control (global custom roles, one-click document generation, role-filtered notifications and setup/WPS health advisories, joint repair cycles & dispositions)
-- Qualifications & Procedures (WPS/WPQR/WPQ workflow, PQR coupon & mechanical-test tracking with lab-result loop, 6-month continuity tracking, heat propagation, PWHT/heat-treatment tracking)
+- Qualifications & Procedures (WPS/WPQR/WPQ workflow, 6-month continuity tracking, heat propagation, cumulative PWHT cycle/time tracking via a PWHT work type)
 - Floor Asset & Consumable Control (maintenance hub, machine certification tracking, batch inventory) - Standard only; Lite excludes these
-- Bulletproof Data Sovereignty (on-premise appliance, automated local backups, tamper-evident hash-chained activity log, post-quantum-safe encryption)
+- Bulletproof Data Sovereignty (on-premise appliance, automated local backups, tamper-evident hash-chained log of weighty management-console actions, post-quantum-safe encryption)
 
 A full plan-by-plan feature comparison (every capability by Lite/Standard/Premium) is on the pricing page: https://delteris.com/pricing.html#compare
 
