@@ -1,0 +1,76 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://delteris.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "How to Choose Welding Management Software",
+          "item": "https://delteris.com/how-to-choose-welding-software.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://delteris.com/how-to-choose-welding-software.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What should I look for in welding management software?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Beyond the feature list, weigh the three things that are hard to change later: where your records physically live (on your hardware or a vendor's cloud), whether the price is published or quoted, and whether there is a real security architecture rather than a shared server on the public internet. Add offline capture, exit terms, and whether it covers the whole floor or one slice. Those decide how the software serves you years after the demo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is there an on-premise alternative to cloud welding software?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — Elenchon is it. Most welding management tools are cloud-only, but Elenchon runs entirely on an appliance in your own facility, so your records never touch a shared server. You still get remote reach for authorised staff and auditors through the Phrakton zero-trust overlay, without exposing the appliance to the public internet."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the most transparent welding software pricing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Transparent pricing means the full number is published before you engage — flat rate, per-seat behaviour, setup fee and every add-on, in writing. Elenchon publishes all of it in plain euros; much of the industry reveals a price only after a sales call. If you cannot model total cost of ownership up front, the pricing isn't transparent."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I compare welding software fairly?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Score each tool on the same questions — ownership, pricing transparency, security architecture, offline capability, lock-in, and floor coverage — instead of counting features. A long feature list from a tool you don't control, priced behind a quote, may serve you worse than a leaner tool that answers those structural questions well. Ask every vendor the same list and compare the answers, not the brochures."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does newer welding software mean fewer features?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sometimes, honestly — the oldest tools have had years to accumulate breadth. Elenchon is younger, but built on a modern stack by a two-founder team that ships a shop's request in a release cycle rather than a roadmap quarter, from a cleaner foundation with no legacy to carry. If a specific mature capability is decisive for you, ask us where it stands today and we'll answer straight."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Cloud or on-premise — which is right for my shop?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If you have no wish to own hardware and are comfortable with your records on a vendor's infrastructure and a bill that scales with your team, cloud can serve you. But for most fabrication shops that take audits, cost control and continuity seriously, owning the data outright, a cost fixed in advance, and a floor that keeps capturing offline make on-premise the stronger choice."
+          }
+        }
+      ]
+    }
+  ]
+}

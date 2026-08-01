@@ -14,7 +14,7 @@
           "applicationCategory": "BusinessApplication",
           "applicationSubCategory": "Welding Traceability Software",
           "operatingSystem": "Linux/Appliance",
-          "description": "On-premise welding traceability software that records the full chain of custody behind every weld — base-material heat numbers, attributed shop-floor capture, the qualified procedure and welder, and version-locked records — and automates ISO 3834, EN 1090 and ASME IX evidence, all on hardware you own.",
+          "description": "On-premise welding traceability software that records the full chain of custody behind every weld — base-material heat numbers, attributed shop-floor capture, the qualified procedure and welder, and version-locked records — producing audit-ready ISO 3834, EN 1090 and ASME IX evidence, all on hardware you own.",
           "keywords": "welding traceability software, weld tracking software, weld traceability, heat number traceability, material traceability welding, weld chain of custody software",
           "featureList": [
             "Heat-number capture linked to MTRs and propagated down the project tree",
@@ -22,7 +22,7 @@
             "Welds linked to their WPS and the welder's WPQ",
             "Bidirectional trace from finished piece to base material",
             "Version-pinned, locked records for audit-grade integrity",
-            "Automated ISO 3834, EN 1090 and ASME IX compliance ledgers",
+            "Audit-ready ISO 3834, EN 1090 and ASME IX evidence",
             "On-premise appliance with full data sovereignty"
           ],
           "offers": { "@type": "Offer", "url": "https://delteris.com/pricing.html", "availability": "https://schema.org/InStock" },

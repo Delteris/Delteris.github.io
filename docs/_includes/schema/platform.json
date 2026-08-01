@@ -5,7 +5,7 @@
           "@type": "WebPage",
           "name": "Platform Capabilities",
           "url": "https://delteris.com/platform.html",
-          "description": "Elenchon's six capability pillars covering the full production loop — from BOM import to automated ISO & ASME IX compliance ledgers.",
+          "description": "Elenchon's six capability pillars covering the full production loop — from BOM import to audit-ready ISO & ASME IX evidence.",
           "publisher": { "@id": "https://delteris.com/#organization" }
         },
         {

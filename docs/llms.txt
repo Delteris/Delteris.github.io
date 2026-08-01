@@ -40,6 +40,7 @@ Three steps: scoping session with the founders, on-site installation of the hard
 - Welding Equipment & Calibration Management (equipment register, ISO 17662 calibration, consumable batch traceability, five-level maintenance hub): https://delteris.com/welding-equipment-management-software.html
 - On-Premise & Offline Welding Software (data ownership, no cloud fees, offline capture): https://delteris.com/on-premise-welding-software.html
 - On-Premise vs. Cloud Welding Software (honest comparison, no competitor names): https://delteris.com/welding-software-on-premise-vs-cloud.html
+- How to Choose Welding Management Software (vendor-neutral buyer's guide — ownership, published pricing, security, offline, lock-in, floor coverage; where Elenchon fits, strengths and limits): https://delteris.com/how-to-choose-welding-software.html
 - Security (Phrakton — zero-trust, post-quantum): https://delteris.com/security.html
 - Pricing: https://delteris.com/pricing.html
 - Deployment: https://delteris.com/deployment.html
