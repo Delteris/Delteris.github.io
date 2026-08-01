@@ -14,7 +14,7 @@
           "applicationCategory": "BusinessApplication",
           "applicationSubCategory": "Welding Qualification Software",
           "operatingSystem": "Linux/Appliance",
-          "description": "On-premise welding qualification software that runs the full WPS, WPQR and WPQ workflow — define and qualify welding procedures, capture WPQR procedure data on the shop floor, track welder continuity (WPQ), and automate ISO and ASME IX compliance ledgers.",
+          "description": "On-premise welding qualification software that runs the full WPS, WPQR and WPQ workflow — define and qualify welding procedures, capture WPQR procedure data on the shop floor, track welder continuity (WPQ), and produce audit-ready ISO and ASME IX evidence.",
           "keywords": "welding qualification software, WPS software, PQR software, WPQ software, welder qualification software, welding procedure specification software, procedure qualification record software",
           "featureList": [
             "WPS (Welding Procedure Specification) authoring and range management",
@@ -22,7 +22,7 @@
             "WPQ (Welder Performance Qualification) continuity tracking",
             "Automatic 6-month welder continuity tracking with expiry alerts",
             "Version-pinned, locked qualification records",
-            "Automated ISO and ASME IX compliance ledgers",
+            "Audit-ready ISO and ASME IX evidence",
             "On-premise appliance with full data sovereignty"
           ],
           "offers": { "@type": "Offer", "url": "https://delteris.com/pricing.html", "availability": "https://schema.org/InStock" },

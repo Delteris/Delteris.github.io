@@ -18,7 +18,7 @@
         {
           "@type": "Product",
           "name": "Elenchon Lite",
-          "description": "On-premise welding traceability for smaller fabrication shops: work capture, project tree and flowchart views, the full WPS/WPQR/WPQ qualification workflow, automated ISO and ASME IX compliance ledgers, post-quantum-safe networking and local backups. Includes 20 workers, expandable by up to two blocks of ten.",
+          "description": "On-premise welding traceability for smaller fabrication shops: work capture, project tree and flowchart views, the full WPS/WPQR/WPQ qualification workflow, audit-ready ISO and ASME IX evidence, post-quantum-safe networking and local backups. Includes 20 workers, expandable by up to two blocks of ten.",
           "brand": { "@type": "Brand", "name": "Delteris" },
           "offers": {
             "@type": "Offer",
@@ -37,7 +37,7 @@
         {
           "@type": "Product",
           "name": "Elenchon Standard",
-          "description": "The complete Elenchon on-premise welding traceability platform: all six capability pillars, on-site scoping, installation and floor training, automated ISO & ASME IX compliance ledgers, post-quantum-safe networking, and direct founder support. Includes 50 workers and unlimited worker expansion.",
+          "description": "The complete Elenchon on-premise welding traceability platform: all six capability pillars, on-site scoping, installation and floor training, audit-ready ISO & ASME IX evidence, post-quantum-safe networking, and direct founder support. Includes 50 workers and unlimited worker expansion.",
           "brand": { "@type": "Brand", "name": "Delteris" },
           "offers": {
             "@type": "Offer",

@@ -77,7 +77,7 @@
           "name": "Which standards does equipment and calibration tracking help with?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Equipment and consumable control underpins quality codes such as ISO 3834 (quality requirements for fusion welding), EN 1090 (execution of steel and aluminium structures) and ASME IX, as well as ISO 17662 for the calibration of welding equipment. Elenchon turns the underlying records into version-pinned ledgers that make audit evidence instant."
+            "text": "Equipment and consumable control underpins quality codes such as ISO 3834 (quality requirements for fusion welding), EN 1090 (execution of steel and aluminium structures) and ASME IX, as well as ISO 17662 for the calibration of welding equipment. Elenchon keeps the underlying records version-pinned as they are captured, so audit evidence is instant."
           }
         },
         {

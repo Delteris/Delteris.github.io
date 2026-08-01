@@ -34,14 +34,14 @@
           "applicationCategory": "BusinessApplication",
           "operatingSystem": "Linux/Appliance",
           "applicationSubCategory": "Welding Management Software",
-          "description": "Elenchon is on-premise welding management software for fabrication shops and heavy industry. It runs the WPS, WPQR and WPQ welder-qualification workflow, tracks welds and welder continuity, and automates ISO and ASME IX compliance ledgers — a sovereign, on-premise alternative to cloud welding software.",
+          "description": "Elenchon is on-premise welding management software for fabrication shops and heavy industry. It runs the WPS, WPQR and WPQ welder-qualification workflow, tracks welds and welder continuity, and turns floor capture into audit-ready ISO and ASME IX evidence — a sovereign, on-premise alternative to cloud welding software.",
           "keywords": "welding management software, welding traceability software, welder qualification software, weld tracking software, WPS PQR WPQ software, welding equipment management software, welding machine calibration software, consumable inventory and filler metal traceability, ISO 3834 software, EN 1090 software, ASME IX software, on-premise welding software",
           "featureList": [
             "Welder qualification workflow (WPS, WPQR, WPQ)",
             "6-month welder continuity tracking with expiry alerts",
             "Weld tracking and BOM import from Tekla/CAD",
             "Equipment, calibration and consumable batch tracking with renewal alerts",
-            "Automated ISO and ASME IX compliance ledgers",
+            "Audit-ready ISO and ASME IX evidence",
             "On-premise appliance with full data sovereignty",
             "Zero-trust, post-quantum-safe remote access via Phrakton"
           ],
@@ -74,7 +74,7 @@
         {
           "@type": "Question",
           "name": "How does it help with ISO 3834 and ASME IX compliance?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Elenchon turns shop-floor activity into version-pinned compliance ledgers. Every qualification, variable and process is verified and attributed the moment it is captured, so audit evidence for codes such as ISO 3834 and ASME IX is instant and undisputed." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Elenchon turns shop-floor activity into version-pinned audit evidence. Every qualification, variable and process is verified and attributed the moment it is captured, so audit evidence for codes such as ISO 3834 and ASME IX is instant and undisputed." }
         },
         {
           "@type": "Question",
