@@ -296,3 +296,54 @@
 
     apply('all');
 })();
+
+/* ==========================================================
+   Pricing view toggle (pricing.html)
+   Segmented control switches between the plan cards and the
+   full feature-comparison matrix. Progressive enhancement:
+   without JS both panels' markup is present and the simple
+   view shows by default (the detailed panel carries `hidden`).
+   ========================================================== */
+(function () {
+    'use strict';
+
+    var btnSimple = document.getElementById('toggle-simple');
+    var btnDetailed = document.getElementById('toggle-detailed');
+    var viewSimple = document.getElementById('view-simple');
+    var viewDetailed = document.getElementById('view-detailed');
+
+    if (!btnSimple || !btnDetailed || !viewSimple || !viewDetailed) return;
+
+    function show(detailed) {
+        viewDetailed.classList.toggle('is-hidden', !detailed);
+        viewDetailed.hidden = !detailed;
+        viewSimple.classList.toggle('is-hidden', detailed);
+        viewSimple.hidden = detailed;
+
+        btnDetailed.classList.toggle('is-active', detailed);
+        btnSimple.classList.toggle('is-active', !detailed);
+        btnDetailed.setAttribute('aria-selected', String(detailed));
+        btnSimple.setAttribute('aria-selected', String(!detailed));
+    }
+
+    btnSimple.addEventListener('click', function () { show(false); });
+    btnDetailed.addEventListener('click', function () { show(true); });
+
+    // Arrow-key movement between the two tabs, per the tablist pattern.
+    [btnSimple, btnDetailed].forEach(function (btn) {
+        btn.addEventListener('keydown', function (e) {
+            if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+                e.preventDefault();
+                var toDetailed = (e.key === 'ArrowRight');
+                show(toDetailed);
+                (toDetailed ? btnDetailed : btnSimple).focus();
+            }
+        });
+    });
+
+    // Deep-link: #compare or ?view=compare opens the matrix directly.
+    if (window.location.hash === '#compare' ||
+        /[?&]view=compare/.test(window.location.search)) {
+        show(true);
+    }
+})();

@@ -21,6 +21,12 @@ schema: schema/pricing.json
             <p class="subtitle">Every Elenchon plan is a fully on-premise appliance installed on-site by our own engineers — no cloud tier, no watered-down edition. Lite is the same platform on a smaller floor, not a crippled one.</p>
         </div>
 
+        <div class="view-toggle" id="compare" role="tablist" aria-label="Choose how to view the plans">
+            <button type="button" class="view-toggle-btn is-active" id="toggle-simple" role="tab" aria-selected="true" aria-controls="view-simple">Plan overview</button>
+            <button type="button" class="view-toggle-btn" id="toggle-detailed" role="tab" aria-selected="false" aria-controls="view-detailed">Full feature comparison</button>
+        </div>
+
+        <div id="view-simple" class="plan-view" role="tabpanel" aria-labelledby="toggle-simple">
         <div class="pricing-grid">
 
             <div class="price-card">
@@ -81,6 +87,215 @@ schema: schema/pricing.json
 
         </div>
         <p class="price-footnote">Prices are per appliance, per month, excluding VAT. Move between Lite and Standard at any time — plan changes are applied remotely, at no charge, with 15 days’ notice. Hardware and on-site installation are quoted separately, below.</p>
+        </div>
+
+        <div id="view-detailed" class="plan-view is-hidden" role="tabpanel" aria-labelledby="toggle-detailed" hidden>
+            <div class="matrix-scroll">
+            <table class="feature-matrix">
+                <caption class="u-visually-hidden">Full feature comparison across Elenchon plans</caption>
+                <thead>
+                    <tr>
+                        <th scope="col" class="fm-feature-head">Capability</th>
+                        <th scope="col">Lite</th>
+                        <th scope="col" class="fm-featured">Standard</th>
+                        <th scope="col" class="fm-soon">Premium</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr class="fm-group"><th colspan="4" scope="colgroup">Qualifications &amp; Procedures</th></tr>
+                    <tr>
+                        <th scope="row"><span class="fm-name">End-to-end WPS / WPQR / WPQ workflow</span><span class="fm-desc">Author a preliminary WPS in the app, capture real WPQR parameters on the floor, import them back, adjust ranges, and export a finalised WPS into your own template.</span></th>
+                        <td data-plan="Lite"><span class="fm-yes" aria-label="Included">✓</span></td>
+                        <td data-plan="Standard" class="fm-featured"><span class="fm-yes" aria-label="Included">✓</span></td>
+                        <td data-plan="Premium" class="fm-soon"><span class="fm-tba" aria-label="To be announced">—</span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><span class="fm-name">PQR coupon &amp; mechanical-test tracking</span><span class="fm-desc">Record destructive coupon tests — tensile, bend, macro — against each PQR, held pending until the lab reports back, then certified. An "awaiting results" queue surfaces what's still open.</span></th>
+                        <td data-plan="Lite"><span class="fm-yes" aria-label="Included">✓</span></td>
+                        <td data-plan="Standard" class="fm-featured"><span class="fm-yes" aria-label="Included">✓</span></td>
+                        <td data-plan="Premium" class="fm-soon"><span class="fm-tba" aria-label="To be announced">—</span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><span class="fm-name">Qualification engine (welder &amp; non-welder)</span><span class="fm-desc">Deep tracking for every credential, with automatic 6-month continuity logged from real floor entries and in-app warnings before expiry — no spreadsheet of expiry dates.</span></th>
+                        <td data-plan="Lite"><span class="fm-yes" aria-label="Included">✓</span></td>
+                        <td data-plan="Standard" class="fm-featured"><span class="fm-yes" aria-label="Included">✓</span></td>
+                        <td data-plan="Premium" class="fm-soon"><span class="fm-tba" aria-label="To be announced">—</span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><span class="fm-name">Live WPQ capture on the floor</span><span class="fm-desc">Capture Welder Performance Qualification parameters in the workflow app and see them reflected in management instantly.</span></th>
+                        <td data-plan="Lite"><span class="fm-yes" aria-label="Included">✓</span></td>
+                        <td data-plan="Standard" class="fm-featured"><span class="fm-yes" aria-label="Included">✓</span></td>
+                        <td data-plan="Premium" class="fm-soon"><span class="fm-tba" aria-label="To be announced">—</span></td>
+                    </tr>
+
+                    <tr class="fm-group"><th colspan="4" scope="colgroup">Traceability &amp; Document Control</th></tr>
+                    <tr>
+                        <th scope="row"><span class="fm-name">Fast heat propagation</span><span class="fm-desc">Heat numbers captured, linked to their parent MTRs and propagated down the project tree, so material identity follows the part — traceable in both directions without database bloat.</span></th>
+                        <td data-plan="Lite"><span class="fm-yes" aria-label="Included">✓</span></td>
+                        <td data-plan="Standard" class="fm-featured"><span class="fm-yes" aria-label="Included">✓</span></td>
+                        <td data-plan="Premium" class="fm-soon"><span class="fm-tba" aria-label="To be announced">—</span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><span class="fm-name">Heat-treatment (PWHT) tracking</span><span class="fm-desc">Log post-weld heat-treatment events against nodes and roll them up the assembly, so the thermal history travels with the finished piece.</span></th>
+                        <td data-plan="Lite"><span class="fm-yes" aria-label="Included">✓</span></td>
+                        <td data-plan="Standard" class="fm-featured"><span class="fm-yes" aria-label="Included">✓</span></td>
+                        <td data-plan="Premium" class="fm-soon"><span class="fm-tba" aria-label="To be announced">—</span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><span class="fm-name">Versioned as captured</span><span class="fm-desc">Every document, parameter and consumable is versioned the moment it's captured. Corrections are versioned too and stay visible to managers — a clean history, no administrative bottleneck.</span></th>
+                        <td data-plan="Lite"><span class="fm-yes" aria-label="Included">✓</span></td>
+                        <td data-plan="Standard" class="fm-featured"><span class="fm-yes" aria-label="Included">✓</span></td>
+                        <td data-plan="Premium" class="fm-soon"><span class="fm-tba" aria-label="To be announced">—</span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><span class="fm-name">Tamper-evident activity log</span><span class="fm-desc">Key actions are written to a hash-chained activity log with a built-in verify step, giving cryptographic evidence the record wasn't altered after the fact.</span></th>
+                        <td data-plan="Lite"><span class="fm-yes" aria-label="Included">✓</span></td>
+                        <td data-plan="Standard" class="fm-featured"><span class="fm-yes" aria-label="Included">✓</span></td>
+                        <td data-plan="Premium" class="fm-soon"><span class="fm-tba" aria-label="To be announced">—</span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><span class="fm-name">One-click document generator</span><span class="fm-desc">Pull captured node data straight into your own company paperwork templates for immediate printing, reusable across one project or the whole organisation.</span></th>
+                        <td data-plan="Lite"><span class="fm-yes" aria-label="Included">✓</span></td>
+                        <td data-plan="Standard" class="fm-featured"><span class="fm-yes" aria-label="Included">✓</span></td>
+                        <td data-plan="Premium" class="fm-soon"><span class="fm-tba" aria-label="To be announced">—</span></td>
+                    </tr>
+
+                    <tr class="fm-group"><th colspan="4" scope="colgroup">Project Structure &amp; Views</th></tr>
+                    <tr>
+                        <th scope="row"><span class="fm-name">One-paste BOM import</span><span class="fm-desc">Copy a BOM straight out of Tekla or most CAD packages into an Excel-like grid; columns are auto-detected and mapped, and the mapping is adjustable by hand so unrecognised formats still go in.</span></th>
+                        <td data-plan="Lite"><span class="fm-yes" aria-label="Included">✓</span></td>
+                        <td data-plan="Standard" class="fm-featured"><span class="fm-yes" aria-label="Included">✓</span></td>
+                        <td data-plan="Premium" class="fm-soon"><span class="fm-tba" aria-label="To be announced">—</span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><span class="fm-name">Tree &amp; Flowchart authoring</span><span class="fm-desc">Every project is editable as a Tree or a Flowchart, toggled with one click; edits in one view appear instantly in the other, with no import, export or conversion step.</span></th>
+                        <td data-plan="Lite"><span class="fm-yes" aria-label="Included">✓</span></td>
+                        <td data-plan="Standard" class="fm-featured"><span class="fm-yes" aria-label="Included">✓</span></td>
+                        <td data-plan="Premium" class="fm-soon"><span class="fm-tba" aria-label="To be announced">—</span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><span class="fm-name">Joint types &amp; joining sequence</span><span class="fm-desc">Define the joints an assembly is formed from and the order they're joined in, with connector work steps carried through to the floor.</span></th>
+                        <td data-plan="Lite"><span class="fm-yes" aria-label="Included">✓</span></td>
+                        <td data-plan="Standard" class="fm-featured"><span class="fm-yes" aria-label="Included">✓</span></td>
+                        <td data-plan="Premium" class="fm-soon"><span class="fm-tba" aria-label="To be announced">—</span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><span class="fm-name">Repeatable batches &amp; bulk instantiation</span><span class="fm-desc">Define an assembly once and deploy identical copies in quantity — welds defined once apply to every copy — with a preview before you commit.</span></th>
+                        <td data-plan="Lite"><span class="fm-yes" aria-label="Included">✓</span></td>
+                        <td data-plan="Standard" class="fm-featured"><span class="fm-yes" aria-label="Included">✓</span></td>
+                        <td data-plan="Premium" class="fm-soon"><span class="fm-tba" aria-label="To be announced">—</span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><span class="fm-name">Live project editing, protected</span><span class="fm-desc">Add new nodes or delete empty ones on an in-progress project; any node that already holds captured work is automatically locked so history can't be rewritten.</span></th>
+                        <td data-plan="Lite"><span class="fm-yes" aria-label="Included">✓</span></td>
+                        <td data-plan="Standard" class="fm-featured"><span class="fm-yes" aria-label="Included">✓</span></td>
+                        <td data-plan="Premium" class="fm-soon"><span class="fm-tba" aria-label="To be announced">—</span></td>
+                    </tr>
+
+                    <tr class="fm-group"><th colspan="4" scope="colgroup">Work Capture on the Floor</th></tr>
+                    <tr>
+                        <th scope="row"><span class="fm-name">10-second floor capture</span><span class="fm-desc">Touch-and-PIN sign-in and a streamlined mobile UI get a worker to the right step and inputting data in ten seconds or less.</span></th>
+                        <td data-plan="Lite"><span class="fm-yes" aria-label="Included">✓</span></td>
+                        <td data-plan="Standard" class="fm-featured"><span class="fm-yes" aria-label="Included">✓</span></td>
+                        <td data-plan="Premium" class="fm-soon"><span class="fm-tba" aria-label="To be announced">—</span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><span class="fm-name">Instant QR navigation</span><span class="fm-desc">Scan a QR code on the traveller or component to load the exact project node for data entry immediately.</span></th>
+                        <td data-plan="Lite"><span class="fm-yes" aria-label="Included">✓</span></td>
+                        <td data-plan="Standard" class="fm-featured"><span class="fm-yes" aria-label="Included">✓</span></td>
+                        <td data-plan="Premium" class="fm-soon"><span class="fm-tba" aria-label="To be announced">—</span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><span class="fm-name">Universal work templates</span><span class="fm-desc">Define custom work types — fit-up, cutting, assembly — save them organisation-wide, and capture any floor activity, welding or not, in one traceable structure.</span></th>
+                        <td data-plan="Lite"><span class="fm-yes" aria-label="Included">✓</span></td>
+                        <td data-plan="Standard" class="fm-featured"><span class="fm-yes" aria-label="Included">✓</span></td>
+                        <td data-plan="Premium" class="fm-soon"><span class="fm-tba" aria-label="To be announced">—</span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><span class="fm-name">Offline-first work capture</span><span class="fm-desc">Start and submit captures with zero connectivity; a durable on-device queue syncs in order on reconnect, and any conflicts surface in a manager-side resolve/scrap review. <em>The offline document viewer stays on every plan.</em></span></th>
+                        <td data-plan="Lite"><span class="fm-no" aria-label="Not included">✕</span></td>
+                        <td data-plan="Standard" class="fm-featured"><span class="fm-yes" aria-label="Included">✓</span></td>
+                        <td data-plan="Premium" class="fm-soon"><span class="fm-tba" aria-label="To be announced">—</span></td>
+                    </tr>
+
+                    <tr class="fm-group"><th colspan="4" scope="colgroup">Management &amp; Access Control</th></tr>
+                    <tr>
+                        <th scope="row"><span class="fm-name">Global custom roles</span><span class="fm-desc">Create fully custom roles and manage access top-down, eliminating project-by-project permission headaches.</span></th>
+                        <td data-plan="Lite"><span class="fm-yes" aria-label="Included">✓</span></td>
+                        <td data-plan="Standard" class="fm-featured"><span class="fm-yes" aria-label="Included">✓</span></td>
+                        <td data-plan="Premium" class="fm-soon"><span class="fm-tba" aria-label="To be announced">—</span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><span class="fm-name">Anti-bloat manager interface</span><span class="fm-desc">The management app automatically hides any feature or data a user lacks permission to see, keeping every screen clean.</span></th>
+                        <td data-plan="Lite"><span class="fm-yes" aria-label="Included">✓</span></td>
+                        <td data-plan="Standard" class="fm-featured"><span class="fm-yes" aria-label="Included">✓</span></td>
+                        <td data-plan="Premium" class="fm-soon"><span class="fm-tba" aria-label="To be announced">—</span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><span class="fm-name">Role-sensitive notifications &amp; health advisories</span><span class="fm-desc">An in-app dashboard filters warnings — expirations, maintenance — strictly by role, and flags under-defined structure or WPS gaps before an auditor does.</span></th>
+                        <td data-plan="Lite"><span class="fm-yes" aria-label="Included">✓</span></td>
+                        <td data-plan="Standard" class="fm-featured"><span class="fm-yes" aria-label="Included">✓</span></td>
+                        <td data-plan="Premium" class="fm-soon"><span class="fm-tba" aria-label="To be announced">—</span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><span class="fm-name">Repair cycles &amp; dispositions</span><span class="fm-desc">Record rework and repair loops on a joint, with accept / reject / scrap dispositions kept in the traceable history.</span></th>
+                        <td data-plan="Lite"><span class="fm-yes" aria-label="Included">✓</span></td>
+                        <td data-plan="Standard" class="fm-featured"><span class="fm-yes" aria-label="Included">✓</span></td>
+                        <td data-plan="Premium" class="fm-soon"><span class="fm-tba" aria-label="To be announced">—</span></td>
+                    </tr>
+
+                    <tr class="fm-group"><th colspan="4" scope="colgroup">Equipment, Consumables &amp; Maintenance</th></tr>
+                    <tr>
+                        <th scope="row"><span class="fm-name">Universal machine tracking</span><span class="fm-desc">Certifications and maintenance schedules for any machine, not just welding gear, with attached documents and PIN-signed calibration plus automated renewal alerts.</span></th>
+                        <td data-plan="Lite"><span class="fm-no" aria-label="Not included">✕</span></td>
+                        <td data-plan="Standard" class="fm-featured"><span class="fm-yes" aria-label="Included">✓</span></td>
+                        <td data-plan="Premium" class="fm-soon"><span class="fm-tba" aria-label="To be announced">—</span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><span class="fm-name">Consumable batch tracking</span><span class="fm-desc">Granular batch inventory with storage and reheat rules, expiry and quarantine flags, and customizable low-stock alerts, traced through to the weld.</span></th>
+                        <td data-plan="Lite"><span class="fm-no" aria-label="Not included">✕</span></td>
+                        <td data-plan="Standard" class="fm-featured"><span class="fm-yes" aria-label="Included">✓</span></td>
+                        <td data-plan="Premium" class="fm-soon"><span class="fm-tba" aria-label="To be announced">—</span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><span class="fm-name">In-app maintenance hub</span><span class="fm-desc">Five priority levels, from routine to emergency, with critical tiers locked to authorised roles. Workers raise requests from the floor — offline too — while maintenance personnel run the whole workflow from management.</span></th>
+                        <td data-plan="Lite"><span class="fm-no" aria-label="Not included">✕</span></td>
+                        <td data-plan="Standard" class="fm-featured"><span class="fm-yes" aria-label="Included">✓</span></td>
+                        <td data-plan="Premium" class="fm-soon"><span class="fm-tba" aria-label="To be announced">—</span></td>
+                    </tr>
+
+                    <tr class="fm-group"><th colspan="4" scope="colgroup">Data Sovereignty &amp; Continuity</th></tr>
+                    <tr>
+                        <th scope="row"><span class="fm-name">On-premise appliance</span><span class="fm-desc">Runs on a dedicated, containerised local server, fully insulated from forced OS updates and external cloud outages.</span></th>
+                        <td data-plan="Lite"><span class="fm-yes" aria-label="Included">✓</span></td>
+                        <td data-plan="Standard" class="fm-featured"><span class="fm-yes" aria-label="Included">✓</span></td>
+                        <td data-plan="Premium" class="fm-soon"><span class="fm-tba" aria-label="To be announced">—</span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><span class="fm-name">Phrakton zero-trust, post-quantum networking</span><span class="fm-desc">Every connection travels the Phrakton fabric; your facility opens no inbound ports and is unreachable from the public internet, while authorised personnel reach it normally.</span></th>
+                        <td data-plan="Lite"><span class="fm-yes" aria-label="Included">✓</span></td>
+                        <td data-plan="Standard" class="fm-featured"><span class="fm-yes" aria-label="Included">✓</span></td>
+                        <td data-plan="Premium" class="fm-soon"><span class="fm-tba" aria-label="To be announced">—</span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><span class="fm-name">Automated local backups</span><span class="fm-desc">Customizable, frequent backups to isolated physical storage, downloadable on demand, for business continuity.</span></th>
+                        <td data-plan="Lite"><span class="fm-yes" aria-label="Included">✓</span></td>
+                        <td data-plan="Standard" class="fm-featured"><span class="fm-yes" aria-label="Included">✓</span></td>
+                        <td data-plan="Premium" class="fm-soon"><span class="fm-tba" aria-label="To be announced">—</span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><span class="fm-name">Optional Remote Access Module</span><span class="fm-desc">Reach the management app or capture work from home, over mobile data, or in the field, through a post-quantum-safe encrypted tunnel. Published monthly add-on.</span></th>
+                        <td data-plan="Lite"><span class="fm-addon" aria-label="Available as add-on">Add-on</span></td>
+                        <td data-plan="Standard" class="fm-featured"><span class="fm-addon" aria-label="Available as add-on">Add-on</span></td>
+                        <td data-plan="Premium" class="fm-soon"><span class="fm-tba" aria-label="To be announced">—</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+            <p class="price-footnote"><span class="fm-key"><span class="fm-yes">✓</span> Included &nbsp;·&nbsp; <span class="fm-no">✕</span> Not on this plan &nbsp;·&nbsp; <span class="fm-addon-inline">Add-on</span> Published add-on &nbsp;·&nbsp; <span class="fm-tba">—</span> Premium to be announced</span><br>Every capability listed is live in the platform today. Move between Lite and Standard at any time — plan changes are applied remotely, at no charge, with 15 days’ notice.</p>
+        </div>
+
     </section>
 
     <section class="page-section container">
