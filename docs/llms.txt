@@ -6,11 +6,13 @@ Elenchon is on-premise welding traceability software for fabrication shops and h
 
 ## Core Pillars
 - Zero-Friction Work Capture (10-second navigation, universal work templates)
-- One Project, Two Live Views (Tree & Flowchart, one-paste BOM import from Tekla or most CAD packages)
-- Management & Access Control (global custom roles, one-click document generation)
-- Qualifications & Procedures (WPS/WPQR/WPQ workflow, 6-month continuity tracking, heat propagation)
-- Floor Asset & Consumable Control (maintenance hub, machine certification tracking, batch inventory)
-- Bulletproof Data Sovereignty (on-premise appliance, automated local backups, post-quantum-safe encryption)
+- One Project, Two Live Views (Tree & Flowchart, one-paste BOM import from Tekla or most CAD packages, joint types & joining sequence, repeatable-batch bulk instantiation)
+- Management & Access Control (global custom roles, one-click document generation, role-filtered notifications and setup/WPS health advisories, joint repair cycles & dispositions)
+- Qualifications & Procedures (WPS/WPQR/WPQ workflow, PQR coupon & mechanical-test tracking with lab-result loop, 6-month continuity tracking, heat propagation, PWHT/heat-treatment tracking)
+- Floor Asset & Consumable Control (maintenance hub, machine certification tracking, batch inventory) - Standard only; Lite excludes these
+- Bulletproof Data Sovereignty (on-premise appliance, automated local backups, tamper-evident hash-chained activity log, post-quantum-safe encryption)
+
+A full plan-by-plan feature comparison (every capability by Lite/Standard/Premium) is on the pricing page: https://delteris.com/pricing.html#compare
 
 ## Pricing (EUR, per appliance, per month, excl. VAT)
 - Lite: €390/month, 20 workers included. The full traceability core — work capture, project tree and flowchart, BOM import, WPS/WPQR/WPQ workflow, ISO & ASME IX records, global custom roles and granular permissions, elastic templates, Phrakton networking, local backups, founder support by email. Expandable by up to two 10-worker blocks, to a 40-worker ceiling. Lite excludes the maintenance hub, machine certification tracking, consumable traceability, and offline work capture.
