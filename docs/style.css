@@ -1574,9 +1574,6 @@ footer {
     gap: 1.5rem;
     max-width: 1150px;
     margin: 0 auto;
-    /* Each card sizes to its own content instead of stretching to the tallest
-       in the row, so one long answer doesn't leave voids under its neighbours. */
-    align-items: start;
 }
 
 .addon-card {
