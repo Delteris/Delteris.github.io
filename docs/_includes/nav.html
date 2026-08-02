@@ -1,8 +1,11 @@
 {%- comment %} Language-aware navigation. `page.lang` ('en' default, or 'pt') selects the
-     link set and the globe's target. The globe mirrors the in-app LangGlobe switcher and
-     links to this page's counterpart in the other language (`page.alt_url`), falling back
-     to the language home when a page has no counterpart yet. {%- endcomment %}
+     link set and the language dropdown. The dropdown mirrors the in-app LangGlobe:
+     the badge shows the CURRENT language, and the menu lists every language, each linking
+     to this page's counterpart in that language. Per-language URLs come from the page's own
+     `en_url` / `pt_url` front matter; to add a language later, add a `<xx>_url` field to
+     every page and one more entry to the list below. {%- endcomment %}
 {%- assign L = page.lang | default: 'en' -%}
+{%- if L == 'pt' %}{% assign current_code = 'PT' %}{% else %}{% assign current_code = 'EN' %}{% endif %}
     <nav aria-label="{% if L == 'pt' %}Navegação principal{% else %}Main navigation{% endif %}">
         <a href="{% if L == 'pt' %}/pt/{% else %}/{% endif %}" class="logo nav-logo">
             <img src="/static/DelterisCrest.webp" alt="Delteris" width="32" height="32">
@@ -29,29 +32,36 @@
             <a href="/resources/"{% if page.url contains '/resources' %} aria-current="page"{% endif %}>Resources</a>
             <a href="/contact.html" class="btn btn-small"{% if page.url == '/contact.html' %} aria-current="page"{% endif %}>Contact Us Now</a>
 {%- endif %}
-{%- comment %} Language globe — mirrors the app's LangGlobe. Links straight to the counterpart
-     page in the other language. `alt_url` is set per page; when absent, fall back to the
-     other language's home so the control never dead-ends. {%- endcomment %}
-{%- if L == 'pt' %}
-    {%- assign switch_to = page.alt_url | default: '/' -%}
-            <a href="{{ switch_to }}" class="lang-globe" hreflang="en" title="View in English / Ver em inglês" aria-label="Switch to English">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <path d="M2 12h20"></path>
-                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-                </svg>
-                <span class="lang-globe-code">EN</span>
-            </a>
-{%- else %}
-    {%- assign switch_to = page.alt_url | default: '/pt/' -%}
-            <a href="{{ switch_to }}" class="lang-globe" hreflang="pt-PT" title="Ver em português / View in Portuguese" aria-label="Mudar para português">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <path d="M2 12h20"></path>
-                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-                </svg>
-                <span class="lang-globe-code">PT</span>
-            </a>
-{%- endif %}
+{%- comment %} Language dropdown — mirrors the app's LangGlobe. Badge = current language.
+     Menu lists all languages; each links to this page's counterpart in that language,
+     falling back to the language home when the page declares no counterpart. {%- endcomment %}
+{%- assign en_target = page.en_url | default: '/' -%}
+{%- assign pt_target = page.pt_url | default: '/pt/' -%}
+            <div class="lang-switch" data-lang-switch>
+                <button type="button" class="lang-globe" id="lang-globe-btn" aria-haspopup="listbox" aria-expanded="false" aria-label="{% if L == 'pt' %}Escolher idioma{% else %}Choose language{% endif %}" title="{% if L == 'pt' %}Idioma{% else %}Language{% endif %}">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M2 12h20"></path>
+                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                    </svg>
+                    <span class="lang-globe-code">{{ current_code }}</span>
+                </button>
+                <div class="lang-menu" id="lang-menu" role="listbox" aria-label="{% if L == 'pt' %}Idiomas{% else %}Languages{% endif %}" hidden>
+                    <div class="lang-menu-search">
+                        <input type="text" id="lang-menu-search" class="lang-menu-input" placeholder="{% if L == 'pt' %}Procurar idioma…{% else %}Search language…{% endif %}" autocomplete="off" aria-label="{% if L == 'pt' %}Procurar idioma{% else %}Search language{% endif %}">
+                    </div>
+                    <div class="lang-menu-list">
+                        <a href="{{ en_target }}" hreflang="en" class="lang-option{% if L != 'pt' %} is-current{% endif %}" role="option" aria-selected="{% if L != 'pt' %}true{% else %}false{% endif %}" data-search="english english en">
+                            <span class="lang-option-name">English</span>
+                            <span class="lang-option-code">EN</span>
+                        </a>
+                        <a href="{{ pt_target }}" hreflang="pt-PT" class="lang-option{% if L == 'pt' %} is-current{% endif %}" role="option" aria-selected="{% if L == 'pt' %}true{% else %}false{% endif %}" data-search="português portugues portuguese pt">
+                            <span class="lang-option-name">Português</span>
+                            <span class="lang-option-code">PT</span>
+                        </a>
+                    </div>
+                    <p class="lang-menu-empty" hidden>{% if L == 'pt' %}Sem correspondências{% else %}No matches{% endif %}</p>
+                </div>
+            </div>
         </div>
     </nav>
