@@ -2326,6 +2326,39 @@ a.glass-card:hover h3,
     text-transform: none;
 }
 
+/* Archetype comparison table (how-to-choose): unlike the pricing matrix, its
+   row labels are short and its cells hold prose, so auto column-sizing collapses
+   the data columns. Fix the layout: a wide label column, three equal data
+   columns, and left-aligned prose cells. */
+.comparison-matrix {
+    table-layout: fixed;
+}
+.comparison-matrix col,
+.comparison-matrix thead th,
+.comparison-matrix td {
+    width: 22%;
+}
+.comparison-matrix thead th.fm-feature-head,
+.comparison-matrix tbody th[scope="row"] {
+    width: 34%;
+}
+.comparison-matrix td,
+.comparison-matrix thead th:not(.fm-feature-head) {
+    text-align: left;
+    vertical-align: top;
+    font-weight: 400;
+    font-size: 0.9rem;
+    line-height: 1.45;
+    color: var(--text-main);
+}
+.comparison-matrix tbody th[scope="row"] {
+    text-align: left;
+    vertical-align: top;
+}
+.comparison-matrix .fm-name {
+    font-size: 0.95rem;
+}
+
 /* Standard column header: white label only. No gold accent here — the plans
    box higher on the page already marks Standard as the recommended tier, so
    the table doesn't repeat it. The blue td spine still draws the eye down the
