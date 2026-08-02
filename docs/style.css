@@ -2273,6 +2273,48 @@ a.glass-card:hover h3,
 }
 
 /* ---- Matrix ---- */
+.matrix-filter {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 0.75rem;
+}
+.matrix-filter-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    user-select: none;
+}
+.matrix-filter-toggle input {
+    width: 1rem;
+    height: 1rem;
+    accent-color: var(--accent, #3b82f6);
+    cursor: pointer;
+}
+.matrix-filter-toggle:hover {
+    color: var(--text-main);
+}
+
+.fm-count {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--text-main);
+    letter-spacing: 0.01em;
+}
+.fm-infinity {
+    font-size: 1.7rem;
+    line-height: 1;
+    font-weight: 700;
+    background: linear-gradient(120deg, #60a5fa 0%, #a78bfa 55%, #38bdf8 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #60a5fa; /* fallback where background-clip:text is unsupported */
+    filter: drop-shadow(0 0 6px rgba(96, 165, 250, 0.45));
+}
+
 .matrix-scroll {
     max-width: 1150px;
     margin: 0 auto;
@@ -2343,6 +2385,7 @@ a.glass-card:hover h3,
     width: 34%;
 }
 .comparison-matrix td,
+.comparison-matrix tbody td,
 .comparison-matrix thead th:not(.fm-feature-head) {
     text-align: left;
     vertical-align: top;

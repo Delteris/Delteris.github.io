@@ -346,4 +346,48 @@
         /[?&]view=compare/.test(window.location.search)) {
         show(true);
     }
+
+    /* "Show only differences" filter for the feature matrix. Compares the two
+       live plans (Lite vs Standard) and hides feature rows where they match;
+       the Premium column is a placeholder and is ignored. Group headers hide
+       when they have no visible feature rows left under them. Auto-detected
+       from cell content, so it stays correct as rows are added or edited. */
+    var diffToggle = document.getElementById('diff-only');
+    var matrix = viewDetailed.querySelector('.feature-matrix');
+    if (diffToggle && matrix) {
+        var norm = function (cell) {
+            return cell ? cell.textContent.replace(/\s+/g, ' ').trim() : '';
+        };
+        var rowsSame = function (row) {
+            var lite = row.querySelector('td[data-plan="Lite"]');
+            var std = row.querySelector('td[data-plan="Standard"]');
+            if (!lite || !std) return true; // not a comparable feature row
+            return norm(lite) === norm(std);
+        };
+        var applyFilter = function (diffOnly) {
+            var groups = matrix.querySelectorAll('tbody > tr');
+            var currentGroupHeader = null;
+            var groupHasVisible = false;
+            var flushGroup = function () {
+                if (currentGroupHeader) {
+                    currentGroupHeader.hidden = diffOnly && !groupHasVisible;
+                }
+            };
+            groups.forEach(function (row) {
+                if (row.classList.contains('fm-group')) {
+                    flushGroup();
+                    currentGroupHeader = row;
+                    groupHasVisible = false;
+                    return;
+                }
+                var hide = diffOnly && rowsSame(row);
+                row.hidden = hide;
+                if (!hide) groupHasVisible = true;
+            });
+            flushGroup();
+        };
+        diffToggle.addEventListener('change', function () {
+            applyFilter(diffToggle.checked);
+        });
+    }
 })();

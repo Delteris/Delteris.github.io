@@ -91,6 +91,12 @@ schema: schema/pricing.json
         </div>
 
         <div id="view-detailed" class="plan-view is-hidden" role="tabpanel" aria-labelledby="toggle-detailed" hidden>
+            <div class="matrix-filter">
+                <label class="matrix-filter-toggle">
+                    <input type="checkbox" id="diff-only" />
+                    <span>Show only differences between Lite and Standard</span>
+                </label>
+            </div>
             <div class="matrix-scroll">
             <table class="feature-matrix">
                 <caption class="u-visually-hidden">Full feature comparison across Elenchon plans</caption>
@@ -104,6 +110,20 @@ schema: schema/pricing.json
                 </thead>
 
                 <tbody>
+                    <tr class="fm-group"><th colspan="4" scope="colgroup">Capacity</th></tr>
+                    <tr>
+                        <th scope="row"><span class="fm-name">Base workers included</span><span class="fm-desc">Workers covered by the plan price, no add-ons.</span></th>
+                        <td data-plan="Lite"><span class="fm-count">20</span></td>
+                        <td data-plan="Standard" class="fm-featured"><span class="fm-count">50</span></td>
+                        <td data-plan="Premium" class="fm-soon"><span class="fm-tba" aria-label="To be announced">—</span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><span class="fm-name">Maximum workers</span><span class="fm-desc">Expandable in 10-worker blocks — Lite up to two blocks, Standard without limit.</span></th>
+                        <td data-plan="Lite"><span class="fm-count">40</span></td>
+                        <td data-plan="Standard" class="fm-featured"><span class="fm-count fm-infinity" aria-label="Unlimited">&#8734;</span></td>
+                        <td data-plan="Premium" class="fm-soon"><span class="fm-tba" aria-label="To be announced">—</span></td>
+                    </tr>
+
                     <tr class="fm-group"><th colspan="4" scope="colgroup">Qualifications &amp; Procedures</th></tr>
                     <tr>
                         <th scope="row"><span class="fm-name">End-to-end WPS / WPQR / WPQ workflow</span><span class="fm-desc">Author a preliminary WPS in the app, capture real WPQR parameters on the floor, import them back, adjust ranges, and export a finalised WPS into your own template.</span></th>
