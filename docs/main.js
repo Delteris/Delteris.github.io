@@ -19,13 +19,71 @@
             navToggle.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
         });
 
-        // Close the menu after choosing a destination
+        // Close the menu after choosing a destination. Skip the language switcher —
+        // its options live inside nav-links but opening the language menu shouldn't
+        // collapse the mobile nav.
         navLinks.querySelectorAll('a').forEach(function (link) {
+            if (link.closest('[data-lang-switch]')) return;
             link.addEventListener('click', function () {
                 navLinks.classList.remove('open');
                 navToggle.setAttribute('aria-expanded', 'false');
                 navToggle.setAttribute('aria-label', 'Open menu');
             });
+        });
+    }
+
+    /* ---------- Language switcher dropdown (mirrors the in-app LangGlobe) ---------- */
+    const langSwitch = document.querySelector('[data-lang-switch]');
+    if (langSwitch) {
+        const langBtn = document.getElementById('lang-globe-btn');
+        const langMenu = document.getElementById('lang-menu');
+        const langSearch = document.getElementById('lang-menu-search');
+        const langOptions = Array.prototype.slice.call(langMenu.querySelectorAll('.lang-option'));
+        const langEmpty = langMenu.querySelector('.lang-menu-empty');
+
+        const closeLang = function () {
+            if (langMenu.hidden) return;
+            langMenu.hidden = true;
+            langBtn.setAttribute('aria-expanded', 'false');
+            if (langSearch) { langSearch.value = ''; filterLang(''); }
+        };
+
+        const openLang = function () {
+            langMenu.hidden = false;
+            langBtn.setAttribute('aria-expanded', 'true');
+            // Focus the search box so the user can type immediately (desktop).
+            if (langSearch) { window.setTimeout(function () { langSearch.focus(); }, 0); }
+        };
+
+        const filterLang = function (raw) {
+            const q = raw.trim().toLowerCase();
+            let visible = 0;
+            langOptions.forEach(function (opt) {
+                const hay = (opt.getAttribute('data-search') || '') + ' ' + opt.textContent.toLowerCase();
+                const show = !q || hay.indexOf(q) !== -1;
+                opt.hidden = !show;
+                if (show) visible++;
+            });
+            if (langEmpty) langEmpty.hidden = visible !== 0;
+        };
+
+        langBtn.addEventListener('click', function (e) {
+            e.stopPropagation();
+            if (langMenu.hidden) { openLang(); } else { closeLang(); }
+        });
+
+        if (langSearch) {
+            langSearch.addEventListener('input', function () { filterLang(langSearch.value); });
+            // Keep clicks inside the search box from bubbling to the close-on-outside handler.
+            langSearch.addEventListener('click', function (e) { e.stopPropagation(); });
+        }
+
+        // Close on outside click and on Escape.
+        document.addEventListener('click', function (e) {
+            if (!langSwitch.contains(e.target)) closeLang();
+        });
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') { closeLang(); langBtn.focus(); }
         });
     }
 

@@ -247,25 +247,31 @@ nav {
     color: var(--accent-blue);
 }
 
-/* Language globe — mirrors the in-app LangGlobe switcher: bordered square,
-   globe glyph, and a small code badge for the language you'd switch TO. */
-.nav-links a.lang-globe {
+/* Language switcher — mirrors the in-app LangGlobe: a bordered globe button whose
+   badge shows the CURRENT language, opening a searchable dropdown of all languages. */
+.lang-switch {
+    position: relative;
+    margin-left: 1.5rem;
+    flex-shrink: 0;
+}
+
+.lang-globe {
     position: relative;
     display: inline-grid;
     place-items: center;
     width: 40px;
     height: 40px;
-    margin-left: 1.5rem;
     padding: 0;
     border: 1px solid rgba(255, 255, 255, 0.14);
     border-radius: 8px;
     color: var(--text-main);
     background: rgba(255, 255, 255, 0.03);
+    cursor: pointer;
     transition: color 0.3s, border-color 0.3s, background 0.3s;
-    flex-shrink: 0;
 }
 
-.nav-links a.lang-globe:hover {
+.lang-globe:hover,
+.lang-globe[aria-expanded="true"] {
     color: var(--accent-blue);
     border-color: rgba(59, 130, 246, 0.5);
     background: rgba(59, 130, 246, 0.08);
@@ -289,6 +295,90 @@ nav {
     color: #fff;
     letter-spacing: 0.3px;
 }
+
+/* Dropdown popover */
+.lang-menu {
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    right: 0;
+    width: 15rem;
+    max-width: calc(100vw - 2rem);
+    background: rgba(9, 16, 28, 0.98);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.55);
+    overflow: hidden;
+    z-index: 1100;
+}
+
+.lang-menu[hidden] { display: none; }
+
+.lang-menu-search {
+    padding: 0.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.lang-menu-input {
+    width: 100%;
+    padding: 0.5rem 0.65rem;
+    font-size: 0.85rem;
+    color: var(--text-main);
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 8px;
+    outline: none;
+}
+
+.lang-menu-input:focus { border-color: var(--accent-blue); }
+
+.lang-menu-list {
+    max-height: 16rem;
+    overflow-y: auto;
+    padding: 0.35rem;
+}
+
+.lang-option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    padding: 0.6rem 0.7rem;
+    border-radius: 8px;
+    color: var(--text-main);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background 0.2s, color 0.2s;
+}
+
+.lang-option[hidden] { display: none; }
+
+.lang-option:hover {
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.lang-option.is-current {
+    color: var(--accent-blue);
+}
+
+.lang-option-code {
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.5);
+    letter-spacing: 0.4px;
+}
+
+.lang-menu-empty {
+    margin: 0;
+    padding: 0.75rem;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+}
+
+.lang-menu-empty[hidden] { display: none; }
 
 /* Hamburger (hidden on desktop) */
 .nav-toggle {
@@ -1164,11 +1254,16 @@ footer {
         border: 1px solid rgba(59, 130, 246, 0.4);
     }
 
-    /* In the mobile menu the globe becomes a normal labelled row. */
-    .nav-links a.lang-globe {
-        width: auto;
-        height: auto;
+    /* In the mobile menu the switcher becomes a full-width labelled row, and its
+       dropdown drops inline below the button instead of an off-screen popover. */
+    .lang-switch {
         margin: 0.75rem 0 0;
+        width: 100%;
+    }
+
+    .lang-globe {
+        width: 100%;
+        height: auto;
         display: flex;
         gap: 0.6rem;
         justify-content: center;
@@ -1177,9 +1272,17 @@ footer {
         border: 1px solid rgba(255, 255, 255, 0.12);
     }
 
-    .nav-links a.lang-globe .lang-globe-code {
+    .lang-globe .lang-globe-code {
         position: static;
         padding: 2px 6px;
+    }
+
+    .lang-menu {
+        position: static;
+        width: 100%;
+        max-width: none;
+        margin-top: 0.5rem;
+        box-shadow: none;
     }
 }
 
