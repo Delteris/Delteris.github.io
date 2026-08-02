@@ -1,3 +1,22 @@
+{%- assign L = page.lang | default: 'en' -%}
+{%- if L == 'pt' %}
+    <footer>
+        <div class="footer-content">
+            <h2 class="logo"><span>Delteris</span></h2>
+            <p>A desenvolver a tecnologia para o futuro da Europa.</p>
+            <p class="footer-cta-text">Pronto para otimizar a sua rastreabilidade?</p>
+            <a href="/pt/contact.html" class="btn btn-primary">Contacte os Fundadores</a>
+        </div>
+        <div class="copyright">
+            <p class="footer-company">
+                <a href="mailto:contact@delteris.com">contact@delteris.com</a>
+            </p>
+            <p>© 2026 Delteris. Todos os direitos reservados. | <a href="https://delteris.com">delteris.com</a></p>
+            <p class="footer-founders">Fundada por Flávio Brites &amp; Rodrigo Ferreira</p>
+            <p class="footer-legal"><a href="/pt/resources/">Recursos</a> &nbsp;·&nbsp; <a href="/pt/terms.html">Termos de Utilização</a> &nbsp;·&nbsp; <a href="/pt/privacy.html">Política de Privacidade</a> &nbsp;·&nbsp; <a href="/pt/contact.html">Contacto</a></p>
+        </div>
+    </footer>
+{%- else %}
     <footer>
         <div class="footer-content">
             <h2 class="logo"><span>Delteris</span></h2>
@@ -15,6 +34,7 @@
             </p>
             <p>© 2026 Delteris. All rights reserved. | <a href="https://delteris.com">delteris.com</a></p>
             <p class="footer-founders">Founded by Flávio Brites &amp; Rodrigo Ferreira</p>
-            <p class="footer-legal"><a href="/resources/">Resources</a> &nbsp;·&nbsp; <a href="/terms.html">Terms of Use</a> &nbsp;·&nbsp; <a href="/privacy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="/contact.html">Contact</a></p>
+            <p class="footer-legal"><a href="/resources/">Resources</a> &nbsp;·&nbsp; <a href="/terms.html">Terms of Use</a> &nbsp;·&nbsp; <a href="/contact.html">Contact</a></p>
         </div>
     </footer>
+{%- endif %}

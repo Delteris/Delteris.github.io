@@ -1,19 +1,57 @@
-    <nav aria-label="Main navigation">
-        <a href="/" class="logo nav-logo">
+{%- comment %} Language-aware navigation. `page.lang` ('en' default, or 'pt') selects the
+     link set and the globe's target. The globe mirrors the in-app LangGlobe switcher and
+     links to this page's counterpart in the other language (`page.alt_url`), falling back
+     to the language home when a page has no counterpart yet. {%- endcomment %}
+{%- assign L = page.lang | default: 'en' -%}
+    <nav aria-label="{% if L == 'pt' %}Navegação principal{% else %}Main navigation{% endif %}">
+        <a href="{% if L == 'pt' %}/pt/{% else %}/{% endif %}" class="logo nav-logo">
             <img src="/static/DelterisCrest.webp" alt="Delteris" width="32" height="32">
             <span class="logo-text"> <span class="logo-accent">Delteris</span></span>
         </a>
-        <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-label="Open menu">
+        <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-label="{% if L == 'pt' %}Abrir menu{% else %}Open menu{% endif %}">
             <span class="nav-toggle-bar"></span>
             <span class="nav-toggle-bar"></span>
             <span class="nav-toggle-bar"></span>
         </button>
         <div class="nav-links" id="nav-links">
+{%- if L == 'pt' %}
+            <a href="/pt/platform.html"{% if page.url == '/pt/platform.html' %} aria-current="page"{% endif %}>Plataforma</a>
+            <a href="/pt/security.html"{% if page.url == '/pt/security.html' %} aria-current="page"{% endif %}>Segurança</a>
+            <a href="/pt/pricing.html"{% if page.url == '/pt/pricing.html' %} aria-current="page"{% endif %}>Preços</a>
+            <a href="/pt/deployment.html"{% if page.url == '/pt/deployment.html' %} aria-current="page"{% endif %}>Implementação</a>
+            <a href="/pt/resources/"{% if page.url contains '/pt/resources' %} aria-current="page"{% endif %}>Recursos</a>
+            <a href="/pt/contact.html" class="btn btn-small"{% if page.url == '/pt/contact.html' %} aria-current="page"{% endif %}>Fale Connosco</a>
+{%- else %}
             <a href="/platform.html"{% if page.url == '/platform.html' %} aria-current="page"{% endif %}>Platform</a>
             <a href="/security.html"{% if page.url == '/security.html' %} aria-current="page"{% endif %}>Security</a>
             <a href="/pricing.html"{% if page.url == '/pricing.html' %} aria-current="page"{% endif %}>Pricing</a>
             <a href="/deployment.html"{% if page.url == '/deployment.html' %} aria-current="page"{% endif %}>Deployment</a>
             <a href="/resources/"{% if page.url contains '/resources' %} aria-current="page"{% endif %}>Resources</a>
             <a href="/contact.html" class="btn btn-small"{% if page.url == '/contact.html' %} aria-current="page"{% endif %}>Contact Us Now</a>
+{%- endif %}
+{%- comment %} Language globe — mirrors the app's LangGlobe. Links straight to the counterpart
+     page in the other language. `alt_url` is set per page; when absent, fall back to the
+     other language's home so the control never dead-ends. {%- endcomment %}
+{%- if L == 'pt' %}
+    {%- assign switch_to = page.alt_url | default: '/' -%}
+            <a href="{{ switch_to }}" class="lang-globe" hreflang="en" title="View in English / Ver em inglês" aria-label="Switch to English">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="M2 12h20"></path>
+                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                </svg>
+                <span class="lang-globe-code">EN</span>
+            </a>
+{%- else %}
+    {%- assign switch_to = page.alt_url | default: '/pt/' -%}
+            <a href="{{ switch_to }}" class="lang-globe" hreflang="pt-PT" title="Ver em português / View in Portuguese" aria-label="Mudar para português">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="M2 12h20"></path>
+                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                </svg>
+                <span class="lang-globe-code">PT</span>
+            </a>
+{%- endif %}
         </div>
     </nav>
