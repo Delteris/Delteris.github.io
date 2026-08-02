@@ -27,47 +27,47 @@
           "name": "What should I look for in welding management software?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Beyond the feature list, weigh the three things that are hard to change later: where your records physically live (on your hardware or a vendor's cloud), whether the price is published or quoted, and whether there is a real security architecture rather than a shared server on the public internet. Add offline capture, exit terms, and whether it covers the whole floor or one slice. Those decide how the software serves you years after the demo."
+            "text": "Beyond the feature list, weigh the things that are hard to change later: whether it reduces work or just digitizes paperwork, how it maintains the qualification chain (WPS to WPQR/PQR to welder qualification) and the continuity clock the codes require, how far it reaches into downstream inspection (NDT) and PWHT, where your records live, and whether the price is published. Score every tool on the same questions rather than counting features."
           }
         },
         {
           "@type": "Question",
-          "name": "Is there an on-premise alternative to cloud welding software?",
+          "name": "What is the difference between a WPS, a WPQR and a PQR?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes — Elenchon is it. Most welding management tools are cloud-only, but Elenchon runs entirely on an appliance in your own facility, so your records never touch a shared server. You still get remote reach for authorised staff and auditors through the Phrakton zero-trust overlay, without exposing the appliance to the public internet."
+            "text": "A WPS (Welding Procedure Specification) is the qualified written procedure a welder follows in production. It must be supported by a procedure qualification record: under ISO that record is the WPQR (per ISO 15614); under ASME IX the equivalent is the PQR. The record documents the actual test weld and its results; the WPS instructs production within qualified ranges. Good software keeps each WPS linked to the record that qualifies it."
           }
         },
         {
           "@type": "Question",
-          "name": "How can I tell if welding software is priced transparently?",
+          "name": "How is welder qualification and continuity tracked?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Transparent pricing means the full number is published before you engage — flat rate, per-seat behaviour, setup fee and every add-on, in writing. Elenchon publishes all of it in plain euros; much of the industry reveals a price only after a sales call. If you cannot model total cost of ownership up front, the pricing isn't transparent."
+            "text": "A welder's qualification (ISO 9606, or performance qualification under ASME IX) certifies them for a range of work, and most codes require ongoing continuity — evidence they have kept welding within that range, commonly on a six-month interval under ISO 9606. Capable software derives continuity from real production entries and warns before a qualification lapses, rather than leaving it to a spreadsheet of expiry dates."
           }
         },
         {
           "@type": "Question",
-          "name": "How do I compare welding software fairly?",
+          "name": "Should welding software handle NDT and PWHT?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Score each tool on the same questions — ownership, pricing transparency, security architecture, offline capability, lock-in, and floor coverage — instead of counting features. A long feature list from a tool you don't control, priced behind a quote, may serve you worse than a leaner tool that answers those structural questions well. Ask every vendor the same list and compare the answers, not the brochures."
+            "text": "It depends on your work. Non-destructive testing (visual, RT, UT, MT, PT) and post-weld heat treatment carry records a code auditor expects tied to the joint — heavily so for pressure work under ASME, less so for light structural work under EN 1090. Decide which downstream records your code actually demands, then ask each vendor precisely how far their coverage goes rather than accepting a blanket yes."
           }
         },
         {
           "@type": "Question",
-          "name": "Does newer welding software mean fewer features?",
+          "name": "Is on-premise or cloud better for welding records?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sometimes, honestly — the oldest tools have had years to accumulate breadth. Elenchon is younger, but built on a modern stack by a two-founder team that ships a shop's request in a release cycle rather than a roadmap quarter, from a cleaner foundation with no legacy to carry. If a specific mature capability is decisive for you, ask us where it stands today and we'll answer straight."
+            "text": "Neither is universally better; they trade off differently. Cloud is convenient and needs no hardware, but your records sit on shared infrastructure and the bill often scales per seat. On-premise keeps records on hardware you own with more predictable cost and stronger data control, at the price of owning an appliance. For shops weighing audits, cost and continuity, ownership often wins."
           }
         },
         {
           "@type": "Question",
-          "name": "Cloud or on-premise — which is right for my shop?",
+          "name": "How does Elenchon fit into this?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "If you have no wish to own hardware and are comfortable with your records on a vendor's infrastructure and a bill that scales with your team, cloud can serve you. But for most fabrication shops that take audits, cost control and continuity seriously, owning the data outright, a cost fixed in advance, and a floor that keeps capturing offline make on-premise the stronger choice."
+            "text": "Elenchon is the on-premise archetype: a self-hosted appliance that runs the full WPS/WPQR/WPQ workflow, weld traceability, equipment and consumables in one system, with pricing published in the open and a zero-trust security layer. It is built so the software does the work rather than digitizing paperwork."
           }
         }
       ]
