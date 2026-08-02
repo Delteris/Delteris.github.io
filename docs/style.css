@@ -199,7 +199,10 @@ nav {
     align-items: center;
     gap: 1rem;
     min-height: var(--nav-h);
-    padding: 0.5rem 5%;
+    /* Asymmetric: logo keeps the 5% content margin on the left; the right side is
+       tightened so the language globe sits near the browser edge rather than lining
+       up with the content column below it. */
+    padding: 0.5rem 2% 0.5rem 5%;
     background: rgba(5, 10, 20, 0.88);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
