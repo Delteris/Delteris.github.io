@@ -2315,6 +2315,17 @@ a.glass-card:hover h3,
     color: var(--accent-blue);
 }
 
+/* Small secondary label under a column header (e.g. "SaaS, per-seat"). */
+.feature-matrix thead th .fm-sub {
+    display: block;
+    margin-top: 0.2rem;
+    font-size: 0.72rem;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    color: var(--text-muted);
+    text-transform: none;
+}
+
 /* Standard column header: white label only. No gold accent here — the plans
    box higher on the page already marks Standard as the recommended tier, so
    the table doesn't repeat it. The blue td spine still draws the eye down the
