@@ -49,6 +49,9 @@
     const copyBtn = document.getElementById('copy-email');
 
     if (copyBtn) {
+        var copiedLabel = (document.documentElement.lang || 'en').slice(0, 2) === 'pt'
+            ? 'Copiado \u2713'
+            : 'Copied \u2713';
         copyBtn.addEventListener('click', function () {
             const address = copyBtn.dataset.email;
             const restore = function () {
@@ -56,7 +59,7 @@
             };
 
             const confirm = function () {
-                copyBtn.textContent = 'Copied \u2713';
+                copyBtn.textContent = copiedLabel;
                 setTimeout(restore, 2000);
             };
 
@@ -215,7 +218,9 @@
     var stage = document.getElementById('L-link');
     if (!stage) return; // only on the security page
 
-    var V = {
+    var isPT = (document.documentElement.lang || 'en').slice(0, 2) === 'pt';
+
+    var V_EN = {
         all: {
             sealed: [], tone: 'var(--cl-app)', spot: null,
             h: 'All three layers',
@@ -249,6 +254,43 @@
         }
     };
 
+    var V_PT = {
+        all: {
+            sealed: [], tone: 'var(--cl-app)', spot: null,
+            h: 'As três camadas',
+            b: 'Três túneis aninhados resistentes a computação quântica — Link TLS (verde), Ziti E2E (âmbar) e App TLS (azul). Cada um é aberto apenas nos extremos, nunca na rede.'
+        },
+        internet: {
+            sealed: ['link', 'e2e', 'app'], tone: 'var(--cl-link)',
+            spot: { x: 150, y: 240, w: 402, h: 24, color: '#43c08f', lx: 351, ly: 298, t: 'apenas texto cifrado resistente a quântica' },
+            h: 'Na rede',
+            b: 'Um gravador na rede capta apenas o <b>Link TLS</b> exterior, que é <b>resistente a computação quântica</b>. Não há aqui chaves para abrir — por isso gravar agora para decifrar depois não funciona.',
+            seals: { link: 'texto cifrado resistente a quântica — tudo o que atravessa a rede' }
+        },
+        phrakton: {
+            sealed: ['e2e', 'app'], tone: 'var(--cl-e2e)',
+            spot: { x: 242, y: 214, w: 132, h: 160, color: '#ecab45', lx: 308, ly: 390, t: 'abre só o Link TLS' },
+            h: 'Um router ou host Phrakton',
+            b: 'Um router termina o <b>Link TLS</b>, mas o tráfego permanece selado dentro do <b>Ziti E2E</b> e do <b>App TLS</b>. Os routers reencaminham-no sem deter essas chaves, por isso o operador não consegue ler os dados de aplicação de um inquilino.',
+            seals: { e2e: 'ainda selado — os routers reencaminham, não detêm esta chave' }
+        },
+        box: {
+            sealed: [], tone: 'var(--danger, #e86f60)',
+            spot: { x: 586, y: 214, w: 530, h: 160, color: '#e86f60', lx: 851, ly: 390, t: 'extremo — alcança os dados' },
+            h: 'Um equipamento comprometido',
+            b: 'O Ziti E2E e o App TLS terminam ambos no equipamento, por isso o controlo do equipamento significa acesso aos dados — <b>apenas para esse inquilino</b>. Isto é um risco de insider ou de acesso físico, não um risco de rede.'
+        },
+        device: {
+            sealed: [], tone: 'var(--cl-muted)',
+            spot: { x: 30, y: 214, w: 132, h: 76, color: '#93a4bb', lx: 96, ly: 306, t: 'o leitor pretendido' },
+            h: 'O próprio dispositivo do trabalhador',
+            b: 'O navegador do trabalhador é o extremo de cada camada e detém as chaves dos <b>seus próprios</b> dados. Este é o leitor pretendido — nada de inesperado.'
+        }
+    };
+
+    var V = isPT ? V_PT : V_EN;
+    var DEFAULT_SEAL = isPT ? 'selado — não pode abrir' : 'sealed — cannot open';
+
     var layers = ['link', 'e2e', 'app'];
     var $ = function (id) { return document.getElementById(id); };
 
@@ -258,7 +300,7 @@
             var n = $('L-' + id);
             n.classList.toggle('is-sealed', c.sealed.indexOf(id) !== -1);
             var seal = n.querySelector('[data-seal="' + id + '"]');
-            seal.textContent = (c.seals && c.seals[id]) ? c.seals[id] : 'sealed — cannot open';
+            seal.textContent = (c.seals && c.seals[id]) ? c.seals[id] : DEFAULT_SEAL;
         });
         $('L-data').style.opacity = c.sealed.indexOf('app') !== -1 ? '.22' : '1';
         $('cl-v-h').textContent = c.h;

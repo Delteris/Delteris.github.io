@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ page.lang | default: 'en' }}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,6 +18,15 @@
 {%- unless page.minimal_head %}
     <link rel="canonical" href="{{ page.url | absolute_url }}">
 {%- endunless %}
+{%- comment %} Reciprocal hreflang alternates. A page declares its counterpart in the
+     other language via `alt_url` in front matter; `en_url`/`pt_url` name each
+     side explicitly so the tag set is identical on both pages (Google requires
+     the alternates to be reciprocal and self-referential). {%- endcomment %}
+{%- if page.en_url and page.pt_url %}
+    <link rel="alternate" hreflang="en" href="{{ page.en_url | absolute_url }}">
+    <link rel="alternate" hreflang="pt-PT" href="{{ page.pt_url | absolute_url }}">
+    <link rel="alternate" hreflang="x-default" href="{{ page.en_url | absolute_url }}">
+{%- endif %}
 
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="icon" type="image/png" sizes="96x96" href="/static/favicon-96.png">
@@ -28,7 +37,10 @@
 
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Delteris">
-    <meta property="og:locale" content="en_US">
+    <meta property="og:locale" content="{% if page.lang == 'pt' %}pt_PT{% else %}en_US{% endif %}">
+{%- if page.en_url and page.pt_url %}
+    <meta property="og:locale:alternate" content="{% if page.lang == 'pt' %}en_US{% else %}pt_PT{% endif %}">
+{%- endif %}
     <meta property="og:url" content="{{ page.url | absolute_url }}">
     <meta property="og:title" content="{{ page.og_title | default: page.title }}">
     <meta property="og:description" content="{{ page.og_description | default: page.description }}">
