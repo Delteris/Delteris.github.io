@@ -32,10 +32,10 @@
         },
         {
           "@type": "Question",
-          "name": "What is the difference between a WPS, a WPQR and a PQR?",
+          "name": "How do I know a tool will actually hold up in an audit?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A WPS (Welding Procedure Specification) is the qualified written procedure a welder follows in production. It must be supported by a procedure qualification record: under ISO that record is the WPQR (per ISO 15614); under ASME IX the equivalent is the PQR. The record documents the actual test weld and its results; the WPS instructs production within qualified ranges. Good software keeps each WPS linked to the record that qualifies it."
+            "text": "Ask to see it produce evidence, not store it. A tool passes the audit test when any weld can be traced — in one pull — to its material heat number, the WPS and qualification record behind it (WPS to WPQR/PQR, per ISO 15614 / ASME IX), the qualified welder, and the inspection result, with a clear history of any change. If assembling that for an auditor means exporting from several places and stitching it by hand, the tool is a filing cabinet, not audit-ready. Ask the vendor to walk one joint end to end in a demo."
           }
         },
         {
