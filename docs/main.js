@@ -223,27 +223,27 @@
         },
         internet: {
             sealed: ['link', 'e2e', 'app'], tone: 'var(--cl-link)',
-            spot: { x: 150, y: 238, w: 400, h: 30, color: '#43c08f', lx: 350, ly: 292, t: 'quantum-safe ciphertext only' },
+            spot: { x: 150, y: 240, w: 402, h: 24, color: '#43c08f', lx: 351, ly: 298, t: 'quantum-safe ciphertext only' },
             h: 'On the wire',
             b: 'A recorder on the network captures only the outer <b>Link TLS</b>, which is <b>quantum-safe</b>. There are no keys here to open — so recording now to decrypt later does not work.',
             seals: { link: 'quantum-safe ciphertext — all that crosses the network' }
         },
         phrakton: {
             sealed: ['e2e', 'app'], tone: 'var(--cl-e2e)',
-            spot: { x: 238, y: 184, w: 140, h: 110, color: '#ecab45', lx: 308, ly: 306, t: 'opens Link TLS only' },
+            spot: { x: 242, y: 214, w: 132, h: 160, color: '#ecab45', lx: 308, ly: 390, t: 'opens Link TLS only' },
             h: 'A Phrakton router or host',
             b: 'A router terminates <b>Link TLS</b>, but the traffic stays sealed inside <b>Ziti E2E</b> and <b>App TLS</b>. Routers relay it without holding those keys, so the operator cannot read a tenant’s app data.',
             seals: { e2e: 'still sealed — routers relay, they don’t hold this key' }
         },
         box: {
             sealed: [], tone: 'var(--danger, #e86f60)',
-            spot: { x: 580, y: 208, w: 542, h: 88, color: '#e86f60', lx: 851, ly: 306, t: 'endpoint — reaches the data' },
+            spot: { x: 586, y: 214, w: 530, h: 160, color: '#e86f60', lx: 851, ly: 390, t: 'endpoint — reaches the data' },
             h: 'A breached box',
             b: 'Ziti E2E and App TLS both terminate on the box, so control of the box means access to the data — <b>for that one tenant only</b>. This is an insider or physical-access risk, not a network one.'
         },
         device: {
             sealed: [], tone: 'var(--cl-muted)',
-            spot: { x: 26, y: 220, w: 118, h: 64, color: '#93a4bb', lx: 85, ly: 300, t: 'the intended reader' },
+            spot: { x: 30, y: 214, w: 132, h: 76, color: '#93a4bb', lx: 96, ly: 306, t: 'the intended reader' },
             h: 'The worker’s own device',
             b: 'The worker’s browser is the far end of every layer and holds the keys to its <b>own</b> data. This is the intended reader — nothing unexpected.'
         }
