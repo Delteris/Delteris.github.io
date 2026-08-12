@@ -255,6 +255,9 @@ nav {
 .nav-dropdown {
     position: relative;
     margin-left: 1.4rem;
+    /* Divider setting Products apart from the flat info links that follow it. */
+    padding-right: 1.4rem;
+    border-right: 1px solid rgba(255, 255, 255, 0.12);
     flex-shrink: 0;
 }
 
@@ -263,25 +266,28 @@ nav {
     appearance: none;
     display: inline-flex;
     align-items: center;
-    gap: 0.3rem;
-    padding: 0;
+    gap: 0.4rem;
+    padding: 0.4rem 0.8rem;
     margin: 0;
     font: inherit;
-    font-size: 0.88rem;
-    font-weight: 500;
+    font-size: 0.9rem;
+    font-weight: 600;
     line-height: 1;
     color: var(--text-main);
-    background: none;
-    border: none;
+    background: rgba(59, 130, 246, 0.06);
+    border: 1px solid rgba(59, 130, 246, 0.28);
+    border-radius: 8px;
     cursor: pointer;
     white-space: nowrap;
-    transition: color 0.3s;
+    transition: color 0.3s, border-color 0.3s, background 0.3s;
 }
 
 .nav-dropdown-btn:hover,
 .nav-dropdown-btn[aria-expanded="true"],
 .nav-dropdown-btn[aria-current="page"] {
     color: var(--accent-blue);
+    border-color: rgba(59, 130, 246, 0.55);
+    background: rgba(59, 130, 246, 0.12);
 }
 
 .nav-dropdown-caret {
@@ -296,9 +302,9 @@ nav {
 
 .nav-dropdown-menu {
     position: absolute;
-    top: calc(100% + 0.5rem);
+    top: calc(100% + 0.6rem);
     left: 0;
-    width: 22rem;
+    width: 25rem;
     max-width: calc(100vw - 2rem);
     background: rgba(9, 16, 28, 0.98);
     backdrop-filter: blur(16px);
@@ -1422,10 +1428,13 @@ footer {
         border: 1px solid rgba(59, 130, 246, 0.4);
     }
 
-    /* Products dropdown: full-width row, menu drops inline (not an absolute popover). */
+    /* Products dropdown: full-width row, menu drops inline (not an absolute popover).
+       Neutralize the desktop divider + pill styling — on mobile it's a stacked row. */
     .nav-dropdown {
         margin: 0;
         width: 100%;
+        padding-right: 0;
+        border-right: none;
         border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     }
 
@@ -1434,6 +1443,9 @@ footer {
         justify-content: space-between;
         padding: 0.9rem 0.25rem;
         font-size: 1rem;
+        background: none;
+        border: none;
+        border-radius: 0;
     }
 
     .nav-dropdown-menu {
