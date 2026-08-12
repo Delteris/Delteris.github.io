@@ -52,7 +52,7 @@
             {
               "@type": "Question",
               "name": "Can I filter or search my WPSs by welding process?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Yes. Because every field is extracted at import, you can filter your library by real criteria — welding process, base and filler material, position, thickness range and more. You can find every WPS for 121 welding, or specifically 121 + 135 with a backing pass, in a couple of clicks, instead of scrolling filenames." }
+              "acceptedAnswer": { "@type": "Answer", "text": "Yes. Because every field is extracted at import, you can filter your library by real criteria — welding process, base and filler material, position, thickness range and more. You can narrow it down to a single process, or a specific combination of processes with or without a backing pass, in a couple of clicks, instead of scrolling filenames." }
             },
             {
               "@type": "Question",
