@@ -250,6 +250,104 @@ nav {
     color: var(--accent-blue);
 }
 
+/* Products dropdown — the two-product selector (Elenchon + Elenchon WPS Manager).
+   Mirrors the language switcher's click-to-open popover model. */
+.nav-dropdown {
+    position: relative;
+    margin-left: 1.4rem;
+    flex-shrink: 0;
+}
+
+.nav-dropdown-btn {
+    -webkit-appearance: none;
+    appearance: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    font-size: 0.88rem;
+    font-weight: 500;
+    line-height: 1;
+    color: var(--text-main);
+    background: none;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: color 0.3s;
+}
+
+.nav-dropdown-btn:hover,
+.nav-dropdown-btn[aria-expanded="true"],
+.nav-dropdown-btn[aria-current="page"] {
+    color: var(--accent-blue);
+}
+
+.nav-dropdown-caret {
+    width: 14px;
+    height: 14px;
+    transition: transform 0.25s;
+}
+
+.nav-dropdown-btn[aria-expanded="true"] .nav-dropdown-caret {
+    transform: rotate(180deg);
+}
+
+.nav-dropdown-menu {
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    left: 0;
+    width: 22rem;
+    max-width: calc(100vw - 2rem);
+    background: rgba(9, 16, 28, 0.98);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.55);
+    overflow: hidden;
+    z-index: 1100;
+    padding: 0.4rem;
+}
+
+.nav-dropdown-menu[hidden] { display: none; }
+
+.nav-dropdown-menu a {
+    display: block;
+    margin: 0;
+    padding: 0.7rem 0.8rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.nav-dropdown-menu a:hover,
+.nav-dropdown-menu a[aria-current="page"] {
+    background: rgba(59, 130, 246, 0.1);
+}
+
+.nav-dropdown-name {
+    display: block;
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: var(--text-main);
+    margin-bottom: 0.15rem;
+}
+
+.nav-dropdown-menu a:hover .nav-dropdown-name,
+.nav-dropdown-menu a[aria-current="page"] .nav-dropdown-name {
+    color: var(--accent-blue);
+}
+
+.nav-dropdown-desc {
+    display: block;
+    font-size: 0.78rem;
+    font-weight: 400;
+    line-height: 1.35;
+    color: var(--text-muted, rgba(255, 255, 255, 0.6));
+}
+
 /* Language switcher — mirrors the in-app LangGlobe: a bordered globe button whose
    badge shows the CURRENT language, opening a searchable dropdown of all languages. */
 .lang-switch {
@@ -1322,6 +1420,29 @@ footer {
         text-align: center;
         border-bottom: none;
         border: 1px solid rgba(59, 130, 246, 0.4);
+    }
+
+    /* Products dropdown: full-width row, menu drops inline (not an absolute popover). */
+    .nav-dropdown {
+        margin: 0;
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .nav-dropdown-btn {
+        width: 100%;
+        justify-content: space-between;
+        padding: 0.9rem 0.25rem;
+        font-size: 1rem;
+    }
+
+    .nav-dropdown-menu {
+        position: static;
+        width: 100%;
+        max-width: none;
+        margin: 0 0 0.5rem;
+        box-shadow: none;
+        background: rgba(255, 255, 255, 0.03);
     }
 
     /* In the mobile menu the switcher becomes a full-width labelled row, and its
