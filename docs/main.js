@@ -32,6 +32,35 @@
         });
     }
 
+    /* ---------- Products dropdown (mirrors the language switcher pattern) ---------- */
+    const productsWrap = document.querySelector('[data-nav-dropdown]');
+    if (productsWrap) {
+        const productsBtn = productsWrap.querySelector('.nav-dropdown-btn');
+        const productsMenu = productsWrap.querySelector('.nav-dropdown-menu');
+
+        const closeProducts = function () {
+            if (productsMenu.hidden) return;
+            productsMenu.hidden = true;
+            productsBtn.setAttribute('aria-expanded', 'false');
+        };
+        const openProducts = function () {
+            productsMenu.hidden = false;
+            productsBtn.setAttribute('aria-expanded', 'true');
+        };
+
+        productsBtn.addEventListener('click', function (e) {
+            e.stopPropagation();
+            if (productsMenu.hidden) openProducts(); else closeProducts();
+        });
+        // Close on outside click and on Escape.
+        document.addEventListener('click', function (e) {
+            if (!productsWrap.contains(e.target)) closeProducts();
+        });
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') closeProducts();
+        });
+    }
+
     /* ---------- Language switcher dropdown (mirrors the in-app LangGlobe) ---------- */
     const langSwitch = document.querySelector('[data-lang-switch]');
     if (langSwitch) {

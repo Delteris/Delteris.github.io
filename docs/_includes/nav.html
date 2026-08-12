@@ -18,7 +18,22 @@
         </button>
         <div class="nav-links" id="nav-links">
 {%- if L == 'pt' %}
-            <a href="/pt/platform.html"{% if page.url == '/pt/platform.html' %} aria-current="page"{% endif %}>Plataforma</a>
+            <div class="nav-dropdown" data-nav-dropdown>
+                <button type="button" class="nav-dropdown-btn" id="products-btn" aria-haspopup="true" aria-expanded="false"{% if page.url == '/pt/platform.html' or page.url == '/pt/wps-management-software.html' %} aria-current="page"{% endif %}>
+                    Produtos
+                    <svg class="nav-dropdown-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg>
+                </button>
+                <div class="nav-dropdown-menu" role="menu" aria-label="Produtos" hidden>
+                    <a href="/pt/platform.html" role="menuitem"{% if page.url == '/pt/platform.html' %} aria-current="page"{% endif %}>
+                        <span class="nav-dropdown-name">Elenchon</span>
+                        <span class="nav-dropdown-desc">Rastreabilidade, qualificação e captura no chão de fábrica — no local</span>
+                    </a>
+                    <a href="/pt/wps-management-software.html" role="menuitem"{% if page.url == '/pt/wps-management-software.html' %} aria-current="page"{% endif %}>
+                        <span class="nav-dropdown-name">Elenchon WPS Manager</span>
+                        <span class="nav-dropdown-desc">Gestão de WPS na cloud — importe, organize e encontre</span>
+                    </a>
+                </div>
+            </div>
             <a href="/pt/security.html"{% if page.url == '/pt/security.html' %} aria-current="page"{% endif %}>Segurança</a>
             <a href="/pt/pricing.html"{% if page.url == '/pt/pricing.html' %} aria-current="page"{% endif %}>Preços</a>
             <a href="/pt/deployment.html"{% if page.url == '/pt/deployment.html' %} aria-current="page"{% endif %}>Implementação</a>
@@ -26,7 +41,22 @@
             <a href="/pt/resources/"{% if page.url contains '/pt/resources' %} aria-current="page"{% endif %}>Recursos</a>
             <a href="/pt/contact.html" class="btn btn-small"{% if page.url == '/pt/contact.html' %} aria-current="page"{% endif %}>Fale Connosco</a>
 {%- else %}
-            <a href="/platform.html"{% if page.url == '/platform.html' %} aria-current="page"{% endif %}>Platform</a>
+            <div class="nav-dropdown" data-nav-dropdown>
+                <button type="button" class="nav-dropdown-btn" id="products-btn" aria-haspopup="true" aria-expanded="false"{% if page.url == '/platform.html' or page.url == '/wps-management-software.html' %} aria-current="page"{% endif %}>
+                    Products
+                    <svg class="nav-dropdown-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg>
+                </button>
+                <div class="nav-dropdown-menu" role="menu" aria-label="Products" hidden>
+                    <a href="/platform.html" role="menuitem"{% if page.url == '/platform.html' %} aria-current="page"{% endif %}>
+                        <span class="nav-dropdown-name">Elenchon</span>
+                        <span class="nav-dropdown-desc">On-premise traceability, qualification &amp; shop-floor capture</span>
+                    </a>
+                    <a href="/wps-management-software.html" role="menuitem"{% if page.url == '/wps-management-software.html' %} aria-current="page"{% endif %}>
+                        <span class="nav-dropdown-name">Elenchon WPS Manager</span>
+                        <span class="nav-dropdown-desc">Cloud WPS management — import, organize &amp; find</span>
+                    </a>
+                </div>
+            </div>
             <a href="/security.html"{% if page.url == '/security.html' %} aria-current="page"{% endif %}>Security</a>
             <a href="/pricing.html"{% if page.url == '/pricing.html' %} aria-current="page"{% endif %}>Pricing</a>
             <a href="/deployment.html"{% if page.url == '/deployment.html' %} aria-current="page"{% endif %}>Deployment</a>
