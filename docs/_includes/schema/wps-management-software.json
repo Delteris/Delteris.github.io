@@ -14,14 +14,14 @@
           "applicationCategory": "BusinessApplication",
           "applicationSubCategory": "WPS Management Software",
           "operatingSystem": "Cloud / Web",
-          "description": "Cloud WPS management software that imports your existing Welding Procedure Specification documents with a parser, extracts every field, and lets you filter your whole WPS library by process, material, position and more. Supporting PQRs are uploaded, displayed and kept linked. From Delteris — the standalone cloud WPS library from the Elenchon platform.",
+          "description": "Cloud WPS management software that imports your existing Welding Procedure Specification documents with a parser, extracts every field, and lets you filter your whole WPS library by process, material, position and more. Each WPS keeps its full linked document chain attached and visible — the qualifying WPQR, and the preliminary WPS (pWPS) behind it. From Delteris — the standalone cloud WPS library from the Elenchon platform.",
           "keywords": "WPS management software, WPS software, WPS library, WPS register, WPS document management, welding procedure specification management, WPS import, WPS parser, organize WPS, find WPS by process",
           "featureList": [
             "Parser-driven import of existing WPS documents (auto field extraction)",
             "Batch import of a whole WPS library",
             "Filter and search WPSs by welding process, material, position and range",
             "Central cloud WPS library — always know every procedure you hold",
-            "Upload, display and print supporting PQR records to PDF",
+            "Linked document chain per WPS — attached WPQR and pWPS, visible and printable to PDF",
             "White-glove onboarding with per-template parser setup",
             "Excel-style WPS builder and authoring (on roadmap)"
           ],
