@@ -6,6 +6,12 @@
      every page and one more entry to the list below. {%- endcomment %}
 {%- assign L = page.lang | default: 'en' -%}
 {%- if L == 'pt' %}{% assign current_code = 'PT' %}{% else %}{% assign current_code = 'EN' %}{% endif %}
+{%- comment %} WPS Manager context: on any WPS Manager page (landing or its contact page)
+     the top nav swaps from Elenchon's links to WPS-Manager-specific ones, so a visitor
+     never gets bounced into Elenchon's on-premise Pricing/Security/etc. {%- endcomment %}
+{%- assign is_wpsm = false -%}
+{%- if page.url contains 'wps-management-software' or page.url contains 'wps-manager-contact' %}{% assign is_wpsm = true %}{% endif -%}
+{%- if L == 'pt' %}{% assign wpsm_home = '/pt/wps-management-software.html' %}{% assign wpsm_contact = '/pt/wps-manager-contact.html' %}{% else %}{% assign wpsm_home = '/wps-management-software.html' %}{% assign wpsm_contact = '/wps-manager-contact.html' %}{% endif -%}
     <nav aria-label="{% if L == 'pt' %}Navegação principal{% else %}Main navigation{% endif %}">
         <a href="{% if L == 'pt' %}/pt/{% else %}/{% endif %}" class="logo nav-logo">
             <img src="/static/DelterisCrest.webp" alt="Delteris" width="32" height="32">
@@ -34,12 +40,19 @@
                     </a>
                 </div>
             </div>
+{%- if is_wpsm %}
+            <a href="{{ wpsm_home }}#import">Funcionalidades</a>
+            <a href="{{ wpsm_home }}#onboarding">Como Funciona</a>
+            <a href="{{ wpsm_home }}#pricing">Preços</a>
+            <a href="{{ wpsm_contact }}" class="btn btn-small"{% if page.url contains 'wps-manager-contact' %} aria-current="page"{% endif %}>Acesso Antecipado</a>
+{%- else %}
             <a href="/pt/security.html"{% if page.url == '/pt/security.html' %} aria-current="page"{% endif %}>Segurança</a>
             <a href="/pt/pricing.html"{% if page.url == '/pt/pricing.html' %} aria-current="page"{% endif %}>Preços</a>
             <a href="/pt/deployment.html"{% if page.url == '/pt/deployment.html' %} aria-current="page"{% endif %}>Implementação</a>
             <a href="/pt/roadmap.html"{% if page.url == '/pt/roadmap.html' %} aria-current="page"{% endif %}>Roteiro</a>
             <a href="/pt/resources/"{% if page.url contains '/pt/resources' %} aria-current="page"{% endif %}>Recursos</a>
             <a href="/pt/contact.html" class="btn btn-small"{% if page.url == '/pt/contact.html' %} aria-current="page"{% endif %}>Fale Connosco</a>
+{%- endif %}
 {%- else %}
             <div class="nav-dropdown" data-nav-dropdown>
                 <button type="button" class="nav-dropdown-btn" id="products-btn" aria-haspopup="true" aria-expanded="false"{% if page.url == '/platform.html' or page.url == '/wps-management-software.html' %} aria-current="page"{% endif %}>
@@ -57,12 +70,19 @@
                     </a>
                 </div>
             </div>
+{%- if is_wpsm %}
+            <a href="{{ wpsm_home }}#import">Features</a>
+            <a href="{{ wpsm_home }}#onboarding">How It Works</a>
+            <a href="{{ wpsm_home }}#pricing">Pricing</a>
+            <a href="{{ wpsm_contact }}" class="btn btn-small"{% if page.url contains 'wps-manager-contact' %} aria-current="page"{% endif %}>Get Early Access</a>
+{%- else %}
             <a href="/security.html"{% if page.url == '/security.html' %} aria-current="page"{% endif %}>Security</a>
             <a href="/pricing.html"{% if page.url == '/pricing.html' %} aria-current="page"{% endif %}>Pricing</a>
             <a href="/deployment.html"{% if page.url == '/deployment.html' %} aria-current="page"{% endif %}>Deployment</a>
             <a href="/roadmap.html"{% if page.url == '/roadmap.html' %} aria-current="page"{% endif %}>Roadmap</a>
             <a href="/resources/"{% if page.url contains '/resources' %} aria-current="page"{% endif %}>Resources</a>
             <a href="/contact.html" class="btn btn-small"{% if page.url == '/contact.html' %} aria-current="page"{% endif %}>Contact Us Now</a>
+{%- endif %}
 {%- endif %}
 {%- comment %} Language dropdown — mirrors the app's LangGlobe. Badge = current language.
      Menu lists all languages; each links to this page's counterpart in that language,
