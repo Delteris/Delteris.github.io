@@ -29,9 +29,9 @@
             "@type": "Offer",
             "url": "https://delteris.com/wps-management-software.html#pricing",
             "price": "80.00",
-            "priceCurrency": "USD",
+            "priceCurrency": "EUR",
             "availability": "https://schema.org/InStock",
-            "description": "$80 per month, or $720 per year (effective $60/month) billed annually. Flat, fully published price."
+            "description": "€80 per month, or €720 per year (effective €60/month) billed annually. Flat, fully published price. Includes 50 GB storage; additional 50 GB blocks €10/month. One tenancy per system."
           },
           "provider": { "@id": "https://delteris.com/#organization" }
         },
@@ -62,7 +62,7 @@
             {
               "@type": "Question",
               "name": "How much does Elenchon WPS Manager cost?",
-              "acceptedAnswer": { "@type": "Answer", "text": "$80 per month, or $720 per year (an effective $60 per month) billed annually. One flat, fully published price — no per-seat charges and no contact-us-for-a-quote. Onboarding and parser setup for your template are included and handled directly by the founders." }
+              "acceptedAnswer": { "@type": "Answer", "text": "€80 per month, or €720 per year (an effective €60 per month) billed annually. One flat, fully published price — no per-seat charges and no contact-us-for-a-quote. It includes 50 GB of storage (tens of thousands of WPSs); extra 50 GB blocks are €10/month if you ever need them. One tenancy is one system — we recommend one instance per isolated factory but do not police it. Onboarding and parser setup for your template are included and handled directly by the founders." }
             },
             {
               "@type": "Question",
