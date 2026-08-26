@@ -3,9 +3,9 @@ layout: default
 lang: pt
 permalink: /pt/wps-management-software.html
 title: "Software de Gestão de WPS (Cloud) | Elenchon WPS Manager"
-description: "Software de gestão de WPS na cloud: importe as suas WPS existentes com o nosso parser, extraia cada campo automaticamente e filtre toda a biblioteca de WPS por processo, material e mais. Da Delteris."
+description: "Software de gestão de WPS na cloud que mantém o seu registo-mestre de WPS atualizado. Importe WPS em Excel ou PDF, reveja as edições propostas e aplique apenas as células aprovadas à sua própria folha — versionado, exportável quando precisar. Da Delteris."
 og_title: "Elenchon WPS Manager — Software de Gestão de WPS na Cloud"
-og_description: "Importe, organize e encontre instantaneamente cada Especificação de Procedimento de Soldadura que já tem. Uma biblioteca de WPS na cloud que lê os seus ficheiros WPS existentes — sem semanas de introdução manual em folhas de cálculo."
+og_description: "Mantenha o seu grande registo de WPS atualizado sem a introdução manual. Importe WPS em Excel ou PDF, extraia cada campo automaticamente, reveja as edições propostas e exporte um registo atualizado com os ficheiros associados sempre que a empresa pedir."
 og_image: "/static/DelterisCrest.webp"
 og_image_alt: "Elenchon WPS Manager by Delteris — software de gestão de WPS na cloud"
 schema: schema/wps-management-software.json
@@ -16,8 +16,8 @@ alt_url: "/wps-management-software.html"
     <header class="page-hero">
         <div class="hero-content">
             <span class="hero-eyebrow">Elenchon WPS Manager · Cloud</span>
-            <h1 class="text-glow">Software de Gestão de WPS.<br>Cada Procedimento, Organizado e Encontrável.</h1>
-            <p class="hero-sub">Importe as WPS que já tem, deixe o parser ler cada campo automaticamente e encontre qualquer procedimento em segundos — filtre toda a biblioteca por processo, material ou passe de suporte. Uma biblioteca de WPS na cloud, sem semanas de introdução de dados em folhas de cálculo.</p>
+            <h1 class="text-glow">Software de Gestão de WPS.<br>O Seu Registo, Sempre Atualizado.</h1>
+            <p class="hero-sub">O seu registo-mestre de WPS é o documento que a empresa pede — e mantê-lo atualizado à mão é o trabalho que ninguém quer. O Elenchon WPS Manager lê as WPS que já tem, em Excel ou PDF, extrai cada campo e permite-lhe aprovar as alterações que entram no seu próprio registo. Importar, rever, exportar — sem semanas de introdução de dados, nada muda sem a validação de uma pessoa.</p>
             <div class="cta-group">
                 <a href="/pt/wps-manager-contact.html" class="btn btn-primary">Contacte os Fundadores</a>
                 <a href="#pricing" class="btn btn-secondary">Ver Preços</a>
@@ -31,74 +31,320 @@ alt_url: "/wps-management-software.html"
 
     <section class="page-section container" id="overview">
         <div class="summary-panel">
-            <h2 class="text-glow">A Casa Organizada para Cada WPS Que Tem</h2>
-            <p><strong>O software de gestão de WPS mantém as suas Especificações de Procedimento de Soldadura organizadas, pesquisáveis e num só lugar — para que saiba sempre exatamente que procedimentos tem e encontre qualquer um deles instantaneamente.</strong> O Elenchon WPS Manager é uma ferramenta na cloud construída à volta de uma ideia: escrever uma WPS nunca foi a parte difícil — manter centenas delas organizadas, e colocar as existentes num sistema sem semanas de introdução manual, é. O nosso parser lê os seus ficheiros WPS existentes e extrai cada campo, tornando toda a sua biblioteca filtrável desde o primeiro dia. É a biblioteca de WPS da plataforma Elenchon, oferecida de forma autónoma na cloud.</p>
+            <h2 class="text-glow">O Registo Que Já Mantém — Mantido Atualizado por Si</h2>
+            <p><strong>O software de gestão de WPS mantém as suas Especificações de Procedimento de Soldadura organizadas, pesquisáveis e num só lugar — para que saiba sempre exatamente que procedimentos possui, e o seu registo-mestre nunca esteja desatualizado.</strong> A maioria das oficinas já gere as suas WPS a partir de uma grande folha de cálculo, porque a empresa exige uma folha de cálculo. Esse registo é a verdade — e mantê-lo à mão, WPS a WPS, é lento e propenso a erros. O Elenchon WPS Manager trata a sua folha como o núcleo de verdade: carrega-a, a aplicação visualiza-a e, à medida que chegam WPS novas ou revistas — em Excel <em>ou</em> PDF — propõe as edições exatas de cada célula, aguarda a sua aprovação e aplica apenas as células que confirmar. Depois exporta o registo atualizado, mais uma pasta com os ficheiros WPS associados, sempre que precisar. É o motor de WPS da plataforma Elenchon, oferecido de forma autónoma na cloud.</p>
         </div>
+    </section>
+
+    <!-- ============================================================
+         CAPTURA #1 — PAINEL PRINCIPAL / RESUMO
+         Capturar: o ecrã "Resumo" da aplicação (o painel com a saudação,
+         os cartões "Precisa de atenção" e os mosaicos de estatística
+         "Num relance": WPS / pWPS / WPQR / qualificadas).
+         Porquê aqui: mostra todo o produto num relance logo após o resumo,
+         e prova que é uma aplicação real e polida — não um conceito.
+         Largura recomendada ~1100px, UI escura para assentar no tema escuro.
+         ============================================================ -->
+    <section class="page-section container u-tight-top" id="screenshot-overview">
+        <figure class="app-figure">
+            <div class="app-figure-frame">
+                <div class="app-figure-placeholder">
+                    <span class="app-figure-tag">Captura de ecrã</span>
+                    <p><strong>Painel de resumo da aplicação</strong><br>Capture o ecrã Resumo — a saudação, os cartões “Precisa de atenção” e os mosaicos WPS / pWPS / WPQR / qualificadas.</p>
+                </div>
+                <!-- Substitua o div de espaço reservado acima por, ex.:
+                <img src="/static/wpsm/overview.webp" width="1100" height="700" loading="lazy"
+                     alt="Painel de resumo do Elenchon WPS Manager com cartões de estado do registo e estatísticas de WPS"> -->
+            </div>
+            <figcaption>Tudo num relance: o que precisa de revisão e a contagem completa de procedimentos que possui.</figcaption>
+        </figure>
     </section>
 
     <section class="page-section container" id="import">
         <div class="section-header">
-            <span class="eyebrow">Importação com Parser</span>
-            <h2>Coloque as Suas WPS no Sistema — em Minutos, Não Semanas</h2>
-            <p class="subtitle">Carregue os ficheiros WPS que já tem. O parser faz a introdução de dados por si.</p>
+            <span class="eyebrow">Importação — Excel e PDF</span>
+            <h2>As Suas WPS Lá Dentro — Em Minutos, Não Semanas</h2>
+            <p class="subtitle">Carregue os documentos WPS que já tem, no formato em que já os tem. O parser faz a introdução de dados por si.</p>
         </div>
         <div class="glass-card feature-block">
-            <p class="feature-lead">A maioria das ferramentas de WPS obriga-o a re-escrever cada procedimento no seu formato, ou a lutar com um modelo de Excel frágil — transformando uma pasta de WPS existentes em dias ou semanas de trabalho. O Elenchon WPS Manager lê os seus documentos em vez disso.</p>
+            <p class="feature-lead">A maioria das ferramentas de WPS obriga-o a redigitar cada procedimento no seu formato, ou a lutar com um modelo Excel frágil — transformando uma pasta de WPS existentes em dias ou semanas de trabalho. O Elenchon WPS Manager lê os seus documentos, quer cheguem como folha de cálculo ou como formulário PDF digital.</p>
             <ul class="feature-list">
-                <li><strong>Lê os seus ficheiros WPS reais:</strong> O parser reconstrói cada formulário WPS e lê as suas células, extraindo processo, materiais, posições, gamas e mais para campos estruturados — automaticamente.</li>
-                <li><strong>Importação em lote:</strong> Traga uma pilha inteira de WPS existentes de uma só vez, não um formulário de cada vez.</li>
-                <li><strong>Sem folhas de cálculo estranhas:</strong> Sem intermediário Excel frágil, sem um projeto de introdução de dados de vários dias para começar. Carregue, e a sua biblioteca fica preenchida.</li>
-                <li><strong>Feito para o seu modelo:</strong> O parser é afinado ao layout de WPS da sua própria empresa durante a integração, para que leia a <em>sua</em> papelada — não um formulário genérico ao qual teria de se conformar.</li>
+                <li><strong>Excel e PDF, ambos nativos:</strong> Dois parsers dedicados — um para folhas WPS em Excel, outro que reconstrói a grelha do formulário PDF e lê as suas células. Processo, materiais, posições, gamas, parâmetros passe a passe e mais entram como campos estruturados, automaticamente.</li>
+                <li><strong>Lê formulários bilingues de origem:</strong> O perfil incorporado compreende esquemas de WPS em inglês e português tal como fornecido, por isso um formulário misto PT/EN importa sem configuração especial.</li>
+                <li><strong>Importação em lote:</strong> Traga uma pilha inteira de WPS existentes de uma vez, não um formulário de cada vez.</li>
+                <li><strong>Aporte térmico calculado onde falta:</strong> Se um formulário deixa a coluna de aporte térmico vazia, a aplicação calcula-o a partir dos parâmetros do arco (corrente × tensão × 60 ÷ velocidade de avanço × eficiência do processo, segundo a EN&nbsp;1011-1) e sinaliza-o para que confirme contra o PQR — nunca um valor silencioso.</li>
+                <li><strong>Ajustado ao seu modelo:</strong> Formulários no estilo ISO&nbsp;15609 funcionam de imediato; durante a integração ajustamos o parser ao esquema exato da sua empresa, para que leia a <em>sua</em> papelada — não um formulário genérico ao qual teria de se conformar.</li>
             </ul>
         </div>
     </section>
 
-    <section class="page-section container" id="filter">
+    <!-- ============================================================
+         CAPTURA #2 — IMPORTAÇÃO / ADICIONAR UM DOCUMENTO
+         Capturar: o ecrã "Biblioteca" a meio de uma importação, OU o momento
+         logo após adicionar uma WPS onde surge o aviso "adicionado — N campos
+         a verificar". Idealmente mostre uma WPS Excel e uma PDF na mesma
+         biblioteca, para que a afirmação "ambos os formatos" seja visível.
+         ============================================================ -->
+    <section class="page-section container u-tight-top" id="screenshot-import">
+        <figure class="app-figure">
+            <div class="app-figure-frame">
+                <div class="app-figure-placeholder">
+                    <span class="app-figure-tag">Captura de ecrã</span>
+                    <p><strong>Importar uma WPS</strong><br>Capture a Biblioteca com uma WPS Excel e uma PDF lado a lado, ou a confirmação “adicionado — N campos a verificar” logo após uma importação.</p>
+                </div>
+            </div>
+            <figcaption>Carregue uma pilha de WPS em Excel ou PDF; o parser transforma-as em registos estruturados e filtráveis.</figcaption>
+        </figure>
+    </section>
+
+    <section class="page-section container" id="review">
         <div class="section-header">
-            <span class="eyebrow">Pesquisa e Filtragem</span>
-            <h2>Encontre Qualquer Procedimento em Segundos</h2>
-            <p class="subtitle">Porque cada campo é extraído, filtra pelo que realmente importa — não por nomes de ficheiro.</p>
+            <span class="eyebrow">Edições Revistas por Humanos</span>
+            <h2>Nada Toca no Seu Registo Sem a Sua Aprovação</h2>
+            <p class="subtitle">Cada importação propõe um conjunto de alterações. Vê o valor atual, o valor novo, e decide — célula a célula.</p>
         </div>
         <div class="glass-card feature-block">
-            <p class="feature-lead">Uma pasta de PDFs é um palheiro. Uma biblioteca de WPS com cada campo extraído é uma base de dados que pode questionar. Peça-lhe exatamente o procedimento de que precisa.</p>
+            <p class="feature-lead">Um registo só é fiável se controlar o que lá entra. Por isso as importações não sobrescrevem a sua folha — ficam em fila como edições propostas que revê e confirma.</p>
             <ul class="feature-list">
-                <li><strong>Filtre por critérios reais:</strong> Restrinja a sua biblioteca por processo de soldadura, material base ou de adição, posição, gama de espessura e mais — até uma combinação específica de processos, com ou sem passe de suporte, em alguns cliques.</li>
-                <li><strong>Por campo, não por nome de ficheiro:</strong> Nunca mais percorra nomes de ficheiro nem abra documentos para verificar o conteúdo — os valores são indexados e pesquisáveis.</li>
-                <li><strong>Saiba sempre o que tem:</strong> Uma biblioteca central significa que sabe sempre o conjunto completo de procedimentos que a sua oficina qualificou — nada perdido na caixa de correio de alguém ou numa drive partilhada.</li>
+                <li><strong>Veja exatamente o que mudaria:</strong> A fila de revisão apresenta cada edição proposta como valor atual → valor novo, ao nível da célula individual. Marque uma célula para aplicar, desmarque para deixar como estava.</li>
+                <li><strong>Corrija antes de confirmar:</strong> Corrija qualquer valor no momento, ou adicione uma linha para um campo que o parser não apanhou — e depois aprove. O que entra é o que validou.</li>
+                <li><strong>Leituras de baixa confiança são sinalizadas:</strong> Qualquer célula de que o parser não teve a certeza — ou um aporte térmico que calculou — fica sombreada a âmbar e destacada para verificação, para que a sua atenção vá exatamente onde é necessária e os valores confiáveis não lhe roubem tempo.</li>
+                <li><strong>Defina o seu próprio critério de aprovação:</strong> Escolha como as importações entram — reveja <em>todos</em> os valores, reveja só os incertos (a predefinição), ou aplique tudo automaticamente e conte com o versionamento para desfazer. O seu registo, as suas regras.</li>
+                <li><strong>Deteção de divergência:</strong> Se uma WPS for editada depois de os seus valores já terem entrado, a aplicação avisa-o de que o registo está dessincronizado da biblioteca e propõe voltar a sincronizar — para que a folha nunca se afaste silenciosamente dos documentos que a suportam.</li>
+                <li><strong>Só as células aprovadas são aplicadas:</strong> A sua folha nunca é reconstruída de raiz. A aplicação escreve as células confirmadas no seu próprio ficheiro e deixa tudo o resto exatamente como o tinha.</li>
             </ul>
         </div>
+    </section>
+
+    <!-- ============================================================
+         CAPTURA #3 — FILA DE REVISÃO (a mais importante)
+         Capturar: a fila de revisão a mostrar um conjunto de alterações com
+         as colunas Célula / Campo / Valor atual / Valor novo / Aplicar?,
+         incluindo pelo menos uma linha âmbar (baixa confiança) e os botões
+         Confirmar / Rejeitar.
+         Porquê aqui: é o ecrã mais diferenciador — a promessa "nada entra sem
+         validação" tornada visível. Faça esta captura grande / à largura toda.
+         ============================================================ -->
+    <section class="page-section container u-tight-top" id="screenshot-review">
+        <figure class="app-figure app-figure-wide">
+            <div class="app-figure-frame">
+                <div class="app-figure-placeholder">
+                    <span class="app-figure-tag">Captura de ecrã</span>
+                    <p><strong>A fila de revisão</strong><br>Capture um conjunto de alterações com as colunas Célula / Campo / Atual / Novo / Aplicar?, uma linha âmbar de baixa confiança e os botões Confirmar e Rejeitar. Esta é a captura mais importante da página.</p>
+                </div>
+            </div>
+            <figcaption>Valor atual versus valor proposto, célula a célula — com as leituras incertas sombreadas para um olhar mais atento.</figcaption>
+        </figure>
+    </section>
+
+    <section class="page-section container" id="registers">
+        <div class="section-header">
+            <span class="eyebrow">O Seu Registo, Visualizado e Versionado</span>
+            <h2>A Folha-Mestra, ao Vivo na Cloud</h2>
+            <p class="subtitle">Abra o seu grande registo como uma grelha limpa, mantenha cada versão e exporte-o sempre que a empresa pedir.</p>
+        </div>
+        <div class="glass-card feature-block">
+            <p class="feature-lead">O registo que mantém é a <em>sua</em> folha — não um modelo que a aplicação regenera e devolve alterado. O Elenchon WPS Manager guarda a cópia mais recente, mostra-a como uma grelha legível e mantém um histórico completo por trás.</p>
+            <ul class="feature-list">
+                <li><strong>Visualizada, não apenas guardada:</strong> A sua folha-mestra abre como uma grelha rápida e filtrável — sem mais rolar uma folha de cálculo gigante ou abri-la no Excel só para consultar algo.</li>
+                <li><strong>Cada versão guardada:</strong> Cada conjunto de alterações aprovado produz uma nova versão do registo (v1 → v2 → v3…). Reverta para qualquer instantâneo anterior; a versão atual e a mais recente estão sempre protegidas.</li>
+                <li><strong>Exportação a pedido:</strong> Produza o registo atualizado como uma folha Excel limpa sempre que precisar — mais uma pasta com os ficheiros WPS associados, agrupados num zip, para que a papelada viaje com a folha.</li>
+                <li><strong>Retenção nos seus termos:</strong> Decida quanto tempo são mantidas as versões antigas e o histórico de atividade, ou mantenha-os indefinidamente — um administrador define a política por implementação.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         CAPTURA #4 — GRELHA DO REGISTO
+         Capturar: a vista de grelha "Registos" — a folha-mestra visualizada
+         como grelha legível, com o seletor de versões (v1/v2/v3…) e o botão
+         Exportar visíveis. Se uma célula tiver sido recentemente aplicada a
+         partir de um conjunto de alterações aprovado, melhor ainda.
+         ============================================================ -->
+    <section class="page-section container u-tight-top" id="screenshot-register">
+        <figure class="app-figure">
+            <div class="app-figure-frame">
+                <div class="app-figure-placeholder">
+                    <span class="app-figure-tag">Captura de ecrã</span>
+                    <p><strong>A grelha do registo</strong><br>Capture a vista de grelha Registos com o seletor de versões (v1 / v2 / v3…) e o botão Exportar visíveis.</p>
+                </div>
+            </div>
+            <figcaption>A sua folha-mestra como grelha ao vivo — versionada e exportável para Excel a pedido.</figcaption>
+        </figure>
+    </section>
+
+    <section class="page-section container" id="library">
+        <div class="section-header">
+            <span class="eyebrow">A Biblioteca de WPS</span>
+            <h2>Não Uma Pasta de Ficheiros — Uma Biblioteca Que os Compreende</h2>
+            <p class="subtitle">Cada WPS, pWPS e WPQR, analisada em registos estruturados que pode pesquisar, comparar, corrigir e associar.</p>
+        </div>
+
+        <div class="glass-card feature-block">
+            <p class="feature-lead">É aqui que o registo ganha o seu valor. Por trás de cada linha está um documento totalmente lido que pode abrir, verificar contra a fonte, editar no momento e ligar aos registos que o qualificam — as pequenas conveniências que transformam uma folha de cálculo num sistema.</p>
+            <ul class="feature-list">
+                <li><strong>Três tipos de documento associados, uma casa:</strong> WPS, WPS preliminar (pWPS) e WPQR têm cada um o seu separador, cada um importado da mesma forma — largue um Excel ou PDF, ou adicione um registo WPQR à mão. Cada documento fica junto dos procedimentos a que se relaciona.</li>
+                <li><strong>Revisões, agrupadas automaticamente:</strong> Várias revisões do mesmo número de WPS colapsam numa única linha com um óbvio indicador de “N revisões” e um seletor para alternar entre elas — a mais recente primeiro. Ao importar, cada ficheiro que chega é classificado para si como WPS nova, revisão nova ou correção a uma existente.</li>
+                <li><strong>Edite e verifique no momento:</strong> Corrija o valor de qualquer campo — ou até o seu rótulo — e guarde; o rótulo renomeia essa coluna no registo. Um “Verificar” de um clique limpa a marca de baixa confiança quando a tiver conferido, e o aporte térmico calculado tem a sua própria verificação, para que o âmbar desapareça em todos os passes de uma vez.</li>
+                <li><strong>O detalhe real, não só um nome de ficheiro:</strong> Campos de cabeçalho, a tabela completa de passes com o lado de cada passe (interior / exterior / ambos) e a função (raiz / enchimento / capa / suporte), materiais base, consumível de adição, gás/fluxo de proteção — tudo extraído, tudo editável, com uma linha que pode adicionar se o parser alguma vez falhar uma.</li>
+            </ul>
+        </div>
+
+        <div class="glass-card feature-block u-gap-top">
+            <p class="feature-lead">E quando precisa de <em>encontrar</em> algo, a biblioteca inteira torna-se uma base de dados que pode interrogar — filtrada pelo que está realmente dentro de cada documento, não pelo nome do ficheiro.</p>
+            <ul class="feature-list">
+                <li><strong>Filtre pelo que importa:</strong> Restrinja por processo de soldadura, material base ou de adição, posição, gama de espessuras e mais — até uma combinação específica de processos, com ou sem passe de suporte, em poucos cliques.</li>
+                <li><strong>Facetas que leem a tabela de passes:</strong> Filtre pelos valores dentro dos próprios passes — lado, função, processo, polaridade — como filtros de pertença a conjunto, para que “todas as WPS com raiz em 121” seja um clique, não uma leitura manual.</li>
+                <li><strong>Facetas de documento também:</strong> Divida por estado de análise, tipo de ficheiro (Excel ou PDF), modelo, estado de associação, ou se uma WPS tem um PQR associado — as perguntas práticas que um responsável de qualidade realmente faz.</li>
+                <li><strong>Associação inteligente e toda a cadeia:</strong> Ligue uma WPS ao WPQR que a qualifica, um WPQR às várias WPS que suporta, uma pWPS ao número em que se torna — e depois veja os documentos relacionados juntos e abra qualquer um num clique. Dê a um WPQR um nome amigável para que se leia bem em todo o lado.</li>
+                <li><strong>Saiba sempre o que possui:</strong> Uma biblioteca central significa que sabe sempre o conjunto completo de procedimentos que a sua oficina qualificou — nada perdido na caixa de correio de alguém ou numa pasta partilhada.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         CAPTURA #5 — BIBLIOTECA DE WPS (detalhe + facetas)
+         Capturar: o ecrã Biblioteca com os separadores WPS / pWPS / WPQR, um
+         documento selecionado para mostrar o seu detalhe estruturado (campos
+         de cabeçalho + a tabela de passes com lado/função), e o painel de
+         facetas de filtro aberto com algumas facetas aplicadas. Um indicador
+         "N revisões" na lista e um selo "Associado" no enquadramento são um bónus.
+         Porquê aqui: é a funcionalidade que o fundador mais quer vender.
+         ============================================================ -->
+    <section class="page-section container u-tight-top" id="screenshot-library">
+        <figure class="app-figure app-figure-wide">
+            <div class="app-figure-frame">
+                <div class="app-figure-placeholder">
+                    <span class="app-figure-tag">Captura de ecrã</span>
+                    <p><strong>A biblioteca de WPS</strong><br>Capture a Biblioteca com os separadores WPS / pWPS / WPQR, um documento selecionado a mostrar os campos de cabeçalho e a tabela de passes (lado/função), e o painel de facetas de filtro aberto. Um indicador “N revisões” e um selo “Associado” no enquadramento são um bónus.</p>
+                </div>
+            </div>
+            <figcaption>Cada documento analisado em detalhe estruturado — filtrável por processo, função, lado, material, estado de associação e mais.</figcaption>
+        </figure>
+    </section>
+
+    <section class="page-section container" id="preview">
+        <div class="section-header">
+            <span class="eyebrow">Modo de Pré-visualização</span>
+            <h2>Veja Cada Leitura Contra o Original — e Corrija-a Ali Mesmo</h2>
+            <p class="subtitle">Os campos analisados de um lado, o seu documento real do outro. Não confie em nada por fé; confirme tudo num relance.</p>
+        </div>
+        <div class="glass-card feature-block">
+            <p class="feature-lead">É esta a funcionalidade que torna um parser seguro para se confiar. Abra qualquer WPS em Pré-visualização e a aplicação divide o ecrã: à esquerda, cada campo que leu; à direita, o seu ficheiro real — o formulário PDF apresentado tal como é, ou a folha Excel desenhada no local. O seu olhar percorre uma coluna e cruza para a outra, e em segundos <em>sabe</em> que o registo corresponde à papelada.</p>
+            <ul class="feature-list">
+                <li><strong>A fonte genuína, não uma reprodução:</strong> Um PDF abre como o PDF real, página e tudo, com o seu próprio zoom e ajuste à largura; uma WPS em Excel é apresentada como a folha real. Está a verificar contra o documento que o seu engenheiro de soldadura assinou, não contra a interpretação que a aplicação dele faz.</li>
+                <li><strong>Feito para se ficar, não só espreitar:</strong> A Pré-visualização é um espaço de verificação — mantém-se aberto enquanto percorre um documento e não desaparece com um clique acidental fora dele. Alargue o painel da fonte com um divisor arrastável quando um formulário for denso, até metade do ecrã.</li>
+                <li><strong>Corrija sem sair:</strong> Detetou uma leitura errada? Edite o valor — ou o seu rótulo — ali mesmo na Pré-visualização, marque um campo de baixa confiança como verificado, aceite um aporte térmico calculado, e guarde. Sem saltar entre o ficheiro e um ecrã de edição separado; comparar e corrigir são a mesma vista.</li>
+                <li><strong>Tudo permanece sincronizado:</strong> Uma correção na Pré-visualização atualiza o detalhe da biblioteca, os títulos das colunas do registo e o indicador de revisão em conjunto — uma correção, refletida em todo o lado onde deve estar.</li>
+            </ul>
+            <p class="feature-out"><em>É uma coisa pequena que muda a sensação de toda a ferramenta: nunca lhe é pedido que confie num número que não viu você mesmo na página.</em></p>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         CAPTURA #6 — MODO DE PRÉ-VISUALIZAÇÃO (forte candidata a maior captura)
+         Capturar: o modal de Pré-visualização em vista dividida — campos
+         analisados à ESQUERDA, o ficheiro-fonte real à DIREITA (idealmente um
+         formulário WPS em PDF visível no iframe para que a afirmação "fonte
+         genuína" seja óbvia). Se puder, mostre um campo de baixa confiança
+         (âmbar) à esquerda alinhado com a sua célula no formulário. O divisor
+         arrastável visível é um plus. Faça-a grande (considere app-figure-wide).
+         ============================================================ -->
+    <section class="page-section container u-tight-top" id="screenshot-preview">
+        <figure class="app-figure app-figure-wide">
+            <div class="app-figure-frame">
+                <div class="app-figure-placeholder">
+                    <span class="app-figure-tag">Captura de ecrã</span>
+                    <p><strong>Modo de pré-visualização — a vista dividida</strong><br>Capture o modal de Pré-visualização: campos analisados à esquerda, o formulário PDF (ou Excel) real à direita. Alinhe um campo âmbar com a sua célula no formulário, se puder. Faça esta captura grande.</p>
+                </div>
+            </div>
+            <figcaption>Campos analisados junto ao documento original — verifique cada leitura contra a página e corrija-a na mesma vista.</figcaption>
+        </figure>
     </section>
 
     <section class="page-section container" id="pqr">
         <div class="section-header">
-            <span class="eyebrow">Todo o Conjunto Ligado</span>
-            <h2>Cada Registo Por Trás de uma WPS, Anexado e Visível</h2>
-            <p class="subtitle">Veja o WPQR que qualifica cada WPS, e o pWPS por trás desse WPQR — toda a cadeia de documentos, ligada num só lugar.</p>
+            <span class="eyebrow">Todo o Conjunto Associado</span>
+            <h2>Cada Registo Por Trás de Uma WPS, Anexado e Visível</h2>
+            <p class="subtitle">Veja o WPQR que qualifica cada WPS, e a pWPS por trás desse WPQR — toda a cadeia de documentos, associada num só lugar.</p>
         </div>
         <div class="glass-card feature-block">
-            <p class="feature-lead">Uma WPS nunca está sozinha: é qualificada por um WPQR, que por sua vez remonta a uma WPS preliminar (pWPS). O Elenchon WPS Manager mantém toda essa cadeia anexada, para que a partir de qualquer WPS veja exatamente que registos a sustentam — sem procurar em pastas.</p>
+            <p class="feature-lead">Uma WPS nunca está sozinha: é qualificada por um WPQR, que por sua vez remonta a uma WPS preliminar (pWPS). O Elenchon WPS Manager mantém toda essa cadeia anexada, para que a partir de qualquer WPS possa ver exatamente que registos a suportam — sem procurar por pastas.</p>
             <ul class="feature-list">
-                <li><strong>WPQR anexado à WPS:</strong> Abra qualquer WPS e veja o Registo de Qualificação de Procedimento que a qualifica, anexado e exibido num layout claro e legível.</li>
-                <li><strong>pWPS anexado ao WPQR:</strong> Remonte cada WPQR à WPS preliminar por trás dele — toda a cadeia de documentos, de pWPS a WPQR a WPS, ligada e visível.</li>
-                <li><strong>Anexe qualquer ficheiro de suporte:</strong> Mantenha os documentos relacionados junto ao procedimento a que pertencem, para que o rasto documental esteja sempre a um clique, não espalhado por drives.</li>
-                <li><strong>Imprimir para PDF:</strong> Produza um PDF organizado de um registo para fácil visualização e transferência a um cliente, inspetor ou colega.</li>
+                <li><strong>WPQR anexado à WPS:</strong> Abra qualquer WPS e veja o Registo de Qualificação de Procedimento que a qualifica, anexado e apresentado num esquema limpo e legível.</li>
+                <li><strong>pWPS anexada ao WPQR:</strong> Remonte cada WPQR à WPS preliminar por trás dele — toda a cadeia de documentos, de pWPS a WPQR a WPS, associada e visível.</li>
+                <li><strong>Anexe qualquer ficheiro de suporte:</strong> Mantenha os documentos relacionados junto do procedimento a que pertencem, para que o rasto documental esteja sempre a um clique de distância, não espalhado por várias unidades.</li>
             </ul>
-            <p class="feature-out"><em>Nota: o WPS Manager anexa, liga e exibe estes registos — capturar dados de qualificação em tempo real no chão de fábrica, e derivar gamas qualificadas a partir deles, é a função da plataforma completa <a href="/pt/welding-qualification-software.html">Elenchon</a>.</em></p>
+            <p class="feature-out"><em>Nota: o WPS Manager anexa, associa e apresenta estes registos — capturar dados de qualificação ao vivo no chão de fábrica, e derivar as gamas qualificadas a partir daí, é o trabalho da plataforma completa <a href="/pt/welding-qualification-software.html">Elenchon</a>.</em></p>
+        </div>
+    </section>
+
+    <section class="page-section container" id="heat-input">
+        <div class="section-header">
+            <span class="eyebrow">Ajuda de Aporte Térmico</span>
+            <h2>Mantenha-se Dentro da Janela Que o Seu PQR Qualificou</h2>
+            <p class="subtitle">Um bloco de rascunho ao vivo para o único cálculo que os soldadores erram sob pressão.</p>
+        </div>
+        <div class="glass-card feature-block">
+            <p class="feature-lead">O aporte térmico é onde um procedimento perfeitamente bom sai silenciosamente de qualificação. A ajuda incorporada torna a janela segura impossível de falhar.</p>
+            <ul class="feature-list">
+                <li><strong>Defina a gama qualificada, depois explore:</strong> Introduza a gama de aporte térmico que o seu PQR qualificou para cada região do cordão — raiz, enchimento, capa — e depois arraste os cursores de corrente, tensão e velocidade de avanço para ver o aporte térmico calculado ao vivo.</li>
+                <li><strong>Cursores que não conseguem sair da janela:</strong> Os controlos limitam-se à sua gama qualificada pelo PQR, por isso não consegue fisicamente marcar uma combinação que caia fora do que o procedimento permite.</li>
+                <li><strong>Consciente de multi-arco:</strong> As montagens tandem e twin-arc têm uma cabeça líder e uma de arraste com a sua própria corrente e tensão; o aporte térmico total é somado entre as cabeças, como a norma espera.</li>
+                <li><strong>Puxe diretamente de uma WPS:</strong> Carregue uma WPS analisada da sua biblioteca e as suas gamas por região e processos preenchem-se automaticamente — os parâmetros do arco ficam seus para explorar. É um bloco de rascunho; nada aqui é guardado ou escrito em qualquer folha.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         CAPTURA #7 — AJUDA DE APORTE TÉRMICO
+         Capturar: o ecrã Ajuda de aporte térmico com o mín./máx. do PQR
+         definidos, os cursores de corrente/tensão/velocidade de avanço, e o
+         resultado "Aporte térmico" calculado ao vivo. Se um cursor estiver no
+         limite, ainda melhor (demonstra visualmente o "não pode sair da janela").
+         ============================================================ -->
+    <section class="page-section container u-tight-top" id="screenshot-heat">
+        <figure class="app-figure">
+            <div class="app-figure-frame">
+                <div class="app-figure-placeholder">
+                    <span class="app-figure-tag">Captura de ecrã</span>
+                    <p><strong>A ajuda de aporte térmico</strong><br>Capture os cursores com uma gama de PQR definida e o resultado calculado ao vivo — idealmente com um cursor no seu limite para mostrar que a janela não pode ser ultrapassada.</p>
+                </div>
+            </div>
+            <figcaption>Arraste os parâmetros; o aporte térmico é calculado ao vivo e limitado à sua gama qualificada.</figcaption>
+        </figure>
+    </section>
+
+    <section class="page-section container" id="security">
+        <div class="section-header">
+            <span class="eyebrow">Construído à Maneira Delteris</span>
+            <h2>Uma Ferramenta na Cloud Que Leva a Segurança a Sério</h2>
+            <p class="subtitle">Os seus procedimentos são proprietários. O WPS Manager é feito para os proteger, não apenas para os alojar.</p>
+        </div>
+        <div class="glass-card feature-block">
+            <p class="feature-lead">Barato e simples não deve significar descuidado. Cada tenancy do WPS Manager é concebida com a mesma disciplina da plataforma on-premise Elenchon.</p>
+            <ul class="feature-list">
+                <li><strong>Um inquilino por instância:</strong> Cada cliente corre na sua própria instância isolada — o seu registo e documentos nunca partilham uma base de dados com os de outra oficina.</li>
+                <li><strong>Acesso reforçado:</strong> ID de início de sessão e palavra-passe com sessões assinadas, uma política de palavras-passe forte, bloqueio automático após tentativas falhadas repetidas, e limitação de taxa por IP — as defesas padrão, ativas por predefinição.</li>
+                <li><strong>Histórico de auditoria completo:</strong> Cada alteração ao registo e cada definição é registada — o que mudou, quem mudou e quando — e mantida durante o tempo que a sua política de retenção definir.</li>
+                <li><strong>Reversível por conceção:</strong> As cópias de segurança versionadas do registo significam que qualquer alteração aprovada pode ser revertida, e uma folha eliminada permanece recuperável através de um período de tolerância antes de desaparecer definitivamente.</li>
+                <li><strong>Integração 100% confidencial:</strong> Os documentos WPS que nos envia para configurar o seu parser são tratados com estrita confidencialidade e usados apenas para verificar a sua importação.</li>
+            </ul>
         </div>
     </section>
 
     <section class="page-section container" id="authoring">
         <div class="section-header">
-            <span class="eyebrow">Em Breve</span>
-            <h2>Construa e Edite WPS na Cloud</h2>
-            <p class="subtitle">Um construtor simples, estilo folha de cálculo — defina os seus cabeçalhos, e as células tornam-se a sua WPS.</p>
+            <span class="eyebrow">No Roteiro</span>
+            <h2>Criação Ligeira de WPS na Cloud</h2>
+            <p class="subtitle">Exporte para uma folha limpa hoje; escreva e reveja WPS na aplicação, a seguir.</p>
         </div>
         <div class="glass-card feature-block">
-            <p class="feature-lead">No roteiro: um construtor estilo Excel que traz a criação e a edição em massa de WPS para a cloud, sem a folha de cálculo frágil. Defina os seus cabeçalhos, e um script de estilização automática transforma as células numa WPS limpa e formatada.</p>
+            <p class="feature-lead">O WPS Manager já produz uma folha Excel limpa e estruturada para qualquer WPS que possua — e esse ficheiro reimporta pelo mesmo modelo, por isso o ciclo de ida e volta é sem perdas. A criação completa na cloud assenta sobre essa base.</p>
             <ul class="feature-list">
-                <li><strong>Simples como uma folha de cálculo:</strong> Defina cabeçalhos, preencha células — as células tornam-se os parâmetros da WPS, automaticamente estilizados num documento acabado.</li>
-                <li><strong>Importar e exportar:</strong> Mova procedimentos para dentro e para fora para gestão em massa, para que gerir centenas de WPS continue rápido.</li>
-                <li><strong>Autoria, mantida simples:</strong> Escreva e reveja documentos WPS na aplicação. Mantemos isto deliberadamente focado no documento em si — derivar gamas qualificadas a partir de dados de ensaio é metalurgia que deixamos para o fluxo de qualificação completo do <a href="/pt/welding-qualification-software.html">Elenchon</a>.</li>
+                <li><strong>Exportação Excel limpa hoje:</strong> Gere uma folha organizada de uma só WPS — ou todo o registo como uma longa folha de cálculo — que abre no Excel e reimporta sem perder um valor.</li>
+                <li><strong>Criação simples como folha de cálculo (em breve):</strong> Defina os cabeçalhos, preencha as células, e um script de estilo automático transforma-as numa WPS acabada e formatada — o frágil modelo feito à mão, aposentado.</li>
+                <li><strong>Criação, mantida simples:</strong> Mantemos isto deliberadamente focado em escrever o próprio documento. Derivar gamas qualificadas a partir de dados de ensaio é metalurgia que deixamos ao fluxo completo de qualificação <a href="/pt/welding-qualification-software.html">Elenchon</a> — o WPS Manager gere a papelada, não faz a qualificação.</li>
             </ul>
         </div>
     </section>
@@ -107,12 +353,12 @@ alt_url: "/wps-management-software.html"
         <div class="dark-panel grid-2 align-center">
             <div>
                 <span class="eyebrow">Integração Personalizada</span>
-                <h2 class="text-glow">Garantimos Que Funciona na Sua WPS Primeiro</h2>
-                <p class="security-intro">Porque o parser é afinado ao layout de WPS da sua própria empresa, a integração não é um formulário de registo frio — é uma configuração curta e guiada com os fundadores, para que a importação seja comprovada na <em>sua</em> papelada antes de se comprometer com o que quer que seja.</p>
+                <h2 class="text-glow">Garantimos Que Funciona Primeiro na Sua WPS</h2>
+                <p class="security-intro">Formulários no estilo ISO&nbsp;15609 importam de origem — mas como o seu registo só é tão bom quanto as leituras por trás dele, a integração não é um formulário de inscrição frio. É uma configuração curta e guiada com os fundadores, para que a importação seja comprovada na <em>sua</em> papelada antes de se comprometer com o que quer que seja.</p>
                 <ul class="feature-list">
-                    <li><strong>Envie-nos algumas das suas WPS:</strong> Assim que decidir avançar, partilhe alguns dos seus documentos WPS reais.</li>
-                    <li><strong>Confirmamos que o parser as lê:</strong> Verificamo-lo com o seu modelo e fazemos os ajustes necessários, para que a sua importação funcione bem desde o início.</li>
-                    <li><strong>Depois entra em funcionamento:</strong> A sua tenancy na cloud é configurada com um parser comprovado nos seus próprios procedimentos — sem adivinhar se vai encaixar.</li>
+                    <li><strong>Envie-nos algumas das suas WPS:</strong> Assim que decidir avançar, partilhe alguns dos seus documentos WPS reais — Excel ou PDF.</li>
+                    <li><strong>Confirmamos que o parser as lê:</strong> Verificamo-lo contra o seu modelo e ajustamo-lo se necessário, para que a sua importação funcione de forma limpa desde o início.</li>
+                    <li><strong>E depois entra em funcionamento:</strong> A sua tenancy na cloud é configurada com um parser comprovado nos seus próprios procedimentos — sem adivinhar se vai encaixar.</li>
                     <li><strong>100% confidencial:</strong> Os seus documentos WPS são tratados com estrita confidencialidade, usados apenas para configurar e verificar a sua importação.</li>
                 </ul>
                 <div class="cta-group">
@@ -132,9 +378,9 @@ alt_url: "/wps-management-software.html"
         <div class="compliance-panel gold-edge">
             <span class="eyebrow">Preços Simples e Transparentes</span>
             <h2 class="text-glow">80 € / mês. 60 € / mês em plano anual.</h2>
-            <p>Um preço fixo, publicado por inteiro — sem surpresas por utilizador, sem "contacte-nos para orçamento". Pague mensalmente a 80 €, ou comprometa-se anualmente por 720 €/ano (um efetivo de 60 €/mês). A sua tenancy na cloud, toda a sua biblioteca de WPS, um preço. A integração e a configuração do parser para o seu modelo são tratadas diretamente pelos fundadores.</p>
-            <p class="u-stack-sm"><strong>50 GB de armazenamento incluídos</strong> — suficiente para dezenas de milhares de WPS com os seus WPQR e pWPS anexados (cerca de 30 000 a 300 000 páginas). Precisa de mais? Adicione <strong>outros 50 GB por 10 €/mês</strong>, a qualquer momento — a maioria das oficinas nunca precisa.</p>
-            <p class="u-stack-sm"><strong>Uma tenancy, um sistema — e é seu.</strong> Recomendamos uma instância por fábrica isolada, mas não a fiscalizamos: use-a como fizer sentido para a sua operação. Se dois locais quiserem partilhar uma biblioteca de WPS, a decisão é sua — basta adicionar armazenamento se precisar de espaço.</p>
+            <p>Um preço fixo, publicado por completo — sem surpresas por posto, sem "contacte-nos para orçamento". Pague mensalmente a 80 €, ou comprometa-se anualmente por 720 €/ano (um efetivo de 60 €/mês). A sua tenancy na cloud, todo o seu registo de WPS, um preço. A integração e a configuração do parser para o seu modelo são tratadas diretamente pelos fundadores.</p>
+            <p class="u-stack-sm"><strong>50 GB de armazenamento incluídos</strong> — suficiente para dezenas de milhares de WPS com os seus WPQR e pWPS anexados (aproximadamente 30 000–300 000 páginas). Precisa de mais? Adicione <strong>outros 50 GB por 10 €/mês</strong>, a qualquer momento — a maioria das oficinas nunca precisa.</p>
+            <p class="u-stack-sm"><strong>Uma tenancy, um sistema — e é seu.</strong> Recomendamos uma instância por fábrica isolada, mas não a policiamos: use-a como convém à sua operação. Se dois locais quiserem partilhar um registo de WPS, a decisão é sua — basta adicionar armazenamento se precisar de espaço.</p>
             <div class="cta-group u-gap-top">
                 <a href="/pt/wps-manager-contact.html" class="btn btn-primary">Reservar uma Tenancy na Cloud</a>
             </div>
@@ -144,17 +390,17 @@ alt_url: "/wps-management-software.html"
     <section class="page-section container" id="vs-elenchon">
         <div class="section-header">
             <span class="eyebrow">WPS Manager ou a Plataforma Completa?</span>
-            <h2>Onde o WPS Manager Termina e o Elenchon Começa</h2>
+            <h2>Onde Acaba o WPS Manager e Começa o Elenchon</h2>
             <p class="subtitle">Dois produtos, uma equipa — escolha o que corresponde ao trabalho à sua frente.</p>
         </div>
         <div class="pillar-grid">
             <div class="glass-card">
                 <h3>Escolha o Elenchon WPS Manager se…</h3>
-                <p>Já tem as suas WPS e só precisa delas <strong>organizadas, pesquisáveis e na cloud</strong> — importadas rapidamente, filtráveis por campo, com os seus PQR mantidos ao lado. Leve, económico e a funcionar depressa.</p>
+                <p>Já tem as suas WPS e só precisa do seu <strong>registo mantido atualizado, organizado e pesquisável na cloud</strong> — importado depressa de Excel ou PDF, revisto antes de qualquer alteração, versionado e exportável, com os WPQR e pWPS mantidos ao lado. Leve, barato, e a funcionar rapidamente.</p>
             </div>
             <div class="glass-card">
-                <h3>Escolha a plataforma Elenchon completa se…</h3>
-                <p>Precisa de <strong>capturar dados de qualificação no chão de fábrica, derivar gamas qualificadas, acompanhar a continuidade do soldador (WPQ) e provar rastreabilidade completa</strong> para auditorias ISO 3834 / ASME IX — num appliance on-premise que é seu. <a href="/pt/welding-qualification-software.html">Ver a qualificação de soldadura Elenchon &rarr;</a></p>
+                <h3>Escolha a plataforma completa Elenchon se…</h3>
+                <p>Precisa de <strong>capturar dados de qualificação no chão de fábrica, derivar gamas qualificadas, acompanhar a continuidade do soldador (WPQ) e provar rastreabilidade completa</strong> para auditorias ISO 3834 / ASME IX — num equipamento on-premise que possui. <a href="/pt/welding-qualification-software.html">Ver qualificação de soldadura Elenchon &rarr;</a></p>
             </div>
         </div>
     </section>
@@ -168,27 +414,31 @@ alt_url: "/wps-management-software.html"
         <div class="pillar-grid">
             <div class="glass-card">
                 <h3>O que é software de gestão de WPS?</h3>
-                <p>O software de gestão de WPS mantém as suas Especificações de Procedimento de Soldadura organizadas, pesquisáveis e num só lugar, para que saiba sempre que procedimentos a sua oficina tem e encontre qualquer um instantaneamente. O Elenchon WPS Manager é uma ferramenta na cloud que importa os seus documentos WPS existentes, extrai cada campo e permite filtrar toda a biblioteca por processo, material e mais.</p>
+                <p>O software de gestão de WPS mantém as suas Especificações de Procedimento de Soldadura organizadas, pesquisáveis e num só lugar, para que saiba sempre que procedimentos a sua oficina possui e possa encontrar qualquer um instantaneamente. O Elenchon WPS Manager parte do registo-mestre que a maioria das oficinas já mantém: importa as suas WPS existentes, extrai cada campo, propõe edições revistas ao seu registo e exporta a folha atualizada e os seus ficheiros associados sempre que precisar.</p>
             </div>
             <div class="glass-card">
-                <h3>Como funciona a importação / o parser de WPS?</h3>
-                <p>Carrega os seus documentos WPS existentes e o parser reconstrói cada formulário e lê as suas células, extraindo processo, materiais, gamas e outros valores para campos estruturados automaticamente. Durante a integração afinamos o parser ao modelo de WPS da sua própria empresa, para que leia a sua papelada — transformando o que seriam semanas de introdução de dados em folha de cálculo numa importação rápida.</p>
+                <h3>Consegue importar WPS em Excel e PDF?</h3>
+                <p>Sim — ambos, nativamente. Um parser lê folhas WPS em Excel; outro reconstrói a grelha de um formulário PDF e lê as suas células. Em qualquer caso, processo, materiais, gamas e parâmetros passe a passe entram como campos estruturados, e o perfil incorporado lê formulários em inglês e português de origem. Onde um formulário deixa o aporte térmico vazio, a aplicação calcula-o a partir dos parâmetros do arco e sinaliza-o para que confirme.</p>
+            </div>
+            <div class="glass-card">
+                <h3>Uma importação altera o meu registo automaticamente?</h3>
+                <p>Só se optar por permiti-lo. Por predefinição, cada importação fica em fila como um conjunto de alterações proposto: vê o valor atual ao lado do valor novo, célula a célula, e aprova o que entra — com as leituras de baixa confiança sombreadas para um olhar mais atento. Pode subir o critério (rever cada valor) ou baixá-lo (aplicar tudo automaticamente e contar com o versionamento para desfazer). Só as células que aprovar são aplicadas à sua própria folha; nada é reconstruído.</p>
             </div>
             <div class="glass-card">
                 <h3>Posso filtrar ou pesquisar as minhas WPS por processo de soldadura?</h3>
-                <p>Sim. Porque cada campo é extraído na importação, filtra a sua biblioteca por critérios reais — processo de soldadura, material base e de adição, posição, gama de espessura e mais. Pode restringi-la a um único processo, ou a uma combinação específica de processos com ou sem passe de suporte, em alguns cliques, em vez de percorrer nomes de ficheiro.</p>
+                <p>Sim. Como cada campo é extraído na importação, filtra a sua biblioteca por critérios reais — processo de soldadura, material base e de adição, posição, gama de espessuras e mais. Pode reduzi-la a um único processo, ou a uma combinação específica de processos com ou sem passe de suporte, em poucos cliques, em vez de rolar nomes de ficheiros.</p>
             </div>
             <div class="glass-card">
-                <h3>O WPS Manager cria WPS, ou apenas as armazena?</h3>
-                <p>A sua função central hoje é a gestão — importar, organizar, filtrar e manter os PQR de suporte ao lado. Um construtor estilo folha de cálculo para criar e editar WPS em massa na cloud está no roteiro. Não deriva deliberadamente gamas qualificadas a partir de dados de ensaio — essa metalurgia é tratada pela plataforma de qualificação Elenchon completa.</p>
+                <h3>O WPS Manager cria WPS, ou apenas as gere?</h3>
+                <p>Hoje o seu trabalho é a gestão — importar, rever, organizar, filtrar, versionar e exportar, com os WPQR e pWPS de suporte mantidos ao lado. Já exporta uma folha Excel limpa por WPS (ou todo o registo), e esse ficheiro reimporta sem perdas. Um construtor em estilo de folha de cálculo para escrever e editar WPS em massa na cloud está no roteiro. Deliberadamente não deriva gamas qualificadas a partir de dados de ensaio — essa metalurgia é tratada pela plataforma completa de qualificação Elenchon.</p>
             </div>
             <div class="glass-card">
                 <h3>Quanto custa o Elenchon WPS Manager?</h3>
-                <p>80 € por mês, ou 720 € por ano (um efetivo de 60 € por mês) em plano anual. Um preço único, fixo e totalmente publicado — sem custos por utilizador e sem "contacte-nos para orçamento". Inclui 50 GB de armazenamento (dezenas de milhares de WPS); blocos extra de 50 GB custam 10 €/mês, se alguma vez precisar. Uma tenancy é um sistema — recomendamos uma instância por fábrica isolada, mas não a fiscalizamos. A integração e a configuração do parser para o seu modelo estão incluídas e são tratadas diretamente pelos fundadores.</p>
+                <p>80 € por mês, ou 720 € por ano (um efetivo de 60 € por mês) em plano anual. Um preço fixo e totalmente publicado — sem cobranças por posto e sem "contacte-nos para orçamento". Inclui 50 GB de armazenamento (dezenas de milhares de WPS); blocos extra de 50 GB são 10 €/mês se alguma vez precisar. Uma tenancy é um sistema — recomendamos uma instância por fábrica isolada mas não a policiamos. A integração e a configuração do parser para o seu modelo estão incluídas e são tratadas diretamente pelos fundadores.</p>
             </div>
             <div class="glass-card">
                 <h3>Em que difere da plataforma Elenchon?</h3>
-                <p>O Elenchon WPS Manager é a biblioteca de WPS na cloud por si só — para oficinas que só precisam dos seus procedimentos organizados e pesquisáveis. A plataforma <a href="/pt/welding-qualification-software.html">Elenchon</a> completa acrescenta captura de WPQR no chão de fábrica, qualificação de gamas, continuidade do soldador (WPQ) e rastreabilidade total num appliance on-premise. A mesma equipa; o WPS Manager é a fatia leve na cloud, e o ponto de partida natural se mais tarde crescer para a plataforma completa.</p>
+                <p>O Elenchon WPS Manager é o registo de WPS na cloud por si só — para oficinas que só precisam dos seus procedimentos organizados, atualizados e pesquisáveis. A plataforma completa <a href="/pt/welding-qualification-software.html">Elenchon</a> acrescenta captura de WPQR no chão de fábrica, qualificação de gamas, continuidade do soldador (WPQ) e rastreabilidade completa num equipamento on-premise. A mesma equipa; o WPS Manager é a fatia leve na cloud, e o ponto de partida natural se mais tarde crescer para a plataforma completa.</p>
             </div>
         </div>
     </section>
@@ -197,11 +447,11 @@ alt_url: "/wps-management-software.html"
         <div class="cta-band">
             <span class="eyebrow">Comece</span>
             <h2 class="text-glow">Reserve a Sua Tenancy na Cloud</h2>
-            <p>A integração é guiada diretamente pelos fundadores — envie-nos alguns dos seus documentos WPS, confirmamos que o parser lê o seu modelo, e entra em funcionamento com uma biblioteca comprovada na sua própria papelada. Tudo tratado confidencialmente.</p>
+            <p>A integração é guiada diretamente pelos fundadores — envie-nos alguns dos seus documentos WPS, confirmamos que o parser lê o seu modelo, e entra em funcionamento com um registo comprovado na sua própria papelada. Tudo tratado de forma confidencial.</p>
             <div class="cta-group">
                 <a href="/pt/wps-manager-contact.html" class="btn btn-primary">Contacte os Fundadores</a>
                 <a href="/pt/welding-qualification-software.html" class="btn btn-secondary">Precisa de Qualificação Completa? Ver Elenchon</a>
             </div>
-            <p class="hero-urgency u-gap-top">Sem camadas de vendas, sem filas de chamadas — fala com quem o construiu.</p>
+            <p class="hero-urgency u-gap-top">Sem camadas comerciais, sem filas de chamadas — fala com quem o construiu.</p>
         </div>
     </section>

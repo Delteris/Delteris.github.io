@@ -14,16 +14,23 @@
           "applicationCategory": "BusinessApplication",
           "applicationSubCategory": "WPS Management Software",
           "operatingSystem": "Cloud / Web",
-          "description": "Cloud WPS management software that imports your existing Welding Procedure Specification documents with a parser, extracts every field, and lets you filter your whole WPS library by process, material, position and more. Each WPS keeps its full linked document chain attached and visible — the qualifying WPQR, and the preliminary WPS (pWPS) behind it. From Delteris — the standalone cloud WPS library from the Elenchon platform.",
-          "keywords": "WPS management software, WPS software, WPS library, WPS register, WPS document management, welding procedure specification management, WPS import, WPS parser, organize WPS, find WPS by process",
+          "description": "Cloud WPS management software that keeps a shop's master WPS register current. It imports existing Welding Procedure Specification documents in Excel or PDF, extracts every field, and proposes human-reviewed edits that are patched — only once approved — into the shop's own workbook. Each register is versioned and exportable, with the linked WPQR and preliminary WPS (pWPS) chain kept alongside. Includes a library with structured detail and faceted search, a preview mode that compares the parse against the source document, and a heat-input helper. From Delteris — the standalone cloud WPS engine from the Elenchon platform.",
+          "keywords": "WPS management software, WPS software, WPS library, WPS register, WPS document management, welding procedure specification management, WPS import, WPS parser, WPS PDF import, WPS Excel import, organize WPS, find WPS by process",
           "featureList": [
-            "Parser-driven import of existing WPS documents (auto field extraction)",
-            "Batch import of a whole WPS library",
-            "Filter and search WPSs by welding process, material, position and range",
-            "Central cloud WPS library — always know every procedure you hold",
-            "Linked document chain per WPS — attached WPQR and pWPS, visible and printable to PDF",
-            "White-glove onboarding with per-template parser setup",
-            "Excel-style WPS builder and authoring (on roadmap)"
+            "Import existing WPS documents from Excel and PDF with automatic field extraction",
+            "Batch import of a whole WPS library at once",
+            "Human-reviewed change-sets — nothing is written to the register without approval",
+            "Only approved cells are patched into the shop's own workbook; the file is never rebuilt",
+            "Versioned register (v1, v2, v3...) with rollback and on-demand Excel export plus linked files",
+            "WPS library with structured detail (header fields, pass table with side and role, parts, fillers, shielding)",
+            "Automatic revision grouping and import classification (new WPS, new revision, correction)",
+            "Preview mode — parsed fields shown beside the original PDF or Excel source, with in-place edit and verify",
+            "Faceted search and filtering by process, material, position, range, side, role, link status and file type",
+            "Linked document chain per WPS — attached WPQR and pWPS, visible and printable",
+            "Heat-input helper that keeps parameters inside the PQR-qualified window",
+            "Automatic heat-input calculation on import (EN 1011-1) flagged for review",
+            "Single-tenant deployment, full audit trail, and configurable data retention",
+            "Light WPS authoring and clean Excel export (authoring on roadmap)"
           ],
           "offers": {
             "@type": "Offer",
@@ -42,22 +49,27 @@
             {
               "@type": "Question",
               "name": "What is WPS management software?",
-              "acceptedAnswer": { "@type": "Answer", "text": "WPS management software keeps your Welding Procedure Specifications organized, searchable and in one place, so you always know which procedures your shop holds and can find any one instantly. Elenchon WPS Manager is a cloud tool that imports your existing WPS documents, extracts every field, and lets you filter your whole library by process, material and more." }
+              "acceptedAnswer": { "@type": "Answer", "text": "WPS management software keeps your Welding Procedure Specifications organized, searchable and in one place, so you always know which procedures your shop holds and can find any one instantly. Elenchon WPS Manager works from the master register most shops already keep: it imports your existing WPS documents, extracts every field, proposes reviewed edits to your register, and exports the updated workbook and its linked files whenever you need them." }
             },
             {
               "@type": "Question",
-              "name": "How does the WPS import and parser work?",
-              "acceptedAnswer": { "@type": "Answer", "text": "You upload your existing WPS documents and the parser reconstructs each form and reads its cells, pulling process, materials, ranges and other values into structured fields automatically. During onboarding the parser is tuned to your company's own WPS template so it reads your paperwork, turning what would be weeks of spreadsheet data entry into a quick import." }
+              "name": "Can it import Excel and PDF WPSs?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Yes, both natively. One parser reads Excel WPS workbooks; another reconstructs a PDF form's grid and reads its cells. Either way, process, materials, ranges and pass-by-pass parameters land as structured fields, and the built-in profile reads English and Portuguese forms out of the box. Where a form leaves heat input blank, the app calculates it from the arc parameters and flags it for you to confirm." }
+            },
+            {
+              "@type": "Question",
+              "name": "Does an import change my register automatically?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Only if you choose to let it. By default every import queues as a proposed change-set: you see the current value beside the new value, cell by cell, and approve what lands, with low-confidence reads shaded for a closer look. You can set the bar higher (review every value) or lower (auto-apply and rely on versioning to undo). Only the cells you approve are patched into your own workbook; nothing is rebuilt." }
             },
             {
               "@type": "Question",
               "name": "Can I filter or search my WPSs by welding process?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Yes. Because every field is extracted at import, you can filter your library by real criteria — welding process, base and filler material, position, thickness range and more. You can narrow it down to a single process, or a specific combination of processes with or without a backing pass, in a couple of clicks, instead of scrolling filenames." }
+              "acceptedAnswer": { "@type": "Answer", "text": "Yes. Because every field is extracted at import, you filter your library by real criteria — welding process, base and filler material, position, thickness range and more. You can narrow it down to a single process, or a specific combination of processes with or without a backing pass, in a couple of clicks, instead of scrolling filenames." }
             },
             {
               "@type": "Question",
-              "name": "Does WPS Manager create WPSs, or just store them?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Its core job today is management — import, organize, filter, and keep supporting PQRs alongside. A spreadsheet-style builder for creating and bulk-editing WPSs in the cloud is on the roadmap. It deliberately does not derive qualified ranges from test data — that metallurgy is handled by the full Elenchon qualification platform." }
+              "name": "Does WPS Manager create WPSs, or just manage them?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Today its job is management — import, review, organize, filter, version, and export, with supporting WPQRs and pWPSs kept alongside. It already exports a clean Excel workbook per WPS (or the whole register), and that file re-imports losslessly. A spreadsheet-style builder for writing and bulk-editing WPSs in the cloud is on the roadmap. It deliberately does not derive qualified ranges from test data — that metallurgy is handled by the full Elenchon qualification platform." }
             },
             {
               "@type": "Question",
@@ -67,7 +79,7 @@
             {
               "@type": "Question",
               "name": "How is it different from the Elenchon platform?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Elenchon WPS Manager is the cloud WPS library on its own, for shops that just need their procedures organized and searchable. The full Elenchon platform adds shop-floor WPQR capture, range qualification, welder continuity (WPQ) and full traceability on an on-premise appliance. Same team; WPS Manager is the lightweight cloud slice and the natural starting point if you later grow into the full platform." }
+              "acceptedAnswer": { "@type": "Answer", "text": "Elenchon WPS Manager is the cloud WPS register on its own, for shops that just need their procedures organized, current and searchable. The full Elenchon platform adds shop-floor WPQR capture, range qualification, welder continuity (WPQ) and full traceability on an on-premise appliance. Same team; WPS Manager is the lightweight cloud slice and the natural starting point if you later grow into the full platform." }
             }
           ]
         }
