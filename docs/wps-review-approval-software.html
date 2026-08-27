@@ -1,0 +1,164 @@
+---
+layout: default
+title: "WPS Review &amp; Approval Software — Human-Reviewed Edits | Elenchon WPS Manager"
+description: "Nothing touches your WPS register until you approve it. Every import proposes a change-set — current value beside new value, cell by cell — with low-confidence reads flagged, drift detection, and only approved cells patched into your own workbook. From Delteris."
+og_title: "WPS Review &amp; Approval — Human-Reviewed Register Edits | Elenchon WPS Manager"
+og_description: "Every WPS import queues as a reviewed change-set: see current value beside new value cell by cell, approve what lands, and let versioning undo the rest. Low-confidence reads flagged, drift detected, only approved cells patched."
+og_image: "/static/DelterisCrest.webp"
+og_image_alt: "Elenchon WPS Manager by Delteris — WPS review and approval software"
+schema: schema/wps-review-approval-software.json
+en_url: "/wps-review-approval-software.html"
+pt_url: "/pt/wps-review-approval-software.html"
+alt_url: "/pt/wps-review-approval-software.html"
+---
+    <header class="page-hero">
+        <div class="hero-content">
+            <span class="hero-eyebrow">Elenchon WPS Manager · Review</span>
+            <h1 class="text-glow">Nothing Touches Your Register<br>Until You Approve It.</h1>
+            <p class="hero-sub">A register is only trustworthy if you control what goes into it. So imports never overwrite your sheet — they queue as a proposed change-set you review cell by cell. You see the current value beside the new value, tick what should land, correct what shouldn't, and only the cells you confirm are patched into your own workbook. What ends up in your register is exactly what a person signed off on.</p>
+            <div class="cta-group">
+                <a href="wps-manager-contact.html" class="btn btn-primary">Contact the Founders</a>
+                <a href="wps-management-software.html#pricing" class="btn btn-secondary">See Pricing</a>
+            </div>
+        </div>
+        <a class="scroll-cue" href="#overview" aria-label="Scroll to see more">
+            <span class="scroll-cue-text">Scroll</span>
+            <span class="scroll-cue-chevron" aria-hidden="true"></span>
+        </a>
+    </header>
+
+    <section class="page-section container" id="overview">
+        <div class="summary-panel">
+            <h2 class="text-glow">Every Import Is a Change-Set You Approve</h2>
+            <p><strong>WPS review-and-approval software puts a human sign-off between an imported document and your master register: it proposes each edit as current value versus new value, cell by cell, and only the cells you confirm are written to your own workbook.</strong> Auto-updating a compliance register from a parser is how quiet errors get in. Elenchon WPS Manager treats every import as a proposal, not an action. The review queue lays out each change as current → new, down to the individual cell; uncertain reads and computed values are shaded for a closer look; you fix anything wrong inline, tick what should apply, and approve. Set the bar where you want it — review everything, review only the uncertain reads, or auto-apply and rely on versioning to undo. Whatever you choose, your workbook is patched, never rebuilt.</p>
+        </div>
+    </section>
+
+    <!-- SCREENSHOT SLOT (hero): the Review queue — Cell / Field / Current / New / Apply? columns with an amber low-confidence row and Confirm/Reject. Drop an <img> with width/height + loading="lazy" here when ready. -->
+
+    <section class="page-section container" id="diff">
+        <div class="section-header">
+            <span class="eyebrow">Current → New, Cell by Cell</span>
+            <h2>See Exactly What Would Change</h2>
+            <p class="subtitle">Not "23 fields updated" — the actual before and after, at the level of a single cell.</p>
+        </div>
+        <div class="glass-card feature-block">
+            <p class="feature-lead">A change you can't see is a change you can't trust. The review queue makes every proposed edit legible: the value you have now, the value the import wants to write, and a tick to decide.</p>
+            <ul class="feature-list">
+                <li><strong>Current value → new value:</strong> Each proposed edit is laid out side by side at the individual cell, so you read exactly what would move and to what.</li>
+                <li><strong>Tick to apply, untick to keep:</strong> Apply a cell to write it, or leave it unticked to keep what you had — the decision is per cell, not per document.</li>
+                <li><strong>Correct before you commit:</strong> Fix any value inline, or add a row for a field the parser missed, then approve — what lands is what you signed off on, not the parser's raw read.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="page-section container" id="confidence">
+        <div class="section-header">
+            <span class="eyebrow">Attention Where It's Needed</span>
+            <h2>Low-Confidence Reads, Flagged in Amber</h2>
+            <p class="subtitle">The parser tells you what it wasn't sure of, so your review time goes to the cells that matter.</p>
+        </div>
+        <div class="glass-card feature-block">
+            <p class="feature-lead">Reviewing every value equally is how the important one gets missed. WPS Manager surfaces its own uncertainty, so a confident read doesn't cost you a second and a doubtful one can't slip past.</p>
+            <ul class="feature-list">
+                <li><strong>Uncertain cells shaded amber:</strong> Any value the parser wasn't sure of is highlighted and surfaced for a check, directing your eye to exactly where it's needed.</li>
+                <li><strong>Computed values called out:</strong> A heat input the app calculated rather than read is flagged the same way — a number you can confirm, never one that appears silently.</li>
+                <li><strong>Confident reads stay quiet:</strong> Values the parser is sure of don't clamour for attention, so a large import doesn't drown you in cells that were never in doubt.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="page-section container" id="approval-bar">
+        <div class="section-header">
+            <span class="eyebrow">Your Register, Your Rules</span>
+            <h2>Set Your Own Approval Bar</h2>
+            <p class="subtitle">Review everything, review only the uncertain, or auto-apply and lean on versioning.</p>
+        </div>
+        <div class="glass-card feature-block">
+            <p class="feature-lead">Different shops trust their forms differently. Rather than force one workflow, WPS Manager lets you choose how strict the gate is — and change your mind whenever.</p>
+            <ul class="feature-list">
+                <li><strong>Review every value:</strong> Nothing lands without a look — the strictest bar, for a register under close audit scrutiny.</li>
+                <li><strong>Review only the uncertain (default):</strong> Confident reads apply, and only the flagged cells wait for you — the balance most shops want.</li>
+                <li><strong>Auto-apply and undo:</strong> Let imports land automatically and rely on versioning to roll back anything wrong — fastest, backed by the full version history.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="page-section container" id="drift">
+        <div class="section-header">
+            <span class="eyebrow">The Sheet Never Quietly Drifts</span>
+            <h2>Drift Detection Between Library and Register</h2>
+            <p class="subtitle">If a document changes after its values landed, you're told — and offered a re-sync.</p>
+        </div>
+        <div class="glass-card feature-block">
+            <p class="feature-lead">A register goes wrong slowly: a WPS is edited, but the row it fed stays as it was. WPS Manager watches for that gap and closes it deliberately, with your sign-off.</p>
+            <ul class="feature-list">
+                <li><strong>Out-of-sync, surfaced:</strong> If a WPS is edited after its values already landed, the app flags that the register is out of sync with the library behind it.</li>
+                <li><strong>Re-sync on your say-so:</strong> It offers to re-compute the affected rows as a fresh change-set — reviewed and approved like any other, never silently rewritten.</li>
+                <li><strong>Documents and sheet stay tied:</strong> The register always traces back to the documents that fed it, so the sheet and the paperwork can't drift apart unnoticed.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="page-section container" id="patch">
+        <div class="section-header">
+            <span class="eyebrow">Patched, Never Rebuilt</span>
+            <h2>Only Approved Cells Are Written to Your Workbook</h2>
+            <p class="subtitle">Your file stays yours — the app changes the cells you confirmed and nothing else.</p>
+        </div>
+        <div class="glass-card feature-block">
+            <p class="feature-lead">The register you keep is your own workbook, and it stays that way. WPS Manager never regenerates your file from a model and hands it back changed — it edits precisely the cells you approved.</p>
+            <ul class="feature-list">
+                <li><strong>Surgical patching:</strong> The app writes the confirmed cells into your own file and leaves everything else exactly as you had it — formatting, layout and all.</li>
+                <li><strong>Every approval versioned:</strong> Each approved change-set produces a new register version, so you can roll back to any earlier snapshot at will (see <a href="wps-management-software.html#registers">register versioning</a>).</li>
+                <li><strong>Cleared without a false change:</strong> A change-set that only needs a value verified — with nothing actually to alter — is closed with a "mark reviewed", not a hollow approval that writes an identical version.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="page-section container" id="faq">
+        <div class="section-header">
+            <span class="eyebrow">Questions &amp; Answers</span>
+            <h2>WPS Review &amp; Approval, Answered</h2>
+            <p class="subtitle">How the change-set works, what gets flagged, and what lands in your sheet.</p>
+        </div>
+        <div class="pillar-grid">
+            <div class="glass-card">
+                <h3>Does an import change my register automatically?</h3>
+                <p>Only if you choose to let it. By default every import queues as a proposed change-set — current value beside new value, cell by cell — and you approve what lands. You can raise the bar to review every value, or lower it to auto-apply and rely on versioning to undo. Only the cells you approve are patched into your own workbook.</p>
+            </div>
+            <div class="glass-card">
+                <h3>How do I know which values to check?</h3>
+                <p>The parser flags its own uncertainty. Any cell it wasn't sure of — or a heat input it computed — is shaded amber and surfaced for review, while confident reads stay quiet, so your attention goes exactly where it's needed.</p>
+            </div>
+            <div class="glass-card">
+                <h3>Can I correct a value during review?</h3>
+                <p>Yes. Fix any value inline, or add a row for a field the parser missed, then approve. What lands is what you signed off on — you're never forced to accept the parser's raw read or reject the whole set.</p>
+            </div>
+            <div class="glass-card">
+                <h3>What happens if a WPS changes after its values landed?</h3>
+                <p>Drift detection catches it: the app tells you the register is out of sync with the library and offers to re-sync the affected rows as a fresh change-set, reviewed and approved like any other — the sheet never quietly drifts from the documents behind it.</p>
+            </div>
+            <div class="glass-card">
+                <h3>Does it rebuild my whole spreadsheet?</h3>
+                <p>No. WPS Manager patches only the approved cells into your own workbook and leaves everything else exactly as you had it. Your file is never regenerated from a model, and every approved change-set is versioned so you can roll back.</p>
+            </div>
+            <div class="glass-card">
+                <h3>What if an import has nothing to change, only something to verify?</h3>
+                <p>It's closed with a "mark reviewed" rather than an approval that would write an identical new version — so a verification-only change-set doesn't leave you stuck between approving a change that isn't there and rejecting a correct read.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-section container" id="cta">
+        <div class="cta-band">
+            <span class="eyebrow">Get Started</span>
+            <h2 class="text-glow">Keep Control of What Enters Your Register</h2>
+            <p>Onboarding is guided directly by the founders — send us a few of your WPS documents, we confirm the parser reads your template, and you go live with a register where nothing changes without your sign-off. Everything handled confidentially.</p>
+            <div class="cta-group">
+                <a href="wps-manager-contact.html" class="btn btn-primary">Contact the Founders</a>
+                <a href="wps-management-software.html" class="btn btn-secondary">Back to WPS Manager Overview</a>
+            </div>
+            <p class="hero-urgency u-gap-top">No sales layers, no call queues — you talk to the people who built it.</p>
+        </div>
+    </section>

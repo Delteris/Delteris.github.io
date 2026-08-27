@@ -1,0 +1,149 @@
+---
+layout: default
+title: "Welding Heat Input Calculator — Clamped to Your PQR Range | Elenchon WPS Manager"
+description: "A live welding heat input calculator that clamps to your PQR-qualified range. Set the root, fill and cap windows, drag current, voltage and travel-speed sliders, and see heat input computed live — multi-arc aware, and it pulls ranges straight from a parsed WPS. From Delteris."
+og_title: "Welding Heat Input Calculator — Stay Inside Your Qualified Window | Elenchon WPS Manager"
+og_description: "Set your PQR-qualified heat-input range per weld region, drag the arc-parameter sliders, and watch heat input computed live — clamped so you can't leave the window. Tandem/twin-arc aware; loads ranges from a parsed WPS."
+og_image: "/static/DelterisCrest.webp"
+og_image_alt: "Elenchon WPS Manager by Delteris — welding heat input calculator"
+schema: schema/heat-input-calculator.json
+en_url: "/heat-input-calculator.html"
+pt_url: "/pt/heat-input-calculator.html"
+alt_url: "/pt/heat-input-calculator.html"
+---
+    <header class="page-hero">
+        <div class="hero-content">
+            <span class="hero-eyebrow">Elenchon WPS Manager · Heat Input</span>
+            <h1 class="text-glow">Heat Input Calculator.<br>Clamped to Your Qualified Window.</h1>
+            <p class="hero-sub">Heat input is where a perfectly good procedure quietly goes out of qualification. The built-in helper makes the safe window impossible to miss: set the heat-input range your PQR qualified for each weld region, then drag the current, voltage and travel-speed sliders to see the result computed live — clamped so you physically can't dial in a value outside what the procedure allows.</p>
+            <div class="cta-group">
+                <a href="wps-manager-contact.html" class="btn btn-primary">Contact the Founders</a>
+                <a href="wps-management-software.html#pricing" class="btn btn-secondary">See Pricing</a>
+            </div>
+        </div>
+        <a class="scroll-cue" href="#overview" aria-label="Scroll to see more">
+            <span class="scroll-cue-text">Scroll</span>
+            <span class="scroll-cue-chevron" aria-hidden="true"></span>
+        </a>
+    </header>
+
+    <section class="page-section container" id="overview">
+        <div class="summary-panel">
+            <h2 class="text-glow">Stay Inside the Window Your PQR Qualified</h2>
+            <p><strong>A welding heat input calculator computes heat input from the arc parameters — current, voltage and travel speed — and, here, clamps every control to the range your PQR qualified, so the value you dial in can never fall outside what the procedure allows.</strong> Heat input is the one calculation that's easy to get wrong under pressure, and getting it wrong is how a qualified weld quietly stops being qualified. The helper turns that into something you can see: enter the qualified range for each weld region — root, fill, cap — then move the sliders and watch heat input recompute live in kJ. Because the controls clamp to your window, you can explore combinations freely without ever leaving the qualified range. It's multi-arc aware for tandem and twin setups, and it can pull a WPS's per-region ranges straight from your library. It's a scratch pad — nothing here is saved or written to any sheet.</p>
+        </div>
+    </section>
+
+    <!-- SCREENSHOT SLOT (hero): the helper with a PQR range set, the current/voltage/travel-speed sliders, and the live computed result — ideally a slider at its clamp limit. Drop an <img> with width/height + loading="lazy" here when ready. -->
+
+    <section class="page-section container" id="range">
+        <div class="section-header">
+            <span class="eyebrow">Set the Range, Then Explore</span>
+            <h2>Your Qualified Window, Per Weld Region</h2>
+            <p class="subtitle">Root, fill and cap each get their own range — the way a PQR actually qualifies them.</p>
+        </div>
+        <div class="glass-card feature-block">
+            <p class="feature-lead">Heat input isn't one number for a whole joint — it's qualified region by region. The helper follows that, so what you set matches what your PQR says.</p>
+            <ul class="feature-list">
+                <li><strong>Per-region windows:</strong> Enter the heat-input range your PQR qualified for each weld region — root, fill and cap — separately, so each is checked against its own limits.</li>
+                <li><strong>Live recompute:</strong> Drag the current, voltage and travel-speed sliders and heat input is computed live for the region you're working, in kJ.</li>
+                <li><strong>Explore safely:</strong> Because the range is set first, every combination you try is read against the window you qualified — no mental arithmetic to check whether you're still inside it.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="page-section container" id="clamp">
+        <div class="section-header">
+            <span class="eyebrow">You Can't Leave the Window</span>
+            <h2>Sliders Clamped to the Qualified Range</h2>
+            <p class="subtitle">The controls physically stop at your PQR limits — an out-of-range value isn't dialable.</p>
+        </div>
+        <div class="glass-card feature-block">
+            <p class="feature-lead">A calculator that lets you compute an out-of-qualification value is a calculator that lets you ship one. This one won't: the window is a hard boundary, not a warning after the fact.</p>
+            <ul class="feature-list">
+                <li><strong>Hard limits:</strong> The controls clamp to your PQR-qualified range, so you physically can't dial in a combination whose heat input falls outside what the procedure allows.</li>
+                <li><strong>Safe by construction:</strong> Rather than flag an error once you've already left the window, the helper makes leaving it impossible — the safe range is the only range you can reach.</li>
+                <li><strong>Confidence under pressure:</strong> On the floor or in a review, you can move fast knowing every value the tool will let you produce is inside qualification.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="page-section container" id="multi-arc">
+        <div class="section-header">
+            <span class="eyebrow">Tandem &amp; Twin-Arc</span>
+            <h2>Multi-Arc Aware, the Way the Standard Expects</h2>
+            <p class="subtitle">A lead and a trail head, each with its own parameters — summed across heads.</p>
+        </div>
+        <div class="glass-card feature-block">
+            <p class="feature-lead">Multi-arc processes don't compute like a single arc, and a calculator that pretends otherwise is wrong for exactly the high-productivity setups that need it most.</p>
+            <ul class="feature-list">
+                <li><strong>Lead and trail heads:</strong> Tandem and twin-arc setups get a lead head and a trail head, each with its own current and voltage.</li>
+                <li><strong>Summed across heads:</strong> The total heat input is aggregated across the heads, the way the standard expects a multi-arc weld to be assessed.</li>
+                <li><strong>Same clamped window:</strong> The multi-arc total is checked against the same PQR-qualified range, so multi-arc combinations stay inside qualification just like single-arc ones.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="page-section container" id="from-wps">
+        <div class="section-header">
+            <span class="eyebrow">Straight From Your Library</span>
+            <h2>Pull a WPS's Ranges in One Load</h2>
+            <p class="subtitle">Load a parsed WPS and its per-region ranges and processes fill in for you.</p>
+        </div>
+        <div class="glass-card feature-block">
+            <p class="feature-lead">The helper isn't a standalone island — it's wired to the library, so you can start from a real procedure instead of re-typing its limits.</p>
+            <ul class="feature-list">
+                <li><strong>Load and go:</strong> Pull a parsed WPS from your library and its per-region ranges and processes fill in automatically, ready to explore.</li>
+                <li><strong>Parameters stay yours:</strong> The qualified ranges come from the WPS; the arc parameters are yours to move — you're exploring within a real procedure's window.</li>
+                <li><strong>A scratch pad, by design:</strong> Nothing here is saved or written to any sheet — it's a live calculation surface, not another place your register can change.</li>
+            </ul>
+            <p class="feature-out"><a href="wps-library-search-software.html">See the WPS library the ranges come from &rarr;</a></p>
+        </div>
+    </section>
+
+    <section class="page-section container" id="faq">
+        <div class="section-header">
+            <span class="eyebrow">Questions &amp; Answers</span>
+            <h2>The Heat Input Calculator, Answered</h2>
+            <p class="subtitle">How it computes, why it clamps, and where the ranges come from.</p>
+        </div>
+        <div class="pillar-grid">
+            <div class="glass-card">
+                <h3>How does the calculator work out heat input?</h3>
+                <p>It computes heat input live from the arc parameters — current, voltage and travel speed — as you drag the sliders, showing the result in kJ for the weld region you're working. Root, fill and cap each have their own qualified range.</p>
+            </div>
+            <div class="glass-card">
+                <h3>Can it stop me from going out of qualification?</h3>
+                <p>Yes — that's the point. The sliders clamp to your PQR-qualified range, so you physically can't dial in a combination whose heat input falls outside what the procedure allows. Leaving the window isn't possible, rather than flagged after the fact.</p>
+            </div>
+            <div class="glass-card">
+                <h3>Does it handle tandem or twin-arc welding?</h3>
+                <p>Yes. Tandem and twin-arc setups get a lead head and a trail head, each with its own current and voltage, and the total heat input is summed across the heads the way the standard expects — checked against the same qualified window.</p>
+            </div>
+            <div class="glass-card">
+                <h3>Do I have to type in the qualified ranges?</h3>
+                <p>You can, or you can load a parsed WPS from your library and its per-region ranges and processes fill in automatically. The ranges come from the WPS; the arc parameters stay yours to explore.</p>
+            </div>
+            <div class="glass-card">
+                <h3>Does it save what I calculate?</h3>
+                <p>No. It's a scratch pad — a live calculation surface. Nothing you do here is saved or written to any sheet or register, so you can explore freely without changing anything.</p>
+            </div>
+            <div class="glass-card">
+                <h3>Is heat input qualified per region?</h3>
+                <p>Yes. The helper sets and checks root, fill and cap separately, because that's how a PQR qualifies heat input — region by region, each against its own limits.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-section container" id="cta">
+        <div class="cta-band">
+            <span class="eyebrow">Get Started</span>
+            <h2 class="text-glow">Keep Every Weld Inside Its Window</h2>
+            <p>The heat input helper ships with Elenchon WPS Manager, wired to the same library that holds your procedures. Onboarding is guided directly by the founders, and everything is handled confidentially.</p>
+            <div class="cta-group">
+                <a href="wps-manager-contact.html" class="btn btn-primary">Contact the Founders</a>
+                <a href="wps-management-software.html" class="btn btn-secondary">Back to WPS Manager Overview</a>
+            </div>
+            <p class="hero-urgency u-gap-top">No sales layers, no call queues — you talk to the people who built it.</p>
+        </div>
+    </section>
