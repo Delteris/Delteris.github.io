@@ -52,6 +52,47 @@
             e.stopPropagation();
             if (productsMenu.hidden) openProducts(); else closeProducts();
         });
+
+        /* Sticky product label: the button stays the neutral "Products" word while browsing,
+           and only a manual dropdown pick changes it — persisted across the visit in
+           localStorage, until the visitor picks the other product. Navigation and direct
+           landings never change it. Storage is wrapped in try/catch (private mode, etc.). */
+        (function () {
+            var labelEl = productsBtn.querySelector('.nav-dropdown-btn-label');
+            if (!labelEl) return;
+            var KEY = 'delteris:selectedProduct';   // stores 'elenchon' | 'wpsm'
+            var items = productsMenu.querySelectorAll('a[data-product]');
+            var byKey = {};
+            items.forEach(function (a) { byKey[a.getAttribute('data-product')] = a; });
+
+            function applySaved() {
+                var saved;
+                try { saved = localStorage.getItem(KEY); } catch (err) { saved = null; }
+                if (saved && byKey[saved]) {
+                    var lbl = byKey[saved].getAttribute('data-product-label');
+                    if (lbl) {
+                        labelEl.textContent = lbl;
+                        productsBtn.classList.add('is-selected');
+                    }
+                }
+                // No saved pick → leave the default label untouched.
+            }
+            applySaved();
+
+            items.forEach(function (a) {
+                a.addEventListener('click', function () {
+                    // Let the navigation proceed; just record the pick first so the next
+                    // page (and this one, briefly) shows it.
+                    var key = a.getAttribute('data-product');
+                    var lbl = a.getAttribute('data-product-label');
+                    try { localStorage.setItem(KEY, key); } catch (err) {}
+                    if (lbl) {
+                        labelEl.textContent = lbl;
+                        productsBtn.classList.add('is-selected');
+                    }
+                });
+            });
+        })();
         // Close on outside click and on Escape.
         document.addEventListener('click', function (e) {
             if (!productsWrap.contains(e.target)) closeProducts();

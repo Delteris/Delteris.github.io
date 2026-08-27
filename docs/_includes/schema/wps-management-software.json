@@ -69,7 +69,7 @@
             {
               "@type": "Question",
               "name": "Does WPS Manager create WPSs, or just manage them?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Today its job is management — import, review, organize, filter, version, and export, with supporting WPQRs and pWPSs kept alongside. It already exports a clean Excel workbook per WPS (or the whole register), and that file re-imports losslessly. A spreadsheet-style builder for writing and bulk-editing WPSs in the cloud is on the roadmap. It deliberately does not derive qualified ranges from test data — that metallurgy is handled by the full Elenchon qualification platform." }
+              "acceptedAnswer": { "@type": "Answer", "text": "Today its job is management — import, review, organize, filter, version, and export, with supporting WPQRs and pWPSs kept alongside. It already exports a clean Excel workbook per WPS (or the whole register), and that file re-imports losslessly. A spreadsheet-style builder for writing and bulk-editing WPSs in the cloud is on the roadmap. It deliberately does not capture WPQR results on the floor — that shop-floor qualification capture is handled by the full Elenchon qualification platform." }
             },
             {
               "@type": "Question",
@@ -79,7 +79,7 @@
             {
               "@type": "Question",
               "name": "How is it different from the Elenchon platform?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Elenchon WPS Manager is the cloud WPS register on its own, for shops that just need their procedures organized, current and searchable. The full Elenchon platform adds shop-floor WPQR capture, range qualification, welder continuity (WPQ) and full traceability on an on-premise appliance. Same team; WPS Manager is the lightweight cloud slice and the natural starting point if you later grow into the full platform." }
+              "acceptedAnswer": { "@type": "Answer", "text": "Elenchon WPS Manager is the cloud WPS register on its own, for shops that just need their procedures organized, current and searchable. The full Elenchon platform adds shop-floor WPQR capture, welder continuity (WPQ) and full traceability on an on-premise appliance. Same team; WPS Manager is the lightweight cloud slice and the natural starting point if you later grow into the full platform." }
             }
           ]
         }
