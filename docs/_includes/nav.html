@@ -9,9 +9,15 @@
 {%- comment %} WPS Manager context: on any WPS Manager page (landing or its contact page)
      the top nav swaps from Elenchon's links to WPS-Manager-specific ones, so a visitor
      never gets bounced into Elenchon's on-premise Pricing/Security/etc. {%- endcomment %}
+{%- comment %} is_wpsm drives which secondary links show. WPS Manager URLs: the landing
+     (wps-management-software), the contact page (wps-manager-contact), and every WPS Manager
+     capability page (wps-import / wps-review-approval / wps-library-search / wps-preview-verification
+     / heat-input-calculator). The dropdown button LABEL is not set here — it stays the neutral
+     Products word and is toggled client-side by main.js to the visitor's last dropdown choice. {%- endcomment %}
 {%- assign is_wpsm = false -%}
-{%- if page.url contains 'wps-management-software' or page.url contains 'wps-manager-contact' %}{% assign is_wpsm = true %}{% endif -%}
+{%- if page.url contains 'wps-management-software' or page.url contains 'wps-manager-contact' or page.url contains 'wps-import-software' or page.url contains 'wps-review-approval-software' or page.url contains 'wps-library-search-software' or page.url contains 'wps-preview-verification' or page.url contains 'heat-input-calculator' %}{% assign is_wpsm = true %}{% endif -%}
 {%- if L == 'pt' %}{% assign wpsm_home = '/pt/wps-management-software.html' %}{% assign wpsm_contact = '/pt/wps-manager-contact.html' %}{% else %}{% assign wpsm_home = '/wps-management-software.html' %}{% assign wpsm_contact = '/wps-manager-contact.html' %}{% endif -%}
+{%- comment %} Dropdown button label = the current product family, else the neutral Products word. {%- endcomment %}
     <nav aria-label="{% if L == 'pt' %}Navegação principal{% else %}Main navigation{% endif %}">
         <a href="{% if L == 'pt' %}/pt/{% else %}/{% endif %}" class="logo nav-logo">
             <img src="/static/DelterisCrest.webp" alt="Delteris" width="32" height="32">
@@ -25,16 +31,16 @@
         <div class="nav-links" id="nav-links">
 {%- if L == 'pt' %}
             <div class="nav-dropdown" data-nav-dropdown>
-                <button type="button" class="nav-dropdown-btn" id="products-btn" aria-haspopup="true" aria-expanded="false"{% if page.url == '/pt/platform.html' or page.url == '/pt/wps-management-software.html' %} aria-current="page"{% endif %}>
-                    Produtos
+                <button type="button" class="nav-dropdown-btn" id="products-btn" data-products-btn data-label-default="Produtos" aria-haspopup="true" aria-expanded="false">
+                    <span class="nav-dropdown-btn-label">Produtos</span>
                     <svg class="nav-dropdown-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg>
                 </button>
                 <div class="nav-dropdown-menu" role="menu" aria-label="Produtos" hidden>
-                    <a href="/pt/platform.html" role="menuitem"{% if page.url == '/pt/platform.html' %} aria-current="page"{% endif %}>
+                    <a href="/pt/platform.html" role="menuitem" data-product="elenchon" data-product-label="Elenchon"{% if page.url == '/pt/platform.html' %} aria-current="page"{% endif %}>
                         <span class="nav-dropdown-name">Elenchon</span>
                         <span class="nav-dropdown-desc">Rastreabilidade, qualificação e captura no chão de fábrica — no local</span>
                     </a>
-                    <a href="/pt/wps-management-software.html" role="menuitem"{% if page.url == '/pt/wps-management-software.html' %} aria-current="page"{% endif %}>
+                    <a href="/pt/wps-management-software.html" role="menuitem" data-product="wpsm" data-product-label="WPS Manager"{% if page.url == '/pt/wps-management-software.html' %} aria-current="page"{% endif %}>
                         <span class="nav-dropdown-name">Elenchon WPS Manager</span>
                         <span class="nav-dropdown-desc">Gestão de WPS na cloud — importe, organize e encontre</span>
                     </a>
@@ -55,16 +61,16 @@
 {%- endif %}
 {%- else %}
             <div class="nav-dropdown" data-nav-dropdown>
-                <button type="button" class="nav-dropdown-btn" id="products-btn" aria-haspopup="true" aria-expanded="false"{% if page.url == '/platform.html' or page.url == '/wps-management-software.html' %} aria-current="page"{% endif %}>
-                    Products
+                <button type="button" class="nav-dropdown-btn" id="products-btn" data-products-btn data-label-default="Products" aria-haspopup="true" aria-expanded="false">
+                    <span class="nav-dropdown-btn-label">Products</span>
                     <svg class="nav-dropdown-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg>
                 </button>
                 <div class="nav-dropdown-menu" role="menu" aria-label="Products" hidden>
-                    <a href="/platform.html" role="menuitem"{% if page.url == '/platform.html' %} aria-current="page"{% endif %}>
+                    <a href="/platform.html" role="menuitem" data-product="elenchon" data-product-label="Elenchon"{% if page.url == '/platform.html' %} aria-current="page"{% endif %}>
                         <span class="nav-dropdown-name">Elenchon</span>
                         <span class="nav-dropdown-desc">On-premise traceability, qualification &amp; shop-floor capture</span>
                     </a>
-                    <a href="/wps-management-software.html" role="menuitem"{% if page.url == '/wps-management-software.html' %} aria-current="page"{% endif %}>
+                    <a href="/wps-management-software.html" role="menuitem" data-product="wpsm" data-product-label="WPS Manager"{% if page.url == '/wps-management-software.html' %} aria-current="page"{% endif %}>
                         <span class="nav-dropdown-name">Elenchon WPS Manager</span>
                         <span class="nav-dropdown-desc">Cloud WPS management — import, organize &amp; find</span>
                     </a>

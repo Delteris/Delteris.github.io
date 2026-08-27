@@ -40,7 +40,7 @@
             {
               "@type": "Question",
               "name": "Can Elenchon generate a WPS from WPQR test data?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Yes. You define a preliminary WPS in the app, capture the actual WPQR parameters on the shop floor, import those real values back, adjust the qualified ranges, and export a finalized WPS — with the official files uploaded or linked at any stage." }
+              "acceptedAnswer": { "@type": "Answer", "text": "Yes. You define a preliminary WPS in the app, capture the actual WPQR parameters on the shop floor, import those real values back beside the procedure, and export a finalized WPS you write from them — with the official files uploaded or linked at any stage." }
             },
             {
               "@type": "Question",
