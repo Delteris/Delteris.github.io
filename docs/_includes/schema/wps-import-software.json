@@ -1,0 +1,69 @@
+{
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://delteris.com/" },
+            { "@type": "ListItem", "position": 2, "name": "WPS Manager", "item": "https://delteris.com/wps-management-software.html" },
+            { "@type": "ListItem", "position": 3, "name": "WPS Import Software", "item": "https://delteris.com/wps-import-software.html" }
+          ]
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "Elenchon WPS Manager — WPS Import Software",
+          "applicationCategory": "BusinessApplication",
+          "applicationSubCategory": "WPS Management Software",
+          "operatingSystem": "Cloud",
+          "description": "Cloud WPS import software with native Excel and PDF parsers: reads process, materials, positions, ranges and pass-by-pass parameters into structured fields, understands English and Portuguese forms, imports in batch, computes heat input where a form omits it, and is tuned to your company's exact template.",
+          "keywords": "WPS import software, WPS parser, Excel WPS import, PDF WPS import, welding procedure import, WPS data extraction, ISO 15609 WPS",
+          "featureList": [
+            "Native Excel WPS workbook parser",
+            "PDF WPS form grid reconstruction and cell reading",
+            "Structured extraction of process, materials, ranges and pass-by-pass parameters",
+            "Bilingual English and Portuguese form profiles out of the box",
+            "Batch import with automatic new/revision/correction classification",
+            "Heat input computed from arc parameters (EN 1011-1) where a form leaves it blank",
+            "Parser tuned to your company's exact WPS template during onboarding"
+          ],
+          "offers": { "@type": "Offer", "price": "80", "priceCurrency": "EUR", "url": "https://delteris.com/wps-management-software.html#pricing", "availability": "https://schema.org/InStock" },
+          "provider": { "@id": "https://delteris.com/#organization" }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://delteris.com/wps-import-software.html#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Can it import both Excel and PDF WPSs?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Yes — both, natively. One parser reads Excel WPS workbooks; another reconstructs a PDF form's ruled grid and reads its cells. Either way, process, materials, positions, ranges and pass-by-pass parameters land as structured, searchable fields rather than a flat scan." }
+            },
+            {
+              "@type": "Question",
+              "name": "Do I have to re-type my procedures into a template?",
+              "acceptedAnswer": { "@type": "Answer", "text": "No. WPS Manager reads the documents you already have instead of making you conform to its format. A folder of existing WPSs becomes structured records without hand data entry." }
+            },
+            {
+              "@type": "Question",
+              "name": "Does it read Portuguese WPS forms?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Yes. The built-in profile understands English and Portuguese layouts as shipped, so a PT or mixed EN/PT form imports without special setup. Further languages and shop-specific vocabularies are added through the same language-pack mechanism during onboarding." }
+            },
+            {
+              "@type": "Question",
+              "name": "What happens when a form leaves heat input blank?",
+              "acceptedAnswer": { "@type": "Answer", "text": "The app computes it from the arc parameters (current × voltage × 60 ÷ travel speed × process efficiency, per EN 1011-1) and flags it for you to confirm against the PQR. It is never a silent number." }
+            },
+            {
+              "@type": "Question",
+              "name": "Can I import many WPSs at once?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Yes. Batch import brings in a whole stack in one pass, and each file is classified as a new WPS, a new revision, or a correction as it lands, so revisions group correctly from the start." }
+            },
+            {
+              "@type": "Question",
+              "name": "Will it read my company's specific form?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Standard ISO 15609-style forms work immediately. Your exact layout is tuned during onboarding: you send a few real WPSs, we confirm the parser reads them and adjust if needed, and only then do you go live — handled in strict confidence." }
+            }
+          ]
+        }
+      ]
+    }
