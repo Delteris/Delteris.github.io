@@ -3,9 +3,9 @@ layout: default
 lang: pt
 permalink: /pt/wps-import-software.html
 title: "Software de Importação de WPS — Parser de Excel e PDF | Elenchon WPS Manager"
-description: "Importe documentos WPS em Excel ou PDF e deixe o parser fazer a introdução de dados. Dois parsers nativos leem processo, materiais, gamas e parâmetros passe a passe como campos estruturados — bilingue, em lote, e ajustado ao seu próprio modelo. Da Delteris."
+description: "Importe documentos WPS em Excel ou PDF e deixe o parser fazer a introdução de dados. Dois parsers nativos leem processo, materiais, gamas e parâmetros passe a passe como campos estruturados — agnóstico à língua, em lote, e ajustado ao seu próprio modelo. Da Delteris."
 og_title: "Importação de WPS — Parser de Excel e PDF | Elenchon WPS Manager"
-og_description: "Transforme uma pasta de WPS existentes em registos estruturados em minutos. Parsers nativos de Excel e PDF, bilingue PT/EN, importação em lote, aporte térmico calculado onde falta, e ajustado ao esquema exato da sua empresa."
+og_description: "Transforme uma pasta de WPS existentes em registos estruturados em minutos. Parsers nativos de Excel e PDF, correspondência de rótulos agnóstica à língua, importação em lote, aporte térmico calculado onde falta, e ajustado ao esquema exato da sua empresa."
 og_image: "/static/DelterisCrest.webp"
 og_image_alt: "Elenchon WPS Manager by Delteris — software de importação de WPS para Excel e PDF"
 schema: schema/wps-import-software.json
@@ -32,7 +32,7 @@ alt_url: "/wps-import-software.html"
     <section class="page-section container" id="overview">
         <div class="summary-panel">
             <h2 class="text-glow">As Suas WPS Lá Dentro — Em Minutos, Não Semanas</h2>
-            <p><strong>O software de importação de WPS lê as suas Especificações de Procedimento de Soldadura existentes — folhas Excel ou formulários PDF — e extrai cada campo para registos estruturados e pesquisáveis, para que nunca redigite um procedimento para o colocar no seu registo.</strong> A maioria das ferramentas de WPS obriga-o a conformar-se ao seu modelo, ou a lutar com um formulário Excel frágil, transformando uma pilha de WPS existentes em dias de trabalho. O Elenchon WPS Manager faz o contrário: lê os <em>seus</em> documentos. Um formulário PDF digital é reconstruído linha de grelha a linha de grelha e lido célula a célula; uma WPS em Excel é analisada diretamente da folha. O perfil incorporado compreende esquemas em inglês e português tal como fornecido, importa lotes inteiros de uma vez, e é ajustado ao formulário exato da sua empresa durante a integração — por isso o que entra é a sua papelada, estruturada, não um modelo genérico que teve de preencher.</p>
+            <p><strong>O software de importação de WPS lê as suas Especificações de Procedimento de Soldadura existentes — folhas Excel ou formulários PDF — e extrai cada campo para registos estruturados e pesquisáveis, para que nunca redigite um procedimento para o colocar no seu registo.</strong> A maioria das ferramentas de WPS obriga-o a conformar-se ao seu modelo, ou a lutar com um formulário Excel frágil, transformando uma pilha de WPS existentes em dias de trabalho. O Elenchon WPS Manager faz o contrário: lê os <em>seus</em> documentos. Um formulário PDF digital é reconstruído linha de grelha a linha de grelha e lido célula a célula; uma WPS em Excel é analisada diretamente da folha. O parser lê a estrutura de um formulário em vez de um vocabulário fixo, por isso não está preso a uma só língua — importa lotes inteiros de uma vez e é ajustado ao formulário e à terminologia exatos da sua empresa durante a integração, por isso o que entra é a sua papelada, estruturada, não um modelo genérico que teve de preencher.</p>
         </div>
     </section>
 
@@ -60,18 +60,18 @@ alt_url: "/wps-import-software.html"
         </div>
     </section>
 
-    <section class="page-section container" id="bilingual">
+    <section class="page-section container" id="multilingual">
         <div class="section-header">
-            <span class="eyebrow">Bilingue de Origem</span>
-            <h2>Lê Formulários em Inglês e Português Tal Como Fornecidos</h2>
-            <p class="subtitle">Uma WPS mista PT/EN importa sem configuração especial — o perfil incorporado já conhece ambos.</p>
+            <span class="eyebrow">Agnóstico à Língua por Conceção</span>
+            <h2>Lê a Estrutura do Formulário, Não um Vocabulário Fixo</h2>
+            <p class="subtitle">O parser corresponde os seus rótulos seja qual for a língua em que estão escritos — por isso um formulário na sua língua, ou de língua mista, lê-se de forma limpa.</p>
         </div>
         <div class="glass-card feature-block">
-            <p class="feature-lead">Oficinas que trabalham além-fronteiras raramente têm um formulário numa só língua. O perfil incorporado lê esquemas de WPS em inglês e português tal como entregues, por isso um formulário bilingue ou de língua mista mapeia de forma limpa à primeira passagem.</p>
+            <p class="feature-lead">Oficinas que trabalham além-fronteiras raramente têm um formulário numa só língua. O WPS Manager não fixa uma língua no código: lê a estrutura de um formulário no estilo ISO&nbsp;15609 e corresponde os seus rótulos a partir de um pacote de idioma, por isso a língua em que os rótulos estão escritos não altera se são compreendidos.</p>
             <ul class="feature-list">
-                <li><strong>Duas línguas, um perfil:</strong> Os rótulos de campo em inglês e português são ambos compreendidos tal como fornecidos — sem modelo separado, sem remapeamento manual para um formulário PT.</li>
-                <li><strong>Esquema, não só palavras:</strong> O parser reconhece as convenções estruturais dos formulários no estilo ISO&nbsp;15609 em qualquer das línguas, por isso a tabela de passes e o bloco de cabeçalho leem-se corretamente independentemente da língua dos rótulos.</li>
-                <li><strong>Extensível por conceção:</strong> O mesmo mecanismo de language-pack que carrega EN e PT é como se acrescentam mais línguas e vocabulários específicos da oficina durante a integração.</li>
+                <li><strong>Estrutura primeiro, palavras depois:</strong> O parser reconhece o esquema de uma WPS — bloco de cabeçalho, tabela de passes, gamas — e lê-o corretamente independentemente da língua dos rótulos, por isso um formulário na sua língua mapeia à primeira passagem.</li>
+                <li><strong>A sua língua, a sua terminologia:</strong> Os rótulos são correspondidos a partir de um pacote de idioma por cliente, por isso os seus termos internos e a sua língua são acrescentados fornecendo os termos — sem modelo reconstruído, sem alteração de código.</li>
+                <li><strong>Incluído e extensível:</strong> Inglês e português estão incluídos hoje; qualquer outra língua ou vocabulário específico da oficina é acrescentado da mesma forma durante a integração.</li>
             </ul>
         </div>
     </section>
@@ -142,7 +142,7 @@ alt_url: "/wps-import-software.html"
             </div>
             <div class="glass-card">
                 <h3>Lê formulários de WPS em português?</h3>
-                <p>Sim. O perfil incorporado compreende esquemas em inglês e português tal como fornecidos, por isso um formulário PT ou misto EN/PT importa sem configuração especial. Mais línguas e vocabulários específicos da oficina são acrescentados pelo mesmo mecanismo de language-pack durante a integração.</p>
+                <p>O parser lê a estrutura de um formulário, não um conjunto fixo de palavras, e corresponde os seus rótulos a partir de um pacote de idioma — por isso a língua do formulário não altera se é compreendido. Inglês e português estão incluídos hoje; a sua língua e a sua terminologia interna são acrescentadas durante a integração fornecendo os termos, sem alteração de código.</p>
             </div>
             <div class="glass-card">
                 <h3>O que acontece quando um formulário deixa o aporte térmico em branco?</h3>
