@@ -1,33 +1,53 @@
 {
-      "@context": "https://schema.org",
-      "@graph": [
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
         {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://delteris.com/" },
-            { "@type": "ListItem", "position": 2, "name": "WPS Management Software", "item": "https://delteris.com/wps-management-software.html" },
-            { "@type": "ListItem", "position": 3, "name": "Features", "item": "https://delteris.com/wps-manager-features.html" }
-          ]
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://delteris.com/"
         },
         {
-          "@type": "WebPage",
-          "name": "Elenchon WPS Manager — Features",
-          "url": "https://delteris.com/wps-manager-features.html",
-          "description": "The full Elenchon WPS Manager capability set — native Excel and PDF import, human-reviewed edits, a versioned register, a structured library with faceted search, preview against the source document, the linked WPQR/pWPS chain, and a heat-input helper — shown in the app.",
-          "isPartOf": { "@type": "WebSite", "name": "Delteris", "url": "https://delteris.com/" },
-          "about": {
-            "@type": "SoftwareApplication",
-            "name": "Elenchon WPS Manager",
-            "applicationCategory": "BusinessApplication",
-            "operatingSystem": "Cloud / Web",
-            "offers": {
-              "@type": "Offer",
-              "url": "https://delteris.com/wps-management-software.html#pricing",
-              "price": "80.00",
-              "priceCurrency": "EUR",
-              "availability": "https://schema.org/InStock"
-            }
-          }
+          "@type": "ListItem",
+          "position": 2,
+          "name": "WPS Management Software",
+          "item": "https://delteris.com/wps-management-software.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Features",
+          "item": "https://delteris.com/wps-manager-features.html"
         }
       ]
+    },
+    {
+      "@type": "WebPage",
+      "name": "Elenchon WPS Manager — Features",
+      "url": "https://delteris.com/wps-manager-features.html",
+      "description": "The full Elenchon WPS Manager capability set — native Excel and PDF import, human-reviewed edits, a versioned register, a structured library with faceted search, preview against the source document, the linked WPQR/pWPS chain, and a heat-input helper — shown in the app.",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Delteris",
+        "url": "https://delteris.com/"
+      },
+      "about": {
+        "@type": "SoftwareApplication",
+        "name": "Elenchon WPS Manager",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Cloud / Web",
+        "offers": {
+          "@type": "Offer",
+          "url": "https://delteris.com/wps-management-software.html#pricing",
+          "price": "90.00",
+          "priceValidUntil": "2028-12-31",
+          "priceCurrency": "EUR",
+          "availability": "https://schema.org/InStock"
+        }
+      }
+    }
+  ]
 }

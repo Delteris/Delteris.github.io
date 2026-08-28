@@ -1,68 +1,109 @@
 {
-      "@context": "https://schema.org",
-      "@graph": [
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
         {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://delteris.com/" },
-            { "@type": "ListItem", "position": 2, "name": "WPS Manager", "item": "https://delteris.com/wps-management-software.html" },
-            { "@type": "ListItem", "position": 3, "name": "WPS Preview & Verification", "item": "https://delteris.com/wps-preview-verification.html" }
-          ]
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://delteris.com/"
         },
         {
-          "@type": "SoftwareApplication",
-          "name": "Elenchon WPS Manager — WPS Preview & Verification",
-          "applicationCategory": "BusinessApplication",
-          "applicationSubCategory": "WPS Management Software",
-          "operatingSystem": "Cloud",
-          "description": "Cloud WPS verification: Preview splits the screen with parsed fields on one side and your genuine PDF or Excel document on the other, so every read is confirmed against the original page — and any misread, label or flag is corrected in the same view, syncing everywhere it belongs.",
-          "keywords": "WPS verification, WPS preview, verify parsed WPS, WPS against original, WPS proofreading, WPS field verification software",
-          "featureList": [
-            "Split view of parsed fields beside the genuine source document",
-            "Real PDF rendered in place, or Excel sheet drawn inline — not a re-render",
-            "Draggable divider to widen the source pane up to half the screen",
-            "Persistent verification workspace that won't close on a stray click",
-            "Correct a value or label and clear low-confidence flags in the same view",
-            "Corrections sync to library detail, register column titles and review badge"
-          ],
-          "offers": { "@type": "Offer", "price": "80", "priceCurrency": "EUR", "url": "https://delteris.com/wps-management-software.html#pricing", "availability": "https://schema.org/InStock" },
-          "provider": { "@id": "https://delteris.com/#organization" }
+          "@type": "ListItem",
+          "position": 2,
+          "name": "WPS Manager",
+          "item": "https://delteris.com/wps-management-software.html"
         },
         {
-          "@type": "FAQPage",
-          "@id": "https://delteris.com/wps-preview-verification.html#faq",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "What does Preview show me?",
-              "acceptedAnswer": { "@type": "Answer", "text": "A split screen: the fields the parser read on one side, your real document on the other — the genuine PDF rendered in place, or the Excel sheet drawn inline. You verify each read against the page it came from, in seconds." }
-            },
-            {
-              "@type": "Question",
-              "name": "Is it the real document or a re-render?",
-              "acceptedAnswer": { "@type": "Answer", "text": "The real document. A PDF opens as the genuine PDF, page and all, with its own zoom and fit-to-width; an Excel WPS renders as the actual sheet. You're checking against the file your welding engineer signed, not the app's interpretation of it." }
-            },
-            {
-              "@type": "Question",
-              "name": "Can I fix a misread while I'm looking at it?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Yes. Edit the value or its label right inside Preview, tick a low-confidence field as verified, or accept a computed heat input — all without leaving the view. Compare and fix are the same screen." }
-            },
-            {
-              "@type": "Question",
-              "name": "Does a correction update the rest of the app?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Yes. A fix in Preview updates the library detail, the register column titles and the review badge together, so one correction is reflected everywhere it should be — no re-entering it elsewhere." }
-            },
-            {
-              "@type": "Question",
-              "name": "Will it stay open while I work through a form?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Yes. Preview is a verification workspace, not a modal that closes on a stray click. It stays put while you work a document field by field, and you can widen the source pane up to half the screen for a dense form." }
-            },
-            {
-              "@type": "Question",
-              "name": "How does it handle a heat input the app calculated?",
-              "acceptedAnswer": { "@type": "Answer", "text": "A computed heat input is flagged for verification like any low-confidence read. Accept it in Preview and its verify clears the amber across every pass at once, so a single confirmation settles the whole calculation." }
-            }
-          ]
+          "@type": "ListItem",
+          "position": 3,
+          "name": "WPS Preview & Verification",
+          "item": "https://delteris.com/wps-preview-verification.html"
+        }
+      ]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Elenchon WPS Manager — WPS Preview & Verification",
+      "applicationCategory": "BusinessApplication",
+      "applicationSubCategory": "WPS Management Software",
+      "operatingSystem": "Cloud",
+      "description": "Cloud WPS verification: Preview splits the screen with parsed fields on one side and your genuine PDF or Excel document on the other, so every read is confirmed against the original page — and any misread, label or flag is corrected in the same view, syncing everywhere it belongs.",
+      "keywords": "WPS verification, WPS preview, verify parsed WPS, WPS against original, WPS proofreading, WPS field verification software",
+      "featureList": [
+        "Split view of parsed fields beside the genuine source document",
+        "Real PDF rendered in place, or Excel sheet drawn inline — not a re-render",
+        "Draggable divider to widen the source pane up to half the screen",
+        "Persistent verification workspace that won't close on a stray click",
+        "Correct a value or label and clear low-confidence flags in the same view",
+        "Corrections sync to library detail, register column titles and review badge"
+      ],
+      "offers": {
+        "@type": "Offer",
+        "price": "90",
+        "priceCurrency": "EUR",
+        "url": "https://delteris.com/wps-management-software.html#pricing",
+        "availability": "https://schema.org/InStock"
+      },
+      "provider": {
+        "@id": "https://delteris.com/#organization"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://delteris.com/wps-preview-verification.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I know the parser read my WPS correctly?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You check it yourself, in seconds, against the real document. Preview splits the screen — the fields the parser read on one side, your genuine PDF or Excel form on the other — so you run your eye from each value to its place on the page and confirm the register matches the paperwork. That side-by-side is exactly what makes a parser safe to rely on."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is it the real document or a re-render?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The real document. A PDF opens as the genuine PDF, page and all, with its own zoom and fit-to-width; an Excel WPS renders as the actual sheet. You're checking against the file your welding engineer signed, not the app's interpretation of it."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I fix a misread while I'm looking at it?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Edit the value or its label right inside Preview, tick a low-confidence field as verified, or accept a computed heat input — all without leaving the view. Compare and fix are the same screen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does a correction update the rest of the app?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. A fix in Preview updates the library detail, the register column titles and the review badge together, so one correction is reflected everywhere it should be — no re-entering it elsewhere."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will it stay open while I work through a form?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Preview is a verification workspace, not a modal that closes on a stray click. It stays put while you work a document field by field, and you can widen the source pane up to half the screen for a dense form."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does it handle a heat input the app calculated?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A computed heat input is flagged for verification like any low-confidence read. Accept it in Preview and its verify clears the amber across every pass at once, so a single confirmation settles the whole calculation."
+          }
         }
       ]
     }
+  ]
+}

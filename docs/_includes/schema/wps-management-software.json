@@ -45,10 +45,10 @@
       "offers": {
         "@type": "Offer",
         "url": "https://delteris.com/wps-management-software.html#pricing",
-        "price": "80.00",
+        "price": "90.00",
         "priceCurrency": "EUR",
         "availability": "https://schema.org/InStock",
-        "description": "€80 per month, or €720 per year (effective €60/month) billed annually. Flat, fully published price. Includes 50 GB storage; additional 50 GB blocks €10/month. One tenancy per system.",
+        "description": "€90 per month, or €840 per year (effective €70/month) billed annually. Flat, fully published price. Includes 50 GB storage; additional 50 GB blocks €10/month. One tenancy per system.",
         "priceValidUntil": "2028-12-31"
       },
       "provider": {
@@ -96,7 +96,15 @@
           "name": "How much does it cost, and is it charged per user?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "€80 per month, or €720 per year — an effective €60 per month — billed annually. One flat, fully published price, not per seat and never a contact-us-for-a-quote: your whole team works in one tenancy, with admin, editor and read-only roles, for the same price. It includes 50 GB of storage (tens of thousands of WPSs); extra 50 GB blocks are €10/month if you ever need them. Onboarding and parser setup for your template are included, handled directly by the founders."
+            "text": "€90 per month, or €840 per year — an effective €70 per month — billed annually. One flat, fully published price, not per seat and never a contact-us-for-a-quote: your whole team works in one tenancy, with admin, editor and read-only roles, for the same price. It includes 50 GB of storage (tens of thousands of WPSs); extra 50 GB blocks are €10/month if you ever need them. Onboarding and parser setup for your template are included, handled directly by the founders."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What kind of support do I get at this price?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Direct support from the founders, included — no ticket queue and no paid support tier. You email the people who built the app and hear back within one business day, usually sooner. Because the same people handle your onboarding, a support request that needs a parser tweak for your form goes straight to whoever can make it."
           }
         },
         {
