@@ -182,50 +182,23 @@ alt_url: "/pt/wps-manager-features.html"
     </section>
 
     <!-- ===================== SECURITY ===================== -->
+    <!-- ===================== SECURITY TEASER ===================== -->
     <section class="page-section container" id="security">
-        <div class="section-header">
-            <span class="eyebrow">Built the Delteris Way</span>
-            <h2>A Full Audit Trail, and Access You Control</h2>
-            <p class="subtitle">Your procedures are proprietary and your register is audit evidence. Every tenancy is engineered with the same discipline as the on-premise Elenchon platform.</p>
-        </div>
-        <div class="glass-card feature-block feature-block-solo" id="security-detail">
-            <span class="feature-index">07</span>
-            <ul class="feature-list">
-                <li><strong>A full audit trail:</strong> Every recompute, import, edit and verification is recorded — what changed, who changed it, and when — and searchable, so an audit question is a lookup, not an investigation.</li>
-                <li><strong>Role-based access:</strong> Admins, editors and viewers, down to a read-only seat for your TÜV or notified-body inspector. Editors change data; viewers can only look.</li>
-                <li><strong>Rules you set:</strong> Choose how imports land, and how long the activity log, register backups and old versions are kept — or keep them indefinitely.</li>
-                <li><strong>One tenant per instance:</strong> Your register and documents never share a database with another shop's — plus signed sessions, a strong password policy, lockout and per-IP rate limiting, on by default.</li>
-            </ul>
-        </div>
-        <div class="shot-trio">
-            {% include app-shot.html
-                name="security-audit" w="1600" h="900"
-                alt="Activity log with 72 entries showing recomputes, normalisations, heat-input verifications and WPS imports, each with the user and a timestamp"
-                cap="The activity log — every change, attributed and timestamped."
-                ph="The activity log — every change, attributed and timestamped." %}
-            {% include app-shot.html
-                name="security-users" w="1600" h="900"
-                alt="Users screen listing admin, editor and viewer roles, including a read-only TUV Inspector account, each with reset-password and deactivate controls"
-                cap="Roles and access — including a read-only seat for your inspector."
-                ph="Roles and access — admin, editor and viewer seats." %}
-            {% include app-shot.html
-                name="security-settings" w="1600" h="900"
-                alt="Settings showing import-approval mode (Manual, Certain, All) and data-retention controls for the activity log, register backups and versions kept per register"
-                cap="Approval mode and retention — the rules are yours to set."
-                ph="Approval mode and data-retention settings." %}
-        </div>
-
-        <!-- TODO(CTO): confirm exact hosting provider, region(s) and data-residency guarantee,
-             then replace the bracketed placeholders below and delete this comment. -->
-        <div class="glass-card feature-block feature-block-solo" id="residency-detail" style="margin-top:2rem;">
-            <span class="eyebrow">Where Your Data Lives</span>
-            <h3 class="u-stack-sm">Hosted in the EU, Your Tenant Kept to Itself</h3>
-            <ul class="feature-list">
-                <li><strong>EU-hosted:</strong> Your tenancy runs on infrastructure located in the European Union — <em>[CTO: name the region / provider, e.g. Frankfurt, EU-only]</em> — so your procedures and register never leave the jurisdiction you operate in.</li>
-                <li><strong>Single-tenant isolation:</strong> Your register and documents live in their own database, never pooled with another shop's — the same isolation discipline as the on-premise Elenchon platform, applied to your cloud tenant.</li>
-                <li><strong>Encrypted in transit and at rest:</strong> <em>[CTO: confirm encryption specifics — TLS in transit, at-rest encryption, backup handling — before this goes live.]</em></li>
-                <li><strong>Need full sovereignty?</strong> Shops that require the system of record entirely on hardware they own run the on-premise <a href="welding-qualification-software.html">Elenchon platform</a> instead — same team, same discipline.</li>
-            </ul>
+        <div class="dark-panel grid-2 align-center">
+            <div>
+                <span class="eyebrow">Built the Delteris Way</span>
+                <h2 class="text-glow">A Full Audit Trail, and Access You Control</h2>
+                <p class="security-intro">Your procedures are proprietary and your register is audit evidence. Every change is attributed and timestamped, access is yours to grant down to a read-only inspector seat, and your data is single-tenant, EU-hosted and encrypted — the same discipline as the on-premise Elenchon platform.</p>
+                <div class="cta-group">
+                    <a href="wps-manager-security.html" class="btn btn-secondary">See WPS Manager Security &rarr;</a>
+                </div>
+            </div>
+            <div class="graphic-placeholder">
+                <div class="pulse-ring delay-2"></div>
+                <div class="pulse-ring delay-1"></div>
+                <div class="pulse-ring"></div>
+                <div class="pulse-core"></div>
+            </div>
         </div>
     </section>
 
