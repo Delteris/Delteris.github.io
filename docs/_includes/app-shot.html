@@ -19,15 +19,20 @@
 {%- endfor -%}
 {%- if include.wide == 'true' %}{% assign fig_class = 'app-figure app-figure-wide' %}{% assign dw = include.w | default: 1600 %}{% assign dh = include.h | default: 1000 %}{% else %}{% assign fig_class = 'app-figure' %}{% assign dw = include.w | default: 1400 %}{% assign dh = include.h | default: 900 %}{% endif -%}
         <figure class="{{ fig_class }}">
-            <div class="app-figure-frame">
 {%- if shot_exists %}
+            <button type="button" class="app-figure-frame app-figure-zoom" data-zoomable aria-label="Zoom: {{ include.cap | strip_html }}">
                 <img src="{{ shot_path }}" width="{{ dw }}" height="{{ dh }}" loading="lazy" decoding="async" alt="{{ include.alt }}">
+                <span class="app-figure-zoom-hint" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3M11 8v6M8 11h6"></path></svg>
+                </span>
+            </button>
 {%- else %}
+            <div class="app-figure-frame">
                 <div class="app-figure-placeholder">
                     <span class="app-figure-tag">{{ include.tag | default: 'Screenshot' }}</span>
                     <p>{{ include.ph }}</p>
                 </div>
-{%- endif %}
             </div>
+{%- endif %}
             <figcaption>{{ include.cap }}</figcaption>
         </figure>

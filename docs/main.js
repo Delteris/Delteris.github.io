@@ -561,3 +561,89 @@
         });
     }
 })();
+
+/* ==========================================================
+   Screenshot lightbox — click any zoomable app screenshot to
+   view it full-screen. Progressive enhancement: the frames are
+   real <button>s, so without JS they simply do nothing.
+   ========================================================== */
+(function () {
+    'use strict';
+
+    var triggers = document.querySelectorAll('[data-zoomable]');
+    if (!triggers.length) return;
+
+    var overlay, overlayImg, overlayCap, lastFocused;
+
+    function build() {
+        overlay = document.createElement('div');
+        overlay.className = 'app-lightbox';
+        overlay.setAttribute('role', 'dialog');
+        overlay.setAttribute('aria-modal', 'true');
+        overlay.setAttribute('aria-label', 'Screenshot');
+        overlay.hidden = true;
+
+        overlayImg = document.createElement('img');
+        overlayImg.alt = '';
+
+        overlayCap = document.createElement('p');
+        overlayCap.className = 'app-lightbox-cap';
+
+        var close = document.createElement('button');
+        close.type = 'button';
+        close.className = 'app-lightbox-close';
+        close.setAttribute('aria-label', 'Close');
+        close.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"></path></svg>';
+
+        overlay.appendChild(overlayImg);
+        overlay.appendChild(overlayCap);
+        overlay.appendChild(close);
+        document.body.appendChild(overlay);
+
+        overlay.addEventListener('click', function (e) {
+            // click anywhere except the image itself closes (image is zoom-out too)
+            if (e.target === overlayImg) { closeBox(); return; }
+            closeBox();
+        });
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && overlay && !overlay.hidden) closeBox();
+        });
+    }
+
+    function openBox(img, caption) {
+        if (!overlay) build();
+        lastFocused = document.activeElement;
+        overlayImg.src = img.currentSrc || img.src;
+        overlayImg.alt = img.alt || '';
+        overlayCap.textContent = caption || '';
+        overlayCap.style.display = caption ? '' : 'none';
+        overlay.hidden = false;
+        // force reflow so the transition runs
+        void overlay.offsetWidth;
+        overlay.classList.add('is-open');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeBox() {
+        if (!overlay) return;
+        overlay.classList.remove('is-open');
+        document.body.style.overflow = '';
+        var done = function () {
+            overlay.hidden = true;
+            overlay.removeEventListener('transitionend', done);
+            if (lastFocused && typeof lastFocused.focus === 'function') lastFocused.focus();
+        };
+        overlay.addEventListener('transitionend', done);
+        // fallback if no transition fires
+        setTimeout(function () { if (overlay && !overlay.classList.contains('is-open')) overlay.hidden = true; }, 300);
+    }
+
+    triggers.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            var img = btn.querySelector('img');
+            var fig = btn.closest('figure');
+            var cap = fig ? fig.querySelector('figcaption') : null;
+            if (img) openBox(img, cap ? cap.textContent.trim() : '');
+        });
+    });
+})();
