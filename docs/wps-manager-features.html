@@ -53,7 +53,7 @@ alt_url: "/pt/wps-manager-features.html"
             <span class="feature-index">01</span>
             <ul class="feature-list">
                 <li><strong>Excel and PDF, both native:</strong> One parser reads Excel WPS workbooks; another reconstructs a PDF form's ruled grid and reads its cells. Process, materials, ranges and pass-by-pass parameters land as structured fields.</li>
-                <li><strong>Bilingual out of the box:</strong> The built-in profile reads English and Portuguese layouts as shipped, so a mixed EN/PT form imports without special setup.</li>
+                <li><strong>Language-agnostic:</strong> The parser reads a form's structure, not a fixed vocabulary, and matches labels from a language pack — so a form in your language reads without special setup. English and Portuguese ship today; others are added during onboarding.</li>
                 <li><strong>Batch, and classified as it lands:</strong> Bring in a whole stack at once — each file sorted into a new WPS, a new revision, or a correction, with revisions grouped from the start.</li>
                 <li><strong>Tuned to your template:</strong> Standard ISO&nbsp;15609-style forms work immediately; during onboarding we tune the parser to your company's exact layout.</li>
             </ul>
@@ -213,6 +213,19 @@ alt_url: "/pt/wps-manager-features.html"
                 alt="Settings showing import-approval mode (Manual, Certain, All) and data-retention controls for the activity log, register backups and versions kept per register"
                 cap="Approval mode and retention — the rules are yours to set."
                 ph="Approval mode and data-retention settings." %}
+        </div>
+
+        <!-- TODO(CTO): confirm exact hosting provider, region(s) and data-residency guarantee,
+             then replace the bracketed placeholders below and delete this comment. -->
+        <div class="glass-card feature-block feature-block-solo" id="residency-detail" style="margin-top:2rem;">
+            <span class="eyebrow">Where Your Data Lives</span>
+            <h3 class="u-stack-sm">Hosted in the EU, Your Tenant Kept to Itself</h3>
+            <ul class="feature-list">
+                <li><strong>EU-hosted:</strong> Your tenancy runs on infrastructure located in the European Union — <em>[CTO: name the region / provider, e.g. Frankfurt, EU-only]</em> — so your procedures and register never leave the jurisdiction you operate in.</li>
+                <li><strong>Single-tenant isolation:</strong> Your register and documents live in their own database, never pooled with another shop's — the same isolation discipline as the on-premise Elenchon platform, applied to your cloud tenant.</li>
+                <li><strong>Encrypted in transit and at rest:</strong> <em>[CTO: confirm encryption specifics — TLS in transit, at-rest encryption, backup handling — before this goes live.]</em></li>
+                <li><strong>Need full sovereignty?</strong> Shops that require the system of record entirely on hardware they own run the on-premise <a href="welding-qualification-software.html">Elenchon platform</a> instead — same team, same discipline.</li>
+            </ul>
         </div>
     </section>
 

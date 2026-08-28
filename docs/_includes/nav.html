@@ -49,6 +49,7 @@
 {%- if is_wpsm %}
             <a href="{% if L == 'pt' %}/pt/wps-manager-features.html{% else %}/wps-manager-features.html{% endif %}">Funcionalidades</a>
             <a href="{{ wpsm_home }}#onboarding">Como Funciona</a>
+            <a href="{% if L == 'pt' %}/pt/wps-manager-features.html{% else %}/wps-manager-features.html{% endif %}#security">Segurança</a>
             <a href="{{ wpsm_home }}#pricing">Preços</a>
             <a href="{{ wpsm_contact }}" class="btn btn-small"{% if page.url contains 'wps-manager-contact' %} aria-current="page"{% endif %}>Fale com os Fundadores</a>
 {%- else %}
@@ -79,6 +80,7 @@
 {%- if is_wpsm %}
             <a href="{% if L == 'pt' %}/pt/wps-manager-features.html{% else %}/wps-manager-features.html{% endif %}">Features</a>
             <a href="{{ wpsm_home }}#onboarding">How It Works</a>
+            <a href="{% if L == 'pt' %}/pt/wps-manager-features.html{% else %}/wps-manager-features.html{% endif %}#security">Security</a>
             <a href="{{ wpsm_home }}#pricing">Pricing</a>
             <a href="{{ wpsm_contact }}" class="btn btn-small"{% if page.url contains 'wps-manager-contact' %} aria-current="page"{% endif %}>Contact the Founders</a>
 {%- else %}

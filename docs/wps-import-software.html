@@ -1,9 +1,9 @@
 ---
 layout: default
 title: "WPS Import Software — Excel &amp; PDF Parser | Elenchon WPS Manager"
-description: "Import WPS documents in Excel or PDF and let the parser do the data entry. Two native parsers read process, materials, ranges and pass-by-pass parameters as structured fields — bilingual, batch, and tuned to your own template. From Delteris."
+description: "Import WPS documents in Excel or PDF and let the parser do the data entry. Two native parsers read process, materials, ranges and pass-by-pass parameters as structured fields — language-agnostic, batch, and tuned to your own template. From Delteris."
 og_title: "WPS Import — Excel &amp; PDF Parser | Elenchon WPS Manager"
-og_description: "Turn a folder of existing WPSs into structured records in minutes. Native Excel and PDF parsers, bilingual EN/PT, batch import, heat input computed where it's blank, and tuned to your company's exact layout."
+og_description: "Turn a folder of existing WPSs into structured records in minutes. Native Excel and PDF parsers, language-agnostic label matching, batch import, heat input computed where it's blank, and tuned to your company's exact layout."
 og_image: "/static/DelterisCrest.webp"
 og_image_alt: "Elenchon WPS Manager by Delteris — WPS import software for Excel and PDF"
 schema: schema/wps-import-software.json
@@ -30,7 +30,7 @@ alt_url: "/pt/wps-import-software.html"
     <section class="page-section container" id="overview">
         <div class="summary-panel">
             <h2 class="text-glow">Get Your WPSs In — In Minutes, Not Weeks</h2>
-            <p><strong>WPS import software reads your existing Welding Procedure Specifications — Excel workbooks or PDF forms — and extracts every field into structured, searchable records, so you never re-type a procedure to get it into your register.</strong> Most WPS tools make you conform to their template, or wrestle a fragile Excel form, turning a stack of existing WPSs into days of work. Elenchon WPS Manager works the other way round: it reads <em>your</em> documents. A digital PDF form is reconstructed grid-line by grid-line and read cell by cell; an Excel WPS is parsed straight from the workbook. The built-in profile understands English and Portuguese layouts as shipped, imports whole batches at once, and is tuned to your company's exact form during onboarding — so what lands is your paperwork, structured, not a generic template you had to fill in.</p>
+            <p><strong>WPS import software reads your existing Welding Procedure Specifications — Excel workbooks or PDF forms — and extracts every field into structured, searchable records, so you never re-type a procedure to get it into your register.</strong> Most WPS tools make you conform to their template, or wrestle a fragile Excel form, turning a stack of existing WPSs into days of work. Elenchon WPS Manager works the other way round: it reads <em>your</em> documents. A digital PDF form is reconstructed grid-line by grid-line and read cell by cell; an Excel WPS is parsed straight from the workbook. The parser reads a form's structure rather than a fixed vocabulary, so it isn't tied to one language — it imports whole batches at once and is tuned to your company's exact form and wording during onboarding, so what lands is your paperwork, structured, not a generic template you had to fill in.</p>
         </div>
     </section>
 
@@ -58,18 +58,18 @@ alt_url: "/pt/wps-import-software.html"
         </div>
     </section>
 
-    <section class="page-section container" id="bilingual">
+    <section class="page-section container" id="multilingual">
         <div class="section-header">
-            <span class="eyebrow">Bilingual Out of the Box</span>
-            <h2>Reads English and Portuguese Forms As Shipped</h2>
-            <p class="subtitle">A mixed EN/PT WPS imports without special setup — the built-in profile already knows both.</p>
+            <span class="eyebrow">Language-Agnostic by Design</span>
+            <h2>It Reads the Form's Structure, Not a Fixed Vocabulary</h2>
+            <p class="subtitle">The parser matches your labels in whatever language they're written — so a form in your language, or a mixed-language one, reads cleanly.</p>
         </div>
         <div class="glass-card feature-block">
-            <p class="feature-lead">Shops that work across borders rarely have a single-language form. The built-in profile reads English and Portuguese WPS layouts as delivered, so a bilingual or mixed-language form maps cleanly on the first pass.</p>
+            <p class="feature-lead">Shops that work across borders rarely have a single-language form. WPS Manager doesn't hard-code one language: it reads the structure of an ISO&nbsp;15609-style form and matches its labels from a language pack, so what the labels are written in doesn't change whether they're understood.</p>
             <ul class="feature-list">
-                <li><strong>Two languages, one profile:</strong> English and Portuguese field labels are both understood as shipped — no separate template, no manual remapping for a PT form.</li>
-                <li><strong>Layout, not just words:</strong> The parser recognises the structural conventions of ISO&nbsp;15609-style forms in either language, so the pass table and header block read correctly regardless of the label language.</li>
-                <li><strong>Extensible by design:</strong> The same language-pack mechanism that carries EN and PT is how further languages and shop-specific vocabularies are added during onboarding.</li>
+                <li><strong>Structure first, words second:</strong> The parser recognises the layout of a WPS — header block, pass table, ranges — and reads it correctly regardless of the label language, so a form in your language maps on the first pass.</li>
+                <li><strong>Your language, your wording:</strong> Labels are matched from a per-customer language pack, so your in-house terms and your language are added by supplying the terms — no rebuilt template, no code change.</li>
+                <li><strong>Shipped and extensible:</strong> English and Portuguese ship today; any further language or shop-specific vocabulary is added the same way during onboarding.</li>
             </ul>
         </div>
     </section>
@@ -131,28 +131,28 @@ alt_url: "/pt/wps-import-software.html"
         </div>
         <div class="pillar-grid">
             <div class="glass-card">
-                <h3>Can it import both Excel and PDF WPSs?</h3>
-                <p>Yes — both, natively. One parser reads Excel WPS workbooks; another reconstructs a PDF form's ruled grid and reads its cells. Either way, process, materials, positions, ranges and pass-by-pass parameters land as structured, searchable fields rather than a flat scan.</p>
+                <h3>Is this OCR, or does it actually read the fields?</h3>
+                <p>It reads the fields. A digital PDF is reconstructed grid-line by grid-line and read cell by cell; an Excel WPS is parsed straight from the workbook. Process, materials, positions, ranges and every pass parameter land as typed, searchable values you can filter and export — not a flat scan you still have to read by eye.</p>
             </div>
             <div class="glass-card">
-                <h3>Do I have to re-type my procedures into a template?</h3>
-                <p>No. WPS Manager reads the documents you already have instead of making you conform to its format. That's the whole point of the importer — a folder of existing WPSs becomes structured records without hand data entry.</p>
+                <h3>What if my WPSs aren't in English?</h3>
+                <p>The parser reads a form's structure, not a fixed set of English words, and matches your labels from a language pack — so the language on the form doesn't change whether it's understood. English and Portuguese ship today; your language and in-house wording are added during onboarding by supplying the terms, with no code change.</p>
             </div>
             <div class="glass-card">
-                <h3>Does it read Portuguese WPS forms?</h3>
-                <p>Yes. The built-in profile understands English and Portuguese layouts as shipped, so a PT or mixed EN/PT form imports without special setup. Further languages and shop-specific vocabularies are added through the same language-pack mechanism during onboarding.</p>
+                <h3>How accurate is the extraction — and what if it misreads?</h3>
+                <p>Anything the parser isn't sure of is flagged, not guessed silently, and every import is reviewed before it lands. You confirm reads against the original document in Preview and correct a misread in place, so what ends up on record is what a person checked — not the parser's raw output.</p>
             </div>
             <div class="glass-card">
                 <h3>What happens when a form leaves heat input blank?</h3>
-                <p>The app computes it from the arc parameters (current × voltage × 60 ÷ travel speed × process efficiency, per EN&nbsp;1011-1) and flags it for you to confirm against the PQR. It's never a silent number — you see where it came from and clear the flag once checked.</p>
+                <p>The app computes it from the arc parameters (current × voltage × 60 ÷ travel speed × process efficiency, per EN&nbsp;1011-1) and flags it for you to confirm against the PQR. It's never a silent number — you see the passes it came from and clear the flag once checked.</p>
             </div>
             <div class="glass-card">
-                <h3>Can I import many WPSs at once?</h3>
-                <p>Yes. Batch import brings in a whole stack in one pass, and each file is classified as a new WPS, a new revision, or a correction as it lands, so revisions group correctly from the start.</p>
+                <h3>I have years of accumulated WPSs. Can I bring them all in at once?</h3>
+                <p>Yes — that first bulk load is exactly what batch import is for. Drop the whole stack in one pass; each file is sorted as it lands into a new WPS, a new revision of one you hold, or a correction, so revisions group correctly from the start instead of sprawling into duplicates.</p>
             </div>
             <div class="glass-card">
-                <h3>Will it read my company's specific form?</h3>
-                <p>Standard ISO&nbsp;15609-style forms work immediately. Your exact layout is tuned during onboarding: you send a few real WPSs, we confirm the parser reads them and adjust if needed, and only then do you go live — handled in strict confidence.</p>
+                <h3>Will it read <em>our</em> specific form, or just a generic one?</h3>
+                <p>Standard ISO&nbsp;15609-style forms read out of the box; your exact layout is tuned in before you go live. You send a few real WPSs, we confirm the parser reads them and adjust the profile if needed, and only then do you commit — so import is proven on your own paperwork, handled in strict confidence.</p>
             </div>
         </div>
     </section>
