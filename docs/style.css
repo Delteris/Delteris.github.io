@@ -3272,6 +3272,10 @@ button.app-figure-frame:focus-visible .app-figure-zoom-hint {
 
 /* Shorter hero for secondary pages (e.g. the features tour) */
 .page-hero-short { min-height: auto; padding-bottom: 2.5rem; }
+/* A short hero collapses to its content height, so an absolutely-positioned
+   scroll cue would overlap the CTA buttons. Hide it here — a short hero
+   doesn't need a scroll hint anyway. */
+.page-hero-short .scroll-cue { display: none; }
 
 /* ------------------------------------------------------------
    Narrative walkthrough (features page): a full-width feature

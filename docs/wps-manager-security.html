@@ -1,0 +1,114 @@
+---
+layout: default
+title: "WPS Manager Security — Audit Trail, Access Control &amp; EU Hosting | Elenchon WPS Manager"
+description: "How Elenchon WPS Manager keeps your WPS register secure: a full, searchable audit trail; role-based access down to a read-only inspector seat; single-tenant isolation; EU hosting; and encryption in transit and at rest. From Delteris."
+og_title: "WPS Manager Security — Audit Trail, Access &amp; EU Hosting | Elenchon WPS Manager"
+og_description: "A full audit trail, role-based access, single-tenant isolation, EU hosting and encryption in transit and at rest — the security behind your cloud WPS register."
+og_image: "/static/wpsm/security-audit.webp"
+og_image_alt: "Elenchon WPS Manager — the activity log, every change attributed and timestamped"
+twitter_large: true
+schema: schema/wps-manager-security.json
+en_url: "/wps-manager-security.html"
+pt_url: "/pt/wps-manager-security.html"
+alt_url: "/pt/wps-manager-security.html"
+---
+    <header class="page-hero">
+        <div class="hero-content">
+            <span class="hero-eyebrow">Elenchon WPS Manager · Security</span>
+            <h1 class="text-glow">Your Procedures Are Proprietary.<br>Your Register Is Evidence.</h1>
+            <p class="hero-sub">Your WPSs are competitive know-how and your register is the record an auditor leans on — so WPS Manager is built to protect both. Every change is attributed and timestamped, access is yours to grant down to a single read-only seat, your data is isolated to your tenant alone, hosted in the EU, and encrypted in transit and at rest. Every tenancy is engineered with the same discipline as the on-premise Elenchon platform.</p>
+            <div class="cta-group">
+                <a href="wps-manager-contact.html" class="btn btn-primary">Contact the Founders</a>
+                <a href="wps-management-software.html#pricing" class="btn btn-secondary">See Pricing</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-section container" id="audit-trail">
+        <div class="section-header">
+            <span class="eyebrow">A Full Audit Trail</span>
+            <h2>Every Change, Attributed and Timestamped</h2>
+            <p class="subtitle">An audit question becomes a lookup, not an investigation — because the app already recorded who did what, and when.</p>
+        </div>
+        <div class="glass-card feature-block feature-block-solo">
+            <ul class="feature-list">
+                <li><strong>Everything is recorded:</strong> Every recompute, import, edit and verification is logged — what changed, who changed it, and when — and the log is searchable, so you answer an auditor's question in a lookup rather than a reconstruction.</li>
+                <li><strong>Attributed to a person:</strong> Each entry carries the user behind it, so the register's history is a chain of accountable actions, not an anonymous set of edits.</li>
+                <li><strong>Retention you control:</strong> Choose how long the activity log, register backups and old versions are kept — or keep them indefinitely.</li>
+            </ul>
+        </div>
+        {% include app-shot.html
+            name="security-audit" w="1600" h="900"
+            alt="Activity log with 72 entries showing recomputes, normalisations, heat-input verifications and WPS imports, each with the user and a timestamp"
+            cap="The activity log — every change, attributed and timestamped."
+            ph="The activity log — every change, attributed and timestamped." %}
+    </section>
+
+    <section class="page-section container" id="access-control">
+        <div class="section-header">
+            <span class="eyebrow">Access You Control</span>
+            <h2>Role-Based Access, Down to a Read-Only Seat</h2>
+            <p class="subtitle">Give each person exactly the access their job needs — including a look-but-don't-touch seat for an outside inspector.</p>
+        </div>
+        <div class="glass-card feature-block feature-block-solo">
+            <ul class="feature-list">
+                <li><strong>Admins, editors and viewers:</strong> Editors change data; viewers can only look. Grant each person the role their job calls for, and no more.</li>
+                <li><strong>A seat for your inspector:</strong> Hand a read-only seat to your TÜV or notified-body inspector — full visibility, zero risk of an accidental change.</li>
+                <li><strong>Rules you set:</strong> Choose how imports land and how your data is retained, so the workflow matches how your shop actually operates.</li>
+            </ul>
+        </div>
+        {% include app-shot.html
+            name="security-users" w="1600" h="900"
+            alt="Users screen listing admin, editor and viewer roles, including a read-only TUV Inspector account, each with reset-password and deactivate controls"
+            cap="Roles and access — including a read-only seat for your inspector."
+            ph="Roles and access — admin, editor and viewer seats." %}
+    </section>
+
+    <section class="page-section container" id="isolation">
+        <div class="section-header">
+            <span class="eyebrow">Isolation &amp; Hardening</span>
+            <h2>Your Tenant, Kept to Itself</h2>
+            <p class="subtitle">One tenant per instance, hardened by default — the same discipline as the on-premise Elenchon platform, applied to the cloud.</p>
+        </div>
+        <div class="glass-card feature-block feature-block-solo">
+            <ul class="feature-list">
+                <li><strong>Single-tenant isolation:</strong> Your register and documents live in their own database, never pooled with another shop's — your data is yours alone.</li>
+                <li><strong>Hardened by default:</strong> Signed sessions, a strong password policy, account lockout and per-IP rate limiting are on out of the box, not features you have to switch on.</li>
+                <li><strong>Approval and retention are yours:</strong> You decide how imports land and how long logs, backups and versions are kept — the controls sit with you, not with us.</li>
+            </ul>
+        </div>
+        {% include app-shot.html
+            name="security-settings" w="1600" h="900"
+            alt="Settings showing import-approval mode (Manual, Certain, All) and data-retention controls for the activity log, register backups and versions kept per register"
+            cap="Approval mode and retention — the rules are yours to set."
+            ph="Approval mode and data-retention settings." %}
+    </section>
+
+    <section class="page-section container" id="residency">
+        <div class="section-header">
+            <span class="eyebrow">Where Your Data Lives</span>
+            <h2>Hosted in the EU, Encrypted End to End</h2>
+            <p class="subtitle">Your procedures stay in the jurisdiction you operate in, protected in transit and at rest.</p>
+        </div>
+        <div class="glass-card feature-block feature-block-solo">
+            <ul class="feature-list">
+                <li><strong>EU-hosted:</strong> Your tenancy runs on infrastructure located in the European Union, so your procedures and register stay within the jurisdiction you operate in.</li>
+                <li><strong>Encrypted in transit and at rest:</strong> Traffic to your tenant is encrypted over TLS, and your data is encrypted where it's stored — in the database and in backups alike.</li>
+                <li><strong>Backups you can rely on:</strong> Your register is versioned and backed up on a schedule you control, so a mistake is a rollback, not a loss.</li>
+                <li><strong>Need full sovereignty?</strong> Shops that require the system of record entirely on hardware they own run the on-premise <a href="welding-qualification-software.html">Elenchon platform</a> instead — same team, same discipline.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="page-section container" id="cta">
+        <div class="cta-band">
+            <span class="eyebrow">Get Started</span>
+            <h2 class="text-glow">A Register You Can Defend</h2>
+            <p>Onboarding is guided directly by the founders — send us a few of your WPS documents, we confirm the parser reads your template, and you go live on a tenancy that's isolated, logged and yours. Everything handled confidentially.</p>
+            <div class="cta-group">
+                <a href="wps-manager-contact.html" class="btn btn-primary">Contact the Founders</a>
+                <a href="mailto:contact@delteris.com?subject=Elenchon%20WPS%20Manager%20%E2%80%94%20Parse%20Check%20For%20Our%20WPS" class="btn btn-secondary">Send Us a WPS — See It Parsed</a>
+            </div>
+            <p class="hero-urgency u-gap-top">Your data, your tenant, your rules — and the people who built it answering directly.</p>
+        </div>
+    </section>

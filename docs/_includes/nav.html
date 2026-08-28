@@ -15,7 +15,7 @@
      / heat-input-calculator). The dropdown button LABEL is not set here — it stays the neutral
      Products word and is toggled client-side by main.js to the visitor's last dropdown choice. {%- endcomment %}
 {%- assign is_wpsm = false -%}
-{%- if page.url contains 'wps-management-software' or page.url contains 'wps-manager-features' or page.url contains 'wps-manager-contact' or page.url contains 'wps-import-software' or page.url contains 'wps-review-approval-software' or page.url contains 'wps-library-search-software' or page.url contains 'wps-preview-verification' or page.url contains 'heat-input-calculator' %}{% assign is_wpsm = true %}{% endif -%}
+{%- if page.url contains 'wps-management-software' or page.url contains 'wps-manager-features' or page.url contains 'wps-manager-contact' or page.url contains 'wps-manager-security' or page.url contains 'wps-import-software' or page.url contains 'wps-review-approval-software' or page.url contains 'wps-library-search-software' or page.url contains 'wps-preview-verification' or page.url contains 'heat-input-calculator' %}{% assign is_wpsm = true %}{% endif -%}
 {%- if L == 'pt' %}{% assign wpsm_home = '/pt/wps-management-software.html' %}{% assign wpsm_contact = '/pt/wps-manager-contact.html' %}{% else %}{% assign wpsm_home = '/wps-management-software.html' %}{% assign wpsm_contact = '/wps-manager-contact.html' %}{% endif -%}
 {%- comment %} Dropdown button label = the current product family, else the neutral Products word. {%- endcomment %}
     <nav aria-label="{% if L == 'pt' %}Navegação principal{% else %}Main navigation{% endif %}">
@@ -49,7 +49,7 @@
 {%- if is_wpsm %}
             <a href="{% if L == 'pt' %}/pt/wps-manager-features.html{% else %}/wps-manager-features.html{% endif %}">Funcionalidades</a>
             <a href="{{ wpsm_home }}#onboarding">Como Funciona</a>
-            <a href="{% if L == 'pt' %}/pt/wps-manager-features.html{% else %}/wps-manager-features.html{% endif %}#security">Segurança</a>
+            <a href="{% if L == 'pt' %}/pt/wps-manager-security.html{% else %}/wps-manager-security.html{% endif %}"{% if page.url contains 'wps-manager-security' %} aria-current="page"{% endif %}>Segurança</a>
             <a href="{{ wpsm_home }}#pricing">Preços</a>
             <a href="{{ wpsm_contact }}" class="btn btn-small"{% if page.url contains 'wps-manager-contact' %} aria-current="page"{% endif %}>Fale com os Fundadores</a>
 {%- else %}
@@ -80,7 +80,7 @@
 {%- if is_wpsm %}
             <a href="{% if L == 'pt' %}/pt/wps-manager-features.html{% else %}/wps-manager-features.html{% endif %}">Features</a>
             <a href="{{ wpsm_home }}#onboarding">How It Works</a>
-            <a href="{% if L == 'pt' %}/pt/wps-manager-features.html{% else %}/wps-manager-features.html{% endif %}#security">Security</a>
+            <a href="{% if L == 'pt' %}/pt/wps-manager-security.html{% else %}/wps-manager-security.html{% endif %}"{% if page.url contains 'wps-manager-security' %} aria-current="page"{% endif %}>Security</a>
             <a href="{{ wpsm_home }}#pricing">Pricing</a>
             <a href="{{ wpsm_contact }}" class="btn btn-small"{% if page.url contains 'wps-manager-contact' %} aria-current="page"{% endif %}>Contact the Founders</a>
 {%- else %}

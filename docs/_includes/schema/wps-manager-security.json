@@ -1,0 +1,46 @@
+{
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://delteris.com/" },
+            { "@type": "ListItem", "position": 2, "name": "WPS Manager", "item": "https://delteris.com/wps-management-software.html" },
+            { "@type": "ListItem", "position": 3, "name": "WPS Manager Security", "item": "https://delteris.com/wps-manager-security.html" }
+          ]
+        },
+        {
+          "@type": "WebPage",
+          "name": "Elenchon WPS Manager — Security",
+          "description": "How Elenchon WPS Manager secures a cloud WPS register: a full searchable audit trail, role-based access with a read-only inspector seat, single-tenant isolation, EU hosting, and encryption in transit and at rest.",
+          "isPartOf": { "@id": "https://delteris.com/wps-management-software.html" },
+          "about": { "@id": "https://delteris.com/#organization" }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://delteris.com/wps-manager-security.html#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Is my WPS data isolated from other customers?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Yes. Elenchon WPS Manager is single-tenant: your register and documents live in their own database and are never pooled with another shop's. It's the same isolation discipline as the on-premise Elenchon platform, applied to your cloud tenant." }
+            },
+            {
+              "@type": "Question",
+              "name": "Where is the data hosted, and is it encrypted?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Your tenancy runs on infrastructure located in the European Union, so your procedures and register stay within the jurisdiction you operate in. Traffic to your tenant is encrypted over TLS, and your data is encrypted where it's stored — in the database and in backups alike." }
+            },
+            {
+              "@type": "Question",
+              "name": "Can I give an auditor or inspector access without risk?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Yes. Access is role-based — admins, editors and viewers — so you can hand your TÜV or notified-body inspector a read-only seat: full visibility, no ability to change anything. Editors change data; viewers can only look." }
+            },
+            {
+              "@type": "Question",
+              "name": "Is there an audit trail of changes to the register?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Yes — a full one. Every recompute, import, edit and verification is recorded with the user behind it and a timestamp, and the log is searchable, so an audit question becomes a lookup rather than an investigation. You control how long the log, backups and old versions are kept." }
+            }
+          ]
+        }
+      ]
+    }
