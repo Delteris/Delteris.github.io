@@ -1,69 +1,110 @@
 {
-      "@context": "https://schema.org",
-      "@graph": [
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
         {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://delteris.com/" },
-            { "@type": "ListItem", "position": 2, "name": "WPS Manager", "item": "https://delteris.com/wps-management-software.html" },
-            { "@type": "ListItem", "position": 3, "name": "WPS Library & Search Software", "item": "https://delteris.com/wps-library-search-software.html" }
-          ]
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://delteris.com/"
         },
         {
-          "@type": "SoftwareApplication",
-          "name": "Elenchon WPS Manager — WPS Library & Search Software",
-          "applicationCategory": "BusinessApplication",
-          "applicationSubCategory": "WPS Management Software",
-          "operatingSystem": "Cloud",
-          "description": "Cloud WPS library software: every WPS, pWPS and WPQR parsed into a structured record you search, filter, compare, correct and link. Filter by process, material, position, side and pass role; revisions grouped automatically; the whole qualification chain linked; edit and verify in place — the library managed entirely in the app.",
-          "keywords": "WPS library software, WPS search, filter WPS by process, WPS database, WPQR linking, pWPS management, WPS revisions, welding procedure library",
-          "featureList": [
-            "WPS, pWPS and WPQR as structured, searchable records",
-            "Filter by process, base and filler material, position and thickness range",
-            "Pass-table facets: side, role, process and polarity as set-membership filters",
-            "Document facets: parse state, file type, template, link status, linked PQR",
-            "Revisions of a WPS number grouped automatically with a switcher",
-            "Edit values and labels in place, with one-click verify of low-confidence reads",
-            "Link the WPS to WPQR to pWPS qualification chain"
-          ],
-          "offers": { "@type": "Offer", "price": "80", "priceCurrency": "EUR", "url": "https://delteris.com/wps-management-software.html#pricing", "availability": "https://schema.org/InStock" },
-          "provider": { "@id": "https://delteris.com/#organization" }
+          "@type": "ListItem",
+          "position": 2,
+          "name": "WPS Manager",
+          "item": "https://delteris.com/wps-management-software.html"
         },
         {
-          "@type": "FAQPage",
-          "@id": "https://delteris.com/wps-library-search-software.html#faq",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "Do I manage my WPSs in the app or in Excel?",
-              "acceptedAnswer": { "@type": "Answer", "text": "In the app. The library is where you work — every WPS, pWPS and WPQR is a structured record you search, filter, edit, verify and link in place. Excel export is there for when a register needs to be handed to your auditors or head office, not something you drop into to get your work done." }
-            },
-            {
-              "@type": "Question",
-              "name": "Can I filter my WPSs by welding process?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Yes. Because every field is extracted at import, you filter the library by real criteria — process, base and filler material, position, thickness range and more — down to a specific combination of processes, with or without a backing pass, in a couple of clicks." }
-            },
-            {
-              "@type": "Question",
-              "name": "Can I search on the individual passes?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Yes. Facets read the pass table itself, so you can filter on the values inside the passes — side, role, process, polarity — as set-membership filters. Every WPS that runs a 121 root is one click, not a manual read of each document." }
-            },
-            {
-              "@type": "Question",
-              "name": "How are revisions handled?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Several revisions of the same WPS number collapse into a single row with an N-revisions chip and a switcher, newest first. Each incoming file is classified on import as a new WPS, a new revision, or a correction — so revisions group correctly and the list stays readable." }
-            },
-            {
-              "@type": "Question",
-              "name": "Can I correct a parsed field?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Yes, in place. Edit any field's value or its label and save; a label change re-titles that column in the register, and a one-click verify clears a low-confidence flag. Every correction stays in sync across the library, the register titles and the review badge." }
-            },
-            {
-              "@type": "Question",
-              "name": "Can I link a WPS to its qualification records?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Yes. Link a WPS to the WPQR that qualifies it, a WPQR to the several WPS it supports, and a pWPS to the number it becomes — then open any of them in a click and see the whole chain together." }
-            }
-          ]
+          "@type": "ListItem",
+          "position": 3,
+          "name": "WPS Library & Search Software",
+          "item": "https://delteris.com/wps-library-search-software.html"
+        }
+      ]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Elenchon WPS Manager — WPS Library & Search Software",
+      "applicationCategory": "BusinessApplication",
+      "applicationSubCategory": "WPS Management Software",
+      "operatingSystem": "Cloud",
+      "description": "Cloud WPS library software: every WPS, pWPS and WPQR parsed into a structured record you search, filter, compare, correct and link. Filter by process, material, position, side and pass role; revisions grouped automatically; the whole qualification chain linked; edit and verify in place — the library managed entirely in the app.",
+      "keywords": "WPS library software, WPS search, filter WPS by process, WPS database, WPQR linking, pWPS management, WPS revisions, welding procedure library",
+      "featureList": [
+        "WPS, pWPS and WPQR as structured, searchable records",
+        "Filter by process, base and filler material, position and thickness range",
+        "Pass-table facets: side, role, process and polarity as set-membership filters",
+        "Document facets: parse state, file type, template, link status, linked PQR",
+        "Revisions of a WPS number grouped automatically with a switcher",
+        "Edit values and labels in place, with one-click verify of low-confidence reads",
+        "Link the WPS to WPQR to pWPS qualification chain"
+      ],
+      "offers": {
+        "@type": "Offer",
+        "price": "90",
+        "priceCurrency": "EUR",
+        "url": "https://delteris.com/wps-management-software.html#pricing",
+        "availability": "https://schema.org/InStock"
+      },
+      "provider": {
+        "@id": "https://delteris.com/#organization"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://delteris.com/wps-library-search-software.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do I manage my WPSs in the app or in Excel?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In the app. The library is where you work — every WPS, pWPS and WPQR is a structured record you search, filter, edit, verify and link in place. Excel export is there for when a register needs to be handed to your auditors or head office, not something you drop into to get your work done."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I filter my WPSs by welding process?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Because every field is extracted at import, you filter the library by real criteria — process, base and filler material, position, thickness range and more — down to a specific combination of processes, with or without a backing pass, in a couple of clicks."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I search on the individual passes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Facets read the pass table itself, so you can filter on the values inside the passes — side, role, process, polarity — as set-membership filters. Every WPS that runs a 121 root is one click, not a manual read of each document."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How are revisions handled?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Several revisions of the same WPS number collapse into a single row with an N-revisions chip and a switcher, newest first. Each incoming file is classified on import as a new WPS, a new revision, or a correction — so revisions group correctly and the list stays readable."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I correct a parsed field?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, in place. Edit any field's value or its label and save; a label change re-titles that column in the register, and a one-click verify clears a low-confidence flag. Every correction stays in sync across the library, the register titles and the review badge."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I link a WPS to its qualification records?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Link a WPS to the WPQR that qualifies it, a WPQR to the several WPS it supports, and a pWPS to the number it becomes — then open any of them in a click and see the whole chain together."
+          }
         }
       ]
     }
+  ]
+}

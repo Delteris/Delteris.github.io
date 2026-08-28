@@ -6,7 +6,9 @@ title: "Software de Biblioteca e Pesquisa de WPS — Filtre por Processo, Materi
 description: "Gira toda a sua biblioteca de WPS na aplicação — cada WPS, pWPS e WPQR analisada em registos estruturados que pesquisa, filtra, compara, corrige e associa. Filtre por processo de soldadura, material, posição, função e passe; agrupe revisões; associe toda a cadeia de qualificação. Da Delteris."
 og_title: "Biblioteca e Pesquisa de WPS — Gira Cada WPS Num Só Lugar | Elenchon WPS Manager"
 og_description: "Uma biblioteca de WPS que compreende os seus documentos: filtre por processo, material, posição, lado e função do passe; revisões agrupadas automaticamente; WPS↔WPQR↔pWPS associadas; edite e verifique no momento. Gira toda a biblioteca na aplicação — sem precisar de Excel."
-og_image: "/static/DelterisCrest.webp"
+og_image: "/static/wpsm/library.webp"
+og_image_alt: "Elenchon WPS Manager — the WPS library with header fields, the pass table and facet filters"
+twitter_large: true
 og_image_alt: "Elenchon WPS Manager by Delteris — software de biblioteca e pesquisa de WPS"
 schema: schema/wps-library-search-software.json
 en_url: "/wps-library-search-software.html"
@@ -129,32 +131,32 @@ alt_url: "/wps-library-search-software.html"
         <div class="section-header">
             <span class="eyebrow">Perguntas e Respostas</span>
             <h2>Biblioteca e Pesquisa de WPS, Respondida</h2>
-            <p class="subtitle">Como a biblioteca está organizada, por que pode filtrar, e se precisa de Excel.</p>
+            <p class="subtitle">Como encontra um procedimento depressa, por que pode filtrar, e como são tratadas revisões e ligações.</p>
         </div>
         <div class="pillar-grid">
             <div class="glass-card">
-                <h3>Giro as minhas WPS na aplicação ou no Excel?</h3>
-                <p>Na aplicação. A biblioteca é onde trabalha — cada WPS, pWPS e WPQR é um registo estruturado que pesquisa, filtra, edita, verifica e associa no momento. A exportação para Excel está lá para quando é preciso entregar um registo aos seus auditores ou à direção, não algo em que mergulha para fazer o seu trabalho.</p>
+                <h3>Tenho centenas de WPS espalhadas por discos e caixas de correio. Como encontro uma depressa?</h3>
+                <p>Deixa de procurar por nomes de ficheiros e passa a filtrar pelo que está dentro de cada procedimento. Como cada campo é lido na importação, reduz a biblioteca por critérios reais — processo de soldadura, material base e de adição, posição, gama de espessuras — até uma combinação específica de processos com ou sem passe de suporte, e chega à que precisa em poucos cliques.</p>
             </div>
             <div class="glass-card">
-                <h3>Posso filtrar as minhas WPS por processo de soldadura?</h3>
-                <p>Sim. Como cada campo é extraído na importação, filtra a biblioteca por critérios reais — processo, material base e de adição, posição, gama de espessuras e mais — até uma combinação específica de processos, com ou sem passe de suporte, em poucos cliques.</p>
+                <h3>Posso pesquisar pelos passes individuais, não só pelo cabeçalho?</h3>
+                <p>Sim — as facetas leem a própria tabela de passes. Filtre pelos valores dentro dos passes — lado, função, processo, polaridade — como filtros de pertença a conjunto, por isso uma pergunta como "quais das nossas WPS correm uma raiz em 121" é um clique em vez de abrir e ler cada documento à mão.</p>
             </div>
             <div class="glass-card">
-                <h3>Posso pesquisar pelos passes individuais?</h3>
-                <p>Sim. As facetas leem a própria tabela de passes, por isso pode filtrar pelos valores dentro dos passes — lado, função, processo, polaridade — como filtros de pertença a conjunto. "Todas as WPS com raiz em 121" é um clique, não uma leitura manual de cada documento.</p>
+                <h3>Ainda preciso de Excel para trabalhar com a minha biblioteca?</h3>
+                <p>Não — a aplicação é onde trabalha. Cada WPS, pWPS e WPQR é um registo estruturado que pesquisa, filtra, edita, verifica e associa no momento. A exportação para Excel está lá para quando precisa de entregar o registo à direção, não algo em que mergulha para fazer o trabalho do dia a dia.</p>
             </div>
             <div class="glass-card">
-                <h3>Como são tratadas as revisões?</h3>
-                <p>Várias revisões do mesmo número de WPS colapsam numa única linha com um indicador de "N revisões" e um seletor, a mais recente primeiro. Cada ficheiro que chega é classificado ao importar como WPS nova, revisão nova ou correção — por isso as revisões agrupam corretamente e a lista mantém-se legível.</p>
+                <h3>O meu número de WPS tem cinco revisões. A lista vira uma confusão?</h3>
+                <p>Não. As revisões do mesmo número de WPS colapsam numa linha com um indicador de "N revisões" e um seletor, a mais recente primeiro, por isso a lista mantém-se legível por muitas que acumulem. Cada ficheiro que chega é classificado ao importar como WPS nova, revisão nova ou correção, por isso agrupam corretamente desde o início.</p>
             </div>
             <div class="glass-card">
-                <h3>Posso corrigir um campo analisado?</h3>
-                <p>Sim, no momento. Edite o valor de qualquer campo ou o seu rótulo e guarde; uma mudança de rótulo renomeia essa coluna no registo, e uma verificação de um clique limpa uma marca de baixa confiança. Cada correção permanece sincronizada na biblioteca, nos títulos do registo e no indicador de revisão.</p>
+                <h3>E se o parser saltou uma linha ou leu algo mal?</h3>
+                <p>Nunca fica preso atrás do parser. Adicione uma linha que ele saltou, ou corrija qualquer valor ou o seu rótulo no momento e guarde — uma mudança de rótulo até renomeia essa coluna no registo, mantendo a sua nomenclatura consistente em todo o lado. Nada na biblioteca depende de o parser acertar em cada leitura à primeira.</p>
             </div>
             <div class="glass-card">
-                <h3>Posso ligar uma WPS aos seus registos de qualificação?</h3>
-                <p>Sim. Ligue uma WPS ao WPQR que a qualifica, um WPQR às várias WPS que suporta, e uma pWPS ao número em que se torna — e depois abra qualquer um deles num clique e veja toda a cadeia junta.</p>
+                <h3>Consigo ver o que qualifica cada procedimento sem escavar?</h3>
+                <p>Sim. Ligue uma WPS ao WPQR que a qualifica, um WPQR às várias WPS que suporta, e uma pWPS ao WPQR por trás dela — e depois abra qualquer registo da cadeia num clique. A evidência de um procedimento está sempre a um salto de distância, não perdida num disco partilhado.</p>
             </div>
         </div>
     </section>
@@ -166,8 +168,8 @@ alt_url: "/wps-library-search-software.html"
             <p>A integração é guiada diretamente pelos fundadores — envie-nos alguns dos seus documentos WPS, confirmamos que o parser lê o seu modelo, e entra em funcionamento com uma biblioteca que gere inteiramente na aplicação. Tudo tratado de forma confidencial.</p>
             <div class="cta-group">
                 <a href="/pt/wps-manager-contact.html" class="btn btn-primary">Contacte os Fundadores</a>
-                <a href="/pt/wps-management-software.html" class="btn btn-secondary">Voltar à Visão Geral do WPS Manager</a>
+                <a href="mailto:contact@delteris.com?subject=Elenchon%20WPS%20Manager%20%E2%80%94%20Verifica%C3%A7%C3%A3o%20de%20Leitura%20da%20Nossa%20WPS" class="btn btn-secondary">Envie-nos uma WPS — Veja-a Analisada</a>
             </div>
-            <p class="hero-urgency u-gap-top">Sem camadas comerciais, sem filas de chamadas — fala com quem o construiu.</p>
+            <p class="hero-urgency u-gap-top">Sem fila de tickets entre si e a equipa — quem construiu a biblioteca é quem responde.</p>
         </div>
     </section>

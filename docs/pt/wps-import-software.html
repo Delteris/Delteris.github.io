@@ -6,7 +6,9 @@ title: "Software de Importação de WPS — Parser de Excel e PDF | Elenchon WPS
 description: "Importe documentos WPS em Excel ou PDF e deixe o parser fazer a introdução de dados. Dois parsers nativos leem processo, materiais, gamas e parâmetros passe a passe como campos estruturados — agnóstico à língua, em lote, e ajustado ao seu próprio modelo. Da Delteris."
 og_title: "Importação de WPS — Parser de Excel e PDF | Elenchon WPS Manager"
 og_description: "Transforme uma pasta de WPS existentes em registos estruturados em minutos. Parsers nativos de Excel e PDF, correspondência de rótulos agnóstica à língua, importação em lote, aporte térmico calculado onde falta, e ajustado ao esquema exato da sua empresa."
-og_image: "/static/DelterisCrest.webp"
+og_image: "/static/wpsm/import.webp"
+og_image_alt: "Elenchon WPS Manager — importing an Excel and a PDF WPS side by side into structured fields"
+twitter_large: true
 og_image_alt: "Elenchon WPS Manager by Delteris — software de importação de WPS para Excel e PDF"
 schema: schema/wps-import-software.json
 en_url: "/wps-import-software.html"
@@ -133,28 +135,28 @@ alt_url: "/wps-import-software.html"
         </div>
         <div class="pillar-grid">
             <div class="glass-card">
-                <h3>Consegue importar WPS em Excel e PDF?</h3>
-                <p>Sim — ambos, nativamente. Um parser lê folhas WPS em Excel; outro reconstrói a grelha ruled de um formulário PDF e lê as suas células. Em qualquer caso, processo, materiais, posições, gamas e parâmetros passe a passe entram como campos estruturados e pesquisáveis, em vez de um scan achatado.</p>
+                <h3>Isto é OCR, ou lê mesmo os campos?</h3>
+                <p>Lê os campos. Um PDF digital é reconstruído linha de grelha a linha de grelha e lido célula a célula; uma WPS em Excel é analisada diretamente da folha. Processo, materiais, posições, gamas e cada parâmetro de passe entram como valores tipados e pesquisáveis que pode filtrar e exportar — não um scan achatado que ainda tem de ler a olho.</p>
             </div>
             <div class="glass-card">
-                <h3>Tenho de redigitar os meus procedimentos num modelo?</h3>
-                <p>Não. O WPS Manager lê os documentos que já tem em vez de o obrigar a conformar-se ao seu formato. Uma pasta de WPS existentes torna-se registos estruturados sem introdução manual de dados.</p>
+                <h3>E se as minhas WPS não estiverem em inglês?</h3>
+                <p>O parser lê a estrutura de um formulário, não um conjunto fixo de palavras em inglês, e corresponde os seus rótulos a partir de um pacote de idioma — por isso a língua do formulário não altera se é compreendido. Inglês e português estão incluídos hoje; a sua língua e a sua terminologia interna são acrescentadas durante a integração fornecendo os termos, sem alteração de código.</p>
             </div>
             <div class="glass-card">
-                <h3>Lê formulários de WPS em português?</h3>
-                <p>O parser lê a estrutura de um formulário, não um conjunto fixo de palavras, e corresponde os seus rótulos a partir de um pacote de idioma — por isso a língua do formulário não altera se é compreendido. Inglês e português estão incluídos hoje; a sua língua e a sua terminologia interna são acrescentadas durante a integração fornecendo os termos, sem alteração de código.</p>
+                <h3>Qual é a precisão da extração — e se ler algo mal?</h3>
+                <p>Tudo o que o parser não tem a certeza é sinalizado, não adivinhado em silêncio, e cada importação é revista antes de entrar. Confirma as leituras contra o documento original na Pré-visualização e corrige uma leitura errada no próprio sítio, por isso o que fica em registo é o que uma pessoa conferiu — não a saída em bruto do parser.</p>
             </div>
             <div class="glass-card">
                 <h3>O que acontece quando um formulário deixa o aporte térmico em branco?</h3>
-                <p>A aplicação calcula-o a partir dos parâmetros do arco (corrente × tensão × 60 ÷ velocidade de avanço × eficiência do processo, segundo a EN&nbsp;1011-1) e sinaliza-o para que confirme contra o PQR. Nunca é um número silencioso — vê de onde veio e limpa a marca depois de conferido.</p>
+                <p>A aplicação calcula-o a partir dos parâmetros do arco (corrente × tensão × 60 ÷ velocidade de avanço × eficiência do processo, segundo a EN&nbsp;1011-1) e sinaliza-o para que confirme contra o PQR. Nunca é um número silencioso — vê os passes de onde veio e limpa a marca depois de conferido.</p>
             </div>
             <div class="glass-card">
-                <h3>Posso importar muitas WPS de uma vez?</h3>
-                <p>Sim. A importação em lote traz uma pilha inteira numa passagem, e cada ficheiro é classificado como WPS nova, revisão nova ou correção ao entrar, por isso as revisões agrupam corretamente desde o início.</p>
+                <h3>Tenho anos de WPS acumuladas. Posso trazê-las todas de uma vez?</h3>
+                <p>Sim — essa primeira carga em massa é exatamente para isso que serve a importação em lote. Largue a pilha inteira numa passagem; cada ficheiro é ordenado ao entrar como WPS nova, revisão nova de uma que já tem, ou correção, por isso as revisões agrupam corretamente desde o início em vez de se espalharem em duplicados.</p>
             </div>
             <div class="glass-card">
-                <h3>Vai ler o formulário específico da minha empresa?</h3>
-                <p>Os formulários padrão no estilo ISO&nbsp;15609 funcionam de imediato. O seu esquema exato é ajustado durante a integração: envia algumas WPS reais, confirmamos que o parser as lê e ajustamos se necessário, e só então entra em funcionamento — tratado com estrita confidencialidade.</p>
+                <h3>Vai ler o <em>nosso</em> formulário específico, ou só um genérico?</h3>
+                <p>Os formulários padrão no estilo ISO&nbsp;15609 leem-se de imediato; o seu esquema exato é ajustado antes de entrar em funcionamento. Envia algumas WPS reais, confirmamos que o parser as lê e ajustamos o perfil se necessário, e só então se compromete — por isso a importação é comprovada na sua própria papelada, tratada com estrita confidencialidade.</p>
             </div>
         </div>
     </section>
@@ -166,8 +168,8 @@ alt_url: "/wps-import-software.html"
             <p>A integração é guiada diretamente pelos fundadores — envie-nos alguns dos seus documentos WPS, confirmamos que o parser lê o seu modelo, e entra em funcionamento com um registo construído a partir da sua própria papelada. Tudo tratado de forma confidencial.</p>
             <div class="cta-group">
                 <a href="/pt/wps-manager-contact.html" class="btn btn-primary">Contacte os Fundadores</a>
-                <a href="/pt/wps-management-software.html" class="btn btn-secondary">Voltar à Visão Geral do WPS Manager</a>
+                <a href="mailto:contact@delteris.com?subject=Elenchon%20WPS%20Manager%20%E2%80%94%20Verifica%C3%A7%C3%A3o%20de%20Leitura%20da%20Nossa%20WPS" class="btn btn-secondary">Envie-nos uma WPS — Veja-a Analisada</a>
             </div>
-            <p class="hero-urgency u-gap-top">Sem camadas comerciais, sem filas de chamadas — fala com quem o construiu.</p>
+            <p class="hero-urgency u-gap-top">A integração começa nos seus próprios formulários, não num modelo em branco — e quem ajusta o parser é quem responde.</p>
         </div>
     </section>
