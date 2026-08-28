@@ -34,7 +34,13 @@ alt_url: "/pt/wps-preview-verification.html"
         </div>
     </section>
 
-    <!-- SCREENSHOT SLOT (hero): Preview split view — parsed fields left, real PDF/Excel form right, an amber field aligned with its cell. Drop an <img> with width/height + loading="lazy" here when ready. -->
+    <section class="page-section container u-tight-top" id="screenshot-hero">
+        {% include app-shot.html
+            name="preview" wide="true"
+            alt="WPS Manager preview split view — parsed fields on the left, the real PDF or Excel source on the right"
+            cap="Preview splits the screen: every parsed field on the left, your real PDF or Excel on the right."
+            ph="The split Preview view — parsed fields left, real PDF/Excel form right, an amber field aligned with its cell." %}
+    </section>
 
     <section class="page-section container" id="genuine-source">
         <div class="section-header">

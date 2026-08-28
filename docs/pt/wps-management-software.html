@@ -36,170 +36,59 @@ alt_url: "/wps-management-software.html"
         </div>
     </section>
 
-    <!-- ============================================================
-         CAPTURA #1 — PAINEL PRINCIPAL / RESUMO  (oculta até haver captura real)
-         Capturar: o ecrã "Resumo" da aplicação (o painel com a saudação, os
-         cartões "Precisa de atenção" e os mosaicos WPS / pWPS / WPQR /
-         qualificadas). Largura recomendada ~1100px.
-         Para reativar: descomente este bloco e coloque a <img> no frame.
     <section class="page-section container u-tight-top" id="screenshot-overview">
-        <figure class="app-figure">
-            <div class="app-figure-frame">
-                <div class="app-figure-placeholder">
-                    <span class="app-figure-tag">Captura de ecrã</span>
-                    <p><strong>Painel de resumo da aplicação</strong><br>Capture o ecrã Resumo — a saudação, os cartões “Precisa de atenção” e os mosaicos WPS / pWPS / WPQR / qualificadas.</p>
-                </div>
-            </div>
-            <figcaption>Tudo num relance: o que precisa de revisão e a contagem completa de procedimentos que possui.</figcaption>
-        </figure>
+        {% include app-shot.html
+            name="overview"
+            wide="true"
+            alt="Painel de resumo do Elenchon WPS Manager — cartões de atenção e mosaicos WPS, pWPS, WPQR e qualificadas"
+            cap="Tudo num relance: o que precisa de revisão e a contagem completa de procedimentos que possui."
+            ph="Painel de resumo da aplicação — a saudação, os cartões “Precisa de atenção” e os mosaicos WPS / pWPS / WPQR / qualificadas." %}
     </section>
-         ============================================================ -->
 
     <section class="page-section container" id="capabilities">
         <div class="section-header">
             <span class="eyebrow">O Que Faz</span>
             <h2>De Uma Pasta de WPS a Um Registo Que Se Gere a Si Próprio</h2>
-            <p class="subtitle">Importar, rever, guardar, pesquisar, verificar e exportar — todo o ciclo de que o seu registo precisa, uma capacidade de cada vez.</p>
+            <p class="subtitle">Importar, rever, guardar, pesquisar, verificar e exportar — todo o ciclo de que o seu registo precisa. Aqui fica a forma geral; a <a href="/pt/wps-manager-features.html">visita completa às funcionalidades</a> percorre cada ecrã.</p>
         </div>
 
-        <div class="feature-grid">
-
-            <div class="glass-card feature-block" id="import">
+        <div class="pillar-grid pillar-grid-3">
+            <a class="glass-card feature-teaser" href="/pt/wps-manager-features.html#import">
                 <span class="feature-index">01</span>
-                <h3>Importação — Excel e PDF, Ambos Nativos</h3>
-                <p class="feature-lead">Carregue os documentos WPS que já tem, no formato em que já os tem. Dois parsers dedicados fazem a introdução de dados — sem redigitar cada procedimento no modelo de outra pessoa.</p>
-                <ul class="feature-list">
-                    <li><strong>Excel e PDF, ambos nativos:</strong> Um parser lê folhas WPS em Excel; outro reconstrói a grelha do formulário PDF e lê as suas células. Processo, materiais, posições, gamas, parâmetros passe a passe e mais entram como campos estruturados, automaticamente.</li>
-                    <li><strong>Bilingue de origem:</strong> O perfil incorporado compreende esquemas de WPS em inglês e português tal como fornecido, por isso um formulário misto PT/EN importa sem configuração especial.</li>
-                    <li><strong>Importação em lote:</strong> Traga uma pilha inteira de WPS existentes de uma vez, não um formulário de cada vez.</li>
-                    <li><strong>Aporte térmico calculado onde falta:</strong> Se um formulário deixa a coluna de aporte térmico vazia, a aplicação calcula-o a partir dos parâmetros do arco (corrente × tensão × 60 ÷ velocidade de avanço × eficiência do processo, segundo a EN&nbsp;1011-1) e sinaliza-o para que confirme contra o PQR — nunca um valor silencioso.</li>
-                    <li><strong>Ajustado ao seu modelo:</strong> Formulários no estilo ISO&nbsp;15609 funcionam de imediato; durante a integração ajustamos o parser ao esquema exato da sua empresa, para que leia a <em>sua</em> papelada — não um formulário genérico ao qual teria de se conformar.</li>
-                </ul>
-                <p class="feature-out"><a href="/pt/wps-import-software.html">Ver a importação de WPS em detalhe &rarr;</a></p>
-            </div>
-
-            <div class="glass-card feature-block" id="review">
+                <h3>Importação — Excel e PDF</h3>
+                <p>Dois parsers nativos leem os seus WPS existentes — folhas Excel e formulários PDF — em campos estruturados. Bilingue PT/EN, em lote, ajustado ao seu modelo.</p>
+            </a>
+            <a class="glass-card feature-teaser" href="/pt/wps-manager-features.html#review">
                 <span class="feature-index">02</span>
                 <h3>Edições Revistas por Humanos</h3>
-                <p class="feature-lead">Nada toca no seu registo sem a sua aprovação. Cada importação propõe um conjunto de alterações — valor atual, valor novo, célula a célula — e você decide o que entra.</p>
-                <ul class="feature-list">
-                    <li><strong>Veja exatamente o que mudaria:</strong> A fila de revisão apresenta cada edição proposta como valor atual → valor novo, ao nível da célula individual. Marque uma célula para aplicar, desmarque para deixar como estava.</li>
-                    <li><strong>Corrija antes de confirmar:</strong> Corrija qualquer valor no momento, ou adicione uma linha para um campo que o parser não apanhou — e depois aprove. O que entra é o que validou.</li>
-                    <li><strong>Leituras de baixa confiança são sinalizadas:</strong> Qualquer célula de que o parser não teve a certeza — ou um aporte térmico que calculou — fica sombreada a âmbar e destacada para verificação, para que a sua atenção vá exatamente onde é necessária.</li>
-                    <li><strong>Defina o seu próprio critério de aprovação:</strong> Escolha como as importações entram — reveja <em>todos</em> os valores, reveja só os incertos (a predefinição), ou aplique tudo automaticamente e conte com o versionamento para desfazer. O seu registo, as suas regras.</li>
-                    <li><strong>Deteção de divergência:</strong> Se uma WPS for editada depois de os seus valores já terem entrado, a aplicação avisa-o de que o registo está dessincronizado da biblioteca e propõe voltar a sincronizar — para que a folha nunca se afaste silenciosamente dos documentos que a suportam.</li>
-                    <li><strong>Só as células aprovadas são aplicadas:</strong> A sua folha nunca é reconstruída de raiz. A aplicação escreve as células confirmadas no seu próprio ficheiro e deixa tudo o resto exatamente como o tinha.</li>
-                </ul>
-                <p class="feature-out"><a href="/pt/wps-review-approval-software.html">Ver as edições revistas em detalhe &rarr;</a></p>
-            </div>
-
-            <div class="glass-card feature-block" id="registers">
+                <p>Nada toca no seu registo até o aprovar. Cada importação é um conjunto de alterações — valor atual ao lado do novo, célula a célula — com leituras incertas sinalizadas.</p>
+            </a>
+            <a class="glass-card feature-teaser" href="/pt/wps-manager-features.html#registers">
                 <span class="feature-index">03</span>
-                <h3>O Seu Registo, Visualizado e Versionado</h3>
-                <p class="feature-lead">O registo que mantém é a <em>sua</em> folha — não um modelo que a aplicação regenera e devolve alterado. O WPS Manager guarda a cópia mais recente, mostra-a como uma grelha legível e mantém um histórico completo por trás.</p>
-                <ul class="feature-list">
-                    <li><strong>Visualizada, não apenas guardada:</strong> A sua folha-mestra abre como uma grelha rápida e filtrável — sem mais rolar uma folha de cálculo gigante ou abri-la no Excel só para consultar algo.</li>
-                    <li><strong>Cada versão guardada:</strong> Cada conjunto de alterações aprovado produz uma nova versão do registo (v1 → v2 → v3…). Reverta para qualquer instantâneo anterior; a versão atual e a mais recente estão sempre protegidas.</li>
-                    <li><strong>Exportação a pedido:</strong> Produza o registo atualizado como uma folha Excel limpa sempre que precisar — mais uma pasta com os ficheiros WPS associados, agrupados num zip, para que a papelada viaje com a folha.</li>
-                    <li><strong>Retenção nos seus termos:</strong> Decida quanto tempo são mantidas as versões antigas e o histórico de atividade, ou mantenha-os indefinidamente — um administrador define a política por implementação.</li>
-                </ul>
-            </div>
-
-            <div class="glass-card feature-block" id="library">
+                <h3>Registo Visualizado e Versionado</h3>
+                <p>A sua própria folha, mantida como grelha rápida e filtrável, versionada v1 → v2 → v3 com reversão, e exportável a pedido com os ficheiros associados em conjunto.</p>
+            </a>
+            <a class="glass-card feature-teaser" href="/pt/wps-manager-features.html#library">
                 <span class="feature-index">04</span>
-                <h3>Uma Biblioteca Que Compreende as Suas WPS</h3>
-                <p class="feature-lead">Por trás de cada linha do registo está um documento totalmente lido que pode abrir, verificar contra a fonte, editar no momento e ligar aos registos que o qualificam. Cada WPS, pWPS e WPQR, analisada em registos estruturados que pode pesquisar, comparar, corrigir e associar.</p>
-                <ul class="feature-list">
-                    <li><strong>Três tipos de documento associados, uma casa:</strong> WPS, WPS preliminar (pWPS) e WPQR têm cada um o seu separador, cada um importado da mesma forma — largue um Excel ou PDF, ou adicione um registo WPQR à mão. Cada documento fica junto dos procedimentos a que se relaciona.</li>
-                    <li><strong>Revisões, agrupadas automaticamente:</strong> Várias revisões do mesmo número de WPS colapsam numa única linha com um indicador de “N revisões” e um seletor para alternar entre elas — a mais recente primeiro. Ao importar, cada ficheiro que chega é classificado como WPS nova, revisão nova ou correção a uma existente.</li>
-                    <li><strong>Edite e verifique no momento:</strong> Corrija o valor de qualquer campo — ou até o seu rótulo — e guarde; o rótulo renomeia essa coluna no registo. Um “Verificar” de um clique limpa a marca de baixa confiança quando a tiver conferido, e o aporte térmico calculado tem a sua própria verificação, para que o âmbar desapareça em todos os passes de uma vez.</li>
-                    <li><strong>O detalhe real, não só um nome de ficheiro:</strong> Campos de cabeçalho, a tabela completa de passes com o lado de cada passe (interior / exterior / ambos) e a função (raiz / enchimento / capa / suporte), materiais base, consumível de adição, gás/fluxo de proteção — tudo extraído, tudo editável, com uma linha que pode adicionar se o parser alguma vez falhar uma.</li>
-                    <li><strong>Filtre pelo que está realmente dentro:</strong> Restrinja por processo de soldadura, material base ou de adição, posição, gama de espessuras e mais — até uma combinação específica de processos, com ou sem passe de suporte, em poucos cliques.</li>
-                    <li><strong>Facetas que leem a tabela de passes:</strong> Filtre pelos valores dentro dos próprios passes — lado, função, processo, polaridade — como filtros de pertença a conjunto, para que “todas as WPS com raiz em 121” seja um clique, não uma leitura manual.</li>
-                    <li><strong>Associação inteligente e toda a cadeia:</strong> Ligue uma WPS ao WPQR que a qualifica, um WPQR às várias WPS que suporta, uma pWPS ao número em que se torna — e depois veja os documentos relacionados juntos e abra qualquer um num clique. Dê a um WPQR um nome amigável para que se leia bem em todo o lado.</li>
-                </ul>
-                <p class="feature-out"><a href="/pt/wps-library-search-software.html">Ver a biblioteca e pesquisa de WPS em detalhe &rarr;</a></p>
-            </div>
-
-            <div class="glass-card feature-block" id="preview">
+                <h3>Uma Biblioteca Que Entende os WPS</h3>
+                <p>WPS, pWPS e WPQR como registos estruturados — campos de cabeçalho, a tabela de passes completa com lado e função, revisões agrupadas e pesquisa por facetas.</p>
+            </a>
+            <a class="glass-card feature-teaser" href="/pt/wps-manager-features.html#preview">
                 <span class="feature-index">05</span>
-                <h3>Pré-visualização — Cada Leitura Contra o Original</h3>
-                <p class="feature-lead">É esta a funcionalidade que torna um parser seguro para se confiar. Abra qualquer WPS em Pré-visualização e a aplicação divide o ecrã: à esquerda, cada campo que leu; à direita, o seu ficheiro real — o formulário PDF apresentado tal como é, ou a folha Excel desenhada no local.</p>
-                <ul class="feature-list">
-                    <li><strong>A fonte genuína, não uma reprodução:</strong> Um PDF abre como o PDF real, página e tudo, com o seu próprio zoom e ajuste à largura; uma WPS em Excel é apresentada como a folha real. Está a verificar contra o documento que o seu engenheiro de soldadura assinou, não contra a interpretação que a aplicação dele faz.</li>
-                    <li><strong>Feito para se ficar, não só espreitar:</strong> A Pré-visualização é um espaço de verificação — mantém-se aberto enquanto percorre um documento e não desaparece com um clique acidental fora dele. Alargue o painel da fonte com um divisor arrastável quando um formulário for denso, até metade do ecrã.</li>
-                    <li><strong>Corrija sem sair:</strong> Detetou uma leitura errada? Edite o valor — ou o seu rótulo — ali mesmo na Pré-visualização, marque um campo de baixa confiança como verificado, aceite um aporte térmico calculado, e guarde. Comparar e corrigir são a mesma vista.</li>
-                    <li><strong>Tudo permanece sincronizado:</strong> Uma correção na Pré-visualização atualiza o detalhe da biblioteca, os títulos das colunas do registo e o indicador de revisão em conjunto — uma correção, refletida em todo o lado onde deve estar.</li>
-                </ul>
-                <p class="feature-out"><a href="/pt/wps-preview-verification.html">Ver a pré-visualização e verificação em detalhe &rarr;</a></p>
-            </div>
-
-            <div class="glass-card feature-block" id="pqr">
+                <h3>Pré-visualização Contra o Original</h3>
+                <p>Um ecrã dividido: cada campo analisado à esquerda, o seu PDF ou Excel real à direita. Verifique e corrija na mesma vista — o parser em que pode confiar.</p>
+            </a>
+            <a class="glass-card feature-teaser" href="/pt/wps-manager-features.html#heat-input">
                 <span class="feature-index">06</span>
-                <h3>Todo o Conjunto Associado</h3>
-                <p class="feature-lead">Uma WPS nunca está sozinha: é qualificada por um WPQR, que por sua vez remonta a uma WPS preliminar (pWPS). O WPS Manager mantém toda essa cadeia anexada, para que a partir de qualquer WPS possa ver exatamente que registos a suportam.</p>
-                <ul class="feature-list">
-                    <li><strong>WPQR anexado à WPS:</strong> Abra qualquer WPS e veja o Registo de Qualificação de Procedimento que a qualifica, anexado e apresentado num esquema limpo e legível.</li>
-                    <li><strong>pWPS anexada ao WPQR:</strong> Remonte cada WPQR à WPS preliminar por trás dele — toda a cadeia de documentos, de pWPS a WPQR a WPS, associada e visível.</li>
-                    <li><strong>Anexe qualquer ficheiro de suporte:</strong> Mantenha os documentos relacionados junto do procedimento a que pertencem, para que o rasto documental esteja sempre a um clique de distância, não espalhado por várias unidades.</li>
-                    <li><strong>Onde o WPS Manager para:</strong> Ele anexa, associa e apresenta estes registos — capturar os resultados de WPQR ao vivo no chão de fábrica e apresentá-los junto dos procedimentos que sustentam é o trabalho da plataforma completa <a href="/pt/welding-qualification-software.html">Elenchon</a>.</li>
-                </ul>
-            </div>
+                <h3>Aporte Térmico, Cadeia Ligada e Mais</h3>
+                <p>Um assistente de aporte térmico limitado à janela do PQR, a cadeia WPQR/pWPS associada, segurança de inquilino único, exportação limpa para Excel — tudo na visita.</p>
+            </a>
+        </div>
 
-            <div class="glass-card feature-block" id="heat-input">
-                <span class="feature-index">07</span>
-                <h3>Ajuda de Aporte Térmico</h3>
-                <p class="feature-lead">Um bloco de rascunho ao vivo para o único cálculo que os soldadores erram sob pressão. O aporte térmico é onde um procedimento perfeitamente bom sai silenciosamente de qualificação — a ajuda incorporada torna a janela segura impossível de falhar.</p>
-                <ul class="feature-list">
-                    <li><strong>Defina a gama qualificada, depois explore:</strong> Introduza a gama de aporte térmico que o seu PQR qualificou para cada região do cordão — raiz, enchimento, capa — e depois arraste os cursores de corrente, tensão e velocidade de avanço para ver o aporte térmico calculado ao vivo.</li>
-                    <li><strong>Cursores que não conseguem sair da janela:</strong> Os controlos limitam-se à sua gama qualificada pelo PQR, por isso não consegue fisicamente marcar uma combinação que caia fora do que o procedimento permite.</li>
-                    <li><strong>Consciente de multi-arco:</strong> As montagens tandem e twin-arc têm uma cabeça líder e uma de arraste com a sua própria corrente e tensão; o aporte térmico total é somado entre as cabeças, como a norma espera.</li>
-                    <li><strong>Puxe diretamente de uma WPS:</strong> Carregue uma WPS analisada da sua biblioteca e as suas gamas por região e processos preenchem-se automaticamente — os parâmetros do arco ficam seus para explorar. É um bloco de rascunho; nada aqui é guardado ou escrito em qualquer folha.</li>
-                </ul>
-                <p class="feature-out"><a href="/pt/heat-input-calculator.html">Ver a calculadora de aporte térmico em detalhe &rarr;</a></p>
-            </div>
-
-            <div class="glass-card feature-block" id="security">
-                <span class="feature-index">08</span>
-                <h3>Construído à Maneira Delteris</h3>
-                <p class="feature-lead">Os seus procedimentos são proprietários. Barato e simples não deve significar descuidado — cada tenancy do WPS Manager é concebida com a mesma disciplina da plataforma on-premise Elenchon.</p>
-                <ul class="feature-list">
-                    <li><strong>Um inquilino por instância:</strong> Cada cliente corre na sua própria instância isolada — o seu registo e documentos nunca partilham uma base de dados com os de outra oficina.</li>
-                    <li><strong>Acesso reforçado:</strong> ID de início de sessão e palavra-passe com sessões assinadas, uma política de palavras-passe forte, bloqueio automático após tentativas falhadas repetidas, e limitação de taxa por IP — as defesas padrão, ativas por predefinição.</li>
-                    <li><strong>Histórico de auditoria completo:</strong> Cada alteração ao registo e cada definição é registada — o que mudou, quem mudou e quando — e mantida durante o tempo que a sua política de retenção definir.</li>
-                    <li><strong>Reversível por conceção:</strong> As cópias de segurança versionadas do registo significam que qualquer alteração aprovada pode ser revertida, e uma folha eliminada permanece recuperável através de um período de tolerância antes de desaparecer definitivamente.</li>
-                    <li><strong>Integração confidencial:</strong> Os documentos WPS que nos envia para configurar o seu parser são tratados com estrita confidencialidade e usados apenas para verificar a sua importação.</li>
-                </ul>
-            </div>
-
-            <div class="glass-card feature-block" id="authoring">
-                <span class="feature-index">09</span>
-                <h3>Exportação Limpa Hoje, Criação a Seguir</h3>
-                <p class="feature-lead">O WPS Manager já produz uma folha Excel limpa e estruturada para qualquer WPS que possua — e esse ficheiro reimporta pelo mesmo modelo, por isso o ciclo de ida e volta é sem perdas. A criação completa na cloud assenta sobre essa base.</p>
-                <ul class="feature-list">
-                    <li><strong>Exportação Excel limpa hoje:</strong> Gere uma folha organizada de uma só WPS — ou todo o registo como uma longa folha de cálculo — que abre no Excel e reimporta sem perder um valor.</li>
-                    <li><strong>Criação simples como folha de cálculo (no roteiro):</strong> Defina os cabeçalhos, preencha as células, e um script de estilo automático transforma-as numa WPS acabada e formatada — o frágil modelo feito à mão, aposentado.</li>
-                    <li><strong>Criação, mantida simples:</strong> Mantemos isto deliberadamente focado em escrever o próprio documento. Capturar os resultados de WPQR contra os quais um WPS é escrito é tratado pelo fluxo completo de qualificação <a href="/pt/welding-qualification-software.html">Elenchon</a>.</li>
-                </ul>
-            </div>
-
+        <div class="cta-group u-gap-top">
+            <a href="/pt/wps-manager-features.html" class="btn btn-secondary">Ver Todas as Funcionalidades na Aplicação &rarr;</a>
         </div>
     </section>
-
-    <!-- ============================================================
-         CAPTURAS #2–#7 — ocultas até existirem capturas reais.
-         Colocação sugerida quando disponíveis (coloque cada uma junto do
-         cartão de capacidade correspondente acima, ou como banda à largura
-         toda por baixo da grelha):
-           #2 Importação  — Biblioteca a meio de uma importação, um Excel + um PDF lado a lado, aviso "adicionado — N campos a verificar".
-           #3 Revisão     — o conjunto de alterações: colunas Célula / Campo / Atual / Novo / Aplicar? + uma linha âmbar de baixa confiança (a mais importante; faça-a à largura toda).
-           #4 Registo     — a grelha Registos com o seletor v1/v2/v3 + botão Exportar.
-           #5 Biblioteca  — separadores WPS/pWPS/WPQR, um doc selecionado a mostrar campos de cabeçalho + tabela de passes (lado/função), painel de facetas aberto, indicador "N revisões".
-           #6 Pré-visual. — a vista dividida: campos à esquerda, PDF/Excel real à direita; alinhe um campo âmbar com a sua célula (faça-a à largura toda).
-           #7 Aporte térm.— cursores com uma gama de PQR definida e o resultado ao vivo, um cursor no seu limite.
-         Markup de frame a reutilizar:
-           <figure class="app-figure app-figure-wide"><div class="app-figure-frame"><img src="/static/wpsm/NOME.webp" width="1100" height="700" loading="lazy" alt="…"></div><figcaption>…</figcaption></figure>
-         ============================================================ -->
 
     <section class="page-section container" id="onboarding">
         <div class="dark-panel grid-2 align-center">

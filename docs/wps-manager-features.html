@@ -1,0 +1,255 @@
+---
+layout: default
+title: "WPS Manager Features — See the App in Action | Elenchon WPS Manager"
+description: "A guided walkthrough of Elenchon WPS Manager on the real screens: the overview dashboard, importing from your library, reviewing every parsed value, the versioned register with one-click export, a library that reads every field, the linked WPQR/pWPS chain, the heat-input helper, and a full audit trail with role-based access. From Delteris."
+og_title: "WPS Manager Features — See the App in Action"
+og_description: "Walk the real workflow: import, review, register, library, the linked chain, heat-input safety, and a full audit trail — shown on the actual app screens."
+og_image: "/static/wpsm/overview.webp"
+og_image_alt: "Elenchon WPS Manager overview dashboard — needs-attention cards and the WPS, pWPS, WPQR and qualified counts"
+twitter_large: true
+schema: schema/wps-manager-features.json
+en_url: "/wps-manager-features.html"
+pt_url: "/pt/wps-manager-features.html"
+alt_url: "/pt/wps-manager-features.html"
+---
+    <header class="page-hero page-hero-short">
+        <div class="hero-content">
+            <span class="hero-eyebrow">Elenchon WPS Manager · A Walkthrough</span>
+            <h1 class="text-glow">One Afternoon With Your Register.</h1>
+            <p class="hero-sub">This is the whole loop a welding shop lives through — a folder of WPS files becoming a register that stays current on its own — shown on the real screens, not mock-ups. Follow it top to bottom, or jump to the part that matters to you. This is <a href="wps-management-software.html">Elenchon WPS Manager</a> doing the actual work.</p>
+            <div class="cta-group">
+                <a href="wps-manager-contact.html" class="btn btn-primary">Contact the Founders</a>
+                <a href="wps-management-software.html#pricing" class="btn btn-secondary">See Pricing</a>
+            </div>
+        </div>
+        <a class="scroll-cue" href="#overview" aria-label="Scroll to see more">
+            <span class="scroll-cue-text">Scroll</span>
+            <span class="scroll-cue-chevron" aria-hidden="true"></span>
+        </a>
+    </header>
+
+    <!-- ===================== 1 · OVERVIEW ===================== -->
+    <section class="page-section container" id="overview">
+        <div class="section-header">
+            <span class="eyebrow">Step One · You Open It</span>
+            <h2>You Know Where You Stand Before Your Coffee's Cold</h2>
+            <p class="subtitle">No hunting through a shared drive. The overview tells you what's confirmed, what needs a look, and exactly how many procedures you hold.</p>
+        </div>
+        {% include app-shot.html
+            name="overview" wide="true" w="1600" h="900"
+            alt="Elenchon overview dashboard: a Needs Attention panel with 29 WPS fields to review, register up to date, and At a Glance tiles showing 26 WPS, 9 pWPS, 11 WPQR, 26 WPS with a WPQR and 7 team members"
+            cap="The overview: 29 fields flagged for a check, the register confirmed, and the whole library counted — WPS, pWPS, WPQR — at a glance."
+            ph="Overview dashboard — the greeting, the Needs Attention cards, and the WPS / pWPS / WPQR / qualified stat tiles." %}
+        <p class="story-note">The <strong>Needs attention</strong> panel is the honest part: it doesn't say &ldquo;all good&rdquo; unless it is. Here it's telling you 29 parsed values were read with low confidence and want a human eye &mdash; one click takes you straight to them. Everything else is green.</p>
+    </section>
+
+    <!-- ===================== 2 · IMPORT ===================== -->
+    <section class="page-section container" id="import">
+        <div class="section-header">
+            <span class="eyebrow">Step Two · You Bring In What You Have</span>
+            <h2>Import From the Library — Excel &amp; PDF, Read For You</h2>
+            <p class="subtitle">Pull the WPSs you already hold straight into a register. Two purpose-built parsers do the data entry — you never re-type a procedure into someone else's template.</p>
+        </div>
+        <div class="glass-card feature-block feature-block-solo" id="import-detail">
+            <span class="feature-index">01</span>
+            <ul class="feature-list">
+                <li><strong>Excel and PDF, both native:</strong> One parser reads Excel WPS workbooks; another reconstructs a PDF form's ruled grid and reads its cells. Process, materials, ranges and pass-by-pass parameters land as structured fields.</li>
+                <li><strong>Bilingual out of the box:</strong> The built-in profile reads English and Portuguese layouts as shipped, so a mixed EN/PT form imports without special setup.</li>
+                <li><strong>Batch, and classified as it lands:</strong> Bring in a whole stack at once — each file sorted into a new WPS, a new revision, or a correction, with revisions grouped from the start.</li>
+                <li><strong>Tuned to your template:</strong> Standard ISO&nbsp;15609-style forms work immediately; during onboarding we tune the parser to your company's exact layout.</li>
+            </ul>
+            <p class="feature-out"><a href="wps-import-software.html">See WPS import in depth &rarr;</a></p>
+        </div>
+        {% include app-shot.html
+            name="import" wide="true" w="1600" h="900"
+            alt="Import-from-library panel over a register: a searchable list of WPS with revision tags, each marked Tracking, Imported, or with an Import button"
+            cap="Adding procedures to the register: pick from the library, and each WPS shows whether it's already tracking, imported, or ready to pull in."
+            ph="Import in progress — one Excel + one PDF WPS side by side, with the added — N fields to check toast." %}
+        <p class="story-note">Every WPS in the library is one click from the register. The <strong>Tracking</strong> / <strong>Imported</strong> tags mean you never import the same revision twice or lose track of which procedures the sheet is actually watching.</p>
+    </section>
+
+    <!-- ===================== 3 · REVIEW ===================== -->
+    <section class="page-section container" id="review">
+        <div class="section-header">
+            <span class="eyebrow">Step Three · Nothing Lands Until You Say So</span>
+            <h2>Every Parsed Value, Waiting for Your Sign-Off</h2>
+            <p class="subtitle">The review queue is the safety catch. A parser is only trustworthy if you can see what it read — and here you approve it, value by value.</p>
+        </div>
+        <div class="glass-card feature-block feature-block-solo" id="review-detail">
+            <span class="feature-index">02</span>
+            <ul class="feature-list">
+                <li><strong>See exactly what would change:</strong> Each row is a document, a field, and the value read — nothing is written to your register until you confirm it.</li>
+                <li><strong>Low-confidence reads are flagged:</strong> Anything the parser wasn't sure of — or a heat input it computed — is shaded amber and surfaced, so your attention goes exactly where it's needed.</li>
+                <li><strong>Verify without leaving:</strong> Confirm a computed heat input right from the queue, or open the document in the library to check it against the source first.</li>
+                <li><strong>Set your own bar:</strong> Review every value, review only the uncertain ones (the default), or auto-apply and lean on versioning to undo.</li>
+            </ul>
+            <p class="feature-out"><a href="wps-review-approval-software.html">See reviewed edits in depth &rarr;</a></p>
+        </div>
+        {% include app-shot.html
+            name="review" wide="true" w="1600" h="900"
+            alt="Review queue: rows of documents each showing a computed heat-input field flagged amber, with the number of passes calculated and Open in library and Verify buttons"
+            cap="The review queue: 28 WPS values waiting, each computed heat input flagged amber with the passes it came from — verify, or open the source to check first."
+            ph="The review queue — Document / Field / Read value, an amber computed row, Open in library and Verify buttons." %}
+        <p class="story-note">Notice what these rows are: heat inputs the app <em>computed</em> because the forms left them blank. It didn't slip a number in silently &mdash; it flagged all 28, showed you how many passes each came from, and is waiting for you to verify against the PQR.</p>
+    </section>
+
+    <!-- ===================== 4 · REGISTER ===================== -->
+    <section class="page-section container" id="registers">
+        <div class="section-header">
+            <span class="eyebrow">Step Four · The Register Runs Itself</span>
+            <h2>Your Own Workbook — Visualised, Versioned, Export-Ready</h2>
+            <p class="subtitle">The register you keep is <em>your</em> spreadsheet, held as a live grid and backed by a full version history. The master file head office asks for is one click away.</p>
+        </div>
+        <div class="glass-card feature-block feature-block-solo" id="registers-detail">
+            <span class="feature-index">03</span>
+            <ul class="feature-list">
+                <li><strong>Visualised, not just stored:</strong> Your master sheet opens as a fast, filterable grid — here, 36 rows across 28 columns — instead of a spreadsheet you scroll by hand.</li>
+                <li><strong>Every version kept:</strong> Each approved change-set makes a new version. Roll back to any snapshot; the newest is always protected.</li>
+                <li><strong>Export on demand:</strong> Produce a clean Excel workbook whenever you need it — or an <strong>export bundle (.zip)</strong> with the register plus the folder of linked WPS files, so the paperwork travels with the sheet.</li>
+                <li><strong>Re-compute / sync:</strong> Pull the latest values from the library into the register in one action, so the sheet never quietly drifts from the documents behind it.</li>
+            </ul>
+        </div>
+        {% include app-shot.html
+            name="register" wide="true" w="1600" h="900"
+            alt="The register grid for Meridian Fabrication WPS register 2026 with columns for WPS/ID, revision, supporting PQR, qualification standard and base metal, and an open menu offering Export bundle (.zip), Backups, Re-compute/sync and Main sheet"
+            cap="The register as a live grid, with export, versioned backups, re-compute and the linked-files bundle one menu away."
+            ph="The Registers grid — the readable grid, the v1/v2/v3 version selector and the Export button." %}
+        <p class="story-note">This is the whole point: the register isn't a report the app regenerates and hands back changed &mdash; it's your workbook, kept current. <strong>Export .xlsx</strong> gives head office the master sheet; <strong>Export bundle</strong> gives an auditor the sheet <em>and</em> all nine linked files, zipped.</p>
+    </section>
+
+    <!-- ===================== 5 · LIBRARY ===================== -->
+    <section class="page-section container" id="library">
+        <div class="section-header">
+            <span class="eyebrow">Step Five · It Actually Reads the Document</span>
+            <h2>Every Field, Down to the Pass Table</h2>
+            <p class="subtitle">Behind every register row is a fully-read document. Not a filename — header fields, the full pass table, materials and consumables, all structured, all searchable.</p>
+        </div>
+        <div class="glass-card feature-block feature-block-solo" id="library-detail">
+            <span class="feature-index">04</span>
+            <ul class="feature-list">
+                <li><strong>Three document types, one home:</strong> WPS, pWPS and WPQR each get a tab, each parsed and linkable, each showing a <strong>Parsed</strong> and <strong>Linked</strong> status at a glance.</li>
+                <li><strong>The real detail:</strong> Header block — standard, base metal, thickness and diameter range, preheat, shielding — plus the full pass table with process, filler class, polarity, current, voltage, travel speed and heat input for every pass.</li>
+                <li><strong>Edit and verify in place:</strong> Correct any value or its label and save; a one-click verify clears a low-confidence flag, and computed heat input clears across every pass at once.</li>
+                <li><strong>Filter by what's inside:</strong> Narrow by process, material, position, thickness — even by values inside the passes, like &ldquo;every WPS that runs a 111 root.&rdquo;</li>
+            </ul>
+            <p class="feature-out"><a href="wps-library-search-software.html">See the library &amp; search in depth &rarr;</a></p>
+        </div>
+        {% include app-shot.html
+            name="library" wide="true" w="1600" h="900"
+            alt="Library detail for WPS MER-WPS-007: header fields including ISO 15614-8 and base metal P265GH, and a four-pass table (root, fill, fill, cap) with process 111, filler class, current, voltage, travel speed and heat input, with a Verify computed heat input button"
+            cap="A WPS read to the field: the header block, and every pass — root to cap — with its parameters and the heat-input values flagged for a check."
+            ph="The library — WPS/pWPS/WPQR tabs, a doc showing header fields + pass table (side/role), facet panel open, an N revisions chip." %}
+        <p class="story-note">This is MER-WPS-007, read from an Excel workbook: ISO&nbsp;15614-8, P265GH, four passes on process 111, each with its own current, voltage and travel-speed window. The amber heat-input figures are the computed ones &mdash; the same values sitting in the review queue, waiting to be verified.</p>
+    </section>
+
+    <!-- ===================== 6 · LINKED CHAIN ===================== -->
+    <section class="page-section container" id="pqr">
+        <div class="section-header">
+            <span class="eyebrow">Step Six · The Whole Chain, Attached</span>
+            <h2>A WPS Never Stands Alone</h2>
+            <p class="subtitle">It's qualified by a WPQR, which traces back to a pWPS. The library keeps that chain linked, so from any record you can see exactly what supports it.</p>
+        </div>
+        <div class="glass-card feature-block feature-block-solo" id="pqr-detail">
+            <span class="feature-index">05</span>
+            <ul class="feature-list">
+                <li><strong>WPQR linked to the WPS it qualifies:</strong> A single WPQR can support several procedures — here it's linked to two WPS numbers, picked from the library by number.</li>
+                <li><strong>pWPS linked to the WPQR:</strong> Trace each qualification record back to the preliminary WPS behind it — the full pWPS &rarr; WPQR &rarr; WPS chain, visible and one click apart.</li>
+                <li><strong>Collected data, structured:</strong> Qualification standard, process, test date and the rest are read into fields, not left buried in an attachment.</li>
+                <li><strong>Where WPS Manager stops:</strong> It attaches, links and displays these records — capturing WPQR results live on the floor is the job of the full <a href="welding-qualification-software.html">Elenchon platform</a>.</li>
+            </ul>
+        </div>
+        {% include app-shot.html
+            name="pqr-chain" wide="true" w="1600" h="900"
+            alt="WPQR record MER-WPQR-2402, a 135 qualification record, linked to WPS MER-WPS-002 and MER-WPS-012, with a pWPS link field and collected data showing qualification standard ISO 15614-1, process 135 and test date"
+            cap="A qualification record with its links made explicit: the WPS numbers it qualifies, the pWPS behind it, and the collected data read into fields."
+            ph="The WPQR record — linked WPS numbers, linked pWPS, and the collected qualification data." %}
+    </section>
+
+    <!-- ===================== 7 · HEAT INPUT ===================== -->
+    <section class="page-section container" id="heat-input">
+        <div class="section-header">
+            <span class="eyebrow">Step Seven · The Calculation That Fails Audits</span>
+            <h2>Stay Inside the Qualified Window — On Purpose</h2>
+            <p class="subtitle">Heat input is where a perfectly good procedure quietly goes out of qualification. The helper makes the safe window impossible to leave.</p>
+        </div>
+        <div class="glass-card feature-block feature-block-solo" id="heat-input-detail">
+            <span class="feature-index">06</span>
+            <ul class="feature-list">
+                <li><strong>Pull straight from a WPS:</strong> Load a parsed WPS and its per-region ranges and processes fill in automatically — here, the arc values from MER-WPS-026.</li>
+                <li><strong>Sliders that can't leave the window:</strong> Drag current, voltage and travel speed and watch the heat input compute live; the controls clamp to your PQR-qualified range, so a red result is impossible to dial in.</li>
+                <li><strong>Root, fill and cap independently:</strong> Each weld region gets its own qualified range and its own live read — green &ldquo;Inside PQR range&rdquo; when you're safe.</li>
+                <li><strong>Multi-arc aware:</strong> Tandem and twin-arc setups sum across heads, the way the standard expects. It's a scratch pad — nothing is saved or written to any sheet.</li>
+            </ul>
+            <p class="feature-out"><a href="heat-input-calculator.html">See the heat-input calculator in depth &rarr;</a></p>
+        </div>
+        {% include app-shot.html
+            name="heat-input" wide="true" w="1600" h="900"
+            alt="Heat-input helper with arc values pulled from MER-WPS-026, three regions (root, fill, cap) each showing PQR-qualified ranges, current/voltage/travel-speed sliders and a live result of 0.68 to 1.58 kJ/mm, all marked Inside PQR range in green"
+            cap="Arc values pulled from a real WPS: root, fill and cap each computed live and sitting green, inside the range the PQR qualified."
+            ph="The heat-input helper — sliders with a PQR range set and the live result, one slider sitting at its clamp limit." %}
+    </section>
+
+    <!-- ===================== 8 · TRUST / SECURITY ===================== -->
+    <section class="page-section container" id="security">
+        <div class="section-header">
+            <span class="eyebrow">Step Eight · Built to Be Trusted</span>
+            <h2>Who Changed What, and Who's Allowed To</h2>
+            <p class="subtitle">Your procedures are proprietary and your register is audit evidence. Every tenancy is engineered with the same discipline as the on-premise Elenchon platform — a full trail, real roles, and rules you set.</p>
+        </div>
+        <div class="glass-card feature-block feature-block-solo" id="security-detail">
+            <span class="feature-index">07</span>
+            <ul class="feature-list">
+                <li><strong>A full audit trail:</strong> Every recompute, import, edit and verification is recorded — what changed, who changed it, and when — and searchable, so an audit question is a lookup, not an investigation.</li>
+                <li><strong>Role-based access:</strong> Admins, editors and viewers, right down to a read-only seat for your TÜV or notified-body inspector. Editors change data; viewers can only look.</li>
+                <li><strong>Rules you set:</strong> Choose how imports land, and how long the activity log, register backups and old versions are kept — or keep them indefinitely.</li>
+                <li><strong>One tenant per instance:</strong> Your register and documents never share a database with another shop's — plus signed sessions, a strong password policy, lockout and per-IP rate limiting on by default.</li>
+            </ul>
+        </div>
+        <div class="shot-trio">
+            {% include app-shot.html
+                name="security-audit" w="1600" h="900"
+                alt="Activity log with 72 entries showing recomputes, normalisations, heat-input verifications and WPS imports, each with the user and a timestamp"
+                cap="The activity log — every change, attributed and timestamped." ph="The activity log — every change, attributed and timestamped." %}
+            {% include app-shot.html
+                name="security-users" w="1600" h="900"
+                alt="Users screen listing admin, editor and viewer roles, including a read-only TUV Inspector account, each with reset-password and deactivate controls"
+                cap="Roles and access — including a read-only seat for your inspector." ph="Roles and access — admin, editor and viewer seats." %}
+            {% include app-shot.html
+                name="security-settings" w="1600" h="900"
+                alt="Settings showing import-approval mode (Manual, Certain, All) and data-retention controls for the activity log, register backups and versions kept per register"
+                cap="Approval mode and retention — the rules are yours to set." ph="Approval mode and data-retention settings." %}
+        </div>
+    </section>
+
+    <!-- ===================== 9 · AUTHORING (no shot) ===================== -->
+    <section class="page-section container" id="authoring">
+        <div class="section-header">
+            <span class="eyebrow">And Next</span>
+            <h2>Clean Export Today, Authoring Next</h2>
+            <p class="subtitle">WPS Manager already emits a clean Excel workbook for any WPS you hold, and that file re-imports losslessly. Full in-cloud authoring builds on that foundation.</p>
+        </div>
+        <div class="pillar-grid">
+            <div class="glass-card">
+                <h3>Lossless round trip, today</h3>
+                <p>Generate a tidy single-WPS workbook — or the whole register as one spreadsheet — that opens in Excel and re-imports without losing a value.</p>
+            </div>
+            <div class="glass-card">
+                <h3>Spreadsheet-simple authoring, next</h3>
+                <p>Define headers, fill cells, and an automatic styling script turns them into a finished, formatted WPS — the fragile hand-built template, retired. On the roadmap.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== CTA ===================== -->
+    <section class="page-section container" id="cta">
+        <div class="cta-band">
+            <span class="eyebrow">Get Started</span>
+            <h2 class="text-glow">Put Your Register on This</h2>
+            <p>Onboarding is guided directly by the founders — send us a few of your WPS documents, we confirm the parser reads your template, and you go live with a register proven on your own paperwork. Everything handled confidentially.</p>
+            <div class="cta-group">
+                <a href="wps-manager-contact.html" class="btn btn-primary">Contact the Founders</a>
+                <a href="wps-management-software.html" class="btn btn-secondary">Back to WPS Manager Overview</a>
+            </div>
+            <p class="hero-urgency u-gap-top">No sales layers, no call queues — you talk to the people who built it.</p>
+        </div>
+    </section>

@@ -1,0 +1,33 @@
+{%- comment %}
+  App screenshot frame. Renders a real <img> once the file exists in the build,
+  otherwise a dashed placeholder describing what to capture. Drop a .webp into
+  /static/wpsm/ (see /SCREENSHOTS.md) and it appears automatically — no HTML edit.
+
+  Params:
+    include.name   — file stem under /static/wpsm/, e.g. "overview"  (required)
+    include.alt    — <img> alt text                                  (required)
+    include.cap    — figcaption shown under the frame                (required)
+    include.wide   — "true" for wide shots (review/library/preview)  (optional)
+    include.w / include.h — intrinsic px for CLS (default 1400x900 / wide 1600x1000)
+    include.ph     — short placeholder line shown until the file exists (required)
+    include.tag    — placeholder chip label (default "Screenshot")   (optional)
+{%- endcomment -%}
+{%- assign shot_path = '/static/wpsm/' | append: include.name | append: '.webp' -%}
+{%- assign shot_exists = false -%}
+{%- for f in site.static_files -%}
+  {%- if f.path == shot_path %}{% assign shot_exists = true %}{% endif -%}
+{%- endfor -%}
+{%- if include.wide == 'true' %}{% assign fig_class = 'app-figure app-figure-wide' %}{% assign dw = include.w | default: 1600 %}{% assign dh = include.h | default: 1000 %}{% else %}{% assign fig_class = 'app-figure' %}{% assign dw = include.w | default: 1400 %}{% assign dh = include.h | default: 900 %}{% endif -%}
+        <figure class="{{ fig_class }}">
+            <div class="app-figure-frame">
+{%- if shot_exists %}
+                <img src="{{ shot_path }}" width="{{ dw }}" height="{{ dh }}" loading="lazy" decoding="async" alt="{{ include.alt }}">
+{%- else %}
+                <div class="app-figure-placeholder">
+                    <span class="app-figure-tag">{{ include.tag | default: 'Screenshot' }}</span>
+                    <p>{{ include.ph }}</p>
+                </div>
+{%- endif %}
+            </div>
+            <figcaption>{{ include.cap }}</figcaption>
+        </figure>

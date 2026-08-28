@@ -42,6 +42,7 @@ Three steps: scoping session with the founders, on-site installation of the hard
 - On-Premise vs. Cloud Welding Software (honest comparison, no competitor names): https://delteris.com/welding-software-on-premise-vs-cloud.html
 - How to Choose Welding Management Software (vendor-neutral buyer's guide — ownership, published pricing, security, offline, lock-in, floor coverage; where Elenchon fits, strengths and limits): https://delteris.com/how-to-choose-welding-software.html
 - Elenchon WPS Manager (standalone cloud WPS management — import, review, organize, search & export your master WPS register): https://delteris.com/wps-management-software.html
+- WPS Manager Features (full capability tour with app screenshots — import, review, register, library, preview, heat input, security, export): https://delteris.com/wps-manager-features.html
 - WPS Import Software (native Excel & PDF parsers, bilingual EN/PT, batch import, heat input computed where blank, tuned to your template): https://delteris.com/wps-import-software.html
 - WPS Review & Approval Software (human-reviewed change-sets, cell-by-cell current→new, low-confidence flags, drift detection, only approved cells patched): https://delteris.com/wps-review-approval-software.html
 - WPS Library & Search Software (WPS/pWPS/WPQR structured records, filter by process/material/side/pass role, revisions grouped, qualification chain linked): https://delteris.com/wps-library-search-software.html
