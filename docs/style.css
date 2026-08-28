@@ -3123,12 +3123,18 @@ button.app-figure-frame:focus-visible .app-figure-zoom-hint {
     border-radius: 10px;
     border: 1px solid rgba(59, 130, 246, 0.35);
     box-shadow: 0 40px 120px -30px rgba(0, 0, 0, 0.9);
-    /* the image is the one spot that is NOT zoom-out — clicking it closes,
-       but a plain pointer reads better than zoom-out on the picture itself */
-    cursor: default;
-    animation: app-lightbox-img-in 0.2s ease both;
+    /* JS owns transform (zoom + pan) via transform-origin; the transition
+       animates each zoom step, and opacity fades the image in on open. */
+    cursor: zoom-in;
+    transform: translate(0, 0) scale(1);
+    transition: transform 0.22s ease;
+    animation: app-lightbox-img-fade 0.2s ease both;
+    touch-action: none;
+    user-select: none;
+    -webkit-user-drag: none;
 }
-@keyframes app-lightbox-img-in { from { transform: scale(0.98); } to { transform: scale(1); } }
+@keyframes app-lightbox-img-fade { from { opacity: 0; } to { opacity: 1; } }
+.app-lightbox img.is-zoomed { cursor: grab; }
 .app-lightbox-close {
     position: absolute;
     top: clamp(0.75rem, 3vw, 1.75rem);
@@ -3160,6 +3166,7 @@ button.app-figure-frame:focus-visible .app-figure-zoom-hint {
 }
 @media (prefers-reduced-motion: reduce) {
     .app-lightbox, .app-lightbox img { animation: none; }
+    .app-lightbox img { transition: none; }
 }
 
 /* placeholder shown until a screenshot exists */

@@ -564,14 +564,23 @@
 
 /* ==========================================================
    Screenshot lightbox — click any zoomable app screenshot to
-   view it full-screen. Progressive enhancement: the frames are
-   real <button>s, so without JS they simply do nothing.
+   view it full-screen, then click the image to cycle zoom.
 
-   Presence model: OPEN builds the overlay and appends it to the
-   DOM; CLOSE removes it from the DOM outright. Visibility is never
-   controlled by opacity/hidden/timers, so a closed lightbox cannot
-   linger invisibly over the page swallowing clicks with a stuck
-   zoom-out cursor. The fade is a pure CSS entry animation.
+   Interaction model
+   -----------------
+   Presence: OPEN builds the overlay and appends it to the DOM;
+   CLOSE removes it from the DOM outright. Visibility is never
+   controlled by opacity/hidden/timers, so a closed lightbox can
+   never linger invisibly over the page.
+
+   Inside an open lightbox:
+     - click the IMAGE   -> cycle zoom  fit -> 1.75x -> 2.5x -> fit
+                            (zoom is centred on the click point)
+     - drag the IMAGE    -> pan around while zoomed (not a zoom step)
+     - click the BACKDROP -> if zoomed, reset to fit; if already
+                            at fit, close
+     - the X button      -> always close
+     - Escape            -> always close
    ========================================================== */
 (function () {
     'use strict';
@@ -579,30 +588,47 @@
     var triggers = document.querySelectorAll('[data-zoomable]');
     if (!triggers.length) return;
 
-    var overlay = null;          // the live overlay element, or null when closed
+    var ZOOM_STEPS = [1, 1.75, 2.5];   // fit, then in; wraps back to fit
+    var DRAG_THRESHOLD = 6;            // px moved before a press counts as a drag
+
+    var overlay = null;
+    var overlayImg = null;
     var lastFocused = null;
     var onKeydown = null;
+
+    // per-open zoom/pan state
+    var zoomIndex = 0;                 // index into ZOOM_STEPS
+    var panX = 0, panY = 0;           // current translate (px)
+    var origin = { x: 50, y: 50 };    // transform-origin (%) — the click point
+
+    function applyTransform() {
+        var scale = ZOOM_STEPS[zoomIndex];
+        overlayImg.style.transformOrigin = origin.x + '% ' + origin.y + '%';
+        overlayImg.style.transform = 'translate(' + panX + 'px,' + panY + 'px) scale(' + scale + ')';
+        overlayImg.style.cursor = scale > 1 ? 'grab' : 'zoom-in';
+        overlayImg.classList.toggle('is-zoomed', scale > 1);
+    }
+
+    function resetZoom() {
+        zoomIndex = 0; panX = 0; panY = 0; origin = { x: 50, y: 50 };
+        applyTransform();
+    }
 
     function closeBox() {
         if (!overlay) return;
         var el = overlay;
-        overlay = null;                       // mark closed FIRST, synchronously
-        if (onKeydown) {
-            document.removeEventListener('keydown', onKeydown);
-            onKeydown = null;
-        }
+        overlay = null; overlayImg = null;
+        if (onKeydown) { document.removeEventListener('keydown', onKeydown); onKeydown = null; }
         document.body.style.overflow = '';
-        if (el.parentNode) el.parentNode.removeChild(el);   // gone from the DOM
-        if (lastFocused && typeof lastFocused.focus === 'function') {
-            try { lastFocused.focus(); } catch (e) {}
-        }
+        if (el.parentNode) el.parentNode.removeChild(el);
+        if (lastFocused && typeof lastFocused.focus === 'function') { try { lastFocused.focus(); } catch (e) {} }
         lastFocused = null;
     }
 
     function openBox(img, caption) {
-        // If one is somehow already open, tear it down before building a new one.
         if (overlay) closeBox();
         lastFocused = document.activeElement;
+        zoomIndex = 0; panX = 0; panY = 0; origin = { x: 50, y: 50 };
 
         overlay = document.createElement('div');
         overlay.className = 'app-lightbox';
@@ -610,40 +636,89 @@
         overlay.setAttribute('aria-modal', 'true');
         overlay.setAttribute('aria-label', 'Screenshot');
 
-        var overlayImg = document.createElement('img');
+        overlayImg = document.createElement('img');
         overlayImg.src = img.currentSrc || img.src;
         overlayImg.alt = img.alt || '';
+        overlayImg.className = 'app-lightbox-img';
+        overlayImg.draggable = false;
 
         var overlayCap = document.createElement('p');
         overlayCap.className = 'app-lightbox-cap';
-        if (caption) {
-            overlayCap.textContent = caption;
-        } else {
-            overlayCap.style.display = 'none';
-        }
+        if (caption) { overlayCap.textContent = caption; } else { overlayCap.style.display = 'none'; }
 
         var close = document.createElement('button');
         close.type = 'button';
         close.className = 'app-lightbox-close';
         close.setAttribute('aria-label', 'Close');
         close.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"></path></svg>';
+        close.addEventListener('click', function (e) { e.stopPropagation(); closeBox(); });
 
         overlay.appendChild(overlayImg);
         overlay.appendChild(overlayCap);
         overlay.appendChild(close);
 
-        // Any click inside the overlay — backdrop, image, caption or the
-        // close button — closes it. There is nothing to interact with
-        // behind it, so this can never be ambiguous.
-        overlay.addEventListener('click', closeBox);
+        // ---- backdrop click: reset if zoomed, else close ----
+        overlay.addEventListener('click', function (e) {
+            if (e.target === overlayImg) return;       // image handles its own clicks
+            if (e.target === close) return;            // close handles itself
+            if (ZOOM_STEPS[zoomIndex] > 1) { resetZoom(); }
+            else { closeBox(); }
+        });
 
-        onKeydown = function (e) {
-            if (e.key === 'Escape') closeBox();
-        };
+        // ---- image: click cycles zoom, drag pans ----
+        var down = null;     // {x,y,panX,panY} while a press is active
+        var moved = false;
+
+        overlayImg.addEventListener('pointerdown', function (e) {
+            down = { x: e.clientX, y: e.clientY, panX: panX, panY: panY };
+            moved = false;
+            if (ZOOM_STEPS[zoomIndex] > 1) {
+                overlayImg.style.cursor = 'grabbing';
+                try { overlayImg.setPointerCapture(e.pointerId); } catch (err) {}
+            }
+        });
+
+        overlayImg.addEventListener('pointermove', function (e) {
+            if (!down) return;
+            var dx = e.clientX - down.x, dy = e.clientY - down.y;
+            if (!moved && (Math.abs(dx) > DRAG_THRESHOLD || Math.abs(dy) > DRAG_THRESHOLD)) moved = true;
+            if (moved && ZOOM_STEPS[zoomIndex] > 1) {
+                panX = down.panX + dx;
+                panY = down.panY + dy;
+                applyTransform();
+            }
+        });
+
+        overlayImg.addEventListener('pointerup', function (e) {
+            try { overlayImg.releasePointerCapture(e.pointerId); } catch (err) {}
+            if (!down) return;
+            var wasDrag = moved;
+            down = null;
+            if (wasDrag) { applyTransform(); return; }   // a pan, not a zoom step
+
+            // a genuine click -> advance the zoom cycle, centred on the click
+            var next = (zoomIndex + 1) % ZOOM_STEPS.length;
+            if (next === 0) {
+                resetZoom();
+            } else {
+                var rect = overlayImg.getBoundingClientRect();
+                origin.x = Math.min(100, Math.max(0, ((e.clientX - rect.left) / rect.width) * 100));
+                origin.y = Math.min(100, Math.max(0, ((e.clientY - rect.top) / rect.height) * 100));
+                panX = 0; panY = 0;      // re-centre pan on each fresh zoom step
+                zoomIndex = next;
+                applyTransform();
+            }
+        });
+
+        // swallow the trailing click so it doesn't reach the backdrop handler
+        overlayImg.addEventListener('click', function (e) { e.stopPropagation(); });
+
+        onKeydown = function (e) { if (e.key === 'Escape') closeBox(); };
         document.addEventListener('keydown', onKeydown);
 
         document.body.appendChild(overlay);
         document.body.style.overflow = 'hidden';
+        applyTransform();
     }
 
     triggers.forEach(function (btn) {
