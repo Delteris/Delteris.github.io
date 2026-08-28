@@ -34,7 +34,13 @@ alt_url: "/pt/wps-review-approval-software.html"
         </div>
     </section>
 
-    <!-- SCREENSHOT SLOT (hero): the Review queue — Cell / Field / Current / New / Apply? columns with an amber low-confidence row and Confirm/Reject. Drop an <img> with width/height + loading="lazy" here when ready. -->
+    <section class="page-section container u-tight-top" id="screenshot-hero">
+        {% include app-shot.html
+            name="review" wide="true"
+            alt="WPS Manager review change-set — Cell, Field, Current, New and Apply columns with an amber low-confidence row"
+            cap="The review change-set: current value beside new value, cell by cell — with low-confidence reads flagged amber."
+            ph="The review queue — Cell / Field / Current / New / Apply columns, with an amber low-confidence row and Confirm/Reject." %}
+    </section>
 
     <section class="page-section container" id="diff">
         <div class="section-header">

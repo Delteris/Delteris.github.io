@@ -34,7 +34,13 @@ alt_url: "/pt/heat-input-calculator.html"
         </div>
     </section>
 
-    <!-- SCREENSHOT SLOT (hero): the helper with a PQR range set, the current/voltage/travel-speed sliders, and the live computed result — ideally a slider at its clamp limit. Drop an <img> with width/height + loading="lazy" here when ready. -->
+    <section class="page-section container u-tight-top" id="screenshot-hero">
+        {% include app-shot.html
+            name="heat-input"
+            alt="WPS Manager heat-input helper — current, voltage and travel-speed sliders clamped to a PQR-qualified range with a live result"
+            cap="The heat-input helper: sliders clamped to your PQR-qualified window, with the result computed live."
+            ph="The helper — a PQR range set, current/voltage/travel-speed sliders, and the live result, with one slider at its clamp limit." %}
+    </section>
 
     <section class="page-section container" id="range">
         <div class="section-header">

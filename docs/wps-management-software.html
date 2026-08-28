@@ -34,169 +34,60 @@ alt_url: "/pt/wps-management-software.html"
         </div>
     </section>
 
-    <!-- ============================================================
-         SCREENSHOT #1 — HERO / OVERVIEW DASHBOARD  (hidden until real capture)
-         Capture: the app "Overview" screen (the cosmic dashboard hero with the
-         greeting, the "Needs attention" notification cards, and the "At a glance"
-         stat tiles: WPS / pWPS / WPQR / qualified). Recommended width ~1100px.
-         To re-enable: uncomment this block and drop the <img> into the frame.
     <section class="page-section container u-tight-top" id="screenshot-overview">
-        <figure class="app-figure">
-            <div class="app-figure-frame">
-                <div class="app-figure-placeholder">
-                    <span class="app-figure-tag">Screenshot</span>
-                    <p><strong>App overview dashboard</strong><br>Capture the Overview screen — the greeting, the “Needs attention” cards and the WPS / pWPS / WPQR / qualified stat tiles.</p>
-                </div>
-            </div>
-            <figcaption>Everything at a glance: what needs review, and the full count of procedures you hold.</figcaption>
-        </figure>
+        {% include app-shot.html
+            name="overview"
+            wide="true"
+            alt="Elenchon WPS Manager overview dashboard — needs-attention cards and WPS, pWPS, WPQR and qualified stat tiles"
+            cap="Everything at a glance: what needs review, and the full count of procedures you hold."
+            ph="App overview dashboard — the greeting, the “Needs attention” cards and the WPS / pWPS / WPQR / qualified stat tiles." %}
     </section>
-         ============================================================ -->
 
     <section class="page-section container" id="capabilities">
         <div class="section-header">
             <span class="eyebrow">What It Does</span>
             <h2>From a Folder of WPSs to a Register That Runs Itself</h2>
-            <p class="subtitle">Import, review, hold, search, verify and export — the full loop your register needs, one capability at a time.</p>
+            <p class="subtitle">Import, review, hold, search, verify and export — the full loop your register needs. Here's the shape of it; the <a href="wps-manager-features.html">full feature tour</a> walks every screen.</p>
         </div>
 
-        <div class="feature-grid">
-
-            <div class="glass-card feature-block" id="import">
+        <div class="pillar-grid pillar-grid-3">
+            <a class="glass-card feature-teaser" href="wps-manager-features.html#import">
                 <span class="feature-index">01</span>
-                <h3>Import — Excel &amp; PDF, Both Native</h3>
-                <p class="feature-lead">Upload the WPS documents you already have, in the format you already have them. Two purpose-built parsers do the data entry — no re-typing every procedure into someone else's template.</p>
-                <ul class="feature-list">
-                    <li><strong>Excel and PDF, both native:</strong> One parser reads Excel WPS workbooks; another reconstructs a PDF form's ruled grid and reads its cells. Process, materials, positions, ranges, pass-by-pass parameters and more land as structured fields, automatically.</li>
-                    <li><strong>Bilingual out of the box:</strong> The built-in profile understands English and Portuguese WPS layouts as shipped, so a mixed EN/PT form imports without special setup.</li>
-                    <li><strong>Batch import:</strong> Bring in a whole stack of existing WPSs at once, not one form at a time.</li>
-                    <li><strong>Heat input filled where it's blank:</strong> If a form leaves the heat-input column empty, the app computes it from the arc parameters (current × voltage × 60 ÷ travel speed × process efficiency, per EN&nbsp;1011-1) and flags it for you to confirm against the PQR — never a silent number.</li>
-                    <li><strong>Tuned to your template:</strong> Standard ISO&nbsp;15609-style forms work immediately; during onboarding we tune the parser to your company's exact layout, so it reads <em>your</em> paperwork — not a generic form you'd have to conform to.</li>
-                </ul>
-                <p class="feature-out"><a href="wps-import-software.html">See WPS import in depth &rarr;</a></p>
-            </div>
-
-            <div class="glass-card feature-block" id="review">
+                <h3>Import — Excel &amp; PDF</h3>
+                <p>Two native parsers read your existing WPSs — Excel workbooks and PDF forms — into structured fields. Bilingual EN/PT, batch, tuned to your template.</p>
+            </a>
+            <a class="glass-card feature-teaser" href="wps-manager-features.html#review">
                 <span class="feature-index">02</span>
                 <h3>Human-Reviewed Edits</h3>
-                <p class="feature-lead">Nothing touches your register until you approve it. Every import proposes a change-set — current value, new value, cell by cell — and you decide what lands.</p>
-                <ul class="feature-list">
-                    <li><strong>See exactly what would change:</strong> The review queue lays out each proposed edit as current value → new value, down to the individual cell. Tick a cell to apply it, untick to leave it as it was.</li>
-                    <li><strong>Correct before you commit:</strong> Fix any value inline, or add a row for a field the parser missed — then approve. What lands is what you signed off on.</li>
-                    <li><strong>Low-confidence reads are flagged:</strong> Any cell the parser wasn't sure of — or a heat input it calculated — is shaded amber and surfaced for a check, so your attention goes exactly where it's needed.</li>
-                    <li><strong>Set your own approval bar:</strong> Choose how imports land — review <em>every</em> value, review only the uncertain ones (the default), or auto-apply everything and lean on versioning to undo.</li>
-                    <li><strong>Drift detection:</strong> If a WPS is edited after its values already landed, the app tells you the register is out of sync with the library and offers to re-sync — so the sheet never quietly drifts from the documents behind it.</li>
-                    <li><strong>Only approved cells are patched:</strong> Your workbook is never rebuilt from scratch. The app writes the confirmed cells into your own file and leaves everything else exactly as you had it.</li>
-                </ul>
-                <p class="feature-out"><a href="wps-review-approval-software.html">See reviewed edits in depth &rarr;</a></p>
-            </div>
-
-            <div class="glass-card feature-block" id="registers">
+                <p>Nothing touches your register until you approve it. Every import is a change-set — current value beside new, cell by cell — with low-confidence reads flagged.</p>
+            </a>
+            <a class="glass-card feature-teaser" href="wps-manager-features.html#registers">
                 <span class="feature-index">03</span>
-                <h3>Your Register, Visualised &amp; Versioned</h3>
-                <p class="feature-lead">The register you keep is <em>your</em> workbook — not a model the app regenerates and hands back changed. WPS Manager holds the latest copy, shows it as a readable grid, and keeps a full history behind it.</p>
-                <ul class="feature-list">
-                    <li><strong>Visualised, not just stored:</strong> Your master sheet opens as a fast, filterable grid — no more scrolling a giant spreadsheet or opening it in Excel just to look something up.</li>
-                    <li><strong>Every version kept:</strong> Each approved change-set produces a new register version (v1 → v2 → v3…). Roll back to any earlier snapshot; the current and newest versions are always protected.</li>
-                    <li><strong>Export on demand:</strong> Produce the updated register as a clean Excel workbook whenever you need it — plus a folder of the linked WPS files, zipped together, so the paperwork travels with the sheet.</li>
-                    <li><strong>Retention on your terms:</strong> Decide how long old versions and the activity trail are kept, or keep them indefinitely — an admin sets the policy per deployment.</li>
-                </ul>
-            </div>
-
-            <div class="glass-card feature-block" id="library">
+                <h3>Visualised &amp; Versioned Register</h3>
+                <p>Your own workbook, held as a fast filterable grid, versioned v1 → v2 → v3 with rollback, and exportable on demand with the linked files zipped alongside.</p>
+            </a>
+            <a class="glass-card feature-teaser" href="wps-manager-features.html#library">
                 <span class="feature-index">04</span>
-                <h3>A Library That Understands Your WPSs</h3>
-                <p class="feature-lead">Behind every register row is a fully-read document you can open, verify against its source, edit in place, and connect to the records that qualify it. Every WPS, pWPS and WPQR, parsed into structured records you can search, compare, correct and link.</p>
-                <ul class="feature-list">
-                    <li><strong>Three linked document types, one home:</strong> WPS, preliminary WPS (pWPS) and WPQR each get their own tab, each imported the same way — drop an Excel or PDF, or add a WPQR record by hand. Every document sits alongside the procedures it relates to.</li>
-                    <li><strong>Revisions, grouped automatically:</strong> Several revisions of the same WPS number collapse into a single row with an “N revisions” chip and a switcher to move between them — newest first. On import, each incoming file is classified as a brand-new WPS, a fresh revision, or a correction to an existing one.</li>
-                    <li><strong>Edit and verify in place:</strong> Correct any field's value — or even its label — and save; the label re-titles that column in the register. A one-click “Verify” clears a low-confidence flag once you've checked it, and computed heat input gets its own verify so the amber clears across every pass at once.</li>
-                    <li><strong>The real detail, not just a filename:</strong> Header fields, the full pass table with each pass's side (inside / outside / both) and role (root / fill / cap / backing), base-material parts, filler and consumable, shielding and flux — all extracted, all editable, with a row you can add if the parser ever misses one.</li>
-                    <li><strong>Filter by what's actually inside:</strong> Narrow by welding process, base or filler material, position, thickness range and more — down to a specific combination of processes, with or without a backing pass, in a couple of clicks.</li>
-                    <li><strong>Facets that read the pass table:</strong> Filter on the values inside the passes themselves — side, role, process, polarity — as set-membership filters, so “every WPS that runs a 121 root” is one click, not a manual read.</li>
-                    <li><strong>Smart linking &amp; the whole chain:</strong> Link a WPS to the WPQR that qualifies it, a WPQR to the several WPS it supports, and a pWPS to the WPQR that qualified it — then see the related documents together and open any of them in a click.</li>
-                </ul>
-                <p class="feature-out"><a href="wps-library-search-software.html">See the WPS library &amp; search in depth &rarr;</a></p>
-            </div>
-
-            <div class="glass-card feature-block" id="preview">
+                <h3>A Library That Understands WPSs</h3>
+                <p>WPS, pWPS and WPQR as structured records — header fields, the full pass table with side and role, revisions grouped, and faceted search over what's inside.</p>
+            </a>
+            <a class="glass-card feature-teaser" href="wps-manager-features.html#preview">
                 <span class="feature-index">05</span>
-                <h3>Preview — Every Read Against the Original</h3>
-                <p class="feature-lead">The feature that makes a parser safe to rely on. Open any WPS in Preview and the app splits the screen: on the left, every field it read; on the right, your real file — the PDF form rendered in place, or the Excel sheet drawn inline.</p>
-                <ul class="feature-list">
-                    <li><strong>The genuine source, not a re-render:</strong> A PDF opens as the real PDF, page and all, with its own zoom and fit-to-width; an Excel WPS renders as the actual sheet. You're checking against the document your welding engineer signed, not the app's interpretation of it.</li>
-                    <li><strong>Built to work in, not glance at:</strong> Preview is a verification workspace — it stays open while you work through a document and won't vanish on a stray click outside it. Widen the source pane with a draggable divider when a form is dense, up to half the screen.</li>
-                    <li><strong>Correct without leaving:</strong> Spot a misread? Edit the value — or its label — right inside Preview, tick a low-confidence field as verified, accept a computed heat input, and save. Compare and fix are the same view.</li>
-                    <li><strong>Everything stays in sync:</strong> A fix in Preview updates the library detail, the register column titles, and the review badge together — one correction, reflected everywhere it should be.</li>
-                </ul>
-                <p class="feature-out"><a href="wps-preview-verification.html">See preview &amp; verification in depth &rarr;</a></p>
-            </div>
-
-            <div class="glass-card feature-block" id="pqr">
+                <h3>Preview Against the Original</h3>
+                <p>A split screen: every parsed field on the left, your real PDF or Excel on the right. Verify and correct in the same view — the parser you can actually trust.</p>
+            </a>
+            <a class="glass-card feature-teaser" href="wps-manager-features.html#heat-input">
                 <span class="feature-index">06</span>
-                <h3>The Whole Linked Set</h3>
-                <p class="feature-lead">A WPS never stands alone: it's qualified by a WPQR, which in turn traces back to a preliminary WPS (pWPS). WPS Manager keeps that whole chain attached, so from any WPS you can see exactly which records support it.</p>
-                <ul class="feature-list">
-                    <li><strong>WPQR attached to the WPS:</strong> Open any WPS and see the Procedure Qualification Record that qualifies it, attached and displayed in a clean, readable layout.</li>
-                    <li><strong>pWPS attached to the WPQR:</strong> Trace each WPQR back to the preliminary WPS behind it — the full document chain, pWPS to WPQR to WPS, linked and visible.</li>
-                    <li><strong>Attach any supporting file:</strong> Keep the related documents together with the procedure they belong to, so the paperwork trail is always one click away, not scattered across drives.</li>
-                    <li><strong>Where WPS Manager stops:</strong> It attaches, links and displays these records — capturing WPQR results live on the shop floor and surfacing them against the procedures they support is the job of the full <a href="welding-qualification-software.html">Elenchon platform</a>.</li>
-                </ul>
-            </div>
+                <h3>Heat Input, Linked Chain &amp; More</h3>
+                <p>A heat-input helper clamped to your PQR window, the attached WPQR/pWPS chain, single-tenant security, clean Excel export — all in the full tour.</p>
+            </a>
+        </div>
 
-            <div class="glass-card feature-block" id="heat-input">
-                <span class="feature-index">07</span>
-                <h3>Heat Input Helper</h3>
-                <p class="feature-lead">A live scratch pad for the one calculation welders get wrong under pressure. Heat input is where a perfectly good procedure quietly goes out of qualification — the built-in helper makes the safe window impossible to miss.</p>
-                <ul class="feature-list">
-                    <li><strong>Set the qualified range, then explore:</strong> Enter the heat-input range your PQR qualified for each weld region — root, fill, cap — then drag the current, voltage and travel-speed sliders to see the resulting heat input computed live.</li>
-                    <li><strong>Sliders that can't leave the window:</strong> The controls clamp to your PQR-qualified range, so you physically can't dial in a combination that falls outside what the procedure allows.</li>
-                    <li><strong>Multi-arc aware:</strong> Tandem and twin-arc setups get a lead and a trail head with their own current and voltage; the total heat input is summed across heads, the way the standard expects.</li>
-                    <li><strong>Pull straight from a WPS:</strong> Load a parsed WPS from your library and its per-region ranges and processes fill in automatically. It's a scratch pad; nothing here is saved or written to any sheet.</li>
-                </ul>
-                <p class="feature-out"><a href="heat-input-calculator.html">See the heat input calculator in depth &rarr;</a></p>
-            </div>
-
-            <div class="glass-card feature-block" id="security">
-                <span class="feature-index">08</span>
-                <h3>Built the Delteris Way</h3>
-                <p class="feature-lead">Your procedures are proprietary. Cheap and simple shouldn't mean careless — every WPS Manager tenancy is engineered with the same discipline as the on-premise Elenchon platform.</p>
-                <ul class="feature-list">
-                    <li><strong>One tenant per instance:</strong> Each customer runs on their own isolated instance — your register and documents never share a database with another shop's.</li>
-                    <li><strong>Hardened access:</strong> Login-ID and password with signed sessions, a strong password policy, automatic lockout after repeated failed attempts, and per-IP rate limiting — the standard defences, on by default.</li>
-                    <li><strong>Full audit trail:</strong> Every change to the register and every setting is recorded — what changed, who changed it, and when — and kept for as long as your retention policy says.</li>
-                    <li><strong>Reversible by design:</strong> Versioned register backups mean any approved change can be rolled back, and a deleted sheet stays recoverable through a grace window before it's gone for good.</li>
-                    <li><strong>Confidential onboarding:</strong> The WPS documents you send us to set up your parser are handled in strict confidence and used only to verify your import.</li>
-                </ul>
-            </div>
-
-            <div class="glass-card feature-block" id="authoring">
-                <span class="feature-index">09</span>
-                <h3>Clean Export Today, Authoring Next</h3>
-                <p class="feature-lead">WPS Manager already emits a clean, structured Excel workbook for any WPS you hold — and that file re-imports through the same template, so the round trip is lossless. Full in-cloud authoring builds on that foundation.</p>
-                <ul class="feature-list">
-                    <li><strong>Clean Excel export today:</strong> Generate a tidy, single-WPS workbook — or the whole register as one long spreadsheet — that opens in Excel and re-imports without losing a value.</li>
-                    <li><strong>Spreadsheet-simple authoring (on the roadmap):</strong> Define headers, fill cells, and an automatic styling script turns them into a finished, formatted WPS — the fragile hand-built template, retired.</li>
-                    <li><strong>Authoring, kept simple:</strong> We deliberately keep this focused on writing the document itself. Capturing the WPQR results a WPS is written against is handled by the full <a href="welding-qualification-software.html">Elenchon qualification workflow</a>.</li>
-                </ul>
-            </div>
-
+        <div class="cta-group u-gap-top">
+            <a href="wps-manager-features.html" class="btn btn-secondary">See Every Feature in the App &rarr;</a>
         </div>
     </section>
 
-    <!-- ============================================================
-         SCREENSHOTS #2–#7 — hidden until real captures exist.
-         Suggested placement once available (drop each into the flow near its
-         matching capability card above, or as a wide band under the grid):
-           #2 Import      — Library mid-import, one Excel + one PDF side by side, "added — N fields to check" toast.
-           #3 Review      — the change-set: Cell / Field / Current / New / Apply? columns + an amber low-confidence row (the money shot; make it wide).
-           #4 Register    — the Registers grid with the v1/v2/v3 selector + Export button.
-           #5 Library     — WPS/pWPS/WPQR tabs, a doc selected showing header fields + pass table (side/role), facet panel open, an "N revisions" chip.
-           #6 Preview     — the split view: parsed fields left, real PDF/Excel right; align an amber field with its cell (make it wide).
-           #7 Heat input  — sliders with a PQR range set and the live result, a slider sitting at its clamp limit.
-         Frame markup to reuse:
-           <figure class="app-figure app-figure-wide"><div class="app-figure-frame"><img src="/static/wpsm/NAME.webp" width="1100" height="700" loading="lazy" alt="…"></div><figcaption>…</figcaption></figure>
-         ============================================================ -->
 
     <section class="page-section container" id="onboarding">
         <div class="dark-panel grid-2 align-center">
