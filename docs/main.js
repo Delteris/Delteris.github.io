@@ -573,7 +573,7 @@
     var triggers = document.querySelectorAll('[data-zoomable]');
     if (!triggers.length) return;
 
-    var overlay, overlayImg, overlayCap, lastFocused;
+    var overlay, overlayImg, overlayCap, lastFocused, closeTimer;
 
     function build() {
         overlay = document.createElement('div');
@@ -612,6 +612,9 @@
 
     function openBox(img, caption) {
         if (!overlay) build();
+        // cancel any pending hide from a previous close so a fast
+        // re-open can never be undone by a stale timer/listener
+        if (closeTimer) { clearTimeout(closeTimer); closeTimer = null; }
         lastFocused = document.activeElement;
         overlayImg.src = img.currentSrc || img.src;
         overlayImg.alt = img.alt || '';
@@ -625,17 +628,24 @@
     }
 
     function closeBox() {
-        if (!overlay) return;
+        if (!overlay || overlay.hidden) return;
         overlay.classList.remove('is-open');
         document.body.style.overflow = '';
-        var done = function () {
-            overlay.hidden = true;
-            overlay.removeEventListener('transitionend', done);
-            if (lastFocused && typeof lastFocused.focus === 'function') lastFocused.focus();
-        };
-        overlay.addEventListener('transitionend', done);
-        // fallback if no transition fires
-        setTimeout(function () { if (overlay && !overlay.classList.contains('is-open')) overlay.hidden = true; }, 300);
+        // Hide on a reliable timer instead of transitionend: with
+        // prefers-reduced-motion (transition: none) no transitionend
+        // ever fires, and the img's transform event can bubble up and
+        // fire early. Either way the overlay could stay on top of the
+        // page swallowing clicks with its zoom-out cursor. The timer
+        // is cancelled if the box is re-opened before it runs.
+        if (closeTimer) clearTimeout(closeTimer);
+        closeTimer = setTimeout(function () {
+            closeTimer = null;
+            if (overlay && !overlay.classList.contains('is-open')) {
+                overlay.hidden = true;
+                overlayImg.src = '';
+                if (lastFocused && typeof lastFocused.focus === 'function') lastFocused.focus();
+            }
+        }, 220);
     }
 
     triggers.forEach(function (btn) {
