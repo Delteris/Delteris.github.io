@@ -566,6 +566,12 @@
    Screenshot lightbox — click any zoomable app screenshot to
    view it full-screen. Progressive enhancement: the frames are
    real <button>s, so without JS they simply do nothing.
+
+   Presence model: OPEN builds the overlay and appends it to the
+   DOM; CLOSE removes it from the DOM outright. Visibility is never
+   controlled by opacity/hidden/timers, so a closed lightbox cannot
+   linger invisibly over the page swallowing clicks with a stuck
+   zoom-out cursor. The fade is a pure CSS entry animation.
    ========================================================== */
 (function () {
     'use strict';
@@ -573,21 +579,48 @@
     var triggers = document.querySelectorAll('[data-zoomable]');
     if (!triggers.length) return;
 
-    var overlay, overlayImg, overlayCap, lastFocused, closeTimer;
+    var overlay = null;          // the live overlay element, or null when closed
+    var lastFocused = null;
+    var onKeydown = null;
 
-    function build() {
+    function closeBox() {
+        if (!overlay) return;
+        var el = overlay;
+        overlay = null;                       // mark closed FIRST, synchronously
+        if (onKeydown) {
+            document.removeEventListener('keydown', onKeydown);
+            onKeydown = null;
+        }
+        document.body.style.overflow = '';
+        if (el.parentNode) el.parentNode.removeChild(el);   // gone from the DOM
+        if (lastFocused && typeof lastFocused.focus === 'function') {
+            try { lastFocused.focus(); } catch (e) {}
+        }
+        lastFocused = null;
+    }
+
+    function openBox(img, caption) {
+        // If one is somehow already open, tear it down before building a new one.
+        if (overlay) closeBox();
+        lastFocused = document.activeElement;
+
         overlay = document.createElement('div');
         overlay.className = 'app-lightbox';
         overlay.setAttribute('role', 'dialog');
         overlay.setAttribute('aria-modal', 'true');
         overlay.setAttribute('aria-label', 'Screenshot');
-        overlay.hidden = true;
 
-        overlayImg = document.createElement('img');
-        overlayImg.alt = '';
+        var overlayImg = document.createElement('img');
+        overlayImg.src = img.currentSrc || img.src;
+        overlayImg.alt = img.alt || '';
 
-        overlayCap = document.createElement('p');
+        var overlayCap = document.createElement('p');
         overlayCap.className = 'app-lightbox-cap';
+        if (caption) {
+            overlayCap.textContent = caption;
+        } else {
+            overlayCap.style.display = 'none';
+        }
 
         var close = document.createElement('button');
         close.type = 'button';
@@ -598,54 +631,19 @@
         overlay.appendChild(overlayImg);
         overlay.appendChild(overlayCap);
         overlay.appendChild(close);
+
+        // Any click inside the overlay — backdrop, image, caption or the
+        // close button — closes it. There is nothing to interact with
+        // behind it, so this can never be ambiguous.
+        overlay.addEventListener('click', closeBox);
+
+        onKeydown = function (e) {
+            if (e.key === 'Escape') closeBox();
+        };
+        document.addEventListener('keydown', onKeydown);
+
         document.body.appendChild(overlay);
-
-        overlay.addEventListener('click', function (e) {
-            // click anywhere except the image itself closes (image is zoom-out too)
-            if (e.target === overlayImg) { closeBox(); return; }
-            closeBox();
-        });
-        document.addEventListener('keydown', function (e) {
-            if (e.key === 'Escape' && overlay && !overlay.hidden) closeBox();
-        });
-    }
-
-    function openBox(img, caption) {
-        if (!overlay) build();
-        // cancel any pending hide from a previous close so a fast
-        // re-open can never be undone by a stale timer/listener
-        if (closeTimer) { clearTimeout(closeTimer); closeTimer = null; }
-        lastFocused = document.activeElement;
-        overlayImg.src = img.currentSrc || img.src;
-        overlayImg.alt = img.alt || '';
-        overlayCap.textContent = caption || '';
-        overlayCap.style.display = caption ? '' : 'none';
-        overlay.hidden = false;
-        // force reflow so the transition runs
-        void overlay.offsetWidth;
-        overlay.classList.add('is-open');
         document.body.style.overflow = 'hidden';
-    }
-
-    function closeBox() {
-        if (!overlay || overlay.hidden) return;
-        overlay.classList.remove('is-open');
-        document.body.style.overflow = '';
-        // Hide on a reliable timer instead of transitionend: with
-        // prefers-reduced-motion (transition: none) no transitionend
-        // ever fires, and the img's transform event can bubble up and
-        // fire early. Either way the overlay could stay on top of the
-        // page swallowing clicks with its zoom-out cursor. The timer
-        // is cancelled if the box is re-opened before it runs.
-        if (closeTimer) clearTimeout(closeTimer);
-        closeTimer = setTimeout(function () {
-            closeTimer = null;
-            if (overlay && !overlay.classList.contains('is-open')) {
-                overlay.hidden = true;
-                overlayImg.src = '';
-                if (lastFocused && typeof lastFocused.focus === 'function') lastFocused.focus();
-            }
-        }, 220);
     }
 
     triggers.forEach(function (btn) {

@@ -3106,11 +3106,15 @@ button.app-figure-frame:focus-visible .app-figure-zoom-hint {
     padding: clamp(1rem, 4vw, 3rem);
     background: rgba(4, 8, 18, 0.86);
     backdrop-filter: blur(8px);
-    opacity: 0;
-    transition: opacity 0.2s ease;
     cursor: zoom-out;
+    /* Fade is cosmetic only. Presence is controlled by adding/removing the
+       element from the DOM in JS, never by opacity — so a closed lightbox
+       can never linger invisibly over the page. Starts visible; the .is-open
+       class is added on the next frame purely to animate the fade-in. */
+    opacity: 1;
+    animation: app-lightbox-in 0.2s ease both;
 }
-.app-lightbox.is-open { opacity: 1; }
+@keyframes app-lightbox-in { from { opacity: 0; } to { opacity: 1; } }
 .app-lightbox img {
     max-width: 100%;
     max-height: 100%;
@@ -3119,10 +3123,12 @@ button.app-figure-frame:focus-visible .app-figure-zoom-hint {
     border-radius: 10px;
     border: 1px solid rgba(59, 130, 246, 0.35);
     box-shadow: 0 40px 120px -30px rgba(0, 0, 0, 0.9);
-    transform: scale(0.98);
-    transition: transform 0.2s ease;
+    /* the image is the one spot that is NOT zoom-out — clicking it closes,
+       but a plain pointer reads better than zoom-out on the picture itself */
+    cursor: default;
+    animation: app-lightbox-img-in 0.2s ease both;
 }
-.app-lightbox.is-open img { transform: scale(1); }
+@keyframes app-lightbox-img-in { from { transform: scale(0.98); } to { transform: scale(1); } }
 .app-lightbox-close {
     position: absolute;
     top: clamp(0.75rem, 3vw, 1.75rem);
@@ -3153,7 +3159,7 @@ button.app-figure-frame:focus-visible .app-figure-zoom-hint {
     padding: 0.5rem 0.9rem;
 }
 @media (prefers-reduced-motion: reduce) {
-    .app-lightbox, .app-lightbox img { transition: none; }
+    .app-lightbox, .app-lightbox img { animation: none; }
 }
 
 /* placeholder shown until a screenshot exists */
