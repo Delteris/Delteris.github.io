@@ -574,7 +574,7 @@
    never linger invisibly over the page.
 
    Inside an open lightbox:
-     - click the IMAGE   -> cycle zoom  fit -> 1.75x -> 2.5x -> fit
+     - click the IMAGE   -> cycle zoom  fit -> 1.75x -> fit
                             (zoom is centred on the click point)
      - drag the IMAGE    -> pan around while zoomed (not a zoom step)
      - click the BACKDROP -> if zoomed, reset to fit; if already
@@ -588,7 +588,7 @@
     var triggers = document.querySelectorAll('[data-zoomable]');
     if (!triggers.length) return;
 
-    var ZOOM_STEPS = [1, 1.75, 2.5];   // fit, then in; wraps back to fit
+    var ZOOM_STEPS = [1, 1.75];        // fit, then one zoom level; wraps back to fit
     var DRAG_THRESHOLD = 6;            // px moved before a press counts as a drag
 
     var overlay = null;
@@ -691,10 +691,15 @@
 
         overlayImg.addEventListener('pointerup', function (e) {
             try { overlayImg.releasePointerCapture(e.pointerId); } catch (err) {}
-            if (!down) return;
+            if (!down) { applyTransform(); return; }
             var wasDrag = moved;
             down = null;
-            if (wasDrag) { applyTransform(); return; }   // a pan, not a zoom step
+
+            if (wasDrag) {
+                // a pan, not a zoom step — re-sync the cursor away from 'grabbing'
+                applyTransform();
+                return;
+            }
 
             // a genuine click -> advance the zoom cycle, centred on the click
             var next = (zoomIndex + 1) % ZOOM_STEPS.length;
@@ -706,8 +711,18 @@
                 origin.y = Math.min(100, Math.max(0, ((e.clientY - rect.top) / rect.height) * 100));
                 panX = 0; panY = 0;      // re-centre pan on each fresh zoom step
                 zoomIndex = next;
-                applyTransform();
             }
+            // always restore the correct cursor for the resulting zoom state,
+            // so a press that set 'grabbing' can never get stuck
+            applyTransform();
+        });
+
+        // if the gesture is cancelled (e.g. pointer capture lost), never leave
+        // the cursor stuck on 'grabbing' — restore it to match the zoom state
+        overlayImg.addEventListener('pointercancel', function (e) {
+            try { overlayImg.releasePointerCapture(e.pointerId); } catch (err) {}
+            down = null; moved = false;
+            applyTransform();
         });
 
         // swallow the trailing click so it doesn't reach the backdrop handler
