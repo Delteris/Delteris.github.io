@@ -67,7 +67,7 @@
         },
         {
           "@type": "Question",
-          "name": "What if my WPSs aren't in English?",
+          "name": "What if my WPS aren't in English?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "The parser reads a form's structure, not a fixed set of English words, and matches your labels from a language pack — so the language on the form doesn't change whether it's understood. English and Portuguese ship today; your language and in-house wording are added during onboarding by supplying the terms, with no code change."
@@ -91,7 +91,7 @@
         },
         {
           "@type": "Question",
-          "name": "I have years of accumulated WPSs. Can I bring them all in at once?",
+          "name": "I have years of accumulated WPS. Can I bring them all in at once?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Yes — that first bulk load is exactly what batch import is for. Drop the whole stack in one pass; each file is sorted as it lands into a new WPS, a new revision of one you hold, or a correction, so revisions group correctly from the start instead of sprawling into duplicates."
@@ -102,7 +102,7 @@
           "name": "Will it read our specific form, or just a generic one?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Standard ISO 15609-style forms read out of the box; your exact layout is tuned in before you go live. You send a few real WPSs, we confirm the parser reads them and adjust the profile if needed, and only then do you commit — so import is proven on your own paperwork, handled in strict confidence."
+            "text": "Standard ISO 15609-style forms read out of the box; your exact layout is tuned in before you go live. You send a few real WPS, we confirm the parser reads them and adjust the profile if needed, and only then do you commit — so import is proven on your own paperwork, handled in strict confidence."
           }
         }
       ]

@@ -58,7 +58,7 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Do I manage my WPSs in the app or in Excel?",
+          "name": "Do I manage my WPS in the app or in Excel?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "In the app. The library is where you work — every WPS, pWPS and WPQR is a structured record you search, filter, edit, verify and link in place. Excel export is there for when a register needs to be handed to your auditors or head office, not something you drop into to get your work done."
@@ -66,7 +66,7 @@
         },
         {
           "@type": "Question",
-          "name": "Can I filter my WPSs by welding process?",
+          "name": "Can I filter my WPS by welding process?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Yes. Because every field is extracted at import, you filter the library by real criteria — process, base and filler material, position, thickness range and more — down to a specific combination of processes, with or without a backing pass, in a couple of clicks."

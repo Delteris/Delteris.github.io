@@ -69,7 +69,7 @@
         },
         {
           "@type": "Question",
-          "name": "We already keep our WPSs in a spreadsheet. Why change?",
+          "name": "We already keep our WPS in a spreadsheet. Why change?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Because a hand-maintained spreadsheet goes stale the moment a WPS is revised, and nobody can tell you what it holds without scrolling it. WPS Manager keeps your workbook — it patches the cells you approve rather than replacing your file — but reads every procedure into structured data behind it, so the register is searchable, filterable by what's actually inside each form, versioned with rollback, and exportable on demand. You stop maintaining the sheet by hand and start querying it."
@@ -80,15 +80,15 @@
           "name": "What do I need to bring to get started?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Just the WPSs you already have, in Excel or PDF. There's no template to fill in and no data to re-key — onboarding begins with you sending a few real documents so we can prove the parser reads your exact form before you commit. Your existing register, if you keep one, stays your file; the app works from it rather than replacing it."
+            "text": "Just the WPS you already have, in Excel or PDF. There's no template to fill in and no data to re-key — onboarding begins with you sending a few real documents so we can prove the parser reads your exact form before you commit. Your existing register, if you keep one, stays your file; the app works from it rather than replacing it."
           }
         },
         {
           "@type": "Question",
-          "name": "Does WPS Manager create WPSs, or just manage them?",
+          "name": "Does WPS Manager create WPS, or just manage them?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Today its job is management — import, review, organize, filter, version, and export, with supporting WPQRs and pWPSs kept alongside. It already exports a clean Excel workbook per WPS (or the whole register), and that file re-imports losslessly. A spreadsheet-style builder for writing and bulk-editing WPSs in the cloud is on the roadmap. It deliberately does not capture WPQR results on the floor — that shop-floor qualification capture is handled by the full Elenchon qualification platform."
+            "text": "Today its job is management — import, review, organize, filter, version, and export, with supporting WPQRs and pWPS kept alongside. It already exports a clean Excel workbook per WPS (or the whole register), and that file re-imports losslessly. A spreadsheet-style builder for writing and bulk-editing WPS in the cloud is on the roadmap. It deliberately does not capture WPQR results on the floor — that shop-floor qualification capture is handled by the full Elenchon qualification platform."
           }
         },
         {
@@ -96,7 +96,7 @@
           "name": "How much does it cost, and is it charged per user?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "€90 per month, or €840 per year — an effective €70 per month — billed annually. One flat, fully published price, not per seat and never a contact-us-for-a-quote: your whole team works in one tenancy, with admin, editor and read-only roles, for the same price. It includes 50 GB of storage (tens of thousands of WPSs); extra 50 GB blocks are €10/month if you ever need them. Onboarding and parser setup for your template are included, handled directly by the founders."
+            "text": "€90 per month, or €840 per year — an effective €70 per month — billed annually. One flat, fully published price, not per seat and never a contact-us-for-a-quote: your whole team works in one tenancy, with admin, editor and read-only roles, for the same price. It includes 50 GB of storage (tens of thousands of WPS); extra 50 GB blocks are €10/month if you ever need them. Onboarding and parser setup for your template are included, handled directly by the founders."
           }
         },
         {
