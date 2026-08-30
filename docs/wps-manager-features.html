@@ -47,7 +47,7 @@ alt_url: "/pt/wps-manager-features.html"
         <div class="section-header">
             <span class="eyebrow">Import</span>
             <h2>Excel &amp; PDF, Read For You</h2>
-            <p class="subtitle">Pull the WPSs you already hold straight into a register. Two purpose-built parsers do the data entry — no re-typing a procedure into someone else's template.</p>
+            <p class="subtitle">Pull the WPS you already hold straight into a register. Two purpose-built parsers do the data entry — no re-typing a procedure into someone else's template.</p>
         </div>
         <div class="glass-card feature-block feature-block-solo" id="import-detail">
             <span class="feature-index">01</span>
@@ -115,7 +115,7 @@ alt_url: "/pt/wps-manager-features.html"
     <!-- ===================== LIBRARY ===================== -->
     <section class="page-section container" id="library">
         <div class="section-header">
-            <span class="eyebrow">A Library That Reads Your WPSs</span>
+            <span class="eyebrow">A Library That Reads Your WPS</span>
             <h2>Every Field, Down to the Pass Table</h2>
             <p class="subtitle">Behind every register row is a fully-read document — header fields, the full pass table, materials and consumables, all structured and all searchable.</p>
         </div>
@@ -131,9 +131,9 @@ alt_url: "/pt/wps-manager-features.html"
         </div>
         {% include app-shot.html
             name="library" wide="true" w="1600" h="900"
-            alt="Library detail for WPS MER-WPS-007: header fields including ISO 15614-8 and base metal P265GH, and a four-pass table (root, fill, fill, cap) with process 111, filler class, current, voltage, travel speed and heat input, with a Verify computed heat input button"
-            cap="A WPS read to the field: the header block, and every pass — root to cap — with its parameters and the heat-input values flagged for a check." %}
-        <p class="story-note">MER-WPS-007, read from an Excel workbook: ISO&nbsp;15614-8, P265GH, four passes on process 111, each with its own current, voltage and travel-speed window. The amber heat inputs are the computed values, waiting to be verified.</p>
+            alt="Library detail for MER-pWPS-104: header fields including qualification standard ISO 15614-8, supporting PQR reference and base metal S275JR, a three-pass table (root, fill, cap) on process 138 with filler class, current, voltage, travel speed and heat input, and a base-material parts table below"
+            cap="A document read to the field: the header block, every pass — root to cap — with its parameters and heat-input values, and the base-material parts, all structured and searchable." %}
+        <p class="story-note">MER-pWPS-104, read from an Excel workbook: ISO&nbsp;15614-8, S275JR, three passes on process 138, each with its own current, voltage and travel-speed window — and the base-material parts read into their own table.</p>
     </section>
 
     <!-- ===================== LINKED CHAIN ===================== -->
@@ -154,8 +154,8 @@ alt_url: "/pt/wps-manager-features.html"
         </div>
         {% include app-shot.html
             name="pqr-chain" wide="true" w="1600" h="900"
-            alt="pWPS library detail for MER-pWPS-104: header fields including qualification standard ISO 15614-8 and supporting PQR reference 24_MER_10356_138-16, a three-pass table (root, fill, cap) on process 138, and a base-material part table"
-            cap="The pWPS end of the chain, read to the field: its qualification standard, the supporting PQR it references, and every pass — the preliminary procedure a WPQR traces back to." %}
+            alt="Library detail for WPS MER-WPS-001 with a Linked WPQR panel showing two qualification records, MER-WPQR-2401 and MER-WPQR-2411, above header fields including ISO 15614-1 and base metal 316L and a three-pass table on process 135"
+            cap="A WPS with its qualification chain made explicit: the WPQR records that qualify it, linked and one click apart, above the header and pass table read from the document." %}
     </section>
 
     <!-- ===================== HEAT INPUT ===================== -->
