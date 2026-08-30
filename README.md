@@ -18,6 +18,10 @@ docs/
 ├── style.css / main.js / static/
 ├── llms.txt / robots.txt / CNAME / site.webmanifest
 └── 404.html               # noindex, no footer, excluded from sitemap
+
+_source/                   # repo working material — NOT published (see _source/README.md)
+├── screenshots/           # raw app captures; converted to docs/static/wpsm/*.webp
+└── reads/                 # planning + reference docs
 ```
 
 ## Editing
