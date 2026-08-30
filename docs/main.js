@@ -61,6 +61,7 @@
             var labelEl = productsBtn.querySelector('.nav-dropdown-btn-label');
             if (!labelEl) return;
             var KEY = 'delteris:selectedProduct';   // stores 'elenchon' | 'wpsm'
+            var defaultLabel = productsBtn.getAttribute('data-label-default') || labelEl.textContent;
             var items = productsMenu.querySelectorAll('a[data-product]');
             var byKey = {};
             items.forEach(function (a) { byKey[a.getAttribute('data-product')] = a; });
@@ -79,6 +80,12 @@
             }
             applySaved();
 
+            function resetToDefault() {
+                try { localStorage.removeItem(KEY); } catch (err) {}
+                labelEl.textContent = defaultLabel;
+                productsBtn.classList.remove('is-selected');
+            }
+
             items.forEach(function (a) {
                 a.addEventListener('click', function () {
                     // Let the navigation proceed; just record the pick first so the next
@@ -92,6 +99,14 @@
                     }
                 });
             });
+
+            // Clicking the site logo goes to the Elenchon home, so the sticky product
+            // label must reset to the neutral default — otherwise it keeps showing the
+            // last-picked product (e.g. "WPS Manager") while on the Elenchon home page.
+            var navLogo = document.querySelector('.nav-logo');
+            if (navLogo) {
+                navLogo.addEventListener('click', resetToDefault);
+            }
         })();
         // Close on outside click and on Escape.
         document.addEventListener('click', function (e) {
