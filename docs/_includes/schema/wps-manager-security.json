@@ -12,7 +12,7 @@
         {
           "@type": "WebPage",
           "name": "Elenchon WPS Manager — Security",
-          "description": "How Elenchon WPS Manager secures a cloud WPS register: a full searchable audit trail, role-based access with a read-only inspector seat, single-tenant isolation, EU hosting, and encryption in transit and at rest.",
+          "description": "How Elenchon WPS Manager secures a cloud WPS register: a full searchable audit trail, role-based access with a read-only inspector seat, single-tenant isolation, EU hosting, and encryption in transit.",
           "isPartOf": { "@id": "https://delteris.com/wps-management-software.html" },
           "about": { "@id": "https://delteris.com/#organization" }
         },
@@ -28,7 +28,7 @@
             {
               "@type": "Question",
               "name": "Where is the data hosted, and is it encrypted?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Your tenancy runs on infrastructure located in the European Union, so your procedures and register stay within the jurisdiction you operate in. Traffic to your tenant is encrypted over TLS, and your data is encrypted where it's stored — in the database and in backups alike." }
+              "acceptedAnswer": { "@type": "Answer", "text": "Your tenancy runs on infrastructure located in the European Union, so your procedures and register stay within the jurisdiction you operate in. Traffic to your tenant is encrypted over TLS, your data is isolated to your tenancy alone, and access is yours to control down to a single read-only seat." }
             },
             {
               "@type": "Question",
@@ -38,7 +38,7 @@
             {
               "@type": "Question",
               "name": "Is there an audit trail of changes to the register?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Yes — a full one. Every recompute, import, edit and verification is recorded with the user behind it and a timestamp, and the log is searchable, so an audit question becomes a lookup rather than an investigation. You control how long the log, backups and old versions are kept." }
+              "acceptedAnswer": { "@type": "Answer", "text": "Yes — a full one. Every recompute, import, edit and verification is recorded with the user behind it and a timestamp, and the log is searchable, so an audit question becomes a lookup rather than an investigation. You control how long the log and old versions are kept." }
             }
           ]
         }
