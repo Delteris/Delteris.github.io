@@ -2251,6 +2251,12 @@ a.glass-card:hover h3,
     color: var(--accent-blue);
 }
 
+.footer-tax {
+    margin-top: 0.75rem;
+    font-size: 0.8rem;
+    opacity: 0.75;
+}
+
 @media (max-width: 768px) {
     .legal-callout {
         padding: 1.25rem 1.15rem;
@@ -3284,11 +3290,18 @@ button.app-figure-frame:focus-visible .app-figure-zoom-hint {
 }
 /* On touch devices there's no hover to reveal the arrow, so the whole card
    would look like plain text rather than a link. Show the arrow permanently
-   wherever the primary pointer can't hover (phones, most tablets). */
+   wherever the primary pointer can't hover (phones, most tablets). Because it
+   is always visible here, drop it out of the top-right corner (where it
+   overlaps the index chip and heading) and let it sit at the bottom-right in
+   normal flow — the card is a flex column, so align-self pushes it to the
+   right edge under the copy. */
 @media (hover: none) {
     .feature-teaser::after {
         opacity: 1;
-        transform: translateX(0);
+        position: static;
+        align-self: flex-end;
+        margin-top: 1.1rem;
+        transform: none;
     }
 }
 
