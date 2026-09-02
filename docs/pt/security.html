@@ -104,19 +104,19 @@ alt_url: "/security.html"
             <div class="section-header">
                 <span class="eyebrow">Nos Bastidores</span>
                 <h2 class="text-glow">As Camadas de Cifragem numa Ligação</h2>
-                <p class="subtitle">Um trabalhador que alcança uma aplicação no seu equipamento percorre três túneis cifrados aninhados, cada um com troca de chaves resistente a computação quântica e cada um aberto apenas nos dois extremos — nunca na rede. Escolha um observador e veja exatamente até onde cada um consegue ler.</p>
+                <p class="subtitle">Um trabalhador que alcança uma aplicação no seu equipamento percorre três túneis cifrados aninhados. Os dois que atravessam a rede — o Link TLS e o App TLS — usam troca de chaves resistente a computação quântica; a camada interior Ziti E2E já cifra o seu conteúdo com uma cifra resistente a quântica, e a sua única parte clássica (a troca de chaves X25519) nunca fica exposta na rede, pelo que não é uma preocupação de «capturar agora, decifrar depois». Cada túnel é aberto apenas nos dois extremos — nunca na rede. Escolha um observador e veja exatamente até onde cada um consegue ler.</p>
             </div>
 
             <div class="cl-stage">
                 <p class="cl-wirehint">camada exterior = o que realmente atravessa a rede ↓</p>
                 <div class="cl-layer cl-link" id="L-link">
-                    <div class="cl-tab"><span class="cl-idx">1</span><span class="cl-nm">Link&nbsp;TLS</span><span class="cl-alg">X25519MLKEM768 · TLS&nbsp;1.3 · mTLS</span><span class="cl-pq">RESISTENTE&nbsp;A&nbsp;QUÂNTICA</span></div>
+                    <div class="cl-tab"><span class="cl-idx">1</span><span class="cl-nm">Link&nbsp;TLS</span><span class="cl-alg">X25519MLKEM768 + AES-256-GCM · TLS&nbsp;1.3 · mTLS</span><span class="cl-pq">RESISTENTE&nbsp;A&nbsp;QUÂNTICA</span></div>
                     <div class="cl-seal"><span class="cl-lk">🔒</span><span class="cl-txt" data-seal="link"></span></div>
                     <div class="cl-layer cl-e2e" id="L-e2e">
-                        <div class="cl-tab"><span class="cl-idx">2</span><span class="cl-nm">Ziti&nbsp;E2E</span><span class="cl-alg">híbrido pós-quântico + XChaCha20-Poly1305</span><span class="cl-pq">RESISTENTE&nbsp;A&nbsp;QUÂNTICA</span></div>
+                        <div class="cl-tab"><span class="cl-idx">2</span><span class="cl-nm">Ziti&nbsp;E2E</span><span class="cl-alg">X25519 (troca de chaves clássica) + XChaCha20-Poly1305 (resistente a quântica)</span><span class="cl-pq">TROCA&nbsp;PROTEGIDA&nbsp;NA&nbsp;REDE</span></div>
                         <div class="cl-seal"><span class="cl-lk">🔒</span><span class="cl-txt" data-seal="e2e"></span></div>
                         <div class="cl-layer cl-app" id="L-app">
-                            <div class="cl-tab"><span class="cl-idx">3</span><span class="cl-nm">App&nbsp;TLS</span><span class="cl-alg">X25519MLKEM768 · Caddy&nbsp;2.10</span><span class="cl-pq">RESISTENTE&nbsp;A&nbsp;QUÂNTICA</span></div>
+                            <div class="cl-tab"><span class="cl-idx">3</span><span class="cl-nm">App&nbsp;TLS</span><span class="cl-alg">X25519MLKEM768 + AES-256-GCM · TLS&nbsp;1.3 · Caddy&nbsp;2.10+</span><span class="cl-pq">RESISTENTE&nbsp;A&nbsp;QUÂNTICA</span></div>
                             <div class="cl-seal"><span class="cl-lk">🔒</span><span class="cl-txt" data-seal="app"></span></div>
                             <div class="cl-payload" id="L-data">
                                 <div class="cl-big">OS SEUS DADOS</div>
@@ -138,13 +138,13 @@ alt_url: "/security.html"
                 </div>
                 <div class="cl-verdict" id="cl-verdict">
                     <p class="cl-vh" id="cl-v-h">As três camadas</p>
-                    <p id="cl-v-b">Três túneis aninhados resistentes a computação quântica — Link TLS (verde), Ziti E2E (âmbar) e App TLS (azul). Cada um é aberto apenas nos extremos, nunca na rede.</p>
+                    <p id="cl-v-b">Três túneis aninhados — o Link TLS (verde) e o App TLS (azul) são resistentes a computação quântica. O Ziti E2E (âmbar) já cifra o conteúdo com uma cifra resistente a quântica; apenas a sua troca de chaves X25519 é clássica, e o Link TLS protege-a na rede — pelo que nunca fica exposta a «capturar agora, decifrar depois». Cada um é aberto apenas nos extremos, nunca na rede.</p>
                 </div>
             </div>
 
             <p class="cl-section-h">Até onde cada camada alcança no percurso</p>
 
-            <div class="cl-board">
+            <div class="cl-board" style="--cl-swipe-hint:'deslize para ver todo o percurso \2192'">
                 <svg viewBox="0 0 1150 428" role="img" aria-label="Percurso de rede e alcance das camadas de cifragem">
                     <defs>
                         <style>
@@ -161,22 +161,22 @@ alt_url: "/security.html"
 
                     <!-- Legend -->
                     <rect x="24" y="20" width="11" height="11" rx="2.5" fill="#43c08f"/>
-                    <text class="cl-kt" x="42" y="29">Link TLS — resistente a quântica · re-embrulha em cada router</text>
+                    <text class="cl-kt" x="42" y="29">Link TLS — resistente a quântica · envolve cada salto de borda e router na rede</text>
                     <rect x="24" y="40" width="11" height="11" rx="2.5" fill="#ecab45"/>
-                    <text class="cl-kt" x="42" y="49">Ziti E2E — resistente a quântica · abre só nos extremos</text>
+                    <text class="cl-kt" x="42" y="49">Ziti E2E — AEAD resistente a quântica, troca X25519 clássica (protegida na rede) · abre só nos extremos</text>
                     <rect x="24" y="60" width="11" height="11" rx="2.5" fill="#54a9ec"/>
                     <text class="cl-kt" x="42" y="69">App TLS — resistente a quântica · transporta os dados reais</text>
 
                     <!-- Zones. 14px padding around a zone's contents, 26px gap between nodes. -->
+                    <rect class="cl-zone" x="24" y="172" width="144" height="208" rx="12"/>
+                    <text class="cl-zl" x="38" y="190">rede externa</text>
                     <rect class="cl-zone" x="238" y="172" width="140" height="208" rx="12"/>
-                    <text class="cl-zl" x="252" y="188">PHRAKTON</text>
-                    <text class="cl-zsub" x="252" y="200">rede do servidor</text>
+                    <text class="cl-zl" x="252" y="190">rede do servidor</text>
                     <rect class="cl-zone" x="570" y="172" width="562" height="208" rx="12"/>
-                    <text class="cl-zl" x="1118" y="188" text-anchor="end">EQUIPAMENTO PHRAKTON</text>
-                    <text class="cl-zsub" x="1118" y="200" text-anchor="end">atrás da sua firewall</text>
+                    <text class="cl-zl" x="1118" y="190" text-anchor="end">LAN DO CLIENTE</text>
 
-                    <rect x="582" y="210" width="538" height="84" rx="10" fill="rgba(84,169,236,0.05)" stroke="#3a6ea5" stroke-width="1.1"/>
-                    <text class="cl-zl" x="851" y="160" text-anchor="middle" style="fill:#6f86a3">LAN DO CLIENTE</text>
+                    <rect x="582" y="210" width="538" height="84" rx="10" fill="rgba(84,169,236,0.05)" stroke="#3a536e" stroke-width="1.2" stroke-dasharray="5 5"/>
+                    <text class="cl-zsub" x="596" y="204" style="fill:#7f93ab;font-size:9px">EQUIPAMENTO PHRAKTON</text>
 
                     <line x1="546" y1="188" x2="546" y2="376" stroke="#e86f60" stroke-width="1.3" stroke-dasharray="6 5" opacity=".55"/>
                     <text x="546" y="392" class="cl-fl" text-anchor="middle" style="fill:#c0705f">firewall</text>
@@ -235,6 +235,11 @@ alt_url: "/security.html"
 
                     <line x1="972" y1="252" x2="998" y2="252" stroke="#5f7fa6" stroke-width="1.6" stroke-dasharray="3 3"/>
 
+                    <!-- tenant-router → ziti controller: canal de controlo, Link TLS (verde) apenas -->
+                    <line x1="308" y1="280" x2="308" y2="312" stroke="#43c08f" stroke-width="2"/>
+                    <text x="374" y="335" class="cl-fl" style="fill:#7f93ab">canal de</text>
+                    <text x="374" y="347" class="cl-fl" style="fill:#7f93ab">controlo</text>
+
                     <line x1="780" y1="312" x2="780" y2="280" stroke="#43c08f" stroke-width="2"/>
                     <line x1="788" y1="312" x2="788" y2="280" stroke="#54a9ec" stroke-width="2"/>
                     <line x1="784" y1="312" x2="784" y2="280" stroke="#ecab45" stroke-width="2"/>
@@ -242,16 +247,16 @@ alt_url: "/security.html"
                     <text x="854" y="347" class="cl-fl" style="fill:#7f93ab">um salto na LAN</text>
                 </svg>
             </div>
-            <p class="cl-cap">Cada ligação entre nós é desenhada como as camadas de cifragem que a percorrem. As três camadas correm todo o percurso até ao tunneler boxctl — o box-router apenas re-embrulha o Link TLS (verde) em cada salto. O tunneler desembrulha o Link TLS e o Ziti E2E (âmbar) e liga apenas o App TLS (azul) ao Caddy no mesmo equipamento; o Caddy termina o App TLS, deixando dados simples (tracejado) para o salto final até às aplicações. Um trabalhador na LAN alcança o tunneler através das mesmas três camadas num único salto na LAN.</p>
+            <p class="cl-cap">Cada ligação entre nós é desenhada como as camadas de cifragem que a percorrem. O Ziti E2E (âmbar) e o App TLS (azul) correm todo o percurso desde o trabalhador até ao tunneler boxctl. O Link TLS (verde) é a camada de transporte — uma sessão TLS 1.3 resistente a quântica em cada salto que atravessa a rede, tanto os saltos tunneler-de-borda↔router como a malha router↔router; termina e re-embrulha em cada router, mas está presente em cada segmento de rede. O tunneler desembrulha o Ziti E2E e liga apenas o App TLS ao Caddy no mesmo equipamento; o Caddy termina o App TLS, deixando dados simples (tracejado) para o salto final até às aplicações. Um trabalhador na LAN alcança o tunneler através das mesmas três camadas num único salto na LAN.</p>
 
             <div class="cl-tablecard">
                 <table>
                     <thead><tr><th>Camada</th><th>Troca de chaves / cifra</th><th>Quântica</th><th>Em claro apenas em</th></tr></thead>
                     <tbody>
-                        <tr><td class="cl-layercell"><span class="cl-sw" style="background:#43c08f"></span>Link TLS</td><td class="cl-mono">X25519MLKEM768 · TLS 1.3 · mTLS</td><td><span class="cl-tg cl-tg-pq">RESISTENTE A QUÂNTICA</span></td><td class="cl-mono">dentro de cada router (re-embrulhado por salto)</td></tr>
-                        <tr><td class="cl-layercell"><span class="cl-sw" style="background:#ecab45"></span>Ziti E2E</td><td class="cl-mono">híbrido pós-quântico + XChaCha20-Poly1305</td><td><span class="cl-tg cl-tg-e2e-pq">RESISTENTE A QUÂNTICA</span></td><td class="cl-mono">dispositivo do trabalhador &amp; extremo do equipamento — nunca na rede</td></tr>
-                        <tr><td class="cl-layercell"><span class="cl-sw" style="background:#54a9ec"></span>App TLS</td><td class="cl-mono">X25519MLKEM768 · TLS 1.3 · Caddy 2.10+</td><td><span class="cl-tg cl-tg-pq">RESISTENTE A QUÂNTICA</span></td><td class="cl-mono">Caddy no equipamento (a carga útil termina)</td></tr>
-                        <tr><td class="cl-layercell cl-muted"><span class="cl-sw" style="background:#93a4bb"></span>Identidades / CA</td><td class="cl-mono">Ed25519 · ECDSA P-256 (assinaturas)</td><td><span class="cl-tg cl-tg-au">SÓ AUTENTICAÇÃO</span></td><td class="cl-mono">as assinaturas autenticam — não transportam dados</td></tr>
+                        <tr><td class="cl-layercell"><span class="cl-sw" style="background:#43c08f"></span>Link TLS</td><td data-label="Troca de chaves / cifra" class="cl-mono">X25519MLKEM768 + AES-256-GCM (ou ChaCha20-Poly1305) · TLS 1.3 · mTLS · Go 1.26 (GODEBUG=tlsmlkem=1)</td><td data-label="Quântica"><span class="cl-tg cl-tg-pq">RESISTENTE A QUÂNTICA</span></td><td data-label="Em claro apenas em" class="cl-mono">dentro de cada router / terminador de borda (re-embrulhado por salto)</td></tr>
+                        <tr><td class="cl-layercell"><span class="cl-sw" style="background:#ecab45"></span>Ziti E2E</td><td data-label="Troca de chaves / cifra" class="cl-mono">X25519 (troca clássica, vulnerável a Shor) + XChaCha20-Poly1305 (256-bit → ~128-bit sob Grover, resistente a quântica)</td><td data-label="Quântica"><span class="cl-tg cl-tg-e2e-pq">TROCA PROTEGIDA NA REDE</span></td><td data-label="Em claro apenas em" class="cl-mono">dispositivo do trabalhador &amp; extremo do equipamento — a troca nunca fica exposta na rede</td></tr>
+                        <tr><td class="cl-layercell"><span class="cl-sw" style="background:#54a9ec"></span>App TLS</td><td data-label="Troca de chaves / cifra" class="cl-mono">X25519MLKEM768 + AES-256-GCM (ou ChaCha20-Poly1305) · TLS 1.3 · Caddy 2.10+</td><td data-label="Quântica"><span class="cl-tg cl-tg-pq">RESISTENTE A QUÂNTICA</span></td><td data-label="Em claro apenas em" class="cl-mono">borda do navegador &amp; Caddy no equipamento (E2EE, a carga útil termina)</td></tr>
+                        <tr><td class="cl-layercell cl-muted"><span class="cl-sw" style="background:#93a4bb"></span>Identidades / CA</td><td data-label="Troca de chaves / cifra" class="cl-mono">Ed25519 · ECDSA P-256 (assinaturas) → ML-DSA quando o upstream suportar</td><td data-label="Quântica"><span class="cl-tg cl-tg-au">SÓ AUTENTICAÇÃO</span></td><td data-label="Em claro apenas em" class="cl-mono">as assinaturas autenticam — não transportam dados, sem preocupação HNDL</td></tr>
                     </tbody>
                 </table>
             </div>

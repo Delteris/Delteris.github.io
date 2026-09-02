@@ -102,19 +102,19 @@ alt_url: "/pt/security.html"
             <div class="section-header">
                 <span class="eyebrow">Under the Hood</span>
                 <h2 class="text-glow">The Encryption Layers on a Connection</h2>
-                <p class="subtitle">A worker reaching an app on your box travels through three nested encrypted tunnels, each with post-quantum-safe key exchange and each opened only at the two endpoints — never on the network. Pick an observer and see exactly how far each one can read.</p>
+                <p class="subtitle">A worker reaching an app on your box travels through three nested encrypted tunnels. The two that cross the wire — Link TLS and App TLS — use post-quantum-safe key exchange; the inner Ziti E2E layer already encrypts its payload with a quantum-fine cipher, and its one classical component (the X25519 key exchange) is never exposed on the wire, so it is not a harvest-now-decrypt-later concern. Each tunnel is opened only at the two endpoints — never on the network. Pick an observer and see exactly how far each one can read.</p>
             </div>
 
             <div class="cl-stage">
                 <p class="cl-wirehint">outer shell = what actually crosses the wire ↓</p>
                 <div class="cl-layer cl-link" id="L-link">
-                    <div class="cl-tab"><span class="cl-idx">1</span><span class="cl-nm">Link&nbsp;TLS</span><span class="cl-alg">X25519MLKEM768 · TLS&nbsp;1.3 · mTLS</span><span class="cl-pq">QUANTUM-SAFE</span></div>
+                    <div class="cl-tab"><span class="cl-idx">1</span><span class="cl-nm">Link&nbsp;TLS</span><span class="cl-alg">X25519MLKEM768 + AES-256-GCM · TLS&nbsp;1.3 · mTLS</span><span class="cl-pq">QUANTUM-SAFE</span></div>
                     <div class="cl-seal"><span class="cl-lk">🔒</span><span class="cl-txt" data-seal="link"></span></div>
                     <div class="cl-layer cl-e2e" id="L-e2e">
-                        <div class="cl-tab"><span class="cl-idx">2</span><span class="cl-nm">Ziti&nbsp;E2E</span><span class="cl-alg">post-quantum hybrid + XChaCha20-Poly1305</span><span class="cl-pq">QUANTUM-SAFE</span></div>
+                        <div class="cl-tab"><span class="cl-idx">2</span><span class="cl-nm">Ziti&nbsp;E2E</span><span class="cl-alg">X25519 (classical KEX) + XChaCha20-Poly1305 (quantum-fine)</span><span class="cl-pq">KEX WIRE-SHIELDED</span></div>
                         <div class="cl-seal"><span class="cl-lk">🔒</span><span class="cl-txt" data-seal="e2e"></span></div>
                         <div class="cl-layer cl-app" id="L-app">
-                            <div class="cl-tab"><span class="cl-idx">3</span><span class="cl-nm">App&nbsp;TLS</span><span class="cl-alg">X25519MLKEM768 · Caddy&nbsp;2.10</span><span class="cl-pq">QUANTUM-SAFE</span></div>
+                            <div class="cl-tab"><span class="cl-idx">3</span><span class="cl-nm">App&nbsp;TLS</span><span class="cl-alg">X25519MLKEM768 + AES-256-GCM · TLS&nbsp;1.3 · Caddy&nbsp;2.10+</span><span class="cl-pq">QUANTUM-SAFE</span></div>
                             <div class="cl-seal"><span class="cl-lk">🔒</span><span class="cl-txt" data-seal="app"></span></div>
                             <div class="cl-payload" id="L-data">
                                 <div class="cl-big">YOUR DATA</div>
@@ -136,7 +136,7 @@ alt_url: "/pt/security.html"
                 </div>
                 <div class="cl-verdict" id="cl-verdict">
                     <p class="cl-vh" id="cl-v-h">All three layers</p>
-                    <p id="cl-v-b">Three nested post-quantum-safe tunnels — Link TLS (green), Ziti E2E (amber) and App TLS (blue). Each one is opened only at the endpoints, never on the network.</p>
+                    <p id="cl-v-b">Three nested tunnels — Link TLS (green) and App TLS (blue) are post-quantum-safe. Ziti E2E (amber) already uses a quantum-fine payload cipher; only its X25519 key exchange is classical, and Link TLS shields that on the wire — so it is not an HNDL exposure. Each is opened only at the endpoints, never on the network.</p>
                 </div>
             </div>
 
@@ -159,24 +159,24 @@ alt_url: "/pt/security.html"
 
                     <!-- Legend -->
                     <rect x="24" y="20" width="11" height="11" rx="2.5" fill="#43c08f"/>
-                    <text class="cl-kt" x="42" y="29">Link TLS — quantum-safe · re-wraps at each router</text>
+                    <text class="cl-kt" x="42" y="29">Link TLS — quantum-safe · wraps every edge &amp; router hop on the wire</text>
                     <rect x="24" y="40" width="11" height="11" rx="2.5" fill="#ecab45"/>
-                    <text class="cl-kt" x="42" y="49">Ziti E2E — quantum-safe · opens only at the endpoints</text>
+                    <text class="cl-kt" x="42" y="49">Ziti E2E — quantum-fine AEAD, classical X25519 KEX (wire-shielded) · opens only at the endpoints</text>
                     <rect x="24" y="60" width="11" height="11" rx="2.5" fill="#54a9ec"/>
                     <text class="cl-kt" x="42" y="69">App TLS — quantum-safe · carries the actual data</text>
 
                     <!-- Zones. 14px padding around a zone's contents, 26px gap between nodes. -->
+                    <rect class="cl-zone" x="24" y="172" width="144" height="208" rx="12"/>
+                    <text class="cl-zl" x="38" y="190">external network</text>
                     <rect class="cl-zone" x="238" y="172" width="140" height="208" rx="12"/>
-                    <text class="cl-zl" x="252" y="188">PHRAKTON</text>
-                    <text class="cl-zsub" x="252" y="200">server network</text>
+                    <text class="cl-zl" x="252" y="190">server network</text>
                     <rect class="cl-zone" x="570" y="172" width="562" height="208" rx="12"/>
-                    <text class="cl-zl" x="1118" y="188" text-anchor="end">PHRAKTON BOX</text>
-                    <text class="cl-zsub" x="1118" y="200" text-anchor="end">behind your firewall</text>
+                    <text class="cl-zl" x="1118" y="190" text-anchor="end">CLIENT LAN</text>
 
                     <!-- The appliance: box-router, boxctl·tunneler, Caddy and the apps are all ONE
                          physical box (unlike the LAN worker, a separate device on the LAN). -->
-                    <rect x="582" y="210" width="538" height="84" rx="10" fill="rgba(84,169,236,0.05)" stroke="#3a6ea5" stroke-width="1.1"/>
-                    <text class="cl-zl" x="851" y="160" text-anchor="middle" style="fill:#6f86a3">CLIENT LAN</text>
+                    <rect x="582" y="210" width="538" height="84" rx="10" fill="rgba(84,169,236,0.05)" stroke="#3a536e" stroke-width="1.2" stroke-dasharray="5 5"/>
+                    <text class="cl-zsub" x="596" y="204" style="fill:#7f93ab;font-size:9px">PHRAKTON BOX</text>
 
                     <!-- Firewall boundary. The box holds the connection open from the inside:
                          it only ever dials OUT on 443 and never accepts an inbound connection,
@@ -255,6 +255,11 @@ alt_url: "/pt/security.html"
                     <!-- Caddy → apps: App TLS terminated at Caddy — plain data on the box -->
                     <line x1="972" y1="252" x2="998" y2="252" stroke="#5f7fa6" stroke-width="1.6" stroke-dasharray="3 3"/>
 
+                    <!-- tenant-router → ziti controller: control channel, Link TLS (green) only -->
+                    <line x1="308" y1="280" x2="308" y2="312" stroke="#43c08f" stroke-width="2"/>
+                    <text x="374" y="335" class="cl-fl" style="fill:#7f93ab">control</text>
+                    <text x="374" y="347" class="cl-fl" style="fill:#7f93ab">channel</text>
+
                     <!-- LAN worker → box tunneler: all three layers reach the tunneler directly in
                          one on-LAN hop. -->
                     <line x1="780" y1="312" x2="780" y2="280" stroke="#43c08f" stroke-width="2"/>
@@ -264,16 +269,16 @@ alt_url: "/pt/security.html"
                     <text x="854" y="347" class="cl-fl" style="fill:#7f93ab">one on-LAN hop</text>
                 </svg>
             </div>
-            <p class="cl-cap">Each connection between nodes is drawn as the encryption layers that travel it. All three layers run the whole way to the boxctl tunneler — the box-router only re-wraps Link TLS (green) per hop. The tunneler unwraps Link TLS and Ziti E2E (amber) and splices only App TLS (blue) across to Caddy on the same box; Caddy terminates App TLS, leaving plain data (dashed) for the final hop to the apps. A LAN worker reaches the tunneler over the same three layers in a single on-LAN hop.</p>
+            <p class="cl-cap">Each connection between nodes is drawn as the encryption layers that travel it. Ziti E2E (amber) and App TLS (blue) run the whole way from the worker to the boxctl tunneler. Link TLS (green) is the transport layer — a PQ-safe TLS 1.3 session on every hop that crosses the wire, both the edge-tunneler↔router hops and the router↔router fabric; it terminates and re-wraps at each router but is present on every network segment. The tunneler unwraps Ziti E2E and splices only App TLS across to Caddy on the same box; Caddy terminates App TLS, leaving plain data (dashed) for the final hop to the apps. A LAN worker reaches the tunneler over the same three layers in a single on-LAN hop.</p>
 
             <div class="cl-tablecard">
                 <table>
                     <thead><tr><th>Layer</th><th>Key exchange / cipher</th><th>Quantum</th><th>In the clear only at</th></tr></thead>
                     <tbody>
-                        <tr><td class="cl-layercell"><span class="cl-sw" style="background:#43c08f"></span>Link TLS</td><td class="cl-mono">X25519MLKEM768 · TLS 1.3 · mTLS</td><td><span class="cl-tg cl-tg-pq">QUANTUM-SAFE</span></td><td class="cl-mono">inside each router (re-wrapped per hop)</td></tr>
-                        <tr><td class="cl-layercell"><span class="cl-sw" style="background:#ecab45"></span>Ziti E2E</td><td class="cl-mono">post-quantum hybrid + XChaCha20-Poly1305</td><td><span class="cl-tg cl-tg-e2e-pq">QUANTUM-SAFE</span></td><td class="cl-mono">worker device &amp; box endpoint — never on the wire</td></tr>
-                        <tr><td class="cl-layercell"><span class="cl-sw" style="background:#54a9ec"></span>App TLS</td><td class="cl-mono">X25519MLKEM768 · TLS 1.3 · Caddy 2.10+</td><td><span class="cl-tg cl-tg-pq">QUANTUM-SAFE</span></td><td class="cl-mono">Caddy on the box (payload terminates)</td></tr>
-                        <tr><td class="cl-layercell cl-muted"><span class="cl-sw" style="background:#93a4bb"></span>Identities / CA</td><td class="cl-mono">Ed25519 · ECDSA P-256 (signatures)</td><td><span class="cl-tg cl-tg-au">AUTH ONLY</span></td><td class="cl-mono">signatures authenticate — they carry no data</td></tr>
+                        <tr><td class="cl-layercell"><span class="cl-sw" style="background:#43c08f"></span>Link TLS</td><td data-label="Key exchange / cipher" class="cl-mono">X25519MLKEM768 + AES-256-GCM (or ChaCha20-Poly1305) · TLS 1.3 · mTLS · Go 1.26 (GODEBUG=tlsmlkem=1)</td><td data-label="Quantum"><span class="cl-tg cl-tg-pq">QUANTUM-SAFE</span></td><td data-label="In the clear only at" class="cl-mono">inside each router / edge terminator (re-wrapped per hop)</td></tr>
+                        <tr><td class="cl-layercell"><span class="cl-sw" style="background:#ecab45"></span>Ziti E2E</td><td data-label="Key exchange / cipher" class="cl-mono">X25519 (classical KEX, Shor-breakable) + XChaCha20-Poly1305 (256-bit → ~128-bit under Grover, quantum-fine)</td><td data-label="Quantum"><span class="cl-tg cl-tg-e2e-pq">KEX WIRE-SHIELDED</span></td><td data-label="In the clear only at" class="cl-mono">worker device &amp; box endpoint — KEX never exposed un-wrapped on the wire</td></tr>
+                        <tr><td class="cl-layercell"><span class="cl-sw" style="background:#54a9ec"></span>App TLS</td><td data-label="Key exchange / cipher" class="cl-mono">X25519MLKEM768 + AES-256-GCM (or ChaCha20-Poly1305) · TLS 1.3 · Caddy 2.10+</td><td data-label="Quantum"><span class="cl-tg cl-tg-pq">QUANTUM-SAFE</span></td><td data-label="In the clear only at" class="cl-mono">browser edge &amp; Caddy on the box (E2EE, payload terminates)</td></tr>
+                        <tr><td class="cl-layercell cl-muted"><span class="cl-sw" style="background:#93a4bb"></span>Identities / CA</td><td data-label="Key exchange / cipher" class="cl-mono">Ed25519 · ECDSA P-256 (signatures) → ML-DSA once upstream supports it</td><td data-label="Quantum"><span class="cl-tg cl-tg-au">AUTH ONLY</span></td><td data-label="In the clear only at" class="cl-mono">signatures authenticate — they carry no data, so no HNDL concern</td></tr>
                     </tbody>
                 </table>
             </div>

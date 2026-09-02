@@ -2521,12 +2521,12 @@ a.glass-card:hover h3,
 
 .cl-board {
     background: linear-gradient(180deg, rgba(16,26,40,.6), rgba(10,18,34,.6)); border: 1px solid var(--cl-edge);
-    border-radius: 16px; padding: 0.6rem 0.5rem 0.25rem; overflow-x: auto;
+    border-radius: 16px; padding: 0.6rem 0.5rem 0.25rem; overflow-x: auto; overflow-y: hidden; -webkit-overflow-scrolling: touch;
 }
 .cl-board svg { display: block; width: 100%; min-width: 620px; height: auto; }
 .cl-cap { font-family: 'Space Grotesk', monospace; font-size: 0.68rem; color: var(--cl-faint); text-align: center; padding: 0.6rem 0.5rem 0; line-height: 1.5; }
 
-.cl-tablecard { margin-top: 1.6rem; background: var(--cl-panel); border: 1px solid var(--cl-edge); border-radius: 14px; padding: 1.1rem 1.25rem; overflow-x: auto; }
+.cl-tablecard { margin-top: 1.6rem; background: var(--cl-panel); border: 1px solid var(--cl-edge); border-radius: 14px; padding: 1.1rem 1.25rem; overflow-x: auto; overflow-y: hidden; -webkit-overflow-scrolling: touch; }
 .cl-tablecard table { width: 100%; border-collapse: collapse; font-size: 0.8rem; min-width: 520px; }
 .cl-tablecard th, .cl-tablecard td { text-align: left; padding: 0.55rem 0.6rem; vertical-align: top; border-bottom: 1px solid rgba(59,130,246,.15); }
 .cl-tablecard tr:last-child td { border-bottom: none; }
@@ -2567,13 +2567,41 @@ a.glass-card:hover h3,
     /* Make the diagram's horizontal-scroll nature obvious on touch. */
     .cl-board { position: relative; }
     .cl-board::after {
-        content: "swipe to see the full path →";
+        content: var(--cl-swipe-hint, "swipe to see the full path \2192");
         display: block; text-align: right;
         font-family: 'Space Grotesk', monospace; font-size: 0.6rem;
         color: var(--cl-faint); padding: 0.15rem 0.25rem 0.35rem;
     }
     .cl-board svg { min-width: 34rem; }
 }
+
+/* Cipher table: below 560px a horizontal-scroll spec table reads poorly, so we
+   reflow each row into a stacked card with its column header shown inline via
+   data-label. Requires data-label attributes on the <td>s in the markup. */
+@media (max-width: 560px) {
+    .cl-tablecard { overflow-x: visible; padding: 0.9rem 1rem; }
+    .cl-tablecard table { min-width: 0; font-size: 0.82rem; }
+    .cl-tablecard thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+    .cl-tablecard tr {
+        display: block; padding: 0.7rem 0.1rem; border-bottom: 1px solid rgba(59,130,246,.18);
+    }
+    .cl-tablecard tbody tr:last-child { border-bottom: none; }
+    .cl-tablecard td {
+        display: grid; grid-template-columns: 8.5rem 1fr; gap: 0.4rem 0.75rem;
+        padding: 0.2rem 0; border: none; white-space: normal; align-items: start;
+    }
+    .cl-tablecard td::before {
+        content: attr(data-label);
+        font-family: 'Space Grotesk', monospace; font-size: 0.6rem; letter-spacing: .05em;
+        text-transform: uppercase; color: var(--cl-faint); font-weight: 500; padding-top: 0.15rem;
+    }
+    /* The layer name is the row's heading — let it span full width and stand out. */
+    .cl-tablecard td.cl-layercell {
+        grid-template-columns: 1fr; gap: 0; margin-bottom: 0.15rem;
+        font-size: 0.92rem; white-space: normal;
+    }
+    .cl-tablecard td.cl-layercell::before { content: none; }
+    .cl-tablecard .cl-mono { font-size: 0.72rem; word-break: break-word; }
 
 @media (max-width: 620px) {
     /* 5 observers → a tidy grid instead of a ragged 3+2 wrap. */
