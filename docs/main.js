@@ -367,7 +367,7 @@
         all: {
             sealed: [], tone: 'var(--cl-app)', spot: null,
             h: 'All three layers',
-            b: 'Three nested post-quantum-safe tunnels — Link TLS (green), Ziti E2E (amber) and App TLS (blue). Each one is opened only at the endpoints, never on the network.'
+            b: 'Three nested tunnels — Link TLS (green) and App TLS (blue) are post-quantum-safe. Ziti E2E (amber) already encrypts its payload with a quantum-fine cipher; only its X25519 key exchange is classical, and Link TLS shields that on the wire — so it is never a harvest-now-decrypt-later exposure. Each is opened only at the endpoints, never on the network.'
         },
         internet: {
             sealed: ['link', 'e2e', 'app'], tone: 'var(--cl-link)',
@@ -401,7 +401,7 @@
         all: {
             sealed: [], tone: 'var(--cl-app)', spot: null,
             h: 'As três camadas',
-            b: 'Três túneis aninhados resistentes a computação quântica — Link TLS (verde), Ziti E2E (âmbar) e App TLS (azul). Cada um é aberto apenas nos extremos, nunca na rede.'
+            b: 'Três túneis aninhados — o Link TLS (verde) e o App TLS (azul) são resistentes a computação quântica. O Ziti E2E (âmbar) já cifra o conteúdo com uma cifra resistente a quântica; apenas a sua troca de chaves X25519 é clássica, e o Link TLS protege-a na rede — pelo que nunca fica exposta a «capturar agora, decifrar depois». Cada um é aberto apenas nos extremos, nunca na rede.'
         },
         internet: {
             sealed: ['link', 'e2e', 'app'], tone: 'var(--cl-link)',
