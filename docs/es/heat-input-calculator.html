@@ -1,0 +1,158 @@
+---
+layout: default
+lang: es
+permalink: /es/heat-input-calculator.html
+title: "Calculadora de Aporte Térmico de Soldadura — Limitada a su Gama de PQR | Elenchon WPS Manager"
+description: "Una calculadora de aporte térmico en vivo que se limita a su gama cualificada por el PQR. Defina las ventanas de raíz, relleno y peineta, arrastre los cursores de corriente, tensión y velocidad de avance, y vea el aporte térmico calculado en vivo — consciente de multi-arco, y toma gamas directamente de una WPS analizada. De Delteris."
+og_title: "Calculadora de Aporte Térmico — Manténgase Dentro de su Ventana Cualificada | Elenchon WPS Manager"
+og_description: "Defina su gama de aporte térmico cualificada por el PQR por región del cordón, arrastre los cursores de los parámetros del arco, y vea el aporte térmico calculado en vivo — limitado para que no pueda salir de la ventana. Consciente de tándem/twin-arc; carga gamas de una WPS analizada."
+og_image: "/static/DelterisCrest.webp"
+og_image_alt: "Elenchon WPS Manager by Delteris — calculadora de aporte térmico de soldadura"
+schema: schema/heat-input-calculator.json
+en_url: "/heat-input-calculator.html"
+pt_url: "/pt/heat-input-calculator.html"
+es_url: "/es/heat-input-calculator.html"
+alt_url: "/heat-input-calculator.html"
+---
+    <header class="page-hero">
+        <div class="hero-content">
+            <span class="hero-eyebrow">Elenchon WPS Manager · Aporte Térmico</span>
+            <h1 class="text-glow">Calculadora de Aporte Térmico.<br>Limitada a su Ventana Cualificada.</h1>
+            <p class="hero-sub">El aporte térmico es donde un procedimiento perfectamente bueno sale silenciosamente de cualificación. La ayuda incorporada hace la ventana segura imposible de fallar: defina la gama de aporte térmico que su PQR cualificó para cada región del cordón, y luego arrastre los cursores de corriente, tensión y velocidad de avance para ver el resultado calculado en vivo — limitado para que no pueda físicamente marcar un valor fuera de lo que el procedimiento permite.</p>
+            <div class="cta-group">
+                <a href="/es/wps-manager-contact.html" class="btn btn-primary">Contacte con los Fundadores</a>
+                <a href="/es/wps-management-software.html#pricing" class="btn btn-secondary">Ver Precios</a>
+            </div>
+        </div>
+        <a class="scroll-cue" href="#overview" aria-label="Desplazarse para ver más">
+            <span class="scroll-cue-text">Desplazar</span>
+            <span class="scroll-cue-chevron" aria-hidden="true"></span>
+        </a>
+    </header>
+
+    <section class="page-section container" id="overview">
+        <div class="summary-panel">
+            <h2 class="text-glow">Manténgase Dentro de la Ventana Que su PQR Cualificó</h2>
+            <p><strong>Una calculadora de aporte térmico de soldadura calcula el aporte térmico a partir de los parámetros del arco — corriente, tensión y velocidad de avance — y, aquí, limita cada control a la gama que su PQR cualificó, para que el valor que marca nunca pueda caer fuera de lo que el procedimiento permite.</strong> El aporte térmico es el único cálculo fácil de equivocar bajo presión, y equivocarlo es como un cordón cualificado deja silenciosamente de estar cualificado. La ayuda lo convierte en algo que puede ver: introduzca la gama cualificada para cada región del cordón — raíz, relleno, peineta — y luego mueva los cursores y vea el aporte térmico recalcular en vivo en kJ. Como los controles se limitan a su ventana, puede explorar combinaciones libremente sin salir nunca de la gama cualificada. Es consciente de multi-arco para montajes tándem y twin, y puede tomar las gamas por región de una WPS directamente de su biblioteca. Es un bloc de borrador — nada aquí se guarda ni se escribe en hoja alguna.</p>
+        </div>
+    </section>
+
+    <section class="page-section container u-tight-top" id="screenshot-hero">
+        {% include app-shot.html
+            name="heat-input"
+            alt="Asistente de aporte térmico del WPS Manager — cursores de corriente, tensión y velocidad limitados a la gama cualificada por el PQR con resultado en vivo"
+            cap="El asistente de aporte térmico: cursores limitados a la ventana cualificada por el PQR, con el resultado calculado en vivo."
+            ph="La ayuda — una gama de PQR definida, los cursores de corriente/tensión/velocidad, y el resultado en vivo, con un cursor en su límite." %}
+    </section>
+
+    <section class="page-section container" id="range">
+        <div class="section-header">
+            <span class="eyebrow">Defina la Gama, Luego Explore</span>
+            <h2>Su Ventana Cualificada, Por Región del Cordón</h2>
+            <p class="subtitle">Raíz, relleno y peineta tienen cada uno su gama — como un PQR realmente los cualifica.</p>
+        </div>
+        <div class="glass-card feature-block">
+            <p class="feature-lead">El aporte térmico no es un número para todo un cordón — se cualifica región a región. La ayuda sigue eso, para que lo que define corresponda a lo que su PQR dice.</p>
+            <ul class="feature-list">
+                <li><strong>Ventanas por región:</strong> Introduzca por separado la gama de aporte térmico que su PQR cualificó para cada región del cordón — raíz, relleno y peineta — para que cada una se verifique contra sus propios límites.</li>
+                <li><strong>Recálculo en vivo:</strong> Arrastre los cursores de corriente, tensión y velocidad de avance y el aporte térmico se calcula en vivo para la región en que trabaja, en kJ.</li>
+                <li><strong>Explore con seguridad:</strong> Como la gama se define primero, cada combinación que prueba se lee contra la ventana que cualificó — sin aritmética mental para comprobar si sigue dentro de ella.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="page-section container" id="clamp">
+        <div class="section-header">
+            <span class="eyebrow">No Puede Salir de la Ventana</span>
+            <h2>Cursores Limitados a la Gama Cualificada</h2>
+            <p class="subtitle">Los controles se detienen físicamente en sus límites de PQR — un valor fuera de gama no es marcable.</p>
+        </div>
+        <div class="glass-card feature-block">
+            <p class="feature-lead">Una calculadora que le deja calcular un valor fuera de cualificación es una calculadora que le deja producirlo. Esta no lo deja: la ventana es una frontera rígida, no un aviso después del hecho.</p>
+            <ul class="feature-list">
+                <li><strong>Límites rígidos:</strong> Los controles se limitan a su gama cualificada por el PQR, por lo que no puede físicamente marcar una combinación cuyo aporte térmico caiga fuera de lo que el procedimiento permite.</li>
+                <li><strong>Seguro por construcción:</strong> En lugar de señalar un error después de haber salido ya de la ventana, la ayuda hace salir imposible — la gama segura es la única gama que puede alcanzar.</li>
+                <li><strong>Confianza bajo presión:</strong> En la planta o en una revisión, puede moverse rápido sabiendo que cada valor que la herramienta le deja producir está dentro de cualificación.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="page-section container" id="multi-arc">
+        <div class="section-header">
+            <span class="eyebrow">Tándem y Twin-Arc</span>
+            <h2>Consciente de Multi-Arco, Como la Norma Espera</h2>
+            <p class="subtitle">Una cabeza líder y una de arrastre, cada una con sus parámetros — sumadas entre cabezas.</p>
+        </div>
+        <div class="glass-card feature-block">
+            <p class="feature-lead">Los procesos multi-arco no se calculan como un solo arco, y una calculadora que finja lo contrario está equivocada precisamente para los montajes de alta productividad que más la necesitan.</p>
+            <ul class="feature-list">
+                <li><strong>Cabezas líder y de arrastre:</strong> Los montajes tándem y twin-arc tienen una cabeza líder y una cabeza de arrastre, cada una con su propia corriente y tensión.</li>
+                <li><strong>Sumado entre cabezas:</strong> El aporte térmico total se agrega entre las cabezas, como la norma espera que un cordón multi-arco se evalúe.</li>
+                <li><strong>La misma ventana limitada:</strong> El total multi-arco se verifica contra la misma gama cualificada por el PQR, por lo que las combinaciones multi-arco quedan dentro de cualificación igual que las de arco único.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="page-section container" id="from-wps">
+        <div class="section-header">
+            <span class="eyebrow">Directamente de su Biblioteca</span>
+            <h2>Tome las Gamas de Una WPS en Una Sola Carga</h2>
+            <p class="subtitle">Cargue una WPS analizada y sus gamas por región y procesos se rellenan solas.</p>
+        </div>
+        <div class="glass-card feature-block">
+            <p class="feature-lead">La ayuda no es una isla aislada — está ligada a la biblioteca, por lo que puede partir de un procedimiento real en lugar de reescribir sus límites.</p>
+            <ul class="feature-list">
+                <li><strong>Cargue y avance:</strong> Tome una WPS analizada de su biblioteca y sus gamas por región y procesos se rellenan automáticamente, listas para explorar.</li>
+                <li><strong>Los parámetros quedan suyos:</strong> Las gamas cualificadas vienen de la WPS; los parámetros del arco son suyos para mover — está explorando dentro de la ventana de un procedimiento real.</li>
+                <li><strong>Un bloc de borrador, por diseño:</strong> Nada aquí se guarda ni se escribe en hoja alguna — es una superficie de cálculo en vivo, no otro sitio donde su registro pueda cambiar.</li>
+            </ul>
+            <p class="feature-out"><a href="/es/wps-library-search-software.html">Vea la biblioteca de WPS de donde vienen las gamas &rarr;</a></p>
+        </div>
+    </section>
+
+    <section class="page-section container" id="faq">
+        <div class="section-header">
+            <span class="eyebrow">Preguntas y Respuestas</span>
+            <h2>La Calculadora de Aporte Térmico, Respondida</h2>
+            <p class="subtitle">Cómo calcula, por qué se limita, y de dónde vienen las gamas.</p>
+        </div>
+        <div class="pillar-grid">
+            <div class="glass-card">
+                <h3>¿Cómo calcula la calculadora el aporte térmico?</h3>
+                <p>Calcula el aporte térmico en vivo a partir de los parámetros del arco — corriente, tensión y velocidad de avance — a medida que arrastra los cursores, mostrando el resultado en kJ para la región del cordón en que trabaja. Raíz, relleno y peineta tienen cada uno su gama cualificada.</p>
+            </div>
+            <div class="glass-card">
+                <h3>¿Puede impedirme salir de cualificación?</h3>
+                <p>Sí — ese es el punto. Los cursores se limitan a su gama cualificada por el PQR, por lo que no puede físicamente marcar una combinación cuyo aporte térmico caiga fuera de lo que el procedimiento permite. Salir de la ventana no es posible, en lugar de señalado después del hecho.</p>
+            </div>
+            <div class="glass-card">
+                <h3>¿Trata la soldadura tándem o twin-arc?</h3>
+                <p>Sí. Los montajes tándem y twin-arc tienen una cabeza líder y una de arrastre, cada una con su propia corriente y tensión, y el aporte térmico total se suma entre las cabezas como la norma espera — verificado contra la misma ventana cualificada.</p>
+            </div>
+            <div class="glass-card">
+                <h3>¿Tengo que introducir las gamas cualificadas?</h3>
+                <p>Puede, o puede cargar una WPS analizada de su biblioteca y sus gamas por región y procesos se rellenan automáticamente. Las gamas vienen de la WPS; los parámetros del arco quedan suyos para explorar.</p>
+            </div>
+            <div class="glass-card">
+                <h3>¿Guarda lo que calculo?</h3>
+                <p>No. Es un bloc de borrador — una superficie de cálculo en vivo. Nada de lo que hace aquí se guarda ni se escribe en hoja o registro alguno, por lo que puede explorar libremente sin cambiar nada.</p>
+            </div>
+            <div class="glass-card">
+                <h3>¿El aporte térmico se cualifica por región?</h3>
+                <p>Sí. La ayuda define y verifica raíz, relleno y peineta por separado, porque así es como un PQR cualifica el aporte térmico — región a región, cada una contra sus propios límites.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-section container" id="cta">
+        <div class="cta-band">
+            <span class="eyebrow">Empiece</span>
+            <h2 class="text-glow">Mantenga Cada Cordón Dentro de su Ventana</h2>
+            <p>La ayuda de aporte térmico viene con Elenchon WPS Manager, ligada a la misma biblioteca que guarda sus procedimientos. La incorporación está guiada directamente por los fundadores, y todo se trata de forma confidencial.</p>
+            <div class="cta-group">
+                <a href="/es/wps-manager-contact.html" class="btn btn-primary">Contacte con los Fundadores</a>
+                <a href="/es/wps-management-software.html" class="btn btn-secondary">Volver a la Visión General del WPS Manager</a>
+            </div>
+            <p class="hero-urgency u-gap-top">Sin capas comerciales, sin colas de llamadas — habla con quien lo construyó.</p>
+        </div>
+    </section>

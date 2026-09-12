@@ -18,13 +18,21 @@
 {%- unless page.minimal_head %}
     <link rel="canonical" href="{{ page.url | absolute_url }}">
 {%- endunless %}
-{%- comment %} Reciprocal hreflang alternates. A page declares its counterpart in the
-     other language via `alt_url` in front matter; `en_url`/`pt_url` name each
-     side explicitly so the tag set is identical on both pages (Google requires
-     the alternates to be reciprocal and self-referential). {%- endcomment %}
-{%- if page.en_url and page.pt_url %}
+{%- comment %} Reciprocal hreflang alternates. A page declares each of its counterparts
+     via `en_url` / `pt_url` / `es_url` in front matter, naming every side explicitly so
+     the tag set is identical on all counterparts (Google requires the alternates to be
+     reciprocal and self-referential). English is always present and is x-default; the
+     pt-PT and es-ES tags emit only when that counterpart exists, so a page missing one
+     locale still ships a valid, reciprocal set. To add another language later, add a
+     `<xx>_url` field to every page and one more `<link>` line here. {%- endcomment %}
+{%- if page.en_url %}
     <link rel="alternate" hreflang="en" href="{{ page.en_url | absolute_url }}">
+{%- if page.pt_url %}
     <link rel="alternate" hreflang="pt-PT" href="{{ page.pt_url | absolute_url }}">
+{%- endif %}
+{%- if page.es_url %}
+    <link rel="alternate" hreflang="es-ES" href="{{ page.es_url | absolute_url }}">
+{%- endif %}
     <link rel="alternate" hreflang="x-default" href="{{ page.en_url | absolute_url }}">
 {%- endif %}
 
@@ -37,9 +45,17 @@
 
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Delteris">
-    <meta property="og:locale" content="{% if page.lang == 'pt' %}pt_PT{% else %}en_US{% endif %}">
-{%- if page.en_url and page.pt_url %}
-    <meta property="og:locale:alternate" content="{% if page.lang == 'pt' %}en_US{% else %}pt_PT{% endif %}">
+    <meta property="og:locale" content="{% if page.lang == 'pt' %}pt_PT{% elsif page.lang == 'es' %}es_ES{% else %}en_US{% endif %}">
+{%- comment %} List every OTHER locale this page has a counterpart in, so the alternates
+     stay in sync with the hreflang set above regardless of which language we're on. {%- endcomment %}
+{%- if page.lang != 'en' and page.en_url %}
+    <meta property="og:locale:alternate" content="en_US">
+{%- endif %}
+{%- if page.lang != 'pt' and page.pt_url %}
+    <meta property="og:locale:alternate" content="pt_PT">
+{%- endif %}
+{%- if page.lang != 'es' and page.es_url %}
+    <meta property="og:locale:alternate" content="es_ES">
 {%- endif %}
     <meta property="og:url" content="{{ page.url | absolute_url }}">
     <meta property="og:title" content="{{ page.og_title | default: page.title }}">
