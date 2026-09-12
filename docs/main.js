@@ -384,23 +384,8 @@
                 }
             }
         }
-
-        // Link the cursor itself into the network — it becomes a bright hub
-        if (mouse.active) {
-            for (let i = 0; i < particles.length; i++) {
-                const p = particles[i];
-                const d = Math.hypot(p.x - mouse.x, p.y - mouse.y);
-                if (d < MOUSE_RADIUS) {
-                    const o = (1 - d / MOUSE_RADIUS) * 0.35;
-                    ctx.beginPath();
-                    ctx.moveTo(mouse.x, mouse.y);
-                    ctx.lineTo(p.x, p.y);
-                    ctx.strokeStyle = 'rgba(' + BLUE_CORE + ', ' + o + ')';
-                    ctx.lineWidth = 1;
-                    ctx.stroke();
-                }
-            }
-        }
+        // The cursor no longer draws links to nearby nodes — it repels them
+        // (same-polarity magnet) and brightens them, but stays visually unattached.
     }
 
     // ---- Travelling data pulses: bright packets that glide between two nearby
