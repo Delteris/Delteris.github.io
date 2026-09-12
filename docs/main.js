@@ -457,18 +457,40 @@
         animationId = requestAnimationFrame(animate);
     }
 
-    // ---- Cursor tracking — DESKTOP ONLY (hover-capable, fine pointer) ----
-    // Touch devices get no pointer interaction: a tap has no hover to end, so it
-    // would clump nodes under the finger permanently. On touch the field just
-    // drifts on its own, which is what a background should do.
-    if (!prefersReducedMotion && CAN_HOVER) {
-        window.addEventListener('mousemove', function (e) {
-            mouse.x = e.clientX;
-            mouse.y = e.clientY;
-            mouse.active = true;
-        }, { passive: true });
-        window.addEventListener('mouseleave', function () { mouse.active = false; });
-        // Also drop interaction while scrolling so the field settles back to calm
+    // ---- Pointer tracking — cursor (desktop) and finger (touch) ----
+    // The field follows the pointer while it moves and releases the moment it
+    // stops interacting, so nodes never get clumped and left there. The old
+    // touch problem was two things: (1) the field "refreshed" mid-scroll — fixed
+    // by the width-only resize guard below; and (2) a tap had no hover to end, so
+    // nodes stayed bunched under the finger. We solve (2) by clearing interaction
+    // on touchend/cancel and on scroll, so lifting the finger — or starting to
+    // scroll — settles the field straight back to a calm drift.
+    if (!prefersReducedMotion) {
+        if (CAN_HOVER) {
+            window.addEventListener('mousemove', function (e) {
+                mouse.x = e.clientX;
+                mouse.y = e.clientY;
+                mouse.active = true;
+            }, { passive: true });
+            window.addEventListener('mouseleave', function () { mouse.active = false; });
+        } else {
+            // Touch: track the finger as a temporary cursor. Listeners are passive
+            // so native scrolling is never blocked — the page scrolls exactly as
+            // before and the field just reacts to where the finger is.
+            function trackTouch(e) {
+                if (!e.touches || !e.touches.length) return;
+                const t = e.touches[0];
+                mouse.x = t.clientX;
+                mouse.y = t.clientY;
+                mouse.active = true;
+            }
+            window.addEventListener('touchstart', trackTouch, { passive: true });
+            window.addEventListener('touchmove', trackTouch, { passive: true });
+            window.addEventListener('touchend', function () { mouse.active = false; }, { passive: true });
+            window.addEventListener('touchcancel', function () { mouse.active = false; }, { passive: true });
+        }
+        // Dropping interaction while scrolling lets the field settle back to calm —
+        // this is what keeps a scroll gesture from dragging the whole field around.
         window.addEventListener('scroll', function () { mouse.active = false; }, { passive: true });
     }
 
