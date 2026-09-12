@@ -216,7 +216,12 @@
         });
     }
 
-    /* ---------- Ambient network canvas ---------- */
+    /* ---------- Ambient network canvas ----------
+       A living constellation: glowing nodes drift and gently pulse, links
+       brighten as nodes near each other, the cursor lights up (and nudges)
+       nearby nodes, and pulses of light periodically travel the links —
+       evoking a live traceability network. Tuned to read clearly against the
+       dark hero without ever competing with the copy. */
     const canvas = document.getElementById('network-canvas');
     if (!canvas) return;
 
@@ -226,14 +231,22 @@
     let width = 0;
     let height = 0;
     let particles = [];
+    let pulses = [];              // travelling light packets on the links
     let animationId = null;
+    let frame = 0;
 
-    const CONNECTION_DISTANCE = 160;
-    const BLUE = '59, 130, 246'; // #3b82f6
+    const CONNECTION_DISTANCE = 165;
+    const BLUE = '96, 165, 250';        // #60a5fa — a brighter, easier-to-see blue
+    const BLUE_CORE = '191, 219, 254';  // #bfdbfe — near-white node cores
+    const MOUSE_RADIUS = 190;           // cursor influence radius
+
+    // Cursor state (in CSS pixels). active=false until the pointer moves,
+    // so nothing lights up before the user interacts.
+    const mouse = { x: -9999, y: -9999, active: false };
 
     function particleCount() {
         // Fewer particles on small screens to keep scrolling smooth
-        return window.innerWidth < 768 ? 35 : 80;
+        return window.innerWidth < 768 ? 40 : 90;
     }
 
     function resize() {
@@ -251,22 +264,72 @@
     function Particle() {
         this.x = Math.random() * width;
         this.y = Math.random() * height;
-        this.vx = (Math.random() - 0.5) * 0.5;
-        this.vy = (Math.random() - 0.5) * 0.5;
-        this.radius = Math.random() * 1.5 + 1;
+        this.vx = (Math.random() - 0.5) * 0.55;
+        this.vy = (Math.random() - 0.5) * 0.55;
+        this.radius = Math.random() * 1.6 + 1.2;
+        // Each node breathes on its own phase/speed for a subtle twinkle
+        this.phase = Math.random() * Math.PI * 2;
+        this.pulseSpeed = 0.015 + Math.random() * 0.02;
     }
 
     Particle.prototype.update = function () {
+        // Cursor gently pushes nearby nodes, so the whole field reacts to the pointer
+        if (mouse.active) {
+            const dx = this.x - mouse.x;
+            const dy = this.y - mouse.y;
+            const dist = Math.hypot(dx, dy);
+            if (dist < MOUSE_RADIUS && dist > 0.01) {
+                const force = (1 - dist / MOUSE_RADIUS) * 0.6;
+                this.vx += (dx / dist) * force;
+                this.vy += (dy / dist) * force;
+            }
+        }
+        // Light friction so cursor-added energy bleeds off and drift stays calm
+        this.vx *= 0.98;
+        this.vy *= 0.98;
+        // Keep a minimum drift so nodes never fully stall
+        const sp = Math.hypot(this.vx, this.vy);
+        if (sp < 0.18) {
+            const a = Math.random() * Math.PI * 2;
+            this.vx += Math.cos(a) * 0.06;
+            this.vy += Math.sin(a) * 0.06;
+        }
         this.x += this.vx;
         this.y += this.vy;
         if (this.x < 0 || this.x > width) this.vx *= -1;
         if (this.y < 0 || this.y > height) this.vy *= -1;
+        this.x = Math.max(0, Math.min(width, this.x));
+        this.y = Math.max(0, Math.min(height, this.y));
+        this.phase += this.pulseSpeed;
     };
 
     Particle.prototype.draw = function () {
+        // Twinkle: radius and brightness breathe together
+        const t = (Math.sin(this.phase) + 1) / 2;        // 0..1
+        const r = this.radius * (0.85 + t * 0.5);
+        // Extra brightness when the cursor is close
+        let near = 0;
+        if (mouse.active) {
+            const d = Math.hypot(this.x - mouse.x, this.y - mouse.y);
+            if (d < MOUSE_RADIUS) near = 1 - d / MOUSE_RADIUS;
+        }
+        const glowA = 0.10 + t * 0.10 + near * 0.35;
+        const coreA = 0.55 + t * 0.30 + near * 0.45;
+
+        // Soft radial glow (drawn additively for a neon feel)
+        const halo = r * 5;
+        const g = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, halo);
+        g.addColorStop(0, 'rgba(' + BLUE + ', ' + glowA + ')');
+        g.addColorStop(1, 'rgba(' + BLUE + ', 0)');
+        ctx.fillStyle = g;
         ctx.beginPath();
-        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(' + BLUE + ', 0.5)';
+        ctx.arc(this.x, this.y, halo, 0, Math.PI * 2);
+        ctx.fill();
+
+        // Bright core
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, r, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(' + BLUE_CORE + ', ' + Math.min(1, coreA) + ')';
         ctx.fill();
     };
 
@@ -280,17 +343,42 @@
 
     function drawConnections() {
         for (let i = 0; i < particles.length; i++) {
+            const a = particles[i];
             for (let j = i + 1; j < particles.length; j++) {
-                const dx = particles[i].x - particles[j].x;
-                const dy = particles[i].y - particles[j].y;
-                const distance = Math.sqrt(dx * dx + dy * dy);
+                const b = particles[j];
+                const dx = a.x - b.x;
+                const dy = a.y - b.y;
+                const distance = Math.hypot(dx, dy);
 
                 if (distance < CONNECTION_DISTANCE) {
-                    const opacity = 1 - distance / CONNECTION_DISTANCE;
+                    let opacity = 1 - distance / CONNECTION_DISTANCE;
+                    // Links near the cursor glow brighter, tracing where you point
+                    if (mouse.active) {
+                        const mx = (a.x + b.x) / 2, my = (a.y + b.y) / 2;
+                        const md = Math.hypot(mx - mouse.x, my - mouse.y);
+                        if (md < MOUSE_RADIUS) opacity += (1 - md / MOUSE_RADIUS) * 0.9;
+                    }
                     ctx.beginPath();
-                    ctx.moveTo(particles[i].x, particles[i].y);
-                    ctx.lineTo(particles[j].x, particles[j].y);
-                    ctx.strokeStyle = 'rgba(' + BLUE + ', ' + opacity * 0.2 + ')';
+                    ctx.moveTo(a.x, a.y);
+                    ctx.lineTo(b.x, b.y);
+                    ctx.strokeStyle = 'rgba(' + BLUE + ', ' + Math.min(0.75, opacity * 0.4) + ')';
+                    ctx.lineWidth = 1.1;
+                    ctx.stroke();
+                }
+            }
+        }
+
+        // Link the cursor itself into the network — it becomes a bright hub
+        if (mouse.active) {
+            for (let i = 0; i < particles.length; i++) {
+                const p = particles[i];
+                const d = Math.hypot(p.x - mouse.x, p.y - mouse.y);
+                if (d < MOUSE_RADIUS) {
+                    const o = (1 - d / MOUSE_RADIUS) * 0.7;
+                    ctx.beginPath();
+                    ctx.moveTo(mouse.x, mouse.y);
+                    ctx.lineTo(p.x, p.y);
+                    ctx.strokeStyle = 'rgba(' + BLUE_CORE + ', ' + o + ')';
                     ctx.lineWidth = 1;
                     ctx.stroke();
                 }
@@ -298,18 +386,88 @@
         }
     }
 
+    // ---- Travelling data pulses: bright packets that glide between two nearby
+    //      nodes, read as data moving through a live network. ----
+    function Pulse(from, to) {
+        this.from = from;
+        this.to = to;
+        this.t = 0;
+        this.speed = 0.008 + Math.random() * 0.012;
+    }
+    Pulse.prototype.update = function () { this.t += this.speed; return this.t < 1; };
+    Pulse.prototype.draw = function () {
+        const a = this.from, b = this.to;
+        // Fade out if the endpoints have drifted apart
+        const dist = Math.hypot(a.x - b.x, a.y - b.y);
+        if (dist > CONNECTION_DISTANCE * 1.3) { this.t = 1; return; }
+        const x = a.x + (b.x - a.x) * this.t;
+        const y = a.y + (b.y - a.y) * this.t;
+        const fade = Math.sin(this.t * Math.PI); // bright in the middle of the trip
+        const rr = 2.6 * fade + 0.6;
+        const halo = rr * 4;
+        const g = ctx.createRadialGradient(x, y, 0, x, y, halo);
+        g.addColorStop(0, 'rgba(' + BLUE_CORE + ', ' + (0.9 * fade) + ')');
+        g.addColorStop(1, 'rgba(' + BLUE + ', 0)');
+        ctx.fillStyle = g;
+        ctx.beginPath();
+        ctx.arc(x, y, halo, 0, Math.PI * 2);
+        ctx.fill();
+    };
+
+    function spawnPulse() {
+        if (particles.length < 2) return;
+        // Find a random node with a nearby neighbour and fire a packet along that link
+        const a = particles[(Math.random() * particles.length) | 0];
+        let best = null, bestD = CONNECTION_DISTANCE;
+        for (let k = 0; k < particles.length; k++) {
+            const b = particles[k];
+            if (b === a) continue;
+            const d = Math.hypot(a.x - b.x, a.y - b.y);
+            if (d < bestD && Math.random() < 0.5) { best = b; bestD = d; }
+        }
+        if (best) pulses.push(new Pulse(a, best));
+    }
+
     function drawFrame() {
         ctx.clearRect(0, 0, width, height);
-        particles.forEach(function (p) {
-            p.update();
-            p.draw();
-        });
+
+        // Additive blending gives the whole field a soft neon glow
+        ctx.globalCompositeOperation = 'lighter';
+
+        for (let i = 0; i < particles.length; i++) particles[i].update();
         drawConnections();
+        for (let i = 0; i < particles.length; i++) particles[i].draw();
+
+        // Occasionally emit a new data pulse (density scaled to node count)
+        if (!prefersReducedMotion && frame % 26 === 0 && pulses.length < 14) spawnPulse();
+        pulses = pulses.filter(function (p) {
+            const alive = p.update();
+            if (alive) p.draw();
+            return alive;
+        });
+
+        ctx.globalCompositeOperation = 'source-over';
+        frame++;
     }
 
     function animate() {
         drawFrame();
         animationId = requestAnimationFrame(animate);
+    }
+
+    // ---- Pointer tracking (mouse + touch), throttled to the canvas coords ----
+    if (!prefersReducedMotion) {
+        window.addEventListener('pointermove', function (e) {
+            mouse.x = e.clientX;
+            mouse.y = e.clientY;
+            mouse.active = true;
+        }, { passive: true });
+        window.addEventListener('pointerdown', function (e) {
+            mouse.x = e.clientX;
+            mouse.y = e.clientY;
+            mouse.active = true;
+        }, { passive: true });
+        window.addEventListener('mouseleave', function () { mouse.active = false; });
     }
 
     let resizeTimer = null;
@@ -318,6 +476,7 @@
         resizeTimer = setTimeout(function () {
             resize();
             buildParticles();
+            pulses = [];
             if (prefersReducedMotion) drawFrame();
         }, 150);
     });
@@ -337,7 +496,7 @@
     buildParticles();
 
     if (prefersReducedMotion) {
-        // Render a single static frame — no motion
+        // Render a single static frame — no motion, no pulses
         drawFrame();
     } else {
         animate();
