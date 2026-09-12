@@ -1,11 +1,11 @@
-{%- comment %} Language-aware navigation. `page.lang` ('en' default, or 'pt') selects the
+{%- comment %} Language-aware navigation. `page.lang` ('en' default, or 'pt' / 'es') selects the
      link set and the language dropdown. The dropdown mirrors the in-app LangGlobe:
      the badge shows the CURRENT language, and the menu lists every language, each linking
      to this page's counterpart in that language. Per-language URLs come from the page's own
-     `en_url` / `pt_url` front matter; to add a language later, add a `<xx>_url` field to
-     every page and one more entry to the list below. {%- endcomment %}
+     `en_url` / `pt_url` / `es_url` front matter; to add a language later, add a `<xx>_url`
+     field to every page and one more entry to the list below. {%- endcomment %}
 {%- assign L = page.lang | default: 'en' -%}
-{%- if L == 'pt' %}{% assign current_code = 'PT' %}{% else %}{% assign current_code = 'EN' %}{% endif %}
+{%- if L == 'pt' %}{% assign current_code = 'PT' %}{% elsif L == 'es' %}{% assign current_code = 'ES' %}{% else %}{% assign current_code = 'EN' %}{% endif %}
 {%- comment %} WPS Manager context: on any WPS Manager page (landing or its contact page)
      the top nav swaps from Elenchon's links to WPS-Manager-specific ones, so a visitor
      never gets bounced into Elenchon's on-premise Pricing/Security/etc. {%- endcomment %}
@@ -16,14 +16,14 @@
      Products word and is toggled client-side by main.js to the visitor's last dropdown choice. {%- endcomment %}
 {%- assign is_wpsm = false -%}
 {%- if page.url contains 'wps-management-software' or page.url contains 'wps-manager-features' or page.url contains 'wps-manager-contact' or page.url contains 'wps-manager-security' or page.url contains 'wps-import-software' or page.url contains 'wps-review-approval-software' or page.url contains 'wps-library-search-software' or page.url contains 'wps-preview-verification' or page.url contains 'heat-input-calculator' %}{% assign is_wpsm = true %}{% endif -%}
-{%- if L == 'pt' %}{% assign wpsm_home = '/pt/wps-management-software.html' %}{% assign wpsm_contact = '/pt/wps-manager-contact.html' %}{% else %}{% assign wpsm_home = '/wps-management-software.html' %}{% assign wpsm_contact = '/wps-manager-contact.html' %}{% endif -%}
+{%- if L == 'pt' %}{% assign wpsm_home = '/pt/wps-management-software.html' %}{% assign wpsm_contact = '/pt/wps-manager-contact.html' %}{% elsif L == 'es' %}{% assign wpsm_home = '/es/wps-management-software.html' %}{% assign wpsm_contact = '/es/wps-manager-contact.html' %}{% else %}{% assign wpsm_home = '/wps-management-software.html' %}{% assign wpsm_contact = '/wps-manager-contact.html' %}{% endif -%}
 {%- comment %} Dropdown button label = the current product family, else the neutral Products word. {%- endcomment %}
-    <nav aria-label="{% if L == 'pt' %}Navegação principal{% else %}Main navigation{% endif %}">
-        <a href="{% if L == 'pt' %}/pt/{% else %}/{% endif %}" class="logo nav-logo">
+    <nav aria-label="{% if L == 'pt' %}Navegação principal{% elsif L == 'es' %}Navegación principal{% else %}Main navigation{% endif %}">
+        <a href="{% if L == 'pt' %}/pt/{% elsif L == 'es' %}/es/{% else %}/{% endif %}" class="logo nav-logo">
             <img src="/static/DelterisCrest.webp" alt="Delteris" width="32" height="32">
             <span class="logo-text"> <span class="logo-accent">Delteris</span></span>
         </a>
-        <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-label="{% if L == 'pt' %}Abrir menu{% else %}Open menu{% endif %}">
+        <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-label="{% if L == 'pt' %}Abrir menu{% elsif L == 'es' %}Abrir menú{% else %}Open menu{% endif %}">
             <span class="nav-toggle-bar"></span>
             <span class="nav-toggle-bar"></span>
             <span class="nav-toggle-bar"></span>
@@ -59,6 +59,37 @@
             <a href="/pt/roadmap.html"{% if page.url == '/pt/roadmap.html' %} aria-current="page"{% endif %}>Roteiro</a>
             <a href="/pt/resources/"{% if page.url contains '/pt/resources' %} aria-current="page"{% endif %}>Recursos</a>
             <a href="/pt/contact.html" class="btn btn-small"{% if page.url == '/pt/contact.html' %} aria-current="page"{% endif %}>Fale Connosco</a>
+{%- endif %}
+{%- elsif L == 'es' %}
+            <div class="nav-dropdown" data-nav-dropdown>
+                <button type="button" class="nav-dropdown-btn" id="products-btn" data-products-btn data-label-default="Productos" aria-haspopup="true" aria-expanded="false">
+                    <span class="nav-dropdown-btn-label">Productos</span>
+                    <svg class="nav-dropdown-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg>
+                </button>
+                <div class="nav-dropdown-menu" role="menu" aria-label="Productos" hidden>
+                    <a href="/es/platform.html" role="menuitem" data-product="elenchon" data-product-label="Elenchon"{% if page.url == '/es/platform.html' %} aria-current="page"{% endif %}>
+                        <span class="nav-dropdown-name">Elenchon</span>
+                        <span class="nav-dropdown-desc">Trazabilidad, cualificación y captura en planta — en local</span>
+                    </a>
+                    <a href="/es/wps-management-software.html" role="menuitem" data-product="wpsm" data-product-label="WPS Manager"{% if page.url == '/es/wps-management-software.html' %} aria-current="page"{% endif %}>
+                        <span class="nav-dropdown-name">Elenchon WPS Manager</span>
+                        <span class="nav-dropdown-desc">Gestión de WPS en la nube — importe, organice y encuentre</span>
+                    </a>
+                </div>
+            </div>
+{%- if is_wpsm %}
+            <a href="/es/wps-manager-features.html">Funcionalidades</a>
+            <a href="{{ wpsm_home }}#onboarding">Cómo Funciona</a>
+            <a href="/es/wps-manager-security.html"{% if page.url contains 'wps-manager-security' %} aria-current="page"{% endif %}>Seguridad</a>
+            <a href="{{ wpsm_home }}#pricing">Precios</a>
+            <a href="{{ wpsm_contact }}" class="btn btn-small"{% if page.url contains 'wps-manager-contact' %} aria-current="page"{% endif %}>Hable con los Fundadores</a>
+{%- else %}
+            <a href="/es/security.html"{% if page.url == '/es/security.html' %} aria-current="page"{% endif %}>Seguridad</a>
+            <a href="/es/pricing.html"{% if page.url == '/es/pricing.html' %} aria-current="page"{% endif %}>Precios</a>
+            <a href="/es/deployment.html"{% if page.url == '/es/deployment.html' %} aria-current="page"{% endif %}>Implementación</a>
+            <a href="/es/roadmap.html"{% if page.url == '/es/roadmap.html' %} aria-current="page"{% endif %}>Hoja de Ruta</a>
+            <a href="/es/resources/"{% if page.url contains '/es/resources' %} aria-current="page"{% endif %}>Recursos</a>
+            <a href="/es/contact.html" class="btn btn-small"{% if page.url == '/es/contact.html' %} aria-current="page"{% endif %}>Contáctenos</a>
 {%- endif %}
 {%- else %}
             <div class="nav-dropdown" data-nav-dropdown>
@@ -97,8 +128,9 @@
      falling back to the language home when the page declares no counterpart. {%- endcomment %}
 {%- assign en_target = page.en_url | default: '/' -%}
 {%- assign pt_target = page.pt_url | default: '/pt/' -%}
+{%- assign es_target = page.es_url | default: '/es/' -%}
             <div class="lang-switch" data-lang-switch>
-                <button type="button" class="lang-globe" id="lang-globe-btn" aria-haspopup="listbox" aria-expanded="false" aria-label="{% if L == 'pt' %}Escolher idioma{% else %}Choose language{% endif %}" title="{% if L == 'pt' %}Idioma{% else %}Language{% endif %}">
+                <button type="button" class="lang-globe" id="lang-globe-btn" aria-haspopup="listbox" aria-expanded="false" aria-label="{% if L == 'pt' %}Escolher idioma{% elsif L == 'es' %}Elegir idioma{% else %}Choose language{% endif %}" title="{% if L == 'pt' %}Idioma{% elsif L == 'es' %}Idioma{% else %}Language{% endif %}">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                         <circle cx="12" cy="12" r="10"></circle>
                         <path d="M2 12h20"></path>
@@ -106,12 +138,12 @@
                     </svg>
                     <span class="lang-globe-code">{{ current_code }}</span>
                 </button>
-                <div class="lang-menu" id="lang-menu" role="listbox" aria-label="{% if L == 'pt' %}Idiomas{% else %}Languages{% endif %}" hidden>
+                <div class="lang-menu" id="lang-menu" role="listbox" aria-label="{% if L == 'pt' %}Idiomas{% elsif L == 'es' %}Idiomas{% else %}Languages{% endif %}" hidden>
                     <div class="lang-menu-search">
-                        <input type="text" id="lang-menu-search" class="lang-menu-input" placeholder="{% if L == 'pt' %}Procurar idioma…{% else %}Search language…{% endif %}" autocomplete="off" aria-label="{% if L == 'pt' %}Procurar idioma{% else %}Search language{% endif %}">
+                        <input type="text" id="lang-menu-search" class="lang-menu-input" placeholder="{% if L == 'pt' %}Procurar idioma…{% elsif L == 'es' %}Buscar idioma…{% else %}Search language…{% endif %}" autocomplete="off" aria-label="{% if L == 'pt' %}Procurar idioma{% elsif L == 'es' %}Buscar idioma{% else %}Search language{% endif %}">
                     </div>
                     <div class="lang-menu-list">
-                        <a href="{{ en_target }}" hreflang="en" class="lang-option{% if L != 'pt' %} is-current{% endif %}" role="option" aria-selected="{% if L != 'pt' %}true{% else %}false{% endif %}" data-search="english english en">
+                        <a href="{{ en_target }}" hreflang="en" class="lang-option{% if L == 'en' %} is-current{% endif %}" role="option" aria-selected="{% if L == 'en' %}true{% else %}false{% endif %}" data-search="english english en">
                             <span class="lang-option-name">English</span>
                             <span class="lang-option-code">EN</span>
                         </a>
@@ -119,8 +151,12 @@
                             <span class="lang-option-name">Português</span>
                             <span class="lang-option-code">PT</span>
                         </a>
+                        <a href="{{ es_target }}" hreflang="es-ES" class="lang-option{% if L == 'es' %} is-current{% endif %}" role="option" aria-selected="{% if L == 'es' %}true{% else %}false{% endif %}" data-search="español espanol spanish castellano es">
+                            <span class="lang-option-name">Español</span>
+                            <span class="lang-option-code">ES</span>
+                        </a>
                     </div>
-                    <p class="lang-menu-empty" hidden>{% if L == 'pt' %}Sem correspondências{% else %}No matches{% endif %}</p>
+                    <p class="lang-menu-empty" hidden>{% if L == 'pt' %}Sem correspondências{% elsif L == 'es' %}Sin coincidencias{% else %}No matches{% endif %}</p>
                 </div>
             </div>
         </div>

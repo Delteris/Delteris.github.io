@@ -1,0 +1,239 @@
+---
+layout: default
+lang: es
+permalink: /es/wps-manager-features.html
+title: "Funcionalidades del WPS Manager — Importar, Revisar, Biblioteca, Vista Previa | Elenchon WPS Manager"
+description: "Cada capacidad del Elenchon WPS Manager, mostrada en las pantallas reales: importación nativa de Excel y PDF, ediciones revisadas por humanos, un registro versionado con exportación en un clic, una biblioteca que lee cada campo, la cadena WPQR/pWPS asociada, un asistente de aporte térmico, y un registro de actividad completo con acceso por funciones. De Delteris."
+og_title: "Funcionalidades del WPS Manager — Vea la Aplicación en Acción"
+og_description: "Importar, revisar, guardar, buscar, verificar y exportar — todo el ciclo del WPS Manager, una capacidad a la vez, en las pantallas reales de la aplicación."
+og_image: "/static/wpsm/overview.webp"
+og_image_alt: "Panel de resumen del Elenchon WPS Manager — tarjetas de atención y los recuentos de WPS, pWPS, WPQR y cualificadas"
+twitter_large: true
+schema: schema/wps-manager-features.json
+en_url: "/wps-manager-features.html"
+pt_url: "/pt/wps-manager-features.html"
+es_url: "/es/wps-manager-features.html"
+alt_url: "/wps-manager-features.html"
+---
+    <header class="page-hero page-hero-short">
+        <div class="hero-content">
+            <span class="hero-eyebrow">Elenchon WPS Manager · Funcionalidades</span>
+            <h1 class="text-glow">Cada Capacidad, en las Pantallas Reales.</h1>
+            <p class="hero-sub">Importar, revisar, guardar, buscar, verificar y exportar — todo el ciclo que su registro de WPS necesita, mostrado en la aplicación en lugar de descrito. Este es el conjunto completo de funcionalidades detrás del <a href="/es/wps-management-software.html">Elenchon WPS Manager</a>.</p>
+            <div class="cta-group">
+                <a href="/es/wps-manager-contact.html" class="btn btn-primary">Hable con los Fundadores</a>
+                <a href="/es/wps-management-software.html#pricing" class="btn btn-secondary">Ver Precios</a>
+            </div>
+        </div>
+        <a class="scroll-cue" href="#overview" aria-label="Desplazarse para ver más">
+            <span class="scroll-cue-text">Desplazar</span>
+            <span class="scroll-cue-chevron" aria-hidden="true"></span>
+        </a>
+    </header>
+
+    <!-- RESUMEN -->
+    <section class="page-section container" id="overview">
+        <div class="section-header">
+            <span class="eyebrow">El Resumen</span>
+            <h2>Todo su Registro, de un Vistazo</h2>
+            <p class="subtitle">Lo que está confirmado, lo que necesita atención, y exactamente cuántos procedimientos posee — en el momento en que inicia sesión.</p>
+        </div>
+        {% include app-shot.html
+            name="overview" wide="true" w="1600" h="900"
+            alt="Panel de resumen del Elenchon: un panel Necesita atención con 29 campos de WPS que revisar, registro actualizado, y mosaicos con 26 WPS, 9 pWPS, 11 WPQR, 26 WPS con WPQR y 7 miembros de equipo"
+            cap="El resumen: campos señalados para verificación, el estado del registro, y el recuento completo de la biblioteca — WPS, pWPS y WPQR — en un solo lugar." %}
+        <p class="story-note">El panel <strong>Necesita atención</strong> destaca los valores leídos con baja confianza y enlaza directamente a ellos; todo aquello de lo que la aplicación tiene certeza queda fuera de su camino.</p>
+    </section>
+
+    <!-- IMPORTACIÓN -->
+    <section class="page-section container" id="import">
+        <div class="section-header">
+            <span class="eyebrow">Importación</span>
+            <h2>Excel y PDF, Leídos Por Usted</h2>
+            <p class="subtitle">Traiga los WPS que ya posee directamente a un registro. Dos parsers dedicados hacen la introducción de datos — sin reescribir un procedimiento en la plantilla de otra persona.</p>
+        </div>
+        <div class="glass-card feature-block feature-block-solo" id="import-detail">
+            <span class="feature-index">01</span>
+            <ul class="feature-list">
+                <li><strong>Excel y PDF, ambos nativos:</strong> Un parser lee hojas WPS en Excel; otro reconstruye la cuadrícula de un formulario PDF y lee sus celdas. Proceso, materiales, gamas y parámetros pasada a pasada entran como campos estructurados.</li>
+                <li><strong>Agnóstico al idioma:</strong> El parser lee la estructura de un formulario, no un vocabulario fijo, y corresponde las etiquetas a partir de un paquete de idioma — por lo que un formulario en su idioma se lee sin configuración especial. Inglés y portugués están incluidos hoy; otros idiomas se añaden durante la incorporación.</li>
+                <li><strong>En lote, y clasificado al entrar:</strong> Traiga una pila entera de una vez — cada fichero ordenado como nuevo WPS, nueva revisión o corrección, con las revisiones agrupadas desde el principio.</li>
+                <li><strong>Ajustado a su plantilla:</strong> Los formularios al estilo ISO&nbsp;15609 funcionan de inmediato; durante la incorporación ajustamos el parser al esquema exacto de su empresa.</li>
+            </ul>
+            <p class="feature-out"><a href="/es/wps-import-software.html">Ver la importación de WPS en detalle &rarr;</a></p>
+        </div>
+        {% include app-shot.html
+            name="import" wide="true" w="1600" h="900"
+            alt="Panel de importación de la biblioteca sobre un registro: una lista buscable de WPS con etiquetas de revisión, cada uno marcado A continuación, Importado, o con un botón Importar"
+            cap="Añadiendo procedimientos a un registro desde la biblioteca — cada WPS marcado a continuación, importado, o listo para traer, para que una revisión nunca se importe dos veces." %}
+    </section>
+
+    <!-- REVISIÓN -->
+    <section class="page-section container" id="review">
+        <div class="section-header">
+            <span class="eyebrow">Ediciones Revisadas por Humanos</span>
+            <h2>Nada Entra Sin su Aprobación</h2>
+            <p class="subtitle">Un parser solo es de confiar si puede ver lo que leyó. Cada importación entra en cola como un conjunto de cambios que aprueba, valor a valor.</p>
+        </div>
+        <div class="glass-card feature-block feature-block-solo" id="review-detail">
+            <span class="feature-index">02</span>
+            <ul class="feature-list">
+                <li><strong>Vea exactamente qué cambiaría:</strong> Cada fila es un documento, un campo, y el valor leído — nada se escribe en su registro hasta que lo confirma.</li>
+                <li><strong>Lecturas de baja confianza señaladas:</strong> Todo lo que el parser no tuvo claro — o un aporte térmico que calculó — se sombrea en ámbar y se destaca, para que su atención vaya adonde hace falta.</li>
+                <li><strong>Verifique sin salir:</strong> Confirme un valor calculado desde la cola, o abra el documento en la biblioteca para verificarlo contra la fuente primero.</li>
+                <li><strong>Defina su límite:</strong> Revise cada valor, revise solo los inciertos (el predeterminado), o aplique automáticamente y confíe en el versionado para deshacer.</li>
+            </ul>
+            <p class="feature-out"><a href="/es/wps-review-approval-software.html">Ver las ediciones revisadas en detalle &rarr;</a></p>
+        </div>
+        {% include app-shot.html
+            name="review" wide="true" w="1600" h="900"
+            alt="Cola de revisión: filas de documentos cada una con un campo de aporte térmico calculado señalado en ámbar, con el número de pasadas calculadas y botones Abrir en la biblioteca y Verificar"
+            cap="La cola de revisión: valores de aporte térmico calculados señalados en ámbar, cada uno con las pasadas de donde se calculó — verifique, o abra la fuente primero." %}
+        <p class="story-note">Estas filas son aportes térmicos que la aplicación calculó porque los formularios los dejaron en blanco — nunca introducidos en silencio, siempre señalados, y mostrados con las pasadas detrás de cada valor para confirmarlos contra el PQR.</p>
+    </section>
+
+    <!-- REGISTRO -->
+    <section class="page-section container" id="registers">
+        <div class="section-header">
+            <span class="eyebrow">Su Registro, Visualizado y Versionado</span>
+            <h2>Su Propia Hoja, Mantenida Actual</h2>
+            <p class="subtitle">El registro que mantiene es <em>su</em> hoja, guardada como cuadrícula en vivo y respaldada por un historial de versiones completo — el fichero maestro que la dirección pide, a un clic.</p>
+        </div>
+        <div class="glass-card feature-block feature-block-solo" id="registers-detail">
+            <span class="feature-index">03</span>
+            <ul class="feature-list">
+                <li><strong>Visualizada, no solo guardada:</strong> Su hoja maestra abre como cuadrícula rápida y filtrable — aquí, 36 filas por 28 columnas — en lugar de una hoja que recorre a mano.</li>
+                <li><strong>Cada versión guardada:</strong> Cada conjunto de cambios aprobado crea una nueva versión. Revierta a cualquier instantánea; la más reciente está siempre protegida.</li>
+                <li><strong>Exportación a demanda:</strong> Produzca una hoja Excel limpia cuando necesite — o un paquete de exportación (.zip) con el registro más la carpeta de ficheros WPS asociados, para que la documentación viaje con la hoja.</li>
+                <li><strong>Recalcular y sincronizar:</strong> Traiga los valores más recientes de la biblioteca al registro en una acción, para que la hoja nunca se desalinee de los documentos detrás de ella.</li>
+            </ul>
+        </div>
+        {% include app-shot.html
+            name="register" wide="true" w="1600" h="900"
+            alt="La cuadrícula del registro Meridian Fabrication WPS register 2026 con columnas para WPS/ID, revisión, PQR de soporte, norma de cualificación y metal base, y un menú abierto con Paquete de exportación (.zip), Copias de seguridad, Recalcular/sincronizar y Hoja principal"
+            cap="El registro como cuadrícula en vivo, con exportación, copias versionadas, recálculo y el paquete de ficheros asociados a un menú de distancia." %}
+        <p class="story-note">El registro no es una plantilla que la aplicación regenera y devuelve alterada — es su hoja, mantenida actual. Exportar .xlsx entrega a la dirección la hoja maestra; el paquete de exportación entrega a un auditor la hoja y todos los ficheros asociados, en un .zip.</p>
+    </section>
+
+    <!-- BIBLIOTECA -->
+    <section class="page-section container" id="library">
+        <div class="section-header">
+            <span class="eyebrow">Una Biblioteca Que Lee sus WPS</span>
+            <h2>Cada Campo, Hasta la Tabla de Pasadas</h2>
+            <p class="subtitle">Detrás de cada fila del registro está un documento totalmente leído — campos de cabecera, la tabla de pasadas completa, materiales y consumibles, todo estructurado y todo buscable.</p>
+        </div>
+        <div class="glass-card feature-block feature-block-solo" id="library-detail">
+            <span class="feature-index">04</span>
+            <ul class="feature-list">
+                <li><strong>Tres tipos de documento, una casa:</strong> WPS, pWPS y WPQR tienen cada uno su pestaña, cada uno analizado y asociable, cada uno mostrando un estado Analizado y Asociado de un vistazo.</li>
+                <li><strong>El detalle real:</strong> Bloque de cabecera — norma, metal base, gama de espesor y diámetro, precalentamiento, gas — más la tabla de pasadas completa con proceso, clase de consumible, polaridad, corriente, tensión, velocidad y aporte térmico de cada pasada.</li>
+                <li><strong>Editar y verificar en el sitio:</strong> Corrija cualquier valor o su etiqueta y guarde; un clic limpia un indicador de baja confianza, y el aporte térmico calculado limpia en todas las pasadas de una vez.</li>
+                <li><strong>Filtrar por lo que está dentro:</strong> Restrinja por proceso, material, posición y espesor — hasta por valores dentro de las pasadas, como todos los WPS con raíz en 111.</li>
+            </ul>
+            <p class="feature-out"><a href="/es/wps-library-search-software.html">Ver la biblioteca y búsqueda en detalle &rarr;</a></p>
+        </div>
+        {% include app-shot.html
+            name="library" wide="true" w="1600" h="900"
+            alt="Detalle de la biblioteca para MER-pWPS-104: campos de cabecera incluyendo norma de cualificación ISO 15614-8, referencia del PQR de soporte y metal base S275JR, una tabla de tres pasadas (raíz, relleno, peineta) en el proceso 138 con clase de consumible, corriente, tensión, velocidad y aporte térmico, y una tabla de material base debajo"
+            cap="Un documento leído al campo: el bloque de cabecera, cada pasada — de la raíz a la peineta — con sus parámetros y valores de aporte térmico, y el material base, todo estructurado y buscable." %}
+        <p class="story-note">MER-pWPS-104, leído de una hoja Excel: ISO&nbsp;15614-8, S275JR, tres pasadas en el proceso 138, cada una con su ventana de corriente, tensión y velocidad — y el material base leído a su propia tabla.</p>
+    </section>
+
+    <!-- CADENA -->
+    <section class="page-section container" id="pqr">
+        <div class="section-header">
+            <span class="eyebrow">La Cadena Asociada</span>
+            <h2>WPQR y pWPS, Asociados al Procedimiento</h2>
+            <p class="subtitle">Un WPS lo cualifica un WPQR, que se remonta a un pWPS. La biblioteca mantiene esa cadena asociada, para que desde cualquier registro vea exactamente lo que lo sustenta.</p>
+        </div>
+        <div class="glass-card feature-block feature-block-solo" id="pqr-detail">
+            <span class="feature-index">05</span>
+            <ul class="feature-list">
+                <li><strong>WPQR asociado al WPS que cualifica:</strong> Un único WPQR puede sustentar varios procedimientos, cada uno asociado a los números de WPS que cualifica, elegidos de la biblioteca por número.</li>
+                <li><strong>pWPS asociado al WPQR:</strong> Remonte cada registro de cualificación al WPS preliminar detrás de él — toda la cadena pWPS &rarr; WPQR &rarr; WPS, visible y a un clic.</li>
+                <li><strong>Datos recopilados, estructurados:</strong> Norma de cualificación, proceso, fecha de ensayo y el resto se leen a campos, no dejados enterrados en un anexo.</li>
+                <li><strong>Dónde para el WPS Manager:</strong> Adjunta, asocia y muestra estos registros — capturar resultados de WPQR en vivo en la planta es el trabajo de la <a href="/es/welding-qualification-software.html">plataforma Elenchon</a> completa.</li>
+            </ul>
+        </div>
+        {% include app-shot.html
+            name="pqr-chain" wide="true" w="1600" h="900"
+            alt="Detalle de la biblioteca del WPS MER-WPS-001 con un panel de WPQR asociados que muestra dos registros de cualificación, MER-WPQR-2401 y MER-WPQR-2411, sobre los campos de cabecera incluyendo ISO 15614-1 y metal base 316L y una tabla de tres pasadas en el proceso 135"
+            cap="Un WPS con su cadena de cualificación explícita: los registros WPQR que lo cualifican, asociados y a un clic, sobre la cabecera y la tabla de pasadas leídas del documento." %}
+    </section>
+
+    <!-- APORTE TÉRMICO -->
+    <section class="page-section container" id="heat-input">
+        <div class="section-header">
+            <span class="eyebrow">Asistente de Aporte Térmico</span>
+            <h2>Quédese Dentro de la Ventana Cualificada</h2>
+            <p class="subtitle">El aporte térmico es donde un buen procedimiento sale discretamente de cualificación. El asistente lo calcula en vivo y limita los controles a la gama que su PQR cualificó.</p>
+        </div>
+        <div class="glass-card feature-block feature-block-solo" id="heat-input-detail">
+            <span class="feature-index">06</span>
+            <ul class="feature-list">
+                <li><strong>Tome directamente de un WPS:</strong> Cargue un WPS analizado y sus gamas por región y procesos se rellenan automáticamente — aquí, los valores de arco del MER-WPS-026.</li>
+                <li><strong>Cursores que no salen de la ventana:</strong> Arrastre corriente, tensión y velocidad y vea el aporte térmico calculado en vivo; los controles se limitan a su gama cualificada por el PQR, por lo que un resultado fuera de gama no puede marcarse.</li>
+                <li><strong>Raíz, relleno y peineta independientes:</strong> Cada región de soldadura tiene su propia gama cualificada y su lectura en vivo — verde cuando está dentro de la gama.</li>
+                <li><strong>Consciente de multi-arco:</strong> Las configuraciones tándem y twin-arc suman entre cabezas, como la norma espera. Es un bloc de borrador — nada se guarda ni se escribe en hoja alguna.</li>
+            </ul>
+            <p class="feature-out"><a href="/es/heat-input-calculator.html">Ver la calculadora de aporte térmico en detalle &rarr;</a></p>
+        </div>
+        {% include app-shot.html
+            name="heat-input" wide="true" w="1600" h="900"
+            alt="Asistente de aporte térmico con valores de arco tomados del MER-WPS-026, tres regiones (raíz, relleno, peineta) cada una con gamas cualificadas por el PQR, cursores de corriente/tensión/velocidad y un resultado en vivo de 0,68 a 1,58 kJ/mm, todas marcadas Dentro de la gama del PQR en verde"
+            cap="Valores de arco tomados de un WPS: raíz, relleno y peineta calculados en vivo y dentro de la gama que el PQR cualificó." %}
+    </section>
+
+    <!-- SEGURIDAD -->
+    <!-- TEASER DE SEGURIDAD -->
+    <section class="page-section container" id="security">
+        <div class="dark-panel grid-2 align-center">
+            <div>
+                <span class="eyebrow">Construido a la Manera Delteris</span>
+                <h2 class="text-glow">Un Rastro de Auditoría Completo, y Acceso Que Controla</h2>
+                <p class="security-intro">Sus procedimientos son propietarios y su registro es prueba de auditoría. Cada cambio se atribuye y se fecha, el acceso es suyo para conceder hasta un puesto de solo lectura para el inspector, y sus datos son de inquilino único, alojados en la UE y cifrados — la misma disciplina de la plataforma Elenchon en local.</p>
+                <div class="cta-group">
+                    <a href="wps-manager-security.html" class="btn btn-secondary">Ver la Seguridad del WPS Manager &rarr;</a>
+                </div>
+            </div>
+            <div class="graphic-placeholder">
+                <div class="pulse-ring delay-2"></div>
+                <div class="pulse-ring delay-1"></div>
+                <div class="pulse-ring"></div>
+                <div class="pulse-core"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CREACIÓN -->
+    <section class="page-section container" id="authoring">
+        <div class="section-header">
+            <span class="eyebrow">Exportar Hoy, Crear Después</span>
+            <h2>Una Exportación Excel Limpia, y Más en Camino</h2>
+            <p class="subtitle">El WPS Manager ya emite una hoja Excel limpia para cualquier WPS que posea, y ese fichero se reimporta sin pérdidas. La creación completa en la nube se asienta sobre esa base.</p>
+        </div>
+        <div class="pillar-grid">
+            <div class="glass-card">
+                <h3>Ida y vuelta sin pérdidas, hoy</h3>
+                <p>Genere una hoja limpia de un solo WPS — o el registro entero como una hoja — que abre en Excel y se reimporta sin perder un valor.</p>
+            </div>
+            <div class="glass-card">
+                <h3>Creación simple como hoja, después</h3>
+                <p>Defina cabeceras, rellene celdas, y un script de estilo automático los convierte en un WPS terminado y formateado — la frágil plantilla hecha a mano, reformada. En la hoja de ruta.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="page-section container" id="cta">
+        <div class="cta-band">
+            <span class="eyebrow">Empiece Ahora</span>
+            <h2 class="text-glow">Ponga su Registro en Esto</h2>
+            <p>La incorporación está guiada directamente por los fundadores — envíenos algunos de sus documentos WPS, confirmamos que el parser lee su plantilla, y entra en funcionamiento con un registro comprobado en su propia documentación. Todo tratado con confidencialidad.</p>
+            <div class="cta-group">
+                <a href="/es/wps-manager-contact.html" class="btn btn-primary">Hable con los Fundadores</a>
+                <a href="mailto:contact@delteris.com?subject=Elenchon%20WPS%20Manager%20%E2%80%94%20Verificaci%C3%B3n%20de%20Lectura%20de%20Nuestra%20WPS" class="btn btn-secondary">Envíenos una WPS — Véala Analizada</a>
+            </div>
+            <p class="hero-urgency u-gap-top">Un precio fijo, soporte directo de los fundadores, nada escondido — trata con quien lo construyó.</p>
+        </div>
+    </section>

@@ -192,7 +192,8 @@
     const copyBtn = document.getElementById('copy-email');
 
     if (copyBtn) {
-        var copiedLabel = (document.documentElement.lang || 'en').slice(0, 2) === 'pt'
+        var docLang = (document.documentElement.lang || 'en').slice(0, 2);
+        var copiedLabel = (docLang === 'pt' || docLang === 'es')
             ? 'Copiado \u2713'
             : 'Copied \u2713';
         copyBtn.addEventListener('click', function () {
@@ -538,7 +539,7 @@
     var stage = document.getElementById('L-link');
     if (!stage) return; // only on the security page
 
-    var isPT = (document.documentElement.lang || 'en').slice(0, 2) === 'pt';
+    var secLang = (document.documentElement.lang || 'en').slice(0, 2);
 
     var V_EN = {
         all: {
@@ -608,8 +609,42 @@
         }
     };
 
-    var V = isPT ? V_PT : V_EN;
-    var DEFAULT_SEAL = isPT ? 'selado — não pode abrir' : 'sealed — cannot open';
+    var V_ES = {
+        all: {
+            sealed: [], tone: 'var(--cl-app)', spot: null,
+            h: 'Las tres capas',
+            b: 'Tres túneles anidados — el Link TLS (verde) y el App TLS (azul) son resistentes a la computación cuántica. El Ziti E2E (ámbar) ya cifra su contenido con un cifrado resistente a lo cuántico; solo su intercambio de claves X25519 es clásico, y el Link TLS lo protege en la red — por lo que nunca queda expuesto a «capturar ahora, descifrar después». Cada uno se abre únicamente en los extremos, nunca en la red.'
+        },
+        internet: {
+            sealed: ['link', 'e2e', 'app'], tone: 'var(--cl-link)',
+            spot: { x: 150, y: 240, w: 402, h: 24, color: '#43c08f', lx: 351, ly: 298, t: 'solo texto cifrado resistente a lo cuántico' },
+            h: 'En la red',
+            b: 'Un grabador en la red capta únicamente el <b>Link TLS</b> exterior, que es <b>resistente a la computación cuántica</b>. Aquí no hay claves que abrir — por eso grabar ahora para descifrar después no funciona.',
+            seals: { link: 'texto cifrado resistente a lo cuántico — todo lo que atraviesa la red' }
+        },
+        phrakton: {
+            sealed: ['e2e', 'app'], tone: 'var(--cl-e2e)',
+            spot: { x: 242, y: 214, w: 132, h: 160, color: '#ecab45', lx: 308, ly: 390, t: 'abre solo el Link TLS' },
+            h: 'Un router o host Phrakton',
+            b: 'Un router termina el <b>Link TLS</b>, pero el tráfico permanece sellado dentro del <b>Ziti E2E</b> y del <b>App TLS</b>. Los routers lo reenvían sin poseer esas claves, por lo que el operador no puede leer los datos de aplicación de un inquilino.',
+            seals: { e2e: 'sigue sellado — los routers reenvían, no poseen esta clave' }
+        },
+        box: {
+            sealed: [], tone: 'var(--danger, #e86f60)',
+            spot: { x: 586, y: 214, w: 530, h: 160, color: '#e86f60', lx: 851, ly: 390, t: 'extremo — alcanza los datos' },
+            h: 'Un equipo comprometido',
+            b: 'El Ziti E2E y el App TLS terminan ambos en el equipo, por lo que controlar el equipo significa acceder a los datos — <b>solo para ese inquilino</b>. Esto es un riesgo de insider o de acceso físico, no de red.'
+        },
+        device: {
+            sealed: [], tone: 'var(--cl-muted)',
+            spot: { x: 30, y: 214, w: 132, h: 76, color: '#93a4bb', lx: 96, ly: 306, t: 'el lector previsto' },
+            h: 'El propio dispositivo del trabajador',
+            b: 'El navegador del trabajador es el extremo de cada capa y posee las claves de <b>sus propios</b> datos. Este es el lector previsto — nada inesperado.'
+        }
+    };
+
+    var V = secLang === 'pt' ? V_PT : (secLang === 'es' ? V_ES : V_EN);
+    var DEFAULT_SEAL = secLang === 'pt' ? 'selado — não pode abrir' : (secLang === 'es' ? 'sellado — no se puede abrir' : 'sealed — cannot open');
 
     var layers = ['link', 'e2e', 'app'];
     var $ = function (id) { return document.getElementById(id); };

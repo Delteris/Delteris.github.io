@@ -1,0 +1,175 @@
+---
+layout: default
+lang: es
+permalink: /es/wps-review-approval-software.html
+title: "Software de Revisión y Aprobación de WPS — Ediciones Revisadas por Humanos | Elenchon WPS Manager"
+description: "Nada entra en sus registros de WPS sin su aprobación. Cada importación propone un conjunto de cambios — valor actual junto al valor nuevo, celda a celda — con lecturas de baja confianza señaladas, detección de divergencia, y solo las celdas aprobadas confirmadas. Su propia hoja, cuando mantiene una, se aplica, nunca se reconstruye. De Delteris."
+og_title: "Revisión y Aprobación de WPS — Ediciones Revisadas por Humanos | Elenchon WPS Manager"
+og_description: "Cada importación de WPS queda en cola como un conjunto de cambios revisado: vea el valor actual junto al valor nuevo celda a celda, apruebe lo que entra, y deje que el versionado deshaga el resto. Lecturas de baja confianza señaladas, divergencia detectada, solo celdas aprobadas aplicadas."
+og_image: "/static/wpsm/review.webp"
+og_image_alt: "Elenchon WPS Manager — the review change-set, current value beside new value cell by cell"
+twitter_large: true
+og_image_alt: "Elenchon WPS Manager by Delteris — software de revisión y aprobación de WPS"
+schema: schema/wps-review-approval-software.json
+en_url: "/wps-review-approval-software.html"
+pt_url: "/pt/wps-review-approval-software.html"
+es_url: "/es/wps-review-approval-software.html"
+alt_url: "/wps-review-approval-software.html"
+---
+    <header class="page-hero">
+        <div class="hero-content">
+            <span class="hero-eyebrow">Elenchon WPS Manager · Revisión</span>
+            <h1 class="text-glow">Nada Toca su Registro<br>Sin su Aprobación.</h1>
+            <p class="hero-sub">Su biblioteca de WPS solo es fiable si controla lo que entra en ella. Por eso las importaciones nunca entran en silencio — quedan en cola como un conjunto de cambios propuesto que revisa celda a celda. Ve el valor actual junto al valor nuevo, marca lo que debe entrar, corrige lo que no debe, y solo las celdas que confirme se aplican. Lo que queda en registro es exactamente lo que una persona validó — y si exporta un registro, hereda esa misma confianza.</p>
+            <div class="cta-group">
+                <a href="/es/wps-manager-contact.html" class="btn btn-primary">Contacte con los Fundadores</a>
+                <a href="/es/wps-management-software.html#pricing" class="btn btn-secondary">Ver Precios</a>
+            </div>
+        </div>
+        <a class="scroll-cue" href="#overview" aria-label="Desplazarse para ver más">
+            <span class="scroll-cue-text">Desplazar</span>
+            <span class="scroll-cue-chevron" aria-hidden="true"></span>
+        </a>
+    </header>
+
+    <section class="page-section container" id="overview">
+        <div class="summary-panel">
+            <h2 class="text-glow">Cada Importación Es un Conjunto de Cambios Que Aprueba</h2>
+            <p><strong>El software de revisión y aprobación de WPS coloca una validación humana entre un documento importado y sus registros de WPS: propone cada edición como valor actual versus valor nuevo, celda a celda, y solo las celdas que confirme se confirman.</strong> Actualizar automáticamente registros de conformidad a partir de un parser es como entran los errores silenciosos. El Elenchon WPS Manager trata cada importación como una propuesta, no una acción. La cola de revisión presenta cada cambio como actual → nuevo, al nivel de la celda individual; lecturas inciertas y valores calculados quedan sombreados para una mirada más atenta; corrige inline lo que esté mal, marca lo que debe aplicarse, y aprueba. Defina el criterio donde quiera — revise todo, revise solo las lecturas inciertas, o aplique automáticamente y confíe en el versionado para deshacer. Y como sus registros viven en la aplicación, un registro exportado se produce siempre únicamente a partir de lo que ya aprobó — cuando mantiene su propia hoja en el ciclo, se aplica, nunca se reconstruye.</p>
+        </div>
+    </section>
+
+    <section class="page-section container u-tight-top" id="screenshot-hero">
+        {% include app-shot.html
+            name="review" wide="true"
+            alt="Conjunto de cambios del WPS Manager — columnas Celda, Campo, Actual, Nuevo y Aplicar, con una fila ámbar de baja confianza"
+            cap="El conjunto de cambios: valor actual junto al nuevo, celda a celda — con lecturas de baja confianza en ámbar."
+            ph="La cola de revisión — columnas Celda / Campo / Actual / Nuevo / Aplicar, con una fila ámbar de baja confianza y Confirmar/Rechazar." %}
+    </section>
+
+    <section class="page-section container" id="diff">
+        <div class="section-header">
+            <span class="eyebrow">Actual → Nuevo, Celda a Celda</span>
+            <h2>Vea Exactamente Qué Cambiaría</h2>
+            <p class="subtitle">No "23 campos actualizados" — el antes y el después reales, al nivel de una única celda.</p>
+        </div>
+        <div class="glass-card feature-block">
+            <p class="feature-lead">Un cambio que no puede ver es un cambio en el que no puede confiar. La cola de revisión hace legible cada edición propuesta: el valor que tiene ahora, el valor que la importación quiere escribir, y una marca para decidir.</p>
+            <ul class="feature-list">
+                <li><strong>Valor actual → valor nuevo:</strong> Cada edición propuesta se presenta lado a lado en la celda individual, para que lea exactamente qué se movería y a qué.</li>
+                <li><strong>Marque para aplicar, desmarque para mantener:</strong> Aplique una celda para escribirla, o déjela desmarcada para mantener lo que tenía — la decisión es por celda, no por documento.</li>
+                <li><strong>Corrija antes de confirmar:</strong> Corrija cualquier valor inline, o añada una fila para un campo que el parser no captó, y luego apruebe — lo que entra es lo que validó, no la lectura en bruto del parser.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="page-section container" id="confidence">
+        <div class="section-header">
+            <span class="eyebrow">Atención Donde Hace Falta</span>
+            <h2>Lecturas de Baja Confianza, Señaladas en Ámbar</h2>
+            <p class="subtitle">El parser le dice de qué no tuvo certeza, para que su tiempo de revisión vaya a las celdas que importan.</p>
+        </div>
+        <div class="glass-card feature-block">
+            <p class="feature-lead">Revisar cada valor por igual es como se falla lo importante. El WPS Manager saca a la superficie su propia incertidumbre, para que una lectura confiable no le cueste un segundo y una dudosa no pueda pasar desapercibida.</p>
+            <ul class="feature-list">
+                <li><strong>Celdas inciertas sombreadas en ámbar:</strong> Cualquier valor del que el parser no tuvo certeza se destaca y se hace aflorar para verificación, dirigiendo su vista exactamente adonde hace falta.</li>
+                <li><strong>Valores calculados señalados:</strong> Un aporte térmico que la aplicación calculó en lugar de leer se señala de la misma forma — un número que puede confirmar, nunca uno que aparece en silencio.</li>
+                <li><strong>Las lecturas confiables se quedan quietas:</strong> Los valores de los que el parser tiene certeza no claman por atención, por lo que una gran importación no le ahoga en celdas que nunca estuvieron en duda.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="page-section container" id="approval-bar">
+        <div class="section-header">
+            <span class="eyebrow">Su Registro, sus Reglas</span>
+            <h2>Defina su Propio Criterio de Aprobación</h2>
+            <p class="subtitle">Revise todo, revise solo lo incierto, o aplique automáticamente y confíe en el versionado.</p>
+        </div>
+        <div class="glass-card feature-block">
+            <p class="feature-lead">Talleres distintos confían en sus formularios de forma distinta. En lugar de imponer un flujo, el WPS Manager le deja elegir cuán rígido es el filtro — y cambiar de idea cuando quiera.</p>
+            <ul class="feature-list">
+                <li><strong>Revisar cada valor:</strong> Nada entra sin una mirada — el criterio más rígido, para un registro bajo escrutinio de auditoría apretado.</li>
+                <li><strong>Revisar solo lo incierto (predeterminado):</strong> Las lecturas confiables se aplican, y solo las celdas señaladas esperan por usted — el equilibrio que la mayoría de los talleres quiere.</li>
+                <li><strong>Aplicar automáticamente y deshacer:</strong> Deje que las importaciones entren automáticamente y confíe en el versionado para revertir lo que esté mal — el más rápido, apoyado en el historial de versiones completo.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="page-section container" id="drift">
+        <div class="section-header">
+            <span class="eyebrow">La Hoja Nunca Diverge en Silencio</span>
+            <h2>Detección de Divergencia Entre Biblioteca y Registro</h2>
+            <p class="subtitle">Si un documento cambia después de que sus valores entren, se le avisa — y se le ofrece una re-sincronización.</p>
+        </div>
+        <div class="glass-card feature-block">
+            <p class="feature-lead">Un registro se corrompe despacio: una WPS se edita, pero la fila que alimentó queda como estaba. El WPS Manager vigila esa deriva y la cierra deliberadamente, con su validación.</p>
+            <ul class="feature-list">
+                <li><strong>Desincronía, a la superficie:</strong> Si una WPS se edita después de que sus valores ya hayan entrado, la aplicación señala que el registro está desincronizado de la biblioteca detrás de él.</li>
+                <li><strong>Re-sincronizar a su orden:</strong> Propone recalcular las filas afectadas como un nuevo conjunto de cambios — revisado y aprobado como cualquier otro, nunca reescrito en silencio.</li>
+                <li><strong>Documentos y hoja siempre ligados:</strong> El registro se remonta siempre a los documentos que lo alimentaron, por lo que la hoja y la documentación no pueden divergir sin que se note.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="page-section container" id="patch">
+        <div class="section-header">
+            <span class="eyebrow">Aplicado, Nunca Reconstruido</span>
+            <h2>Solo las Celdas Aprobadas Se Escriben en su Hoja</h2>
+            <p class="subtitle">Su fichero sigue siendo suyo — la aplicación cambia las celdas que confirmó y nada más.</p>
+        </div>
+        <div class="glass-card feature-block">
+            <p class="feature-lead">El registro que mantiene es su propia hoja, y así se mantiene. El WPS Manager nunca regenera su fichero a partir de una plantilla y se lo devuelve alterado — edita precisamente las celdas que aprobó.</p>
+            <ul class="feature-list">
+                <li><strong>Aplicación quirúrgica:</strong> La aplicación escribe las celdas confirmadas en su propio fichero y deja todo lo demás exactamente como lo tenía — formato, esquema y todo.</li>
+                <li><strong>Cada aprobación versionada:</strong> Cada conjunto de cambios aprobado produce una nueva versión del registro, para que pueda revertir a cualquier instantánea anterior a voluntad (ver <a href="/es/wps-management-software.html#registers">versionado del registro</a>).</li>
+                <li><strong>Cerrado sin un falso cambio:</strong> Un conjunto de cambios que solo necesita un valor verificado — sin nada realmente que cambiar — se cierra con un "marcar revisado", no una aprobación vacía que escribe una versión idéntica.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="page-section container" id="faq">
+        <div class="section-header">
+            <span class="eyebrow">Preguntas y Respuestas</span>
+            <h2>Revisión y Aprobación de WPS, Respondida</h2>
+            <p class="subtitle">Cómo funciona el conjunto de cambios, qué se señala, y qué entra en su hoja.</p>
+        </div>
+        <div class="pillar-grid">
+            <div class="glass-card">
+                <h3>¿Una importación cambia mi registro automáticamente?</h3>
+                <p>Solo si opta por permitirlo. Por defecto, cada importación queda en cola como un conjunto de cambios propuesto — valor actual junto al valor nuevo, celda a celda — y aprueba lo que entra. Puede subir el criterio para revisar cada valor, o bajarlo para aplicar todo automáticamente y confiar en el versionado para deshacer. Solo las celdas que apruebe se aplican a su propia hoja.</p>
+            </div>
+            <div class="glass-card">
+                <h3>Una importación grande tiene cientos de celdas. ¿Tengo que contrastar cada una?</h3>
+                <p>No — el parser señala su propia incertidumbre para que no revise todo por igual. Cualquier celda de la que no tuvo certeza, o un aporte térmico que calculó, queda sombreada en ámbar y aflora para una mirada; las lecturas confiables se quedan quietas. Una importación grande no le ahoga en celdas que nunca estuvieron en duda — su atención va solo adonde realmente hace falta.</p>
+            </div>
+            <div class="glass-card">
+                <h3>¿Puedo corregir un valor durante la revisión?</h3>
+                <p>Sí. Corrija cualquier valor inline, o añada una fila para un campo que el parser no captó, y luego apruebe. Lo que entra es lo que validó — nunca se ve forzado a aceptar la lectura en bruto del parser ni a rechazar todo el conjunto.</p>
+            </div>
+            <div class="glass-card">
+                <h3>¿Qué ocurre si una WPS cambia después de que los valores entren?</h3>
+                <p>La detección de divergencia lo capta: la aplicación le avisa de que el registro está desincronizado de la biblioteca y propone re-sincronizar las filas afectadas como un nuevo conjunto de cambios, revisado y aprobado como cualquier otro — la hoja nunca diverge en silencio de los documentos detrás de ella.</p>
+            </div>
+            <div class="glass-card">
+                <h3>¿Reconstruye toda mi hoja de cálculo?</h3>
+                <p>No. El WPS Manager aplica solo las celdas aprobadas a su propia hoja y deja todo lo demás exactamente como lo tenía. Su fichero nunca se regenera a partir de una plantilla, y cada conjunto de cambios aprobado se versiona para que pueda revertir.</p>
+            </div>
+            <div class="glass-card">
+                <h3>¿Y si una importación no tiene nada que cambiar, solo algo que verificar?</h3>
+                <p>Se cierra con un "marcar revisado" en lugar de una aprobación que escribiría una nueva versión idéntica — para que un conjunto de cambios solo de verificación no le deje atrapado entre aprobar un cambio que no existe y rechazar una lectura correcta.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-section container" id="cta">
+        <div class="cta-band">
+            <span class="eyebrow">Empiece</span>
+            <h2 class="text-glow">Mantenga el Control de Lo Que Entra en su Registro</h2>
+            <p>La incorporación está guiada directamente por los fundadores — envíenos algunos de sus documentos WPS, confirmamos que el parser lee su plantilla, y entra en funcionamiento con un registro donde nada cambia sin su validación. Todo tratado de forma confidencial.</p>
+            <div class="cta-group">
+                <a href="/es/wps-manager-contact.html" class="btn btn-primary">Contacte con los Fundadores</a>
+                <a href="mailto:contact@delteris.com?subject=Elenchon%20WPS%20Manager%20%E2%80%94%20Verificaci%C3%B3n%20de%20Lectura%20de%20Nuestra%20WPS" class="btn btn-secondary">Envíenos una WPS — Véala Analizada</a>
+            </div>
+            <p class="hero-urgency u-gap-top">Sin capa comercial, sin cola de llamadas — el soporte a nivel de fundadores forma parte del precio, no es un extra.</p>
+        </div>
+    </section>
