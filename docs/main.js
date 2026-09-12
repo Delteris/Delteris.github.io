@@ -230,13 +230,10 @@
 
     const CONNECTION_DISTANCE = 160;
     const BLUE = '59, 130, 246'; // #3b82f6
-    const FRAME_INTERVAL = 1000 / 30; // 30fps is plenty for an ambient backdrop
-
-    let lastFrame = 0;
 
     function particleCount() {
-        // Restrained density — the backdrop should never compete with the copy
-        return window.innerWidth < 768 ? 24 : 52;
+        // Fewer particles on small screens to keep scrolling smooth
+        return window.innerWidth < 768 ? 35 : 80;
     }
 
     function resize() {
@@ -254,9 +251,9 @@
     function Particle() {
         this.x = Math.random() * width;
         this.y = Math.random() * height;
-        this.vx = (Math.random() - 0.5) * 0.34;
-        this.vy = (Math.random() - 0.5) * 0.34;
-        this.radius = Math.random() * 1.1 + 0.9;
+        this.vx = (Math.random() - 0.5) * 0.5;
+        this.vy = (Math.random() - 0.5) * 0.5;
+        this.radius = Math.random() * 1.5 + 1;
     }
 
     Particle.prototype.update = function () {
@@ -269,7 +266,7 @@
     Particle.prototype.draw = function () {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(' + BLUE + ', 0.34)';
+        ctx.fillStyle = 'rgba(' + BLUE + ', 0.5)';
         ctx.fill();
     };
 
@@ -293,7 +290,7 @@
                     ctx.beginPath();
                     ctx.moveTo(particles[i].x, particles[i].y);
                     ctx.lineTo(particles[j].x, particles[j].y);
-                    ctx.strokeStyle = 'rgba(' + BLUE + ', ' + opacity * 0.12 + ')';
+                    ctx.strokeStyle = 'rgba(' + BLUE + ', ' + opacity * 0.2 + ')';
                     ctx.lineWidth = 1;
                     ctx.stroke();
                 }
@@ -310,11 +307,9 @@
         drawConnections();
     }
 
-    function animate(now) {
-        animationId = requestAnimationFrame(animate);
-        if (now - lastFrame < FRAME_INTERVAL) return;
-        lastFrame = now;
+    function animate() {
         drawFrame();
+        animationId = requestAnimationFrame(animate);
     }
 
     let resizeTimer = null;
