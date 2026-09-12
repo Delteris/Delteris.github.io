@@ -240,6 +240,12 @@
     const BLUE_CORE = '191, 219, 254';  // #bfdbfe — near-white node cores
     const MOUSE_RADIUS = 190;           // cursor influence radius
 
+    // Cursor interaction is a pointer-with-hover affordance (desktop/trackpad).
+    // On touch devices there's no hover, and a tap would just clump nodes under
+    // the finger and leave them there — so we disable it entirely and keep the
+    // background a calm, self-contained animation.
+    const CAN_HOVER = window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
     // Cursor state (in CSS pixels). active=false until the pointer moves,
     // so nothing lights up before the user interacts.
     const mouse = { x: -9999, y: -9999, active: false };
@@ -250,8 +256,11 @@
     }
 
     function resize() {
-        // Render at device resolution so dots and lines stay crisp on retina
+        // Render at device resolution so dots and lines stay crisp on retina.
+        // Rescale existing particles into the new box rather than rebuilding, so
+        // a resize never regenerates the whole field.
         const dpr = Math.min(window.devicePixelRatio || 1, 2);
+        const prevW = width, prevH = height;
         width = window.innerWidth;
         height = window.innerHeight;
         canvas.width = Math.round(width * dpr);
@@ -259,6 +268,13 @@
         canvas.style.width = width + 'px';
         canvas.style.height = height + 'px';
         ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        if (prevW && prevH && particles.length) {
+            const sx = width / prevW, sy = height / prevH;
+            for (let i = 0; i < particles.length; i++) {
+                particles[i].x *= sx;
+                particles[i].y *= sy;
+            }
+        }
     }
 
     function Particle() {
@@ -455,28 +471,35 @@
         animationId = requestAnimationFrame(animate);
     }
 
-    // ---- Pointer tracking (mouse + touch), throttled to the canvas coords ----
-    if (!prefersReducedMotion) {
-        window.addEventListener('pointermove', function (e) {
-            mouse.x = e.clientX;
-            mouse.y = e.clientY;
-            mouse.active = true;
-        }, { passive: true });
-        window.addEventListener('pointerdown', function (e) {
+    // ---- Cursor tracking — DESKTOP ONLY (hover-capable, fine pointer) ----
+    // Touch devices get no pointer interaction: a tap has no hover to end, so it
+    // would clump nodes under the finger permanently. On touch the field just
+    // drifts on its own, which is what a background should do.
+    if (!prefersReducedMotion && CAN_HOVER) {
+        window.addEventListener('mousemove', function (e) {
             mouse.x = e.clientX;
             mouse.y = e.clientY;
             mouse.active = true;
         }, { passive: true });
         window.addEventListener('mouseleave', function () { mouse.active = false; });
+        // Also drop interaction while scrolling so the field settles back to calm
+        window.addEventListener('scroll', function () { mouse.active = false; }, { passive: true });
     }
 
+    // ---- Resize: only act on a REAL width change. ----
+    // Mobile browsers fire `resize` constantly as the URL bar shows/hides while
+    // scrolling (innerHeight changes, width doesn't). Rebuilding there is what
+    // made the background "refresh" mid-scroll. We track the last real width and
+    // ignore height-only changes; a genuine width change (rotation, desktop
+    // window resize) just re-fits the existing nodes — never regenerates them.
+    let lastWidth = window.innerWidth;
     let resizeTimer = null;
     window.addEventListener('resize', function () {
+        if (window.innerWidth === lastWidth) return; // height-only jitter → ignore
+        lastWidth = window.innerWidth;
         clearTimeout(resizeTimer);
         resizeTimer = setTimeout(function () {
-            resize();
-            buildParticles();
-            pulses = [];
+            resize();               // rescales existing particles into the new box
             if (prefersReducedMotion) drawFrame();
         }, 150);
     });
