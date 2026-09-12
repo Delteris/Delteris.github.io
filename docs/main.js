@@ -329,8 +329,8 @@
             const d = Math.hypot(this.x - mouse.x, this.y - mouse.y);
             if (d < MOUSE_RADIUS) near = 1 - d / MOUSE_RADIUS;
         }
-        const glowA = 0.07 + t * 0.07 + near * 0.28;
-        const coreA = 0.38 + t * 0.22 + near * 0.38;
+        const glowA = 0.05 + t * 0.05 + near * 0.22;
+        const coreA = 0.26 + t * 0.16 + near * 0.32;
 
         // Soft radial glow (drawn additively for a neon feel)
         const halo = r * 5;
@@ -377,7 +377,7 @@
                     ctx.beginPath();
                     ctx.moveTo(a.x, a.y);
                     ctx.lineTo(b.x, b.y);
-                    ctx.strokeStyle = 'rgba(' + BLUE + ', ' + Math.min(0.55, opacity * 0.28) + ')';
+                    ctx.strokeStyle = 'rgba(' + BLUE + ', ' + Math.min(0.4, opacity * 0.19) + ')';
                     ctx.lineWidth = 1.1;
                     ctx.stroke();
                 }
@@ -390,7 +390,7 @@
                 const p = particles[i];
                 const d = Math.hypot(p.x - mouse.x, p.y - mouse.y);
                 if (d < MOUSE_RADIUS) {
-                    const o = (1 - d / MOUSE_RADIUS) * 0.5;
+                    const o = (1 - d / MOUSE_RADIUS) * 0.35;
                     ctx.beginPath();
                     ctx.moveTo(mouse.x, mouse.y);
                     ctx.lineTo(p.x, p.y);
@@ -422,7 +422,7 @@
         const rr = 2.6 * fade + 0.6;
         const halo = rr * 4;
         const g = ctx.createRadialGradient(x, y, 0, x, y, halo);
-        g.addColorStop(0, 'rgba(' + BLUE_CORE + ', ' + (0.6 * fade) + ')');
+        g.addColorStop(0, 'rgba(' + BLUE_CORE + ', ' + (0.4 * fade) + ')');
         g.addColorStop(1, 'rgba(' + BLUE + ', 0)');
         ctx.fillStyle = g;
         ctx.beginPath();
