@@ -231,6 +231,12 @@
 
     let width = 0;
     let height = 0;
+    // The canvas box is inset from the viewport (below the navbar, above the
+    // footer), so its top-left no longer sits at (0,0). These hold that offset
+    // in CSS pixels, so pointer coords (which are viewport-relative) can be
+    // translated into the canvas's own space for the node interaction.
+    let offsetX = 0;
+    let offsetY = 0;
     let particles = [];
     let pulses = [];              // travelling light packets on the links
     let animationId = null;
@@ -262,12 +268,18 @@
         // a resize never regenerates the whole field.
         const dpr = Math.min(window.devicePixelRatio || 1, 2);
         const prevW = width, prevH = height;
-        width = window.innerWidth;
-        height = window.innerHeight;
+        // Size the field to the canvas's own CSS box — which is inset below the
+        // navbar and down to the viewport bottom — instead of the whole window,
+        // so nodes live only in that band and never drift under the navbar.
+        // (CSS controls the box via top/left/right/bottom; we don't set
+        // style.width/height here, only the backing-store resolution.)
+        const rect = canvas.getBoundingClientRect();
+        width = Math.max(1, Math.round(rect.width));
+        height = Math.max(1, Math.round(rect.height));
+        offsetX = rect.left;
+        offsetY = rect.top;
         canvas.width = Math.round(width * dpr);
         canvas.height = Math.round(height * dpr);
-        canvas.style.width = width + 'px';
-        canvas.style.height = height + 'px';
         ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
         if (prevW && prevH && particles.length) {
             const sx = width / prevW, sy = height / prevH;
@@ -468,8 +480,9 @@
     if (!prefersReducedMotion) {
         if (CAN_HOVER) {
             window.addEventListener('mousemove', function (e) {
-                mouse.x = e.clientX;
-                mouse.y = e.clientY;
+                // Translate viewport coords into the canvas's inset box
+                mouse.x = e.clientX - offsetX;
+                mouse.y = e.clientY - offsetY;
                 mouse.active = true;
             }, { passive: true });
             window.addEventListener('mouseleave', function () { mouse.active = false; });
@@ -480,8 +493,8 @@
             function trackTouch(e) {
                 if (!e.touches || !e.touches.length) return;
                 const t = e.touches[0];
-                mouse.x = t.clientX;
-                mouse.y = t.clientY;
+                mouse.x = t.clientX - offsetX;
+                mouse.y = t.clientY - offsetY;
                 mouse.active = true;
             }
             window.addEventListener('touchstart', trackTouch, { passive: true });
