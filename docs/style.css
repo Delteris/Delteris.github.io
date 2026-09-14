@@ -2554,21 +2554,28 @@ a.glass-card:hover h3,
 }
 .cl-layer {
     position: relative; border: 1.5px solid; border-radius: 16px;
-    padding: 3rem 1.25rem 1.25rem; transition: filter .3s;
+    padding: 1rem 1.25rem 1.25rem; transition: filter .3s;
 }
+/* The tab is a normal-flow header (not absolutely positioned), so however many
+   lines the algorithm string wraps to, the layer reserves exactly that height and
+   the nested box below it never gets overlapped. The QUANTUM-SAFE pill and the
+   name stay on the first line; the algorithm text is allowed to wrap under them. */
 .cl-tab {
-    position: absolute; top: 0.8rem; left: 1rem; right: 0.9rem; display: flex;
-    align-items: center; gap: 0.55rem; flex-wrap: wrap; font-family: 'Space Grotesk', monospace;
+    display: flex; align-items: center; gap: 0.4rem 0.55rem; flex-wrap: wrap;
+    font-family: 'Space Grotesk', monospace; margin-bottom: 0.9rem;
 }
 .cl-idx {
     font-size: 0.7rem; font-weight: 600; width: 1.2rem; height: 1.2rem; border-radius: 6px;
     display: grid; place-items: center; color: #0a121c; flex: none;
 }
-.cl-nm  { font-size: 0.82rem; font-weight: 600; color: var(--text-main); }
-.cl-alg { font-size: 0.63rem; color: var(--cl-muted); }
+.cl-nm  { font-size: 0.82rem; font-weight: 600; color: var(--text-main); order: 1; }
+/* Algorithm string drops to its own full-width line, below the name + pill. This
+   keeps the top line clean (name on the left, status pill on the right) and lets
+   the long cipher text wrap freely without ever pushing into the nested box. */
+.cl-alg { font-size: 0.63rem; color: var(--cl-muted); order: 3; flex-basis: 100%; line-height: 1.4; }
 .cl-pq  {
     font-size: 0.56rem; font-weight: 700; letter-spacing: .04em; padding: 2px 6px;
-    border-radius: 5px; margin-left: auto; white-space: nowrap;
+    border-radius: 5px; margin-left: auto; white-space: nowrap; order: 2;
 }
 .cl-link { border-color: var(--cl-link); background: linear-gradient(180deg, rgba(67,192,143,.09), rgba(67,192,143,.03)); }
 .cl-link .cl-idx { background: var(--cl-link); }  .cl-link .cl-pq { background: var(--cl-link); color: var(--cl-link-d); }
@@ -2659,15 +2666,11 @@ a.glass-card:hover h3,
    scroll canvas — a viewBox can't reflow, so we keep it legible and swipeable
    and signal that with a subtle edge fade + hint). */
 @media (max-width: 768px) {
-    .cl-layer { padding: 3.25rem 0.85rem 0.85rem; }
-    .cl-tab {
-        left: 0.75rem; right: 0.75rem; top: 0.7rem;
-        gap: 0.35rem 0.5rem;
-    }
-    /* The algorithm string is the least critical part of the tab — let it drop
-       to its own line so the layer name + QUANTUM-SAFE badge never collide. */
-    .cl-alg { flex-basis: 100%; order: 3; margin-top: 0.1rem; }
-    .cl-pq  { margin-left: 0; order: 2; }
+    /* Tighter padding on small screens; the tab is normal-flow so it always
+       reserves its own (possibly multi-line) height — no fixed padding-top to
+       guess at, and nothing overlaps the nested box. */
+    .cl-layer { padding: 0.85rem 0.85rem 0.85rem; }
+    .cl-tab { gap: 0.3rem 0.5rem; margin-bottom: 0.75rem; }
 
     .cl-verdict, .cl-control, .cl-stage { max-width: 100%; }
 
@@ -2709,6 +2712,7 @@ a.glass-card:hover h3,
     }
     .cl-tablecard td.cl-layercell::before { content: none; }
     .cl-tablecard .cl-mono { font-size: 0.72rem; word-break: break-word; }
+}
 
 @media (max-width: 620px) {
     /* 5 observers → a tidy grid instead of a ragged 3+2 wrap. */
