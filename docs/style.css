@@ -178,12 +178,21 @@ button:focus-visible,
     left: 0;
     width: 100%;
     /* <canvas> is a replaced element, so top+bottom won't stretch it — give it an
-       explicit height. dvh tracks the real viewport as the mobile URL bar hides,
-       with a vh fallback for browsers that don't support dvh. */
+       explicit height. We deliberately use lvh (the LARGEST viewport height, with
+       the mobile URL bar retracted) as the CSS fallback, NOT dvh: dvh changes on
+       every scroll frame as the URL bar shows/hides, which forces the browser to
+       re-rasterize this fixed canvas mid-scroll — the "reload on scroll" judder.
+       lvh is a single stable value, so the background stays put while scrolling.
+       JS then pins an exact pixel height on top of this (see resize()). */
     height: calc(100vh - var(--nav-h));
-    height: calc(100dvh - var(--nav-h));
+    height: calc(100lvh - var(--nav-h));
     z-index: -1;
     background: transparent;
+    /* Promote to its own compositor layer so scrolling the page never repaints
+       it, and isolate its paint work from the rest of the document. */
+    will-change: transform;
+    contain: layout paint;
+    pointer-events: none;
 }
 
 /* ------------------------------------------------------------
@@ -1153,6 +1162,89 @@ nav {
     background-color: var(--accent-blue);
     border-radius: 50%;
     box-shadow: 0 0 10px var(--accent-blue);
+}
+
+/* ------------------------------------------------------------
+   Post-quantum industry-timeline proof point (on the security page)
+   ------------------------------------------------------------ */
+.pq-timeline {
+    margin-top: 2.5rem;
+    padding-top: 2.25rem;
+    border-top: 1px solid rgba(59, 130, 246, 0.18);
+    text-align: left;
+}
+.pq-timeline-lead {
+    color: var(--text-muted);
+    margin-bottom: 1.75rem;
+}
+.pq-timeline-lead em {
+    color: var(--text-main);
+    font-style: normal;
+    font-weight: 600;
+}
+.pq-timeline-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.75rem;
+}
+.pq-timeline-card {
+    background: rgba(10, 18, 36, 0.55);
+    border: 1px solid rgba(59, 130, 246, 0.22);
+    border-radius: var(--radius);
+    padding: 1.5rem 1.5rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+.pq-year {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2.6rem;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--accent-blue);
+    text-shadow: 0 0 18px rgba(59, 130, 246, 0.28);
+}
+.pq-who {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--text-main);
+    margin-bottom: 0.4rem;
+}
+.pq-quote {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.55;
+    margin: 0 0 0.75rem;
+}
+.pq-src {
+    margin-top: auto;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--accent-blue);
+    text-decoration: none;
+    letter-spacing: 0.01em;
+}
+.pq-src:hover {
+    text-decoration: underline;
+}
+.pq-timeline-kicker {
+    color: var(--text-muted);
+    margin: 0;
+}
+.pq-timeline-kicker strong {
+    color: var(--text-main);
+}
+@media (max-width: 640px) {
+    .pq-timeline-grid {
+        grid-template-columns: 1fr;
+    }
+    .pq-year {
+        font-size: 2.2rem;
+    }
 }
 
 /* ------------------------------------------------------------
