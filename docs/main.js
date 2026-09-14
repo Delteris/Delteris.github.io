@@ -263,21 +263,30 @@
     }
 
     function resize() {
-        // Render at device resolution so dots and lines stay crisp on retina.
-        // Rescale existing particles into the new box rather than rebuilding, so
-        // a resize never regenerates the whole field.
         const dpr = Math.min(window.devicePixelRatio || 1, 2);
         const prevW = width, prevH = height;
-        // Size the field to the canvas's own CSS box — which is inset below the
-        // navbar and down to the viewport bottom — instead of the whole window,
-        // so nodes live only in that band and never drift under the navbar.
-        // (CSS controls the box via top/left/right/bottom; we don't set
-        // style.width/height here, only the backing-store resolution.)
-        const rect = canvas.getBoundingClientRect();
-        width = Math.max(1, Math.round(rect.width));
-        height = Math.max(1, Math.round(rect.height));
-        offsetX = rect.left;
-        offsetY = rect.top;
+        // Width comes from the live box; height is PINNED to a stable value so the
+        // canvas never resizes mid-scroll. On mobile the URL bar shows/hides as you
+        // scroll, which changes the viewport height (and dvh) continuously — if the
+        // canvas tracked that, the browser would re-rasterize this fixed layer on
+        // every scroll frame (the "reload on scroll" the user saw). Instead we lock
+        // the height to the TALLEST the band can be (largest viewport, URL bar
+        // retracted) once, and set it explicitly in pixels so CSS dvh/lvh can't
+        // move it. The footer still masks the bottom, so an over-tall canvas is
+        // invisible; a stable canvas is smooth.
+        const navH = offsetY || canvas.getBoundingClientRect().top || 0;
+        const stableViewportH = Math.max(
+            window.innerHeight,
+            document.documentElement.clientHeight || 0
+        );
+        width = Math.max(1, Math.round(window.innerWidth));
+        height = Math.max(1, Math.round(stableViewportH - navH));
+        const r0 = canvas.getBoundingClientRect();
+        offsetX = r0.left;
+        offsetY = r0.top;
+        // Pin the CSS box height in pixels (overrides the lvh fallback) so it can
+        // never be nudged by URL-bar-driven viewport changes.
+        canvas.style.height = height + 'px';
         canvas.width = Math.round(width * dpr);
         canvas.height = Math.round(height * dpr);
         ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
