@@ -26,9 +26,9 @@
     },
     {
       "@type": "WebPage",
-      "name": "Elenchon WPS Manager — Features",
+      "name": "Elenchon Atlas — Features",
       "url": "https://delteris.com/wps-manager-features.html",
-      "description": "The full Elenchon WPS Manager capability set — native Excel and PDF import, human-reviewed edits, a versioned register, a structured library with faceted search, preview against the source document, the linked WPQR/pWPS chain, and a heat-input helper — shown in the app.",
+      "description": "The full Elenchon Atlas capability set — native Excel and PDF import, human-reviewed edits, a versioned register, a structured library with faceted search, preview against the source document, the linked WPQR/pWPS chain, and a heat-input helper — shown in the app.",
       "isPartOf": {
         "@type": "WebSite",
         "name": "Delteris",
@@ -36,7 +36,7 @@
       },
       "about": {
         "@type": "SoftwareApplication",
-        "name": "Elenchon WPS Manager",
+        "name": "Elenchon Atlas",
         "applicationCategory": "BusinessApplication",
         "operatingSystem": "Cloud / Web",
         "offers": {

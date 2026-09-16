@@ -13,7 +13,7 @@
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "WPS Manager",
+          "name": "Atlas",
           "item": "https://delteris.com/wps-management-software.html"
         },
         {
@@ -26,7 +26,7 @@
     },
     {
       "@type": "SoftwareApplication",
-      "name": "Elenchon WPS Manager — WPS Review & Approval Software",
+      "name": "Elenchon Atlas — WPS Review & Approval Software",
       "applicationCategory": "BusinessApplication",
       "applicationSubCategory": "WPS Management Software",
       "operatingSystem": "Cloud",
@@ -92,7 +92,7 @@
           "name": "Does it rebuild my whole spreadsheet?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No. WPS Manager patches only the approved cells into your own workbook and leaves everything else exactly as you had it. Your file is never regenerated from a model, and every approved change-set is versioned so you can roll back."
+            "text": "No. Atlas patches only the approved cells into your own workbook and leaves everything else exactly as you had it. Your file is never regenerated from a model, and every approved change-set is versioned so you can roll back."
           }
         },
         {

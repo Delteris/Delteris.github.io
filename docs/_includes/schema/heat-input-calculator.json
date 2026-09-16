@@ -5,13 +5,13 @@
           "@type": "BreadcrumbList",
           "itemListElement": [
             { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://delteris.com/" },
-            { "@type": "ListItem", "position": 2, "name": "WPS Manager", "item": "https://delteris.com/wps-management-software.html" },
+            { "@type": "ListItem", "position": 2, "name": "Atlas", "item": "https://delteris.com/wps-management-software.html" },
             { "@type": "ListItem", "position": 3, "name": "Welding Heat Input Calculator", "item": "https://delteris.com/heat-input-calculator.html" }
           ]
         },
         {
           "@type": "SoftwareApplication",
-          "name": "Elenchon WPS Manager — Welding Heat Input Calculator",
+          "name": "Elenchon Atlas — Welding Heat Input Calculator",
           "applicationCategory": "BusinessApplication",
           "applicationSubCategory": "WPS Management Software",
           "operatingSystem": "Cloud",
