@@ -468,12 +468,6 @@ nav {
 
 .lang-menu-input:focus { border-color: var(--accent-blue); }
 
-/* Touch devices: hide the language search. Only a few languages, and an
-   auto-focused input pops the on-screen keyboard over the language list. */
-@media (pointer: coarse) {
-    .lang-menu-search { display: none; }
-}
-
 .lang-menu-list {
     max-height: 16rem;
     overflow-y: auto;

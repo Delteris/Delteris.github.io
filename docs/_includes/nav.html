@@ -142,17 +142,18 @@
                     <div class="lang-menu-search">
                         <input type="text" id="lang-menu-search" class="lang-menu-input" placeholder="{% if L == 'pt' %}Procurar idioma…{% elsif L == 'es' %}Buscar idioma…{% else %}Search language…{% endif %}" autocomplete="off" aria-label="{% if L == 'pt' %}Procurar idioma{% elsif L == 'es' %}Buscar idioma{% else %}Search language{% endif %}">
                     </div>
+                    {%- if L == 'pt' %}{% assign en_name = 'Inglês' %}{% assign pt_name = 'Português' %}{% assign es_name = 'Espanhol' %}{%- elsif L == 'es' %}{% assign en_name = 'Inglés' %}{% assign pt_name = 'Portugués' %}{% assign es_name = 'Español' %}{%- else %}{% assign en_name = 'English' %}{% assign pt_name = 'Portuguese' %}{% assign es_name = 'Spanish' %}{% endif -%}
                     <div class="lang-menu-list">
-                        <a href="{{ en_target }}" hreflang="en" class="lang-option{% if L == 'en' %} is-current{% endif %}" role="option" aria-selected="{% if L == 'en' %}true{% else %}false{% endif %}" data-search="english english en">
-                            <span class="lang-option-name">English</span>
+                        <a href="{{ en_target }}" hreflang="en" class="lang-option{% if L == 'en' %} is-current{% endif %}" role="option" aria-selected="{% if L == 'en' %}true{% else %}false{% endif %}" data-search="english inglês ingles inglés en">
+                            <span class="lang-option-name">{{ en_name }}{% unless L == 'en' %} / English{% endunless %}</span>
                             <span class="lang-option-code">EN</span>
                         </a>
-                        <a href="{{ pt_target }}" hreflang="pt-PT" class="lang-option{% if L == 'pt' %} is-current{% endif %}" role="option" aria-selected="{% if L == 'pt' %}true{% else %}false{% endif %}" data-search="português portugues portuguese pt">
-                            <span class="lang-option-name">Português</span>
+                        <a href="{{ pt_target }}" hreflang="pt-PT" class="lang-option{% if L == 'pt' %} is-current{% endif %}" role="option" aria-selected="{% if L == 'pt' %}true{% else %}false{% endif %}" data-search="portuguese português portugues portugués pt">
+                            <span class="lang-option-name">{{ pt_name }}{% unless L == 'pt' %} / Português{% endunless %}</span>
                             <span class="lang-option-code">PT</span>
                         </a>
-                        <a href="{{ es_target }}" hreflang="es-ES" class="lang-option{% if L == 'es' %} is-current{% endif %}" role="option" aria-selected="{% if L == 'es' %}true{% else %}false{% endif %}" data-search="español espanol spanish castellano es">
-                            <span class="lang-option-name">Español</span>
+                        <a href="{{ es_target }}" hreflang="es-ES" class="lang-option{% if L == 'es' %} is-current{% endif %}" role="option" aria-selected="{% if L == 'es' %}true{% else %}false{% endif %}" data-search="spanish español espanol castellano espanhol es">
+                            <span class="lang-option-name">{{ es_name }}{% unless L == 'es' %} / Español{% endunless %}</span>
                             <span class="lang-option-code">ES</span>
                         </a>
                     </div>
