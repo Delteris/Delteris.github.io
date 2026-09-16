@@ -28,7 +28,7 @@
       "keywords": "welder qualification management software, WPQ software, welder qualification tracking, welder qualification tracker, welder continuity tracking, welder certification tracking, ISO 9606 welder qualification, ASME IX welder qualification, welding qualification expiry reminder, welder ticket tracking",
       "featureList": [
         "One record per welder per qualification, with process, position, material and range fields",
-        "Two independent clocks — expiry date and continuity date — tracked and warned separately",
+        "Two independent clocks — an expiry date plus a reverification interval (ISO reverify-every-X-months or ASME qualified-for-X-months) — tracked and warned separately",
         "Editable warning lead times (for example a month out, two weeks, the week of)",
         "Welder-by-process qualification grid, each cell showing that process's soonest-due qualification, colour-coded",
         "Fully filterable roster — by welder ID, process, standard, or recorded qualification detail such as whether knowledge was tested",
@@ -36,6 +36,7 @@
         "Email reminders to a recipient list (up to ten addresses), opt-in, plus dashboard visibility",
         "Requalification recorded behind a password signature as an immutable, attributed stamp",
         "Optional qualification certificate attached to the record and viewable (scan, PDF or image)",
+        "Side-by-side file viewer — choose any document on each side (WPS to WPS, WPQ to WPQR, certificate to WPS)",
         "Retained history — every qualification a welder has ever held is kept, never overwritten",
         "Pre-built qualification variables for ISO 9606, ASME IX and AWS, plus custom fields",
         "Records and warns; does not rule on whether a qualification is valid"
