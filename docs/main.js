@@ -136,8 +136,11 @@
         const openLang = function () {
             langMenu.hidden = false;
             langBtn.setAttribute('aria-expanded', 'true');
-            // Focus the search box so the user can type immediately (desktop).
-            if (langSearch) { window.setTimeout(function () { langSearch.focus(); }, 0); }
+            // Focus the search box so the user can type immediately — desktop only.
+            // On touch devices this summons the on-screen keyboard over the language list.
+            if (langSearch && !(window.matchMedia && window.matchMedia('(pointer: coarse)').matches)) {
+                window.setTimeout(function () { langSearch.focus(); }, 0);
+            }
         };
 
         const filterLang = function (raw) {
