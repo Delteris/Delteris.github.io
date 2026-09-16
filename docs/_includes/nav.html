@@ -16,7 +16,7 @@
      Products word and is toggled client-side by main.js to the visitor's last dropdown choice. {%- endcomment %}
 {%- assign is_wpsm = false -%}
 {%- if page.url contains 'wps-management-software' or page.url contains 'wps-manager-features' or page.url contains 'wps-manager-contact' or page.url contains 'wps-manager-security' or page.url contains 'wps-import-software' or page.url contains 'wps-review-approval-software' or page.url contains 'wps-library-search-software' or page.url contains 'wps-preview-verification' or page.url contains 'heat-input-calculator' or page.url contains 'welder-qualification-management-software' %}{% assign is_wpsm = true %}{% endif -%}
-{%- if L == 'pt' %}{% assign wpsm_home = '/pt/wps-management-software.html' %}{% assign wpsm_contact = '/pt/wps-manager-contact.html' %}{% elsif L == 'es' %}{% assign wpsm_home = '/es/wps-management-software.html' %}{% assign wpsm_contact = '/es/wps-manager-contact.html' %}{% else %}{% assign wpsm_home = '/wps-management-software.html' %}{% assign wpsm_contact = '/wps-manager-contact.html' %}{% endif -%}
+{%- if L == 'pt' %}{% assign wpsm_home = '/pt/wps-management-software.html' %}{% assign wpsm_contact = '/pt/wps-manager-contact.html' %}{% assign wpsm_wpq = '/pt/welder-qualification-management-software.html' %}{% elsif L == 'es' %}{% assign wpsm_home = '/es/wps-management-software.html' %}{% assign wpsm_contact = '/es/wps-manager-contact.html' %}{% assign wpsm_wpq = '/es/welder-qualification-management-software.html' %}{% else %}{% assign wpsm_home = '/wps-management-software.html' %}{% assign wpsm_contact = '/wps-manager-contact.html' %}{% assign wpsm_wpq = '/welder-qualification-management-software.html' %}{% endif -%}
 {%- comment %} Dropdown button label = the current product family, else the neutral Products word. {%- endcomment %}
     <nav aria-label="{% if L == 'pt' %}Navegação principal{% elsif L == 'es' %}Navegación principal{% else %}Main navigation{% endif %}">
         <a href="{% if L == 'pt' %}/pt/{% elsif L == 'es' %}/es/{% else %}/{% endif %}" class="logo nav-logo">
@@ -48,6 +48,7 @@
             </div>
 {%- if is_wpsm %}
             <a href="{% if L == 'pt' %}/pt/wps-manager-features.html{% else %}/wps-manager-features.html{% endif %}">Funcionalidades</a>
+            <a href="{{ wpsm_wpq }}"{% if page.url contains 'welder-qualification-management-software' %} aria-current="page"{% endif %}>Qualificação de Soldadores</a>
             <a href="{{ wpsm_home }}#onboarding">Como Funciona</a>
             <a href="{% if L == 'pt' %}/pt/wps-manager-security.html{% else %}/wps-manager-security.html{% endif %}"{% if page.url contains 'wps-manager-security' %} aria-current="page"{% endif %}>Segurança</a>
             <a href="{{ wpsm_home }}#pricing">Preços</a>
@@ -79,6 +80,7 @@
             </div>
 {%- if is_wpsm %}
             <a href="/es/wps-manager-features.html">Funcionalidades</a>
+            <a href="{{ wpsm_wpq }}"{% if page.url contains 'welder-qualification-management-software' %} aria-current="page"{% endif %}>Cualificación de Soldadores</a>
             <a href="{{ wpsm_home }}#onboarding">Cómo Funciona</a>
             <a href="/es/wps-manager-security.html"{% if page.url contains 'wps-manager-security' %} aria-current="page"{% endif %}>Seguridad</a>
             <a href="{{ wpsm_home }}#pricing">Precios</a>
@@ -110,6 +112,7 @@
             </div>
 {%- if is_wpsm %}
             <a href="{% if L == 'pt' %}/pt/wps-manager-features.html{% else %}/wps-manager-features.html{% endif %}">Features</a>
+            <a href="{{ wpsm_wpq }}"{% if page.url contains 'welder-qualification-management-software' %} aria-current="page"{% endif %}>Welder Qualification</a>
             <a href="{{ wpsm_home }}#onboarding">How It Works</a>
             <a href="{% if L == 'pt' %}/pt/wps-manager-security.html{% else %}/wps-manager-security.html{% endif %}"{% if page.url contains 'wps-manager-security' %} aria-current="page"{% endif %}>Security</a>
             <a href="{{ wpsm_home }}#pricing">Pricing</a>
