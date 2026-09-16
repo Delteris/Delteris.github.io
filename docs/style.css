@@ -1594,6 +1594,19 @@ footer {
         margin-top: 0.5rem;
         box-shadow: none;
     }
+
+    /* While the search is focused (keyboard up), pin the menu just under the
+       nav bar so the options stay visible above the on-screen keyboard. */
+    .lang-menu.lang-typing {
+        position: fixed;
+        top: calc(var(--nav-h) + 0.5rem);
+        left: 5%;
+        right: 5%;
+        width: auto;
+        margin-top: 0;
+        box-shadow: 0 18px 40px rgba(0, 0, 0, 0.55);
+        z-index: 1200;
+    }
 }
 
 @media (max-width: 900px) {
