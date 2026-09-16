@@ -127,6 +127,7 @@
         const langEmpty = langMenu.querySelector('.lang-menu-empty');
 
         const closeLang = function () {
+            langMenu.classList.remove('lang-typing');
             if (langMenu.hidden) return;
             langMenu.hidden = true;
             langBtn.setAttribute('aria-expanded', 'false');
@@ -164,6 +165,9 @@
             langSearch.addEventListener('input', function () { filterLang(langSearch.value); });
             // Keep clicks inside the search box from bubbling to the close-on-outside handler.
             langSearch.addEventListener('click', function (e) { e.stopPropagation(); });
+            // While typing, pin the menu above the keyboard (see .lang-typing CSS).
+            langSearch.addEventListener('focus', function () { langMenu.classList.add('lang-typing'); });
+            langSearch.addEventListener('blur', function () { langMenu.classList.remove('lang-typing'); });
         }
 
         // Close on outside click and on Escape.
