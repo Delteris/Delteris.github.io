@@ -6,11 +6,11 @@
      field to every page and one more entry to the list below. {%- endcomment %}
 {%- assign L = page.lang | default: 'en' -%}
 {%- if L == 'pt' %}{% assign current_code = 'PT' %}{% elsif L == 'es' %}{% assign current_code = 'ES' %}{% else %}{% assign current_code = 'EN' %}{% endif %}
-{%- comment %} WPS Manager context: on any WPS Manager page (landing or its contact page)
+{%- comment %} Atlas context: on any Atlas page (landing or its contact page)
      the top nav swaps from Elenchon's links to WPS-Manager-specific ones, so a visitor
      never gets bounced into Elenchon's on-premise Pricing/Security/etc. {%- endcomment %}
-{%- comment %} is_wpsm drives which secondary links show. WPS Manager URLs: the landing
-     (wps-management-software), the contact page (wps-manager-contact), and every WPS Manager
+{%- comment %} is_wpsm drives which secondary links show. Atlas URLs: the landing
+     (wps-management-software), the contact page (wps-manager-contact), and every Atlas
      capability page (wps-import / wps-review-approval / wps-library-search / wps-preview-verification
      / heat-input-calculator). The dropdown button LABEL is not set here — it stays the neutral
      Products word and is toggled client-side by main.js to the visitor's last dropdown choice. {%- endcomment %}
@@ -40,8 +40,8 @@
                         <span class="nav-dropdown-name">Elenchon</span>
                         <span class="nav-dropdown-desc">Rastreabilidade, qualificação e captura no chão de fábrica — no local</span>
                     </a>
-                    <a href="/pt/wps-management-software.html" role="menuitem" data-product="wpsm" data-product-label="WPS Manager"{% if page.url == '/pt/wps-management-software.html' %} aria-current="page"{% endif %}>
-                        <span class="nav-dropdown-name">Elenchon WPS Manager</span>
+                    <a href="/pt/wps-management-software.html" role="menuitem" data-product="wpsm" data-product-label="Atlas"{% if page.url == '/pt/wps-management-software.html' %} aria-current="page"{% endif %}>
+                        <span class="nav-dropdown-name">Elenchon Atlas</span>
                         <span class="nav-dropdown-desc">Gestão de WPS na cloud — importe, organize e encontre</span>
                     </a>
                 </div>
@@ -71,8 +71,8 @@
                         <span class="nav-dropdown-name">Elenchon</span>
                         <span class="nav-dropdown-desc">Trazabilidad, cualificación y captura en planta — en local</span>
                     </a>
-                    <a href="/es/wps-management-software.html" role="menuitem" data-product="wpsm" data-product-label="WPS Manager"{% if page.url == '/es/wps-management-software.html' %} aria-current="page"{% endif %}>
-                        <span class="nav-dropdown-name">Elenchon WPS Manager</span>
+                    <a href="/es/wps-management-software.html" role="menuitem" data-product="wpsm" data-product-label="Atlas"{% if page.url == '/es/wps-management-software.html' %} aria-current="page"{% endif %}>
+                        <span class="nav-dropdown-name">Elenchon Atlas</span>
                         <span class="nav-dropdown-desc">Gestión de WPS en la nube — importe, organice y encuentre</span>
                     </a>
                 </div>
@@ -102,8 +102,8 @@
                         <span class="nav-dropdown-name">Elenchon</span>
                         <span class="nav-dropdown-desc">On-premise traceability, qualification &amp; shop-floor capture</span>
                     </a>
-                    <a href="/wps-management-software.html" role="menuitem" data-product="wpsm" data-product-label="WPS Manager"{% if page.url == '/wps-management-software.html' %} aria-current="page"{% endif %}>
-                        <span class="nav-dropdown-name">Elenchon WPS Manager</span>
+                    <a href="/wps-management-software.html" role="menuitem" data-product="wpsm" data-product-label="Atlas"{% if page.url == '/wps-management-software.html' %} aria-current="page"{% endif %}>
+                        <span class="nav-dropdown-name">Elenchon Atlas</span>
                         <span class="nav-dropdown-desc">Cloud WPS management — import, organize &amp; find</span>
                     </a>
                 </div>

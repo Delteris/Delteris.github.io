@@ -3,7 +3,7 @@
       "@graph": [
         {
           "@type": "ContactPage",
-          "name": "Get Early Access — Elenchon WPS Manager",
+          "name": "Get Early Access — Elenchon Atlas",
           "url": "https://delteris.com/wps-manager-contact.html",
           "publisher": { "@id": "https://delteris.com/#organization" }
         },

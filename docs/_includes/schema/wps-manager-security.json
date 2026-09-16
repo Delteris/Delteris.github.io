@@ -5,14 +5,14 @@
           "@type": "BreadcrumbList",
           "itemListElement": [
             { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://delteris.com/" },
-            { "@type": "ListItem", "position": 2, "name": "WPS Manager", "item": "https://delteris.com/wps-management-software.html" },
-            { "@type": "ListItem", "position": 3, "name": "WPS Manager Security", "item": "https://delteris.com/wps-manager-security.html" }
+            { "@type": "ListItem", "position": 2, "name": "Atlas", "item": "https://delteris.com/wps-management-software.html" },
+            { "@type": "ListItem", "position": 3, "name": "Atlas Security", "item": "https://delteris.com/wps-manager-security.html" }
           ]
         },
         {
           "@type": "WebPage",
-          "name": "Elenchon WPS Manager — Security",
-          "description": "How Elenchon WPS Manager secures a cloud WPS register: a full searchable audit trail, role-based access with a read-only inspector seat, single-tenant isolation, EU hosting, and encryption in transit.",
+          "name": "Elenchon Atlas — Security",
+          "description": "How Elenchon Atlas secures a cloud WPS register: a full searchable audit trail, role-based access with a read-only inspector seat, single-tenant isolation, EU hosting, and encryption in transit.",
           "isPartOf": { "@id": "https://delteris.com/wps-management-software.html" },
           "about": { "@id": "https://delteris.com/#organization" }
         },
@@ -23,7 +23,7 @@
             {
               "@type": "Question",
               "name": "Is my WPS data isolated from other customers?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Yes. Elenchon WPS Manager is single-tenant: your register and documents live in their own database and are never pooled with another shop's. It's the same isolation discipline as the on-premise Elenchon platform, applied to your cloud tenant." }
+              "acceptedAnswer": { "@type": "Answer", "text": "Yes. Elenchon Atlas is single-tenant: your register and documents live in their own database and are never pooled with another shop's. It's the same isolation discipline as the on-premise Elenchon platform, applied to your cloud tenant." }
             },
             {
               "@type": "Question",

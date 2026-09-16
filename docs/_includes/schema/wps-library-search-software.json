@@ -13,7 +13,7 @@
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "WPS Manager",
+          "name": "Atlas",
           "item": "https://delteris.com/wps-management-software.html"
         },
         {
@@ -26,7 +26,7 @@
     },
     {
       "@type": "SoftwareApplication",
-      "name": "Elenchon WPS Manager — WPS Library & Search Software",
+      "name": "Elenchon Atlas — WPS Library & Search Software",
       "applicationCategory": "BusinessApplication",
       "applicationSubCategory": "WPS Management Software",
       "operatingSystem": "Cloud",
