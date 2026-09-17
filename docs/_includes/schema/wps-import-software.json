@@ -43,7 +43,7 @@
       ],
       "offers": {
         "@type": "Offer",
-        "price": "90",
+        "price": "80",
         "priceCurrency": "EUR",
         "priceValidUntil": "2028-12-31",
         "url": "https://delteris.com/wps-management-software.html#pricing",

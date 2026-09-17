@@ -43,7 +43,7 @@
       ],
       "offers": {
         "@type": "Offer",
-        "price": "90",
+        "price": "80",
         "priceCurrency": "EUR",
         "url": "https://delteris.com/wps-management-software.html#pricing",
         "availability": "https://schema.org/InStock"
