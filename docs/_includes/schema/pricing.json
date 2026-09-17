@@ -25,7 +25,7 @@
             "url": "https://delteris.com/pricing.html",
             "price": "390.00",
             "priceCurrency": "EUR",
-            "availability": "https://schema.org/InStock",
+            "availability": "https://schema.org/PreOrder", "availabilityStarts": "2027-01-01",
             "priceSpecification": {
               "@type": "UnitPriceSpecification",
               "price": "390.00",
@@ -44,7 +44,7 @@
             "url": "https://delteris.com/pricing.html",
             "price": "790.00",
             "priceCurrency": "EUR",
-            "availability": "https://schema.org/InStock",
+            "availability": "https://schema.org/PreOrder", "availabilityStarts": "2027-01-01",
             "priceSpecification": {
               "@type": "UnitPriceSpecification",
               "price": "790.00",

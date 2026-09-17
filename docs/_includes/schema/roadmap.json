@@ -5,7 +5,7 @@
           "@type": "WebPage",
           "name": "Product Roadmap",
           "url": "https://delteris.com/roadmap.html",
-          "description": "Elenchon's development plan following deployment: September go-live, months 1-5 of refinement in real use, and a major feature delivery at month 6.",
+          "description": "Elenchon's development plan following deployment: Q1 2027 go-live, months 1-5 of refinement in real use, and a major feature delivery at month 6.",
           "publisher": { "@id": "https://delteris.com/#organization" }
         },
         {
@@ -19,7 +19,7 @@
           "@type": "ItemList",
           "name": "Elenchon product roadmap milestones",
           "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Deployment & Rollout (September)", "description": "On-site installation and configuration of the local server, with role-based training and the first WPS records, qualifications, work types and project structures entered alongside your team." },
+            { "@type": "ListItem", "position": 1, "name": "Deployment & Rollout (Q1 2027)", "description": "On-site installation and configuration of the local server, with role-based training and the first WPS records, qualifications, work types and project structures entered alongside your team." },
             { "@type": "ListItem", "position": 2, "name": "Refinement in Real Use (Months 1-5)", "description": "Continuous UI and workflow refinement, feature tuning in response to real use, and new document templates and export formats on request." },
             { "@type": "ListItem", "position": 3, "name": "Granular NDT Tracking (Month 6, Standard tier)", "description": "Deep, integrated Non-Destructive Testing tracking delivered natively to Standard users — test requests, results, and their link to the specific joint and repair cycle." },
             { "@type": "ListItem", "position": 4, "name": "PWHT Cycle Tracking (Month 6, Standard tier)", "description": "Post-weld heat treatment tracked by total number of cycles and total cycle time, tied to the joints it applies to." },
