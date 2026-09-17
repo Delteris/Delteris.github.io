@@ -3606,35 +3606,9 @@ button.app-figure-frame:focus-visible .app-figure-zoom-hint {
 
 /* ------------------------------------------------------------
    Atlas band (homepage) — the live cloud product, signed in gold.
-   Gold stays ornamental (side rims, rule, dot, pill outlines); lettering
+   Gold stays ornamental (rule, dot, pill outlines); lettering
    and buttons stay blue, per the gold-accent rule above.
    ------------------------------------------------------------ */
-.cta-band.atlas-band {
-    position: relative;
-}
-
-/* Gold as a quiet rim-light on the two SIDE edges only: a 1px metallic
-   line on each side, brightest at mid-height and fading out before the
-   corners. No top rim, no glow — the card keeps the site's blue frame. */
-.cta-band.atlas-band::before,
-.cta-band.atlas-band::after {
-    content: "";
-    position: absolute;
-    top: 18%;
-    bottom: 18%;
-    width: 1px;
-    background: linear-gradient(180deg,
-        rgba(201, 165, 63, 0) 0%,
-        rgba(169, 131, 47, 0.75) 25%,
-        rgba(255, 246, 216, 0.95) 50%,
-        rgba(169, 131, 47, 0.75) 75%,
-        rgba(201, 165, 63, 0) 100%);
-    pointer-events: none;
-}
-
-.cta-band.atlas-band::before { left: -1px; }
-.cta-band.atlas-band::after  { right: -1px; }
-
 .atlas-band .gold-rule {
     margin: -0.25rem auto 1.4rem;
 }
