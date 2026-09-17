@@ -3518,6 +3518,8 @@ button.app-figure-frame:focus-visible .app-figure-zoom-hint {
     margin: 1.5rem auto 0;
 }
 
+.summary-panel p + p,
+.compliance-panel p + p,
 .summary-panel .feature-list + p,
 .compliance-panel .feature-list + p,
 .cta-band .feature-list + p {
