@@ -17,7 +17,7 @@ alt_url: "/security.html"
         <div class="hero-content">
             <span class="hero-eyebrow">Com a Tecnologia Phrakton</span>
             <h1 class="text-glow">Segurança Zero-Trust.<br>Transparente para Si. Inalcançável para Eles.</h1>
-            <p class="hero-sub">O Phrakton é a camada de rede zero-trust da Delteris, construída sobre o OpenZiti. Abstrai a sua rede por completo: a infraestrutura da sua fábrica torna-se invisível para agentes de ameaça externos, mantendo-se ao mesmo tempo acessível de forma transparente para o pessoal autorizado — com Cifragem Ponta-a-Ponta Resistente a Computação Quântica para a aplicação que corre por baixo, e suporte para isolamento criptográfico total entre instalações.</p>
+            <p class="hero-sub">O Phrakton é a camada de rede zero-trust da Delteris, construída sobre o OpenZiti. A sua fábrica torna-se invisível para atacantes externos, mas continua acessível a pessoas autorizadas — com cifragem ponta a ponta resistente a computação quântica e isolamento criptográfico total entre instalações, se o quiser.</p>
             <div class="cta-group">
                 <a href="/pt/contact.html" class="btn btn-primary">Entrar na Lista de Lançamento</a>
                 <a href="/pt/pricing.html" class="btn btn-secondary">Ver a Garantia de Disponibilidade</a>
@@ -33,7 +33,12 @@ alt_url: "/security.html"
     <section class="page-section container" id="what-is-phrakton">
         <div class="summary-panel">
             <h2 class="text-glow">Uma Rede que Não Está Lá</h2>
-            <p>A segurança de rede convencional guarda a porta: firewalls, VPN e portas abertas que têm de ser defendidas 24 horas por dia. O Phrakton retira a porta. Os seus serviços não têm portas à escuta expostas à internet pública — não há nada para analisar, nada para sondar e nada por onde se mover lateralmente. As ligações são estabelecidas apenas para o exterior e mediadas por identidade criptográfica, por isso um recurso só é alcançável depois de um dispositivo provar quem é. Para todos os outros, a sua fábrica simplesmente não existe na rede.</p>
+            <p>A segurança convencional guarda a porta — firewalls, VPN e portas abertas defendidas a toda a hora. O Phrakton elimina a porta.</p>
+            <ul class="feature-list">
+                <li><strong>Sem portas à escuta</strong> na internet pública — nada para varrer, sondar ou atravessar.</li>
+                <li><strong>Ligações apenas de saída</strong>, mediadas por identidade criptográfica.</li>
+                <li><strong>Acessível só depois de um dispositivo provar quem é.</strong> Para todos os outros, a sua fábrica não está na rede.</li>
+            </ul>
         </div>
     </section>
 
@@ -41,7 +46,7 @@ alt_url: "/security.html"
         <div class="section-header">
             <span class="eyebrow">Princípios Fundamentais</span>
             <h2>Zero Trust, Cifragem Ponta-a-Ponta, Criptografia Resistente a Computação Quântica</h2>
-            <p class="subtitle">Todas as capacidades da plataforma correm sob a camada Phrakton, permitindo Cifragem Ponta-a-Ponta Resistente a Computação Quântica para as suas aplicações, e suporte para isolamento físico e criptográfico — por isso a segurança não é uma funcionalidade que se liga, é o chão sobre o qual todo o sistema assenta.</p>
+            <p class="subtitle">Toda a plataforma corre sob a camada Phrakton — cifragem ponta a ponta resistente a computação quântica, com isolamento físico e criptográfico disponível. A segurança não é uma funcionalidade que se liga; é o chão onde o sistema assenta.</p>
         </div>
 
         <div class="pillar-grid">
@@ -68,7 +73,7 @@ alt_url: "/security.html"
             <div class="glass-card pillar-card">
                 <span class="feature-index">05</span>
                 <h3>Alcance Remoto sem Esforço</h3>
-                <p>On-premise não significa apenas no local. Com o Módulo de Acesso Remoto opcional, monitorize operações e faça auditorias a partir de casa, em dados móveis ou no estrangeiro — a ligação simplesmente funciona, através de um túnel cifrado e resistente a computação quântica, com o chão de fábrica nunca exposto e nada para as TI configurarem.</p>
+                <p>On-premise não significa só no local. Com o Módulo de Acesso Remoto opcional, acompanhe e audite a partir de casa, em dados móveis ou no estrangeiro — por um túnel resistente a computação quântica, sem expor o chão de fábrica e sem nada para a TI configurar.</p>
             </div>
             <div class="glass-card pillar-card">
                 <span class="feature-index">06</span>
@@ -105,7 +110,7 @@ alt_url: "/security.html"
             <div class="section-header">
                 <span class="eyebrow">Nos Bastidores</span>
                 <h2 class="text-glow">As Camadas de Cifragem numa Ligação</h2>
-                <p class="subtitle">Um trabalhador que alcança uma aplicação no seu equipamento percorre três túneis cifrados aninhados. Os dois que atravessam a rede — o Link TLS e o App TLS — usam troca de chaves resistente a computação quântica; a camada interior Ziti E2E já cifra o seu conteúdo com uma cifra resistente a quântica, e a sua única parte clássica (a troca de chaves X25519) nunca fica exposta na rede, pelo que não é uma preocupação de «capturar agora, decifrar depois». Cada túnel é aberto apenas nos dois extremos — nunca na rede. Escolha um observador e veja exatamente até onde cada um consegue ler.</p>
+                <p class="subtitle">Um trabalhador que acede a uma aplicação na sua máquina atravessa três túneis cifrados aninhados, cada um aberto apenas nas suas duas extremidades. Os dois que atravessam a rede — Link TLS e App TLS — usam troca de chaves resistente a computação quântica; a camada interior Ziti E2E usa uma cifra adequada à era quântica, e a sua única parte clássica (X25519) nunca passa pela rede. Escolha um observador para ver até onde cada um consegue ler.</p>
             </div>
 
             <div class="cl-stage">
@@ -248,7 +253,7 @@ alt_url: "/security.html"
                     <text x="854" y="347" class="cl-fl" style="fill:#7f93ab">um salto na LAN</text>
                 </svg>
             </div>
-            <p class="cl-cap">Cada ligação entre nós é desenhada como as camadas de cifragem que a percorrem. O Ziti E2E (âmbar) e o App TLS (azul) correm todo o percurso desde o trabalhador até ao tunneler boxctl. O Link TLS (verde) é a camada de transporte — uma sessão TLS 1.3 resistente a quântica em cada salto que atravessa a rede, tanto os saltos tunneler-de-borda↔router como a malha router↔router; termina e re-embrulha em cada router, mas está presente em cada segmento de rede. O tunneler desembrulha o Ziti E2E e liga apenas o App TLS ao Caddy no mesmo equipamento; o Caddy termina o App TLS, deixando dados simples (tracejado) para o salto final até às aplicações. Um trabalhador na LAN alcança o tunneler através das mesmas três camadas num único salto na LAN.</p>
+            <p class="cl-cap">Cada ligação mostra as camadas de cifragem que a percorrem. Ziti E2E (âmbar) e App TLS (azul) vão de ponta a ponta, do trabalhador ao tunneler boxctl. Link TLS (verde) é uma sessão TLS 1.3 resistente a computação quântica em cada salto que atravessa a rede, reembrulhada em cada router. O tunneler desembrulha o Ziti E2E e passa o App TLS ao Caddy na mesma máquina, que o termina — deixando dados simples (tracejado) só para o último salto dentro da máquina. Um trabalhador na LAN chega ao tunneler pelas mesmas três camadas num único salto.</p>
 
             <div class="cl-tablecard">
                 <table>
@@ -268,7 +273,7 @@ alt_url: "/security.html"
         <div class="compliance-panel">
             <span class="eyebrow">Defesa Pós-Quântica</span>
             <h2 class="text-glow">Protegido Contra os Ataques de Amanhã, Hoje</h2>
-            <p>Os adversários já captam tráfego cifrado agora, com a intenção de o decifrar assim que os computadores quânticos amadurecerem — uma estratégia conhecida como "recolher agora, decifrar depois". Para a propriedade intelectual da fabricação, com um ciclo de vida de uma década, isso é uma ameaça viva, não futura. O Phrakton defende-se dela com troca de chaves híbrida pós-quântica, combinando um algoritmo clássico comprovado com um resistente à computação quântica, para que os seus túneis se mantenham seguros mesmo contra um adversário que quebre um deles. A sua propriedade intelectual está cifrada para o panorama de ameaças da próxima década, não da anterior.</p>
+            <p>Os adversários já capturam tráfego cifrado para o decifrar quando os computadores quânticos amadurecerem — “colher agora, decifrar depois”. Para propriedade intelectual industrial que vale durante uma década, é uma ameaça atual. O Phrakton usa troca de chaves híbrida pós-quântica, juntando um algoritmo clássico comprovado a um resistente a computação quântica, para que os seus túneis resistam mesmo que um deles seja quebrado.</p>
 
             <div class="pq-timeline">
                 <p class="pq-timeline-lead">O resto da indústria corre para chegar lá. Em 2026, dois dos maiores fornecedores de infraestrutura da internet publicaram os seus calendários para migrar <em>por completo</em> para a criptografia pós-quântica — e ambos chegaram ao mesmo ano-alvo:</p>
@@ -296,7 +301,7 @@ alt_url: "/security.html"
             <div>
                 <span class="eyebrow">Fiabilidade</span>
                 <h2 class="text-glow">Segurança com que Pode Contar — por Escrito</h2>
-                <p class="security-intro">Ser invisível só é útil se também estiver disponível — e, como a fabric transporta cada ligação ao seu appliance, tratamos a sua disponibilidade como uma responsabilidade nossa. Operamos o Phrakton nós próprios, comprometemo-nos com 99,9% de disponibilidade mensal e projetamos para o mais próximo possível de 100% que a tecnologia permita, com créditos de serviço automáticos em qualquer mês em que fiquemos aquém. Sem reclamação para apresentar, sem discussão, um simples desconto percentual na sua fatura.</p>
+                <p class="security-intro">Ser invisível só ajuda se também estiver disponível. Operamos o Phrakton nós próprios e comprometemo-nos com 99,9% de disponibilidade mensal, projetada para o mais perto possível de 100% — e em qualquer mês em que falhemos, um crédito percentual é aplicado à sua fatura automaticamente. Sem reclamação, sem discussão.</p>
                 <div class="cta-group">
                     <a href="/pt/pricing.html#uptime" class="btn btn-secondary">Ver a Garantia de Disponibilidade Completa</a>
                 </div>
