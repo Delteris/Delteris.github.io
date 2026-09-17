@@ -3613,7 +3613,7 @@ button.app-figure-frame:focus-visible .app-figure-zoom-hint {
 
 /* ------------------------------------------------------------
    Atlas band (homepage) — the live cloud product, signed in gold.
-   Gold stays ornamental (rule, dot, pill outlines); lettering
+   Gold stays ornamental (rule, pill outlines); the live dot is green; lettering
    and buttons stay blue, per the gold-accent rule above.
    ------------------------------------------------------------ */
 .atlas-band .gold-rule {
@@ -3631,8 +3631,9 @@ button.app-figure-frame:focus-visible .app-figure-zoom-hint {
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background: var(--gold-solid);
-    box-shadow: 0 0 10px rgba(244, 227, 161, 0.7);
+    /* Green = live/online (the universal status convention); gold read as a warning. */
+    background: #34d399;
+    box-shadow: 0 0 10px rgba(52, 211, 153, 0.7);
 }
 
 .live-dot::after {
@@ -3640,7 +3641,7 @@ button.app-figure-frame:focus-visible .app-figure-zoom-hint {
     position: absolute;
     inset: 0;
     border-radius: 50%;
-    border: 1px solid rgba(244, 227, 161, 0.8);
+    border: 1px solid rgba(52, 211, 153, 0.8);
     animation: live-dot-pulse 2.2s ease-out infinite;
 }
 
