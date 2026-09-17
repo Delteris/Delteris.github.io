@@ -131,31 +131,43 @@ alt_url: "/pt/wps-review-approval-software.html"
             <h2>WPS Review &amp; Approval, Answered</h2>
             <p class="subtitle">How the change-set works, what gets flagged, and what lands in your sheet.</p>
         </div>
-        <div class="pillar-grid">
-            <div class="glass-card">
-                <h3>Does an import change my register automatically?</h3>
-                <p>Only if you choose to let it. By default every import queues as a proposed change-set — current value beside new value, cell by cell — and you approve what lands. You can raise the bar to review every value, or lower it to auto-apply and rely on versioning to undo. Only the cells you approve are patched into your own workbook.</p>
-            </div>
-            <div class="glass-card">
-                <h3>A big import has hundreds of cells. Do I have to check every one?</h3>
-                <p>No — the parser flags its own uncertainty so you don't review everything equally. Any cell it wasn't sure of, or a heat input it computed, is shaded amber and surfaced for a look; confident reads stay quiet. A large import doesn't drown you in cells that were never in doubt — your attention goes only where it's actually needed.</p>
-            </div>
-            <div class="glass-card">
-                <h3>Can I correct a value during review?</h3>
-                <p>Yes. Fix any value inline, or add a row for a field the parser missed, then approve. What lands is what you signed off on — you're never forced to accept the parser's raw read or reject the whole set.</p>
-            </div>
-            <div class="glass-card">
-                <h3>What happens if a WPS changes after its values landed?</h3>
-                <p>Drift detection catches it: the app tells you the register is out of sync with the library and offers to re-sync the affected rows as a fresh change-set, reviewed and approved like any other — the sheet never quietly drifts from the documents behind it.</p>
-            </div>
-            <div class="glass-card">
-                <h3>Does it rebuild my whole spreadsheet?</h3>
-                <p>No. Atlas patches only the approved cells into your own workbook and leaves everything else exactly as you had it. Your file is never regenerated from a model, and every approved change-set is versioned so you can roll back.</p>
-            </div>
-            <div class="glass-card">
-                <h3>What if an import has nothing to change, only something to verify?</h3>
-                <p>It's closed with a "mark reviewed" rather than an approval that would write an identical new version — so a verification-only change-set doesn't leave you stuck between approving a change that isn't there and rejecting a correct read.</p>
-            </div>
+        <div class="faq-list">
+            <details class="faq-item">
+                <summary><h3>Does an import change my register automatically?</h3></summary>
+                <div class="faq-body">
+                    <p>Only if you choose to let it. By default every import queues as a proposed change-set — current value beside new value, cell by cell — and you approve what lands. You can raise the bar to review every value, or lower it to auto-apply and rely on versioning to undo. Only the cells you approve are patched into your own workbook.</p>
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary><h3>A big import has hundreds of cells. Do I have to check every one?</h3></summary>
+                <div class="faq-body">
+                    <p>No — the parser flags its own uncertainty so you don't review everything equally. Any cell it wasn't sure of, or a heat input it computed, is shaded amber and surfaced for a look; confident reads stay quiet. A large import doesn't drown you in cells that were never in doubt — your attention goes only where it's actually needed.</p>
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary><h3>Can I correct a value during review?</h3></summary>
+                <div class="faq-body">
+                    <p>Yes. Fix any value inline, or add a row for a field the parser missed, then approve. What lands is what you signed off on — you're never forced to accept the parser's raw read or reject the whole set.</p>
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary><h3>What happens if a WPS changes after its values landed?</h3></summary>
+                <div class="faq-body">
+                    <p>Drift detection catches it: the app tells you the register is out of sync with the library and offers to re-sync the affected rows as a fresh change-set, reviewed and approved like any other — the sheet never quietly drifts from the documents behind it.</p>
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary><h3>Does it rebuild my whole spreadsheet?</h3></summary>
+                <div class="faq-body">
+                    <p>No. Atlas patches only the approved cells into your own workbook and leaves everything else exactly as you had it. Your file is never regenerated from a model, and every approved change-set is versioned so you can roll back.</p>
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary><h3>What if an import has nothing to change, only something to verify?</h3></summary>
+                <div class="faq-body">
+                    <p>It's closed with a "mark reviewed" rather than an approval that would write an identical new version — so a verification-only change-set doesn't leave you stuck between approving a change that isn't there and rejecting a correct read.</p>
+                </div>
+            </details>
         </div>
     </section>
 

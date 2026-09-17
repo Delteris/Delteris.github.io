@@ -114,31 +114,43 @@ alt_url: "/pt/heat-input-calculator.html"
             <h2>The Heat Input Calculator, Answered</h2>
             <p class="subtitle">How it computes, why it clamps, and where the ranges come from.</p>
         </div>
-        <div class="pillar-grid">
-            <div class="glass-card">
-                <h3>How does the calculator work out heat input?</h3>
-                <p>It computes heat input live from the arc parameters — current, voltage and travel speed — as you drag the sliders, showing the result in kJ for the weld region you're working. Root, fill and cap each have their own qualified range.</p>
-            </div>
-            <div class="glass-card">
-                <h3>Can it stop me from going out of qualification?</h3>
-                <p>Yes — that's the point. The sliders clamp to your PQR-qualified range, so you physically can't dial in a combination whose heat input falls outside what the procedure allows. Leaving the window isn't possible, rather than flagged after the fact.</p>
-            </div>
-            <div class="glass-card">
-                <h3>Does it handle tandem or twin-arc welding?</h3>
-                <p>Yes. Tandem and twin-arc setups get a lead head and a trail head, each with its own current and voltage, and the total heat input is summed across the heads the way the standard expects — checked against the same qualified window.</p>
-            </div>
-            <div class="glass-card">
-                <h3>Do I have to type in the qualified ranges?</h3>
-                <p>You can, or you can load a parsed WPS from your library and its per-region ranges and processes fill in automatically. The ranges come from the WPS; the arc parameters stay yours to explore.</p>
-            </div>
-            <div class="glass-card">
-                <h3>Does it save what I calculate?</h3>
-                <p>No. It's a scratch pad — a live calculation surface. Nothing you do here is saved or written to any sheet or register, so you can explore freely without changing anything.</p>
-            </div>
-            <div class="glass-card">
-                <h3>Is heat input qualified per region?</h3>
-                <p>Yes. The helper sets and checks root, fill and cap separately, because that's how a PQR qualifies heat input — region by region, each against its own limits.</p>
-            </div>
+        <div class="faq-list">
+            <details class="faq-item">
+                <summary><h3>How does the calculator work out heat input?</h3></summary>
+                <div class="faq-body">
+                    <p>It computes heat input live from the arc parameters — current, voltage and travel speed — as you drag the sliders, showing the result in kJ for the weld region you're working. Root, fill and cap each have their own qualified range.</p>
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary><h3>Can it stop me from going out of qualification?</h3></summary>
+                <div class="faq-body">
+                    <p>Yes — that's the point. The sliders clamp to your PQR-qualified range, so you physically can't dial in a combination whose heat input falls outside what the procedure allows. Leaving the window isn't possible, rather than flagged after the fact.</p>
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary><h3>Does it handle tandem or twin-arc welding?</h3></summary>
+                <div class="faq-body">
+                    <p>Yes. Tandem and twin-arc setups get a lead head and a trail head, each with its own current and voltage, and the total heat input is summed across the heads the way the standard expects — checked against the same qualified window.</p>
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary><h3>Do I have to type in the qualified ranges?</h3></summary>
+                <div class="faq-body">
+                    <p>You can, or you can load a parsed WPS from your library and its per-region ranges and processes fill in automatically. The ranges come from the WPS; the arc parameters stay yours to explore.</p>
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary><h3>Does it save what I calculate?</h3></summary>
+                <div class="faq-body">
+                    <p>No. It's a scratch pad — a live calculation surface. Nothing you do here is saved or written to any sheet or register, so you can explore freely without changing anything.</p>
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary><h3>Is heat input qualified per region?</h3></summary>
+                <div class="faq-body">
+                    <p>Yes. The helper sets and checks root, fill and cap separately, because that's how a PQR qualifies heat input — region by region, each against its own limits.</p>
+                </div>
+            </details>
         </div>
     </section>
 

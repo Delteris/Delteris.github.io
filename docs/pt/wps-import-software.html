@@ -133,31 +133,43 @@ alt_url: "/wps-import-software.html"
             <h2>Importação de WPS, Respondida</h2>
             <p class="subtitle">O que o parser lê, que formatos aceita, e como encaixa nos seus formulários.</p>
         </div>
-        <div class="pillar-grid">
-            <div class="glass-card">
-                <h3>Isto é OCR, ou lê mesmo os campos?</h3>
-                <p>Lê os campos. Um PDF digital é reconstruído linha de grelha a linha de grelha e lido célula a célula; uma WPS em Excel é analisada diretamente da folha. Processo, materiais, posições, gamas e cada parâmetro de passe entram como valores tipados e pesquisáveis que pode filtrar e exportar — não um scan achatado que ainda tem de ler a olho.</p>
-            </div>
-            <div class="glass-card">
-                <h3>E se as minhas WPS não estiverem em inglês?</h3>
-                <p>O parser lê a estrutura de um formulário, não um conjunto fixo de palavras em inglês, e corresponde os seus rótulos a partir de um pacote de idioma — por isso a língua do formulário não altera se é compreendido. Inglês e português estão incluídos hoje; a sua língua e a sua terminologia interna são acrescentadas durante a integração fornecendo os termos, sem alteração de código.</p>
-            </div>
-            <div class="glass-card">
-                <h3>Qual é a precisão da extração — e se ler algo mal?</h3>
-                <p>Tudo o que o parser não tem a certeza é sinalizado, não adivinhado em silêncio, e cada importação é revista antes de entrar. Confirma as leituras contra o documento original na Pré-visualização e corrige uma leitura errada no próprio sítio, por isso o que fica em registo é o que uma pessoa conferiu — não a saída em bruto do parser.</p>
-            </div>
-            <div class="glass-card">
-                <h3>O que acontece quando um formulário deixa o aporte térmico em branco?</h3>
-                <p>A aplicação calcula-o a partir dos parâmetros do arco (corrente × tensão × 60 ÷ velocidade de avanço × eficiência do processo, segundo a EN&nbsp;1011-1) e sinaliza-o para que confirme contra o PQR. Nunca é um número silencioso — vê os passes de onde veio e limpa a marca depois de conferido.</p>
-            </div>
-            <div class="glass-card">
-                <h3>Tenho anos de WPS acumuladas. Posso trazê-las todas de uma vez?</h3>
-                <p>Sim — essa primeira carga em massa é exatamente para isso que serve a importação em lote. Largue a pilha inteira numa passagem; cada ficheiro é ordenado ao entrar como WPS nova, revisão nova de uma que já tem, ou correção, por isso as revisões agrupam corretamente desde o início em vez de se espalharem em duplicados.</p>
-            </div>
-            <div class="glass-card">
-                <h3>Vai ler o <em>nosso</em> formulário específico, ou só um genérico?</h3>
-                <p>Os formulários padrão no estilo ISO&nbsp;15609 leem-se de imediato; o seu esquema exato é ajustado antes de entrar em funcionamento. Envia algumas WPS reais, confirmamos que o parser as lê e ajustamos o perfil se necessário, e só então se compromete — por isso a importação é comprovada na sua própria papelada, tratada com estrita confidencialidade.</p>
-            </div>
+        <div class="faq-list">
+            <details class="faq-item">
+                <summary><h3>Isto é OCR, ou lê mesmo os campos?</h3></summary>
+                <div class="faq-body">
+                    <p>Lê os campos. Um PDF digital é reconstruído linha de grelha a linha de grelha e lido célula a célula; uma WPS em Excel é analisada diretamente da folha. Processo, materiais, posições, gamas e cada parâmetro de passe entram como valores tipados e pesquisáveis que pode filtrar e exportar — não um scan achatado que ainda tem de ler a olho.</p>
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary><h3>E se as minhas WPS não estiverem em inglês?</h3></summary>
+                <div class="faq-body">
+                    <p>O parser lê a estrutura de um formulário, não um conjunto fixo de palavras em inglês, e corresponde os seus rótulos a partir de um pacote de idioma — por isso a língua do formulário não altera se é compreendido. Inglês e português estão incluídos hoje; a sua língua e a sua terminologia interna são acrescentadas durante a integração fornecendo os termos, sem alteração de código.</p>
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary><h3>Qual é a precisão da extração — e se ler algo mal?</h3></summary>
+                <div class="faq-body">
+                    <p>Tudo o que o parser não tem a certeza é sinalizado, não adivinhado em silêncio, e cada importação é revista antes de entrar. Confirma as leituras contra o documento original na Pré-visualização e corrige uma leitura errada no próprio sítio, por isso o que fica em registo é o que uma pessoa conferiu — não a saída em bruto do parser.</p>
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary><h3>O que acontece quando um formulário deixa o aporte térmico em branco?</h3></summary>
+                <div class="faq-body">
+                    <p>A aplicação calcula-o a partir dos parâmetros do arco (corrente × tensão × 60 ÷ velocidade de avanço × eficiência do processo, segundo a EN&nbsp;1011-1) e sinaliza-o para que confirme contra o PQR. Nunca é um número silencioso — vê os passes de onde veio e limpa a marca depois de conferido.</p>
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary><h3>Tenho anos de WPS acumuladas. Posso trazê-las todas de uma vez?</h3></summary>
+                <div class="faq-body">
+                    <p>Sim — essa primeira carga em massa é exatamente para isso que serve a importação em lote. Largue a pilha inteira numa passagem; cada ficheiro é ordenado ao entrar como WPS nova, revisão nova de uma que já tem, ou correção, por isso as revisões agrupam corretamente desde o início em vez de se espalharem em duplicados.</p>
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary><h3>Vai ler o <em>nosso</em> formulário específico, ou só um genérico?</h3></summary>
+                <div class="faq-body">
+                    <p>Os formulários padrão no estilo ISO&nbsp;15609 leem-se de imediato; o seu esquema exato é ajustado antes de entrar em funcionamento. Envia algumas WPS reais, confirmamos que o parser as lê e ajustamos o perfil se necessário, e só então se compromete — por isso a importação é comprovada na sua própria papelada, tratada com estrita confidencialidade.</p>
+                </div>
+            </details>
         </div>
     </section>
 
