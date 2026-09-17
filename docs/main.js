@@ -128,6 +128,8 @@
 
         const closeLang = function () {
             langMenu.classList.remove('lang-typing');
+            const panel = langSwitch.closest('.nav-links');
+            if (panel) panel.style.maxHeight = '';
             if (langMenu.hidden) return;
             langMenu.hidden = true;
             langBtn.setAttribute('aria-expanded', 'false');
@@ -165,9 +167,37 @@
             langSearch.addEventListener('input', function () { filterLang(langSearch.value); });
             // Keep clicks inside the search box from bubbling to the close-on-outside handler.
             langSearch.addEventListener('click', function (e) { e.stopPropagation(); });
-            // While typing, pin the menu above the keyboard (see .lang-typing CSS).
-            langSearch.addEventListener('focus', function () { langMenu.classList.add('lang-typing'); });
-            langSearch.addEventListener('blur', function () { langMenu.classList.remove('lang-typing'); });
+            // While typing on mobile, flip the options above the search box (see
+            // .lang-typing CSS) and fit the nav panel to the part of the screen the
+            // keyboard leaves visible, so the box and the options both stay in view.
+            const navPanel = langSwitch.closest('.nav-links');
+            const vv = window.visualViewport;
+            let blurTimer = null;
+            const fitPanel = function () {
+                if (!navPanel) return;
+                if (!langMenu.classList.contains('lang-typing') || !vv) {
+                    navPanel.style.maxHeight = '';
+                    return;
+                }
+                const top = navPanel.getBoundingClientRect().top;
+                const room = vv.height + vv.offsetTop - top;
+                navPanel.style.maxHeight = Math.max(160, Math.floor(room)) + 'px';
+                langSearch.scrollIntoView({ block: 'end' });
+            };
+            if (vv) vv.addEventListener('resize', fitPanel);
+            langSearch.addEventListener('focus', function () {
+                window.clearTimeout(blurTimer);
+                langMenu.classList.add('lang-typing');
+                window.setTimeout(fitPanel, 50);
+            });
+            // Delay the flip-back: tapping an option blurs the box first, and
+            // re-laying out immediately would move the option out from under the tap.
+            langSearch.addEventListener('blur', function () {
+                blurTimer = window.setTimeout(function () {
+                    langMenu.classList.remove('lang-typing');
+                    fitPanel();
+                }, 300);
+            });
         }
 
         // Close on outside click and on Escape.
