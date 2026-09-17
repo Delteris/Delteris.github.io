@@ -133,31 +133,43 @@ alt_url: "/wps-review-approval-software.html"
             <h2>Revisión y Aprobación de WPS, Respondida</h2>
             <p class="subtitle">Cómo funciona el conjunto de cambios, qué se señala, y qué entra en su hoja.</p>
         </div>
-        <div class="pillar-grid">
-            <div class="glass-card">
-                <h3>¿Una importación cambia mi registro automáticamente?</h3>
-                <p>Solo si opta por permitirlo. Por defecto, cada importación queda en cola como un conjunto de cambios propuesto — valor actual junto al valor nuevo, celda a celda — y aprueba lo que entra. Puede subir el criterio para revisar cada valor, o bajarlo para aplicar todo automáticamente y confiar en el versionado para deshacer. Solo las celdas que apruebe se aplican a su propia hoja.</p>
-            </div>
-            <div class="glass-card">
-                <h3>Una importación grande tiene cientos de celdas. ¿Tengo que contrastar cada una?</h3>
-                <p>No — el parser señala su propia incertidumbre para que no revise todo por igual. Cualquier celda de la que no tuvo certeza, o un aporte térmico que calculó, queda sombreada en ámbar y aflora para una mirada; las lecturas confiables se quedan quietas. Una importación grande no le ahoga en celdas que nunca estuvieron en duda — su atención va solo adonde realmente hace falta.</p>
-            </div>
-            <div class="glass-card">
-                <h3>¿Puedo corregir un valor durante la revisión?</h3>
-                <p>Sí. Corrija cualquier valor inline, o añada una fila para un campo que el parser no captó, y luego apruebe. Lo que entra es lo que validó — nunca se ve forzado a aceptar la lectura en bruto del parser ni a rechazar todo el conjunto.</p>
-            </div>
-            <div class="glass-card">
-                <h3>¿Qué ocurre si una WPS cambia después de que los valores entren?</h3>
-                <p>La detección de divergencia lo capta: la aplicación le avisa de que el registro está desincronizado de la biblioteca y propone re-sincronizar las filas afectadas como un nuevo conjunto de cambios, revisado y aprobado como cualquier otro — la hoja nunca diverge en silencio de los documentos detrás de ella.</p>
-            </div>
-            <div class="glass-card">
-                <h3>¿Reconstruye toda mi hoja de cálculo?</h3>
-                <p>No. El Atlas aplica solo las celdas aprobadas a su propia hoja y deja todo lo demás exactamente como lo tenía. Su fichero nunca se regenera a partir de una plantilla, y cada conjunto de cambios aprobado se versiona para que pueda revertir.</p>
-            </div>
-            <div class="glass-card">
-                <h3>¿Y si una importación no tiene nada que cambiar, solo algo que verificar?</h3>
-                <p>Se cierra con un "marcar revisado" en lugar de una aprobación que escribiría una nueva versión idéntica — para que un conjunto de cambios solo de verificación no le deje atrapado entre aprobar un cambio que no existe y rechazar una lectura correcta.</p>
-            </div>
+        <div class="faq-list">
+            <details class="faq-item">
+                <summary><h3>¿Una importación cambia mi registro automáticamente?</h3></summary>
+                <div class="faq-body">
+                    <p>Solo si opta por permitirlo. Por defecto, cada importación queda en cola como un conjunto de cambios propuesto — valor actual junto al valor nuevo, celda a celda — y aprueba lo que entra. Puede subir el criterio para revisar cada valor, o bajarlo para aplicar todo automáticamente y confiar en el versionado para deshacer. Solo las celdas que apruebe se aplican a su propia hoja.</p>
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary><h3>Una importación grande tiene cientos de celdas. ¿Tengo que contrastar cada una?</h3></summary>
+                <div class="faq-body">
+                    <p>No — el parser señala su propia incertidumbre para que no revise todo por igual. Cualquier celda de la que no tuvo certeza, o un aporte térmico que calculó, queda sombreada en ámbar y aflora para una mirada; las lecturas confiables se quedan quietas. Una importación grande no le ahoga en celdas que nunca estuvieron en duda — su atención va solo adonde realmente hace falta.</p>
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary><h3>¿Puedo corregir un valor durante la revisión?</h3></summary>
+                <div class="faq-body">
+                    <p>Sí. Corrija cualquier valor inline, o añada una fila para un campo que el parser no captó, y luego apruebe. Lo que entra es lo que validó — nunca se ve forzado a aceptar la lectura en bruto del parser ni a rechazar todo el conjunto.</p>
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary><h3>¿Qué ocurre si una WPS cambia después de que los valores entren?</h3></summary>
+                <div class="faq-body">
+                    <p>La detección de divergencia lo capta: la aplicación le avisa de que el registro está desincronizado de la biblioteca y propone re-sincronizar las filas afectadas como un nuevo conjunto de cambios, revisado y aprobado como cualquier otro — la hoja nunca diverge en silencio de los documentos detrás de ella.</p>
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary><h3>¿Reconstruye toda mi hoja de cálculo?</h3></summary>
+                <div class="faq-body">
+                    <p>No. El Atlas aplica solo las celdas aprobadas a su propia hoja y deja todo lo demás exactamente como lo tenía. Su fichero nunca se regenera a partir de una plantilla, y cada conjunto de cambios aprobado se versiona para que pueda revertir.</p>
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary><h3>¿Y si una importación no tiene nada que cambiar, solo algo que verificar?</h3></summary>
+                <div class="faq-body">
+                    <p>Se cierra con un "marcar revisado" en lugar de una aprobación que escribiría una nueva versión idéntica — para que un conjunto de cambios solo de verificación no le deje atrapado entre aprobar un cambio que no existe y rechazar una lectura correcta.</p>
+                </div>
+            </details>
         </div>
     </section>
 
