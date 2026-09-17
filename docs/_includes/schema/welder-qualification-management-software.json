@@ -47,7 +47,7 @@
         "price": "80.00",
         "priceCurrency": "EUR",
         "availability": "https://schema.org/InStock",
-        "description": "Included in Elenchon Atlas at €80 per month, or €720 per year (effective €60/month) billed annually. One flat, published price, unlimited users, covering both WPS management and welder qualification tracking. Includes 50 GB storage; additional 50 GB blocks €10/month.",
+        "description": "Included in Elenchon Atlas at €80 per month, or €720 per year (effective €60/month) billed annually. One flat, published price with no per-seat fees, covering both WPS management and welder qualification tracking. Includes 50 GB storage; additional 50 GB blocks €10/month.",
         "priceValidUntil": "2028-12-31"
       },
       "provider": {
