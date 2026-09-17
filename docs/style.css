@@ -3510,6 +3510,7 @@ button.app-figure-frame:focus-visible .app-figure-zoom-hint {
    and the homepage FAQ as an accordion (answers on demand).
    ------------------------------------------------------------ */
 .summary-panel .feature-list,
+.compliance-panel .feature-list,
 .cta-band .feature-list {
     display: inline-block;
     text-align: left;
