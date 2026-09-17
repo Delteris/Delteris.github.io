@@ -2,6 +2,8 @@
 
 > Engineering the technology for Europe's future.
 
+Status: Elenchon (the on-premise platform) launches in Q1 2027 — early deployment slots are reserved through the launch list on the contact page. Elenchon WPS Manager (the cloud product) is available now.
+
 Elenchon is on-premise welding traceability software for fabrication shops and heavy industry. It runs the full WPS/WPQR/WPQ qualification workflow, turns floor capture into audit-ready ISO and ASME IX evidence, captures shop-floor data in seconds, and keeps every weld record on the client's own hardware via Phrakton — Delteris's zero-trust network overlay built on OpenZiti and secured with post-quantum cryptography.
 
 ## Core Pillars

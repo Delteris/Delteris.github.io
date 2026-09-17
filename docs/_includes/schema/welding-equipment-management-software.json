@@ -38,7 +38,7 @@
       "offers": {
         "@type": "Offer",
         "url": "https://delteris.com/pricing.html",
-        "availability": "https://schema.org/InStock"
+        "availability": "https://schema.org/PreOrder", "availabilityStarts": "2027-01-01"
       },
       "provider": {
         "@id": "https://delteris.com/#organization"
