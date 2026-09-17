@@ -3603,3 +3603,84 @@ button.app-figure-frame:focus-visible .app-figure-zoom-hint {
         transition: none;
     }
 }
+
+/* ------------------------------------------------------------
+   Atlas band (homepage) — the live cloud product, signed in gold.
+   Gold stays ornamental (rim, border, glow, rule, dot); lettering
+   and buttons stay blue, per the gold-accent rule above.
+   ------------------------------------------------------------ */
+.cta-band.atlas-band {
+    overflow: hidden;
+    border-color: rgba(201, 165, 63, 0.4);
+    background:
+        radial-gradient(110% 80% at 50% 0%, rgba(201, 165, 63, 0.11) 0%, rgba(201, 165, 63, 0) 60%),
+        linear-gradient(145deg, rgba(59, 130, 246, 0.12) 0%, rgba(10, 18, 36, 0.6) 100%);
+    box-shadow: 0 22px 60px -30px rgba(201, 165, 63, 0.45);
+}
+
+.atlas-band .gold-rule {
+    margin: -0.25rem auto 1.4rem;
+}
+
+.atlas-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+}
+
+.live-dot {
+    position: relative;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--gold-solid);
+    box-shadow: 0 0 10px rgba(244, 227, 161, 0.7);
+}
+
+.live-dot::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    border: 1px solid rgba(244, 227, 161, 0.8);
+    animation: live-dot-pulse 2.2s ease-out infinite;
+}
+
+@keyframes live-dot-pulse {
+    0%   { transform: scale(1);   opacity: 0.9; }
+    100% { transform: scale(2.8); opacity: 0; }
+}
+
+.atlas-chips {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem;
+    margin: -0.5rem auto 2rem;
+    padding: 0;
+}
+
+.atlas-chips li {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-main);
+    padding: 0.4rem 0.9rem;
+    border-radius: 999px;
+    border: 1px solid rgba(201, 165, 63, 0.35);
+    background: rgba(201, 165, 63, 0.07);
+}
+
+@media (max-width: 768px) {
+    .atlas-chips {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .live-dot::after {
+        animation: none;
+        opacity: 0;
+    }
+}
