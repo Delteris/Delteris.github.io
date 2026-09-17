@@ -15,7 +15,7 @@ alt_url: "/pt/security.html"
         <div class="hero-content">
             <span class="hero-eyebrow">Powered by Phrakton</span>
             <h1 class="text-glow">Zero-Trust Security.<br>Seamless for You. Unreachable for Them.</h1>
-            <p class="hero-sub">Phrakton is Delteris’s zero-trust network overlay, built on OpenZiti. It abstracts your network away entirely: your factory infrastructure becomes invisible to external threat actors while remaining seamlessly accessible to authorized personnel — with End-To-End Post-Quantum-Safe Encryption for the application running under it, and support for full cryptographic isolation between facilities.</p>
+            <p class="hero-sub">Phrakton is Delteris’s zero-trust network overlay, built on OpenZiti. Your factory becomes invisible to outside attackers yet stays reachable for authorised people — with end-to-end post-quantum-safe encryption and optional full cryptographic isolation between facilities.</p>
             <div class="cta-group">
                 <a href="contact.html" class="btn btn-primary">Join the Launch List</a>
                 <a href="pricing.html" class="btn btn-secondary">See the Uptime Guarantee</a>
@@ -31,7 +31,12 @@ alt_url: "/pt/security.html"
     <section class="page-section container" id="what-is-phrakton">
         <div class="summary-panel">
             <h2 class="text-glow">A Network That Isn’t There</h2>
-            <p>Conventional network security guards the door: firewalls, VPNs, and open ports that must be defended around the clock. Phrakton removes the door. Your services have no listening ports exposed to the public internet — there is nothing to scan, nothing to probe, and nothing to move laterally through. Connections are established outbound-only and brokered by cryptographic identity, so a resource is reachable only after a device has proven who it is. To everyone else, your factory simply does not exist on the network.</p>
+            <p>Conventional security guards the door — firewalls, VPNs and open ports defended around the clock. Phrakton removes the door.</p>
+            <ul class="feature-list">
+                <li><strong>No listening ports</strong> on the public internet — nothing to scan, probe or move through.</li>
+                <li><strong>Outbound-only connections</strong>, brokered by cryptographic identity.</li>
+                <li><strong>Reachable only after a device proves who it is.</strong> To everyone else, your factory isn't on the network.</li>
+            </ul>
         </div>
     </section>
 
@@ -39,7 +44,7 @@ alt_url: "/pt/security.html"
         <div class="section-header">
             <span class="eyebrow">Core Principles</span>
             <h2>Zero Trust, End to End Encryption, Post Quantum Safe Cryptography</h2>
-            <p class="subtitle">Every capability of the platform run under the Phrakton overlay, allowing for Post-Quantum-Safe End-To-End Encryption for it's applications, and support for physical and cryptographic isolation — so security isn’t a feature you switch on, it’s the ground the whole system stands on.</p>
+            <p class="subtitle">Every part of the platform runs under the Phrakton overlay — end-to-end post-quantum-safe encryption, with physical and cryptographic isolation available. Security isn’t a feature you switch on; it’s the ground the system stands on.</p>
         </div>
 
         <div class="pillar-grid">
@@ -66,7 +71,7 @@ alt_url: "/pt/security.html"
             <div class="glass-card pillar-card">
                 <span class="feature-index">05</span>
                 <h3>Effortless Remote Reach</h3>
-                <p>On-premise doesn't mean on-site-only. With the optional Remote Access Module, monitor operations and run audits from home, on mobile data, or abroad — the connection just works, over a post-quantum-safe encrypted tunnel, with the floor never exposed and nothing for IT to configure.</p>
+                <p>On-premise doesn't mean on-site only. With the optional Remote Access Module, monitor and audit from home, on mobile data or abroad — over a post-quantum-safe tunnel, with the floor never exposed and nothing for IT to configure.</p>
             </div>
             <div class="glass-card pillar-card">
                 <span class="feature-index">06</span>
@@ -103,7 +108,7 @@ alt_url: "/pt/security.html"
             <div class="section-header">
                 <span class="eyebrow">Under the Hood</span>
                 <h2 class="text-glow">The Encryption Layers on a Connection</h2>
-                <p class="subtitle">A worker reaching an app on your box travels through three nested encrypted tunnels. The two that cross the wire — Link TLS and App TLS — use post-quantum-safe key exchange; the inner Ziti E2E layer already encrypts its payload with a quantum-fine cipher, and its one classical component (the X25519 key exchange) is never exposed on the wire, so it is not a harvest-now-decrypt-later concern. Each tunnel is opened only at the two endpoints — never on the network. Pick an observer and see exactly how far each one can read.</p>
+                <p class="subtitle">A worker reaching an app on your box passes through three nested encrypted tunnels, each opened only at its two endpoints. The two that cross the wire — Link TLS and App TLS — use post-quantum-safe key exchange; the inner Ziti E2E layer uses a quantum-fine cipher, and its one classical part (X25519) never touches the wire. Pick an observer to see how far each can read.</p>
             </div>
 
             <div class="cl-stage">
@@ -270,7 +275,7 @@ alt_url: "/pt/security.html"
                     <text x="854" y="347" class="cl-fl" style="fill:#7f93ab">one on-LAN hop</text>
                 </svg>
             </div>
-            <p class="cl-cap">Each connection between nodes is drawn as the encryption layers that travel it. Ziti E2E (amber) and App TLS (blue) run the whole way from the worker to the boxctl tunneler. Link TLS (green) is the transport layer — a PQ-safe TLS 1.3 session on every hop that crosses the wire, both the edge-tunneler↔router hops and the router↔router fabric; it terminates and re-wraps at each router but is present on every network segment. The tunneler unwraps Ziti E2E and splices only App TLS across to Caddy on the same box; Caddy terminates App TLS, leaving plain data (dashed) for the final hop to the apps. A LAN worker reaches the tunneler over the same three layers in a single on-LAN hop.</p>
+            <p class="cl-cap">Each link shows the encryption layers that travel it. Ziti E2E (amber) and App TLS (blue) run end to end, from the worker to the boxctl tunneler. Link TLS (green) is a PQ-safe TLS 1.3 session on every hop that crosses the wire, re-wrapped at each router. The tunneler unwraps Ziti E2E and passes App TLS to Caddy on the same box, which terminates it — leaving plain data (dashed) only for the final on-box hop. A LAN worker reaches the tunneler over the same three layers in one hop.</p>
 
             <div class="cl-tablecard">
                 <table>
@@ -290,7 +295,7 @@ alt_url: "/pt/security.html"
         <div class="compliance-panel">
             <span class="eyebrow">Post-Quantum Defense</span>
             <h2 class="text-glow">Protected Against Tomorrow’s Attacks, Today</h2>
-            <p>Adversaries already capture encrypted traffic now, intending to decrypt it once quantum computers mature — a strategy known as “harvest now, decrypt later.” For manufacturing IP with a decade-long lifespan, that is a live threat, not a future one. Phrakton defends against it with post-quantum-hybrid key exchange, pairing a proven classical algorithm with a quantum-resistant one so your tunnels stay secure even against an adversary who breaks one of them. Your intellectual property is encrypted for the threat landscape of the next decade, not the last one.</p>
+            <p>Adversaries already capture encrypted traffic to decrypt once quantum computers mature — “harvest now, decrypt later.” For manufacturing IP that stays valuable for a decade, that's a live threat. Phrakton uses post-quantum-hybrid key exchange, pairing a proven classical algorithm with a quantum-resistant one, so your tunnels hold even if one of them is broken.</p>
 
             <!-- Industry-timeline proof point: the largest names on the internet have
                  set 2029 as their TARGET to reach PQ; Phrakton already ships it. -->
@@ -320,7 +325,7 @@ alt_url: "/pt/security.html"
             <div>
                 <span class="eyebrow">Reliability</span>
                 <h2 class="text-glow">Security You Can Depend On — In Writing</h2>
-                <p class="security-intro">Invisible is only useful if it’s also available — and because the fabric carries every connection to your appliance, we treat its uptime as our own responsibility. We run Phrakton ourselves, commit to 99.9% monthly availability, and engineer for as close to 100% as the technology allows, backed by automatic service credits on any month we fall short. No claim to file, no argument, a simple percentage discount on your invoice.</p>
+                <p class="security-intro">Invisible only helps if it’s also available. We run Phrakton ourselves and commit to 99.9% monthly uptime, engineered for as close to 100% as possible — and any month we fall short, a percentage credit lands on your invoice automatically. No claim, no argument.</p>
                 <div class="cta-group">
                     <a href="pricing.html#uptime" class="btn btn-secondary">See the Full Uptime Guarantee</a>
                 </div>
