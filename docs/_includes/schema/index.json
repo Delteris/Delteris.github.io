@@ -53,6 +53,34 @@
           "provider": { "@id": "https://delteris.com/#organization" }
         },
         {
+          "@type": "SoftwareApplication",
+          "name": "Elenchon Atlas",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "Cloud / Web",
+          "applicationSubCategory": "WPS Management Software",
+          "description": "Elenchon Atlas is cloud software that keeps a fabrication shop's welding procedures and welder qualifications organised in one place: import WPS, pWPS and WPQR from Excel or PDF into structured records, search and compare them, and track each welder's qualifications with reminders before one lapses.",
+          "keywords": "WPS management software, welder qualification management software, WPQ tracking, WPS library, WPS import, welding procedure management, cloud welding software",
+          "featureList": [
+            "WPS, pWPS and WPQR library with structured, searchable records",
+            "Excel and PDF import with human-reviewed change-sets",
+            "Welder qualification tracking with expiry and continuity clocks",
+            "Email reminders before a welder qualification lapses",
+            "Clean Excel register export"
+          ],
+          "offers": {
+            "@type": "Offer",
+            "url": "https://delteris.com/wps-management-software.html#pricing",
+            "price": "80.00",
+            "priceCurrency": "EUR",
+            "availability": "https://schema.org/InStock",
+            "priceValidUntil": "2028-12-31",
+            "description": "€80 per month, or €720 per year (effective €60/month) billed annually. Flat, fully published price with no per-seat fees. Includes 50 GB storage."
+          },
+          "provider": {
+            "@id": "https://delteris.com/#organization"
+          }
+        },
+        {
           "@type": "FAQPage",
           "@id": "https://delteris.com/#faq",
           "mainEntity": [
