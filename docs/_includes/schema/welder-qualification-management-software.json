@@ -63,7 +63,7 @@
           "name": "What is welder qualification management software?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "It tracks which welders hold which qualifications and when each expires or falls out of continuity, so you can plan requalifications ahead. Elenchon Atlas stores a record per welder per qualification, warns you before each deadline on the dashboard and by email, and keeps the full history — instead of a drawer of certificates and a date in someone's head."
+            "text": "It tracks which welders hold which qualifications and when each expires or falls out of continuity, so you can plan requalifications ahead. Atlas stores a record per welder per qualification, warns you before each deadline on the dashboard and by email, and keeps the full history — instead of a drawer of certificates and a date in someone's head."
           }
         },
         {
@@ -71,7 +71,7 @@
           "name": "What are the two clocks — expiry and continuity?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A welder's qualification can end two ways: it reaches its expiry date, or the welder goes too long without welding to that qualification and loses continuity. They're different deadlines, so Atlas tracks them as two separate dates and warns on each independently."
+            "text": "A welder's ticket can end two ways: it reaches its expiry date, or the welder goes too long without welding to that qualification and loses continuity. They're different deadlines, so Atlas tracks them as two separate dates and warns on each independently."
           }
         },
         {
@@ -79,12 +79,12 @@
           "name": "How do the reminders work?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Every due date shows on your dashboard, colour-coded by how close it is. Switch on email reminders and add up to ten recipients — the quality manager, a supervisor, whoever plans the floor — and they are emailed ahead of each deadline, at lead times you set: a month out, two weeks, the week of."
+            "text": "Every due date shows on your dashboard, colour-coded by how close it is. Switch on email reminders and add up to ten recipients — the QM, a supervisor, whoever plans the floor — and they're emailed ahead of each deadline, at lead times you set: a month out, two weeks, the week of."
           }
         },
         {
           "@type": "Question",
-          "name": "Which welding standards does it support?",
+          "name": "Which standards does it support?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Qualification variables come pre-built for ISO 9606, ASME IX and AWS, so the fields you expect are already there. You can add your own fields, or track to another code — Atlas is oriented to the common standards but flexible enough to hold almost any qualification format."
@@ -95,7 +95,7 @@
           "name": "Does it decide whether a welder is qualified?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, and that is deliberate. Atlas records qualifications, tracks their dates, and warns you before they lapse. Whether a qualification is valid for a given job is a human call; the app gives you the facts and an attributed requalification record, it does not rule on validity."
+            "text": "No — and that's deliberate. Atlas records qualifications, tracks their dates, and warns you before they lapse. Whether a qualification is valid for a given job is a human call; the app gives you the facts and an attributed requalification record, it doesn't rule on validity."
           }
         },
         {

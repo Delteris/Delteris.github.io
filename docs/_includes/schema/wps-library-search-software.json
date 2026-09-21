@@ -58,50 +58,50 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Do I manage my WPS in the app or in Excel?",
+          "name": "I have hundreds of WPS across drives and inboxes. How do I find one fast?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "In the app. The library is where you work — every WPS, pWPS and WPQR is a structured record you search, filter, edit, verify and link in place. Excel export is there for when a register needs to be handed to your auditors or head office, not something you drop into to get your work done."
+            "text": ""
           }
         },
         {
           "@type": "Question",
-          "name": "Can I filter my WPS by welding process?",
+          "name": "Can I search on the individual passes, not just the header?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Because every field is extracted at import, you filter the library by real criteria — process, base and filler material, position, thickness range and more — down to a specific combination of processes, with or without a backing pass, in a couple of clicks."
+            "text": "Yes — the facets read the pass table itself. Filter on values inside the passes — side, role, process, polarity — as set-membership filters, so a question like \"which of our WPS run a 121 root\" is one click instead of opening and reading each document by hand."
           }
         },
         {
           "@type": "Question",
-          "name": "Can I search on the individual passes?",
+          "name": "Do I still need Excel to work with my library?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Facets read the pass table itself, so you can filter on the values inside the passes — side, role, process, polarity — as set-membership filters. Every WPS that runs a 121 root is one click, not a manual read of each document."
+            "text": "No — the app is where you work. Every WPS, pWPS and WPQR is a structured record you search, filter, edit, verify and link in place. Excel export is there for when you need to hand the register to head office, not something you drop into to get your day-to-day work done."
           }
         },
         {
           "@type": "Question",
-          "name": "How are revisions handled?",
+          "name": "My WPS number has five revisions. Does the list turn into a mess?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Several revisions of the same WPS number collapse into a single row with an N-revisions chip and a switcher, newest first. Each incoming file is classified on import as a new WPS, a new revision, or a correction — so revisions group correctly and the list stays readable."
+            "text": "No. Revisions of the same WPS number collapse into one row with an \"N revisions\" chip and a switcher, newest first, so the list stays readable no matter how many accumulate. Each incoming file is classified on import as a new WPS, a new revision, or a correction, so they group correctly from the start."
           }
         },
         {
           "@type": "Question",
-          "name": "Can I correct a parsed field?",
+          "name": "What if the parser missed a row or read something wrong?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, in place. Edit any field's value or its label and save; a label change re-titles that column in the register, and a one-click verify clears a low-confidence flag. Every correction stays in sync across the library, the register titles and the review badge."
+            "text": "You're never trapped behind the parser. Add a row it missed, or correct any value or its label in place and save — a label change even re-titles that column in the register, so your naming stays consistent everywhere. Nothing about the library depends on the parser getting every read perfect the first time."
           }
         },
         {
           "@type": "Question",
-          "name": "Can I link a WPS to its qualification records?",
+          "name": "Can I see what qualifies each procedure without digging?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Link a WPS to the WPQR that qualifies it, a WPQR to the several WPS it supports, and a pWPS to the number it becomes — then open any of them in a click and see the whole chain together."
+            "text": "Yes. Link a WPS to the WPQR that qualifies it, a WPQR to the several WPS it supports, and a pWPS to the WPQR behind it — then open any record in the chain in a click. The evidence for a procedure is always one hop away, not lost in a shared drive."
           }
         }
       ]

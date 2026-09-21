@@ -93,7 +93,7 @@
         },
         {
           "@type": "Question",
-          "name": "How much does it cost, and is it charged per user?",
+          "name": "How much does it cost, and is it per user?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": ""
@@ -101,10 +101,10 @@
         },
         {
           "@type": "Question",
-          "name": "What kind of support do I get at this price?",
+          "name": "What support do I get at this price?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Direct support from the founders, included — no ticket queue and no paid support tier. You email the people who built the app and hear back within one business day, usually sooner. Because the same people handle your onboarding, a support request that needs a parser tweak for your form goes straight to whoever can make it."
+            "text": "Direct support from the founders, included — no ticket queue, no paid tier. You email the people who built the app and hear back within a business day. Because the same people handle onboarding, a request that needs a parser tweak goes straight to whoever can make it."
           }
         },
         {
@@ -112,7 +112,7 @@
           "name": "Does Atlas track welder qualifications (WPQ)?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Each welder has a record with expiry and continuity tracked as separate dates and warned ahead, a colour-coded roster, signed-and-dated requalification, retained history and an optional certificate. Due dates appear on the dashboard, with email reminders you can switch on. Atlas records and warns; judging validity stays with you."
+            "text": ""
           }
         },
         {

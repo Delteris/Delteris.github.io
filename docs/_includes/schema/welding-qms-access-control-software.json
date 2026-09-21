@@ -37,7 +37,8 @@
       "offers": {
         "@type": "Offer",
         "url": "https://delteris.com/pricing.html",
-        "availability": "https://schema.org/PreOrder", "availabilityStarts": "2027-01-01"
+        "availability": "https://schema.org/PreOrder",
+        "availabilityStarts": "2027-01-01"
       },
       "provider": {
         "@id": "https://delteris.com/#organization"
@@ -73,6 +74,14 @@
         },
         {
           "@type": "Question",
+          "name": "How does this fit the wider platform?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Management is the office side of one system. Elenchon is the full welding management software — access control sits over floor capture, the WPS/WPQR/WPQ workflow, the weld traceability chain, and much more."
+          }
+        },
+        {
+          "@type": "Question",
           "name": "What is welding QMS software?",
           "acceptedAnswer": {
             "@type": "Answer",
@@ -81,10 +90,10 @@
         },
         {
           "@type": "Question",
-          "name": "Is our quality data stored on-premise or in the cloud?",
+          "name": "Is an on-premise QMS harder to live with than a cloud one?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "On-premise. Elenchon is a containerized appliance installed in your facility, so roles, templates and records never touch a shared cloud server. Authorised staff and auditors can still connect remotely through Phrakton, a zero-trust, post-quantum-safe overlay."
+            "text": ""
           }
         }
       ]
