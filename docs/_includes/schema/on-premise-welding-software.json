@@ -37,7 +37,8 @@
       "offers": {
         "@type": "Offer",
         "url": "https://delteris.com/pricing.html",
-        "availability": "https://schema.org/PreOrder", "availabilityStarts": "2027-01-01"
+        "availability": "https://schema.org/PreOrder",
+        "availabilityStarts": "2027-01-01"
       },
       "provider": {
         "@id": "https://delteris.com/#organization"
@@ -52,7 +53,7 @@
           "name": "Does it work offline?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. The platform runs on your local network, and offline work capture queues entries on-device during a network drop and syncs them automatically on reconnect. The offline document viewer, for saving a WPS or plan for instant access, is available on every plan."
+            "text": ""
           }
         },
         {
@@ -60,7 +61,7 @@
           "name": "How does on-premise affect cost?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "It makes cost predictable. You pay one published, flat rate per appliance with no per-seat scaling, the hardware is passed through at cost, and every add-on and fee is listed in plain euros — so your finance team can model total cost of ownership up front instead of watching a subscription grow."
+            "text": ""
           }
         },
         {
@@ -68,7 +69,7 @@
           "name": "What happens to our data if we cancel?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "It stays with you. The data is on your physical hardware, and you keep permanent view-only access to all historical records for audits. There is no lock-in and no exit fee."
+            "text": "It stays with you. The data is on your physical hardware, and you keep view-only access to all historical records for audits. There is no lock-in and no exit fee."
           }
         },
         {
@@ -76,7 +77,15 @@
           "name": "Can staff still access it remotely?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, securely. Authorised staff and auditors connect through Phrakton, a zero-trust, post-quantum-safe overlay, while the appliance opens no inbound ports to the public internet — remote reach without exposing your factory."
+            "text": "Yes, securely. Authorised staff — and even auditors — connect through Phrakton, our secure network overlay, while the appliance stays off the public internet — remote reach without exposing your factory."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Isn't on-premise more to maintain?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": ""
           }
         },
         {
@@ -84,15 +93,15 @@
           "name": "What is on-premise welding software?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "It is welding software installed on hardware inside your own facility, rather than accessed as a cloud service. Your weld records live on your server, under your control, and the system keeps working whether or not you have an internet connection. Elenchon is delivered exactly this way."
+            "text": "It is welding software installed on hardware inside your own facility, rather than accessed as a cloud service. Your weld records live on your server, under your control, and the appliance runs on your own local network — no vendor cloud between you and your data. Elenchon is delivered exactly this way."
           }
         },
         {
           "@type": "Question",
-          "name": "Is Elenchon cloud-based or on-premise?",
+          "name": "Does running it ourselves mean maintaining a server and updates?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "On-premise. Elenchon is a containerized appliance installed in your facility — the sovereign alternative to cloud welding software. Your data never touches a shared server, there are no forced updates, and you don't depend on a vendor's cloud to reach your own records."
+            "text": ""
           }
         }
       ]

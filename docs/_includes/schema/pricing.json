@@ -1,110 +1,154 @@
 {
-      "@context": "https://schema.org",
-      "@graph": [
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "name": "Pricing",
+      "url": "https://delteris.com/pricing.html",
+      "description": "Published, flat-rate pricing for Elenchon on-premise welding traceability.",
+      "publisher": {
+        "@id": "https://delteris.com/#organization"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
         {
-          "@type": "WebPage",
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://delteris.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
           "name": "Pricing",
-          "url": "https://delteris.com/pricing.html",
-          "description": "Published, flat-rate pricing for Elenchon on-premise welding traceability.",
-          "publisher": { "@id": "https://delteris.com/#organization" }
-        },
+          "item": "https://delteris.com/pricing.html"
+        }
+      ]
+    },
+    {
+      "@type": "Product",
+      "name": "Elenchon Lite",
+      "description": "On-premise welding traceability for smaller fabrication shops: work capture, project tree and flowchart views, the full WPS/WPQR/WPQ qualification workflow, audit-ready ISO and ASME IX evidence, post-quantum-safe networking and local backups. Includes 20 workers, expandable by up to two blocks of ten.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Delteris"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://delteris.com/pricing.html",
+        "price": "390.00",
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/PreOrder",
+        "availabilityStarts": "2027-01-01",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "390.00",
+          "priceCurrency": "EUR",
+          "unitText": "per appliance, per month, excluding VAT"
+        }
+      }
+    },
+    {
+      "@type": "Product",
+      "name": "Elenchon Standard",
+      "description": "The complete Elenchon on-premise welding traceability platform: all six capability pillars, on-site scoping, installation and floor training, audit-ready ISO & ASME IX evidence, post-quantum-safe networking, and direct founder support. Includes 50 workers and unlimited worker expansion.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Delteris"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://delteris.com/pricing.html",
+        "price": "790.00",
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/PreOrder",
+        "availabilityStarts": "2027-01-01",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "790.00",
+          "priceCurrency": "EUR",
+          "unitText": "per appliance, per month, excluding VAT"
+        }
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
         {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://delteris.com/" },
-            { "@type": "ListItem", "position": 2, "name": "Pricing", "item": "https://delteris.com/pricing.html" }
-          ]
-        },
-        {
-          "@type": "Product",
-          "name": "Elenchon Lite",
-          "description": "On-premise welding traceability for smaller fabrication shops: work capture, project tree and flowchart views, the full WPS/WPQR/WPQ qualification workflow, audit-ready ISO and ASME IX evidence, post-quantum-safe networking and local backups. Includes 20 workers, expandable by up to two blocks of ten.",
-          "brand": { "@type": "Brand", "name": "Delteris" },
-          "offers": {
-            "@type": "Offer",
-            "url": "https://delteris.com/pricing.html",
-            "price": "390.00",
-            "priceCurrency": "EUR",
-            "availability": "https://schema.org/PreOrder", "availabilityStarts": "2027-01-01",
-            "priceSpecification": {
-              "@type": "UnitPriceSpecification",
-              "price": "390.00",
-              "priceCurrency": "EUR",
-              "unitText": "per appliance, per month, excluding VAT"
-            }
+          "@type": "Question",
+          "name": "When does billing start?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": ""
           }
         },
         {
-          "@type": "Product",
-          "name": "Elenchon Standard",
-          "description": "The complete Elenchon on-premise welding traceability platform: all six capability pillars, on-site scoping, installation and floor training, audit-ready ISO & ASME IX evidence, post-quantum-safe networking, and direct founder support. Includes 50 workers and unlimited worker expansion.",
-          "brand": { "@type": "Brand", "name": "Delteris" },
-          "offers": {
-            "@type": "Offer",
-            "url": "https://delteris.com/pricing.html",
-            "price": "790.00",
-            "priceCurrency": "EUR",
-            "availability": "https://schema.org/PreOrder", "availabilityStarts": "2027-01-01",
-            "priceSpecification": {
-              "@type": "UnitPriceSpecification",
-              "price": "790.00",
-              "priceCurrency": "EUR",
-              "unitText": "per appliance, per month, excluding VAT"
-            }
+          "@type": "Question",
+          "name": "Can I change my plan later?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, and it costs nothing. Upgrades, downgrades and add-ons are applied remotely over the Phrakton fabric — give us 15 days’ notice. Upgrades apply immediately; downgrades take effect at your next billing cycle."
           }
         },
         {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "How much does Elenchon cost?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Elenchon Lite is \u20ac390 per month and includes 20 workers. Elenchon Standard is \u20ac790 per month and includes 50 workers, which stays under \u20ac1,000 a month including Portuguese VAT. Both are flat rates per appliance, per month, and extra workers beyond the included block are \u20ac9 each per month."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Can I change my plan after deployment?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes. Upgrades, downgrades and add-ons are applied remotely over the Phrakton fabric at no charge \u2014 no engineer visit and no commute fee. Upgrades take effect immediately, downgrades at the start of your next billing cycle."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "How many workers can Elenchon Lite support?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Lite includes 20 workers and can be expanded by up to two blocks of ten, for a maximum of 40 workers. Shops that need more move to Standard, which includes 50 workers and unlimited expansion blocks."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "What does a worker expansion block cost?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "\u20ac90 per month for a block of ten workers, and every block includes 20 GB of recurring remote bandwidth at no extra cost. Additional bandwidth is \u20ac25 per 100 GB."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "What happens if the Phrakton fabric has an outage?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Active production does not stop, because Elenchon runs locally on the appliance \u2014 an outage only affects remote access and new connections. Invoice credits apply automatically."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "What does it cost to install Elenchon on site?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Standard is \u20ac1,700 all in, covering both on-site deployment and floor training. Lite is available as a single \u20ac950 package that skips the pre-deployment scoping visit and includes one training session of two 2-hour blocks. Standard training runs as two 3-hour blocks. Hardware is passed through at cost, roughly \u20ac300 to \u20ac400."
-              }
-            }
-          ]
+          "@type": "Question",
+          "name": "Can one appliance run multiple factories?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": ""
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How large a floor does Lite cover?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Lite includes 20 workers and takes up to two expansion blocks of ten — a 40-worker ceiling. Past that you move to Standard, which includes 50 and expands without limit. Moving up is a remote plan change, not a re-installation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What comes with a worker block?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "€90 per month adds ten workers, and every block carries 20 GB of recurring remote bandwidth at no extra charge. If you need more than that, bandwidth is €25 per 100 GB."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will we need to buy bandwidth?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": ""
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does installation cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Standard is €1,700 all in — €850 deployment and €850 floor training, quoted as one line. Lite is a single €950 package covering both, lower for its one on-site trip versus two. Extra training sessions are €500. Hardware is passed through at cost — roughly €300–€400 — with zero markup."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if the fabric goes down?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": ""
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if we cancel?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "There is no lock-in and no exit fee. The appliance is yours and the data never left it, so you keep view-only access to your historical records for audits."
+          }
         }
       ]
     }
+  ]
+}

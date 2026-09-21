@@ -37,7 +37,8 @@
       "offers": {
         "@type": "Offer",
         "url": "https://delteris.com/pricing.html",
-        "availability": "https://schema.org/PreOrder", "availabilityStarts": "2027-01-01"
+        "availability": "https://schema.org/PreOrder",
+        "availabilityStarts": "2027-01-01"
       },
       "provider": {
         "@id": "https://delteris.com/#organization"
@@ -49,10 +50,10 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Can I import a BOM from Tekla or CAD?",
+          "name": "Can I import a BOM from Tekla or another CAD tool?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Copy your BOM straight out of Tekla or your CAD package and paste it into an Excel-like grid. Elenchon auto-detects the columns, maps every field, and builds the project structure in seconds — no special export format needed."
+            "text": "Yes. Copy your BOM straight out of Tekla or most CAD packages and paste it into an Excel-like grid. Elenchon auto-detects the columns and maps every field — and you can correct the mapping by hand at import, so even a format it does not recognise goes in cleanly. No special export format needed."
           }
         },
         {
@@ -81,10 +82,18 @@
         },
         {
           "@type": "Question",
+          "name": "How does this fit the wider platform?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The structure is the backbone. Elenchon is full welding management software — the project structure feeds shop-floor capture, the WPS/WPQR/WPQ workflow, the weld traceability chain, and much more."
+          }
+        },
+        {
+          "@type": "Question",
           "name": "What is weld project structure software?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "It is the tool that models a fabrication project — assemblies, parts and the joints between them — so every weld and work entry has a place to live and a traceable path upward to the finished piece. Elenchon runs it on-premise, on hardware you own."
+            "text": "Weld project structure software is the tool that models a fabrication project — assemblies, parts and the joints between them — so every weld and work entry has a place to live and a traceable path upward to the finished piece. Elenchon runs it on-premise, on hardware you own."
           }
         }
       ]

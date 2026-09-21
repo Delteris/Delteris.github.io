@@ -60,7 +60,7 @@
           "name": "Does an import change my register automatically?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Only if you choose to let it. By default every import queues as a proposed change-set — current value beside new value, cell by cell — and you approve what lands. You can raise the bar to review every value, or lower it to auto-apply and rely on versioning to undo. Only the cells you approve are patched into your own workbook."
+            "text": ""
           }
         },
         {
@@ -68,7 +68,7 @@
           "name": "A big import has hundreds of cells. Do I have to check every one?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No — the parser flags its own uncertainty so you don't review everything equally. Any cell it wasn't sure of, or a heat input it computed, is shaded amber and surfaced for a look; confident reads stay quiet. A large import doesn't drown you in cells that were never in doubt — your attention goes only where it's actually needed."
+            "text": ""
           }
         },
         {
@@ -76,7 +76,7 @@
           "name": "Can I correct a value during review?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Fix any value inline, or add a row for a field the parser missed, then approve. What lands is what you signed off on — you are never forced to accept the parser's raw read or reject the whole set."
+            "text": "Yes. Fix any value inline, or add a row for a field the parser missed, then approve. What lands is what you signed off on — you're never forced to accept the parser's raw read or reject the whole set."
           }
         },
         {
@@ -100,7 +100,7 @@
           "name": "What if an import has nothing to change, only something to verify?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "It is closed with a mark-reviewed rather than an approval that would write an identical new version — so a verification-only change-set doesn't leave you stuck between approving a change that isn't there and rejecting a correct read."
+            "text": "It's closed with a \"mark reviewed\" rather than an approval that would write an identical new version — so a verification-only change-set doesn't leave you stuck between approving a change that isn't there and rejecting a correct read."
           }
         }
       ]
