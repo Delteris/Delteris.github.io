@@ -20,17 +20,17 @@
           "@type": "ListItem",
           "position": 3,
           "name": "On-Premise Gestionado: On-Premise Sin la Carga de TI",
-          "item": "https://delteris.com/es/resources/on-premise-vs-cloud-welding-software/"
+          "item": "https://delteris.com/es/resources/managed-on-premise-software/"
         }
       ]
     },
     {
       "@type": "Article",
-      "@id": "https://delteris.com/es/resources/on-premise-vs-cloud-welding-software/#article",
+      "@id": "https://delteris.com/es/resources/managed-on-premise-software/#article",
       "headline": "On-Premise Gestionado: On-Premise Sin la Carga de TI",
       "description": "Qué es el software on-premise gestionado y en qué se diferencia de un servidor propio clásico: instalado y mantenido por el proveedor, acceso remoto sin puertos abiertos, registro offline — y cuándo la nube sigue siendo mejor opción.",
       "inLanguage": "es-ES",
-      "mainEntityOfPage": "https://delteris.com/es/resources/on-premise-vs-cloud-welding-software/",
+      "mainEntityOfPage": "https://delteris.com/es/resources/managed-on-premise-software/",
       "datePublished": "2026-07-31",
       "dateModified": "2026-09-23",
       "author": {
@@ -45,7 +45,7 @@
     },
     {
       "@type": "FAQPage",
-      "@id": "https://delteris.com/es/resources/on-premise-vs-cloud-welding-software/#faq",
+      "@id": "https://delteris.com/es/resources/managed-on-premise-software/#faq",
       "mainEntity": [
         {
           "@type": "Question",
