@@ -1,0 +1,85 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Início",
+          "item": "https://delteris.com/pt/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Recursos",
+          "item": "https://delteris.com/pt/resources/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "On-Premise Gerido: On-Premise Sem a Carga de TI",
+          "item": "https://delteris.com/pt/resources/on-premise-vs-cloud-welding-software/"
+        }
+      ]
+    },
+    {
+      "@type": "Article",
+      "@id": "https://delteris.com/pt/resources/on-premise-vs-cloud-welding-software/#article",
+      "headline": "On-Premise Gerido: On-Premise Sem a Carga de TI",
+      "description": "O que é software on-premise gerido e como difere de um servidor próprio clássico: instalado e mantido pelo fornecedor, acesso remoto sem portas abertas, registo offline — e quando a cloud continua a ser a melhor opção.",
+      "inLanguage": "pt-PT",
+      "mainEntityOfPage": "https://delteris.com/pt/resources/on-premise-vs-cloud-welding-software/",
+      "datePublished": "2026-07-31",
+      "dateModified": "2026-09-23",
+      "author": {
+        "@type": "Organization",
+        "name": "Delteris",
+        "url": "https://delteris.com/"
+      },
+      "publisher": {
+        "@id": "https://delteris.com/#organization"
+      },
+      "image": "https://delteris.com/static/DelterisCrest.webp"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://delteris.com/pt/resources/on-premise-vs-cloud-welding-software/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Preciso de equipa de TI para software on-premise gerido?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não. O fornecedor instala, atualiza e repara o appliance remotamente. A sua parte é mantê-lo ligado à corrente e à rede."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O on-premise é mais seguro do que a cloud?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não automaticamente. Reduz a exposição quando o appliance não tem portas abertas e os dados nunca saem das instalações — mas a implementação conta mais do que o rótulo. Pergunte como são protegidos o acesso remoto e as atualizações."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "De quem é o hardware?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Depende do fornecedor. Com o Elenchon, compra o appliance a preço de custo e ele é seu, tal como os dados que contém. Veja preços e implementação."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O que acontece se cancelar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Com o Elenchon não há taxa de saída, e mantém acesso só de leitura aos seus registos históricos para auditorias. Peça o mesmo por escrito a qualquer fornecedor."
+          }
+        }
+      ]
+    }
+  ]
+}

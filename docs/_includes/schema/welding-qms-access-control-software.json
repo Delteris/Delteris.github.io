@@ -93,7 +93,7 @@
           "name": "Is an on-premise QMS harder to live with than a cloud one?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "It is the same app, minus the exposure. Roles, templates and records sit on an appliance in your facility rather than a shared cloud server, so the quality system stays under your control. Day to day it behaves like any modern web app, and authorised staff — auditors included — reach it through Phrakton."
           }
         }
       ]

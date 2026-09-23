@@ -7,6 +7,7 @@ description: "Una guía en lenguaje sencillo sobre la trazabilidad por número d
 og_description: "Cómo funciona la trazabilidad por número de colada — del certificado de la siderurgia a la soldadura terminada — incluido el paso de transferencia en el corte donde la mayoría de los talleres pierde el rastro, para la ISO 3834 y la EN 1090."
 og_image_alt: "Elenchon by Delteris — guía de trazabilidad por número de colada"
 og_image_dims: true
+schema: "schema/resources/es/heat-number-traceability.json"
 en_url: "/resources/heat-number-traceability/"
 pt_url: "/pt/resources/heat-number-traceability/"
 es_url: "/es/resources/heat-number-traceability/"
@@ -16,85 +17,157 @@ alt_url: "/resources/heat-number-traceability/"
         <div class="hero-content">
             <span class="hero-eyebrow">Recursos · Guía</span>
             <h1 class="text-glow">Cómo Funciona la Trazabilidad<br>por Número de Colada.</h1>
-            <p class="hero-sub">Cada soldadura conforme puede rastrearse hasta el lote exacto de acero con que se hizo. Así se construye esa cadena — y el único paso donde la mayoría de los talleres la rompe discretamente.</p>
+            <p class="hero-sub">Cada soldadura trazable lleva de vuelta al lote de acero del que se hizo. Así se construye esa cadena — y el paso donde la mayoría de los talleres la rompe.</p>
+            <p class="guide-meta">Por el equipo de Delteris · Última revisión el <time datetime="2026-09-23">23 de septiembre de 2026</time> · <a href="/es/resources/">Todas las guías</a></p>
         </div>
     </header>
 
     <section class="page-section container u-flush-top">
         <div class="summary-panel">
             <h2 class="text-glow">La Respuesta Corta</h2>
-            <p><strong>La trazabilidad por número de colada es el vínculo ininterrumpido entre una soldadura terminada y el lote específico de material con que se hizo, comprobado a través del número de colada que la siderurgia asigna a cada colada de acero y registra en su certificado de material.</strong> Cuando un auditor pregunta "pruebe que esta junta se hizo con material certificado", el número de colada es el hilo del que tira. Construir esa cadena es sencillo en principio; mantenerla ininterrumpida a lo largo del corte y la fabricación es donde vive la verdadera disciplina — y los verdaderos fallos.</p>
+            <p><strong>La trazabilidad por número de colada es el vínculo ininterrumpido entre una soldadura terminada y la colada de acero de la que se hizo. La acería marca cada pieza con un número de colada y lo registra en el certificado del material; el taller lleva ese número a través de cada corte y hasta cada unión.</strong> El certificado rara vez es el problema. La cadena suele romperse en la sierra, cuando una pieza cortada pierde su marca.</p>
         </div>
     </section>
 
     <section class="page-section container">
         <div class="section-header">
             <span class="eyebrow">Dónde Empieza</span>
-            <h2>El Número de Colada y el Certificado de la Siderurgia</h2>
+            <h2>El Número de Colada y Su Certificado</h2>
         </div>
         <div class="glass-card feature-block">
-            <p class="feature-lead">Un <strong>número de colada</strong> es un identificador único que la siderurgia asigna a una única colada — una "colada" — de acero. Todo lo que se vierte de esa colada comparte la misma química y las mismas propiedades mecánicas, y el número de colada se marca en el material para que siempre pueda rastrearse hasta su origen.</p>
-            <ul class="feature-list">
-                <li><strong>El MTR es la partida de nacimiento del material.</strong> El Mill Test Report (también llamado certificado de la siderurgia o MTC) lista el número de colada junto a la composición química, los resultados de los ensayos mecánicos y las normas que el material cumple. Haga coincidir la marca en el acero con el número de colada en el MTR y habrá probado qué es el material.</li>
-                <li><strong>La EN 10204 clasifica el certificado.</strong> La norma europea define tipos de certificado — 2.1 y 2.2 son declaraciones e informes no específicos, mientras que el <strong>3.1</strong> da resultados de ensayo reales para ese material específico, validados por un representante de inspección independiente de la producción. El tipo 3.1 es la base común para trabajo estructural, de presión y de tubería; el 3.2 añade la contrafirma de un comprador o de terceros.</li>
-                <li><strong>La recepción es el primer punto de control.</strong> Cuando el material llega, alguien confirma que el número de colada marcado en él corresponde al certificado — el momento en que la cadena de custodia comienza formalmente.</li>
-            </ul>
+            <p class="feature-lead">Un <strong>número de colada</strong> identifica una fusión de acero. Todo lo que sale de ella comparte composición química y propiedades mecánicas. El <strong>certificado del material</strong> (MTR o MTC) indica ese número con los resultados de los ensayos, y la <strong>EN 10204</strong> define cuánto demuestra el certificado:</p>
         </div>
+        <div class="matrix-scroll u-gap-top">
+            <table class="feature-matrix comparison-matrix guide-matrix guide-matrix-2">
+                <caption class="u-visually-hidden">Tipos de documentos de inspección EN 10204</caption>
+                <thead>
+                    <tr>
+                        <th scope="col" class="fm-feature-head">Tipo</th>
+                        <th scope="col">Qué le da</th>
+                        <th scope="col">Validado por</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row"><span class="fm-name">2.1</span></th>
+                        <td>Declaración de que el producto cumple el pedido. Sin resultados de ensayo.</td>
+                        <td>El fabricante</td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><span class="fm-name">2.2</span></th>
+                        <td>Resultados de inspección no específica — típicos del producto, no de este lote.</td>
+                        <td>El fabricante</td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><span class="fm-name">3.1</span></th>
+                        <td>Resultados de ensayo reales del material suministrado. La base habitual para trabajo estructural y a presión.</td>
+                        <td>El representante de inspección del fabricante, independiente de producción</td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><span class="fm-name">3.2</span></th>
+                        <td>Como el 3.1, refrendado por una segunda parte.</td>
+                        <td>El representante del fabricante y el del comprador o un inspector reglamentario</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="feature-note">La recepción es el primer punto de control: el número de colada del acero debe coincidir con el certificado antes de que el material entre en stock.</p>
     </section>
 
     <section class="page-section container">
         <div class="section-header">
             <span class="eyebrow">El Paso Crítico</span>
-            <h2>Transferencia en el Corte — Donde la Cadena se Rompe</h2>
+            <h2>Transferencia en el Corte</h2>
         </div>
         <div class="glass-card feature-block">
-            <p class="feature-lead">Este es el paso que discretamente derrota a la mayoría de los sistemas de trazabilidad. En el momento en que una chapa o un tubo se corta, la pieza que lleva la marca original y el retal que no la lleva son ahora dos piezas — y solo una de ellas sigue mostrando su número de colada.</p>
             <ul class="feature-list">
-                <li><strong>El número de colada debe transferirse antes de que la marca se pierda.</strong> Cuando el corte elimina o separa el marcado original, el número de colada debe re-marcarse en cada pieza resultante para que cada una siga identificada. Hágalo antes de que la marca original desaparezca, no después.</li>
-                <li><strong>El retal lleva la misma colada.</strong> Un resto devuelto a la estantería sigue perteneciendo a su colada de origen — pero, si vuelve sin etiqueta, su trazabilidad desaparece en el instante en que sale del banco. Esta es una de las no conformidades de trazabilidad más comunes en la fabricación.</li>
-                <li><strong>Debe registrarse, no solo marcarse.</strong> La transferencia se documenta — a menudo atestiguada por el CC según el plan de calidad del proyecto — para que exista un rastro documental que muestre que la pieza B vino de la colada X a través de la pieza madre A.</li>
+                <li><strong>Remarcar antes de perder la marca.</strong> Cuando se corta una chapa o un tubo, cada pieza resultante necesita el número de colada, transferido antes de que desaparezca la marca original.</li>
+                <li><strong>Los retales también.</strong> Un retal devuelto a la estantería sin marcar ha perdido su trazabilidad para siempre — uno de los hallazgos más comunes en auditorías de fabricación.</li>
+                <li><strong>Registrarlo, no solo marcarlo.</strong> La transferencia se documenta — a menudo presenciada por control de calidad según el plan de calidad — para demostrar que la pieza B viene de la colada X a través de la pieza madre A.</li>
             </ul>
-            <p>Un taller que acierta en todo lo demás pero pierde el paso de transferencia en la sierra tiene una cadena con un agujero exactamente en el punto donde los auditores miran primero.</p>
         </div>
     </section>
 
     <section class="page-section container">
         <div class="section-header">
             <span class="eyebrow">La Cadena Completa</span>
-            <h2>De la Colada a la Soldadura Terminada</h2>
+            <h2>A Qué Se Vincula una Soldadura Trazable</h2>
         </div>
         <div class="glass-card feature-block">
-            <p class="feature-lead">Trazabilidad completa significa que el número de colada sube todo el recorrido, de la materia prima hasta la junta en la que acaba, acompañado por todo lo demás que tocó la soldadura. Bajo la <strong>ISO 3834</strong> y la <strong>EN 1090</strong>, una soldadura trazable se vincula a:</p>
             <ul class="feature-list">
-                <li><strong>El material</strong> — el número de colada y su MTR, mantenidos a lo largo de cada corte.</li>
-                <li><strong>El procedimiento</strong> — el WPS con que se soldó, y el WPQR detrás de ese procedimiento.</li>
-                <li><strong>Los consumibles</strong> — metales de aporte rastreados por su propio lote y certificado.</li>
-                <li><strong>La persona</strong> — el soldador cualificado que la hizo, y su cualificación vigente.</li>
-                <li><strong>El resultado</strong> — el registro de inspección y aceptación de esa junta.</li>
+                <li><strong>Material</strong> — el número de colada y su certificado, llevados a través de cada corte.</li>
+                <li><strong>Procedimiento</strong> — la WPS con la que se soldó y el WPQR que la respalda (<a href="/es/resources/pwps-vs-wpqr-vs-wps/">cómo se relacionan</a>).</li>
+                <li><strong>Consumibles</strong> — material de aportación trazado por su propio lote y certificado.</li>
+                <li><strong>Soldador</strong> — quién la hizo, con una <a href="/es/resources/welder-qualification-management-software/">cualificación válida ese día</a>.</li>
+                <li><strong>Resultado</strong> — el registro de inspección y aceptación de la unión.</li>
             </ul>
-            <p>La trazabilidad se acumula <em>hacia arriba</em>: los números de colada en las hojas de material base se propagan por los ensamblajes construidos a partir de ellas, para que una pieza terminada lleve toda la procedencia de todo lo que se soldó en ella. Eso es lo que permite a un taller responder, para cualquier junta, "pruebe que esta soldadura es sólida y pruebe de qué está hecha" — de un solo tirón, no en una semana en el archivo.</p>
+            <p>Cuánto de esto hay que demostrar depende del trabajo. En la EN 1090-2, la clase de ejecución EXC1 no tiene requisito de trazabilidad, la EXC2 la exige sin ser necesariamente pieza a pieza, y la EXC3 y la EXC4 exigen trazabilidad completa de cada producto constituyente. La <a href="https://www.iso.org/standard/81651.html">ISO 3834-2</a> exige mantener la identificación y la trazabilidad cuando el contrato o el código lo piden.</p>
         </div>
     </section>
 
     <section class="page-section container">
         <div class="section-header">
-            <span class="eyebrow">Por Qué es un Problema de Software</span>
-            <h2>El Papel Pierde el Hilo</h2>
+            <span class="eyebrow">Por Qué Falla el Papel</span>
+            <h2>Los Vínculos Se Rompen en Silencio</h2>
         </div>
         <div class="glass-card feature-block">
-            <p class="feature-lead">En papel, esta cadena es frágil en cada unión entre pasos — y el fallo casi nunca es el certificado de la siderurgia. Es la transferencia que no se registró, el resto que volvió sin etiqueta, el registro de soldadura que vive en un dosier distinto del registro de material.</p>
-            <ul class="feature-list">
-                <li><strong>Los vínculos se rompen en silencio.</strong> Un registro de transferencia ausente no dispara una alarma; se convierte simplemente en una laguna descubierta bajo la presión de una auditoría.</li>
-                <li><strong>La reconstrucción es costosa.</strong> Cuando el hilo se pierde, alguien pasa días reconstruyéndolo a partir de registros dispersos — si es que puede reconstruirse en absoluto.</li>
-                <li><strong>El software mantiene los vínculos vivos.</strong> Capture el número de colada una vez en la recepción, ligúelo a su MTR, transpórtelo a lo largo de cada corte y adjúntelo a las juntas construidas a partir de ese material — y la cadena se mantiene íntegra por construcción, no por heroísmos a la hora de la auditoría.</li>
-            </ul>
+            <p class="feature-lead">En papel, el registro de material, la lista de corte y el registro de soldadura viven en carpetas distintas. Una transferencia que falta no da ninguna alarma — se convierte en un hueco que alguien tarda días en reconstruir cuando pregunta un auditor. En software, el número de colada se captura una vez en la recepción, se vincula a su certificado y se <a href="/es/weld-project-structure-software.html">propaga por el árbol del proyecto</a>, de modo que cada unión hereda por construcción el origen de su material.</p>
+            <p>Así funciona la <a href="/es/welding-traceability-software.html">trazabilidad de soldadura de Elenchon</a>, junto con el <a href="/es/welding-equipment-management-software.html">control de lotes de consumibles</a> y el <a href="/es/welding-work-capture-software.html">registro en planta</a> — en un appliance on-premise gestionado íntegramente: lo instalamos, lo actualizamos y lo resolvemos todo en remoto — solo tiene que mantenerlo encendido.</p>
+        </div>
+    </section>
+
+    <section class="page-section container" id="faq">
+        <div class="section-header">
+            <span class="eyebrow">Preguntas &amp; Respuestas</span>
+            <h2>Trazabilidad por Número de Colada, Respondida</h2>
+        </div>
+        <div class="faq-list">
+            <details class="faq-item">
+                <summary><h3>¿Qué diferencia hay entre número de colada y número de lote?</h3></summary>
+                <div class="faq-body">
+                    <p>El número de colada identifica una fusión de acero en la acería. Lote es un término más amplio — se usa a menudo para consumibles, o para un lote de procesamiento que puede contener material de una o varias coladas.</p>
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary><h3>¿Es siempre obligatorio un certificado EN 10204 3.1?</h3></summary>
+                <div class="faq-body">
+                    <p>No — lo decide la norma del producto, el contrato o el código. El tipo 3.1 es el requisito habitual en trabajo estructural de clases de ejecución altas y en equipos a presión. Compruebe la especificación antes de pedir.</p>
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary><h3>¿Qué pasa si una pieza pierde su número de colada?</h3></summary>
+                <div class="faq-body">
+                    <p>Pasa a ser material sin identificar. Salvo que su plan de calidad prevea una vía de recuperación, como nuevos ensayos, no puede usarse en trabajos que exijan trazabilidad.</p>
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary><h3>¿Los materiales de aportación también necesitan trazabilidad?</h3></summary>
+                <div class="faq-body">
+                    <p>Normalmente sí: los consumibles se trazan por lote con su propio certificado, al nivel que pida la especificación.</p>
+                </div>
+            </details>
         </div>
     </section>
 
     <section class="page-section container">
-        <div class="compliance-panel gold-edge">
-            <span class="eyebrow">Cómo lo Hace Elenchon</span>
-            <h2 class="text-glow">El Número de Colada, Transportado Todo el Camino Arriba</h2>
-            <p>Elenchon captura los números de colada en la recepción, los liga a sus MTR de origen y los propaga por el árbol del proyecto, para que cada junta herede la procedencia del material con que se construye — toda la <a href="/es/welding-traceability-software.html">cadena de trazabilidad de soldaduras</a> en un appliance en local que es suyo. Se vincula a los mismos registros que el <a href="/es/welding-qualification-software.html">flujo de trabajo WPS, WPQR y WPQ</a> y la <a href="/es/welding-equipment-management-software.html">trazabilidad de lotes de consumibles</a>, para que material, procedimiento, persona y resultado se mantengan ligados a cada soldadura. ¿Nuevo por aquí? Empiece con <a href="/es/resources/pwps-vs-wpqr-vs-wps/">pWPS vs WPQR vs WPS</a>.</p>
+        <div class="glass-card feature-block">
+            <p class="feature-lead"><strong>Normas citadas</strong></p>
+            <ul class="feature-list">
+                <li>EN 10204 — productos metálicos, tipos de documentos de inspección.</li>
+                <li>EN 1090-2 — ejecución de estructuras de acero, requisitos técnicos.</li>
+                <li><a href="https://www.iso.org/standard/81651.html">ISO 3834-2</a> — requisitos de calidad completos para el soldeo por fusión.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="page-section container" id="cta">
+        <div class="cta-band">
+            <span class="eyebrow">Siga Leyendo</span>
+            <h2 class="text-glow">Del Material al Procedimiento</h2>
+            <p>El número de colada demuestra de qué está hecha una soldadura. Los registros de procedimiento demuestran cómo se hizo.</p>
+            <div class="cta-group">
+                <a href="/es/welding-traceability-software.html" class="btn btn-primary">Ver la Trazabilidad</a>
+                <a href="/es/resources/pwps-vs-wpqr-vs-wps/" class="btn btn-secondary">pWPS vs WPQR vs WPS</a>
+            </div>
         </div>
     </section>

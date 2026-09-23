@@ -70,7 +70,7 @@
           "name": "Does the maintenance hub work from the floor?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "Workers raise maintenance requests from the floor app across five priority levels — the critical tiers locked to authorised roles — and offline too, syncing the moment the appliance is back in reach. Maintenance staff run the whole workflow from the management app, with role-filtered notifications."
           }
         },
         {
@@ -86,7 +86,7 @@
           "name": "Is equipment management included in the Standard platform?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "Yes — on the Standard plan it is built into Elenchon, not a paid add-on. One platform: welding management with shop-floor work capture, project structure and BOM import, weld traceability and the WPS/WPQR/WPQ workflow, with machines, calibration and consumables in the same system."
           }
         },
         {

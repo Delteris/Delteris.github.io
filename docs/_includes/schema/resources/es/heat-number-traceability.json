@@ -1,0 +1,85 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://delteris.com/es/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Recursos",
+          "item": "https://delteris.com/es/resources/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Cómo Funciona la Trazabilidad por Número de Colada",
+          "item": "https://delteris.com/es/resources/heat-number-traceability/"
+        }
+      ]
+    },
+    {
+      "@type": "Article",
+      "@id": "https://delteris.com/es/resources/heat-number-traceability/#article",
+      "headline": "Cómo Funciona la Trazabilidad por Número de Colada",
+      "description": "Una guía en lenguaje sencillo sobre la trazabilidad por número de colada en la fabricación de soldadura: MTR y certificados EN 10204, transferencia del número de colada en el corte y el vínculo del material con la soldadura terminada para la ISO 3834 y la EN 1090.",
+      "inLanguage": "es-ES",
+      "mainEntityOfPage": "https://delteris.com/es/resources/heat-number-traceability/",
+      "datePublished": "2026-07-31",
+      "dateModified": "2026-09-23",
+      "author": {
+        "@type": "Organization",
+        "name": "Delteris",
+        "url": "https://delteris.com/"
+      },
+      "publisher": {
+        "@id": "https://delteris.com/#organization"
+      },
+      "image": "https://delteris.com/static/DelterisCrest.webp"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://delteris.com/es/resources/heat-number-traceability/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Qué diferencia hay entre número de colada y número de lote?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El número de colada identifica una fusión de acero en la acería. Lote es un término más amplio — se usa a menudo para consumibles, o para un lote de procesamiento que puede contener material de una o varias coladas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Es siempre obligatorio un certificado EN 10204 3.1?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No — lo decide la norma del producto, el contrato o el código. El tipo 3.1 es el requisito habitual en trabajo estructural de clases de ejecución altas y en equipos a presión. Compruebe la especificación antes de pedir."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué pasa si una pieza pierde su número de colada?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pasa a ser material sin identificar. Salvo que su plan de calidad prevea una vía de recuperación, como nuevos ensayos, no puede usarse en trabajos que exijan trazabilidad."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Los materiales de aportación también necesitan trazabilidad?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Normalmente sí: los consumibles se trazan por lote con su propio certificado, al nivel que pida la especificación."
+          }
+        }
+      ]
+    }
+  ]
+}

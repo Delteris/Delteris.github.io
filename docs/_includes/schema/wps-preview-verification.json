@@ -60,7 +60,7 @@
           "name": "How do I know the parser read my WPS correctly?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "You check it against the real document. Preview splits the screen — the parsed fields on one side, your genuine PDF or Excel form on the other — so you run your eye from each value to its place on the page. That side-by-side is what makes a parser safe to rely on."
           }
         },
         {

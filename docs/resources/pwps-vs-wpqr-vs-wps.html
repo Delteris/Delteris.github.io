@@ -6,6 +6,7 @@ description: "A plain-language guide to the three welding procedure records — 
 og_description: "The three welding procedure records explained: pWPS, WPQR (= ASME PQR) and WPS, how they relate, and the key ISO vs ASME difference in where the qualified ranges live."
 og_image_alt: "Elenchon by Delteris — pWPS vs WPQR vs WPS explained"
 og_image_dims: true
+schema: schema/resources/pwps-vs-wpqr-vs-wps.json
 en_url: "/resources/pwps-vs-wpqr-vs-wps/"
 pt_url: "/pt/resources/pwps-vs-wpqr-vs-wps/"
 es_url: "/es/resources/pwps-vs-wpqr-vs-wps/"
@@ -15,99 +16,183 @@ alt_url: "/pt/resources/pwps-vs-wpqr-vs-wps/"
         <div class="hero-content">
             <span class="hero-eyebrow">Resources · Guide</span>
             <h1 class="text-glow">pWPS vs WPQR vs WPS:<br>The Difference Explained.</h1>
-            <p class="hero-sub">Three records, one chain of proof — the draft you test against, the record that proves it, and the procedure your welders actually follow.</p>
+            <p class="hero-sub">Three records, one chain of proof: the draft you test, the record that proves it, and the procedure your welders follow.</p>
+            <p class="guide-meta">By the Delteris team · Last reviewed <time datetime="2026-09-23">23 September 2026</time> · <a href="/resources/">All guides</a></p>
         </div>
     </header>
 
     <section class="page-section container u-flush-top">
         <div class="summary-panel">
             <h2 class="text-glow">The Short Answer</h2>
-            <p><strong>A pWPS is the proposed procedure you weld a test piece to; the WPQR is the record of that test proving the procedure works; and the WPS is the final, qualified procedure your welders follow in production.</strong> They are three stages of the same thing: a draft, its proof, and the approved production version. A WPS is only ever as valid as the WPQR behind it — and that WPQR started life as a pWPS. Get the order straight and the acronym soup clears up fast.</p>
+            <p><strong>A pWPS is the proposed procedure you weld a test piece to. The WPQR records that test and the range of conditions it qualifies. The WPS is the production procedure your welders follow, written inside that range.</strong> Draft, proof, production — in that order. A WPS is only ever as valid as the WPQR behind it.</p>
         </div>
     </section>
 
     <section class="page-section container">
         <div class="section-header">
-            <span class="eyebrow">Record One</span>
-            <h2>pWPS — the Preliminary Draft</h2>
+            <span class="eyebrow">At a Glance</span>
+            <h2>The Three Records Side by Side</h2>
         </div>
-        <div class="glass-card feature-block">
-            <p class="feature-lead">A <strong>pWPS</strong> (preliminary Welding Procedure Specification) is the first draft — the procedure you <em>think</em> will work, written from experience before anything is proven. It sets out the intended parameters: process, material, joint, position, and the ranges you expect to qualify.</p>
-            <ul class="feature-list">
-                <li><strong>It is a proposal, not proof.</strong> Nothing is qualified yet. The pWPS exists to be tested — a test coupon is welded to it, then examined and destructively tested.</li>
-                <li><strong>It carries intended values and expected ranges.</strong> The draft records both what you plan to weld at and the qualified range you are aiming to prove, so the test has a clear target.</li>
-                <li><strong>Governed by content rules.</strong> Under ISO, <strong>ISO 15609-1</strong> defines what technical content a welding procedure specification must contain — the pWPS follows the same structure as the WPS it will become.</li>
-            </ul>
-        </div>
-    </section>
-
-    <section class="page-section container">
-        <div class="section-header">
-            <span class="eyebrow">Record Two</span>
-            <h2>WPQR — the Qualification Record</h2>
-        </div>
-        <div class="glass-card feature-block">
-            <p class="feature-lead">A <strong>WPQR</strong> (Welding Procedure Qualification Record) is the evidence that the pWPS actually produces sound welds. You weld the test piece to the pWPS under witness, run the required examinations and tests, and the WPQR records what was welded, how, the results, and — critically — the <em>ranges those results qualify</em>.</p>
-            <ul class="feature-list">
-                <li><strong>It is the proof.</strong> Where the pWPS proposes, the WPQR confirms. It is the objective test record a WPS leans on.</li>
-                <li><strong>It qualifies a range, not a single point.</strong> Under <strong>ISO 15614-1</strong>, a single WPQR qualifies a <em>band</em> of production conditions — a range of thicknesses, diameters and related variables — so one qualification test can support several production procedures.</li>
-                <li><strong>One WPQR, many WPS.</strong> Because it qualifies a range, one WPQR commonly underwrites multiple WPS, each written to sit inside the qualified band.</li>
-                <li><strong>"WPQR" or "PQR"?</strong> They are the same record under different codes: WPQR is the ISO term, PQR (Procedure Qualification Record) is the ASME term. We default to WPQR because we are EU-first.</li>
-            </ul>
-        </div>
-    </section>
-
-    <section class="page-section container">
-        <div class="section-header">
-            <span class="eyebrow">Record Three</span>
-            <h2>WPS — the Production Procedure</h2>
-        </div>
-        <div class="glass-card feature-block">
-            <p class="feature-lead">A <strong>WPS</strong> (Welding Procedure Specification) is the finished, qualified procedure a welder follows on the floor. Its ranges are written to fall inside what the WPQR qualified, so every instruction on it is backed by test evidence.</p>
-            <ul class="feature-list">
-                <li><strong>It instructs; the WPQR proves.</strong> The WPS tells the welder exactly how to make the weld; the WPQR is the record standing behind those instructions.</li>
-                <li><strong>It must stay inside the qualified range.</strong> A WPS cannot specify conditions the supporting WPQR did not qualify — if production needs to go outside the band, you need further qualification.</li>
-                <li><strong>It is traceable to its proof.</strong> A well-run system links each WPS back to the WPQR (and originating pWPS) behind it, so an auditor can follow the chain from production instruction to test evidence in one step.</li>
-            </ul>
+        <div class="matrix-scroll">
+            <table class="feature-matrix comparison-matrix guide-matrix">
+                <caption class="u-visually-hidden">pWPS, WPQR and WPS compared</caption>
+                <thead>
+                    <tr>
+                        <th scope="col" class="fm-feature-head">Record</th>
+                        <th scope="col">pWPS<span class="fm-sub">preliminary WPS</span></th>
+                        <th scope="col">WPQR<span class="fm-sub">qualification record</span></th>
+                        <th scope="col">WPS<span class="fm-sub">production procedure</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row"><span class="fm-name">What it is</span></th>
+                        <td>The procedure you <em>expect</em> to work, not yet proven.</td>
+                        <td>The test record: what was welded, the results, and the range they qualify.</td>
+                        <td>The approved instructions a welder follows on the job.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><span class="fm-name">ISO standard</span></th>
+                        <td>ISO 15609-1 (content)</td>
+                        <td>ISO 15614-1 (test and range of qualification)</td>
+                        <td>ISO 15609-1 (content), inside the WPQR's range</td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><span class="fm-name">ASME name</span></th>
+                        <td>No formal record — usually a proposed WPS</td>
+                        <td>PQR</td>
+                        <td>WPS</td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><span class="fm-name">Used in production?</span></th>
+                        <td>No</td>
+                        <td>No — it is the evidence</td>
+                        <td>Yes</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </section>
 
     <section class="page-section container">
         <div class="section-header">
             <span class="eyebrow">The Chain</span>
-            <h2>How They Fit Together</h2>
+            <h2>How One Becomes the Next</h2>
         </div>
         <div class="glass-card feature-block">
-            <p class="feature-lead">Read in order, the three records are simply draft → proof → production:</p>
             <ul class="feature-list">
-                <li><strong>1. pWPS</strong> — you propose a procedure and weld a test piece to it.</li>
-                <li><strong>2. WPQR</strong> — you test that piece; the record proves the procedure and fixes the qualified ranges.</li>
-                <li><strong>3. WPS</strong> — you write the production procedure inside those ranges, and welders follow it.</li>
+                <li><strong>1. Draft the pWPS.</strong> Process, parent material, joint, position, filler and intended parameters, laid out as <a href="https://www.iso.org/standard/75556.html">ISO 15609-1</a> requires for the WPS it will become.</li>
+                <li><strong>2. Weld and test the coupon.</strong> A test piece is welded to the pWPS under an examiner, then examined and tested. Under <a href="https://www.iso.org/standard/51792.html">ISO 15614-1</a>, the resulting WPQR fixes a <em>range</em> of thicknesses, diameters, positions and other variables — not a single point.</li>
+                <li><strong>3. Write the WPS inside that range.</strong> One WPQR commonly supports several WPS, each written to fall within what was qualified. Anything outside the range needs a new qualification.</li>
             </ul>
-            <p>Standards split the job cleanly: under ISO, <strong>ISO 15609</strong> governs the <em>content</em> of the specification (the pWPS and WPS), while <strong>ISO 15614</strong> governs the <em>tests</em> that qualify it (the WPQR) and the range of approval those tests grant.</p>
+            <p class="feature-note">A procedure test is the most common route, not the only one. ISO 15607 also allows qualification by tested consumables, previous experience, a standard welding procedure or a pre-production test — the WPS then rests on that evidence instead of a WPQR from ISO 15614.</p>
         </div>
     </section>
 
     <section class="page-section container">
         <div class="section-header">
             <span class="eyebrow">ISO vs ASME</span>
-            <h2>Where the Two Codes Genuinely Differ</h2>
+            <h2>Same Idea, One Real Difference</h2>
+        </div>
+        <div class="matrix-scroll">
+            <table class="feature-matrix comparison-matrix guide-matrix guide-matrix-2">
+                <caption class="u-visually-hidden">ISO and ASME procedure qualification compared</caption>
+                <thead>
+                    <tr>
+                        <th scope="col" class="fm-feature-head">Point</th>
+                        <th scope="col">ISO</th>
+                        <th scope="col">ASME</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row"><span class="fm-name">Qualification record</span></th>
+                        <td>WPQR</td>
+                        <td>PQR</td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><span class="fm-name">Standards</span></th>
+                        <td>ISO 15607, 15609 and 15614 families</td>
+                        <td><a href="https://www.asme.org/codes-standards/find-codes-standards/bpvc-ix-bpvc-section-ix-welding-brazing-fusing-qualifications">BPVC Section IX</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><span class="fm-name">Where the ranges live</span></th>
+                        <td>In the WPQR, as its range of qualification. The WPS must sit inside it.</td>
+                        <td>The PQR records the actual test values. The ranges are stated on the WPS, under Section IX's variable rules.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="feature-note">Watch the letters "WPQR": in ISO it is the <em>procedure</em> record, but on ASME jobs the same letters are sometimes used for a <em>welder's</em> performance qualification. Check which one a document means before you file it.</p>
+    </section>
+
+    <section class="page-section container">
+        <div class="section-header">
+            <span class="eyebrow">In Practice</span>
+            <h2>Where the Chain Breaks</h2>
         </div>
         <div class="glass-card feature-block">
-            <p class="feature-lead">The three-record idea exists in both code families, but there is one real, load-bearing difference beyond the names — worth knowing if you work to both.</p>
             <ul class="feature-list">
-                <li><strong>The names.</strong> ISO calls the qualification record a <strong>WPQR</strong>; ASME calls it a <strong>PQR</strong>. Both mean the same document. ISO welding-procedure qualification lives in the 15607 / 15609 / 15614 family; ASME's lives in <strong>Section IX</strong>.</li>
-                <li><strong>Where the range of approval lives — the key difference.</strong> Under ISO, the <em>WPQR carries the range of approval</em>, and the WPS must stay within the scope the WPQR defines. Under ASME, the PQR records only what was actually tested, and the <em>WPS is where the ranges are stated</em>. Same evidence, but the qualified ranges are documented in a different place — a genuine trap when reading records across codes.</li>
-                <li><strong>Terminology overlap.</strong> Watch "WPQR": in ISO it is the procedure record, but in ASME the same letters are sometimes used for a <em>welder's</em> performance qualification record. Context decides which one is meant.</li>
+                <li><strong>A WPS revised without checking its WPQR.</strong> A new thickness or position slips outside the qualified range and nobody notices.</li>
+                <li><strong>A WPS with no WPQR on file.</strong> The procedure exists; the evidence behind it is in someone's inbox.</li>
+                <li><strong>A spreadsheet as the register.</strong> Every revision retyped by hand, with no link from a WPS to the record that qualifies it.</li>
             </ul>
-            <p>Software that assumes a single code hides these differences until they bite — when you evaluate a tool, check whether it handles both code families cleanly or quietly bakes in the assumptions of one.</p>
+            <p>The fix is a register where each WPS points to its WPQR and every value can be searched and compared. <a href="/wps-management-software.html">Elenchon Atlas</a> keeps WPS, pWPS and WPQR as <a href="/wps-library-search-software.html">linked, searchable records</a>, <a href="/wps-import-software.html">imported from the Excel or PDF files you already have</a>. The full <a href="/welding-qualification-software.html">Elenchon platform</a> runs the whole chain, from pWPS to finished WPS, on the shop floor.</p>
+        </div>
+    </section>
+
+    <section class="page-section container" id="faq">
+        <div class="section-header">
+            <span class="eyebrow">Questions &amp; Answers</span>
+            <h2>pWPS, WPQR and WPS, Answered</h2>
+        </div>
+        <div class="faq-list">
+            <details class="faq-item">
+                <summary><h3>Is a WPQR the same as a PQR?</h3></summary>
+                <div class="faq-body">
+                    <p>Yes — WPQR is the ISO name, PQR the ASME name, for the record of a procedure qualification test. The practical difference is where the qualified ranges are written: in the WPQR under ISO, on the WPS under ASME.</p>
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary><h3>Can one WPQR support several WPS?</h3></summary>
+                <div class="faq-body">
+                    <p>Yes. A WPQR qualifies a range, so any number of WPS can rest on it as long as each stays inside that range. A shop usually has far more WPS than WPQRs.</p>
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary><h3>Do I always need a pWPS?</h3></summary>
+                <div class="faq-body">
+                    <p>Only when you qualify a new procedure by test. If an existing WPQR already covers the job, you write the WPS directly from it.</p>
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary><h3>Where does the WPQ fit in?</h3></summary>
+                <div class="faq-body">
+                    <p>The WPQ qualifies the <em>welder</em>, not the procedure. It has its own rules for staying valid — see <a href="/resources/welder-qualification-management-software/">welder qualification validity, continuity and revalidation</a>.</p>
+                </div>
+            </details>
         </div>
     </section>
 
     <section class="page-section container">
-        <div class="compliance-panel gold-edge">
-            <span class="eyebrow">How Elenchon Does It</span>
-            <h2 class="text-glow">Draft, Proof and Production — Linked</h2>
-            <p>Elenchon runs the whole chain in one place: define a preliminary WPS, capture the real WPQR parameters on the shop floor, import those values back beside the procedure, and export a finalized WPS you write from them — every WPS traceable to the WPQR evidence behind it. It is the full <a href="/welding-qualification-software.html">WPS, WPQR and WPQ qualification workflow</a> on an on-premise appliance you own. For the welder side of qualification, read the companion guide: <a href="/resources/welder-qualification-management-software/">what welder qualification management software does</a>.</p>
+        <div class="glass-card feature-block">
+            <p class="feature-lead"><strong>Standards referenced</strong></p>
+            <ul class="feature-list">
+                <li><a href="https://www.iso.org/standard/75556.html">ISO 15609-1</a> — welding procedure specification, arc welding.</li>
+                <li><a href="https://www.iso.org/standard/51792.html">ISO 15614-1</a> — welding procedure test, arc and gas welding of steels and arc welding of nickel.</li>
+                <li><a href="https://www.asme.org/codes-standards/find-codes-standards/bpvc-ix-bpvc-section-ix-welding-brazing-fusing-qualifications">ASME BPVC Section IX</a> — welding, brazing and fusing qualifications.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="page-section container" id="cta">
+        <div class="cta-band">
+            <span class="eyebrow">Keep Reading</span>
+            <h2 class="text-glow">Next: the Welder Side</h2>
+            <p>The procedure is qualified — now the person. Read how welder qualifications stay valid, or see how Atlas keeps heat input inside the qualified window.</p>
+            <div class="cta-group">
+                <a href="/resources/welder-qualification-management-software/" class="btn btn-primary">Welder Qualification Validity</a>
+                <a href="/heat-input-calculator.html" class="btn btn-secondary">Heat Input in Range</a>
+            </div>
         </div>
     </section>

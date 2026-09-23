@@ -1,0 +1,85 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://delteris.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Resources",
+          "item": "https://delteris.com/resources/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "How Heat-Number Traceability Works",
+          "item": "https://delteris.com/resources/heat-number-traceability/"
+        }
+      ]
+    },
+    {
+      "@type": "Article",
+      "@id": "https://delteris.com/resources/heat-number-traceability/#article",
+      "headline": "How Heat-Number Traceability Works",
+      "description": "A plain-language guide to heat-number traceability in welding fabrication: MTRs and EN 10204 certificates, heat-number transfer at cutting, and linking material to the finished weld for ISO 3834 and EN 1090.",
+      "inLanguage": "en",
+      "mainEntityOfPage": "https://delteris.com/resources/heat-number-traceability/",
+      "datePublished": "2026-07-31",
+      "dateModified": "2026-09-23",
+      "author": {
+        "@type": "Organization",
+        "name": "Delteris",
+        "url": "https://delteris.com/"
+      },
+      "publisher": {
+        "@id": "https://delteris.com/#organization"
+      },
+      "image": "https://delteris.com/static/DelterisCrest.webp"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://delteris.com/resources/heat-number-traceability/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the difference between a heat number and a batch or lot number?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A heat number identifies one melt of steel at the mill. Batch and lot numbers are broader terms — often used for consumables, or for a processing batch that may contain material from one or more heats."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is an EN 10204 3.1 certificate always required?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No — the product standard, the contract or the code decides. Type 3.1 is the common requirement for structural work at higher execution classes and for pressure equipment. Check the specification before ordering."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if a piece loses its heat number?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It becomes unidentified material. Unless your quality plan allows a recovery route, such as re-testing, it can't be used on work that requires traceability."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do filler metals need traceability too?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Usually, yes: consumables are traced by batch with their own certificate, at the level the specification asks for."
+          }
+        }
+      ]
+    }
+  ]
+}

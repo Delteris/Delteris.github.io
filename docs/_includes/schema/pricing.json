@@ -81,7 +81,7 @@
           "name": "When does billing start?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "Not at deployment — installation and training are the only charges up front. The subscription starts after go-live, and your first invoice falls on the 1st or the 15th, whichever is furthest from that date. Twelve invoices a year, one per calendar month: no 28-day cycles, no thirteenth invoice."
           }
         },
         {
@@ -97,7 +97,7 @@
           "name": "Can one appliance run multiple factories?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "No — each facility gets its own appliance, with its records isolated and separately backed up. Two facilities, two appliances. The exception: a genuinely small satellite operation may run remotely off an existing appliance, at our discretion — tell us before deployment. Project, seasonal and field work is covered by the Remote Access Module instead."
           }
         },
         {
@@ -121,7 +121,7 @@
           "name": "Will we need to buy bandwidth?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "Almost certainly not. The allowance included with the Remote Access Module and each worker block is sized for everyday remote use, and a floor working over the fabric daily stays well inside it. Extra bandwidth exists for genuine outliers."
           }
         },
         {
@@ -137,7 +137,7 @@
           "name": "What if the fabric goes down?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "The fabric is the access path to your appliance, so its uptime is our responsibility and it is in writing: 99.9% monthly, with automatic credits on any shortfall — 10% below 99.9%, 25% below 99%, 50% below 97%, and the month free below 89.9%. See the security architecture →"
           }
         },
         {

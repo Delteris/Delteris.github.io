@@ -6,6 +6,7 @@ description: "A plain-language guide to heat-number traceability in welding fabr
 og_description: "How heat-number traceability works — from the mill certificate to the finished weld — including the cutting-transfer step where most shops lose the trail, for ISO 3834 and EN 1090."
 og_image_alt: "Elenchon by Delteris — heat-number traceability guide"
 og_image_dims: true
+schema: schema/resources/heat-number-traceability.json
 en_url: "/resources/heat-number-traceability/"
 pt_url: "/pt/resources/heat-number-traceability/"
 es_url: "/es/resources/heat-number-traceability/"
@@ -15,85 +16,157 @@ alt_url: "/pt/resources/heat-number-traceability/"
         <div class="hero-content">
             <span class="hero-eyebrow">Resources · Guide</span>
             <h1 class="text-glow">How Heat-Number<br>Traceability Works.</h1>
-            <p class="hero-sub">Every compliant weld can be traced back to the exact batch of steel it was made from. Here is how that chain is built — and the one step where most shops quietly break it.</p>
+            <p class="hero-sub">Every traceable weld leads back to the batch of steel it was made from. Here is how the chain is built — and the one step where most shops break it.</p>
+            <p class="guide-meta">By the Delteris team · Last reviewed <time datetime="2026-09-23">23 September 2026</time> · <a href="/resources/">All guides</a></p>
         </div>
     </header>
 
     <section class="page-section container u-flush-top">
         <div class="summary-panel">
             <h2 class="text-glow">The Short Answer</h2>
-            <p><strong>Heat-number traceability is the unbroken link between a finished weld and the specific batch of material it was made from, proven through the heat number that the mill assigns to each cast of steel and records on its material certificate.</strong> When an auditor asks "prove this joint was made from certified material," the heat number is the thread you pull. Building that chain is straightforward in principle; keeping it unbroken through cutting and fabrication is where the real discipline — and the real failures — live.</p>
+            <p><strong>Heat-number traceability is the unbroken link between a finished weld and the melt of steel it was made from. The mill stamps each piece with a heat number and records it on the material certificate; you carry that number through every cut and onto every joint.</strong> The certificate is rarely the problem. The chain usually breaks at the saw, when a cut piece loses its mark.</p>
         </div>
     </section>
 
     <section class="page-section container">
         <div class="section-header">
             <span class="eyebrow">Where It Starts</span>
-            <h2>The Heat Number and the Mill Certificate</h2>
+            <h2>The Heat Number and Its Certificate</h2>
         </div>
         <div class="glass-card feature-block">
-            <p class="feature-lead">A <strong>heat number</strong> is a unique identifier the mill assigns to a single melt — a "heat" — of steel. Everything poured from that melt shares chemistry and mechanical properties, and the heat number is stamped onto the material so it can always be traced back to its origin.</p>
-            <ul class="feature-list">
-                <li><strong>The MTR is the material's birth certificate.</strong> The Mill Test Report (also called a mill certificate or MTC) lists the heat number alongside the chemical composition, mechanical test results and the standards the material meets. Match the stamp on the steel to the heat number on the MTR, and you have proven what the material is.</li>
-                <li><strong>EN 10204 classifies the certificate.</strong> The European standard defines certificate types — 2.1 and 2.2 are declarations and non-specific reports, while <strong>3.1</strong> gives actual test results for that specific material, validated by an inspection representative independent of production. Type 3.1 is the common baseline for structural, pressure and pipeline work; 3.2 adds a purchaser or third-party countersignature.</li>
-                <li><strong>Goods-in is the first checkpoint.</strong> When material arrives, someone confirms the heat number marked on it matches the certificate — the moment the chain of custody formally begins.</li>
-            </ul>
+            <p class="feature-lead">A <strong>heat number</strong> identifies one melt of steel. Everything poured from it shares chemistry and mechanical properties. The <strong>mill certificate</strong> (MTR or MTC) lists that number with the test results, and <strong>EN 10204</strong> sets how much the certificate proves:</p>
         </div>
+        <div class="matrix-scroll u-gap-top">
+            <table class="feature-matrix comparison-matrix guide-matrix guide-matrix-2">
+                <caption class="u-visually-hidden">EN 10204 inspection document types</caption>
+                <thead>
+                    <tr>
+                        <th scope="col" class="fm-feature-head">Type</th>
+                        <th scope="col">What it gives you</th>
+                        <th scope="col">Validated by</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row"><span class="fm-name">2.1</span></th>
+                        <td>Declaration that the product meets the order. No test results.</td>
+                        <td>The manufacturer</td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><span class="fm-name">2.2</span></th>
+                        <td>Test results from non-specific inspection — typical of the product, not this batch.</td>
+                        <td>The manufacturer</td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><span class="fm-name">3.1</span></th>
+                        <td>Actual test results for the material supplied. The usual baseline for structural and pressure work.</td>
+                        <td>The manufacturer's inspection representative, independent of production</td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><span class="fm-name">3.2</span></th>
+                        <td>As 3.1, countersigned by a second party.</td>
+                        <td>The manufacturer's representative and the purchaser's or a regulatory inspector</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="feature-note">Goods-in is the first checkpoint: the heat number on the steel must match the certificate before the material enters stock.</p>
     </section>
 
     <section class="page-section container">
         <div class="section-header">
             <span class="eyebrow">The Critical Step</span>
-            <h2>Transfer at Cutting — Where the Chain Breaks</h2>
+            <h2>Transfer at Cutting</h2>
         </div>
         <div class="glass-card feature-block">
-            <p class="feature-lead">Here is the step that quietly defeats most traceability systems. The moment a plate or pipe is cut, the piece that carries the original stamp and the offcut that doesn't are now two pieces — and only one of them still shows its heat number.</p>
             <ul class="feature-list">
-                <li><strong>The heat number must be transferred before the mark is lost.</strong> When cutting removes or separates the original marking, the heat number has to be re-marked onto every resulting piece so each stays identified. Do it before the original stamp is gone, not after.</li>
-                <li><strong>The offcut carries the same heat.</strong> A remnant returned to the rack still belongs to its parent heat — but if it goes back unlabeled, its traceability is gone the instant it leaves the bench. This is one of the most common traceability non-conformances in fabrication.</li>
-                <li><strong>It needs to be recorded, not just marked.</strong> The transfer is documented — often witnessed by QC per the project quality plan — so there is a paper trail showing that piece B came from heat X via parent piece A.</li>
+                <li><strong>Re-mark before the stamp is lost.</strong> When a plate or pipe is cut, every resulting piece needs the heat number, transferred before the original marking disappears.</li>
+                <li><strong>Offcuts too.</strong> A remnant returned to the rack unlabelled has lost its traceability for good — one of the most common findings in fabrication audits.</li>
+                <li><strong>Record it, don't just mark it.</strong> The transfer is documented — often witnessed by QC under the quality plan — so piece B can be shown to come from heat X via parent piece A.</li>
             </ul>
-            <p>A shop that nails everything else but loses the transfer step at the saw has a chain with a hole in exactly the place auditors look first.</p>
         </div>
     </section>
 
     <section class="page-section container">
         <div class="section-header">
             <span class="eyebrow">The Full Chain</span>
-            <h2>From Heat to Finished Weld</h2>
+            <h2>What a Traceable Weld Links To</h2>
         </div>
         <div class="glass-card feature-block">
-            <p class="feature-lead">Complete traceability means the heat number rides all the way up from raw material to the joint it ends up in, joined by everything else that touched the weld. Under <strong>ISO 3834</strong> and <strong>EN 1090</strong>, a traceable weld links to:</p>
             <ul class="feature-list">
-                <li><strong>The material</strong> — the heat number and its MTR, carried through every cut.</li>
-                <li><strong>The procedure</strong> — the WPS it was welded to, and the WPQR behind that procedure.</li>
-                <li><strong>The consumables</strong> — filler metals traced by their own batch and certificate.</li>
-                <li><strong>The person</strong> — the qualified welder who made it, and their current qualification.</li>
-                <li><strong>The result</strong> — the inspection and acceptance record for that joint.</li>
+                <li><strong>Material</strong> — the heat number and its certificate, carried through every cut.</li>
+                <li><strong>Procedure</strong> — the WPS it was welded to, and the WPQR behind it (<a href="/resources/pwps-vs-wpqr-vs-wps/">how those relate</a>).</li>
+                <li><strong>Consumables</strong> — filler metal traced by its own batch and certificate.</li>
+                <li><strong>Welder</strong> — who made it, with a <a href="/resources/welder-qualification-management-software/">qualification valid on the day</a>.</li>
+                <li><strong>Result</strong> — the inspection and acceptance record for the joint.</li>
             </ul>
-            <p>Traceability accumulates <em>upward</em>: heat numbers on base-material leaves propagate through the assemblies built from them, so a finished piece carries the full provenance of everything welded into it. That is what lets a shop answer, for any joint, "prove this weld is sound and prove what it's made of" — in one pull, not a week in the archive.</p>
+            <p>How much of this you must prove depends on the job. Under EN 1090-2, execution class EXC1 carries no traceability requirement, EXC2 requires it without necessarily going piece by piece, and EXC3 and EXC4 require full traceability of each constituent product. <a href="https://www.iso.org/standard/81651.html">ISO 3834-2</a> expects identification and traceability to be maintained where the contract or code requires it.</p>
         </div>
     </section>
 
     <section class="page-section container">
         <div class="section-header">
-            <span class="eyebrow">Why It's a Software Problem</span>
-            <h2>Paper Loses the Thread</h2>
+            <span class="eyebrow">Why Paper Fails</span>
+            <h2>The Links Break Silently</h2>
         </div>
         <div class="glass-card feature-block">
-            <p class="feature-lead">On paper, this chain is fragile at every joint between steps — and the failure is almost never the mill certificate. It is the transfer that wasn't recorded, the remnant that went back unlabeled, the weld log that lives in a different binder from the material log.</p>
-            <ul class="feature-list">
-                <li><strong>Links break silently.</strong> A missing transfer record doesn't raise an alarm; it just becomes a gap discovered under audit pressure.</li>
-                <li><strong>Reconstruction is expensive.</strong> When the thread is lost, someone spends days rebuilding it from scattered records — if it can be rebuilt at all.</li>
-                <li><strong>Software keeps the links live.</strong> Capture the heat number once at goods-in, tie it to its MTR, carry it through each cut, and attach it to the joints built from that material — and the chain stays whole by construction, not by heroics at audit time.</li>
-            </ul>
+            <p class="feature-lead">On paper, the material log, the cutting list and the weld log live in different binders. A missing transfer raises no alarm — it becomes a gap someone spends days reconstructing when an auditor asks. In software, the heat number is captured once at goods-in, tied to its certificate, and <a href="/weld-project-structure-software.html">propagated down the project tree</a>, so every joint inherits its material's provenance by construction.</p>
+            <p>That is how <a href="/welding-traceability-software.html">Elenchon's weld traceability</a> works, together with <a href="/welding-equipment-management-software.html">consumable batch tracking</a> and <a href="/welding-work-capture-software.html">work capture on the floor</a> — on a fully managed on-premise appliance: we install it, update it and fix it remotely; you keep it powered on.</p>
+        </div>
+    </section>
+
+    <section class="page-section container" id="faq">
+        <div class="section-header">
+            <span class="eyebrow">Questions &amp; Answers</span>
+            <h2>Heat-Number Traceability, Answered</h2>
+        </div>
+        <div class="faq-list">
+            <details class="faq-item">
+                <summary><h3>What is the difference between a heat number and a batch or lot number?</h3></summary>
+                <div class="faq-body">
+                    <p>A heat number identifies one melt of steel at the mill. Batch and lot numbers are broader terms — often used for consumables, or for a processing batch that may contain material from one or more heats.</p>
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary><h3>Is an EN 10204 3.1 certificate always required?</h3></summary>
+                <div class="faq-body">
+                    <p>No — the product standard, the contract or the code decides. Type 3.1 is the common requirement for structural work at higher execution classes and for pressure equipment. Check the specification before ordering.</p>
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary><h3>What happens if a piece loses its heat number?</h3></summary>
+                <div class="faq-body">
+                    <p>It becomes unidentified material. Unless your quality plan allows a recovery route, such as re-testing, it can't be used on work that requires traceability.</p>
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary><h3>Do filler metals need traceability too?</h3></summary>
+                <div class="faq-body">
+                    <p>Usually, yes: consumables are traced by batch with their own certificate, at the level the specification asks for.</p>
+                </div>
+            </details>
         </div>
     </section>
 
     <section class="page-section container">
-        <div class="compliance-panel gold-edge">
-            <span class="eyebrow">How Elenchon Does It</span>
-            <h2 class="text-glow">The Heat Number, Carried All the Way Up</h2>
-            <p>Elenchon captures heat numbers at goods-in, links them to their parent MTRs, and propagates them down the project tree so every joint inherits the provenance of the material it is built from — the full <a href="/welding-traceability-software.html">weld traceability chain</a> on an on-premise appliance you own. It ties into the same records as the <a href="/welding-qualification-software.html">WPS, WPQR and WPQ workflow</a> and <a href="/welding-equipment-management-software.html">consumable batch traceability</a>, so material, procedure, person and result stay linked to every weld. New here? Start with <a href="/resources/pwps-vs-wpqr-vs-wps/">pWPS vs WPQR vs WPS</a>.</p>
+        <div class="glass-card feature-block">
+            <p class="feature-lead"><strong>Standards referenced</strong></p>
+            <ul class="feature-list">
+                <li>EN 10204 — metallic products, types of inspection documents.</li>
+                <li>EN 1090-2 — execution of steel structures, technical requirements.</li>
+                <li><a href="https://www.iso.org/standard/81651.html">ISO 3834-2</a> — comprehensive quality requirements for fusion welding.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="page-section container" id="cta">
+        <div class="cta-band">
+            <span class="eyebrow">Keep Reading</span>
+            <h2 class="text-glow">From Material to Procedure</h2>
+            <p>The heat number proves what a weld is made of. The procedure records prove how it was made.</p>
+            <div class="cta-group">
+                <a href="/welding-traceability-software.html" class="btn btn-primary">See Weld Traceability</a>
+                <a href="/resources/pwps-vs-wpqr-vs-wps/" class="btn btn-secondary">pWPS vs WPQR vs WPS</a>
+            </div>
         </div>
     </section>

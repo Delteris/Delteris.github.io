@@ -53,7 +53,7 @@
           "name": "Does it work offline?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "Yes — offline capture is a first-class mode, not a fallback. Entries are held in a durable on-device queue and sync in order the moment the connection returns, so nothing is lost in a Wi-Fi dead zone. The offline document viewer, for a WPS or a plan, is on every plan."
           }
         },
         {
@@ -61,7 +61,7 @@
           "name": "How does on-premise affect cost?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "It makes cost predictable: one published flat rate per appliance with workers included, extra seats at €9/month, hardware passed through at cost, and every add-on in plain euros — so total cost of ownership can be modelled up front. See the on-premise vs. cloud comparison."
           }
         },
         {
@@ -85,7 +85,7 @@
           "name": "Isn't on-premise more to maintain?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "Not the way we run it: your only job is to keep the appliance powered on. We apply updates and monitor it remotely over the Phrakton fabric, and resolve the large majority of issues without anyone leaving their desk. If something critical genuinely can't be fixed remotely, we come to your facility at no charge, anywhere in the world. Full guide: managed on-premise, explained."
           }
         },
         {
@@ -101,7 +101,7 @@
           "name": "Does running it ourselves mean maintaining a server and updates?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "No. Elenchon ships as a self-contained containerised appliance that we install and configure — no server for your team to administer, no update project to run, nothing to patch on a schedule. You get the ownership of on-premise without the sysadmin work."
           }
         }
       ]

@@ -1,0 +1,85 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Início",
+          "item": "https://delteris.com/pt/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Recursos",
+          "item": "https://delteris.com/pt/resources/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Como Funciona a Rastreabilidade por Número de Corrida",
+          "item": "https://delteris.com/pt/resources/heat-number-traceability/"
+        }
+      ]
+    },
+    {
+      "@type": "Article",
+      "@id": "https://delteris.com/pt/resources/heat-number-traceability/#article",
+      "headline": "Como Funciona a Rastreabilidade por Número de Corrida",
+      "description": "Um guia em linguagem simples sobre a rastreabilidade por número de corrida na fabricação de soldadura: MTR e certificados EN 10204, transferência do número de corrida no corte e a ligação do material à soldadura acabada para a ISO 3834 e a EN 1090.",
+      "inLanguage": "pt-PT",
+      "mainEntityOfPage": "https://delteris.com/pt/resources/heat-number-traceability/",
+      "datePublished": "2026-07-31",
+      "dateModified": "2026-09-23",
+      "author": {
+        "@type": "Organization",
+        "name": "Delteris",
+        "url": "https://delteris.com/"
+      },
+      "publisher": {
+        "@id": "https://delteris.com/#organization"
+      },
+      "image": "https://delteris.com/static/DelterisCrest.webp"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://delteris.com/pt/resources/heat-number-traceability/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Qual a diferença entre número de corrida e número de lote?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O número de corrida identifica uma fusão de aço na siderurgia. Lote é um termo mais amplo — usado muitas vezes para consumíveis, ou para um lote de processamento que pode conter material de uma ou mais corridas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Um certificado EN 10204 3.1 é sempre obrigatório?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não — decide a norma do produto, o contrato ou o código. O tipo 3.1 é o requisito comum em trabalho estrutural nas classes de execução mais altas e em equipamentos sob pressão. Confirme a especificação antes de encomendar."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O que acontece se uma peça perder o número de corrida?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Passa a material não identificado. A menos que o seu plano de qualidade preveja uma via de recuperação, como novos ensaios, não pode ser usada em trabalho que exija rastreabilidade."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Os materiais de adição também precisam de rastreabilidade?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Normalmente, sim: os consumíveis são rastreados por lote com o seu próprio certificado, ao nível que a especificação pedir."
+          }
+        }
+      ]
+    }
+  ]
+}

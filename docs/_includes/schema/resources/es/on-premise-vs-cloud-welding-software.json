@@ -1,0 +1,85 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://delteris.com/es/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Recursos",
+          "item": "https://delteris.com/es/resources/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "On-Premise Gestionado: On-Premise Sin la Carga de TI",
+          "item": "https://delteris.com/es/resources/on-premise-vs-cloud-welding-software/"
+        }
+      ]
+    },
+    {
+      "@type": "Article",
+      "@id": "https://delteris.com/es/resources/on-premise-vs-cloud-welding-software/#article",
+      "headline": "On-Premise Gestionado: On-Premise Sin la Carga de TI",
+      "description": "Qué es el software on-premise gestionado y en qué se diferencia de un servidor propio clásico: instalado y mantenido por el proveedor, acceso remoto sin puertos abiertos, registro offline — y cuándo la nube sigue siendo mejor opción.",
+      "inLanguage": "es-ES",
+      "mainEntityOfPage": "https://delteris.com/es/resources/on-premise-vs-cloud-welding-software/",
+      "datePublished": "2026-07-31",
+      "dateModified": "2026-09-23",
+      "author": {
+        "@type": "Organization",
+        "name": "Delteris",
+        "url": "https://delteris.com/"
+      },
+      "publisher": {
+        "@id": "https://delteris.com/#organization"
+      },
+      "image": "https://delteris.com/static/DelterisCrest.webp"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://delteris.com/es/resources/on-premise-vs-cloud-welding-software/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Necesito equipo de TI para un software on-premise gestionado?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. El proveedor instala, actualiza y repara el appliance en remoto. Su parte es mantenerlo enchufado y conectado."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Es el on-premise más seguro que la nube?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No automáticamente. Reduce la exposición cuando el appliance no tiene puertos abiertos y los datos nunca salen de sus instalaciones — pero la implementación importa más que la etiqueta. Pregunte cómo se protegen el acceso remoto y las actualizaciones."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿De quién es el hardware?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Depende del proveedor. Con Elenchon, compra el appliance a precio de coste y es suyo, igual que los datos que contiene. Vea precios y despliegue."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué pasa si cancelo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Con Elenchon no hay penalización de salida, y conserva acceso de solo lectura a sus registros históricos para auditorías. Pida lo mismo por escrito a cualquier proveedor."
+          }
+        }
+      ]
+    }
+  ]
+}

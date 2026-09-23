@@ -1,0 +1,83 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Início",
+          "item": "https://delteris.com/pt/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Recursos",
+          "item": "https://delteris.com/pt/resources/"
+        }
+      ]
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://delteris.com/pt/resources/#page",
+      "url": "https://delteris.com/pt/resources/",
+      "name": "Recursos | Guias de Qualificação & Rastreabilidade de Soldadura | Elenchon",
+      "description": "Guias curtos e com fontes sobre qualificação e rastreabilidade de soldadura: pWPS vs WPQR vs WPS, validade da qualificação de soldadores segundo a ISO 9606-1 e a ASME IX, rastreabilidade por número de corrida, on-premise gerido e como escolher software de soldadura.",
+      "inLanguage": "pt-PT",
+      "isPartOf": {
+        "@id": "https://delteris.com/#website"
+      },
+      "publisher": {
+        "@id": "https://delteris.com/#organization"
+      },
+      "mainEntity": {
+        "@type": "ItemList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "pWPS vs WPQR vs WPS: a diferença explicada",
+            "url": "https://delteris.com/pt/resources/pwps-vs-wpqr-vs-wps/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Validade da qualificação de soldadores: continuidade, caducidade e revalidação",
+            "url": "https://delteris.com/pt/resources/welder-qualification-management-software/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Como funciona a rastreabilidade por número de corrida",
+            "url": "https://delteris.com/pt/resources/heat-number-traceability/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Como escolher software de gestão de soldadura",
+            "url": "https://delteris.com/pt/how-to-choose-welding-software.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "name": "On-premise gerido: on-premise sem a carga de TI",
+            "url": "https://delteris.com/pt/resources/on-premise-vs-cloud-welding-software/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 6,
+            "name": "Elenchon Atlas — cloud",
+            "url": "https://delteris.com/pt/wps-management-software.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 7,
+            "name": "Elenchon — a plataforma completa",
+            "url": "https://delteris.com/pt/platform.html"
+          }
+        ]
+      }
+    }
+  ]
+}
