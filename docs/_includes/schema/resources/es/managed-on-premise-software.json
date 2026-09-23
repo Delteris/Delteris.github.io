@@ -68,7 +68,7 @@
           "name": "¿De quién es el hardware?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Depende del proveedor. Con Elenchon, compra el appliance a precio de coste y es suyo, igual que los datos que contiene. Vea precios y despliegue."
+            "text": "Depende del proveedor. Pregunte si compra el hardware, si lo alquila o si va incluido en la suscripción — y de quién son los datos que contiene si se va."
           }
         },
         {
@@ -76,7 +76,7 @@
           "name": "¿Qué pasa si cancelo?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Con Elenchon no hay penalización de salida, y conserva acceso de solo lectura a sus registros históricos para auditorías. Pida lo mismo por escrito a cualquier proveedor."
+            "text": "Pídalo por escrito: si hay penalización de salida, y si conserva al menos acceso de solo lectura a sus registros históricos para auditorías."
           }
         }
       ]

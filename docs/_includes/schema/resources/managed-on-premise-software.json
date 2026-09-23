@@ -68,7 +68,7 @@
           "name": "Who owns the hardware?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "That varies by vendor. With Elenchon, you buy the appliance at cost and it is yours, along with the data on it. See pricing and deployment."
+            "text": "That varies by vendor. Ask whether you buy the hardware outright, lease it or rent it inside the subscription — and who owns the data on it if you leave."
           }
         },
         {
@@ -76,7 +76,7 @@
           "name": "What happens if I cancel?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "With Elenchon there is no exit fee, and you keep view-only access to your historical records for audits. Ask any vendor for the same in writing."
+            "text": "Ask for it in writing: whether there is an exit fee, and whether you keep at least view-only access to your historical records for audits."
           }
         }
       ]

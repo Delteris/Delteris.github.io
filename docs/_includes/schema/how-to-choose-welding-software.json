@@ -80,14 +80,6 @@
             "@type": "Answer",
             "text": "Neither is universally better. Cloud needs no hardware, but records sit on shared infrastructure and the bill often scales per seat. On-premise keeps records on hardware you own, with predictable cost and stronger data control, at the price of owning an appliance. See the full on-premise vs cloud comparison and what managed on-premise changes."
           }
-        },
-        {
-          "@type": "Question",
-          "name": "How does Elenchon fit into this?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Two ways. Elenchon Atlas is a cloud tool at one flat, published price: your WPS, pWPS and WPQR library, imported from Excel or PDF, with welder qualifications tracked alongside. The full Elenchon platform is the on-premise archetype above — the complete WPS/WPQR/WPQ workflow, weld traceability, equipment and consumables, fully managed on-premise. See open pricing."
-          }
         }
       ]
     }
