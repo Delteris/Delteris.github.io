@@ -1,0 +1,85 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://delteris.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Resources",
+          "item": "https://delteris.com/resources/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Welder Qualification Validity: Continuity, Expiry and Revalidation",
+          "item": "https://delteris.com/resources/welder-qualification-management-software/"
+        }
+      ]
+    },
+    {
+      "@type": "Article",
+      "@id": "https://delteris.com/resources/welder-qualification-management-software/#article",
+      "headline": "Welder Qualification Validity: Continuity, Expiry and Revalidation",
+      "description": "How long a welder qualification stays valid: the ISO 9606-1 six-month confirmation, the three revalidation routes, ASME Section IX's six-month expiry rule — and how to keep track across a whole floor.",
+      "inLanguage": "en",
+      "mainEntityOfPage": "https://delteris.com/resources/welder-qualification-management-software/",
+      "datePublished": "2026-07-31",
+      "dateModified": "2026-09-23",
+      "author": {
+        "@type": "Organization",
+        "name": "Delteris",
+        "url": "https://delteris.com/"
+      },
+      "publisher": {
+        "@id": "https://delteris.com/#organization"
+      },
+      "image": "https://delteris.com/static/DelterisCrest.webp"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://delteris.com/resources/welder-qualification-management-software/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How long is an ISO 9606-1 welder certificate valid?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It depends on the revalidation route chosen when it was issued: three years with a retest, two years renewable with tested production welds, or open-ended under an ISO 3834-2/-3 quality system. On every route, the six-month confirmation must also be kept up."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who confirms the six-month continuity?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The person responsible for welding activities at the employer — typically the welding coordinator — or the examiner or examining body. It is a documented confirmation, not a retest."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does an ASME welder qualification expire?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Only through non-use: if the welder doesn't weld with a process for six months, the qualification for that process expires (QW-322.1). It can be renewed with a single test coupon (QW-322.2)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can software decide whether a welder is qualified?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It shouldn't. Good software keeps the records, runs the clocks and warns you in time. Whether a welder is qualified for a job is a judgement for a qualified person, who signs it."
+          }
+        }
+      ]
+    }
+  ]
+}

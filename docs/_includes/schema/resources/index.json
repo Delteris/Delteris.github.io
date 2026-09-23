@@ -1,0 +1,83 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://delteris.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Resources",
+          "item": "https://delteris.com/resources/"
+        }
+      ]
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://delteris.com/resources/#page",
+      "url": "https://delteris.com/resources/",
+      "name": "Resources | Welding Qualification & Traceability Guides | Elenchon",
+      "description": "Short, sourced guides to welding qualification and traceability: pWPS vs WPQR vs WPS, welder qualification validity under ISO 9606-1 and ASME IX, heat-number traceability, managed on-premise and choosing welding software.",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@id": "https://delteris.com/#website"
+      },
+      "publisher": {
+        "@id": "https://delteris.com/#organization"
+      },
+      "mainEntity": {
+        "@type": "ItemList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "pWPS vs WPQR vs WPS: the difference explained",
+            "url": "https://delteris.com/resources/pwps-vs-wpqr-vs-wps/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Welder qualification validity: continuity, expiry and revalidation",
+            "url": "https://delteris.com/resources/welder-qualification-management-software/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "How heat-number traceability works",
+            "url": "https://delteris.com/resources/heat-number-traceability/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "How to choose welding management software",
+            "url": "https://delteris.com/how-to-choose-welding-software.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "name": "Managed on-premise: on-premise without the IT burden",
+            "url": "https://delteris.com/resources/on-premise-vs-cloud-welding-software/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 6,
+            "name": "Elenchon Atlas — cloud",
+            "url": "https://delteris.com/wps-management-software.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 7,
+            "name": "Elenchon — the full platform",
+            "url": "https://delteris.com/platform.html"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -19,6 +19,25 @@
       ]
     },
     {
+      "@type": "Article",
+      "@id": "https://delteris.com/how-to-choose-welding-software.html#article",
+      "headline": "How to Choose Welding Management Software",
+      "description": "How to choose welding management software: the questions that decide it long-term — WPS/WPQR handling, ISO 9606 and ASME IX qualification, NDT and PWHT tracking, data ownership, pricing and lock-in — with a neutral cloud-vs-on-premise vendor matrix.",
+      "inLanguage": "en",
+      "mainEntityOfPage": "https://delteris.com/how-to-choose-welding-software.html",
+      "datePublished": "2026-08-01",
+      "dateModified": "2026-09-23",
+      "author": {
+        "@type": "Organization",
+        "name": "Delteris",
+        "url": "https://delteris.com/"
+      },
+      "publisher": {
+        "@id": "https://delteris.com/#organization"
+      },
+      "image": "https://delteris.com/static/DelterisCrest.webp"
+    },
+    {
       "@type": "FAQPage",
       "@id": "https://delteris.com/how-to-choose-welding-software.html#faq",
       "mainEntity": [
@@ -27,7 +46,7 @@
           "name": "What should I look for in welding management software?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "Weigh what is hard to change later: whether the tool reduces work or just digitises paperwork, how it maintains the qualification chain (WPS to WPQR/PQR to welder qualification) and the continuity clock the codes require, how far it reaches into NDT and PWHT, where your records live, and whether the price is published."
           }
         },
         {
@@ -35,7 +54,7 @@
           "name": "How do I know a tool will actually hold up in an audit?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "Ask to see it produce evidence, not store it. It passes when any weld traces in one pull to its material heat number, the WPS and qualification record behind it (WPS to WPQR/PQR, per ISO 15614 / ASME IX), the welder, and the inspection result, with a clear change history. If that means exporting from several places and stitching it by hand, it is a filing cabinet."
           }
         },
         {
@@ -43,7 +62,7 @@
           "name": "How is welder qualification and continuity tracked?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "A welder's qualification (ISO 9606, or performance qualification under ASME IX) certifies a range of work, and most codes require continuity — evidence of welding within that range, commonly on a six-month interval under ISO 9606. Capable software derives continuity from real production entries and warns before a qualification lapses."
           }
         },
         {
@@ -51,7 +70,7 @@
           "name": "Should welding software handle NDT and PWHT?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "It depends on your work. Non-destructive testing (visual, RT, UT, MT, PT) and post-weld heat treatment carry records an auditor expects tied to the joint — heavily for pressure work under ASME, less for light structural work under EN 1090. Decide which downstream records your code demands, then ask each vendor exactly how far their coverage goes."
           }
         },
         {
@@ -59,7 +78,7 @@
           "name": "Is on-premise or cloud better for welding records?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "Neither is universally better. Cloud needs no hardware, but records sit on shared infrastructure and the bill often scales per seat. On-premise keeps records on hardware you own, with predictable cost and stronger data control, at the price of owning an appliance. See the full on-premise vs cloud comparison and what managed on-premise changes."
           }
         },
         {
@@ -67,7 +86,7 @@
           "name": "How does Elenchon fit into this?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Elenchon is the on-premise archetype above: a self-hosted appliance that runs the full WPS/WPQR/WPQ workflow, weld traceability, equipment and consumables in one system, with pricing published in the open. It's built so the software does the work rather than digitizing paperwork. See the platform, open pricing, or the on-premise vs cloud comparison."
+            "text": "Two ways. Elenchon Atlas is a cloud tool at one flat, published price: your WPS, pWPS and WPQR library, imported from Excel or PDF, with welder qualifications tracked alongside. The full Elenchon platform is the on-premise archetype above — the complete WPS/WPQR/WPQ workflow, weld traceability, equipment and consumables, fully managed on-premise. See open pricing."
           }
         }
       ]

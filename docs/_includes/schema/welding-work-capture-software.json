@@ -61,7 +61,7 @@
           "name": "Can it capture work when there is no Wi-Fi?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "Yes — capture is offline-first. A welder can start and submit an entry with no connection at all; entries sit in a durable on-device queue and sync in order when it returns. Included on the Standard plan; the offline document viewer is on every plan."
           }
         },
         {
@@ -93,7 +93,7 @@
           "name": "Is on-premise capture worse than a cloud app?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "The opposite. The appliance sits on the floor's own network, so entries write to hardware in the building instead of waiting on a public link — faster, and unaffected by an internet drop. Captured work never touches a shared cloud server, and authorised staff still connect remotely through Phrakton."
           }
         }
       ]

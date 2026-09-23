@@ -1,11 +1,12 @@
 ---
 layout: default
 permalink: /resources/welder-qualification-management-software/
-title: "What Does Welder Qualification Management Software Do? | Elenchon"
-description: "A plain-language guide to welder qualification management software: how it tracks WPQ records, automates ISO 9606 six-month continuity and expiry, and produces audit-ready evidence — and how ISO and ASME differ."
-og_description: "How welder qualification management software tracks WPQ records, automates ISO 9606 continuity and expiry, and produces audit-ready evidence — plus the ISO vs ASME difference."
-og_image_alt: "Elenchon by Delteris — welder qualification management software guide"
+title: "Welder Qualification Validity: ISO 9606-1 Continuity & Revalidation | Elenchon"
+description: "How long a welder qualification stays valid: the ISO 9606-1 six-month confirmation, the three revalidation routes, ASME Section IX's six-month expiry rule — and how to keep track across a whole floor."
+og_description: "ISO 9606-1 and ASME IX welder qualification validity explained: six-month continuity, the three revalidation routes, expiry and renewal — in one page."
+og_image_alt: "Elenchon by Delteris — welder qualification validity, continuity and revalidation explained"
 og_image_dims: true
+schema: schema/resources/welder-qualification-management-software.json
 en_url: "/resources/welder-qualification-management-software/"
 pt_url: "/pt/resources/welder-qualification-management-software/"
 es_url: "/es/resources/welder-qualification-management-software/"
@@ -14,86 +15,150 @@ alt_url: "/pt/resources/welder-qualification-management-software/"
     <header class="page-hero">
         <div class="hero-content">
             <span class="hero-eyebrow">Resources · Guide</span>
-            <h1 class="text-glow">What Does Welder Qualification<br>Management Software Do?</h1>
-            <p class="hero-sub">It keeps every welder's qualification valid, current and provable — automatically — so an out-of-date certificate never reaches a job or an auditor by surprise.</p>
+            <h1 class="text-glow">Welder Qualification Validity:<br>Continuity, Expiry and Revalidation.</h1>
+            <p class="hero-sub">A welder's qualification doesn't stay valid on its own. Here is what keeps it alive under ISO 9606-1 and ASME Section IX — and what quietly ends it.</p>
+            <p class="guide-meta">By the Delteris team · Last reviewed <time datetime="2026-09-23">23 September 2026</time> · <a href="/resources/">All guides</a></p>
         </div>
     </header>
 
     <section class="page-section container u-flush-top">
         <div class="summary-panel">
             <h2 class="text-glow">The Short Answer</h2>
-            <p><strong>Welder qualification management software stores each welder's performance qualifications, tracks whether they are still valid under the governing code, and warns you before one lapses — turning a compliance task that shops usually run on spreadsheets into a live, audit-ready record.</strong> A welder being qualified once is not enough: codes require that qualification to be kept current, and proving it is exactly the kind of paperwork that quietly rots in a folder until an audit exposes the gap. Software closes that gap by watching the clock for every welder at once.</p>
+            <p><strong>Under ISO 9606-1, a welder's qualification stays valid only while two things hold: every six months, someone responsible for welding confirms the welder has kept working within its range; and the qualification is revalidated on one of three routes — a retest every three years, two production welds tested every two years, or open-ended extension under an ISO 3834-2 or -3 quality system.</strong> Under ASME Section IX, a qualification for a process expires if the welder doesn't use that process for six months. Miss either and the certificate on file is no longer valid, whether or not anyone has noticed.</p>
         </div>
     </section>
 
     <section class="page-section container">
         <div class="section-header">
-            <span class="eyebrow">The Record It Manages</span>
-            <h2>What a Welder Qualification Actually Is</h2>
+            <span class="eyebrow">The Record</span>
+            <h2>What a Welder Qualification Covers</h2>
         </div>
         <div class="glass-card feature-block">
-            <p class="feature-lead">A welder qualification — a <strong>WPQ</strong> (Welder Performance Qualification), sometimes called a welder certificate — is the evidence that a specific person can deposit sound weld metal within a defined range of conditions. It is qualified by welding a test piece that is then examined and tested; the results fix the <em>range of approval</em> the welder is allowed to work inside.</p>
+            <p class="feature-lead">A welder qualification — the <strong>WPQ</strong>, or welder certificate — proves that one person can make sound welds within a defined range: process, material group, product type, thickness, diameter and position. It qualifies the <em>welder</em>. The procedure has its own records — see <a href="/resources/pwps-vs-wpqr-vs-wps/">pWPS vs WPQR vs WPS</a>.</p>
+        </div>
+    </section>
+
+    <section class="page-section container">
+        <div class="section-header">
+            <span class="eyebrow">The Rules</span>
+            <h2>Two Clocks, Two Codes</h2>
+            <p class="subtitle">Continuity and validity run separately. Either one can end a qualification.</p>
+        </div>
+        <div class="matrix-scroll">
+            <table class="feature-matrix comparison-matrix guide-matrix guide-matrix-2">
+                <caption class="u-visually-hidden">Welder qualification continuity and validity under ISO 9606-1 and ASME Section IX</caption>
+                <thead>
+                    <tr>
+                        <th scope="col" class="fm-feature-head">Clock</th>
+                        <th scope="col">ISO 9606-1</th>
+                        <th scope="col">ASME Section IX</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row"><span class="fm-name">Continuity</span></th>
+                        <td>Confirmed every 6 months that the welder has worked within the qualified range (clause 9.2). No confirmation, no valid certificate.</td>
+                        <td>The qualification for a process expires if the welder hasn't used it for 6 months (QW-322.1).</td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><span class="fm-name">Validity</span></th>
+                        <td>One route, chosen at issue (clause 9.3): <strong>(a)</strong> retest every 3 years; <strong>(b)</strong> every 2 years, two production welds from the last 6 months tested by RT, UT or destructive tests; <strong>(c)</strong> no end date while the welder works for the same manufacturer under ISO 3834-2 or -3, with documented weld quality.</td>
+                        <td>No fixed end date while continuity holds.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><span class="fm-name">Once lapsed</span></th>
+                        <td>Requalification by test.</td>
+                        <td>Renewal by a single test coupon, which restores the welder's previous qualifications for that process (QW-322.2).</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="feature-note">Both codes also let a qualification be revoked when there is a specific reason to question the welder's skill. ISO 9606-1 is under revision — check which edition your contracts and certificates cite.</p>
+    </section>
+
+    <section class="page-section container">
+        <div class="section-header">
+            <span class="eyebrow">Why It Slips</span>
+            <h2>Easy Rules, Hard Bookkeeping</h2>
+        </div>
+        <div class="glass-card feature-block">
             <ul class="feature-list">
-                <li><strong>It is about the person, not the procedure.</strong> A WPQ qualifies the welder's skill. It is a separate record from the ones that qualify the <em>procedure</em> (the WPS and the WPQR/PQR behind it), which are about the recipe rather than the hand that follows it.</li>
-                <li><strong>It has a defined scope.</strong> The test qualifies the welder for a band of processes, materials, positions, thicknesses and diameters — not for everything. Production work has to fall inside that band.</li>
-                <li><strong>It has a shelf life.</strong> A qualification is not permanent. It stays valid only while the welder keeps using the process and the shop keeps confirming that on a schedule the code sets.</li>
+                <li><strong>It multiplies.</strong> Twenty welders, three processes each, two clocks per qualification — over a hundred dates, all moving.</li>
+                <li><strong>It runs per process.</strong> A welder who stops TIG for seven months loses TIG while their MAG qualification stays valid.</li>
+                <li><strong>Lapses are silent.</strong> An expired certificate looks the same in a folder as a valid one. The gap shows up at audit, or after a weld has been made.</li>
+                <li><strong>Evidence lives elsewhere.</strong> The proof that a welder kept working in range sits in production records — <a href="/welding-work-capture-software.html">weld logs</a> that are rarely filed next to the certificate.</li>
             </ul>
         </div>
     </section>
 
     <section class="page-section container">
         <div class="section-header">
-            <span class="eyebrow">The Hard Part</span>
-            <h2>Continuity: Why a Qualification Quietly Expires</h2>
+            <span class="eyebrow">Keeping Track</span>
+            <h2>What Good Tracking Looks Like</h2>
         </div>
         <div class="glass-card feature-block">
-            <p class="feature-lead">The reason welder qualification is a software problem and not a filing problem is <strong>continuity</strong> — the code requirement that a qualification only stays alive if the welder keeps welding and the shop keeps confirming it. Under <strong>ISO 9606-1</strong>, the common European welder-qualification standard, the mechanics are specific:</p>
             <ul class="feature-list">
-                <li><strong>Six-month confirmation.</strong> A responsible person at the employer must confirm, every six months, that the welder has been working within the qualified range. Miss that confirmation and the certificate becomes invalid — even if its longer validity period is still open.</li>
-                <li><strong>Process-by-process.</strong> If a welder stops using a particular process for more than six months, the qualification for <em>that</em> process lapses on its own, independent of the others.</li>
-                <li><strong>Periodic proof.</strong> A qualification is typically valid for two or three years, and to keep it alive the code expects ongoing evidence — for example, a full retest every three years, or two test coupons welded every two years (within the last six months of the validity period) and examined by radiographic, ultrasonic or destructive testing. Which route applies depends on the standard the shop works to and whether it holds an ISO 3834 quality system.</li>
+                <li><strong>Both clocks per qualification</strong>, not a single expiry date.</li>
+                <li><strong>A roster you read at a glance</strong> — who is valid, who is due, who has lapsed.</li>
+                <li><strong>Warnings before the date</strong>, on screen and by email, so the confirmation or retest happens in time.</li>
+                <li><strong>A signed, dated record</strong> of every confirmation and requalification, with the certificate attached.</li>
             </ul>
-            <p>Multiply that across a floor of welders, each with several processes and a rolling six-month clock, and manual tracking becomes a game you eventually lose. A missed confirmation does not announce itself — it just sits there until the day a weld is made by a welder whose qualification silently expired, which is a nonconformity waiting for an auditor.</p>
+            <p><a href="/welder-qualification-management-software.html">Elenchon Atlas</a> does exactly this in the cloud, next to your <a href="/wps-management-software.html">WPS library</a>. It records and warns — the call on whether a welder is qualified stays with a qualified person. The full <a href="/welding-qualification-software.html">Elenchon platform</a> goes further, pulling continuity evidence from real production entries on the floor.</p>
         </div>
     </section>
 
-    <section class="page-section container">
+    <section class="page-section container" id="faq">
         <div class="section-header">
-            <span class="eyebrow">What the Software Does</span>
-            <h2>From Spreadsheet to Live Record</h2>
+            <span class="eyebrow">Questions &amp; Answers</span>
+            <h2>Welder Qualification Validity, Answered</h2>
         </div>
-        <div class="glass-card feature-block">
-            <p class="feature-lead">Welder qualification management software takes that clock off your hands. In practice it does four things:</p>
-            <ul class="feature-list">
-                <li><strong>Holds every WPQ in one place</strong> — scope, validity dates and the supporting test evidence attached to each welder, instead of scattered certificates.</li>
-                <li><strong>Surfaces the qualifying work automatically.</strong> Because production welds are already recorded, the system can show the welds behind a welder's continuity — the evidence that they have kept working in-range — rather than making someone reconstruct it by hand.</li>
-                <li><strong>Watches the continuity clock</strong> and warns you before a qualification lapses, per welder and per process, so a confirmation or retest happens on time instead of after the fact.</li>
-                <li><strong>Prevents out-of-range work.</strong> With qualifications and their scope on record, the system can flag when someone is about to work outside what they are qualified for — stopping the nonconformity before it is welded.</li>
-            </ul>
-            <p>The payoff is straightforward: fewer audit findings, no production stopped by a lapsed certificate discovered too late, and no scramble to reconstruct evidence when a customer or notified body asks for it.</p>
+        <div class="faq-list">
+            <details class="faq-item">
+                <summary><h3>How long is an ISO 9606-1 welder certificate valid?</h3></summary>
+                <div class="faq-body">
+                    <p>It depends on the revalidation route chosen when it was issued: three years with a retest, two years renewable with tested production welds, or open-ended under an ISO 3834-2/-3 quality system. On every route, the six-month confirmation must also be kept up.</p>
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary><h3>Who confirms the six-month continuity?</h3></summary>
+                <div class="faq-body">
+                    <p>The person responsible for welding activities at the employer — typically the welding coordinator — or the examiner or examining body. It is a documented confirmation, not a retest.</p>
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary><h3>Does an ASME welder qualification expire?</h3></summary>
+                <div class="faq-body">
+                    <p>Only through non-use: if the welder doesn't weld with a process for six months, the qualification for that process expires (QW-322.1). It can be renewed with a single test coupon (QW-322.2).</p>
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary><h3>Can software decide whether a welder is qualified?</h3></summary>
+                <div class="faq-body">
+                    <p>It shouldn't. Good software keeps the records, runs the clocks and warns you in time. Whether a welder is qualified for a job is a judgement for a qualified person, who signs it.</p>
+                </div>
+            </details>
         </div>
     </section>
 
     <section class="page-section container">
-        <div class="section-header">
-            <span class="eyebrow">ISO vs ASME</span>
-            <h2>The Same Idea, Named Two Ways</h2>
-        </div>
         <div class="glass-card feature-block">
-            <p class="feature-lead">Welder qualification exists under both major code families, but they name and govern it differently — worth knowing if your shop works to more than one.</p>
+            <p class="feature-lead"><strong>Standards referenced</strong></p>
             <ul class="feature-list">
-                <li><strong>The standard.</strong> Under ISO, welder qualification is governed by <strong>ISO 9606</strong> (with ISO 9606-1 covering steels). Under ASME, it lives in <strong>Section IX</strong> of the Boiler &amp; Pressure Vessel Code, which qualifies welders through the Welder Performance Qualification.</li>
-                <li><strong>The acronym trap.</strong> "WPQ" reliably means the welder's qualification. But "WPQR" is ambiguous across codes: in ISO it usually means the <em>procedure</em> record (equivalent to an ASME PQR), while in ASME it can mean the <em>welder's</em> performance qualification record. Same letters, different record — a common source of confusion on multi-code jobs.</li>
-                <li><strong>Continuity.</strong> The six-month confirmation model is an ISO 9606 concept, reinforced by an ISO 3834 quality system. ASME Section IX handles maintenance of qualification on its own terms — for example, a welder's qualification for a process lapses if the process is not used within a set period, with its own rules for renewal.</li>
+                <li><a href="https://www.iso.org/standard/54936.html">ISO 9606-1</a> — qualification testing of welders, fusion welding of steels.</li>
+                <li><a href="https://www.iso.org/standard/81651.html">ISO 3834-2</a> — comprehensive quality requirements for fusion welding.</li>
+                <li><a href="https://www.asme.org/codes-standards/find-codes-standards/bpvc-ix-bpvc-section-ix-welding-brazing-fusing-qualifications">ASME BPVC Section IX</a> — QW-322, expiration and renewal of qualification.</li>
             </ul>
-            <p>Good software treats both as first-class rather than assuming one code — a shop working to more than one standard needs its records to speak both, or at least to map cleanly between them.</p>
         </div>
     </section>
 
-    <section class="page-section container">
-        <div class="compliance-panel gold-edge">
-            <span class="eyebrow">How Elenchon Does It</span>
-            <h2 class="text-glow">Continuity Without the Spreadsheet</h2>
-            <p>Elenchon holds each welder's WPQ on file, surfaces the qualifying welds behind it from real floor entries, tracks six-month continuity automatically, and warns you before a qualification expires — so no welder works outside an approved range. It runs the full <a href="/welding-qualification-software.html">WPS, WPQR and WPQ qualification workflow</a> on an on-premise appliance you own, with qualification data that never leaves the shop. See how it fits the <a href="/welding-traceability-software.html">wider traceability chain</a>, or read the companion guide on <a href="/resources/pwps-vs-wpqr-vs-wps/">pWPS vs WPQR vs WPS</a>.</p>
+    <section class="page-section container" id="cta">
+        <div class="cta-band">
+            <span class="eyebrow">Stop Tracking by Hand</span>
+            <h2 class="text-glow">Every Welder, Both Clocks, One Screen</h2>
+            <p>Atlas tracks each welder's qualifications by continuity and expiry and warns you before anything lapses — alongside your WPS library, at one flat price.</p>
+            <div class="cta-group">
+                <a href="/welder-qualification-management-software.html" class="btn btn-primary">See Welder Qualification in Atlas</a>
+                <a href="/resources/pwps-vs-wpqr-vs-wps/" class="btn btn-secondary">pWPS vs WPQR vs WPS</a>
+            </div>
         </div>
     </section>

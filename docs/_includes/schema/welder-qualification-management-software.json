@@ -71,7 +71,7 @@
           "name": "What are the two clocks — expiry and continuity?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A welder's ticket can end two ways: it reaches its expiry date, or the welder goes too long without welding to that qualification and loses continuity. They're different deadlines, so Atlas tracks them as two separate dates and warns on each independently."
+            "text": "A welder's ticket can end two ways: it reaches its expiry date, or the welder goes too long without welding to that qualification and loses continuity. They're different deadlines, so Atlas tracks them as two separate dates and warns on each independently. Full guide: welder qualification validity, continuity and revalidation."
           }
         },
         {

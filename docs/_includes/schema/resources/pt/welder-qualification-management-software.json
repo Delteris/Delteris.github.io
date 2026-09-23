@@ -1,0 +1,85 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Início",
+          "item": "https://delteris.com/pt/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Recursos",
+          "item": "https://delteris.com/pt/resources/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Validade da Qualificação de Soldadores: Continuidade, Caducidade e Revalidação",
+          "item": "https://delteris.com/pt/resources/welder-qualification-management-software/"
+        }
+      ]
+    },
+    {
+      "@type": "Article",
+      "@id": "https://delteris.com/pt/resources/welder-qualification-management-software/#article",
+      "headline": "Validade da Qualificação de Soldadores: Continuidade, Caducidade e Revalidação",
+      "description": "Quanto tempo é válida a qualificação de um soldador: a confirmação semestral da ISO 9606-1, as três vias de revalidação, a regra de caducidade de seis meses da ASME Secção IX — e como acompanhar tudo numa oficina inteira.",
+      "inLanguage": "pt-PT",
+      "mainEntityOfPage": "https://delteris.com/pt/resources/welder-qualification-management-software/",
+      "datePublished": "2026-07-31",
+      "dateModified": "2026-09-23",
+      "author": {
+        "@type": "Organization",
+        "name": "Delteris",
+        "url": "https://delteris.com/"
+      },
+      "publisher": {
+        "@id": "https://delteris.com/#organization"
+      },
+      "image": "https://delteris.com/static/DelterisCrest.webp"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://delteris.com/pt/resources/welder-qualification-management-software/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Quanto tempo é válido um certificado de soldador ISO 9606-1?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Depende da via de revalidação escolhida na emissão: três anos com novo ensaio, dois anos renováveis com soldaduras de produção ensaiadas, ou sem data de fim sob um sistema de qualidade ISO 3834-2/-3. Em todas as vias, a confirmação semestral também tem de estar em dia."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quem confirma a continuidade de seis meses?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O responsável pelas atividades de soldadura na entidade empregadora — normalmente o coordenador de soldadura — ou o examinador ou organismo de exame. É uma confirmação documentada, não um novo ensaio."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Uma qualificação de soldador ASME caduca?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Só por falta de uso: se o soldador não soldar com um processo durante seis meses, a qualificação para esse processo caduca (QW-322.1). Pode ser renovada com um único provete (QW-322.2)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Um software pode decidir se um soldador está qualificado?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não deve. Um bom software guarda os registos, controla os relógios e avisa a tempo. Se um soldador está qualificado para um trabalho é uma decisão de uma pessoa qualificada, que a assina."
+          }
+        }
+      ]
+    }
+  ]
+}

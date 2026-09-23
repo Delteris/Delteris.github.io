@@ -1,0 +1,85 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://delteris.com/es/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Recursos",
+          "item": "https://delteris.com/es/resources/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "pWPS vs WPQR vs WPS: La Diferencia Explicada",
+          "item": "https://delteris.com/es/resources/pwps-vs-wpqr-vs-wps/"
+        }
+      ]
+    },
+    {
+      "@type": "Article",
+      "@id": "https://delteris.com/es/resources/pwps-vs-wpqr-vs-wps/#article",
+      "headline": "pWPS vs WPQR vs WPS: La Diferencia Explicada",
+      "description": "Una guía en lenguaje sencillo sobre los tres registros de procedimiento de soldadura — pWPS (preliminar), WPQR (el registro de cualificación, equivalente a un PQR de la ASME) y WPS (el procedimiento de producción) — y cómo difieren la ISO y la ASME.",
+      "inLanguage": "es-ES",
+      "mainEntityOfPage": "https://delteris.com/es/resources/pwps-vs-wpqr-vs-wps/",
+      "datePublished": "2026-07-31",
+      "dateModified": "2026-09-23",
+      "author": {
+        "@type": "Organization",
+        "name": "Delteris",
+        "url": "https://delteris.com/"
+      },
+      "publisher": {
+        "@id": "https://delteris.com/#organization"
+      },
+      "image": "https://delteris.com/static/DelterisCrest.webp"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://delteris.com/es/resources/pwps-vs-wpqr-vs-wps/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Un WPQR es lo mismo que un PQR?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí — WPQR es el nombre ISO y PQR el nombre ASME del registro de un ensayo de cualificación de procedimiento. La diferencia práctica está en dónde se escriben los rangos cualificados: en el WPQR en ISO, en la WPS en ASME."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Un WPQR puede respaldar varias WPS?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. Un WPQR cualifica un rango, así que cualquier número de WPS puede apoyarse en él mientras cada una quede dentro de ese rango. Un taller suele tener muchas más WPS que WPQR."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Necesito siempre una pWPS?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Solo cuando cualifica un procedimiento nuevo mediante ensayo. Si un WPQR existente ya cubre el trabajo, escribe la WPS directamente a partir de él."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Dónde encaja el WPQ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El WPQ cualifica al soldador, no el procedimiento, y tiene sus propias reglas de validez — vea validez, continuidad y revalidación de la cualificación de soldadores."
+          }
+        }
+      ]
+    }
+  ]
+}

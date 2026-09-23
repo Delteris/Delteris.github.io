@@ -27,7 +27,7 @@
           "name": "How does cost compare over time?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "Cloud pricing is usually per seat or usage-based behind a quote, so it is hard to predict and grows with people and data. Elenchon publishes everything: a flat rate per appliance with 20 or 50 workers included, extra seats at €9/month, hardware at cost. Both charge for scale; ours is knowable in advance."
           }
         },
         {
@@ -35,7 +35,7 @@
           "name": "Doesn't on-premise cost more to set up?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "Usually the reverse. Cloud implementation and onboarding in industrial software routinely run into five figures on top of the subscription; an Elenchon deployment is a modest published figure, and the hardware is passed through at cost with no markup. Our own engineers install and configure the appliance on your floor, and the monthly rate stays flat."
           }
         },
         {
@@ -59,7 +59,7 @@
           "name": "Is on-premise welding software harder to run than cloud?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "Less than shops expect. Our engineers deliver, install and configure the appliance on-site, so there is no IT project to staff. After that your only job is to keep it powered on: we update and monitor it remotely over Phrakton, and if a critical problem genuinely can't be fixed that way, we come on-site free of charge, anywhere in the world. Full guide: managed on-premise, explained."
           }
         },
         {
@@ -75,7 +75,7 @@
           "name": "Is cloud welding software less secure?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "In a real sense, yes. A cloud service is reachable on the public internet and sits on shared infrastructure; that exposure is architectural, however well the vendor defends it. Elenchon keeps data in your building, opens no inbound ports at all, and runs every connection over Phrakton's post-quantum-safe tunnels. A well-run cloud can be secure; it cannot be un-exposed."
           }
         }
       ]

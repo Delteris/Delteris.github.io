@@ -64,7 +64,7 @@
           "name": "What is WPS management software?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "WPS management software keeps your Welding Procedure Specifications organised, searchable and in one place. Atlas imports the WPS you already hold — Excel or PDF — extracts every field into structured records, proposes reviewed edits, and exports the register and its linked files on demand. Full guide: pWPS vs WPQR vs WPS."
           }
         },
         {
@@ -72,7 +72,7 @@
           "name": "We already keep our WPS in a spreadsheet. Why change?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "A hand-maintained spreadsheet is stale the moment a WPS is revised, and nobody can say what it holds without scrolling it. Atlas reads every procedure into structured data and patches only the cells you approve, so your workbook survives — searchable, filterable by what’s inside each form, and versioned with rollback."
           }
         },
         {
@@ -80,7 +80,7 @@
           "name": "What do I need to bring to get started?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "The WPS you already hold, in Excel or PDF — the original files, not scans. No template to fill in and nothing to re-key: onboarding starts with a few real documents, so the parser is proven on your form before you commit. Your register stays your file."
           }
         },
         {
@@ -88,7 +88,7 @@
           "name": "Does Atlas create WPS, or just manage them?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "Management: import, review, organise, filter, version and export, with WPQRs and pWPS alongside. Each WPS exports as a clean Excel workbook — the whole register too — and re-imports losslessly. A cloud builder for authoring is on the roadmap; shop-floor WPQR capture belongs to the Elenchon platform."
           }
         },
         {
@@ -96,7 +96,7 @@
           "name": "How much does it cost, and is it per user?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "€80 per month, or €720 a year — an effective €60 — billed annually. Flat and published, never per seat: your whole team works in one tenancy with admin, editor and read-only roles. 50 GB of storage is included; extra 50 GB blocks are €10/month. Onboarding and parser setup are included."
           }
         },
         {
@@ -112,7 +112,7 @@
           "name": "Does Atlas track welder qualifications (WPQ)?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "Yes. Each welder has a record with expiry and continuity tracked as separate dates and warned ahead, a colour-coded roster, signed-and-dated requalification, retained history and an optional certificate. Due dates appear on the dashboard, with email reminders you can switch on. Atlas records and warns; judging validity stays with you."
           }
         },
         {
@@ -120,7 +120,7 @@
           "name": "How is it different from the Elenchon platform?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "Atlas is the cloud register on its own — procedures and qualifications organised, current and searchable. The full Elenchon platform adds shop-floor WPQR capture, continuity derived from logged work and full traceability on an on-premise appliance. Same team, and Atlas is the natural starting point."
           }
         }
       ]

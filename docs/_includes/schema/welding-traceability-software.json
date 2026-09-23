@@ -54,7 +54,7 @@
           "name": "How does heat-number traceability work?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Base material is captured with its heat number and linked to its parent MTR, then propagated down the project tree so every part and assembly built from it inherits the link — giving you material traceability from goods-in to the finished weld without duplicating data everywhere."
+            "text": "Base material is captured with its heat number and linked to its parent MTR, then propagated down the project tree so every part and assembly built from it inherits the link — giving you material traceability from goods-in to the finished weld without duplicating data everywhere. Full guide: how heat-number traceability works."
           }
         },
         {
@@ -94,7 +94,7 @@
           "name": "Is an on-premise chain of custody a compromise versus cloud?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "For a chain of custody it is the stronger position: no third-party processor between you and the record an auditor asks for, and no cross-border question over where it lives. Reach is unaffected — authorised staff, auditors included, connect from anywhere through Phrakton."
           }
         }
       ]

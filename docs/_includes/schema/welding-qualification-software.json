@@ -54,7 +54,7 @@
           "name": "What is the difference between a WPS and a WPQR?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "A WPQR — the ISO procedure record, equivalent to an ASME PQR — documents the parameters actually used to weld and test a coupon. A WPS is the qualified written procedure a welder follows in production, its ranges supported by one or more WPQRs. The WPQR proves it, the WPS instructs it, and Elenchon links the two. Full guide: pWPS vs WPQR vs WPS."
           }
         },
         {
@@ -70,7 +70,7 @@
           "name": "How does welder continuity (WPQ) tracking work?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A welder's WPQ is held on file, and Elenchon surfaces the qualifying welds behind it from real floor entries — logging 6-month continuity automatically and warning you before a qualification expires, so no welder works outside an approved range."
+            "text": "A welder's WPQ is held on file, and Elenchon surfaces the qualifying welds behind it from real floor entries — logging 6-month continuity automatically and warning you before a qualification expires, so no welder works outside an approved range. Full guide: welder qualification validity, continuity and revalidation."
           }
         },
         {

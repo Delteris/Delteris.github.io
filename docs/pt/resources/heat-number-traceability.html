@@ -7,6 +7,7 @@ description: "Um guia em linguagem simples sobre a rastreabilidade por número d
 og_description: "Como funciona a rastreabilidade por número de corrida — do certificado da siderurgia à soldadura acabada — incluindo o passo de transferência no corte onde a maioria das oficinas perde o rasto, para a ISO 3834 e a EN 1090."
 og_image_alt: "Elenchon by Delteris — guia de rastreabilidade por número de corrida"
 og_image_dims: true
+schema: "schema/resources/pt/heat-number-traceability.json"
 en_url: "/resources/heat-number-traceability/"
 pt_url: "/pt/resources/heat-number-traceability/"
 es_url: "/es/resources/heat-number-traceability/"
@@ -16,85 +17,157 @@ alt_url: "/resources/heat-number-traceability/"
         <div class="hero-content">
             <span class="hero-eyebrow">Recursos · Guia</span>
             <h1 class="text-glow">Como Funciona a Rastreabilidade<br>por Número de Corrida.</h1>
-            <p class="hero-sub">Cada soldadura em conformidade pode ser rastreada até ao lote exato de aço com que foi feita. Eis como essa cadeia é construída — e o único passo onde a maioria das oficinas a quebra discretamente.</p>
+            <p class="hero-sub">Cada soldadura rastreável leva de volta ao lote de aço de que foi feita. Eis como se constrói essa cadeia — e o passo onde a maioria das oficinas a quebra.</p>
+            <p class="guide-meta">Pela equipa Delteris · Última revisão a <time datetime="2026-09-23">23 de setembro de 2026</time> · <a href="/pt/resources/">Todos os guias</a></p>
         </div>
     </header>
 
     <section class="page-section container u-flush-top">
         <div class="summary-panel">
             <h2 class="text-glow">A Resposta Curta</h2>
-            <p><strong>A rastreabilidade por número de corrida (<em>heat number</em>) é a ligação ininterrupta entre uma soldadura acabada e o lote específico de material com que foi feita, comprovada através do número de corrida que a siderurgia atribui a cada vazamento de aço e regista no seu certificado de material.</strong> Quando um auditor pergunta "prove que esta junta foi feita com material certificado", o número de corrida é o fio de que puxa. Construir essa cadeia é simples em princípio; mantê-la ininterrupta ao longo do corte e da fabricação é onde vive a verdadeira disciplina — e as verdadeiras falhas.</p>
+            <p><strong>A rastreabilidade por número de corrida (<em>heat number</em>) é a ligação ininterrupta entre uma soldadura acabada e a corrida de aço de que foi feita. A siderurgia marca cada peça com um número de corrida e regista-o no certificado do material; a oficina leva esse número através de cada corte e até cada junta.</strong> O certificado raramente é o problema. A cadeia costuma quebrar na serra, quando uma peça cortada perde a marcação.</p>
         </div>
     </section>
 
     <section class="page-section container">
         <div class="section-header">
             <span class="eyebrow">Onde Começa</span>
-            <h2>O Número de Corrida e o Certificado da Siderurgia</h2>
+            <h2>O Número de Corrida e o Seu Certificado</h2>
         </div>
         <div class="glass-card feature-block">
-            <p class="feature-lead">Um <strong>número de corrida</strong> é um identificador único que a siderurgia atribui a um único vazamento — uma "corrida" — de aço. Tudo o que é vazado desse vazamento partilha a mesma química e as mesmas propriedades mecânicas, e o número de corrida é marcado no material para que possa sempre ser rastreado até à sua origem.</p>
-            <ul class="feature-list">
-                <li><strong>O MTR é a certidão de nascimento do material.</strong> O Mill Test Report (também chamado certificado da siderurgia ou MTC) lista o número de corrida a par da composição química, dos resultados dos ensaios mecânicos e das normas que o material cumpre. Faça corresponder a marca no aço ao número de corrida no MTR e terá provado o que o material é.</li>
-                <li><strong>A EN 10204 classifica o certificado.</strong> A norma europeia define tipos de certificado — 2.1 e 2.2 são declarações e relatórios não específicos, enquanto o <strong>3.1</strong> dá resultados de ensaio reais para aquele material específico, validados por um representante de inspeção independente da produção. O tipo 3.1 é a base comum para trabalho estrutural, de pressão e de tubagem; o 3.2 acrescenta a contra-assinatura de um comprador ou de terceiros.</li>
-                <li><strong>A receção é o primeiro ponto de controlo.</strong> Quando o material chega, alguém confirma que o número de corrida nele marcado corresponde ao certificado — o momento em que a cadeia de custódia começa formalmente.</li>
-            </ul>
+            <p class="feature-lead">Um <strong>número de corrida</strong> identifica uma fusão de aço. Tudo o que sai dela partilha composição química e propriedades mecânicas. O <strong>certificado do material</strong> (MTR ou MTC) indica esse número com os resultados dos ensaios, e a <strong>EN 10204</strong> define quanto o certificado prova:</p>
         </div>
+        <div class="matrix-scroll u-gap-top">
+            <table class="feature-matrix comparison-matrix guide-matrix guide-matrix-2">
+                <caption class="u-visually-hidden">Tipos de documentos de inspeção EN 10204</caption>
+                <thead>
+                    <tr>
+                        <th scope="col" class="fm-feature-head">Tipo</th>
+                        <th scope="col">O que lhe dá</th>
+                        <th scope="col">Validado por</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row"><span class="fm-name">2.1</span></th>
+                        <td>Declaração de que o produto cumpre a encomenda. Sem resultados de ensaio.</td>
+                        <td>O fabricante</td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><span class="fm-name">2.2</span></th>
+                        <td>Resultados de inspeção não específica — típicos do produto, não deste lote.</td>
+                        <td>O fabricante</td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><span class="fm-name">3.1</span></th>
+                        <td>Resultados de ensaio reais do material fornecido. A base habitual para trabalho estrutural e sob pressão.</td>
+                        <td>O representante de inspeção do fabricante, independente da produção</td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><span class="fm-name">3.2</span></th>
+                        <td>Como o 3.1, contra-assinado por uma segunda parte.</td>
+                        <td>O representante do fabricante e o do comprador ou um inspetor regulamentar</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="feature-note">A receção é o primeiro ponto de controlo: o número de corrida no aço tem de coincidir com o certificado antes de o material entrar em stock.</p>
     </section>
 
     <section class="page-section container">
         <div class="section-header">
             <span class="eyebrow">O Passo Crítico</span>
-            <h2>Transferência no Corte — Onde a Cadeia se Quebra</h2>
+            <h2>Transferência no Corte</h2>
         </div>
         <div class="glass-card feature-block">
-            <p class="feature-lead">Eis o passo que discretamente derrota a maioria dos sistemas de rastreabilidade. No momento em que uma chapa ou tubo é cortado, a peça que carrega a marca original e o retalho que não a carrega são agora duas peças — e apenas uma delas ainda mostra o seu número de corrida.</p>
             <ul class="feature-list">
-                <li><strong>O número de corrida tem de ser transferido antes de a marca se perder.</strong> Quando o corte remove ou separa a marcação original, o número de corrida tem de ser re-marcado em cada peça resultante para que cada uma se mantenha identificada. Faça-o antes de a marca original desaparecer, não depois.</li>
-                <li><strong>O retalho carrega a mesma corrida.</strong> Um resto devolvido à prateleira ainda pertence à sua corrida de origem — mas, se voltar sem etiqueta, a sua rastreabilidade desaparece no instante em que sai da bancada. Esta é uma das não conformidades de rastreabilidade mais comuns na fabricação.</li>
-                <li><strong>Precisa de ser registado, não apenas marcado.</strong> A transferência é documentada — muitas vezes testemunhada pelo CQ segundo o plano de qualidade do projeto — para que exista um rasto documental a mostrar que a peça B veio da corrida X através da peça-mãe A.</li>
+                <li><strong>Remarcar antes de perder a marca.</strong> Quando uma chapa ou tubo é cortado, cada peça resultante precisa do número de corrida, transferido antes de a marcação original desaparecer.</li>
+                <li><strong>As sobras também.</strong> Um retalho devolvido à estante sem marcação perdeu a rastreabilidade de vez — uma das constatações mais comuns em auditorias de fabrico.</li>
+                <li><strong>Registar, não só marcar.</strong> A transferência fica documentada — muitas vezes testemunhada pelo controlo de qualidade segundo o plano de qualidade — para provar que a peça B vem da corrida X através da peça-mãe A.</li>
             </ul>
-            <p>Uma oficina que acerta em tudo o resto mas perde o passo de transferência na serra tem uma cadeia com um buraco exatamente no sítio onde os auditores olham primeiro.</p>
         </div>
     </section>
 
     <section class="page-section container">
         <div class="section-header">
             <span class="eyebrow">A Cadeia Completa</span>
-            <h2>Da Corrida à Soldadura Acabada</h2>
+            <h2>A Que Se Liga uma Soldadura Rastreável</h2>
         </div>
         <div class="glass-card feature-block">
-            <p class="feature-lead">Rastreabilidade completa significa que o número de corrida sobe todo o percurso, da matéria-prima até à junta em que acaba, acompanhado por tudo o mais que tocou na soldadura. Ao abrigo da <strong>ISO 3834</strong> e da <strong>EN 1090</strong>, uma soldadura rastreável liga-se a:</p>
             <ul class="feature-list">
-                <li><strong>O material</strong> — o número de corrida e o seu MTR, mantidos ao longo de cada corte.</li>
-                <li><strong>O procedimento</strong> — o WPS com que foi soldada, e o WPQR por trás desse procedimento.</li>
-                <li><strong>Os consumíveis</strong> — metais de adição rastreados pelo seu próprio lote e certificado.</li>
-                <li><strong>A pessoa</strong> — o soldador qualificado que a fez, e a sua qualificação atual.</li>
-                <li><strong>O resultado</strong> — o registo de inspeção e aceitação daquela junta.</li>
+                <li><strong>Material</strong> — o número de corrida e o seu certificado, levados através de cada corte.</li>
+                <li><strong>Procedimento</strong> — a WPS segundo a qual foi soldada e o WPQR por trás dela (<a href="/pt/resources/pwps-vs-wpqr-vs-wps/">como se relacionam</a>).</li>
+                <li><strong>Consumíveis</strong> — material de adição rastreado pelo seu próprio lote e certificado.</li>
+                <li><strong>Soldador</strong> — quem a fez, com uma <a href="/pt/resources/welder-qualification-management-software/">qualificação válida nesse dia</a>.</li>
+                <li><strong>Resultado</strong> — o registo de inspeção e aceitação da junta.</li>
             </ul>
-            <p>A rastreabilidade acumula-se <em>para cima</em>: os números de corrida nas folhas de material de base propagam-se pelas assemblagens construídas a partir delas, para que uma peça acabada carregue toda a proveniência de tudo o que foi soldado nela. É isso que permite a uma oficina responder, para qualquer junta, "prove que esta soldadura é sólida e prove de que é feita" — num só puxão, não numa semana no arquivo.</p>
+            <p>Quanto disto tem de provar depende do trabalho. Na EN 1090-2, a classe de execução EXC1 não tem requisito de rastreabilidade, a EXC2 exige-a sem ser necessariamente peça a peça, e a EXC3 e a EXC4 exigem rastreabilidade completa de cada produto constituinte. A <a href="https://www.iso.org/standard/81651.html">ISO 3834-2</a> exige que a identificação e a rastreabilidade se mantenham onde o contrato ou o código o pedirem.</p>
         </div>
     </section>
 
     <section class="page-section container">
         <div class="section-header">
-            <span class="eyebrow">Porque é um Problema de Software</span>
-            <h2>O Papel Perde o Fio</h2>
+            <span class="eyebrow">Porque Falha o Papel</span>
+            <h2>As Ligações Quebram em Silêncio</h2>
         </div>
         <div class="glass-card feature-block">
-            <p class="feature-lead">No papel, esta cadeia é frágil em cada junção entre passos — e a falha quase nunca é o certificado da siderurgia. É a transferência que não foi registada, o resto que voltou sem etiqueta, o registo de soldadura que vive num dossiê diferente do registo de material.</p>
-            <ul class="feature-list">
-                <li><strong>As ligações quebram-se em silêncio.</strong> Um registo de transferência em falta não dispara um alarme; torna-se apenas uma lacuna descoberta sob a pressão de uma auditoria.</li>
-                <li><strong>A reconstrução é dispendiosa.</strong> Quando o fio se perde, alguém passa dias a reconstruí-lo a partir de registos dispersos — se é que se consegue reconstruir de todo.</li>
-                <li><strong>O software mantém as ligações vivas.</strong> Capture o número de corrida uma vez na receção, ligue-o ao seu MTR, transporte-o ao longo de cada corte e anexe-o às juntas construídas a partir desse material — e a cadeia mantém-se inteira por construção, não por heroísmos na altura da auditoria.</li>
-            </ul>
+            <p class="feature-lead">Em papel, o registo de material, a lista de corte e o registo de soldadura vivem em dossiês diferentes. Uma transferência em falta não dá alarme — torna-se uma lacuna que alguém passa dias a reconstruir quando um auditor pergunta. Em software, o número de corrida é captado uma vez na receção, ligado ao certificado e <a href="/pt/weld-project-structure-software.html">propagado pela árvore do projeto</a>, para que cada junta herde por construção a origem do seu material.</p>
+            <p>É assim que funciona a <a href="/pt/welding-traceability-software.html">rastreabilidade de soldadura do Elenchon</a>, junto com o <a href="/pt/welding-equipment-management-software.html">controlo de lotes de consumíveis</a> e o <a href="/pt/welding-work-capture-software.html">registo no chão de fábrica</a> — num appliance on-premise totalmente gerido: instalamos, atualizamos e resolvemos tudo remotamente; basta mantê-lo ligado.</p>
+        </div>
+    </section>
+
+    <section class="page-section container" id="faq">
+        <div class="section-header">
+            <span class="eyebrow">Perguntas &amp; Respostas</span>
+            <h2>Rastreabilidade por Número de Corrida, Respondida</h2>
+        </div>
+        <div class="faq-list">
+            <details class="faq-item">
+                <summary><h3>Qual a diferença entre número de corrida e número de lote?</h3></summary>
+                <div class="faq-body">
+                    <p>O número de corrida identifica uma fusão de aço na siderurgia. Lote é um termo mais amplo — usado muitas vezes para consumíveis, ou para um lote de processamento que pode conter material de uma ou mais corridas.</p>
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary><h3>Um certificado EN 10204 3.1 é sempre obrigatório?</h3></summary>
+                <div class="faq-body">
+                    <p>Não — decide a norma do produto, o contrato ou o código. O tipo 3.1 é o requisito comum em trabalho estrutural nas classes de execução mais altas e em equipamentos sob pressão. Confirme a especificação antes de encomendar.</p>
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary><h3>O que acontece se uma peça perder o número de corrida?</h3></summary>
+                <div class="faq-body">
+                    <p>Passa a material não identificado. A menos que o seu plano de qualidade preveja uma via de recuperação, como novos ensaios, não pode ser usada em trabalho que exija rastreabilidade.</p>
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary><h3>Os materiais de adição também precisam de rastreabilidade?</h3></summary>
+                <div class="faq-body">
+                    <p>Normalmente, sim: os consumíveis são rastreados por lote com o seu próprio certificado, ao nível que a especificação pedir.</p>
+                </div>
+            </details>
         </div>
     </section>
 
     <section class="page-section container">
-        <div class="compliance-panel gold-edge">
-            <span class="eyebrow">Como o Elenchon o Faz</span>
-            <h2 class="text-glow">O Número de Corrida, Transportado Todo o Caminho Acima</h2>
-            <p>O Elenchon captura os números de corrida na receção, liga-os aos seus MTR de origem e propaga-os pela árvore do projeto, para que cada junta herde a proveniência do material com que é construída — toda a <a href="/pt/welding-traceability-software.html">cadeia de rastreabilidade de soldaduras</a> num appliance on-premise que é seu. Liga-se aos mesmos registos que o <a href="/pt/welding-qualification-software.html">fluxo de trabalho WPS, WPQR e WPQ</a> e a <a href="/pt/welding-equipment-management-software.html">rastreabilidade de lotes de consumíveis</a>, para que material, procedimento, pessoa e resultado se mantenham ligados a cada soldadura. Novo por aqui? Comece com <a href="/pt/resources/pwps-vs-wpqr-vs-wps/">pWPS vs WPQR vs WPS</a>.</p>
+        <div class="glass-card feature-block">
+            <p class="feature-lead"><strong>Normas referidas</strong></p>
+            <ul class="feature-list">
+                <li>EN 10204 — produtos metálicos, tipos de documentos de inspeção.</li>
+                <li>EN 1090-2 — execução de estruturas de aço, requisitos técnicos.</li>
+                <li><a href="https://www.iso.org/standard/81651.html">ISO 3834-2</a> — requisitos de qualidade completos para soldadura por fusão.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="page-section container" id="cta">
+        <div class="cta-band">
+            <span class="eyebrow">Continue a Ler</span>
+            <h2 class="text-glow">Do Material ao Procedimento</h2>
+            <p>O número de corrida prova de que é feita uma soldadura. Os registos de procedimento provam como foi feita.</p>
+            <div class="cta-group">
+                <a href="/pt/welding-traceability-software.html" class="btn btn-primary">Ver a Rastreabilidade</a>
+                <a href="/pt/resources/pwps-vs-wpqr-vs-wps/" class="btn btn-secondary">pWPS vs WPQR vs WPS</a>
+            </div>
         </div>
     </section>

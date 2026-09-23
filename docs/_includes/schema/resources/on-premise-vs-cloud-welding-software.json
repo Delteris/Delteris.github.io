@@ -1,0 +1,85 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://delteris.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Resources",
+          "item": "https://delteris.com/resources/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Managed On-Premise: On-Premise Without the IT Burden",
+          "item": "https://delteris.com/resources/on-premise-vs-cloud-welding-software/"
+        }
+      ]
+    },
+    {
+      "@type": "Article",
+      "@id": "https://delteris.com/resources/on-premise-vs-cloud-welding-software/#article",
+      "headline": "Managed On-Premise: On-Premise Without the IT Burden",
+      "description": "What managed on-premise software is and how it differs from a classic self-hosted server: installed and maintained by the vendor, remote access without open ports, offline capture — and when cloud is still the better fit.",
+      "inLanguage": "en",
+      "mainEntityOfPage": "https://delteris.com/resources/on-premise-vs-cloud-welding-software/",
+      "datePublished": "2026-07-31",
+      "dateModified": "2026-09-23",
+      "author": {
+        "@type": "Organization",
+        "name": "Delteris",
+        "url": "https://delteris.com/"
+      },
+      "publisher": {
+        "@id": "https://delteris.com/#organization"
+      },
+      "image": "https://delteris.com/static/DelterisCrest.webp"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://delteris.com/resources/on-premise-vs-cloud-welding-software/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do I need IT staff for managed on-premise software?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. The vendor installs, updates and repairs the appliance remotely. Your part is keeping it powered and connected."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is on-premise more secure than cloud?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not automatically. It reduces exposure when the appliance has no open ports and data never leaves the building — but the implementation matters more than the label. Ask how remote access and updates are secured."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who owns the hardware?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "That varies by vendor. With Elenchon, you buy the appliance at cost and it is yours, along with the data on it. See pricing and deployment."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if I cancel?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "With Elenchon there is no exit fee, and you keep view-only access to your historical records for audits. Ask any vendor for the same in writing."
+          }
+        }
+      ]
+    }
+  ]
+}

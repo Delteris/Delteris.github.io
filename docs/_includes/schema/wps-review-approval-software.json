@@ -60,7 +60,7 @@
           "name": "Does an import change my register automatically?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "Only if you let it. By default every import queues as a proposed change-set — current value beside new, cell by cell — and you approve what lands. Raise the bar to review every value, or lower it to auto-apply with versioning to undo. Only approved cells are patched into your workbook."
           }
         },
         {
@@ -68,7 +68,7 @@
           "name": "A big import has hundreds of cells. Do I have to check every one?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "No — the parser flags its own uncertainty. Any cell it was unsure of, or a heat input it computed, is shaded amber and surfaced for a look; confident reads stay quiet. Your attention goes where it is needed rather than over every cell."
           }
         },
         {

@@ -124,7 +124,7 @@
           "name": "Is Elenchon just weld traceability, or does it run qualification too?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "Both, in one system. Alongside traceability, Elenchon runs the full WPS/WPQR/WPQ workflow — live WPQR capture on the floor, automatic six-month continuity and expiry alerts — so a requalification is never missed and no welder works outside an approved range. See the qualification workflow →"
           }
         },
         {
@@ -140,7 +140,7 @@
           "name": "Can we access an on-premise system remotely?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "Yes, through the optional Remote Access Module. Authorised staff and auditors connect from anywhere — mobile data included — over Phrakton’s mutually authenticated, post-quantum-safe tunnels, while the appliance opens no inbound ports and stays invisible to the public internet. See the security architecture →"
           }
         },
         {

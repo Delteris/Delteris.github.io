@@ -61,7 +61,7 @@
           "name": "I have hundreds of WPS across drives and inboxes. How do I find one fast?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": ""
+            "text": "By filtering on what is inside each procedure rather than on filenames. Every field is read at import, so you narrow the library by welding process, base and filler material, position and thickness range — down to a specific combination of processes with or without a backing pass."
           }
         },
         {
@@ -101,7 +101,7 @@
           "name": "Can I see what qualifies each procedure without digging?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Link a WPS to the WPQR that qualifies it, a WPQR to the several WPS it supports, and a pWPS to the WPQR behind it — then open any record in the chain in a click. The evidence for a procedure is always one hop away, not lost in a shared drive."
+            "text": "Yes. Link a WPS to the WPQR that qualifies it, a WPQR to the several WPS it supports, and a pWPS to the WPQR behind it — then open any record in the chain in a click. The evidence for a procedure is always one hop away, not lost in a shared drive. Full guide: pWPS vs WPQR vs WPS."
           }
         }
       ]
