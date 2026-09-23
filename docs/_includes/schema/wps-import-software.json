@@ -62,7 +62,7 @@
           "name": "Is this OCR, or does it actually read the fields?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "It reads the fields. A digital PDF is reconstructed grid-line by grid-line and read cell by cell; an Excel WPS is parsed straight from the workbook. Process, materials, positions, ranges and every pass parameter land as typed, searchable values you can filter and export — not a flat scan you still have to read by eye."
+            "text": "No — it reads the fields. A PDF exported from Word, Excel or your document system is reconstructed grid-line by grid-line and read cell by cell; an Excel WPS is parsed straight from the workbook. Process, materials, positions, ranges and every pass parameter land as typed, searchable values you can filter and export. Because it reads the document itself rather than guessing from pixels, it needs that original file: a scanned or photographed WPS isn't read. Quick check — if you can select the text in the PDF, it will import. WPS are written on a computer, so the source file almost always exists; import that rather than a scan of a printout."
           }
         },
         {
