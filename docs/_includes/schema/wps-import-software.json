@@ -67,6 +67,14 @@
         },
         {
           "@type": "Question",
+          "name": "Does it use AI to extract the data?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not the generative kind — deliberately. The parser is a deterministic extraction engine: it rebuilds the form's structure and matches your labels using rules tuned to your template. The same file always gives the same result, it can't invent a value that isn't on the page, and your documents are never sent to an AI model. Anything it isn't sure of is flagged for a person to review."
+          }
+        },
+        {
+          "@type": "Question",
           "name": "What if my WPS aren't in English?",
           "acceptedAnswer": {
             "@type": "Answer",
