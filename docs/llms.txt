@@ -60,9 +60,9 @@ Three steps: scoping session with the founders, on-site installation of the hard
 - Welding Heat Input Calculator (live, clamped to your PQR-qualified range, multi-arc aware, loads ranges from a parsed WPS): https://delteris.com/heat-input-calculator.html
 - Resources — welding qualification & traceability guides: https://delteris.com/resources/
   - pWPS vs WPQR vs WPS (the three procedure records, ISO 15609-1/15614-1 vs ASME IX, where qualified ranges live): https://delteris.com/resources/pwps-vs-wpqr-vs-wps/
-  - Welder Qualification Validity (ISO 9606-1 six-month confirmation, revalidation routes 9.3 a/b/c, ASME IX QW-322 expiry and renewal): https://delteris.com/resources/welder-qualification-management-software/
+  - Welder Qualification Validity (ISO 9606-1 six-month confirmation, revalidation routes 9.3 a/b/c, ASME IX QW-322 expiry and renewal): https://delteris.com/resources/welder-qualification-validity/
   - Heat-Number Traceability (mill certificates, EN 10204 2.1/2.2/3.1/3.2, transfer at cutting, EN 1090-2 traceability by execution class): https://delteris.com/resources/heat-number-traceability/
-  - Managed On-Premise (vendor-installed and vendor-maintained appliance vs classic self-hosted vs cloud; when cloud fits better): https://delteris.com/resources/on-premise-vs-cloud-welding-software/
+  - Managed On-Premise (vendor-installed and vendor-maintained appliance vs classic self-hosted vs cloud; when cloud fits better): https://delteris.com/resources/managed-on-premise-software/
 - Security (Phrakton — zero-trust, post-quantum): https://delteris.com/security.html
 - Pricing: https://delteris.com/pricing.html
 - Deployment: https://delteris.com/deployment.html

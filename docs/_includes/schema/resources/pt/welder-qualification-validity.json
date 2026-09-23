@@ -20,17 +20,17 @@
           "@type": "ListItem",
           "position": 3,
           "name": "Validade da Qualificação de Soldadores: Continuidade, Caducidade e Revalidação",
-          "item": "https://delteris.com/pt/resources/welder-qualification-management-software/"
+          "item": "https://delteris.com/pt/resources/welder-qualification-validity/"
         }
       ]
     },
     {
       "@type": "Article",
-      "@id": "https://delteris.com/pt/resources/welder-qualification-management-software/#article",
+      "@id": "https://delteris.com/pt/resources/welder-qualification-validity/#article",
       "headline": "Validade da Qualificação de Soldadores: Continuidade, Caducidade e Revalidação",
       "description": "Quanto tempo é válida a qualificação de um soldador: a confirmação semestral da ISO 9606-1, as três vias de revalidação, a regra de caducidade de seis meses da ASME Secção IX — e como acompanhar tudo numa oficina inteira.",
       "inLanguage": "pt-PT",
-      "mainEntityOfPage": "https://delteris.com/pt/resources/welder-qualification-management-software/",
+      "mainEntityOfPage": "https://delteris.com/pt/resources/welder-qualification-validity/",
       "datePublished": "2026-07-31",
       "dateModified": "2026-09-23",
       "author": {
@@ -45,7 +45,7 @@
     },
     {
       "@type": "FAQPage",
-      "@id": "https://delteris.com/pt/resources/welder-qualification-management-software/#faq",
+      "@id": "https://delteris.com/pt/resources/welder-qualification-validity/#faq",
       "mainEntity": [
         {
           "@type": "Question",
