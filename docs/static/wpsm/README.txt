@@ -10,6 +10,10 @@ Present (live on the site) — every slot is filled:
   register.webp          library.webp         pqr-chain.webp
   heat-input.webp        preview.webp         security-audit.webp
   security-users.webp    security-settings.webp
+  quals-grid.webp        quals-warnings.webp  quals-record.webp
+
+quals-warnings.webp is a 1600x334 crop of the Needs-attention panel from the
+overview capture (not 16:9) — its include passes w="1600" h="334".
 
 Each framed <img> points at /static/wpsm/<name>.webp and shows a dashed
 placeholder until the matching file exists here. For the raw captures, the
