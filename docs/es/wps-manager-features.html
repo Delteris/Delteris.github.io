@@ -2,7 +2,7 @@
 layout: default
 lang: es
 permalink: /es/wps-manager-features.html
-title: "Funcionalidades del Atlas — Importar, Revisar, Biblioteca, Vista Previa | Elenchon Atlas"
+title: "Funcionalidades del Atlas — Gestión de WPS y Cualificación de Soldadores | Elenchon Atlas"
 description: "Cada capacidad del Elenchon Atlas, mostrada en las pantallas reales: importación nativa de Excel y PDF, ediciones revisadas por humanos, un registro versionado con exportación en un clic, una biblioteca que lee cada campo, la cadena WPQR/pWPS asociada, un asistente de aporte térmico, y un registro de actividad completo con acceso por funciones. De Delteris."
 og_title: "Funcionalidades del Atlas — Vea la Aplicación en Acción"
 og_description: "Importar, revisar, guardar, buscar, verificar y exportar — todo el ciclo del Atlas, una capacidad a la vez, en las pantallas reales de la aplicación."
@@ -19,7 +19,7 @@ alt_url: "/wps-manager-features.html"
         <div class="hero-content">
             <span class="hero-eyebrow">Elenchon Atlas · Funcionalidades</span>
             <h1 class="text-glow">Cada Capacidad, en las Pantallas Reales.</h1>
-            <p class="hero-sub">Importar, revisar, guardar, buscar, verificar y exportar — todo el ciclo que su registro de WPS necesita, mostrado en la aplicación en lugar de descrito. Este es el conjunto completo de funcionalidades detrás del <a href="/es/wps-management-software.html">Elenchon Atlas</a>.</p>
+            <p class="hero-sub">Las dos mitades del producto, mostradas en la aplicación en lugar de descritas: importar, revisar, buscar y exportar su registro de WPS — y seguir las cualificaciones de cada soldador a su lado. Este es el conjunto completo de funcionalidades detrás del <a href="/es/wps-management-software.html">Elenchon Atlas</a>.</p>
             <div class="cta-group">
                 <a href="/es/wps-manager-contact.html" class="btn btn-primary">Hable con los Fundadores</a>
                 <a href="/es/wps-management-software.html#pricing" class="btn btn-secondary">Ver Precios</a>
@@ -184,6 +184,71 @@ alt_url: "/wps-manager-features.html"
             cap="Valores de arco tomados de un WPS: raíz, relleno y peineta calculados en vivo y dentro de la gama que el PQR cualificó." %}
     </section>
 
+    <!-- CUALIFICACIÓN DE SOLDADORES -->
+    <section class="page-section container" id="qualification-grid">
+        <div class="section-header">
+            <span class="eyebrow">Cualificación de Soldadores · La Cuadrícula</span>
+            <h2>Cada Soldador, Cada Proceso, Cada Fecha</h2>
+            <p class="subtitle">La otra mitad del Atlas: una cuadrícula filtrable de quién está cualificado para qué, con el color de lo que vence a continuación. <a href="/es/welder-qualification-management-software.html">Ver la cualificación de soldadores en detalle &rarr;</a></p>
+        </div>
+        <div class="glass-card feature-block feature-block-solo" id="qualification-grid-detail">
+            <span class="feature-index">07</span>
+            <ul class="feature-list">
+                <li><strong>Soldadores en filas, procesos en columnas:</strong> cada celda es la cualificación de ese soldador en ese proceso que vence antes, coloreada de verde a rojo, para que toda la plantilla sea su vista de planificación.</li>
+                <li><strong>Filtre por todo lo registrado:</strong> soldador, proceso, norma, lo que está por caducar — incluso valores dentro de una cualificación, como si se registró la prueba de conocimientos.</li>
+                <li><strong>Abra un soldador:</strong> cada registro activo y todo el historial conservado, nada sobrescrito cuando una cualificación se renueva o se sustituye.</li>
+                <li><strong>Construido en torno a sus normas:</strong> variables ISO 9606, ASME IX y AWS predefinidas, campos personalizados donde los necesite, y ambos modelos de reverificación, ISO y ASME.</li>
+            </ul>
+        </div>
+        {% include app-shot.html
+            name="quals-grid" wide="true" w="1600" h="900"
+            alt="Tablero de cualificaciones: ocho soldadores en filas frente a los procesos 111, 121, 135, 136, 138 y 141, cada cualificación coloreada según su estado — al día, vence en un mes, en dos semanas o esta semana, o caducada — con una leyenda de colores, la opción Mostrar norma y un botón Filtrar encima"
+            cap="El tablero de cualificaciones: soldadores frente a los procesos que poseen, cada celda coloreada por lo que vence antes — de al día a caducada — y filtrable hasta un único proceso o norma." %}
+    </section>
+
+    <section class="page-section container" id="qualification-warnings">
+        <div class="section-header">
+            <span class="eyebrow">Dos Relojes &amp; Avisos</span>
+            <h2>Una Caducidad Que Ve Llegar</h2>
+            <p class="subtitle">Caducidad y continuidad seguidas como dos fechas distintas, avisadas con antelación en el panel y — si lo activa — por email.</p>
+        </div>
+        <div class="glass-card feature-block feature-block-solo" id="qualification-warnings-detail">
+            <span class="feature-index">08</span>
+            <ul class="feature-list">
+                <li><strong>Dos relojes, vigilados por separado:</strong> una fecha de caducidad y una fecha de continuidad, cada una con sus niveles de aviso — un mes antes, dos semanas, la misma semana — con la antelación que usted defina.</li>
+                <li><strong>El panel señala lo que vence:</strong> un recuento de las cualificaciones que entran en un periodo de aviso, y un clic para filtrar la cuadrícula exactamente a quién.</li>
+                <li><strong>Recordatorios por email, opcionales:</strong> añada hasta diez destinatarios — el responsable de calidad, un supervisor, quien planifica el taller — para recibir el aviso en su bandeja de entrada antes de cada plazo.</li>
+                <li><strong>Registra y avisa:</strong> Atlas muestra las fechas y los hechos; si una cualificación es válida para un trabajo sigue siendo una decisión humana.</li>
+            </ul>
+        </div>
+        {% include app-shot.html
+            name="quals-warnings" wide="true" w="1600" h="334"
+            alt="El panel Necesita atención en el resumen: una cualificación ha caducado y necesita una recuperación o una caducidad firmada, una cualificación de soldador caduca en un mes, y tres soldadores necesitan reverificación — uno esta semana, uno en dos semanas, uno en un mes — cada aviso con enlace a las cualificaciones o al tablero"
+            cap="Avisos en el panel: una cualificación caducada, lo que está por caducar y quién necesita reverificación — separado por la cercanía del plazo, a un clic del tablero." %}
+    </section>
+
+    <section class="page-section container" id="qualification-record">
+        <div class="section-header">
+            <span class="eyebrow">El Registro</span>
+            <h2>Recualificación Firmada, y el Certificado al Lado</h2>
+            <p class="subtitle">Renueve una cualificación con una firma atribuida, y mantenga el certificado en el registro — visible junto a cualquier otro archivo.</p>
+        </div>
+        <div class="glass-card feature-block feature-block-solo" id="qualification-record-detail">
+            <span class="feature-index">09</span>
+            <ul class="feature-list">
+                <li><strong>Recualificación, firmada y fechada:</strong> renueve la continuidad con una firma por contraseña — un sello inmutable: validado en esta fecha, por esta persona, con sus notas.</li>
+                <li><strong>El certificado, guardado con el registro:</strong> adjunte un escaneo, PDF o imagen y véalo en la cualificación a la que pertenece.</li>
+                <li><strong>Lado a lado, a su elección:</strong> abra dos archivos cualesquiera juntos — un WPQ contra su WPQR, un certificado contra un WPS — eligiendo cada lado.</li>
+                <li><strong>Historial completo conservado:</strong> cada cualificación que un soldador ha tenido queda en archivo, para que el pasado nunca se pierda cuando se renueva el presente.</li>
+            </ul>
+            <p class="feature-out"><a href="/es/welder-qualification-management-software.html">Ver la cualificación de soldadores en detalle &rarr;</a></p>
+        </div>
+        {% include app-shot.html
+            name="quals-record" wide="true" w="1600" h="900"
+            alt="Página de cualificaciones: una lista de soldadores ordenada por el plazo más próximo con indicadores de estado, y el registro de Simon Lowe (A1004) con dos cualificaciones ISO 9606-1 — el proceso 111 con la continuidad caducada el 13/09/2026 y las acciones Recuperar y Confirmar caducidad, y el proceso 135 al día — cada una con sus fechas de caducidad y de continuidad y una confirmación firmada y fechada que indica el informe de END y el registro de soldadura en que se basó"
+            cap="El registro de un soldador: las fechas de caducidad y de continuidad de cada cualificación, la confirmación firmada y fechada con la evidencia que la respalda, y la siguiente acción — recuperar, confirmar o retirar — a un clic." %}
+    </section>
+
     <!-- SEGURIDAD -->
     <!-- TEASER DE SEGURIDAD -->
     <section class="page-section container" id="security">
@@ -191,7 +256,7 @@ alt_url: "/wps-manager-features.html"
             <div>
                 <span class="eyebrow">Construido a la Manera Delteris</span>
                 <h2 class="text-glow">Un Rastro de Auditoría Completo, y Acceso Que Controla</h2>
-                <p class="security-intro">Sus procedimientos son propietarios y su registro es prueba de auditoría. Cada cambio se atribuye y se fecha, el acceso es suyo para conceder hasta un puesto de solo lectura para el inspector, y sus datos son de inquilino único, alojados en la UE y cifrados — la misma disciplina de la plataforma Elenchon en local.</p>
+                <p class="security-intro">Sus procedimientos son propietarios y los registros de cualificación importan. Cada cambio se atribuye y se fecha, el acceso es suyo para conceder hasta un puesto de solo lectura para el inspector, y sus datos son de inquilino único, alojados en la UE y cifrados — la misma disciplina de la plataforma Elenchon en local.</p>
                 <div class="cta-group">
                     <a href="wps-manager-security.html" class="btn btn-secondary">Ver la Seguridad del Atlas &rarr;</a>
                 </div>
@@ -232,7 +297,7 @@ alt_url: "/wps-manager-features.html"
             <p>La incorporación está guiada directamente por los fundadores — envíenos algunos de sus documentos WPS, confirmamos que el parser lee su plantilla, y entra en funcionamiento con un registro comprobado en su propia documentación. Todo tratado con confidencialidad.</p>
             <div class="cta-group">
                 <a href="/es/wps-manager-contact.html" class="btn btn-primary">Hable con los Fundadores</a>
-                <a href="mailto:contact@delteris.com?subject=Elenchon%20WPS%20Manager%20%E2%80%94%20Verificaci%C3%B3n%20de%20Lectura%20de%20Nuestra%20WPS" class="btn btn-secondary">Envíenos una WPS — Véala Analizada</a>
+                <a href="mailto:contact@delteris.com?subject=Elenchon%20Atlas%20%E2%80%94%20Verificaci%C3%B3n%20de%20Lectura%20de%20Nuestra%20WPS" class="btn btn-secondary">Envíenos una WPS — Véala Analizada</a>
             </div>
             <p class="hero-urgency u-gap-top">Un precio fijo, soporte directo de los fundadores, nada escondido — trata con quien lo construyó.</p>
         </div>
