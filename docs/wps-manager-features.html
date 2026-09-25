@@ -38,8 +38,8 @@ alt_url: "/pt/wps-manager-features.html"
         </div>
         {% include app-shot.html
             name="overview" wide="true" w="1600" h="900"
-            alt="Elenchon overview dashboard: a Needs Attention panel with 29 WPS fields to review, register up to date, and At a Glance tiles showing 26 WPS, 9 pWPS, 11 WPQR, 26 WPS with a WPQR and 7 team members"
-            cap="The overview: fields flagged for a check, the register's status, and the full library count — WPS, pWPS and WPQR — in one place." %}
+            alt="Elenchon overview dashboard: a Needs Attention panel with one lapsed qualification, 30 WPS fields to review, register up to date, one welder qualification expiring soon and three welders due for reverification, above At a Glance tiles showing 26 WPS, 9 pWPS, 11 WPQR, 26 WPS with a WPQR, 8 workers holding 11 qualifications and 7 team members"
+            cap="The overview: fields flagged for a check, the register's status, what's due on the qualification side, and the full count — WPS, pWPS, WPQR and welders — in one place." %}
         <p class="story-note">The <strong>Needs attention</strong> panel surfaces the parsed values read with low confidence and links straight to them; everything the app is confident about stays out of your way.</p>
     </section>
 
@@ -100,7 +100,7 @@ alt_url: "/pt/wps-manager-features.html"
         <div class="glass-card feature-block feature-block-solo" id="registers-detail">
             <span class="feature-index">03</span>
             <ul class="feature-list">
-                <li><strong>Visualised, not just stored:</strong> Your master sheet opens as a fast, filterable grid — here, 36 rows across 28 columns — instead of a spreadsheet you scroll by hand.</li>
+                <li><strong>Visualised, not just stored:</strong> Your master sheet opens as a fast, filterable grid — here, 27 rows across 28 columns — instead of a spreadsheet you scroll by hand.</li>
                 <li><strong>Every version kept:</strong> Each approved change-set makes a new version. Roll back to any snapshot; the newest is always protected.</li>
                 <li><strong>Export on demand:</strong> Produce a clean Excel workbook whenever you need it — or an export bundle (.zip) with the register plus the folder of linked WPS files, so the paperwork travels with the sheet.</li>
                 <li><strong>Re-compute &amp; sync:</strong> Pull the latest values from the library into the register in one action, so the sheet never quietly drifts from the documents behind it.</li>
@@ -132,9 +132,9 @@ alt_url: "/pt/wps-manager-features.html"
         </div>
         {% include app-shot.html
             name="library" wide="true" w="1600" h="900"
-            alt="Library detail for MER-pWPS-104: header fields including qualification standard ISO 15614-8, supporting PQR reference and base metal S275JR, a three-pass table (root, fill, cap) on process 138 with filler class, current, voltage, travel speed and heat input, and a base-material parts table below"
-            cap="A document read to the field: the header block, every pass — root to cap — with its parameters and heat-input values, and the base-material parts, all structured and searchable." %}
-        <p class="story-note">MER-pWPS-104, read from an Excel workbook: ISO&nbsp;15614-8, S275JR, three passes on process 138, each with its own current, voltage and travel-speed window — and the base-material parts read into their own table.</p>
+            alt="Library detail for MER-pWPS-101: twelve header fields including standard ISO 15614-1, PQR reference 24_MER_10342_135-19, a BW double-V joint, base metal 321 / 1.4541, thickness and diameter ranges and M21 shielding gas, above a three-pass table (root, fill, cap) on process 135 with G3Si1 filler, polarity, current, voltage, wire feed, travel speed and computed heat input flagged for verification"
+            cap="A document read to the field: the header block and every pass — root to cap — with its parameters and heat-input values, all structured and searchable." %}
+        <p class="story-note">MER-pWPS-101, read from an Excel workbook: ISO&nbsp;15614-1, a 321 stainless double-V, three passes on process 135, each with its own current, voltage, wire-feed and travel-speed window. The heat input was left blank on the form, so the app computed it — and shows it in amber behind a single <strong>Verify computed heat input</strong> check until someone confirms it.</p>
     </section>
 
     <!-- ===================== LINKED CHAIN ===================== -->
@@ -200,8 +200,8 @@ alt_url: "/pt/wps-manager-features.html"
         </div>
         {% include app-shot.html
             name="quals-grid" wide="true" w="1600" h="900"
-            alt="Welder qualification grid: welders in rows, welding processes in columns, each cell colour-coded to the soonest-due qualification for that welder and process, with filter controls above"
-            cap="The qualification grid: welders against the processes they hold, each cell coloured by what’s due soonest — filterable down to a single process or standard." %}
+            alt="Qualification board: eight welders in rows against processes 111, 121, 135, 136, 138 and 141, each held qualification coloured by status — clear, due within a month, two weeks or this week, or expired — with a colour legend, a Show standard toggle and a Filter button above"
+            cap="The qualification board: welders against the processes they hold, each cell coloured by what’s due soonest — from clear through to expired — and filterable down to a single process or standard." %}
     </section>
 
     <section class="page-section container" id="qualification-warnings">
@@ -220,9 +220,9 @@ alt_url: "/pt/wps-manager-features.html"
             </ul>
         </div>
         {% include app-shot.html
-            name="quals-warnings" wide="true" w="1600" h="900"
-            alt="Welder qualification dashboard warnings: a panel showing how many qualifications are expiring soon, colour-coded by proximity, with email reminder recipients configured"
-            cap="Warnings on the dashboard: what’s expiring soon, colour-coded by how close, with opt-in email reminders to a recipient list." %}
+            name="quals-warnings" wide="true" w="1600" h="334"
+            alt="The Needs Attention panel on the overview: one qualification has lapsed and needs a catch-up or signed expiration, one welder qualification expires within a month, and three welders need reverification — one this week, one within two weeks, one within a month — each linking to the qualifications page or the board"
+            cap="Warnings on the dashboard: a lapsed qualification, what’s expiring soon, and who’s due for reverification — broken down by how close, one click from the board." %}
     </section>
 
     <section class="page-section container" id="qualification-record">
@@ -243,8 +243,8 @@ alt_url: "/pt/wps-manager-features.html"
         </div>
         {% include app-shot.html
             name="quals-record" wide="true" w="1600" h="900"
-            alt="A welder qualification record with a signed requalification stamp showing date and name, the attached certificate viewable, and a side-by-side file viewer comparing two documents"
-            cap="A qualification record: the signed, dated requalification stamp, the attached certificate, and the side-by-side viewer set to compare any two files." %}
+            alt="Qualifications page: a welder list sorted by soonest due with status dots, and the record for Simon Lowe (A1004) showing two ISO 9606-1 qualifications — process 111 with continuity lapsed on 13/09/2026 and Catch up and Confirm expiration actions, and process 135 in date — each with expiry and continuity dates and a signed, dated confirmation naming the NDT report and job weld log it was based on"
+            cap="A welder’s record: each qualification’s expiry and continuity dates, the signed and dated confirmation with the evidence behind it, and the next action — catch up, confirm or retire — one click away." %}
     </section>
 
     <!-- ===================== SECURITY ===================== -->
