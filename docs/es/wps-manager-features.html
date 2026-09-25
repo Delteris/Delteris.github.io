@@ -40,7 +40,7 @@ alt_url: "/wps-manager-features.html"
         </div>
         {% include app-shot.html
             name="overview" wide="true" w="1600" h="900"
-            alt="Panel de resumen del Elenchon: un panel Necesita atención con 29 campos de WPS que revisar, registro actualizado, y mosaicos con 26 WPS, 9 pWPS, 11 WPQR, 26 WPS con WPQR y 7 miembros de equipo"
+            alt="Panel de resumen del Elenchon: un panel Necesita atención con una cualificación caducada, 30 campos de WPS que revisar, registro actualizado, una cualificación de soldador por vencer y tres soldadores que necesitan reverificación, y mosaicos con 26 WPS, 9 pWPS, 11 WPQR, 26 WPS con WPQR, 8 soldadores con 11 cualificaciones y 7 miembros de equipo"
             cap="El resumen: campos señalados para verificación, el estado del registro, y el recuento completo de la biblioteca — WPS, pWPS y WPQR — en un solo lugar." %}
         <p class="story-note">El panel <strong>Necesita atención</strong> destaca los valores leídos con baja confianza y enlaza directamente a ellos; todo aquello de lo que la aplicación tiene certeza queda fuera de su camino.</p>
     </section>
@@ -102,7 +102,7 @@ alt_url: "/wps-manager-features.html"
         <div class="glass-card feature-block feature-block-solo" id="registers-detail">
             <span class="feature-index">03</span>
             <ul class="feature-list">
-                <li><strong>Visualizada, no solo guardada:</strong> Su hoja maestra abre como cuadrícula rápida y filtrable — aquí, 36 filas por 28 columnas — en lugar de una hoja que recorre a mano.</li>
+                <li><strong>Visualizada, no solo guardada:</strong> Su hoja maestra abre como cuadrícula rápida y filtrable — aquí, 27 filas por 28 columnas — en lugar de una hoja que recorre a mano.</li>
                 <li><strong>Cada versión guardada:</strong> Cada conjunto de cambios aprobado crea una nueva versión. Revierta a cualquier instantánea; la más reciente está siempre protegida.</li>
                 <li><strong>Exportación a demanda:</strong> Produzca una hoja Excel limpia cuando necesite — o un paquete de exportación (.zip) con el registro más la carpeta de ficheros WPS asociados, para que la documentación viaje con la hoja.</li>
                 <li><strong>Recalcular y sincronizar:</strong> Traiga los valores más recientes de la biblioteca al registro en una acción, para que la hoja nunca se desalinee de los documentos detrás de ella.</li>
@@ -134,9 +134,9 @@ alt_url: "/wps-manager-features.html"
         </div>
         {% include app-shot.html
             name="library" wide="true" w="1600" h="900"
-            alt="Detalle de la biblioteca para MER-pWPS-104: campos de cabecera incluyendo norma de cualificación ISO 15614-8, referencia del PQR de soporte y metal base S275JR, una tabla de tres pasadas (raíz, relleno, peineta) en el proceso 138 con clase de consumible, corriente, tensión, velocidad y aporte térmico, y una tabla de material base debajo"
-            cap="Un documento leído al campo: el bloque de cabecera, cada pasada — de la raíz a la peineta — con sus parámetros y valores de aporte térmico, y el material base, todo estructurado y buscable." %}
-        <p class="story-note">MER-pWPS-104, leído de una hoja Excel: ISO&nbsp;15614-8, S275JR, tres pasadas en el proceso 138, cada una con su ventana de corriente, tensión y velocidad — y el material base leído a su propia tabla.</p>
+            alt="Detalle de la biblioteca para MER-pWPS-101: doce campos de cabecera incluyendo la norma ISO 15614-1, la referencia de PQR 24_MER_10342_135-19, una junta BW en doble V, metal base 321 / 1.4541, rangos de espesor y diámetro y gas de protección M21, sobre una tabla de tres pasadas (raíz, relleno, peineta) en el proceso 135 con consumible G3Si1, polaridad, corriente, tensión, velocidad de hilo, velocidad de avance y aporte térmico calculado, señalado para verificación"
+            cap="Un documento leído al campo: el bloque de cabecera y cada pasada — de la raíz a la peineta — con sus parámetros y valores de aporte térmico, todo estructurado y buscable." %}
+        <p class="story-note">MER-pWPS-101, leído de una hoja Excel: ISO&nbsp;15614-1, un doble V en inoxidable 321, tres pasadas en el proceso 135, cada una con su ventana de corriente, tensión, velocidad de hilo y velocidad de avance. El aporte térmico venía en blanco en el formulario, así que la aplicación lo calculó — y lo muestra en ámbar tras una única comprobación <strong>Verificar aporte térmico calculado</strong> hasta que alguien lo confirme.</p>
     </section>
 
     <!-- CADENA -->
