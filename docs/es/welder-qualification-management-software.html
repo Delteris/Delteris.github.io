@@ -6,8 +6,9 @@ title: "Software de Gestión de Cualificación de Soldadores (Cloud) | Elenchon 
 description: "Software de gestión de cualificación de soldadores en la nube: haga seguimiento del WPQ de cada soldador en un solo lugar — caducidad y continuidad como dos relojes, una cuadrícula con código de colores, recualificación firmada y recordatorios por email antes de cualquier caducidad. Orientado a ISO 9606 y ASME IX. De Delteris."
 og_title: "Elenchon Atlas — Seguimiento de Cualificación de Soldadores (WPQ)"
 og_description: "Sepa quién está cualificado y vea cada caducidad llegar. Haga seguimiento de las cualificaciones de cada soldador por caducidad y continuidad, avisado en el panel y por email — parte de Elenchon Atlas, junto a su biblioteca de WPS."
-og_image: "/static/DelterisCrest.webp"
-og_image_alt: "Elenchon Atlas by Delteris — software de gestión de cualificación de soldadores en la nube"
+og_image: "/static/wpsm/quals-grid.webp"
+og_image_alt: "Elenchon Atlas — el tablero de cualificaciones: soldadores frente a procesos, cada celda coloreada por lo que vence antes"
+twitter_large: true
 schema: schema/welder-qualification-management-software.json
 en_url: "/welder-qualification-management-software.html"
 pt_url: "/pt/welder-qualification-management-software.html"
@@ -41,6 +42,13 @@ alt_url: "/welder-qualification-management-software.html"
             </ul>
             <p>Atlas registra y avisa — decidir si una cualificación es válida sigue siendo cosa suya.</p>
         </div>
+    </section>
+
+    <section class="page-section container u-tight-top" id="screenshot-hero">
+        {% include app-shot.html
+            name="quals-grid" wide="true" w="1600" h="900"
+            alt="Tablero de cualificaciones: ocho soldadores en filas frente a los procesos 111, 121, 135, 136, 138 y 141, cada cualificación coloreada según su estado — al día, vence en un mes, en dos semanas o esta semana, o caducada — con una leyenda de colores, la opción Mostrar norma y un botón Filtrar encima"
+            cap="El tablero de cualificaciones: soldadores frente a los procesos que poseen, cada celda coloreada por lo que vence antes — de al día a caducada — y filtrable hasta un único proceso o norma." %}
     </section>
 
     <section class="page-section container" id="capabilities">
@@ -81,6 +89,37 @@ alt_url: "/welder-qualification-management-software.html"
                 <p>Cada cualificación que un soldador haya tenido alguna vez queda archivada. Recualifique o sustituya, y el registro pasado se conserva — un historial completo por soldador.</p>
             </div>
         </div>
+    </section>
+
+    <section class="page-section container" id="screens">
+        <div class="section-header">
+            <span class="eyebrow">En las Pantallas Reales</span>
+            <h2>La Plantilla, los Avisos, el Registro</h2>
+            <p class="subtitle">Cada capacidad de arriba, mostrada en la aplicación.</p>
+        </div>
+        {% include app-shot.html
+            name="quals-filter" wide="true" w="1600" h="900"
+            alt="El tablero de cualificaciones con el panel de filtros abierto — filtrando por proceso, norma y ventana de caducidad, con la cuadrícula acotada a los soldadores correspondientes"
+            cap="El tablero, filtrado: acote la plantilla por soldador, proceso, norma o lo que vence — hasta exactamente quién necesita planificación."
+            ph="Tablero (o Cualificaciones) — panel Filtrar abierto con un filtro aplicado (p. ej. proceso 135, vence en un mes), cuadrícula acotada." %}
+        {% include app-shot.html
+            name="quals-warnings" wide="true" w="1600" h="334"
+            alt="El panel Necesita atención en el resumen: una cualificación ha caducado y necesita una recuperación o una caducidad firmada, una cualificación de soldador caduca en un mes, y tres soldadores necesitan reverificación — uno esta semana, uno en dos semanas, uno en un mes — cada aviso con enlace a las cualificaciones o al tablero"
+            cap="Avisos en el panel: una cualificación caducada, lo que está por caducar y quién necesita reverificación — separado por la cercanía del plazo, a un clic del tablero." %}
+        {% include app-shot.html
+            name="quals-record" wide="true" w="1600" h="900"
+            alt="Página de cualificaciones: una lista de soldadores ordenada por el plazo más próximo con indicadores de estado, y el registro de Simon Lowe (A1004) con dos cualificaciones ISO 9606-1 — el proceso 111 con la continuidad caducada el 13/09/2026 y las acciones Recuperar y Confirmar caducidad, y el proceso 135 al día — cada una con sus fechas de caducidad y de continuidad y una confirmación firmada y fechada que indica el informe de END y el registro de soldadura en que se basó"
+            cap="El registro de un soldador: las fechas de caducidad y de continuidad de cada cualificación, la confirmación firmada y fechada con la evidencia que la respalda, y la siguiente acción — recuperar, confirmar o retirar — a un clic." %}
+        {% include app-shot.html
+            name="quals-certificate" wide="true" w="1600" h="900"
+            alt="Un registro de cualificación de soldador con el certificado adjunto — un certificado ISO 9606-1 escaneado abierto en el visor junto a las fechas de caducidad y de continuidad de la cualificación"
+            cap="El certificado guardado en el registro: adjunte un escaneo, PDF o imagen y ábralo directamente en la cualificación a la que pertenece."
+            ph="Cualificaciones — la tarjeta de cualificación de un soldador con un certificado adjunto (no “No certificate attached”), con el certificado abierto en el visor." %}
+        {% include app-shot.html
+            name="compare" wide="true" w="1600" h="900"
+            alt="La vista Comparar con dos archivos abiertos lado a lado — el certificado WPQ de un soldador a la izquierda y el WPQR frente al que se cualificó a la derecha"
+            cap="Comparar: dos archivos cualesquiera lado a lado, cada lado elegido por usted — aquí un certificado WPQ contra su WPQR."
+            ph="Pestaña Comparar — dos archivos lado a lado: un certificado WPQ en un lado, su WPQR en el otro." %}
     </section>
 
     <section class="page-section container" id="standards">

@@ -4,8 +4,9 @@ title: "Welder Qualification Management Software (Cloud) | Elenchon Atlas"
 description: "Cloud welder qualification management software: track every welder's WPQ in one place — expiry and continuity as two clocks, a colour-coded roster, signed requalification, and email reminders before anything lapses. ISO 9606 and ASME IX oriented. From Delteris."
 og_title: "Elenchon Atlas — Welder Qualification (WPQ) Tracking"
 og_description: "Know who's qualified and see every lapse coming. Track each welder's qualifications by expiry and continuity, warned on your dashboard and by email — part of Elenchon Atlas, alongside your WPS library."
-og_image: "/static/DelterisCrest.webp"
-og_image_alt: "Elenchon Atlas by Delteris — cloud welder qualification management software"
+og_image: "/static/wpsm/quals-grid.webp"
+og_image_alt: "Elenchon Atlas — the qualification board: welders against processes, each cell coloured by what’s due soonest"
+twitter_large: true
 schema: schema/welder-qualification-management-software.json
 en_url: "/welder-qualification-management-software.html"
 pt_url: "/pt/welder-qualification-management-software.html"
@@ -39,6 +40,13 @@ alt_url: "/pt/welder-qualification-management-software.html"
             </ul>
             <p>Atlas records and warns — whether a qualification is valid stays your call.</p>
         </div>
+    </section>
+
+    <section class="page-section container u-tight-top" id="screenshot-hero">
+        {% include app-shot.html
+            name="quals-grid" wide="true" w="1600" h="900"
+            alt="Qualification board: eight welders in rows against processes 111, 121, 135, 136, 138 and 141, each held qualification coloured by status — clear, due within a month, two weeks or this week, or expired — with a colour legend, a Show standard toggle and a Filter button above"
+            cap="The qualification board: welders against the processes they hold, each cell coloured by what’s due soonest — from clear through to expired — and filterable down to a single process or standard." %}
     </section>
 
     <section class="page-section container" id="capabilities">
@@ -79,6 +87,37 @@ alt_url: "/pt/welder-qualification-management-software.html"
                 <p>Every qualification a welder has ever held stays on file. Requalify or supersede, and the past record is kept — a full history per welder.</p>
             </div>
         </div>
+    </section>
+
+    <section class="page-section container" id="screens">
+        <div class="section-header">
+            <span class="eyebrow">On the Real Screens</span>
+            <h2>The Roster, the Warnings, the Record</h2>
+            <p class="subtitle">Every capability above, shown in the app.</p>
+        </div>
+        {% include app-shot.html
+            name="quals-filter" wide="true" w="1600" h="900"
+            alt="The qualification board with the filter panel open — filtering by process, standard and expiry window, the grid narrowed to the matching welders"
+            cap="The board, filtered: narrow the roster by welder, process, standard or what’s due — down to exactly who needs planning."
+            ph="Board (or Qualifications) — Filter panel open with a filter applied (e.g. process 135, due within a month), grid narrowed." %}
+        {% include app-shot.html
+            name="quals-warnings" wide="true" w="1600" h="334"
+            alt="The Needs Attention panel on the overview: one qualification has lapsed and needs a catch-up or signed expiration, one welder qualification expires within a month, and three welders need reverification — one this week, one within two weeks, one within a month — each linking to the qualifications page or the board"
+            cap="Warnings on the dashboard: a lapsed qualification, what’s expiring soon, and who’s due for reverification — broken down by how close, one click from the board." %}
+        {% include app-shot.html
+            name="quals-record" wide="true" w="1600" h="900"
+            alt="Qualifications page: a welder list sorted by soonest due with status dots, and the record for Simon Lowe (A1004) showing two ISO 9606-1 qualifications — process 111 with continuity lapsed on 13/09/2026 and Catch up and Confirm expiration actions, and process 135 in date — each with expiry and continuity dates and a signed, dated confirmation naming the NDT report and job weld log it was based on"
+            cap="A welder’s record: each qualification’s expiry and continuity dates, the signed and dated confirmation with the evidence behind it, and the next action — catch up, confirm or retire — one click away." %}
+        {% include app-shot.html
+            name="quals-certificate" wide="true" w="1600" h="900"
+            alt="A welder qualification record with the certificate attached — a scanned ISO 9606-1 certificate open in the viewer beside the qualification’s expiry and continuity dates"
+            cap="The certificate kept on the record: attach a scan, PDF or image and open it right on the qualification it belongs to."
+            ph="Qualifications — a welder’s qualification card with a certificate attached (not “No certificate attached”), the certificate open in the viewer." %}
+        {% include app-shot.html
+            name="compare" wide="true" w="1600" h="900"
+            alt="The Compare view with two files open side by side — a welder’s WPQ certificate on the left and the WPQR it was qualified against on the right"
+            cap="Compare: any two files side by side, each side picked yourself — here a WPQ certificate against its WPQR."
+            ph="Compare tab — two files side by side: a WPQ certificate on one side, its WPQR on the other." %}
     </section>
 
     <section class="page-section container" id="standards">
