@@ -3431,42 +3431,11 @@ button.app-figure-frame:focus-visible .app-figure-zoom-hint {
     line-height: 1.55;
     margin: 0;
 }
-.feature-teaser::after {
-    content: "→";
-    position: absolute;
-    top: 1.5rem;
-    right: 1.5rem;
-    color: var(--accent-blue);
-    opacity: 0;
-    transform: translateX(-4px);
-    transition: opacity 0.18s ease, transform 0.18s ease;
-}
 .feature-teaser:hover,
 .feature-teaser:focus-visible {
     transform: translateY(-3px);
     border-color: rgba(59, 130, 246, 0.55);
     box-shadow: 0 20px 44px -26px rgba(0, 0, 0, 0.7);
-}
-.feature-teaser:hover::after,
-.feature-teaser:focus-visible::after {
-    opacity: 1;
-    transform: translateX(0);
-}
-/* On touch devices there's no hover to reveal the arrow, so the whole card
-   would look like plain text rather than a link. Show the arrow permanently
-   wherever the primary pointer can't hover (phones, most tablets). Because it
-   is always visible here, drop it out of the top-right corner (where it
-   overlaps the index chip and heading) and let it sit at the bottom-right in
-   normal flow — the card is a flex column, so align-self pushes it to the
-   right edge under the copy. */
-@media (hover: none) {
-    .feature-teaser::after {
-        opacity: 1;
-        position: static;
-        align-self: flex-end;
-        margin-top: 1.1rem;
-        transform: none;
-    }
 }
 
 /* Shorter hero for secondary pages (e.g. the features tour) */
