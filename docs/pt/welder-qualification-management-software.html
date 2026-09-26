@@ -6,8 +6,9 @@ title: "Software de Gestão de Qualificação de Soldadores (Cloud) | Elenchon A
 description: "Software de gestão de qualificação de soldadores na cloud: acompanhe o WPQ de cada soldador num só lugar — validade e continuidade como dois relógios, uma grelha com código de cores, requalificação assinada e lembretes por email antes de qualquer expiração. Orientado a ISO 9606 e ASME IX. Da Delteris."
 og_title: "Elenchon Atlas — Acompanhamento de Qualificação de Soldadores (WPQ)"
 og_description: "Saiba quem está qualificado e veja cada expiração a chegar. Acompanhe as qualificações de cada soldador por validade e continuidade, avisado no painel e por email — parte do Elenchon Atlas, a par da sua biblioteca de WPS."
-og_image: "/static/DelterisCrest.webp"
-og_image_alt: "Elenchon Atlas by Delteris — software de gestão de qualificação de soldadores na cloud"
+og_image: "/static/wpsm/quals-grid.webp"
+og_image_alt: "Elenchon Atlas — o quadro de qualificações: soldadores contra processos, cada célula colorida pelo que vence primeiro"
+twitter_large: true
 schema: schema/welder-qualification-management-software.json
 en_url: "/welder-qualification-management-software.html"
 pt_url: "/pt/welder-qualification-management-software.html"
@@ -41,6 +42,13 @@ alt_url: "/welder-qualification-management-software.html"
             </ul>
             <p>O Atlas regista e avisa — decidir se uma qualificação é válida continua a ser consigo.</p>
         </div>
+    </section>
+
+    <section class="page-section container u-tight-top" id="screenshot-hero">
+        {% include app-shot.html
+            name="quals-grid" wide="true" w="1600" h="900"
+            alt="Quadro de qualificações: oito soldadores nas linhas contra os processos 111, 121, 135, 136, 138 e 141, cada qualificação colorida pelo estado — em dia, a vencer dentro de um mês, duas semanas ou esta semana, ou expirada — com uma legenda de cores, a opção Mostrar norma e um botão Filtrar por cima"
+            cap="O quadro de qualificações: soldadores contra os processos que detêm, cada célula colorida pelo que vence primeiro — de em dia a expirada — e filtrável até um único processo ou norma." %}
     </section>
 
     <section class="page-section container" id="capabilities">
@@ -81,6 +89,37 @@ alt_url: "/welder-qualification-management-software.html"
                 <p>Cada qualificação que um soldador alguma vez teve fica em arquivo. Requalifique ou substitua, e o registo passado é guardado — um histórico completo por soldador.</p>
             </div>
         </div>
+    </section>
+
+    <section class="page-section container" id="screens">
+        <div class="section-header">
+            <span class="eyebrow">Nos Ecrãs Reais</span>
+            <h2>O Plantel, os Avisos, o Registo</h2>
+            <p class="subtitle">Cada capacidade acima, mostrada na aplicação.</p>
+        </div>
+        {% include app-shot.html
+            name="quals-filter" wide="true" w="1600" h="900"
+            alt="O quadro de qualificações com o painel de filtros aberto — a filtrar por processo, norma e janela de validade, com a grelha restringida aos soldadores correspondentes"
+            cap="O quadro, filtrado: restrinja o plantel por soldador, processo, norma ou o que vence — até exatamente quem precisa de planeamento."
+            ph="Quadro (ou Qualificações) — painel Filtrar aberto com um filtro aplicado (p. ex. processo 135, a vencer dentro de um mês), grelha restringida." %}
+        {% include app-shot.html
+            name="quals-warnings" wide="true" w="1600" h="334"
+            alt="O painel Precisa de atenção no resumo: uma qualificação caducou e precisa de recuperação ou de uma expiração assinada, uma qualificação de soldador expira dentro de um mês, e três soldadores precisam de reverificação — um esta semana, um dentro de duas semanas, um dentro de um mês — cada aviso com ligação para as qualificações ou para o quadro"
+            cap="Avisos no painel: uma qualificação caducada, o que está a expirar e quem precisa de reverificação — separado pela proximidade do prazo, a um clique do quadro." %}
+        {% include app-shot.html
+            name="quals-record" wide="true" w="1600" h="900"
+            alt="Página de qualificações: uma lista de soldadores ordenada pelo prazo mais próximo com indicadores de estado, e o registo de Simon Lowe (A1004) com duas qualificações ISO 9606-1 — o processo 111 com a continuidade caducada a 13/09/2026 e as ações Recuperar e Confirmar expiração, e o processo 135 em dia — cada uma com as datas de validade e de continuidade e uma confirmação assinada e datada que indica o relatório de END e o registo de soldadura em que se baseou"
+            cap="O registo de um soldador: as datas de validade e de continuidade de cada qualificação, a confirmação assinada e datada com a evidência que a suporta, e a próxima ação — recuperar, confirmar ou retirar — a um clique." %}
+        {% include app-shot.html
+            name="quals-certificate" wide="true" w="1600" h="900"
+            alt="Um registo de qualificação de soldador com o certificado anexado — um certificado ISO 9606-1 digitalizado aberto no visualizador ao lado das datas de validade e de continuidade da qualificação"
+            cap="O certificado guardado no registo: anexe uma digitalização, PDF ou imagem e abra-o diretamente na qualificação a que pertence."
+            ph="Qualificações — o cartão de qualificação de um soldador com um certificado anexado (não “No certificate attached”), com o certificado aberto no visualizador." %}
+        {% include app-shot.html
+            name="compare" wide="true" w="1600" h="900"
+            alt="A vista Comparar com dois ficheiros abertos lado a lado — o certificado WPQ de um soldador à esquerda e o WPQR contra o qual foi qualificado à direita"
+            cap="Comparar: quaisquer dois ficheiros lado a lado, cada lado escolhido por si — aqui um certificado WPQ contra o seu WPQR."
+            ph="Separador Comparar — dois ficheiros lado a lado: um certificado WPQ de um lado, o seu WPQR do outro." %}
     </section>
 
     <section class="page-section container" id="standards">
