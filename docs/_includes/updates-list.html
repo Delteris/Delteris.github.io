@@ -1,0 +1,20 @@
+{%- comment %} Cards for every update post of one product in the page's language, newest
+     first. Param: include.product. {%- endcomment %}
+{%- assign L = page.lang | default: 'en' -%}
+{%- if L == 'pt' %}{% assign months = 'janeiro,fevereiro,março,abril,maio,junho,julho,agosto,setembro,outubro,novembro,dezembro' | split: ',' %}{% assign t_of = ' de ' %}{% assign t_read = 'Ler →' %}{% assign t_none = 'Ainda não há publicações.' %}
+{%- elsif L == 'es' %}{% assign months = 'enero,febrero,marzo,abril,mayo,junio,julio,agosto,septiembre,octubre,noviembre,diciembre' | split: ',' %}{% assign t_of = ' de ' %}{% assign t_read = 'Leer →' %}{% assign t_none = 'Aún no hay publicaciones.' %}
+{%- else %}{% assign months = 'January,February,March,April,May,June,July,August,September,October,November,December' | split: ',' %}{% assign t_of = ' ' %}{% assign t_read = 'Read →' %}{% assign t_none = 'Nothing published yet.' %}{% endif -%}
+{%- assign posts = site.updates | where: 'update_product', include.product | where: 'lang', L | sort: 'date' | reverse -%}
+        <div class="updates-list">
+{%- for p in posts %}
+{%- assign mi = p.date | date: '%-m' | minus: 1 %}
+            <a href="{{ p.url }}" class="glass-card update-card">
+                <span class="update-card-meta"><time datetime="{{ p.date | date: '%Y-%m-%d' }}">{{ p.date | date: '%-d' }}{{ t_of }}{{ months[mi] }}{{ t_of }}{{ p.date | date: '%Y' }}</time>{% if p.version %} · <span class="update-version">{{ p.version }}</span>{% endif %}</span>
+                <h3>{{ p.heading | default: p.title }}</h3>
+                <p>{{ p.summary }}</p>
+                <span class="card-link">{{ t_read }}</span>
+            </a>
+{%- else %}
+            <p class="feature-note">{{ t_none }}</p>
+{%- endfor %}
+        </div>

@@ -1,0 +1,62 @@
+{%- comment %} Email signup for one product's updates. Param: include.product (atlas|elenchon).
+     Posts to the Brevo form set in _config.yml (newsletter.<product>.<lang>, English as
+     fallback). The honeypot field name `email_address_check` is Brevo's own: bots fill it,
+     Brevo drops those. Double opt-in (confirmation email) is configured on the Brevo form.
+     With no form URL set, it falls back to a mailto so the box still works. {%- endcomment %}
+{%- assign L = page.lang | default: 'en' -%}
+{%- if L == 'en' %}{% assign px = '' %}{% else %}{% assign px = '/' | append: L %}{% endif -%}
+{%- assign nlp = site.newsletter[include.product] -%}
+{%- assign action = nlp[L] | default: nlp.en -%}
+{%- if include.product == 'atlas' %}{% assign pname = 'Elenchon Atlas' %}{% else %}{% assign pname = 'Elenchon' %}{% endif -%}
+{%- if L == 'pt' -%}
+  {%- assign t_eye = 'Por email' -%}
+  {%- if include.product == 'atlas' %}{% capture t_h %}Receba as novidades do Atlas{% endcapture %}{% capture t_p %}Um email por versão: o que mudou no {{ pname }} e porquê. Sem publicidade.{% endcapture %}{% else %}{% capture t_h %}Acompanhe o Elenchon{% endcapture %}{% capture t_p %}Um email por marco: o ponto do desenvolvimento, o lançamento e as primeiras vagas de implementação.{% endcapture %}{% endif -%}
+  {%- assign t_lbl = 'Email profissional' -%}{%- assign t_btn = 'Subscrever' -%}
+  {%- capture t_fine %}Enviamos primeiro um email de confirmação. Cancela quando quiser, com um clique. <a href="/pt/privacy.html">Política de Privacidade</a>.{% endcapture -%}
+  {%- assign t_ok = 'Verifique a sua caixa de correio e confirme a subscrição.' -%}
+  {%- assign t_mail = 'Pedir por email' -%}{%- assign t_subj = 'Subscrever: novidades ' | append: pname -%}
+  {%- capture t_mailp %}Ainda a ligar a subscrição automática: envie-nos um email e adicionamo-lo à lista.{% endcapture -%}
+  {%- assign t_feed = 'Feed RSS' -%}
+{%- elsif L == 'es' -%}
+  {%- assign t_eye = 'Por email' -%}
+  {%- if include.product == 'atlas' %}{% capture t_h %}Reciba las novedades de Atlas{% endcapture %}{% capture t_p %}Un email por versión: qué ha cambiado en {{ pname }} y por qué. Sin publicidad.{% endcapture %}{% else %}{% capture t_h %}Siga Elenchon{% endcapture %}{% capture t_p %}Un email por hito: el estado del desarrollo, el lanzamiento y las primeras plazas de implantación.{% endcapture %}{% endif -%}
+  {%- assign t_lbl = 'Email profesional' -%}{%- assign t_btn = 'Suscribirse' -%}
+  {%- capture t_fine %}Primero le enviamos un email de confirmación. Puede darse de baja cuando quiera, con un clic. <a href="/es/privacy.html">Política de Privacidad</a>.{% endcapture -%}
+  {%- assign t_ok = 'Revise su bandeja de entrada y confirme la suscripción.' -%}
+  {%- assign t_mail = 'Pedir por email' -%}{%- assign t_subj = 'Suscribir: novedades ' | append: pname -%}
+  {%- capture t_mailp %}Aún estamos conectando la suscripción automática: escríbanos y le añadimos a la lista.{% endcapture -%}
+  {%- assign t_feed = 'Feed RSS' -%}
+{%- else -%}
+  {%- assign t_eye = 'By email' -%}
+  {%- if include.product == 'atlas' %}{% capture t_h %}Get Atlas updates{% endcapture %}{% capture t_p %}One email per release: what changed in {{ pname }} and why. No marketing filler.{% endcapture %}{% else %}{% capture t_h %}Follow Elenchon{% endcapture %}{% capture t_p %}One email per milestone: where development stands, the launch, and the first deployment slots.{% endcapture %}{% endif -%}
+  {%- assign t_lbl = 'Work email' -%}{%- assign t_btn = 'Subscribe' -%}
+  {%- capture t_fine %}We send a confirmation email first. Unsubscribe any time, in one click. <a href="/privacy.html">Privacy Policy</a>.{% endcapture -%}
+  {%- assign t_ok = 'Check your inbox and confirm your subscription.' -%}
+  {%- assign t_mail = 'Ask by email' -%}{%- assign t_subj = 'Subscribe: ' | append: pname | append: ' updates' -%}
+  {%- capture t_mailp %}Automatic signup is being connected: email us and we'll add you to the list.{% endcapture -%}
+  {%- assign t_feed = 'RSS feed' -%}
+{%- endif %}
+    <section class="page-section container" id="subscribe">
+        <div class="cta-band newsletter-band">
+            <span class="eyebrow">{{ t_eye }}</span>
+            <h2 class="text-glow">{{ t_h }}</h2>
+            <p>{{ t_p }}</p>
+{%- if action != '' and action %}
+            <form class="newsletter-form" action="{{ action }}" method="post" data-newsletter data-ok="{{ t_ok }}">
+                <label class="u-visually-hidden" for="nl-email-{{ include.product }}">{{ t_lbl }}</label>
+                <input class="newsletter-input" type="email" name="EMAIL" id="nl-email-{{ include.product }}" required autocomplete="email" placeholder="{{ t_lbl }}">
+                <input class="newsletter-hp" type="text" name="email_address_check" value="" tabindex="-1" autocomplete="off" aria-hidden="true">
+                <input type="hidden" name="locale" value="{{ L }}">
+                <button type="submit" class="btn btn-primary">{{ t_btn }}</button>
+                <p class="newsletter-status" role="status" hidden></p>
+            </form>
+            <p class="newsletter-fine">{{ t_fine }}</p>
+{%- else %}
+            <p class="newsletter-fine">{{ t_mailp }}</p>
+            <div class="cta-group">
+                <a href="mailto:contact@delteris.com?subject={{ t_subj | uri_escape }}" class="btn btn-primary">{{ t_mail }}</a>
+            </div>
+{%- endif %}
+            <p class="newsletter-fine"><a href="{{ px }}/{{ include.product }}/updates/feed.xml">{{ t_feed }}</a></p>
+        </div>
+    </section>

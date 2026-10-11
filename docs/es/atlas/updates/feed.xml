@@ -1,0 +1,6 @@
+---
+layout: null
+permalink: /es/atlas/updates/feed.xml
+sitemap: false
+---
+{% include updates-feed.xml product="atlas" lang="es" %}

@@ -48,6 +48,12 @@ alt_url: "/pt/privacy.html"
             <p>Our legal basis is our legitimate interest in responding to people who approach us (Art. 6(1)(f) GDPR) and, where your message concerns a possible purchase, taking steps at your request before entering a contract (Art. 6(1)(b)).</p>
             <p>Enquiries that do not lead to a contract are deleted within 24 months of the last message. Where an enquiry becomes a commercial relationship, the resulting records fall under the supply agreement rather than this policy.</p>
 
+{%- if site.newsletter.live %}
+            <h3>4.1 Product update emails</h3>
+            <p>If you subscribe to the Elenchon Atlas or Elenchon updates, we process your email address, the list you chose, your language and the date and proof of your confirmation. We use them only to send that product's updates. You confirm by clicking the link in the first email we send (double opt-in), and every email has a one-click unsubscribe link.</p>
+            <p>Our legal basis is your consent (Art. 6(1)(a) GDPR), which you can withdraw at any time by unsubscribing. We keep your address while you are subscribed, plus a record of your consent and unsubscribe for as long as we may need to show it.</p>
+
+{% endif -%}
             <h2>5. What we do not do</h2>
             <ul>
                 <li>We do not sell, rent or trade personal data.</li>
@@ -62,7 +68,8 @@ alt_url: "/pt/privacy.html"
             <ul>
                 <li><strong>GitHub, NameCheap, Cloudflare</strong> &mdash; serves these pages and keeps the request logs described above.</li>
                 <li><strong>Google Ireland Limited</strong> &mdash; delivers the web fonts.</li>
-                <li><strong>Google Gmail</strong> &mdash; hosts our mailboxes, and therefore processes correspondence you send us.</li>
+                <li><strong>Google Gmail</strong> &mdash; hosts our mailboxes, and therefore processes correspondence you send us.</li>{% if site.newsletter.live %}
+                <li><strong>{{ site.newsletter.provider }}</strong> &mdash; stores the subscriber list and sends the product update emails.</li>{% endif %}
             </ul>
             <p>We may also disclose data where the law requires it, or to establish or defend a legal claim.</p>
 
