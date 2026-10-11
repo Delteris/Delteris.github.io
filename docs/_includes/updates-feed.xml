@@ -1,0 +1,29 @@
+{%- comment %} Atom feed for one product in one language. Params: include.product, include.lang. {%- endcomment -%}
+{%- assign L = include.lang -%}
+{%- if L == 'en' %}{% assign px = '' %}{% else %}{% assign px = '/' | append: L %}{% endif -%}
+{%- if include.product == 'atlas' %}{% assign pname = 'Elenchon Atlas' %}{% else %}{% assign pname = 'Elenchon' %}{% endif -%}
+{%- if L == 'pt' %}{% assign t_upd = 'Atualizações' %}{% elsif L == 'es' %}{% assign t_upd = 'Novedades' %}{% else %}{% assign t_upd = 'Updates' %}{% endif -%}
+{%- assign posts = site.updates | where: 'update_product', include.product | where: 'lang', L | sort: 'date' | reverse -%}
+{%- assign self = px | append: '/' | append: include.product | append: '/updates/feed.xml' -%}
+{%- assign home = px | append: '/' | append: include.product | append: '/updates/' -%}
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="{% if L == 'pt' %}pt-PT{% elsif L == 'es' %}es-ES{% else %}en{% endif %}">
+  <title>{{ pname }} · {{ t_upd }}</title>
+  <id>{{ home | absolute_url }}</id>
+  <link rel="self" type="application/atom+xml" href="{{ self | absolute_url }}"/>
+  <link rel="alternate" type="text/html" href="{{ home | absolute_url }}"/>
+  <updated>{% if posts.size > 0 %}{{ posts.first.date | date_to_xmlschema }}{% else %}{{ site.time | date_to_xmlschema }}{% endif %}</updated>
+  <author><name>Delteris</name><uri>https://delteris.com/</uri></author>
+  <icon>{{ '/static/favicon-96.png' | absolute_url }}</icon>
+{%- for p in posts %}
+  <entry>
+    <title>{{ p.heading | default: p.title | xml_escape }}</title>
+    <id>{{ p.url | absolute_url }}</id>
+    <link rel="alternate" type="text/html" href="{{ p.url | absolute_url }}"/>
+    <published>{{ p.date | date_to_xmlschema }}</published>
+    <updated>{{ p.last_modified_at | default: p.date | date_to_xmlschema }}</updated>
+    <summary>{{ p.summary | xml_escape }}</summary>
+    <content type="html">{{ p.content | xml_escape }}</content>
+  </entry>
+{%- endfor %}
+</feed>

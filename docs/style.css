@@ -3760,3 +3760,123 @@ button.app-figure-frame:focus-visible .app-figure-zoom-hint {
 .comparison-matrix.guide-matrix-2 thead th:not(.fm-feature-head),
 .comparison-matrix.guide-matrix-2 td { width: 37%; }
 .guide-matrix td a { color: var(--accent-blue); }
+
+/* ==========================================================
+   Product updates (newsletters): /<product>/updates/ and posts
+   ========================================================== */
+.updates-list {
+    display: grid;
+    gap: 1.25rem;
+    max-width: 860px;
+    margin: 0 auto;
+}
+
+.update-card {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+.update-card p { color: var(--text-muted); margin-bottom: 1rem; }
+
+.update-card-meta {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+}
+
+.update-version { color: var(--link); font-weight: 600; }
+
+.update-body {
+    max-width: 860px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+.update-body:hover { transform: none; }
+
+.update-body h2 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin: 2.5rem 0 1rem;
+}
+
+.update-body h2:first-child { margin-top: 0; }
+
+.update-body h3 {
+    font-size: 1.15rem;
+    margin: 1.75rem 0 0.6rem;
+}
+
+.update-body p,
+.update-body ul { margin-bottom: 1.1rem; color: #cbd5e1; }
+
+.update-body ul { padding-left: 1.25rem; }
+
+.update-body li { margin-bottom: 0.55rem; }
+
+.update-body strong { color: #fff; }
+
+.update-body a { color: var(--link); }
+
+.update-body a:hover { color: var(--link-hover); }
+
+.update-body .update-figure { margin: 1.75rem 0; }
+
+.update-body .update-figure figcaption { margin-top: 0.6rem; }
+
+.update-body .feature-note {
+    font-size: 0.92rem;
+    color: var(--text-muted);
+    border-left: 2px solid var(--glass-border);
+    padding-left: 1rem;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    max-width: 560px;
+    margin: 0 auto 1rem;
+}
+
+.newsletter-input {
+    flex: 1 1 260px;
+    min-width: 0;
+    padding: 0.8rem 1rem;
+    font: inherit;
+    color: var(--text-main);
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 8px;
+    outline: none;
+}
+
+.newsletter-input:focus { border-color: var(--accent-blue); }
+
+/* Honeypot: off-screen for people, still filled in by bots. */
+.newsletter-hp {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+
+.cta-band p.newsletter-fine,
+.newsletter-fine {
+    font-size: 0.85rem;
+    margin: 0 auto 0.5rem;
+}
+
+.newsletter-fine a { color: var(--link); }
+
+.cta-band .cta-group + .newsletter-fine { margin-top: 1.25rem; }
+
+.newsletter-status {
+    flex-basis: 100%;
+    color: var(--text-main);
+    margin: 0.25rem 0 0;
+}

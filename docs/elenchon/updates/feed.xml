@@ -1,0 +1,6 @@
+---
+layout: null
+permalink: /elenchon/updates/feed.xml
+sitemap: false
+---
+{% include updates-feed.xml product="elenchon" lang="en" %}

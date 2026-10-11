@@ -32,6 +32,10 @@ A full plan-by-plan feature comparison (every capability by Lite/Standard/Premiu
 Atlas is organisation software, not audit or compliance software: one current, searchable library of a shop's WPS, pWPS and WPQR, with welder qualification (WPQ) tracking alongside. It records and warns; decisions on whether a welder is qualified stay with a qualified person.
 - Import: existing WPS from Excel or exported (text-based) PDF. Scanned PDFs are not read. Extraction is deterministic and rule-based, tuned to the customer's template; no OCR, no LLM or AI model.
 - Welder qualifications: continuity and expiry tracked as two clocks per qualification, colour-coded roster, signed requalification, email reminders before a qualification lapses.
+- WPQR range check (Atlas 1.1): the range of qualification is entered once from each WPQR certificate; every linked WPS is then checked field by field (processes, material groups, thickness, diameter, positions, preheat, interpass, PWHT, current, consumables, heat input) with each result inside / outside / differs / not checked. By default each run group (process + filler) must be covered by one WPQR; combining WPQRs is an opt-in per WPS. Consumables match by designation only (a different designation is "differs", for a person to judge). Atlas does not derive ranges from ISO 15614-1, ISO 9606-1 or ASME IX and does not decide qualification.
+- Welder coverage (Atlas 1.1): which welders' current certificates cover each WPS, and which WPS each welder can weld.
+- Monthly report: register-wide snapshot of range check results, changes since last month and welder qualification counts; exportable as PDF.
+- "What you see" (Atlas 1.1): each user can hide whole features from their own view; nothing is deleted and colleagues are unaffected.
 - Pricing: €80/month, or €60/month billed annually (€720/year). One flat, published price with no per-seat fees. 50 GB storage included; each extra 50 GB is €10/month. Onboarding and parser setup included.
 - Support: direct support by email, aiming to reply within one business day. Response guarantee: if a reported issue goes 3 business days (Portuguese working days) without a written reply from the team, that month is half price; after 5 business days it is free. One credit per month; annual plans get half a month or a month added to their term instead.
 
@@ -74,3 +78,8 @@ Founders: Flávio Brites (Co-Founder & CEO) & Rodrigo Ferreira (Co-Founder & CTO
 Contact: contact@delteris.com
 Location: Portugal.
 Note: prices are published only on the pricing page; the homepage links to it rather than quoting figures.
+
+## Product updates
+Release notes and development news, one page per product (EN/PT/ES), each with an Atom feed and an email signup.
+- Elenchon Atlas updates: https://delteris.com/atlas/updates/ (feed: https://delteris.com/atlas/updates/feed.xml)
+- Elenchon updates: https://delteris.com/elenchon/updates/ (feed: https://delteris.com/elenchon/updates/feed.xml)

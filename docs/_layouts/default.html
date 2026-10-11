@@ -36,6 +36,12 @@
     <link rel="alternate" hreflang="x-default" href="{{ page.en_url | absolute_url }}">
 {%- endif %}
 
+{%- if page.update_product %}
+{%- assign fl = page.lang | default: 'en' -%}
+{%- if fl == 'en' %}{% assign fpx = '' %}{% else %}{% assign fpx = '/' | append: fl %}{% endif %}
+    <link rel="alternate" type="application/atom+xml" title="{% if page.update_product == 'atlas' %}Elenchon Atlas{% else %}Elenchon{% endif %} · {% if fl == 'pt' %}Atualizações{% elsif fl == 'es' %}Novedades{% else %}Updates{% endif %}" href="{{ fpx }}/{{ page.update_product }}/updates/feed.xml">
+{%- endif %}
+
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="icon" type="image/png" sizes="96x96" href="/static/favicon-96.png">
     <link rel="icon" type="image/png" sizes="48x48" href="/static/favicon-48.png">

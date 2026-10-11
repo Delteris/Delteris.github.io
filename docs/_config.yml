@@ -28,3 +28,34 @@ defaults:
       path: ""
     values:
       layout: default
+  - scope:
+      path: ""
+      type: updates
+    values:
+      layout: update
+      schema: schema/update.json
+      og_image_dims: true
+
+# Product update posts (the per-product newsletters). One file per post per language in
+# docs/_updates/, front matter: update_product (atlas|elenchon), lang, date, version, summary.
+# Index pages: /<product>/updates/ (+ /pt/, /es/). Atom feeds: .../updates/feed.xml.
+collections:
+  updates:
+    output: true
+
+# Email signup for the product updates. Paste each Brevo form's action URL
+# (https://<id>.sibforms.com/serve/<token>) per product and language. While a URL is blank
+# the signup box falls back to a mailto link, so the pages work before Brevo is set up.
+# Set `live: true` once any form is connected: it also switches on the newsletter section
+# of the privacy policy (EN/PT/ES).
+newsletter:
+  live: false
+  provider: "Brevo (Sendinblue SAS, France)"
+  atlas:
+    en: ""
+    pt: ""
+    es: ""
+  elenchon:
+    en: ""
+    pt: ""
+    es: ""

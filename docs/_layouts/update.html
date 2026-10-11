@@ -1,0 +1,31 @@
+---
+layout: default
+---
+{%- comment %} One product update post (a newsletter issue). Front matter on the post:
+     update_product (atlas|elenchon), lang, date, version (optional), summary, title,
+     description, en_url/pt_url/es_url. Body is Markdown; images use the .update-figure
+     markup so they zoom like the app screenshots elsewhere. {%- endcomment %}
+{%- assign L = page.lang | default: 'en' -%}
+{%- if L == 'en' %}{% assign px = '' %}{% else %}{% assign px = '/' | append: L %}{% endif -%}
+{%- if page.update_product == 'atlas' %}{% assign pname = 'Elenchon Atlas' %}{% else %}{% assign pname = 'Elenchon' %}{% endif -%}
+{%- if L == 'pt' %}{% assign t_upd = 'Atualizações' %}{% assign t_all = 'Todas as atualizações' %}{% assign months = 'janeiro,fevereiro,março,abril,maio,junho,julho,agosto,setembro,outubro,novembro,dezembro' | split: ',' %}{% assign t_of = ' de ' %}
+{%- elsif L == 'es' %}{% assign t_upd = 'Novedades' %}{% assign t_all = 'Todas las novedades' %}{% assign months = 'enero,febrero,marzo,abril,mayo,junio,julio,agosto,septiembre,octubre,noviembre,diciembre' | split: ',' %}{% assign t_of = ' de ' %}
+{%- else %}{% assign t_upd = 'Updates' %}{% assign t_all = 'All updates' %}{% assign months = 'January,February,March,April,May,June,July,August,September,October,November,December' | split: ',' %}{% assign t_of = ' ' %}{% endif -%}
+{%- assign mi = page.date | date: '%-m' | minus: 1 -%}
+{%- capture dstr %}{{ page.date | date: '%-d' }}{{ t_of }}{{ months[mi] }}{{ t_of }}{{ page.date | date: '%Y' }}{% endcapture -%}
+    <header class="page-hero is-short">
+        <div class="hero-content">
+            <span class="hero-eyebrow">{{ pname }} · {{ t_upd }}</span>
+            <h1 class="text-glow">{{ page.heading | default: page.title }}</h1>
+            <p class="hero-sub">{{ page.summary }}</p>
+            <p class="guide-meta"><time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ dstr }}</time> · <a href="{{ px }}/{{ page.update_product }}/updates/">{{ t_all }}</a></p>
+        </div>
+    </header>
+
+    <section class="page-section container u-flush-top">
+        <article class="glass-card update-body">
+{{ content }}
+        </article>
+    </section>
+
+{% include newsletter-signup.html product=page.update_product %}

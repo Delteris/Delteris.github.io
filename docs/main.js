@@ -1038,3 +1038,30 @@
         });
     });
 })();
+
+/* Newsletter signup (product updates). Posts the form to Brevo in the background so the
+   visitor stays on the page, then shows the "check your inbox" message. The response is
+   cross-origin and unreadable (no-cors); Brevo's double opt-in email is the real
+   confirmation. Without JS, the form still submits normally. Bots that fill the
+   honeypot are silently "accepted" and never sent. */
+(function () {
+    var forms = document.querySelectorAll('form[data-newsletter]');
+    Array.prototype.forEach.call(forms, function (form) {
+        form.addEventListener('submit', function (e) {
+            if (!window.fetch || !window.FormData) return;
+            e.preventDefault();
+            var status = form.querySelector('.newsletter-status');
+            var btn = form.querySelector('button[type="submit"]');
+            var hp = form.querySelector('.newsletter-hp');
+            var done = function () {
+                if (status) { status.textContent = form.getAttribute('data-ok') || ''; status.hidden = false; }
+                if (btn) btn.disabled = true;
+            };
+            if (hp && hp.value) { done(); return; }
+            if (btn) btn.disabled = true;
+            var url = form.action + (form.action.indexOf('?') === -1 ? '?' : '&') + 'isAjax=1';
+            fetch(url, { method: 'POST', body: new FormData(form), mode: 'no-cors' })
+                .then(done, function () { if (btn) btn.disabled = false; form.submit(); });
+        });
+    });
+})();

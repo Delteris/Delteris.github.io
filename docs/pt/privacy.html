@@ -50,6 +50,12 @@ alt_url: "/privacy.html"
             <p>A nossa base legal é o nosso interesse legítimo em responder às pessoas que nos abordam (Art. 6.º, n.º 1, al. f) do RGPD) e, sempre que a sua mensagem diga respeito a uma possível compra, diligências a seu pedido antes da celebração de um contrato (Art. 6.º, n.º 1, al. b)).</p>
             <p>As consultas que não conduzem a um contrato são eliminadas no prazo de 24 meses após a última mensagem. Sempre que uma consulta se torna uma relação comercial, os registos resultantes ficam abrangidos pelo contrato de fornecimento e não por esta política.</p>
 
+{%- if site.newsletter.live %}
+            <h3>4.1 Emails de novidades dos produtos</h3>
+            <p>Se subscrever as novidades do Elenchon Atlas ou do Elenchon, tratamos o seu endereço de email, a lista que escolheu, a sua língua e a data e prova da sua confirmação. Usamo-los apenas para lhe enviar as novidades desse produto. Confirma a subscrição clicando na ligação do primeiro email que enviamos (dupla confirmação), e cada email tem uma ligação para cancelar com um clique.</p>
+            <p>A base legal é o seu consentimento (art. 6.º, n.º 1, alínea a), do RGPD), que pode retirar a qualquer momento cancelando a subscrição. Guardamos o seu endereço enquanto estiver subscrito, e um registo do consentimento e do cancelamento pelo tempo em que possamos ter de o demonstrar.</p>
+
+{% endif -%}
             <h2>5. O que não fazemos</h2>
             <ul>
                 <li>Não vendemos, alugamos nem trocamos dados pessoais.</li>
@@ -64,7 +70,8 @@ alt_url: "/privacy.html"
             <ul>
                 <li><strong>GitHub, NameCheap, Cloudflare</strong> &mdash; servem estas páginas e mantêm os registos de pedidos descritos acima.</li>
                 <li><strong>Google Ireland Limited</strong> &mdash; entrega os tipos de letra da web.</li>
-                <li><strong>Google Gmail</strong> &mdash; aloja as nossas caixas de correio e, por isso, trata a correspondência que nos envia.</li>
+                <li><strong>Google Gmail</strong> &mdash; aloja as nossas caixas de correio e, por isso, trata a correspondência que nos envia.</li>{% if site.newsletter.live %}
+                <li><strong>{{ site.newsletter.provider }}</strong> &mdash; guarda a lista de subscritores e envia os emails de novidades.</li>{% endif %}
             </ul>
             <p>Podemos também divulgar dados sempre que a lei o exija, ou para estabelecer ou defender um pedido legal.</p>
 
