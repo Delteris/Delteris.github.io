@@ -1,0 +1,8 @@
+{%- comment %} One-line link to a product's newest update post in the page's language, for a
+     hero. Param: include.product. Text = the post's `chip` front matter (falls back to its
+     heading). Renders nothing if the product has no post in this language. {%- endcomment %}
+{%- assign L = page.lang | default: 'en' -%}
+{%- assign latest = site.updates | where: 'update_product', include.product | where: 'lang', L | sort: 'date' | last -%}
+{%- if latest %}
+            <p class="hero-news"><a href="{{ latest.url }}"><span class="hero-news-tag">{% if L == 'pt' %}Novidade{% elsif L == 'es' %}Novedad{% else %}New{% endif %}</span><span class="hero-news-text">{{ latest.chip | default: latest.heading }}</span><span aria-hidden="true"> →</span></a></p>
+{%- endif %}
