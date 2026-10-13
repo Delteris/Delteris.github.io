@@ -30,12 +30,12 @@
       "applicationCategory": "BusinessApplication",
       "applicationSubCategory": "WPS Management Software",
       "operatingSystem": "Cloud",
-      "description": "A live welding heat input calculator that clamps every control to your PQR-qualified range. Set the root, fill and cap windows, drag current, voltage and travel-speed sliders, and see heat input computed live in kJ — multi-arc aware for tandem and twin setups, and it loads per-region ranges straight from a parsed WPS.",
+      "description": "A live welding heat input calculator that clamps every control to your WPQR-qualified range. Set the root, fill and cap windows, drag current, voltage and travel-speed sliders, and see heat input computed live in kJ — multi-arc aware for tandem and twin setups, and it loads per-region ranges straight from a parsed WPS.",
       "keywords": "welding heat input calculator, heat input formula, kJ/mm heat input, PQR range calculator, tandem arc heat input, EN 1011-1 heat input, welding qualification calculator",
       "featureList": [
         "Live heat input computed from current, voltage and travel speed",
         "Per-region qualified windows for root, fill and cap",
-        "Sliders clamped to the PQR-qualified range — out-of-range values not dialable",
+        "Sliders clamped to the WPQR-qualified range — out-of-range values not dialable",
         "Multi-arc aware: lead and trail heads summed for tandem and twin-arc",
         "Loads per-region ranges and processes from a parsed WPS in the library",
         "Scratch-pad only — nothing saved or written to any register"
@@ -68,7 +68,7 @@
           "name": "Can it stop me from going out of qualification?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes — that's the point. The sliders clamp to your PQR-qualified range, so you physically can't dial in a combination whose heat input falls outside what the procedure allows. Leaving the window isn't possible, rather than flagged after the fact."
+            "text": "Yes — that's the point. The sliders clamp to your WPQR-qualified range, so you physically can't dial in a combination whose heat input falls outside what the procedure allows. Leaving the window isn't possible, rather than flagged after the fact."
           }
         },
         {
@@ -100,7 +100,7 @@
           "name": "Is heat input qualified per region?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. The helper sets and checks root, fill and cap separately, because that's how a PQR qualifies heat input — region by region, each against its own limits."
+            "text": "Yes. The helper sets and checks root, fill and cap separately, because that's how a WPQR qualifies heat input — region by region, each against its own limits."
           }
         }
       ]

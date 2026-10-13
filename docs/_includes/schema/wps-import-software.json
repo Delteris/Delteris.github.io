@@ -94,7 +94,7 @@
           "name": "What happens when a form leaves heat input blank?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The app computes it from the arc parameters (current × voltage × 60 ÷ travel speed × process efficiency, per EN 1011-1) and flags it for you to confirm against the PQR. It's never a silent number — you see the passes it came from and clear the flag once checked."
+            "text": "The app computes it from the arc parameters (current × voltage × 60 ÷ travel speed × process efficiency, per EN 1011-1) and flags it for you to confirm against the WPQR. It's never a silent number — you see the passes it came from and clear the flag once checked."
           }
         },
         {
