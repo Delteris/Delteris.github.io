@@ -12,7 +12,7 @@
         {
           "@type": "WebPage",
           "name": "Elenchon Atlas — Security",
-          "description": "How Elenchon Atlas secures a cloud WPS register: a full searchable audit trail, role-based access with a read-only inspector seat, single-tenant isolation, EU hosting, and encryption in transit.",
+          "description": "How Elenchon Atlas secures a cloud WPS register: a searchable history of every change, role-based access with a read-only inspector seat, single-tenant isolation, EU hosting, and encryption in transit.",
           "isPartOf": { "@id": "https://delteris.com/wps-management-software.html" },
           "about": { "@id": "https://delteris.com/#organization" }
         },
@@ -32,13 +32,13 @@
             },
             {
               "@type": "Question",
-              "name": "Can I give an auditor or inspector access without risk?",
+              "name": "Can I give an inspector or a client read-only access without risk?",
               "acceptedAnswer": { "@type": "Answer", "text": "Yes. Access is role-based — admins, editors and viewers — so you can hand your TÜV or notified-body inspector a read-only seat: full visibility, no ability to change anything. Editors change data; viewers can only look." }
             },
             {
               "@type": "Question",
-              "name": "Is there an audit trail of changes to the register?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Yes — a full one. Every recompute, import, edit and verification is recorded with the user behind it and a timestamp, and the log is searchable, so an audit question becomes a lookup rather than an investigation. You control how long the log and old versions are kept." }
+              "name": "Is there a history of changes to the register?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Yes. Every recompute, import, edit and verification is recorded with the user behind it and a timestamp, and the log is searchable, so “who changed this?” becomes a lookup rather than an investigation. You control how long the log and old versions are kept." }
             }
           ]
         }
