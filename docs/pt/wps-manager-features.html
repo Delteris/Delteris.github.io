@@ -136,7 +136,11 @@ alt_url: "/wps-manager-features.html"
             name="library" wide="true" w="1600" h="900"
             alt="A biblioteca do Atlas com a WPS MER-WPS-002 aberta: a lista de WPS marcadas como Processadas e Associadas à esquerda e, à direita, a WPS lida em dezassete campos de cabeçalho e numa tabela de quatro passes com processo, material de adição, polaridade, corrente, tensão, velocidade e aporte térmico"
             cap="Um documento lido ao campo: o bloco de cabeçalho e cada passe — da raiz à capa — com os seus parâmetros e valores de aporte térmico, tudo estruturado e pesquisável." %}
-        <p class="story-note">MER-pWPS-101, lido de uma folha Excel: ISO&nbsp;15614-1, um duplo V em inox 321, três passes no processo 135, cada um com a sua janela de corrente, tensão, velocidade do fio e velocidade de avanço. O aporte térmico vinha em branco no formulário, por isso a aplicação calculou-o — e mostra-o a âmbar atrás de uma única verificação <strong>Verificar aporte térmico calculado</strong> até alguém o confirmar.</p>
+        <p class="story-note">MER-WPS-002, lida de uma folha Excel: ISO&nbsp;15614-1, uma junta topo a topo em U para 3–6&nbsp;mm, quatro passes no processo 135, cada um com a sua janela de corrente, tensão, velocidade do fio e velocidade de avanço e o seu aporte térmico. Quando um formulário deixa o aporte térmico em branco, a aplicação calcula-o e guarda-o atrás de uma única verificação <strong>Verificar aporte térmico calculado</strong> até alguém o confirmar.</p>
+        {% include app-shot.html
+            name="compare-fields" wide="true" w="1600" h="900"
+            alt="Comparar em modo Campos com as WPS MER-WPS-001 e MER-WPS-002: 45 diferenças em 79 campos, cada linha com o campo, os dois valores e os caracteres alterados realçados, do número da WPS e revisão ao tipo de junta, gama de espessura, posição, gás de proteção, número do WPQR, pré-aquecimento e temperatura entre passes"
+            cap="Duas WPS comparadas campo a campo: cada valor lido dos documentos, cada diferença realçada." %}
     </section>
 
     <!-- CADEIA -->
@@ -281,7 +285,7 @@ alt_url: "/wps-manager-features.html"
             <ul class="feature-list">
                 <li><strong>Requalificação, assinada e datada:</strong> renove a continuidade com uma assinatura por palavra-passe — um carimbo imutável: validado nesta data, por esta pessoa, com as suas notas.</li>
                 <li><strong>O certificado, guardado com o registo:</strong> anexe uma digitalização, PDF ou imagem e veja-o na qualificação a que pertence.</li>
-                <li><strong>Lado a lado, à sua escolha:</strong> abra quaisquer dois ficheiros em conjunto — um WPQ contra o seu WPQR, um certificado contra um WPS — escolhendo cada lado.</li>
+                <li><strong>Lado a lado, à sua escolha:</strong> abra quaisquer dois ficheiros em conjunto — o certificado de um soldador contra a WPS que cobre, ou duas WPS campo a campo — escolhendo cada lado.</li>
                 <li><strong>Histórico completo retido:</strong> cada qualificação que um soldador já deteve fica em arquivo, para que o passado nunca se perca quando o presente é renovado.</li>
             </ul>
             <p class="feature-out"><a href="/pt/welder-qualification-management-software.html">Ver a qualificação de soldadores em detalhe &rarr;</a></p>
@@ -296,10 +300,9 @@ alt_url: "/wps-manager-features.html"
             cap="O certificado guardado no registo: anexe uma digitalização, PDF ou imagem e abra-o diretamente na qualificação a que pertence."
             ph="Qualificações — o cartão de qualificação de um soldador com um certificado anexado (não “No certificate attached”), com o certificado aberto no visualizador." %}
         {% include app-shot.html
-            name="compare" wide="true" w="1600" h="900"
-            alt="O separador Comparar com dois PDF lado a lado — à esquerda, o certificado WPQ WQ-2026-0156 de Aaron Webb para o processo 135 e o respetivo domínio de qualificação; à direita, o WPQR MER-WPQR-2411 para o processo 135, com as condições de ensaio e os resultados aceites"
-            cap="Comparar: quaisquer dois ficheiros lado a lado, cada lado escolhido por si — aqui um certificado WPQ contra o seu WPQR."
-            ph="Separador Comparar — dois ficheiros lado a lado: um certificado WPQ de um lado, o seu WPQR do outro." %}
+            name="compare-cert-wps" wide="true" w="1600" h="900"
+            alt="Comparar com o certificado de um soldador para o processo 135 (WQ-2026-0156, EN ISO 9606-1) à esquerda e a WPS MER-WPS-002 à direita, ambos em PDF, com a barra Cobertura do soldador por cima a indicar Qualificado, verificado contra a gama introduzida a partir do certificado"
+            cap="Comparar: o certificado de um soldador ao lado da WPS que cobre, com o resultado da cobertura por cima. Funciona com quaisquer dois ficheiros, cada lado escolhido por si." %}
     </section>
 
     <!-- SEGURANÇA -->

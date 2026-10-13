@@ -134,7 +134,11 @@ alt_url: "/pt/wps-manager-features.html"
             name="library" wide="true" w="1600" h="900"
             alt="The Atlas library with WPS MER-WPS-002 open: the WPS list marked Parsed and Linked on the left, and on the right the WPS read into seventeen header fields and a four-pass table with process, filler, polarity, current, voltage, travel speed and heat input"
             cap="A document read to the field: the header block and every pass — root to cap — with its parameters and heat-input values, all structured and searchable." %}
-        <p class="story-note">MER-pWPS-101, read from an Excel workbook: ISO&nbsp;15614-1, a 321 stainless double-V, three passes on process 135, each with its own current, voltage, wire-feed and travel-speed window. The heat input was left blank on the form, so the app computed it — and shows it in amber behind a single <strong>Verify computed heat input</strong> check until someone confirms it.</p>
+        <p class="story-note">MER-WPS-002, read from an Excel workbook: ISO&nbsp;15614-1, a single-U butt weld for 3–6&nbsp;mm, four passes on process 135, each with its own current, voltage, wire-feed and travel-speed window and its heat input. When a form leaves heat input blank, the app computes it and holds it behind a single <strong>Verify computed heat input</strong> check until someone confirms it.</p>
+        {% include app-shot.html
+            name="compare-fields" wide="true" w="1600" h="900"
+            alt="Compare in Fields mode with WPS MER-WPS-001 and MER-WPS-002: 45 differences of 79 fields, each row showing the field, both values and the changed characters highlighted, from WPS number and revision to joint type, thickness range, position, shielding gas, WPQR number, preheat and interpass"
+            cap="Two WPS compared field by field: every value read from the documents, every difference highlighted." %}
     </section>
 
     <!-- ===================== LINKED CHAIN ===================== -->
@@ -279,7 +283,7 @@ alt_url: "/pt/wps-manager-features.html"
             <ul class="feature-list">
                 <li><strong>Requalification, signed and dated:</strong> renew continuity behind a password signature — an immutable stamp reading verified on this date, by this person, with your notes.</li>
                 <li><strong>The certificate, kept with the record:</strong> attach a scan, PDF or image and view it on the qualification it belongs to.</li>
-                <li><strong>Side by side, your choice of both:</strong> open any two files together — a WPQ against its WPQR, a certificate against a WPS — picking each side yourself.</li>
+                <li><strong>Side by side, your choice of both:</strong> open any two files together — a welder's certificate against the WPS it covers, or two WPS field by field — picking each side yourself.</li>
                 <li><strong>Full history retained:</strong> every qualification a welder has ever held stays on file, so the past is never lost when the present is renewed.</li>
             </ul>
             <p class="feature-out"><a href="welder-qualification-management-software.html">See welder qualification in depth &rarr;</a></p>
@@ -294,10 +298,9 @@ alt_url: "/pt/wps-manager-features.html"
             cap="The certificate kept on the record: attach a scan, PDF or image and open it right on the qualification it belongs to."
             ph="Qualifications — a welder’s qualification card with a certificate attached (not “No certificate attached”), the certificate open in the viewer." %}
         {% include app-shot.html
-            name="compare" wide="true" w="1600" h="900"
-            alt="The Compare tab with two PDFs side by side — on the left, Aaron Webb’s WPQ certificate WQ-2026-0156 for process 135 and its range of qualification; on the right, WPQR MER-WPQR-2411 for process 135 with its test conditions and accepted test results"
-            cap="Compare: any two files side by side, each side picked yourself — here a WPQ certificate against its WPQR."
-            ph="Compare tab — two files side by side: a WPQ certificate on one side, its WPQR on the other." %}
+            name="compare-cert-wps" wide="true" w="1600" h="900"
+            alt="Compare with a welder's process 135 certificate (WQ-2026-0156, EN ISO 9606-1) on the left and WPS MER-WPS-002 on the right, both as PDFs, with a Welder coverage bar above reading Qualified, checked against the range entered from the certificate"
+            cap="Compare: a welder's certificate beside the WPS it covers, with the welder-coverage result above. Any two files work, each side picked by you." %}
     </section>
 
         <!-- ===================== MONTHLY-REPORT ===================== -->
