@@ -8,6 +8,7 @@ title: "Atlas 1.1: Correspondencia de WPS y una Vista Más Limpia | Elenchon Atl
 heading: "Atlas 1.1: correspondencia de WPS y una vista que puede simplificar"
 description: "Atlas 1.1 comprueba cada WPS contra el WPQR en el que se apoya, la relaciona con los soldadores que pueden soldarla y deja que cada persona oculte las funciones que no usa."
 summary: "Cada WPS se comprueba ahora contra el rango del WPQR en el que se apoya y se relaciona con los soldadores cuyos certificados la cubren. Y cada persona puede ocultar las funciones que no usa."
+chip: "Nuevo en Atlas 1.1: correspondencia de WPS y ocultar lo que no usa"
 image: "/static/updates/atlas-1-1-matching.webp"
 en_url: "/atlas/updates/1-1/"
 pt_url: "/pt/atlas/updates/1-1/"

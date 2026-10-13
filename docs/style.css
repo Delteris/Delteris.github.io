@@ -3880,3 +3880,34 @@ button.app-figure-frame:focus-visible .app-figure-zoom-hint {
     color: var(--text-main);
     margin: 0.25rem 0 0;
 }
+
+/* "What's new" line under a hero's buttons: newest update post (latest-update include). */
+.hero-news { margin-top: 1.5rem; font-size: 0.92rem; }
+.hero-news a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    max-width: 100%;
+    padding: 0.35rem 0.9rem 0.35rem 0.35rem;
+    color: var(--text-main);
+    text-decoration: none;
+    border: 1px solid var(--glass-border);
+    border-radius: 999px;
+    background: rgba(59, 130, 246, 0.08);
+    transition: border-color 0.2s ease;
+}
+.hero-news a:hover { border-color: rgba(59, 130, 246, 0.5); }
+.hero-news-tag {
+    flex: none;
+    padding: 0.15rem 0.55rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #fff;
+    background: var(--accent-blue-strong);
+    border-radius: 999px;
+}
+.hero-news-text { text-align: left; }
+.product-card .card-follow { margin-top: 0.9rem; font-size: 0.9rem; }
+.product-card .card-follow a { color: var(--link); }
