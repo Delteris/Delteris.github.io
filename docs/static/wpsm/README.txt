@@ -8,5 +8,6 @@ Language versions: /static/wpsm/pt/ and /static/wpsm/es/ hold the same shots wit
 app UI and demo data in Portuguese / Spanish. The app-shot include picks
 /static/wpsm/<page.lang>/<name>.webp when it exists and falls back to the English file.
 
-compare.webp is the 12 Oct capture (real WPQR PDF); it has no PT/ES version yet because
-the demo seed's WPQR files are placeholders.
+Compare shots: compare-cert-wps (a welder's certificate beside the WPS it covers, PDF view)
+and compare-fields (two WPS, Fields mode with differences). The demo seed's WPQR files are
+placeholders, so no shot shows a WPQR PDF.
