@@ -36,7 +36,7 @@
         "WPS, pWPS and WPQR as structured, searchable records",
         "Filter by process, base and filler material, position and thickness range",
         "Pass-table facets: side, role, process and polarity as set-membership filters",
-        "Document facets: parse state, file type, template, link status, linked PQR",
+        "Document facets: parse state, file type, template, link status, linked WPQR",
         "Revisions of a WPS number grouped automatically with a switcher",
         "Edit values and labels in place, with one-click verify of low-confidence reads",
         "Link the WPS to WPQR to pWPS qualification chain"

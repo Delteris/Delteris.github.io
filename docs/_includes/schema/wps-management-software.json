@@ -37,7 +37,7 @@
         "Preview mode — parsed fields shown beside the original PDF or Excel source, with in-place edit and verify",
         "Faceted search and filtering by process, material, position, range, side, role, link status and file type",
         "Linked document chain per WPS — attached WPQR and pWPS, visible and printable",
-        "Heat-input helper that keeps parameters inside the PQR-qualified window",
+        "Heat-input helper that keeps parameters inside the WPQR-qualified window",
         "Automatic heat-input calculation on import (EN 1011-1) flagged for review",
         "Single-tenant deployment, a full history of changes, and configurable data retention",
         "Light WPS authoring and clean Excel export (authoring on roadmap)"
