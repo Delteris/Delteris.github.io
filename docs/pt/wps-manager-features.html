@@ -40,7 +40,7 @@ alt_url: "/wps-manager-features.html"
         </div>
         {% include app-shot.html
             name="overview" wide="true" w="1600" h="900"
-            alt="Painel de resumo do Elenchon: um painel Precisa de atenção com uma qualificação caducada, 30 campos de WPS a rever, registo atualizado, uma qualificação de soldador a expirar e três soldadores a precisar de reverificação, e mosaicos com 26 WPS, 9 pWPS, 11 WPQR, 26 WPS com WPQR, 8 soldadores com 11 qualificações e 7 membros de equipa"
+            alt="Resumo do Atlas: avisos de qualificações caducadas e de soldadores com revalidação a vencer, alertas por email ativos e mosaicos com WPS, pWPS, WPQR, WPS fora da gama do WPQR e qualificações de soldadores"
             cap="O resumo: campos sinalizados para verificação, o estado do registo, e a contagem completa da biblioteca — WPS, pWPS e WPQR — num só lugar." %}
         <p class="story-note">O painel <strong>Precisa de atenção</strong> destaca os valores lidos com baixa confiança e liga diretamente a eles; tudo aquilo de que a aplicação tem a certeza fica fora do seu caminho.</p>
     </section>
@@ -64,8 +64,8 @@ alt_url: "/wps-manager-features.html"
         </div>
         {% include app-shot.html
             name="import" wide="true" w="1600" h="900"
-            alt="Painel de importação da biblioteca sobre um registo: uma lista pesquisável de WPS com etiquetas de revisão, cada um marcado A seguir, Importado, ou com um botão Importar"
-            cap="A adicionar procedimentos a um registo a partir da biblioteca — cada WPS marcado a seguir, importado, ou pronto a trazer, para uma revisão nunca ser importada duas vezes." %}
+            alt="A janela Adicionar WPS na biblioteca: o modelo de formulário WPS da Meridian Fabrication selecionado, três ficheiros Excel carregados, cada um listado como WPS novo lido sem problemas, e o botão Confirmar 3 importações"
+            cap="Adicionar WPS à biblioteca: largue ficheiros Excel ou PDF e cada um é lido e fica em espera — nada é escrito até confirmar a importação." %}
     </section>
 
     <!-- REVISÃO -->
@@ -87,7 +87,7 @@ alt_url: "/wps-manager-features.html"
         </div>
         {% include app-shot.html
             name="review" wide="true" w="1600" h="900"
-            alt="Fila de revisão: linhas de documentos cada uma com um campo de aporte térmico calculado sinalizado a âmbar, com o número de passes calculados e botões Abrir na biblioteca e Verificar"
+            alt="A fila de revisão: linhas de WPS cujo aporte térmico ficou em branco no formulário e foi calculado a partir dos parâmetros de arco, cada uma assinalada como calculada, com os botões Abrir na biblioteca e Verificar aporte térmico calculado"
             cap="A fila de revisão: valores de aporte térmico calculados sinalizados a âmbar, cada um com os passes de onde foi calculado — verifique, ou abra a fonte primeiro." %}
         <p class="story-note">Estas linhas são aportes térmicos que a aplicação calculou porque os formulários os deixaram em branco — nunca introduzidos em silêncio, sempre sinalizados, e mostrados com os passes por trás de cada valor para os confirmar contra o PQR.</p>
     </section>
@@ -110,7 +110,7 @@ alt_url: "/wps-manager-features.html"
         </div>
         {% include app-shot.html
             name="register" wide="true" w="1600" h="900"
-            alt="A grelha do registo Meridian Fabrication WPS register 2026 com colunas para WPS/ID, revisão, PQR de suporte, norma de qualificação e metal base, e um menu aberto com Pacote de exportação (.zip), Cópias de segurança, Recalcular/sincronizar e Folha principal"
+            alt="O registo de WPS 2026 da Meridian Fabrication como grelha: número da WPS, revisão, número do WPQR, parte, norma de qualificação, data, processo de soldadura, tipo de processo e modo de transferência, com 23 de 29 assinadas e os botões Editar, Importar da biblioteca e Exportar .xlsx"
             cap="O registo como grelha ao vivo, com exportação, cópias versionadas, recálculo e o pacote de ficheiros associados a um menu de distância." %}
         <p class="story-note">O registo não é um modelo que a aplicação regenera e devolve alterado — é a sua folha, mantida atual. Exportar .xlsx entrega à direção a folha-mestre; o pacote de exportação entrega a um auditor a folha e todos os ficheiros associados, num .zip.</p>
     </section>
@@ -134,7 +134,7 @@ alt_url: "/wps-manager-features.html"
         </div>
         {% include app-shot.html
             name="library" wide="true" w="1600" h="900"
-            alt="Detalhe da biblioteca para MER-pWPS-101: doze campos de cabeçalho incluindo a norma ISO 15614-1, a referência de PQR 24_MER_10342_135-19, uma junta BW em duplo V, metal base 321 / 1.4541, gamas de espessura e diâmetro e gás de proteção M21, sobre uma tabela de três passes (raiz, enchimento, capa) no processo 135 com consumível G3Si1, polaridade, corrente, tensão, velocidade do fio, velocidade de avanço e aporte térmico calculado, sinalizado para verificação"
+            alt="A biblioteca do Atlas com a WPS MER-WPS-002 aberta: a lista de WPS marcadas como Processadas e Associadas à esquerda e, à direita, a WPS lida em dezassete campos de cabeçalho e numa tabela de quatro passes com processo, material de adição, polaridade, corrente, tensão, velocidade e aporte térmico"
             cap="Um documento lido ao campo: o bloco de cabeçalho e cada passe — da raiz à capa — com os seus parâmetros e valores de aporte térmico, tudo estruturado e pesquisável." %}
         <p class="story-note">MER-pWPS-101, lido de uma folha Excel: ISO&nbsp;15614-1, um duplo V em inox 321, três passes no processo 135, cada um com a sua janela de corrente, tensão, velocidade do fio e velocidade de avanço. O aporte térmico vinha em branco no formulário, por isso a aplicação calculou-o — e mostra-o a âmbar atrás de uma única verificação <strong>Verificar aporte térmico calculado</strong> até alguém o confirmar.</p>
     </section>
@@ -157,11 +157,54 @@ alt_url: "/wps-manager-features.html"
         </div>
         {% include app-shot.html
             name="pqr-chain" wide="true" w="1600" h="900"
-            alt="Detalhe da biblioteca do WPS MER-WPS-001 com um painel de WPQR associados a mostrar dois registos de qualificação, MER-WPQR-2401 e MER-WPQR-2411, por cima dos campos de cabeçalho incluindo ISO 15614-1 e metal base 316L e uma tabela de três passes no processo 135"
+            alt="A WPS MER-WPS-001 na biblioteca com dois WPQR associados, MER-WPQR-2401 e MER-WPQR-2411, a cópia assinada em arquivo, uma verificação de gama do WPQR sem nada fora e os soldadores qualificados para a soldar"
             cap="Um WPS com a sua cadeia de qualificação explícita: os registos WPQR que o qualificam, associados e a um clique, por cima do cabeçalho e da tabela de passes lidos do documento." %}
     </section>
 
     <!-- APORTE TÉRMICO -->
+        <!-- ===================== RANGE-CHECK ===================== -->
+    <section class="page-section container" id="range-check">
+        <div class="section-header">
+            <span class="eyebrow">Verificação de Gama do WPQR</span>
+            <h2>Cada WPS Verificada Contra o Seu WPQR</h2>
+            <p class="subtitle">Introduza uma vez o domínio de qualificação a partir do certificado de cada WPQR. O Atlas verifica depois cada WPS que o cita, campo a campo, e mostra-lhe o que fica fora.</p>
+        </div>
+        <div class="glass-card feature-block feature-block-solo" id="range-check-detail">
+            <span class="feature-index">06</span>
+            <ul class="feature-list">
+                <li><strong>Campo a campo:</strong> processos, grupos de material, espessura, diâmetro, posições, pré-aquecimento, temperatura entre passes, TTPS, tipo de corrente, consumíveis e aporte térmico — cada um marcado como dentro, fora, difere ou não verificado.</li>
+                <li><strong>Um WPQR por grupo de passes, por defeito:</strong> cada grupo de passes (processo e material de adição) tem de estar coberto por um único WPQR, em todos os campos. Combinar WPQR numa gama mais larga é uma opção por WPS, e cada resultado combinado fica assinalado.</li>
+                <li><strong>Sem suposições:</strong> uma WPS sem pré-aquecimento mínimo nunca é tratada como estando à temperatura ambiente, e um valor em branco ou pouco claro fica “não verificado”, não é um alerta vermelho.</li>
+                <li><strong>Onde o Atlas para:</strong> compara os valores que introduziu a partir dos seus certificados. Não deriva gamas da ISO 15614-1 nem decide se uma WPS está qualificada — um consumível diferente aparece como “difere”, para a pessoa responsável avaliar.</li>
+            </ul>
+        </div>
+        {% include app-shot.html
+            name="range-report" wide="true" w="1600" h="900"
+            alt="Relatório de verificação de gama da WPS MER-WPS-012 contra o WPQR MER-WPQR-2402, um WPQR por grupo de passes: um campo fora (a posição PB não consta do WPQR), com os campos não verificados e dentro da gama agrupados abaixo e o botão Exportar PDF"
+            cap="O relatório de verificação de gama: primeiro os problemas, cada um explicado em palavras simples, e exportável em PDF." %}
+    </section>
+    <!-- ===================== WELDER-COVERAGE ===================== -->
+    <section class="page-section container" id="welder-coverage">
+        <div class="section-header">
+            <span class="eyebrow">Cobertura de Soldadores</span>
+            <h2>Quem Pode Soldar Esta WPS</h2>
+            <p class="subtitle">O Atlas liga cada WPS aos soldadores cujos certificados em vigor a cobrem, e cada soldador às WPS que pode soldar.</p>
+        </div>
+        <div class="glass-card feature-block feature-block-solo" id="welder-coverage-detail">
+            <span class="feature-index">07</span>
+            <ul class="feature-list">
+                <li><strong>Em cada WPS:</strong> os soldadores qualificados para ela, o certificado que cobre cada um, e quem tem o processo mas não está coberto.</li>
+                <li><strong>Em cada soldador:</strong> as WPS que as suas qualificações em vigor cobrem — basta abrir a ficha do soldador.</li>
+                <li><strong>Ninguém qualificado?</strong> Vê-o na WPS, e o relatório mensal lista todas as WPS sem nenhum soldador qualificado.</li>
+                <li><strong>Comparado, não julgado:</strong> os resultados vêm do domínio introduzido a partir de cada certificado; o Atlas não deriva gamas da ISO 9606-1 nem do ASME IX.</li>
+            </ul>
+        </div>
+        {% include app-shot.html
+            name="coverage" wide="true" w="1600" h="900"
+            alt="A WPS MER-WPS-002 na biblioteca: cópia assinada em arquivo, uma verificação de gama do WPQR sem nada fora do WPQR associado, e os soldadores qualificados cujos certificados a cobrem"
+            cap="Uma WPS, os dois lados: a verificação de gama do seu WPQR e os soldadores qualificados para a soldar." %}
+    </section>
+
     <section class="page-section container" id="heat-input">
         <div class="section-header">
             <span class="eyebrow">Assistente de Aporte Térmico</span>
@@ -169,7 +212,7 @@ alt_url: "/wps-manager-features.html"
             <p class="subtitle">O aporte térmico é onde um bom procedimento sai discretamente de qualificação. O assistente calcula-o ao vivo e limita os controlos à gama que o seu PQR qualificou.</p>
         </div>
         <div class="glass-card feature-block feature-block-solo" id="heat-input-detail">
-            <span class="feature-index">06</span>
+            <span class="feature-index">08</span>
             <ul class="feature-list">
                 <li><strong>Puxe diretamente de um WPS:</strong> Carregue um WPS analisado e as suas gamas por região e processos preenchem-se automaticamente — aqui, os valores de arco do MER-WPS-026.</li>
                 <li><strong>Cursores que não saem da janela:</strong> Arraste corrente, tensão e velocidade e veja o aporte térmico calculado ao vivo; os controlos limitam-se à sua gama qualificada pelo PQR, por isso um resultado fora de gama não pode ser marcado.</li>
@@ -180,8 +223,8 @@ alt_url: "/wps-manager-features.html"
         </div>
         {% include app-shot.html
             name="heat-input" wide="true" w="1600" h="900"
-            alt="Assistente de aporte térmico com valores de arco puxados do MER-WPS-026, três regiões (raiz, enchimento, capa) cada uma com gamas qualificadas pelo PQR, cursores de corrente/tensão/velocidade e um resultado ao vivo de 0,68 a 1,58 kJ/mm, todas marcadas Dentro da gama do PQR em verde"
-            cap="Valores de arco puxados de um WPS: raiz, enchimento e capa calculados ao vivo e dentro da gama que o PQR qualificou." %}
+            alt="O assistente de aporte térmico com valores de arco da MER-WPS-012: raiz, enchimento e acabamento, cada um com a gama de aporte térmico qualificada pelo WPQR, cursores de corrente, tensão e velocidade e um resultado ao vivo dentro da gama do WPQR"
+            cap="Valores de arco puxados de uma WPS: raiz, enchimento e acabamento calculados ao vivo e dentro da gama que o WPQR qualificou." %}
     </section>
 
     <!-- QUALIFICAÇÃO DE SOLDADORES -->
@@ -192,7 +235,7 @@ alt_url: "/wps-manager-features.html"
             <p class="subtitle">A outra metade do Atlas: uma grelha filtrável de quem está qualificado para quê, com a cor do que vence a seguir. <a href="/pt/welder-qualification-management-software.html">Ver a qualificação de soldadores em detalhe &rarr;</a></p>
         </div>
         <div class="glass-card feature-block feature-block-solo" id="qualification-grid-detail">
-            <span class="feature-index">07</span>
+            <span class="feature-index">09</span>
             <ul class="feature-list">
                 <li><strong>Soldadores nas linhas, processos nas colunas:</strong> cada célula é a qualificação desse soldador nesse processo que vence primeiro, colorida de verde a vermelho, para que todo o plantel seja a sua vista de planeamento.</li>
                 <li><strong>Filtre por tudo o que está registado:</strong> soldador, processo, norma, o que está a expirar — até valores dentro de uma qualificação, como se o teste de conhecimentos foi registado.</li>
@@ -202,7 +245,7 @@ alt_url: "/wps-manager-features.html"
         </div>
         {% include app-shot.html
             name="quals-grid" wide="true" w="1600" h="900"
-            alt="Quadro de qualificações: oito soldadores nas linhas contra os processos 111, 121, 135, 136, 138 e 141, cada qualificação colorida pelo estado — em dia, a vencer dentro de um mês, duas semanas ou esta semana, ou expirada — com uma legenda de cores, a opção Mostrar norma e um botão Filtrar por cima"
+            alt="O quadro de qualificações: soldadores em linhas contra os processos 111, 121, 135, 136, 138 e 141, cada qualificação colorida pelo estado, de em dia a vence dentro de um mês, duas semanas ou esta semana até caducada, com legenda, opção Mostrar norma e botão Filtrar"
             cap="O quadro de qualificações: soldadores contra os processos que detêm, cada célula colorida pelo que vence primeiro — de em dia a expirada — e filtrável até um único processo ou norma." %}
     </section>
 
@@ -213,7 +256,7 @@ alt_url: "/wps-manager-features.html"
             <p class="subtitle">Validade e continuidade acompanhadas como duas datas distintas, avisadas com antecedência no painel e — se o ativar — por email.</p>
         </div>
         <div class="glass-card feature-block feature-block-solo" id="qualification-warnings-detail">
-            <span class="feature-index">08</span>
+            <span class="feature-index">10</span>
             <ul class="feature-list">
                 <li><strong>Dois relógios, vigiados em separado:</strong> uma data de validade e uma data de continuidade, cada uma com os seus níveis de aviso — um mês antes, duas semanas, a própria semana — com a antecedência que definir.</li>
                 <li><strong>O painel assinala o que vence:</strong> uma contagem das qualificações que entram num período de aviso, e um clique para filtrar a grelha exatamente a quem.</li>
@@ -222,8 +265,8 @@ alt_url: "/wps-manager-features.html"
             </ul>
         </div>
         {% include app-shot.html
-            name="quals-warnings" wide="true" w="1600" h="334"
-            alt="O painel Precisa de atenção no resumo: uma qualificação caducou e precisa de recuperação ou de uma expiração assinada, uma qualificação de soldador expira dentro de um mês, e três soldadores precisam de reverificação — um esta semana, um dentro de duas semanas, um dentro de um mês — cada aviso com ligação para as qualificações ou para o quadro"
+            name="quals-warnings" wide="true" w="1600" h="274"
+            alt="O painel Requer atenção no resumo: campos de WPS revistos, registo atualizado, qualificações caducadas, soldadores com revalidação a vencer por proximidade do prazo, e alertas por email ativos"
             cap="Avisos no painel: uma qualificação caducada, o que está a expirar e quem precisa de reverificação — separado pela proximidade do prazo, a um clique do quadro." %}
     </section>
 
@@ -234,7 +277,7 @@ alt_url: "/wps-manager-features.html"
             <p class="subtitle">Renove uma qualificação com uma assinatura atribuída, e mantenha o certificado no registo — visível lado a lado com qualquer outro ficheiro.</p>
         </div>
         <div class="glass-card feature-block feature-block-solo" id="qualification-record-detail">
-            <span class="feature-index">09</span>
+            <span class="feature-index">11</span>
             <ul class="feature-list">
                 <li><strong>Requalificação, assinada e datada:</strong> renove a continuidade com uma assinatura por palavra-passe — um carimbo imutável: validado nesta data, por esta pessoa, com as suas notas.</li>
                 <li><strong>O certificado, guardado com o registo:</strong> anexe uma digitalização, PDF ou imagem e veja-o na qualificação a que pertence.</li>
@@ -245,11 +288,11 @@ alt_url: "/wps-manager-features.html"
         </div>
         {% include app-shot.html
             name="quals-record" wide="true" w="1600" h="900"
-            alt="Página de qualificações: uma lista de soldadores ordenada pelo prazo mais próximo com indicadores de estado, e o registo de Simon Lowe (A1004) com duas qualificações ISO 9606-1 — o processo 111 com a continuidade caducada a 13/09/2026 e as ações Recuperar e Confirmar expiração, e o processo 135 em dia — cada uma com as datas de validade e de continuidade e uma confirmação assinada e datada que indica o relatório de END e o registo de soldadura em que se baseou"
+            alt="A ficha de um soldador: duas qualificações ISO 9606-1, processos 135 e 141, cada uma com a validade e a data de continuidade, a confirmação semestral assinada com a evidência que a suporta, ações de editar, confirmar validade e retirar, e as WPS que este soldador pode soldar"
             cap="O registo de um soldador: as datas de validade e de continuidade de cada qualificação, a confirmação assinada e datada com a evidência que a suporta, e a próxima ação — recuperar, confirmar ou retirar — a um clique." %}
         {% include app-shot.html
             name="quals-certificate" wide="true" w="1600" h="900"
-            alt="O visualizador de certificados aberto na qualificação de processo 135 de Aaron Webb: certificado WQ-2026-0156, um certificado de ensaio de qualificação de soldador EN ISO 9606-1 da Meridian Fabrication S.A., com o n.º de identificação A3001, a entidade examinadora e o domínio de qualificação, e botões para transferir e fechar"
+            alt="O visualizador de certificados aberto na qualificação de um soldador para o processo 135: certificado WQ-2026-0156, um certificado de qualificação de soldador EN ISO 9606-1 com o soldador, o organismo examinador e o domínio de qualificação"
             cap="O certificado guardado no registo: anexe uma digitalização, PDF ou imagem e abra-o diretamente na qualificação a que pertence."
             ph="Qualificações — o cartão de qualificação de um soldador com um certificado anexado (não “No certificate attached”), com o certificado aberto no visualizador." %}
         {% include app-shot.html
@@ -261,6 +304,49 @@ alt_url: "/wps-manager-features.html"
 
     <!-- SEGURANÇA -->
     <!-- TEASER DE SEGURANÇA -->
+        <!-- ===================== MONTHLY-REPORT ===================== -->
+    <section class="page-section container" id="monthly-report">
+        <div class="section-header">
+            <span class="eyebrow">Relatório Mensal</span>
+            <h2>Todos os Meses, o Que Mudou e o Que Requer Atenção</h2>
+            <p class="subtitle">Ativo por defeito. Todos os meses o Atlas guarda um retrato do seu registo e dos seus soldadores, para ver o que mudou — e pode gerar um a pedido sempre que precisar.</p>
+        </div>
+        <div class="glass-card feature-block feature-block-solo" id="monthly-report-detail">
+            <span class="feature-index">12</span>
+            <ul class="feature-list">
+                <li><strong>Verificação de gama em todo o registo:</strong> quantas WPS foram verificadas e quantas estão fora, diferem ou ficaram por verificar.</li>
+                <li><strong>O que mudou:</strong> problemas novos e resolvidos desde o relatório anterior.</li>
+                <li><strong>Qualificações de soldadores:</strong> caducadas, a vencer dentro de um mês, confirmações a fazer e caducadas este mês.</li>
+                <li><strong>Cobertura de soldadores:</strong> as WPS sem nenhum soldador qualificado, e cada WPS que requer atenção, à distância de um clique. Exporte o relatório completo em PDF.</li>
+            </ul>
+        </div>
+        {% include app-shot.html
+            name="monthly-report" wide="true" w="1600" h="900"
+            alt="Relatório mensal de qualificação: totais da verificação de gama do WPQR (24 de 29 WPS verificadas, 4 fora, 3 diferem, 17 dentro, 3 não verificadas), alterações desde o último relatório, contagens de qualificações de soldadores, cobertura de soldadores e as WPS que requerem atenção, com o botão Exportar PDF"
+            cap="O relatório mensal: a verificação de gama do registo, os prazos dos seus soldadores e a cobertura, numa só página." %}
+    </section>
+    <!-- ===================== WHAT-YOU-SEE ===================== -->
+    <section class="page-section container" id="what-you-see">
+        <div class="section-header">
+            <span class="eyebrow">O Que Vê</span>
+            <h2>Oculte o Que Não Usa</h2>
+            <p class="subtitle">Nem todas as oficinas usam todas as funcionalidades. Cada pessoa pode desligar funcionalidades inteiras na sua própria vista — nada é apagado e os colegas continuam a ver tudo.</p>
+        </div>
+        <div class="glass-card feature-block feature-block-solo" id="what-you-see-detail">
+            <span class="feature-index">13</span>
+            <ul class="feature-list">
+                <li><strong>Um interruptor por funcionalidade:</strong> cópias assinadas, verificação de gama do WPQR, cobertura de soldadores, relatório mensal, Comparar, a ajuda de aporte térmico e o quadro.</li>
+                <li><strong>Guardado na sua conta:</strong> a definição acompanha-o em qualquer navegador.</li>
+                <li><strong>Nada esquecido:</strong> depois de cada início de sessão, uma nota curta lista o que ocultou, com uma ligação para voltar a mostrar.</li>
+                <li><strong>Os problemas não ficam em silêncio:</strong> se ocultou a verificação de gama e uma WPS está fora da gama do seu WPQR, a nota continua a indicar quantas.</li>
+            </ul>
+        </div>
+        {% include app-shot.html
+            name="what-you-see" wide="true" w="1600" h="368"
+            alt="O painel O que vê no resumo: um interruptor por funcionalidade — cópias assinadas, verificação de gama do WPQR, cobertura de soldadores, relatório mensal, Comparar, ajuda de aporte térmico e quadro — todos visíveis"
+            cap="Um interruptor por funcionalidade, só para a sua vista." %}
+    </section>
+
     <section class="page-section container" id="security">
         <div class="dark-panel grid-2 align-center">
             <div>
