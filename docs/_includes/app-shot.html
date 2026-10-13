@@ -12,11 +12,18 @@
     include.ph     — short placeholder line shown until the file exists (required)
     include.tag    — placeholder chip label (default "Screenshot")   (optional)
 {%- endcomment -%}
+{%- comment %} Language-specific capture first: /static/wpsm/<lang>/<name>.webp (the app in
+     that language, demo data in that language), falling back to the English shot. {%- endcomment -%}
 {%- assign shot_path = '/static/wpsm/' | append: include.name | append: '.webp' -%}
 {%- assign shot_exists = false -%}
+{%- assign shot_lang = page.lang | default: 'en' -%}
+{%- assign lang_path = '/static/wpsm/' | append: shot_lang | append: '/' | append: include.name | append: '.webp' -%}
+{%- assign lang_exists = false -%}
 {%- for f in site.static_files -%}
   {%- if f.path == shot_path %}{% assign shot_exists = true %}{% endif -%}
+  {%- if shot_lang != 'en' and f.path == lang_path %}{% assign lang_exists = true %}{% endif -%}
 {%- endfor -%}
+{%- if lang_exists %}{% assign shot_path = lang_path %}{% assign shot_exists = true %}{% endif -%}
 {%- if include.wide == 'true' %}{% assign fig_class = 'app-figure app-figure-wide' %}{% assign dw = include.w | default: 1600 %}{% assign dh = include.h | default: 1000 %}{% else %}{% assign fig_class = 'app-figure' %}{% assign dw = include.w | default: 1400 %}{% assign dh = include.h | default: 900 %}{% endif -%}
         <figure class="{{ fig_class }}">
 {%- if shot_exists %}

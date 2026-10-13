@@ -1,22 +1,12 @@
-WPS Manager app screenshots (.webp). Referenced by /wps-manager-features.html
-and the WPS Manager landing + capability subpages via the app-shot include.
+Atlas app screenshots (.webp), shown through the app-shot include.
 
-All shots are the dark ("Dark") console theme, 1600x900, exported from the
-raw 1920x1080 PNG captures in /_source/screenshots/ (see the source README
-there for the capture-name -> slot-name mapping and the convert command).
+All shots: dark theme, 1600x900 (quals-warnings and what-you-see are crops of the
+overview), captured 13 Oct 2026 from Atlas main with the Meridian Fabrication demo seed
+(scripts/seed_demo), driven by Playwright.
 
-Present (live on the site) — every slot is filled:
-  overview.webp          import.webp          review.webp
-  register.webp          library.webp         pqr-chain.webp
-  heat-input.webp        preview.webp         security-audit.webp
-  security-users.webp    security-settings.webp
-  quals-grid.webp        quals-warnings.webp  quals-record.webp
-  compare.webp           quals-certificate.webp
-  library-filter.webp    quals-filter.webp
+Language versions: /static/wpsm/pt/ and /static/wpsm/es/ hold the same shots with the
+app UI and demo data in Portuguese / Spanish. The app-shot include picks
+/static/wpsm/<page.lang>/<name>.webp when it exists and falls back to the English file.
 
-quals-warnings.webp is a 1600x334 crop of the Needs-attention panel from the
-overview capture (not 16:9) — its include passes w="1600" h="334".
-
-Each framed <img> points at /static/wpsm/<name>.webp and shows a dashed
-placeholder until the matching file exists here. For the raw captures, the
-capture-name -> slot-name map and the convert command, see /_source/README.md.
+compare.webp is the 12 Oct capture (real WPQR PDF); it has no PT/ES version yet because
+the demo seed's WPQR files are placeholders.
