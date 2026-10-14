@@ -1065,3 +1065,12 @@
         });
     });
 })();
+
+/* Brevo's double opt-in link redirects to an updates page with ?subscribed=1:
+   show the "you're subscribed" banner, then drop the parameter from the address bar. */
+(function () {
+    if (!/[?&]subscribed=1\b/.test(location.search)) return;
+    var b = document.querySelector('[data-subscribed-banner]');
+    if (b) b.hidden = false;
+    if (history.replaceState) history.replaceState(null, '', location.pathname + location.hash);
+})();
