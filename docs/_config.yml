@@ -49,10 +49,10 @@ collections:
 # Set `live: true` once any form is connected: it also switches on the newsletter section
 # of the privacy policy (EN/PT/ES).
 newsletter:
-  live: false
+  live: true
   provider: "Brevo (Sendinblue SAS, France)"
   atlas:
-    en: ""
+    en: "https://3246b954.sibforms.com/serve/MUIFAAq7sM17lt73bHAOBugIRgNMmbWsME92K4ityZOGuo0f5gV1qRaqyqL1FdgFW3wHCQHg1ZzQIkf1SGLBJCj1rnptUnjmbiFNrqz7jlRXZKwQlz1X5siFbOKqY4rxkA5HSqWacQ1lrM3PQt1BCrhh5PTkePnPp-7rnXu209ePI9ZeoO0Yxh75e5pTAsH3Q8c2h_oeB-4CCcwecw=="
     pt: ""
     es: ""
   elenchon:
