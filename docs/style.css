@@ -3911,3 +3911,15 @@ button.app-figure-frame:focus-visible .app-figure-zoom-hint {
 .hero-news-text { text-align: left; }
 .product-card .card-follow { margin-top: 0.9rem; font-size: 0.9rem; }
 .product-card .card-follow a { color: var(--link); }
+
+/* Shown on an updates index after the Brevo confirmation link (?subscribed=1). */
+.subscribed-banner {
+    margin: 0 0 1.5rem;
+    padding: 0.85rem 1.1rem;
+    border: 1px solid rgba(34, 197, 94, 0.45);
+    background: rgba(34, 197, 94, 0.12);
+    border-radius: 10px;
+    font-weight: 600;
+}
+.subscribed-banner span { color: #22c55e; margin-right: 0.35rem; }
+.subscribed-banner[hidden] { display: none; }
