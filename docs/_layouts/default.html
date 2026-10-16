@@ -101,6 +101,9 @@
 {% include nav.html %}
 
     <main id="main">
+{%- if page.hub %}
+{% include breadcrumb.html %}
+{%- endif %}
 {{ content }}
     </main>
 {%- unless page.hide_footer %}

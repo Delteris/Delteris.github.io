@@ -11,23 +11,6 @@
       }
     },
     {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://delteris.com/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Pricing",
-          "item": "https://delteris.com/pricing.html"
-        }
-      ]
-    },
-    {
       "@type": "Product",
       "name": "Elenchon Lite",
       "description": "On-premise welding traceability for smaller fabrication shops: work capture, project tree and flowchart views, the full WPS/WPQR/WPQ qualification workflow, audit-ready ISO and ASME IX evidence, post-quantum-safe networking and local backups. Includes 20 workers, expandable by up to two blocks of ten.",

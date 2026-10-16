@@ -2,29 +2,6 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://delteris.com/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Atlas",
-          "item": "https://delteris.com/wps-management-software.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "WPS Preview & Verification",
-          "item": "https://delteris.com/wps-preview-verification.html"
-        }
-      ]
-    },
-    {
       "@type": "SoftwareApplication",
       "name": "Elenchon Atlas — WPS Preview & Verification",
       "applicationCategory": "BusinessApplication",

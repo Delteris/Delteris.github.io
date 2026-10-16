@@ -2,29 +2,6 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://delteris.com/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Atlas",
-          "item": "https://delteris.com/wps-management-software.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "WPS Review & Approval Software",
-          "item": "https://delteris.com/wps-review-approval-software.html"
-        }
-      ]
-    },
-    {
       "@type": "SoftwareApplication",
       "name": "Elenchon Atlas — WPS Review & Approval Software",
       "applicationCategory": "BusinessApplication",

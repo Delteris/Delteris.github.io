@@ -2,23 +2,6 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://delteris.com/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Welding Traceability Software",
-          "item": "https://delteris.com/welding-traceability-software.html"
-        }
-      ]
-    },
-    {
       "@type": "SoftwareApplication",
       "name": "Elenchon — Welding Traceability Software",
       "applicationCategory": "BusinessApplication",

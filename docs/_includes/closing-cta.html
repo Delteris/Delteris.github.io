@@ -1,0 +1,87 @@
+{%- comment %} Shared closing block for product pages: the product's single action, then one
+     quiet line to the other product. Params:
+       product  atlas | elenchon (required)
+       intro    optional page-specific eyebrow/h2/p markup (capture it); a generic
+                per-product intro is used when omitted
+       id       section id (default "cta") — keep any id other pages anchor to
+       action   "false" to omit the button + subline (the action's own destination,
+                e.g. the contact pages), leaving only the intro and the cross-link
+     Labels live here so every page says the action the same way. {%- endcomment %}
+{%- assign L = page.lang | default: 'en' -%}
+{%- if L == 'en' %}{% assign px = '' %}{% else %}{% assign px = '/' | append: L %}{% endif -%}
+{%- if include.product == 'atlas' %}
+{%- assign c_href = px | append: '/wps-manager-contact.html' -%}
+{%- assign x_href = px | append: '/platform.html' -%}
+{%- if L == 'pt' %}
+{%- assign c_label = 'Pedir Teste Gratuito' -%}
+{%- capture c_intro %}
+            <span class="eyebrow">Comece</span>
+            <h2 class="text-glow">Ponha as Suas WPS e Soldadores no Atlas</h2>
+            <p>Envie-nos algumas das suas WPS. Importamo-las por si, confirmamos que o parser lê o seu modelo e entra em funcionamento com um registo construído a partir da sua própria papelada.</p>
+{%- endcapture -%}
+{%- assign c_sub = 'Importamos as suas WPS por si — e quem ajusta o parser é quem responde.' -%}
+{%- assign x_text = 'Precisa disto nos seus próprios servidores, com rastreabilidade completa no chão de fábrica? O Elenchon inclui tudo o que o Atlas faz' -%}
+{%- elsif L == 'es' %}
+{%- assign c_label = 'Solicitar Prueba Gratuita' -%}
+{%- capture c_intro %}
+            <span class="eyebrow">Empiece</span>
+            <h2 class="text-glow">Lleve sus WPS y Soldadores a Atlas</h2>
+            <p>Envíenos algunas de sus WPS. Las importamos por usted, confirmamos que el parser lee su plantilla y entra en funcionamiento con un registro construido a partir de su propia documentación.</p>
+{%- endcapture -%}
+{%- assign c_sub = 'Importamos sus WPS por usted — y quien ajusta el parser es quien responde.' -%}
+{%- assign x_text = '¿Lo necesita en sus propios servidores, con trazabilidad completa en planta? Elenchon incluye todo lo que hace Atlas' -%}
+{%- else %}
+{%- assign c_label = 'Get a Free Trial' -%}
+{%- capture c_intro %}
+            <span class="eyebrow">Get Started</span>
+            <h2 class="text-glow">Put Your WPS and Welders on Atlas</h2>
+            <p>Send us a few of your WPS. We import them for you, confirm the parser reads your template, and you go live with a register built from your own paperwork.</p>
+{%- endcapture -%}
+{%- assign c_sub = 'We import your WPS for you — and the people who tune the parser are the ones who reply.' -%}
+{%- assign x_text = 'Need it on your own servers, with full shop-floor traceability? Elenchon includes all of Atlas' -%}
+{%- endif %}
+{%- else %}
+{%- assign c_href = px | append: '/contact.html' -%}
+{%- assign x_href = px | append: '/wps-management-software.html' -%}
+{%- assign p_href = px | append: '/pricing.html' -%}
+{%- if L == 'pt' %}
+{%- assign c_label = 'Entrar na Lista de Lançamento' -%}
+{%- capture c_intro %}
+            <span class="eyebrow">Lançamento no 1.º trimestre de 2027</span>
+            <h2 class="text-glow">Reserve a Sua Vaga de Implementação</h2>
+            <p>Os nossos próprios engenheiros instalam cada appliance Elenchon no local, por isso as implementações por trimestre são deliberadamente limitadas. Entre na lista de lançamento para reservar uma vaga ou colocar primeiro as suas questões técnicas.</p>
+{%- endcapture -%}
+{%- capture c_sub %}Sem camadas comerciais — fala diretamente com os fundadores.{% if page.url != p_href %} Todos os preços são públicos: <a href="{{ p_href }}">ver preços&nbsp;→</a>{% endif %}{% endcapture -%}
+{%- assign x_text = 'Precisa de controlar WPS e soldadores já? O Atlas está disponível — e os seus dados passam para o Elenchon no lançamento' -%}
+{%- elsif L == 'es' %}
+{%- assign c_label = 'Unirse a la Lista de Lanzamiento' -%}
+{%- capture c_intro %}
+            <span class="eyebrow">Lanzamiento en el primer trimestre de 2027</span>
+            <h2 class="text-glow">Reserve su Plaza de Implantación</h2>
+            <p>Nuestros propios ingenieros instalan cada appliance Elenchon in situ, por lo que las implantaciones por trimestre son deliberadamente limitadas. Únase a la lista de lanzamiento para reservar una plaza o plantear antes sus preguntas técnicas.</p>
+{%- endcapture -%}
+{%- capture c_sub %}Sin intermediarios comerciales — habla directamente con los fundadores.{% if page.url != p_href %} Todos los precios son públicos: <a href="{{ p_href }}">ver precios&nbsp;→</a>{% endif %}{% endcapture -%}
+{%- assign x_text = '¿Necesita controlar WPS y soldadores ya? Atlas está disponible — y sus datos pasan a Elenchon en el lanzamiento' -%}
+{%- else %}
+{%- assign c_label = 'Join the Launch List' -%}
+{%- capture c_intro %}
+            <span class="eyebrow">Launching Q1 2027</span>
+            <h2 class="text-glow">Reserve Your Deployment Slot</h2>
+            <p>Our own engineers install every Elenchon appliance on-site, so deployments each quarter are deliberately limited. Join the launch list to reserve a slot, or put your technical questions to us first.</p>
+{%- endcapture -%}
+{%- capture c_sub %}No sales layers — you talk to the founders.{% if page.url != p_href %} Every price is published: <a href="{{ p_href }}">see pricing&nbsp;→</a>{% endif %}{% endcapture -%}
+{%- assign x_text = 'Need WPS and welder control now? Atlas is live — and your data moves to Elenchon at launch' -%}
+{%- endif %}
+{%- endif %}
+    <section class="page-section container" id="{{ include.id | default: 'cta' }}">
+        <div class="cta-band closing-cta">
+{%- if include.intro and include.intro != '' %}{{ include.intro }}{% else %}{{ c_intro }}{% endif %}
+{%- unless include.action == 'false' %}
+            <div class="cta-group">
+                <a href="{{ c_href }}" class="btn btn-primary">{{ c_label }}</a>
+            </div>
+            <p class="hero-urgency u-gap-top">{{ c_sub }}</p>
+{%- endunless %}
+            <p class="closing-crosslink"><a href="{{ x_href }}">{{ x_text }}&nbsp;→</a></p>
+        </div>
+    </section>

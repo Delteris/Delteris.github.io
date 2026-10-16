@@ -2,29 +2,6 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Início",
-          "item": "https://delteris.com/pt/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Recursos",
-          "item": "https://delteris.com/pt/resources/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Validade da Qualificação de Soldadores: Continuidade, Caducidade e Revalidação",
-          "item": "https://delteris.com/pt/resources/welder-qualification-validity/"
-        }
-      ]
-    },
-    {
       "@type": "Article",
       "@id": "https://delteris.com/pt/resources/welder-qualification-validity/#article",
       "headline": "Validade da Qualificação de Soldadores: Continuidade, Caducidade e Revalidação",
