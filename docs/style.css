@@ -4383,3 +4383,14 @@ button.app-figure-frame:focus-visible .app-figure-zoom-hint {
     border: 1px solid var(--glass-border); border-radius: 6px; padding: .3rem .65rem; cursor: pointer; }
 .atlas-video-speed button:hover { border-color: var(--accent-blue); }
 .atlas-video-speed button[aria-pressed="true"] { background: var(--accent-blue-soft); border-color: var(--accent-blue); }
+.atlas-video-frame { position: relative; }
+.atlas-video-play { position: absolute; left: 50%; top: 74%; transform: translate(-50%, -50%);
+    width: 84px; height: 84px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    padding-left: 5px; color: #fff; cursor: pointer;
+    background: rgba(10, 18, 36, 0.55); border: 2px solid rgba(255, 255, 255, 0.7);
+    -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px);
+    box-shadow: 0 0 0 6px rgba(59, 130, 246, 0.18), 0 10px 30px rgba(0, 0, 0, 0.45);
+    transition: background .15s, transform .15s; }
+.atlas-video-play:hover { background: rgba(59, 130, 246, 0.6); transform: translate(-50%, -50%) scale(1.06); }
+.atlas-video-frame.is-started .atlas-video-play { display: none; }
+@media (max-width: 600px) { .atlas-video-play { width: 64px; height: 64px; } .atlas-video-play svg { width: 26px; height: 26px; } }

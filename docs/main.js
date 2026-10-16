@@ -1120,6 +1120,10 @@
         var tamed = false;
         v.addEventListener('play', function () { if (!tamed) { v.volume = 0.5; tamed = true; } });
         v.preservesPitch = true; v.mozPreservesPitch = true; v.webkitPreservesPitch = true;
+        var frame = box.querySelector('.atlas-video-frame'), big = box.querySelector('.atlas-video-play');
+        if (big) big.addEventListener('click', function () { v.play(); });
+        v.addEventListener('play', function () { if (frame) frame.classList.add('is-started'); });
+        v.addEventListener('ended', function () { if (frame) frame.classList.remove('is-started'); });
         var btns = box.querySelectorAll('.atlas-video-speed button');
         btns.forEach(function (b) {
             b.addEventListener('click', function () {
