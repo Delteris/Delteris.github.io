@@ -4335,3 +4335,33 @@ button.app-figure-frame:focus-visible .app-figure-zoom-hint {
 .door-split-compact .door-card > p { font-size: 0.95rem; margin-bottom: 1.1rem; }
 .door-split-compact .door-card .door-note { min-height: 0; margin-top: 0.8rem; }
 @media (max-width: 900px) { .door-split-compact { gap: 1rem; } }
+
+/* Guide ending (_includes/guide-next.html): related guides in the hub's card style,
+   then one quiet line about the products — no buttons. */
+.guide-next { max-width: 1100px; }
+.guide-next-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.5rem 1.5rem;
+    margin-bottom: 1.25rem;
+}
+.guide-next-head h2 { font-size: clamp(1.35rem, 2.2vw, 1.7rem); margin: 0; }
+.guide-next-all { font-size: 0.92rem; color: var(--link); text-decoration: none; }
+.guide-next-all:hover { color: var(--link-hover); text-decoration: underline; }
+.guide-next-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+}
+.guide-product-line {
+    margin: 2.25rem 0 0;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(148, 163, 184, 0.12);
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+.guide-product-line a { color: var(--link); }
+.guide-product-line a:hover { color: var(--link-hover); }

@@ -1,0 +1,56 @@
+{%- comment %} Ending for every guide: "Keep reading" (up to three related guides — the
+     rest of the page's own hub group first, then the nearest groups — as cards in the
+     hub's style, plus a link to the group on the hub), then one quiet product line.
+     No buttons. Data: _data/guides.yml. Front matter on the guide:
+       guide_group       procedures | welders | traceability | software (hub group id)
+       guide_product     atlas | elenchon | both
+       guide_pitch       one sentence tied to the article's problem (atlas/elenchon only)
+       guide_pitch_link  the link text that follows it
+{%- endcomment %}
+{%- assign L = page.lang | default: 'en' -%}
+{%- if L == 'en' %}{% assign px = '' %}{% assign self_path = page.url %}{% else %}{% assign px = '/' | append: L %}{% assign self_path = page.url | remove_first: px %}{% endif -%}
+{%- assign gd = site.data.guides -%}
+{%- assign grp = gd.groups[page.guide_group] -%}
+{%- assign near = grp.near | join: ',' -%}
+{%- assign order = page.guide_group | append: ',' | append: near | split: ',' -%}
+{%- assign picked = '' -%}
+{%- assign n = 0 -%}
+{%- for g in order -%}
+{%- for it in gd.guides -%}
+{%- if it.group == g and it.path != self_path and n < 3 -%}
+{%- assign picked = picked | append: it.id | append: ',' -%}
+{%- assign n = n | plus: 1 -%}
+{%- endif -%}
+{%- endfor -%}
+{%- endfor -%}
+{%- assign picked = picked | split: ',' -%}
+{%- if L == 'pt' %}
+{%- assign t_head = 'Continue a Ler' -%}{%- assign t_all = 'Todos os guias sobre' -%}
+{%- assign t_both = 'Também fazemos software para isto: o <a href="' | append: px | append: '/wps-management-software.html">Atlas</a> para WPS e qualificações de soldadores na cloud, já disponível, e o <a href="' | append: px | append: '/platform.html">Elenchon</a> para rastreabilidade no chão de fábrica no seu próprio hardware, a partir do 1.º trimestre de 2027.' -%}
+{%- elsif L == 'es' %}
+{%- assign t_head = 'Siga Leyendo' -%}{%- assign t_all = 'Todas las guías sobre' -%}
+{%- assign t_both = 'También hacemos software para esto: <a href="' | append: px | append: '/wps-management-software.html">Atlas</a> para WPS y cualificaciones de soldadores en la nube, ya disponible, y <a href="' | append: px | append: '/platform.html">Elenchon</a> para trazabilidad en planta en su propio hardware, a partir del primer trimestre de 2027.' -%}
+{%- else %}
+{%- assign t_head = 'Keep Reading' -%}{%- assign t_all = 'All guides on' -%}
+{%- assign t_both = 'We build software for this too: <a href="' | append: px | append: '/wps-management-software.html">Atlas</a> for WPS and welder qualifications in the cloud, live now, and <a href="' | append: px | append: '/platform.html">Elenchon</a> for shop-floor traceability on your own hardware, from Q1 2027.' -%}
+{%- endif %}
+    <section class="page-section container guide-next" id="keep-reading" aria-labelledby="keep-reading-title">
+        <div class="guide-next-head">
+            <h2 id="keep-reading-title">{{ t_head }}</h2>
+            <a class="guide-next-all" href="{{ px }}/resources/#{{ page.guide_group }}">{{ t_all }} {{ grp.name[L] | escape }}&nbsp;→</a>
+        </div>
+        <div class="guide-next-list">
+{%- for id in picked %}
+{%- assign it = gd.guides | where: 'id', id | first %}
+            <a href="{{ px }}{{ it.path }}" class="glass-card guide-card">
+                <span class="guide-kind{% if it.tool %} guide-kind-tool{% endif %}">{{ it.kind[L] }}</span>
+                <h3>{{ it.title[L] }}</h3>
+                <p>{{ it.summary[L] }}</p>
+            </a>
+{%- endfor %}
+        </div>
+        <p class="guide-product-line">
+{%- if page.guide_product == 'both' %}{{ t_both }}
+{%- else %}{% if page.guide_product == 'atlas' %}{% assign p_href = px | append: '/wps-management-software.html' %}{% else %}{% assign p_href = px | append: '/platform.html' %}{% endif %}{{ page.guide_pitch }} <a href="{{ p_href }}">{{ page.guide_pitch_link }}&nbsp;→</a>
+{%- endif %}</p>
+    </section>
