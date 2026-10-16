@@ -1,0 +1,22 @@
+{%- assign l = page.lang | default: "en" -%}
+{%- if l == "es" -%}{%- assign t_h = "Véalo funcionando en 2 minutos" -%}{%- assign t_snd = "Con sonido" -%}{%- assign t_spd = "Velocidad" -%}{%- assign t_alt = "Vídeo de Elenchon Atlas: cualificaciones de soldadores y WPS" -%}
+{%- elsif l == "pt" -%}{%- assign t_h = "Veja-o a funcionar em 2 minutos" -%}{%- assign t_snd = "Com som" -%}{%- assign t_spd = "Velocidade" -%}{%- assign t_alt = "Vídeo do Elenchon Atlas: qualificações de soldadores e WPS" -%}
+{%- else -%}{%- assign t_h = "See it working in 2 minutes" -%}{%- assign t_snd = "With sound" -%}{%- assign t_spd = "Speed" -%}{%- assign t_alt = "Elenchon Atlas video: welder qualifications and WPS" -%}{%- endif -%}
+    <section class="page-section container u-tight-bottom" id="video">
+        <div class="atlas-video">
+            <h2 class="atlas-video-h">{{ t_h }}</h2>
+            <video class="atlas-video-el" controls preload="metadata" playsinline
+                   poster="/static/video/atlas-{{ l }}-poster.webp" aria-label="{{ t_alt }}">
+                <source src="/static/video/atlas-{{ l }}.mp4" type="video/mp4">
+            </video>
+            <div class="atlas-video-bar">
+                <span class="atlas-video-sound">&#128264; {{ t_snd }}</span>
+                <span class="atlas-video-speed" role="group" aria-label="{{ t_spd }}">
+                    <span class="atlas-video-speed-l">{{ t_spd }}</span>
+                    <button type="button" data-rate="0.75">0.75×</button>
+                    <button type="button" data-rate="0.9">0.9×</button>
+                    <button type="button" data-rate="1" aria-pressed="true">1×</button>
+                </span>
+            </div>
+        </div>
+    </section>
