@@ -1,11 +1,13 @@
+{%- comment %} Localised by the sx_* variables set in _layouts/default.html; the FAQPage is
+     generated there from the page's own visible FAQ. {%- endcomment %}
 {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "WebPage",
-      "name": "Elenchon Atlas — Features",
-      "url": "https://delteris.com/wps-manager-features.html",
-      "description": "The full Elenchon Atlas capability set — native Excel and PDF import, human-reviewed edits, a versioned register, a structured library with faceted search, preview against the source document, the linked WPQR/pWPS chain, and a heat-input helper — shown in the app.",
+      "name": {% if sx_L == 'en' %}"Elenchon Atlas — Features"{% else %}{{ sx_name | jsonify }}{% endif %},
+      "url": "{{ sx_url }}",
+      "description": {% if sx_L == 'en' %}"The full Elenchon Atlas capability set — native Excel and PDF import, human-reviewed edits, a versioned register, a structured library with faceted search, preview against the source document, the linked WPQR/pWPS chain, and a heat-input helper — shown in the app."{% else %}{{ sx_desc | jsonify }}{% endif %},
       "isPartOf": {
         "@type": "WebSite",
         "name": "Delteris",
@@ -18,13 +20,14 @@
         "operatingSystem": "Cloud / Web",
         "offers": {
           "@type": "Offer",
-          "url": "https://delteris.com/wps-management-software.html#pricing",
+          "url": "https://delteris.com{{ sx_px }}/wps-management-software.html#pricing",
           "price": "80.00",
           "priceValidUntil": "2028-12-31",
           "priceCurrency": "EUR",
           "availability": "https://schema.org/InStock"
         }
-      }
+      },
+      "inLanguage": "{{ sx_lang }}"
     }
   ]
 }

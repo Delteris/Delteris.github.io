@@ -1,25 +1,33 @@
+{%- comment %} Localised by the sx_* variables set in _layouts/default.html; the FAQPage is
+     generated there from the page's own visible FAQ. {%- endcomment %}
 {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "ContactPage",
-          "name": "Contact Delteris",
-          "url": "https://delteris.com/contact.html",
-          "publisher": { "@id": "https://delteris.com/#organization" }
-        },
-        {
-          "@type": "Organization",
-          "@id": "https://delteris.com/#organization",
-          "name": "Delteris",
-          "url": "https://delteris.com/",
-          "email": "contact@delteris.com",
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "email": "contact@delteris.com",
-            "contactType": "sales",
-            "areaServed": "EU",
-            "availableLanguage": ["English", "Portuguese"]
-          }
-        }
-      ]
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ContactPage",
+      "name": {% if sx_L == 'en' %}"Contact Delteris"{% else %}{{ sx_name | jsonify }}{% endif %},
+      "url": "{{ sx_url }}",
+      "publisher": {
+        "@id": "https://delteris.com/#organization"
+      },
+      "inLanguage": "{{ sx_lang }}"
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://delteris.com/#organization",
+      "name": "Delteris",
+      "url": "https://delteris.com/",
+      "email": "contact@delteris.com",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "contact@delteris.com",
+        "contactType": "sales",
+        "areaServed": "EU",
+        "availableLanguage": [
+          "English",
+          "Portuguese"
+        ]
+      }
     }
+  ]
+}

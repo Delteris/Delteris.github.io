@@ -1,18 +1,23 @@
+{%- comment %} Localised by the sx_* variables set in _layouts/default.html; the FAQPage is
+     generated there from the page's own visible FAQ. {%- endcomment %}
 {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "WebPage",
-          "name": "Privacy Policy",
-          "url": "https://delteris.com/privacy.html",
-          "publisher": { "@id": "https://delteris.com/#organization" }
-        },
-        {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://delteris.com/" },
-            { "@type": "ListItem", "position": 2, "name": "Privacy Policy", "item": "https://delteris.com/privacy.html" }
-          ]
-        }
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "name": {% if sx_L == 'en' %}"Privacy Policy"{% else %}{{ sx_name | jsonify }}{% endif %},
+      "url": "{{ sx_url }}",
+      "publisher": {
+        "@id": "https://delteris.com/#organization"
+      },
+      "inLanguage": "{{ sx_lang }}"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": {{ sx_home_name | jsonify }}, "item": "{{ sx_home }}" },
+        { "@type": "ListItem", "position": 2, "name": {{ sx_name | jsonify }}, "item": "{{ sx_url }}" }
       ]
     }
+  ]
+}

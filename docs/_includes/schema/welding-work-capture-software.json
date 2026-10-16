@@ -1,85 +1,34 @@
+{%- comment %} Localised by the sx_* variables set in _layouts/default.html; the FAQPage is
+     generated there from the page's own visible FAQ. {%- endcomment %}
 {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "SoftwareApplication",
-      "name": "Elenchon — Shop-Floor Weld Data Capture Software",
+      "name": {% if sx_L == 'en' %}"Elenchon — Shop-Floor Weld Data Capture Software"{% else %}{{ sx_name | jsonify }}{% endif %},
       "applicationCategory": "BusinessApplication",
       "applicationSubCategory": "Welding Traceability App",
       "operatingSystem": "Linux/Appliance",
-      "description": "On-premise shop-floor weld data capture software: a mobile-first floor app that logs welding, fit-up, cutting and any custom work type in ten seconds, captures work offline with automatic sync, and keeps every record on hardware you own.",
-      "keywords": "shop floor weld data capture, welding traceability app, weld data capture software, offline welding capture, mobile welding app, welding work capture software",
-      "featureList": [
+      "description": {% if sx_L == 'en' %}"On-premise shop-floor weld data capture software: a mobile-first floor app that logs welding, fit-up, cutting and any custom work type in ten seconds, captures work offline with automatic sync, and keeps every record on hardware you own."{% else %}{{ sx_desc | jsonify }}{% endif %},
+{% if sx_L == 'en' %}      "keywords": "shop floor weld data capture, welding traceability app, weld data capture software, offline welding capture, mobile welding app, welding work capture software",{% endif %}
+{% if sx_L == 'en' %}      "featureList": [
         "10-second mobile-first work capture with touch-and-PIN sign-in",
         "Universal custom work types (welding, fit-up, cutting, assembly)",
         "Offline work capture with durable on-device queue and automatic sync",
         "Attributed, timestamped, version-pinned entries",
         "Audit-ready ISO 3834, EN 1090 and ASME IX evidence",
         "On-premise appliance with full data sovereignty"
-      ],
+      ],{% endif %}
       "offers": {
         "@type": "Offer",
-        "url": "https://delteris.com/pricing.html",
+        "url": "https://delteris.com{{ sx_px }}/pricing.html",
         "availability": "https://schema.org/PreOrder",
         "availabilityStarts": "2027-01-01"
       },
       "provider": {
         "@id": "https://delteris.com/#organization"
-      }
-    },
-    {
-      "@type": "FAQPage",
-      "@id": "https://delteris.com/welding-work-capture-software.html#faq",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How fast is data entry on the floor?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The mobile-first interface is built to get an operator to the right project step and inputting data in ten seconds or less, using touch-and-PIN sign-in so entries are attributed without slowing anyone down."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can it capture work when there is no Wi-Fi?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes — capture is offline-first. A welder can start and submit an entry with no connection at all; entries sit in a durable on-device queue and sync in order when it returns. Included on the Standard plan; the offline document viewer is on every plan."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can it model the non-weld work on our floor, or only welding?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The whole floor, not just the arc. Define any operation — fit-up, cutting, assembly, inspection, any process — as a reusable work type with its own parameters and qualification rules, and it captures into the same traceable structure as your welds. So the record reflects everything that touched the part, not a welding-shaped slice of it."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How does this fit the wider platform?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Capture is the front door. Elenchon is full welding management software — the captured data flows into your project structure, the WPS/WPQR/WPQ workflow, the weld traceability chain, and much more."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is shop-floor weld data capture software?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "It is the app welders use to record work as it happens — which joint, which parameters, by whom, and when — so every weld is traceable back to the person and procedure behind it. Elenchon runs that capture on-premise, keeping the record on hardware you own."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is on-premise capture worse than a cloud app?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The opposite. The appliance sits on the floor's own network, so entries write to hardware in the building instead of waiting on a public link — faster, and unaffected by an internet drop. Captured work never touches a shared cloud server, and authorised staff still connect remotely through Phrakton."
-          }
-        }
-      ]
+      },
+      "inLanguage": "{{ sx_lang }}"
     }
   ]
 }

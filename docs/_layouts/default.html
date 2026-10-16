@@ -82,10 +82,45 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;600;700&display=swap">
+{%- comment %} Structured data. The schema templates (_includes/schema/) are shared by the
+     EN/PT/ES versions of a page and read these sx_* variables, so each language
+     outputs its own URL, name, description and inLanguage. Product names stay as
+     written; English-only lists (keywords, featureList) are left out on PT/ES. {%- endcomment %}
+{%- assign sx_L = page.lang | default: 'en' -%}
+{%- if sx_L == 'pt' %}{% assign sx_lang = 'pt-PT' %}{% assign sx_home_name = 'Início' %}{% assign sx_px = '/pt' %}
+{%- elsif sx_L == 'es' %}{% assign sx_lang = 'es-ES' %}{% assign sx_home_name = 'Inicio' %}{% assign sx_px = '/es' %}
+{%- else %}{% assign sx_lang = 'en' %}{% assign sx_home_name = 'Home' %}{% assign sx_px = '' %}{% endif -%}
+{%- assign sx_url = page.url | absolute_url -%}
+{%- assign sx_home = sx_px | append: '/' | absolute_url -%}
+{%- assign sx_name = page.title | split: ' | ' | first | replace: '&amp;', '&' -%}
+{%- assign sx_desc = page.description | replace: '&amp;', '&' -%}
 {%- if page.schema %}
 
     <script type="application/ld+json">
 {% include {{ page.schema }} %}
+    </script>
+{%- endif %}
+{%- comment %} FAQPage built from the page's own visible FAQ (<details class="faq-item">:
+     question in <summary>, answer in .faq-body), so the markup always matches what
+     the reader sees, in every language. {%- endcomment %}
+{%- if content contains '<details class="faq-item">' %}
+{%- assign faq_parts = content | split: '<details class="faq-item">' %}
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "{{ sx_url }}#faq",
+  "inLanguage": "{{ sx_lang }}",
+  "mainEntity": [
+{%- for part in faq_parts offset: 1 %}
+{%- assign qa = part | split: '</details>' | first | split: '</summary>' %}
+{%- assign fq = qa[0] | strip_html | split: ' ' | join: ' ' | replace: '&amp;', '&' | replace: '&nbsp;', ' ' %}
+{%- assign fa = qa[1] | strip_html | replace: '&nbsp;', ' ' | split: ' ' | join: ' ' | replace: '&amp;', '&' %}
+    { "@type": "Question", "name": {{ fq | jsonify }}, "acceptedAnswer": { "@type": "Answer", "text": {{ fa | jsonify }} } }{% unless forloop.last %},{% endunless %}
+{%- endfor %}
+  ]
+}
     </script>
 {%- endif %}
 

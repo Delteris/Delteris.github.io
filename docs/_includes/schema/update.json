@@ -1,6 +1,7 @@
 {%- assign L = page.lang | default: 'en' -%}
 {%- if L == 'en' %}{% assign px = '' %}{% else %}{% assign px = '/' | append: L %}{% endif -%}
 {%- if page.update_product == 'atlas' %}{% assign pname = 'Elenchon Atlas' %}{% else %}{% assign pname = 'Elenchon' %}{% endif -%}
+{%- if L == 'pt' %}{% assign t_home = 'Início' %}{% elsif L == 'es' %}{% assign t_home = 'Inicio' %}{% else %}{% assign t_home = 'Home' %}{% endif -%}
 {%- if L == 'pt' %}{% assign t_upd = 'Atualizações' %}{% elsif L == 'es' %}{% assign t_upd = 'Novedades' %}{% else %}{% assign t_upd = 'Updates' %}{% endif -%}
 {%- assign home = px | append: '/' | append: page.update_product | append: '/updates/' -%}
 {
@@ -9,7 +10,7 @@
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Delteris", "item": "{{ px | append: '/' | absolute_url }}" },
+        { "@type": "ListItem", "position": 1, "name": {{ t_home | jsonify }}, "item": "{{ px | append: '/' | absolute_url }}" },
         { "@type": "ListItem", "position": 2, "name": {{ pname | append: ' · ' | append: t_upd | jsonify }}, "item": "{{ home | absolute_url }}" },
         { "@type": "ListItem", "position": 3, "name": {{ page.heading | default: page.title | jsonify }}, "item": "{{ page.url | absolute_url }}" }
       ]

@@ -1,23 +1,17 @@
-{%- assign L = page.lang | default: 'en' -%}{%- if L == 'en' %}{% assign px = '' %}{% else %}{% assign px = '/' | append: L %}{% endif -%}{%- if L == 'pt' %}{% assign t_home = 'Início' %}{% elsif L == 'es' %}{% assign t_home = 'Inicio' %}{% else %}{% assign t_home = 'Home' %}{% endif -%}
+{%- comment %} Localised by the sx_* variables set in _layouts/default.html; the FAQPage is
+     generated there from the page's own visible FAQ. {%- endcomment %}
 {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": {{ t_home | jsonify }}, "item": "{{ px | append: '/' | absolute_url }}" },
-        { "@type": "ListItem", "position": 2, "name": "Atlas", "item": "{{ page.url | absolute_url }}" }
-      ]
-    },
-    {
       "@type": "SoftwareApplication",
-      "name": "Elenchon Atlas — WPS Management Software",
+      "name": {% if sx_L == 'en' %}"Elenchon Atlas — WPS Management Software"{% else %}{{ sx_name | jsonify }}{% endif %},
       "applicationCategory": "BusinessApplication",
       "applicationSubCategory": "WPS Management Software",
       "operatingSystem": "Cloud / Web",
-      "description": "Cloud WPS management software that keeps a shop's master WPS register current. It imports existing Welding Procedure Specification documents in Excel or PDF, extracts every field, and proposes human-reviewed edits that are patched — only once approved — into the shop's own workbook. Each register is versioned and exportable, with the linked WPQR and preliminary WPS (pWPS) chain kept alongside. Includes a library with structured detail and faceted search, a preview mode that compares the parse against the source document, and a heat-input helper. From Delteris — the standalone cloud WPS engine from the Elenchon platform.",
-      "keywords": "WPS management software, WPS software, WPS library, WPS register, WPS document management, welding procedure specification management, WPS import, WPS parser, WPS PDF import, WPS Excel import, organize WPS, find WPS by process",
-      "featureList": [
+      "description": {% if sx_L == 'en' %}"Cloud WPS management software that keeps a shop's master WPS register current. It imports existing Welding Procedure Specification documents in Excel or PDF, extracts every field, and proposes human-reviewed edits that are patched — only once approved — into the shop's own workbook. Each register is versioned and exportable, with the linked WPQR and preliminary WPS (pWPS) chain kept alongside. Includes a library with structured detail and faceted search, a preview mode that compares the parse against the source document, and a heat-input helper. From Delteris — the standalone cloud WPS engine from the Elenchon platform."{% else %}{{ sx_desc | jsonify }}{% endif %},
+{% if sx_L == 'en' %}      "keywords": "WPS management software, WPS software, WPS library, WPS register, WPS document management, welding procedure specification management, WPS import, WPS parser, WPS PDF import, WPS Excel import, organize WPS, find WPS by process",{% endif %}
+{% if sx_L == 'en' %}      "featureList": [
         "Import existing WPS documents from Excel and PDF with automatic field extraction",
         "Batch import of a whole WPS library at once",
         "Human-reviewed change-sets — nothing is written to the register without approval",
@@ -32,88 +26,26 @@
         "Automatic heat-input calculation on import (EN 1011-1) flagged for review",
         "Single-tenant deployment, a full history of changes, and configurable data retention",
         "Light WPS authoring and clean Excel export (authoring on roadmap)"
-      ],
+      ],{% endif %}
       "offers": {
         "@type": "Offer",
-        "url": "https://delteris.com/wps-management-software.html#pricing",
+        "url": "{{ sx_url }}#pricing",
         "price": "80.00",
         "priceCurrency": "EUR",
         "availability": "https://schema.org/InStock",
-        "description": "€80 per month, or €720 per year (effective €60/month) billed annually. Flat, fully published price. Includes 50 GB storage; additional 50 GB blocks €10/month. One tenancy per system.",
+        "description": {% if sx_L == 'pt' %}"80 € por mês, ou 720 € por ano (60 €/mês efetivos) com faturação anual. Preço fixo e totalmente publicado. Inclui 50 GB de armazenamento; blocos adicionais de 50 GB a 10 €/mês. Uma instância dedicada por sistema."{% elsif sx_L == 'es' %}"80 € al mes, o 720 € al año (60 €/mes efectivos) con facturación anual. Precio fijo y totalmente publicado. Incluye 50 GB de almacenamiento; bloques adicionales de 50 GB a 10 €/mes. Una instancia dedicada por sistema."{% else %}"€80 per month, or €720 per year (effective €60/month) billed annually. Flat, fully published price. Includes 50 GB storage; additional 50 GB blocks €10/month. One tenancy per system."{% endif %},
         "priceValidUntil": "2028-12-31"
       },
       "provider": {
         "@id": "https://delteris.com/#organization"
-      }
+      },
+      "inLanguage": "{{ sx_lang }}"
     },
     {
-      "@type": "FAQPage",
-      "@id": "https://delteris.com/wps-management-software.html#faq",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is WPS management software?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "WPS management software keeps your Welding Procedure Specifications organised, searchable and in one place. Atlas imports the WPS you already hold — Excel or PDF — extracts every field into structured records, proposes reviewed edits, and exports the register and its linked files on demand. Full guide: pWPS vs WPQR vs WPS."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "We already keep our WPS in a spreadsheet. Why change?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "A hand-maintained spreadsheet is stale the moment a WPS is revised, and nobody can say what it holds without scrolling it. Atlas reads every procedure into structured data and patches only the cells you approve, so your workbook survives — searchable, filterable by what’s inside each form, and versioned with rollback."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What do I need to bring to get started?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The WPS you already hold, in Excel or PDF — the original files, not scans. No template to fill in and nothing to re-key: onboarding starts with a few real documents, so the parser is proven on your form before you commit. Your register stays your file."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does Atlas create WPS, or just manage them?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Management: import, review, organise, filter, version and export, with WPQRs and pWPS alongside. Each WPS exports as a clean Excel workbook — the whole register too — and re-imports losslessly. A cloud builder for authoring is on the roadmap; shop-floor WPQR capture belongs to the Elenchon platform."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How much does it cost, and is it per user?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "€80 per month, or €720 a year — an effective €60 — billed annually. Flat and published, never per seat: your whole team works in one tenancy with admin, editor and read-only roles. 50 GB of storage is included; extra 50 GB blocks are €10/month. Onboarding and parser setup are included."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What support do I get at this price?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Direct support from the founders, included — no ticket queue, no paid tier. You email the people who built the app and hear back within a business day. Because the same people handle onboarding, a request that needs a parser tweak goes straight to whoever can make it. And it's in writing: if an issue you report goes 3 business days without a reply from our team, that month is half price; after 5, it's free — credited to your next invoice, or added to your term on the annual plan."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does Atlas track welder qualifications (WPQ)?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Each welder has a record with expiry and continuity tracked as separate dates and warned ahead, a colour-coded roster, signed-and-dated requalification, retained history and an optional certificate. Due dates appear on the dashboard, with email reminders you can switch on. Atlas records and warns; judging validity stays with you."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How is it different from the Elenchon platform?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Atlas is the cloud register on its own — procedures and qualifications organised, current and searchable. The full Elenchon platform adds shop-floor WPQR capture, continuity derived from logged work and full ISO 3834 / ASME IX traceability on an on-premise appliance you own. Same team, and Atlas is the natural starting point."
-          }
-        }
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": {{ sx_home_name | jsonify }}, "item": "{{ sx_home }}" },
+        { "@type": "ListItem", "position": 2, "name": "Atlas", "item": "{{ sx_url }}" }
       ]
     }
   ]

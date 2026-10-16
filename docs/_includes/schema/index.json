@@ -1,3 +1,5 @@
+{%- comment %} Localised by the sx_* variables set in _layouts/default.html; the FAQPage is
+     generated there from the page's own visible FAQ. {%- endcomment %}
 {
   "@context": "https://schema.org",
   "@graph": [
@@ -8,7 +10,7 @@
       "url": "https://delteris.com/",
       "logo": "https://delteris.com/static/DelterisCrest.webp",
       "email": "contact@delteris.com",
-      "description": "Welding compliance software built by founders from the shop floor: Elenchon Atlas (cloud WPS library and welder-qualification tracking, available now) and Elenchon (on-premise shop-floor weld traceability, launching Q1 2027). Also the creators of the Phrakton secure network overlay.",
+      "description": {% if sx_L == 'pt' %}"Software de conformidade de soldadura criado por fundadores vindos do chão de fábrica: Elenchon Atlas (biblioteca de WPS e acompanhamento das qualificações de soldadores na cloud, já disponível) e Elenchon (rastreabilidade de soldadura no chão de fábrica, on-premise, com lançamento no 1.º trimestre de 2027). Também os criadores da rede segura sobreposta Phrakton."{% elsif sx_L == 'es' %}"Software de cumplimiento normativo de soldadura creado por fundadores que vienen de la planta: Elenchon Atlas (biblioteca de WPS y seguimiento de cualificaciones de soldadores en la nube, ya disponible) y Elenchon (trazabilidad de soldadura en planta, on-premise, con lanzamiento en el primer trimestre de 2027). También creadores de la red superpuesta segura Phrakton."{% else %}"Welding compliance software built by founders from the shop floor: Elenchon Atlas (cloud WPS library and welder-qualification tracking, available now) and Elenchon (on-premise shop-floor weld traceability, launching Q1 2027). Also the creators of the Phrakton secure network overlay."{% endif %},
       "address": {
         "@type": "PostalAddress",
         "addressCountry": "PT"
@@ -46,16 +48,17 @@
     },
     {
       "@type": "WebPage",
-      "@id": "https://delteris.com/#webpage",
-      "url": "https://delteris.com/",
-      "name": "Delteris — Elenchon Atlas and Elenchon welding software",
-      "description": "Delteris makes welding compliance software: Elenchon Atlas, cloud WPS and welder-qualification management available now, and Elenchon, on-premise shop-floor weld traceability launching Q1 2027.",
+      "@id": "{{ sx_url }}#webpage",
+      "url": "{{ sx_url }}",
+      "name": {% if sx_L == 'en' %}"Delteris — Elenchon Atlas and Elenchon welding software"{% else %}{{ sx_name | jsonify }}{% endif %},
+      "description": {% if sx_L == 'en' %}"Delteris makes welding compliance software: Elenchon Atlas, cloud WPS and welder-qualification management available now, and Elenchon, on-premise shop-floor weld traceability launching Q1 2027."{% else %}{{ sx_desc | jsonify }}{% endif %},
       "isPartOf": {
-        "@id": "https://delteris.com/#website"
+        "@id": "{{ sx_url }}#website"
       },
       "publisher": {
-        "@id": "https://delteris.com/#organization"
-      }
+        "@id": "{{ sx_url }}#organization"
+      },
+      "inLanguage": "{{ sx_lang }}"
     },
     {
       "@type": "SoftwareApplication",
@@ -63,9 +66,9 @@
       "applicationCategory": "BusinessApplication",
       "operatingSystem": "Linux/Appliance",
       "applicationSubCategory": "Welding Management Software",
-      "description": "Elenchon is on-premise welding traceability and management software for fabrication shops, launching Q1 2027. It runs the WPS, WPQR and WPQ workflow, shop-floor work capture, project structure, equipment and consumables on a fully managed appliance on the customer's own hardware, and includes everything Elenchon Atlas does.",
-      "keywords": "welding management software, welding traceability software, welder qualification software, weld tracking software, WPS PQR WPQ software, welding equipment management software, welding machine calibration software, consumable inventory and filler metal traceability, ISO 3834 software, EN 1090 software, ASME IX software, on-premise welding software",
-      "featureList": [
+      "description": {% if sx_L == 'pt' %}"O Elenchon é software on-premise de rastreabilidade e gestão de soldadura para oficinas de fabricação, com lançamento no 1.º trimestre de 2027. Gere o fluxo de WPS, WPQR e WPQ, o registo de trabalho no chão de fábrica, a estrutura de projeto, os equipamentos e os consumíveis num appliance totalmente gerido, no hardware do próprio cliente, e inclui tudo o que o Elenchon Atlas faz."{% elsif sx_L == 'es' %}"Elenchon es software on-premise de trazabilidad y gestión de soldadura para talleres de fabricación, con lanzamiento en el primer trimestre de 2027. Gestiona el flujo de WPS, WPQR y WPQ, el registro de trabajo en planta, la estructura de proyecto, los equipos y los consumibles en un appliance totalmente gestionado, en el propio hardware del cliente, e incluye todo lo que hace Elenchon Atlas."{% else %}"Elenchon is on-premise welding traceability and management software for fabrication shops, launching Q1 2027. It runs the WPS, WPQR and WPQ workflow, shop-floor work capture, project structure, equipment and consumables on a fully managed appliance on the customer's own hardware, and includes everything Elenchon Atlas does."{% endif %},
+{% if sx_L == 'en' %}      "keywords": "welding management software, welding traceability software, welder qualification software, weld tracking software, WPS PQR WPQ software, welding equipment management software, welding machine calibration software, consumable inventory and filler metal traceability, ISO 3834 software, EN 1090 software, ASME IX software, on-premise welding software",{% endif %}
+{% if sx_L == 'en' %}      "featureList": [
         "Welder qualification workflow (WPS, WPQR, WPQ)",
         "6-month welder continuity tracking with expiry alerts",
         "Weld tracking and BOM import from Tekla/CAD",
@@ -73,17 +76,17 @@
         "Audit-ready ISO and ASME IX evidence",
         "On-premise appliance with full data sovereignty",
         "Zero-trust, post-quantum-safe remote access via Phrakton"
-      ],
+      ],{% endif %}
       "offers": {
         "@type": "Offer",
-        "url": "https://delteris.com/pricing.html",
+        "url": "https://delteris.com{{ sx_px }}/pricing.html",
         "availability": "https://schema.org/PreOrder",
         "availabilityStarts": "2027-01-01"
       },
       "provider": {
         "@id": "https://delteris.com/#organization"
       },
-      "url": "https://delteris.com/platform.html"
+      "url": "https://delteris.com{{ sx_px }}/platform.html"
     },
     {
       "@type": "SoftwareApplication",
@@ -91,28 +94,28 @@
       "applicationCategory": "BusinessApplication",
       "operatingSystem": "Cloud / Web",
       "applicationSubCategory": "WPS Management Software",
-      "description": "Elenchon Atlas is cloud software that keeps a fabrication shop's welding procedures and welder qualifications organised in one place: import WPS, pWPS and WPQR from Excel or PDF into structured records, search and compare them, and track each welder's qualifications with reminders before one lapses.",
-      "keywords": "WPS management software, welder qualification management software, WPQ tracking, WPS library, WPS import, welding procedure management, cloud welding software",
-      "featureList": [
+      "description": {% if sx_L == 'pt' %}"O Elenchon Atlas é software na cloud que mantém organizados num só lugar os procedimentos de soldadura e as qualificações dos soldadores de uma oficina de fabricação: importe WPS, pWPS e WPQR de Excel ou PDF para registos estruturados, pesquise-os e compare-os, e acompanhe as qualificações de cada soldador com lembretes antes de alguma caducar."{% elsif sx_L == 'es' %}"Elenchon Atlas es software en la nube que mantiene organizados en un solo lugar los procedimientos de soldadura y las cualificaciones de los soldadores de un taller de fabricación: importe WPS, pWPS y WPQR desde Excel o PDF a registros estructurados, búsquelos y compárelos, y siga las cualificaciones de cada soldador con recordatorios antes de que alguna caduque."{% else %}"Elenchon Atlas is cloud software that keeps a fabrication shop's welding procedures and welder qualifications organised in one place: import WPS, pWPS and WPQR from Excel or PDF into structured records, search and compare them, and track each welder's qualifications with reminders before one lapses."{% endif %},
+{% if sx_L == 'en' %}      "keywords": "WPS management software, welder qualification management software, WPQ tracking, WPS library, WPS import, welding procedure management, cloud welding software",{% endif %}
+{% if sx_L == 'en' %}      "featureList": [
         "WPS, pWPS and WPQR library with structured, searchable records",
         "Excel and PDF import with human-reviewed change-sets",
         "Welder qualification tracking with expiry and continuity clocks",
         "Email reminders before a welder qualification lapses",
         "Clean Excel register export"
-      ],
+      ],{% endif %}
       "offers": {
         "@type": "Offer",
-        "url": "https://delteris.com/wps-management-software.html#pricing",
+        "url": "https://delteris.com{{ sx_px }}/wps-management-software.html#pricing",
         "price": "80.00",
         "priceCurrency": "EUR",
         "availability": "https://schema.org/InStock",
         "priceValidUntil": "2028-12-31",
-        "description": "€80 per month, or €720 per year (effective €60/month) billed annually. Flat, fully published price with no per-seat fees. Includes 50 GB storage."
+        "description": {% if sx_L == 'pt' %}"80 € por mês, ou 720 € por ano (60 €/mês efetivos) com faturação anual. Preço fixo e totalmente publicado, sem taxas por utilizador. Inclui 50 GB de armazenamento."{% elsif sx_L == 'es' %}"80 € al mes, o 720 € al año (60 €/mes efectivos) con facturación anual. Precio fijo y totalmente publicado, sin tarifas por usuario. Incluye 50 GB de almacenamiento."{% else %}"€80 per month, or €720 per year (effective €60/month) billed annually. Flat, fully published price with no per-seat fees. Includes 50 GB storage."{% endif %}
       },
       "provider": {
         "@id": "https://delteris.com/#organization"
       },
-      "url": "https://delteris.com/wps-management-software.html"
+      "url": "https://delteris.com{{ sx_px }}/wps-management-software.html"
     }
   ]
 }

@@ -1,15 +1,17 @@
+{%- comment %} Localised by the sx_* variables set in _layouts/default.html; the FAQPage is
+     generated there from the page's own visible FAQ. {%- endcomment %}
 {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "SoftwareApplication",
-      "name": "Elenchon — Welding Traceability Software",
+      "name": {% if sx_L == 'en' %}"Elenchon — Welding Traceability Software"{% else %}{{ sx_name | jsonify }}{% endif %},
       "applicationCategory": "BusinessApplication",
       "applicationSubCategory": "Welding Traceability Software",
       "operatingSystem": "Linux/Appliance",
-      "description": "On-premise welding traceability software that records the full chain of custody behind every weld — base-material heat numbers, attributed shop-floor capture, the qualified procedure and welder, and version-locked records — producing audit-ready ISO 3834, EN 1090 and ASME IX evidence, all on hardware you own.",
-      "keywords": "welding traceability software, weld tracking software, weld traceability, heat number traceability, material traceability welding, weld chain of custody software",
-      "featureList": [
+      "description": {% if sx_L == 'en' %}"On-premise welding traceability software that records the full chain of custody behind every weld — base-material heat numbers, attributed shop-floor capture, the qualified procedure and welder, and version-locked records — producing audit-ready ISO 3834, EN 1090 and ASME IX evidence, all on hardware you own."{% else %}{{ sx_desc | jsonify }}{% endif %},
+{% if sx_L == 'en' %}      "keywords": "welding traceability software, weld tracking software, weld traceability, heat number traceability, material traceability welding, weld chain of custody software",{% endif %}
+{% if sx_L == 'en' %}      "featureList": [
         "Heat-number capture linked to MTRs and propagated down the project tree",
         "Attributed, timestamped shop-floor capture",
         "Welds linked to their WPS and the welder's WPQ",
@@ -17,70 +19,17 @@
         "Version-pinned, locked records for audit-grade integrity",
         "Audit-ready ISO 3834, EN 1090 and ASME IX evidence",
         "On-premise appliance with full data sovereignty"
-      ],
+      ],{% endif %}
       "offers": {
         "@type": "Offer",
-        "url": "https://delteris.com/pricing.html",
+        "url": "https://delteris.com{{ sx_px }}/pricing.html",
         "availability": "https://schema.org/PreOrder",
         "availabilityStarts": "2027-01-01"
       },
       "provider": {
         "@id": "https://delteris.com/#organization"
-      }
-    },
-    {
-      "@type": "FAQPage",
-      "@id": "https://delteris.com/welding-traceability-software.html#faq",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How does heat-number traceability work?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Base material is captured with its heat number and linked to its parent MTR, then propagated down the project tree so every part and assembly built from it inherits the link — giving you material traceability from goods-in to the finished weld without duplicating data everywhere. Full guide: how heat-number traceability works."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can the traceability record be edited after the fact?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The history is preserved. A captured record is versioned as it lands; if something needs correcting, the correction is versioned too and stays visible to managers, and any node holding captured work is protected from accidental overwrites. So the chain keeps its history — which is what makes it audit-grade."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does it help with ISO 3834 and ASME IX audits?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Because traceability is captured and version-pinned as work happens, it doubles as audit evidence for codes such as ISO 3834, EN 1090 and ASME IX — following any weld to its materials, welder and procedure is instant."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How is weld traceability different from weld tracking?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "They are usually the same idea: \"weld tracking\" tends to emphasise following a weld's status through production, while \"traceability\" emphasises the full evidence chain behind it. Elenchon does both — it tracks work as it happens and preserves the traceable chain that proves it."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is welding traceability software?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "It is software that records the full chain of custody behind every weld — the base material and its heat number, the person who welded it, the procedure they followed, and the result — so any joint can be traced from finished piece back to raw material, and forward again. Elenchon runs that traceability on-premise, on hardware you own."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is an on-premise chain of custody a compromise versus cloud?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "For a chain of custody it is the stronger position: no third-party processor between you and the record an auditor asks for, and no cross-border question over where it lives. Reach is unaffected — authorised staff, auditors included, connect from anywhere through Phrakton."
-          }
-        }
-      ]
+      },
+      "inLanguage": "{{ sx_lang }}"
     }
   ]
 }

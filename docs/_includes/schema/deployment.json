@@ -1,21 +1,41 @@
+{%- comment %} Localised by the sx_* variables set in _layouts/default.html; the FAQPage is
+     generated there from the page's own visible FAQ. {%- endcomment %}
 {
-      "@context": "https://schema.org",
-      "@graph": [
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "name": {% if sx_L == 'en' %}"Deployment"{% else %}{{ sx_name | jsonify }}{% endif %},
+      "url": "{{ sx_url }}",
+      "description": {% if sx_L == 'en' %}"How an Elenchon deployment works: scoping session, on-site installation, and onboarding & go-live."{% else %}{{ sx_desc | jsonify }}{% endif %},
+      "publisher": {
+        "@id": "https://delteris.com/#organization"
+      },
+      "inLanguage": "{{ sx_lang }}"
+    },
+    {
+      "@type": "HowTo",
+      "name": {% if sx_L == 'pt' %}"Como funciona uma implementação do Elenchon"{% elsif sx_L == 'es' %}"Cómo funciona una implantación de Elenchon"{% else %}"How an Elenchon deployment works"{% endif %},
+      "step": [
         {
-          "@type": "WebPage",
-          "name": "Deployment",
-          "url": "https://delteris.com/deployment.html",
-          "description": "How an Elenchon deployment works: scoping session, on-site installation, and onboarding & go-live.",
-          "publisher": { "@id": "https://delteris.com/#organization" }
+          "@type": "HowToStep",
+          "position": 1,
+          "name": {% if sx_L == 'pt' %}"Sessão de Levantamento"{% elsif sx_L == 'es' %}"Sesión de Levantamiento"{% else %}"Scoping Session"{% endif %},
+          "text": {% if sx_L == 'pt' %}"Uma chamada focada com os fundadores para mapear estruturas de projeto, requisitos de conformidade e fluxos de trabalho no chão de fábrica."{% elsif sx_L == 'es' %}"Una llamada centrada con los fundadores para mapear estructuras de proyecto, requisitos de cumplimiento y flujos de trabajo en planta."{% else %}"A focused call with the founders to map project structures, compliance requirements, and floor workflows."{% endif %}
         },
         {
-          "@type": "HowTo",
-          "name": "How an Elenchon deployment works",
-          "step": [
-            { "@type": "HowToStep", "position": 1, "name": "Scoping Session", "text": "A focused call with the founders to map project structures, compliance requirements, and floor workflows." },
-            { "@type": "HowToStep", "position": 2, "name": "On-Site Installation", "text": "The Delteris team delivers and configures the hardware-secured server appliance directly at your facility." },
-            { "@type": "HowToStep", "position": 3, "name": "Onboarding & Go-Live", "text": "First projects imported, roles and templates configured, and floor personnel trained — production continues uninterrupted." }
-          ]
+          "@type": "HowToStep",
+          "position": 2,
+          "name": {% if sx_L == 'pt' %}"Instalação no Local"{% elsif sx_L == 'es' %}"Instalación en Local"{% else %}"On-Site Installation"{% endif %},
+          "text": {% if sx_L == 'pt' %}"A equipa Delteris entrega e configura o appliance de servidor, protegido por hardware, diretamente nas suas instalações."{% elsif sx_L == 'es' %}"El equipo de Delteris entrega y configura el appliance de servidor, protegido por hardware, directamente en sus instalaciones."{% else %}"The Delteris team delivers and configures the hardware-secured server appliance directly at your facility."{% endif %}
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": {% if sx_L == 'pt' %}"Integração & Arranque"{% elsif sx_L == 'es' %}"Incorporación & Puesta en Marcha"{% else %}"Onboarding & Go-Live"{% endif %},
+          "text": {% if sx_L == 'pt' %}"Primeiros projetos importados, funções e modelos configurados e pessoal do chão de fábrica formado — a produção continua sem interrupções."{% elsif sx_L == 'es' %}"Primeros proyectos importados, roles y plantillas configurados y personal de planta formado — la producción continúa sin interrupciones."{% else %}"First projects imported, roles and templates configured, and floor personnel trained — production continues uninterrupted."{% endif %}
         }
       ]
     }
+  ]
+}
