@@ -1,77 +1,34 @@
+{%- comment %} Localised by the sx_* variables set in _layouts/default.html; the FAQPage is
+     generated there from the page's own visible FAQ. {%- endcomment %}
 {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "SoftwareApplication",
-      "name": "Elenchon — On-Premise & Offline Welding Software",
+      "name": {% if sx_L == 'en' %}"Elenchon — On-Premise & Offline Welding Software"{% else %}{{ sx_name | jsonify }}{% endif %},
       "applicationCategory": "BusinessApplication",
       "applicationSubCategory": "On-Premise Welding Software",
       "operatingSystem": "Linux/Appliance",
-      "description": "On-premise, offline-capable welding software delivered as a containerized appliance installed in your facility: full data ownership, no forced cloud updates or outages, offline work capture, automated local backups, and flat published pricing with no per-seat cloud fees.",
-      "keywords": "on-premise welding software, offline welding software, self-hosted welding software, welding data sovereignty, sovereign welding software, cloud welding software alternative",
-      "featureList": [
+      "description": {% if sx_L == 'en' %}"On-premise, offline-capable welding software delivered as a containerized appliance installed in your facility: full data ownership, no forced cloud updates or outages, offline work capture, automated local backups, and flat published pricing with no per-seat cloud fees."{% else %}{{ sx_desc | jsonify }}{% endif %},
+{% if sx_L == 'en' %}      "keywords": "on-premise welding software, offline welding software, self-hosted welding software, welding data sovereignty, sovereign welding software, cloud welding software alternative",{% endif %}
+{% if sx_L == 'en' %}      "featureList": [
         "Containerized on-premise appliance installed in your facility",
         "Absolute data ownership with permanent view-only access after cancellation",
         "Offline-capable work capture with automatic sync",
         "Automated local backups to isolated physical storage",
         "Flat published pricing per appliance with hardware passed through at cost",
         "Zero-trust, post-quantum-safe remote access via Phrakton with no open inbound ports"
-      ],
+      ],{% endif %}
       "offers": {
         "@type": "Offer",
-        "url": "https://delteris.com/pricing.html",
+        "url": "https://delteris.com{{ sx_px }}/pricing.html",
         "availability": "https://schema.org/PreOrder",
         "availabilityStarts": "2027-01-01"
       },
       "provider": {
         "@id": "https://delteris.com/#organization"
-      }
-    },
-    {
-      "@type": "FAQPage",
-      "@id": "https://delteris.com/on-premise-welding-software.html#faq",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Does it work offline?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes — offline capture is a first-class mode, not a fallback. Entries are held in a durable on-device queue and sync in order the moment the connection returns, so nothing is lost in a Wi-Fi dead zone. The offline document viewer, for a WPS or a plan, is on every plan."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How does on-premise affect cost?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "It makes cost predictable: one published flat rate per appliance with workers included, extra seats at €9/month, hardware passed through at cost, and every add-on in plain euros — so total cost of ownership can be modelled up front."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What happens to our data if we cancel?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "It stays with you. The data is on your physical hardware, and you keep view-only access to all historical records for audits. There is no lock-in and no exit fee."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can staff still access it remotely?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, securely. Authorised staff — and even auditors — connect through Phrakton, our secure network overlay, while the appliance stays off the public internet — remote reach without exposing your factory."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Isn't on-premise more to maintain?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Not the way we run it: your only job is to keep the appliance powered on, and we handle the rest, as described under No Cloud to Depend On. For how the managed model works in general, read managed on-premise, explained."
-          }
-        }
-      ]
+      },
+      "inLanguage": "{{ sx_lang }}"
     }
   ]
 }

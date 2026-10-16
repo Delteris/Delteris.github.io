@@ -1,15 +1,17 @@
+{%- comment %} Localised by the sx_* variables set in _layouts/default.html; the FAQPage is
+     generated there from the page's own visible FAQ. {%- endcomment %}
 {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "SoftwareApplication",
-      "name": "Elenchon — Welding Equipment & Calibration Management Software",
+      "name": {% if sx_L == 'en' %}"Elenchon — Welding Equipment & Calibration Management Software"{% else %}{{ sx_name | jsonify }}{% endif %},
       "applicationCategory": "BusinessApplication",
       "applicationSubCategory": "Welding Equipment Management Software",
       "operatingSystem": "Linux/Appliance",
-      "description": "On-premise welding equipment management software that tracks machine certification and calibration, manages consumable batch inventory and filler-metal traceability, runs a shop-floor maintenance hub, and keeps equipment records audit-ready for ISO 3834, EN 1090 and ASME IX.",
-      "keywords": "welding equipment management software, welding machine calibration software, welding equipment calibration tracking, machine certification tracking software, welding consumable inventory software, filler metal traceability software, welding equipment maintenance software, ISO 17662 calibration",
-      "featureList": [
+      "description": {% if sx_L == 'en' %}"On-premise welding equipment management software that tracks machine certification and calibration, manages consumable batch inventory and filler-metal traceability, runs a shop-floor maintenance hub, and keeps equipment records audit-ready for ISO 3834, EN 1090 and ASME IX."{% else %}{{ sx_desc | jsonify }}{% endif %},
+{% if sx_L == 'en' %}      "keywords": "welding equipment management software, welding machine calibration software, welding equipment calibration tracking, machine certification tracking software, welding consumable inventory software, filler metal traceability software, welding equipment maintenance software, ISO 17662 calibration",{% endif %}
+{% if sx_L == 'en' %}      "featureList": [
         "Machine certification and calibration tracking with renewal alerts",
         "Universal equipment register for any machine, not just welding gear",
         "Consumable batch inventory with storage and reheat rules",
@@ -17,70 +19,17 @@
         "Five-level shop-floor maintenance hub with role-gated critical tiers",
         "Equipment records audit-ready for ISO 3834, EN 1090 and ASME IX",
         "On-premise appliance with full data sovereignty"
-      ],
+      ],{% endif %}
       "offers": {
         "@type": "Offer",
-        "url": "https://delteris.com/pricing.html",
+        "url": "https://delteris.com{{ sx_px }}/pricing.html",
         "availability": "https://schema.org/PreOrder",
         "availabilityStarts": "2027-01-01"
       },
       "provider": {
         "@id": "https://delteris.com/#organization"
-      }
-    },
-    {
-      "@type": "FAQPage",
-      "@id": "https://delteris.com/welding-equipment-management-software.html#faq",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How does calibration and certification tracking work?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Every machine carries its own certification and calibration schedule with attached documents and automated renewal alerts, so nothing runs past its due date unnoticed. It supports the calibration of welding equipment under ISO 17662 and the equipment records expected by ISO 3834."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can it trace consumables and filler metals by batch?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Consumables are logged at batch level with storage and reheat rules and low-stock alerts, and heat numbers are captured, linked to their parent MTRs, and propagated down the project tree — so material traceability runs from goods-in to the finished weld."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does the maintenance hub work from the floor?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Workers raise maintenance requests from the floor app across five priority levels — the critical tiers locked to authorised roles — and offline too, syncing the moment the appliance is back in reach. Maintenance staff run the whole workflow from the management app, with role-filtered notifications."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Which standards does this help with?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Equipment and consumable control underpins ISO 3834, EN 1090 and ASME IX, plus ISO 17662 for calibrating welding equipment. Elenchon keeps the underlying records attributed and locked as they are captured, so audit evidence is instant."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is equipment management included in the Standard platform?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes — on the Standard plan it is built into Elenchon, not a paid add-on. One platform: welding management with shop-floor work capture, project structure and BOM import, weld traceability and the WPS/WPQR/WPQ workflow, with machines, calibration and consumables in the same system."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is welding equipment management software?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Welding equipment management software is the system that tracks the machines, tools and consumables on a fabrication floor and the records proving they're fit for use — calibration and certification status, maintenance history, and consumable batch traceability. Elenchon runs that whole register on-premise, so equipment evidence stays on hardware you own."
-          }
-        }
-      ]
+      },
+      "inLanguage": "{{ sx_lang }}"
     }
   ]
 }

@@ -1,13 +1,15 @@
+{%- comment %} Localised by the sx_* variables set in _layouts/default.html; the FAQPage is
+     generated there from the page's own visible FAQ. {%- endcomment %}
 {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "Article",
-      "@id": "https://delteris.com/resources/managed-on-premise-software/#article",
-      "headline": "Managed On-Premise: On-Premise Without the IT Burden",
-      "description": "What managed on-premise software is and how it differs from a classic self-hosted server: installed and maintained by the vendor, remote access without open ports, offline capture — and when cloud is still the better fit.",
-      "inLanguage": "en",
-      "mainEntityOfPage": "https://delteris.com/resources/managed-on-premise-software/",
+      "@id": "{{ sx_url }}#article",
+      "headline": {% if sx_L == 'en' %}"Managed On-Premise: On-Premise Without the IT Burden"{% else %}{{ sx_name | jsonify }}{% endif %},
+      "description": {% if sx_L == 'en' %}"What managed on-premise software is and how it differs from a classic self-hosted server: installed and maintained by the vendor, remote access without open ports, offline capture — and when cloud is still the better fit."{% else %}{{ sx_desc | jsonify }}{% endif %},
+      "inLanguage": "{{ sx_lang }}",
+      "mainEntityOfPage": "{{ sx_url }}",
       "datePublished": "2026-07-31",
       "dateModified": "2026-09-23",
       "author": {
@@ -19,44 +21,6 @@
         "@id": "https://delteris.com/#organization"
       },
       "image": "https://delteris.com/static/DelterisCrest.webp"
-    },
-    {
-      "@type": "FAQPage",
-      "@id": "https://delteris.com/resources/managed-on-premise-software/#faq",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Do I need IT staff for managed on-premise software?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No. The vendor installs, updates and repairs the appliance remotely. Your part is keeping it powered and connected."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is on-premise more secure than cloud?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Not automatically. It reduces exposure when the appliance has no open ports and data never leaves the building — but the implementation matters more than the label. Ask how remote access and updates are secured."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Who owns the hardware?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "That varies by vendor. Ask whether you buy the hardware outright, lease it or rent it inside the subscription — and who owns the data on it if you leave."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What happens if I cancel?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Ask for it in writing: whether there is an exit fee, and whether you keep at least view-only access to your historical records for audits."
-          }
-        }
-      ]
     }
   ]
 }

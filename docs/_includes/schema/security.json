@@ -1,12 +1,17 @@
+{%- comment %} Localised by the sx_* variables set in _layouts/default.html; the FAQPage is
+     generated there from the page's own visible FAQ. {%- endcomment %}
 {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "WebPage",
-          "name": "Security — Phrakton Zero-Trust Network Overlay",
-          "url": "https://delteris.com/security.html",
-          "description": "Phrakton is Delteris's zero-trust network overlay built on OpenZiti, providing the invisible-factory security layer behind Elenchon.",
-          "publisher": { "@id": "https://delteris.com/#organization" }
-        }
-      ]
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "name": {% if sx_L == 'en' %}"Security — Phrakton Zero-Trust Network Overlay"{% else %}{{ sx_name | jsonify }}{% endif %},
+      "url": "{{ sx_url }}",
+      "description": {% if sx_L == 'en' %}"Phrakton is Delteris's zero-trust network overlay built on OpenZiti, providing the invisible-factory security layer behind Elenchon."{% else %}{{ sx_desc | jsonify }}{% endif %},
+      "publisher": {
+        "@id": "https://delteris.com/#organization"
+      },
+      "inLanguage": "{{ sx_lang }}"
     }
+  ]
+}

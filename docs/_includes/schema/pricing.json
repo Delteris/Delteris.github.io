@@ -1,26 +1,29 @@
+{%- comment %} Localised by the sx_* variables set in _layouts/default.html; the FAQPage is
+     generated there from the page's own visible FAQ. {%- endcomment %}
 {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "WebPage",
-      "name": "Pricing",
-      "url": "https://delteris.com/pricing.html",
-      "description": "Published, flat-rate pricing for Elenchon on-premise welding traceability.",
+      "name": {% if sx_L == 'en' %}"Pricing"{% else %}{{ sx_name | jsonify }}{% endif %},
+      "url": "{{ sx_url }}",
+      "description": {% if sx_L == 'en' %}"Published, flat-rate pricing for Elenchon on-premise welding traceability."{% else %}{{ sx_desc | jsonify }}{% endif %},
       "publisher": {
         "@id": "https://delteris.com/#organization"
-      }
+      },
+      "inLanguage": "{{ sx_lang }}"
     },
     {
       "@type": "Product",
       "name": "Elenchon Lite",
-      "description": "On-premise welding traceability for smaller fabrication shops: work capture, project tree and flowchart views, the full WPS/WPQR/WPQ qualification workflow, audit-ready ISO and ASME IX evidence, post-quantum-safe networking and local backups. Includes 20 workers, expandable by up to two blocks of ten.",
+      "description": {% if sx_L == 'pt' %}"Rastreabilidade de soldadura on-premise para oficinas de fabricação mais pequenas: registo de trabalho, vistas de árvore e fluxograma do projeto, o fluxo completo de qualificação WPS/WPQR/WPQ, evidência ISO e ASME IX pronta para auditoria, rede segura pós-quântica e cópias de segurança locais. Inclui 20 trabalhadores, expansível com até dois blocos de dez."{% elsif sx_L == 'es' %}"Trazabilidad de soldadura on-premise para talleres de fabricación más pequeños: registro de trabajo, vistas de árbol y diagrama de flujo del proyecto, el flujo completo de cualificación WPS/WPQR/WPQ, evidencias ISO y ASME IX listas para auditoría, red segura poscuántica y copias de seguridad locales. Incluye 20 trabajadores, ampliable con hasta dos bloques de diez."{% else %}"On-premise welding traceability for smaller fabrication shops: work capture, project tree and flowchart views, the full WPS/WPQR/WPQ qualification workflow, audit-ready ISO and ASME IX evidence, post-quantum-safe networking and local backups. Includes 20 workers, expandable by up to two blocks of ten."{% endif %},
       "brand": {
         "@type": "Brand",
         "name": "Delteris"
       },
       "offers": {
         "@type": "Offer",
-        "url": "https://delteris.com/pricing.html",
+        "url": "https://delteris.com{{ sx_px }}/pricing.html",
         "price": "390.00",
         "priceCurrency": "EUR",
         "availability": "https://schema.org/PreOrder",
@@ -29,21 +32,21 @@
           "@type": "UnitPriceSpecification",
           "price": "390.00",
           "priceCurrency": "EUR",
-          "unitText": "per appliance, per month, excluding VAT"
+          "unitText": {% if sx_L == 'pt' %}"por appliance, por mês, sem IVA"{% elsif sx_L == 'es' %}"por appliance, al mes, sin IVA"{% else %}"per appliance, per month, excluding VAT"{% endif %}
         }
       }
     },
     {
       "@type": "Product",
       "name": "Elenchon Standard",
-      "description": "The complete Elenchon on-premise welding traceability platform: all six capability pillars, on-site scoping, installation and floor training, audit-ready ISO & ASME IX evidence, post-quantum-safe networking, and direct founder support. Includes 50 workers and unlimited worker expansion.",
+      "description": {% if sx_L == 'pt' %}"A plataforma completa de rastreabilidade de soldadura on-premise Elenchon: os seis pilares de funcionalidades, levantamento no local, instalação e formação no chão de fábrica, evidência ISO e ASME IX pronta para auditoria, rede segura pós-quântica e suporte direto dos fundadores. Inclui 50 trabalhadores e expansão ilimitada de trabalhadores."{% elsif sx_L == 'es' %}"La plataforma completa de trazabilidad de soldadura on-premise Elenchon: los seis pilares de funcionalidades, levantamiento in situ, instalación y formación en planta, evidencias ISO y ASME IX listas para auditoría, red segura poscuántica y soporte directo de los fundadores. Incluye 50 trabajadores y ampliación ilimitada de trabajadores."{% else %}"The complete Elenchon on-premise welding traceability platform: all six capability pillars, on-site scoping, installation and floor training, audit-ready ISO & ASME IX evidence, post-quantum-safe networking, and direct founder support. Includes 50 workers and unlimited worker expansion."{% endif %},
       "brand": {
         "@type": "Brand",
         "name": "Delteris"
       },
       "offers": {
         "@type": "Offer",
-        "url": "https://delteris.com/pricing.html",
+        "url": "https://delteris.com{{ sx_px }}/pricing.html",
         "price": "790.00",
         "priceCurrency": "EUR",
         "availability": "https://schema.org/PreOrder",
@@ -52,86 +55,9 @@
           "@type": "UnitPriceSpecification",
           "price": "790.00",
           "priceCurrency": "EUR",
-          "unitText": "per appliance, per month, excluding VAT"
+          "unitText": {% if sx_L == 'pt' %}"por appliance, por mês, sem IVA"{% elsif sx_L == 'es' %}"por appliance, al mes, sin IVA"{% else %}"per appliance, per month, excluding VAT"{% endif %}
         }
       }
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "When does billing start?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Not at deployment — installation and training are the only charges up front. The subscription starts after go-live, and your first invoice falls on the 1st or the 15th, whichever is furthest from that date. Twelve invoices a year, one per calendar month: no 28-day cycles, no thirteenth invoice."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I change my plan later?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, and it costs nothing. Upgrades, downgrades and add-ons are applied remotely over the Phrakton fabric — give us 15 days’ notice. Upgrades apply immediately; downgrades take effect at your next billing cycle."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can one appliance run multiple factories?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No — each facility gets its own appliance, with its records isolated and separately backed up. Two facilities, two appliances. The exception: a genuinely small satellite operation may run remotely off an existing appliance, at our discretion — tell us before deployment. Project, seasonal and field work is covered by the Remote Access Module instead."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How large a floor does Lite cover?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Lite includes 20 workers and takes up to two expansion blocks of ten — a 40-worker ceiling. Past that you move to Standard, which includes 50 and expands without limit. Moving up is a remote plan change, not a re-installation."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What comes with a worker block?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "€90 per month adds ten workers, and every block carries 20 GB of recurring remote bandwidth at no extra charge. If you need more than that, bandwidth is €25 per 100 GB."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Will we need to buy bandwidth?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Almost certainly not. The allowance included with the Remote Access Module and each worker block is sized for everyday remote use, and a floor working over the fabric daily stays well inside it. Extra bandwidth exists for genuine outliers."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What does installation cost?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Standard is €1,700 all in — €850 deployment and €850 floor training, quoted as one line. Lite is a single €950 package covering both, lower for its one on-site trip versus two. Extra training sessions are €500. Hardware is passed through at cost — roughly €300–€400 — with zero markup."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What if the fabric goes down?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The fabric is the access path to your appliance, so its uptime is our responsibility and it is in writing: 99.9% monthly, with automatic credits on any shortfall — 10% below 99.9%, 25% below 99%, 50% below 97%, and the month free below 89.9%. See the security architecture →"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What happens if we cancel?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "There is no lock-in and no exit fee. The appliance is yours and the data never left it, so you keep view-only access to your historical records for audits."
-          }
-        }
-      ]
     }
   ]
 }

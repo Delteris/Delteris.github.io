@@ -1,86 +1,35 @@
+{%- comment %} Localised by the sx_* variables set in _layouts/default.html; the FAQPage is
+     generated there from the page's own visible FAQ. {%- endcomment %}
 {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "SoftwareApplication",
-      "name": "Elenchon Atlas — WPS Review & Approval Software",
+      "name": {% if sx_L == 'en' %}"Elenchon Atlas — WPS Review & Approval Software"{% else %}{{ sx_name | jsonify }}{% endif %},
       "applicationCategory": "BusinessApplication",
       "applicationSubCategory": "WPS Management Software",
       "operatingSystem": "Cloud",
-      "description": "Cloud WPS review-and-approval software: every import queues as a change-set showing current value beside new value, cell by cell, with low-confidence reads flagged, drift detection between library and register, a configurable approval bar, and only approved cells patched into your own workbook.",
-      "keywords": "WPS review software, WPS approval workflow, WPS change management, human-reviewed register edits, WPS register control, WPS drift detection",
-      "featureList": [
+      "description": {% if sx_L == 'en' %}"Cloud WPS review-and-approval software: every import queues as a change-set showing current value beside new value, cell by cell, with low-confidence reads flagged, drift detection between library and register, a configurable approval bar, and only approved cells patched into your own workbook."{% else %}{{ sx_desc | jsonify }}{% endif %},
+{% if sx_L == 'en' %}      "keywords": "WPS review software, WPS approval workflow, WPS change management, human-reviewed register edits, WPS register control, WPS drift detection",{% endif %}
+{% if sx_L == 'en' %}      "featureList": [
         "Cell-by-cell change-set showing current value versus new value",
         "Inline correction and add-a-row before approval",
         "Low-confidence and computed reads flagged in amber",
         "Configurable approval bar: review all, review uncertain only, or auto-apply",
         "Drift detection between library documents and the register with reviewed re-sync",
         "Only approved cells patched into your own workbook; every change-set versioned"
-      ],
+      ],{% endif %}
       "offers": {
         "@type": "Offer",
         "price": "80",
         "priceCurrency": "EUR",
-        "url": "https://delteris.com/wps-management-software.html#pricing",
+        "url": "https://delteris.com{{ sx_px }}/wps-management-software.html#pricing",
         "availability": "https://schema.org/InStock"
       },
       "provider": {
         "@id": "https://delteris.com/#organization"
-      }
-    },
-    {
-      "@type": "FAQPage",
-      "@id": "https://delteris.com/wps-review-approval-software.html#faq",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Does an import change my register automatically?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Only if you let it. By default every import queues as a proposed change-set — current value beside new, cell by cell — and you approve what lands. Raise the bar to review every value, or lower it to auto-apply with versioning to undo. Only approved cells are patched into your workbook."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "A big import has hundreds of cells. Do I have to check every one?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No — the parser flags its own uncertainty. Any cell it was unsure of, or a heat input it computed, is shaded amber and surfaced for a look; confident reads stay quiet. Your attention goes where it is needed rather than over every cell."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I correct a value during review?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Fix any value inline, or add a row for a field the parser missed, then approve. What lands is what you signed off on — you're never forced to accept the parser's raw read or reject the whole set."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What happens if a WPS changes after its values landed?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Drift detection catches it: the app tells you the register is out of sync with the library and offers to re-sync the affected rows as a fresh change-set, reviewed and approved like any other — the sheet never quietly drifts from the documents behind it."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does it rebuild my whole spreadsheet?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No. Atlas patches only the approved cells into your own workbook and leaves everything else exactly as you had it. Your file is never regenerated from a model, and every approved change-set is versioned so you can roll back."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What if an import has nothing to change, only something to verify?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "It's closed with a \"mark reviewed\" rather than an approval that would write an identical new version — so a verification-only change-set doesn't leave you stuck between approving a change that isn't there and rejecting a correct read."
-          }
-        }
-      ]
+      },
+      "inLanguage": "{{ sx_lang }}"
     }
   ]
 }

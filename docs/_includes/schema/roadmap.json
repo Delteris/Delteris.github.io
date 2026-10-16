@@ -1,24 +1,59 @@
+{%- comment %} Localised by the sx_* variables set in _layouts/default.html; the FAQPage is
+     generated there from the page's own visible FAQ. {%- endcomment %}
 {
-      "@context": "https://schema.org",
-      "@graph": [
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "name": {% if sx_L == 'en' %}"Product Roadmap"{% else %}{{ sx_name | jsonify }}{% endif %},
+      "url": "{{ sx_url }}",
+      "description": {% if sx_L == 'en' %}"Elenchon's development plan following deployment: Q1 2027 go-live, months 1-5 of refinement in real use, and a major feature delivery at month 6."{% else %}{{ sx_desc | jsonify }}{% endif %},
+      "publisher": {
+        "@id": "https://delteris.com/#organization"
+      },
+      "inLanguage": "{{ sx_lang }}"
+    },
+    {
+      "@type": "ItemList",
+      "name": {% if sx_L == 'pt' %}"Marcos do roteiro do Elenchon"{% elsif sx_L == 'es' %}"Hitos de la hoja de ruta de Elenchon"{% else %}"Elenchon product roadmap milestones"{% endif %},
+      "itemListElement": [
         {
-          "@type": "WebPage",
-          "name": "Product Roadmap",
-          "url": "https://delteris.com/roadmap.html",
-          "description": "Elenchon's development plan following deployment: Q1 2027 go-live, months 1-5 of refinement in real use, and a major feature delivery at month 6.",
-          "publisher": { "@id": "https://delteris.com/#organization" }
+          "@type": "ListItem",
+          "position": 1,
+          "name": {% if sx_L == 'pt' %}"Implementação & Arranque (1.º trimestre de 2027)"{% elsif sx_L == 'es' %}"Implantación & Puesta en Marcha (primer trimestre de 2027)"{% else %}"Deployment & Rollout (Q1 2027)"{% endif %},
+          "description": {% if sx_L == 'pt' %}"Instalação e configuração no local do servidor, com formação por função e os primeiros registos de WPS, qualificações, tipos de trabalho e estruturas de projeto introduzidos em conjunto com a sua equipa."{% elsif sx_L == 'es' %}"Instalación y configuración in situ del servidor local, con formación por rol y los primeros registros de WPS, cualificaciones, tipos de trabajo y estructuras de proyecto introducidos junto a su equipo."{% else %}"On-site installation and configuration of the local server, with role-based training and the first WPS records, qualifications, work types and project structures entered alongside your team."{% endif %}
         },
         {
-          "@type": "ItemList",
-          "name": "Elenchon product roadmap milestones",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Deployment & Rollout (Q1 2027)", "description": "On-site installation and configuration of the local server, with role-based training and the first WPS records, qualifications, work types and project structures entered alongside your team." },
-            { "@type": "ListItem", "position": 2, "name": "Refinement in Real Use (Months 1-5)", "description": "Continuous UI and workflow refinement, feature tuning in response to real use, and new document templates and export formats on request." },
-            { "@type": "ListItem", "position": 3, "name": "Granular NDT Tracking (Month 6, Standard tier)", "description": "Deep, integrated Non-Destructive Testing tracking delivered natively to Standard users — test requests, results, and their link to the specific joint and repair cycle." },
-            { "@type": "ListItem", "position": 4, "name": "PWHT Cycle Tracking (Month 6, Standard tier)", "description": "Post-weld heat treatment tracked by total number of cycles and total cycle time, tied to the joints it applies to." },
-            { "@type": "ListItem", "position": 5, "name": "Productivity Manager (Month 6, Premium tier)", "description": "Throughput per worker, work type and project stage, time spent per operation, and historical trends." },
-            { "@type": "ListItem", "position": 6, "name": "Visual Production Tracker (Month 6, Premium tier)", "description": "A live, visual read on the state of production across the whole project, surfacing bottlenecks while there is still time to act." }
-          ]
+          "@type": "ListItem",
+          "position": 2,
+          "name": {% if sx_L == 'pt' %}"Refinamento em Uso Real (Meses 1-5)"{% elsif sx_L == 'es' %}"Refinamiento en Uso Real (Meses 1-5)"{% else %}"Refinement in Real Use (Months 1-5)"{% endif %},
+          "description": {% if sx_L == 'pt' %}"Refinamento contínuo da interface e dos fluxos de trabalho, ajuste de funcionalidades em resposta ao uso real, e novos modelos de documentos e formatos de exportação a pedido."{% elsif sx_L == 'es' %}"Refinamiento continuo de la interfaz y de los flujos de trabajo, ajuste de funciones según el uso real, y nuevas plantillas de documentos y formatos de exportación a petición."{% else %}"Continuous UI and workflow refinement, feature tuning in response to real use, and new document templates and export formats on request."{% endif %}
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": {% if sx_L == 'pt' %}"Acompanhamento granular de END (Mês 6, plano Standard)"{% elsif sx_L == 'es' %}"Seguimiento granular de END (Mes 6, plan Standard)"{% else %}"Granular NDT Tracking (Month 6, Standard tier)"{% endif %},
+          "description": {% if sx_L == 'pt' %}"Acompanhamento integrado e aprofundado de ensaios não destrutivos, disponível de origem para utilizadores Standard — pedidos de ensaio, resultados e a sua ligação à junta e ao ciclo de reparação específicos."{% elsif sx_L == 'es' %}"Seguimiento integrado y en profundidad de ensayos no destructivos, disponible de serie para usuarios Standard — solicitudes de ensayo, resultados y su vínculo con la unión y el ciclo de reparación concretos."{% else %}"Deep, integrated Non-Destructive Testing tracking delivered natively to Standard users — test requests, results, and their link to the specific joint and repair cycle."{% endif %}
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": {% if sx_L == 'pt' %}"Acompanhamento de ciclos de PWHT (Mês 6, plano Standard)"{% elsif sx_L == 'es' %}"Seguimiento de ciclos de PWHT (Mes 6, plan Standard)"{% else %}"PWHT Cycle Tracking (Month 6, Standard tier)"{% endif %},
+          "description": {% if sx_L == 'pt' %}"Tratamento térmico pós-soldadura acompanhado pelo número total de ciclos e pelo tempo total de ciclo, ligado às juntas a que se aplica."{% elsif sx_L == 'es' %}"Tratamiento térmico posterior a la soldadura seguido por número total de ciclos y tiempo total de ciclo, vinculado a las uniones a las que se aplica."{% else %}"Post-weld heat treatment tracked by total number of cycles and total cycle time, tied to the joints it applies to."{% endif %}
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": {% if sx_L == 'pt' %}"Gestor de Produtividade (Mês 6, plano Premium)"{% elsif sx_L == 'es' %}"Gestor de Productividad (Mes 6, plan Premium)"{% else %}"Productivity Manager (Month 6, Premium tier)"{% endif %},
+          "description": {% if sx_L == 'pt' %}"Produção por trabalhador, tipo de trabalho e fase do projeto, tempo gasto por operação e tendências históricas."{% elsif sx_L == 'es' %}"Producción por trabajador, tipo de trabajo y fase del proyecto, tiempo empleado por operación y tendencias históricas."{% else %}"Throughput per worker, work type and project stage, time spent per operation, and historical trends."{% endif %}
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": {% if sx_L == 'pt' %}"Monitor Visual de Produção (Mês 6, plano Premium)"{% elsif sx_L == 'es' %}"Monitor Visual de Producción (Mes 6, plan Premium)"{% else %}"Visual Production Tracker (Month 6, Premium tier)"{% endif %},
+          "description": {% if sx_L == 'pt' %}"Uma leitura visual, em tempo real, do estado da produção em todo o projeto, que revela estrangulamentos enquanto ainda há tempo para agir."{% elsif sx_L == 'es' %}"Una lectura visual, en tiempo real, del estado de la producción en todo el proyecto, que revela cuellos de botella mientras aún hay tiempo para actuar."{% else %}"A live, visual read on the state of production across the whole project, surfacing bottlenecks while there is still time to act."{% endif %}
         }
       ]
     }
+  ]
+}
