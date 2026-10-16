@@ -1,0 +1,81 @@
+{%- comment %} The two-door product chooser: Elenchon Atlas (available now, listed first) and
+     Elenchon, as a matched pair. One source for the homepage hero and the guides.
+     Params:
+       compact  "true" — smaller cards without the pictures, card names as h3, wrapped
+                in its own page section (for the guides hub and neutral guide endings)
+       intro    optional eyebrow/h2/p markup shown above the compact doors (capture it)
+       id       section id for the compact variant (default "cta")
+     Atlas is the filled button (the page's one filled action); Elenchon is outline.
+{%- endcomment %}
+{%- assign L = page.lang | default: 'en' -%}
+{%- if L == 'en' %}{% assign px = '' %}{% else %}{% assign px = '/' | append: L %}{% endif -%}
+{%- if L == 'pt' %}
+{%- assign a_eyebrow = 'Disponível agora · Cloud' -%}
+{%- assign a_text = 'Para engenheiros de soldadura e de qualidade que precisam de ter já sob controlo a biblioteca de WPS e as qualificações dos soldadores — na cloud, sem nada para instalar.' -%}
+{%- assign a_btn = 'Explorar o Atlas' -%}
+{%- assign a_note = 'ou peça um teste gratuito' -%}
+{%- assign e_eyebrow = 'Lançamento no 1.º trim. 2027 · <span class="u-nowrap">On-premise</span>' -%}
+{%- assign e_text = 'Para oficinas de fabricação que precisam de rastreabilidade completa no chão de fábrica, no seu próprio hardware. Inclui tudo o que o Atlas faz.' -%}
+{%- assign e_btn = 'Explorar o Elenchon' -%}
+{%- assign e_note = 'Comece hoje no Atlas — a sua biblioteca e as qualificações passam para o Elenchon no lançamento.' -%}
+{%- elsif L == 'es' %}
+{%- assign a_eyebrow = 'Disponible ahora · Cloud' -%}
+{%- assign a_text = 'Para ingenieros de soldadura y de calidad que necesitan tener ya bajo control la biblioteca de WPS y las cualificaciones de los soldadores — en la nube, sin nada que instalar.' -%}
+{%- assign a_btn = 'Explorar Atlas' -%}
+{%- assign a_note = 'o solicite una prueba gratuita' -%}
+{%- assign e_eyebrow = 'Lanzamiento en el T1 2027 · <span class="u-nowrap">On-premise</span>' -%}
+{%- assign e_text = 'Para talleres de fabricación que necesitan trazabilidad completa en planta, en su propio hardware. Incluye todo lo que hace Atlas.' -%}
+{%- assign e_btn = 'Explorar Elenchon' -%}
+{%- assign e_note = 'Empiece hoy en Atlas — su biblioteca y sus cualificaciones pasan a Elenchon en el lanzamiento.' -%}
+{%- else %}
+{%- assign a_eyebrow = 'Available now · Cloud' -%}
+{%- assign a_text = 'For welding and QA engineers who need their WPS library and welder qualifications under control now — in the cloud, nothing to install.' -%}
+{%- assign a_btn = 'Explore Atlas' -%}
+{%- assign a_note = 'or get a free trial' -%}
+{%- assign e_eyebrow = 'Launching Q1 2027 · <span class="u-nowrap">On-premise</span>' -%}
+{%- assign e_text = 'For fabrication shops that need full shop-floor traceability on their own hardware. Includes everything Atlas does.' -%}
+{%- assign e_btn = 'Explore Elenchon' -%}
+{%- assign e_note = 'Start on Atlas today — your library and qualifications move into Elenchon at launch.' -%}
+{%- endif -%}
+{%- if include.compact == 'true' %}{% assign hn = 'h3' %}{% else %}{% assign hn = 'h2' %}{% endif -%}
+{%- capture doors %}
+            <div class="door-split{% if include.compact == 'true' %} door-split-compact{% endif %}">
+                <div class="product-card door-card is-atlas">
+{%- unless include.compact == 'true' %}
+{% include door-shot.html product='atlas' %}
+{%- endunless %}
+                    <span class="eyebrow atlas-eyebrow"><span class="live-dot" aria-hidden="true"></span>{{ a_eyebrow }}</span>
+                    <{{ hn }} class="door-name text-glow">Elenchon Atlas</{{ hn }}>
+                    <p>{{ a_text }}</p>
+                    <div class="cta-group">
+                        <a href="{{ px }}/wps-management-software.html" class="btn btn-primary">{{ a_btn }}</a>
+                    </div>
+                    <p class="door-note"><a href="{{ px }}/wps-manager-contact.html">{{ a_note }}&nbsp;→</a></p>
+                </div>
+                <div class="product-card door-card">
+{%- unless include.compact == 'true' %}
+{% include door-shot.html product='elenchon' %}
+{%- endunless %}
+                    <span class="eyebrow">{{ e_eyebrow }}</span>
+                    <{{ hn }} class="door-name text-glow">Elenchon</{{ hn }}>
+                    <p>{{ e_text }}</p>
+                    <div class="cta-group">
+                        <a href="{{ px }}/platform.html" class="btn btn-secondary">{{ e_btn }}</a>
+                    </div>
+                    <p class="door-note">{{ e_note }}</p>
+                </div>
+            </div>
+{%- endcapture -%}
+{%- if include.compact == 'true' %}
+    <section class="page-section container" id="{{ include.id | default: 'cta' }}">
+        <div class="door-closing">
+{%- if include.intro and include.intro != '' %}
+            <div class="door-closing-intro">{{ include.intro }}
+            </div>
+{%- endif %}
+{{ doors }}
+        </div>
+    </section>
+{%- else %}
+{{ doors }}
+{%- endif %}

@@ -104,7 +104,7 @@ crumb: "On-Premise Gerido"
             <h2>Quando a Cloud É a Melhor Opção</h2>
         </div>
         <div class="glass-card feature-block">
-            <p class="feature-lead">Se o trabalho é manter a sua biblioteca de WPS organizada e as qualificações dos soldadores visíveis, a cloud é mais rápida: nada para instalar, um login, a funcionar hoje. O on-premise ganha o seu lugar quando os registos são críticos para auditoria, a rastreabilidade desce até à junta, ou os dados não podem sair das instalações.</p>
+            <p class="feature-lead">Se o trabalho é manter a sua biblioteca de WPS organizada e as qualificações dos soldadores visíveis, a cloud é mais rápida: nada para instalar, um login, a funcionar hoje. O on-premise gerido elimina a objeção da TI, não todas as razões para escolher a cloud. A pesar as duas opções para a sua oficina? O <a href="/pt/welding-software-on-premise-vs-cloud.html">guia de decisão on-premise vs. cloud</a> analisa-as fator a fator.</p>
         </div>
     </section>
 
@@ -121,7 +121,6 @@ crumb: "On-Premise Gerido"
                 <li><strong>O que continua a funcionar quando a internet cai?</strong></li>
                 <li><strong>O que acontece aos seus dados se sair?</strong> Pergunte por taxas de saída e acesso ao histórico.</li>
             </ul>
-            <p>Para a comparação completa de propriedade, preço e dependência, veja a <a href="/pt/welding-software-on-premise-vs-cloud.html">comparação de software de soldadura on-premise vs cloud</a>.</p>
         </div>
     </section>
 
@@ -158,14 +157,9 @@ crumb: "On-Premise Gerido"
         </div>
     </section>
 
-    <section class="page-section container" id="cta">
-        <div class="cta-band">
+{%- capture closing_intro %}
             <span class="eyebrow">Dos Autores</span>
-            <h2 class="text-glow">Onde Entra a Delteris</h2>
-            <p>O <strong>Elenchon</strong> é on-premise totalmente gerido: instalamos, atualizamos e resolvemos tudo remotamente; basta mantê-lo ligado. Compra o hardware a preço de custo, não há taxa de saída e mantém acesso só de leitura aos seus registos se sair. Só para organizar WPS e qualificações de soldadores, o <strong>Elenchon Atlas</strong> corre na cloud.</p>
-            <div class="cta-group">
-                <a href="/pt/on-premise-welding-software.html" class="btn btn-primary">Ver o Elenchon On-Premise</a>
-                <a href="/pt/wps-management-software.html" class="btn btn-secondary">Ver o Elenchon Atlas</a>
-            </div>
-        </div>
-    </section>
+            <h2 class="text-glow">O Elenchon Funciona em On-Premise Gerido</h2>
+            <p>Instalamos o appliance, atualizamo-lo e resolvemos tudo remotamente; basta mantê-lo ligado. Compra o hardware a preço de custo, não há taxa de saída e mantém acesso só de leitura aos seus registos se sair. <a href="/pt/on-premise-welding-software.html">Ver o que inclui o appliance do Elenchon&nbsp;→</a></p>
+{%- endcapture %}
+{% include closing-cta.html product="elenchon" intro=closing_intro %}

@@ -104,7 +104,7 @@ crumb: "On-Premise Gestionado"
             <h2>Cuándo la Nube Encaja Mejor</h2>
         </div>
         <div class="glass-card feature-block">
-            <p class="feature-lead">Si el trabajo es mantener su biblioteca de WPS organizada y las cualificaciones de los soldadores a la vista, la nube es más rápida: nada que instalar, un inicio de sesión, funcionando hoy. El on-premise se gana su sitio cuando los registros son críticos para auditoría, la trazabilidad llega hasta la unión, o los datos no pueden salir de sus instalaciones.</p>
+            <p class="feature-lead">Si el trabajo es mantener su biblioteca de WPS organizada y las cualificaciones de los soldadores a la vista, la nube es más rápida: nada que instalar, un inicio de sesión, funcionando hoy. El on-premise gestionado elimina la objeción de TI, no todas las razones para elegir la nube. ¿Sopesando ambas opciones para su taller? La <a href="/es/welding-software-on-premise-vs-cloud.html">guía de decisión on-premise vs. nube</a> las analiza factor a factor.</p>
         </div>
     </section>
 
@@ -121,7 +121,6 @@ crumb: "On-Premise Gestionado"
                 <li><strong>¿Qué sigue funcionando cuando cae internet?</strong></li>
                 <li><strong>¿Qué pasa con sus datos si se va?</strong> Pregunte por penalizaciones de salida y acceso a su historial.</li>
             </ul>
-            <p>Para la comparación completa de propiedad, precio y dependencia, vea la <a href="/es/welding-software-on-premise-vs-cloud.html">comparación de software de soldadura on-premise vs nube</a>.</p>
         </div>
     </section>
 
@@ -158,14 +157,9 @@ crumb: "On-Premise Gestionado"
         </div>
     </section>
 
-    <section class="page-section container" id="cta">
-        <div class="cta-band">
+{%- capture closing_intro %}
             <span class="eyebrow">De los Autores</span>
-            <h2 class="text-glow">Dónde Encaja Delteris</h2>
-            <p><strong>Elenchon</strong> es on-premise gestionado íntegramente: lo instalamos, lo actualizamos y lo resolvemos todo en remoto — solo tiene que mantenerlo encendido. Compra el hardware a precio de coste, no hay penalización de salida y conserva acceso de solo lectura a sus registros si se va. Solo para organizar WPS y cualificaciones de soldadores, <strong>Elenchon Atlas</strong> funciona en la nube.</p>
-            <div class="cta-group">
-                <a href="/es/on-premise-welding-software.html" class="btn btn-primary">Ver Elenchon On-Premise</a>
-                <a href="/es/wps-management-software.html" class="btn btn-secondary">Ver Elenchon Atlas</a>
-            </div>
-        </div>
-    </section>
+            <h2 class="text-glow">Elenchon Funciona en On-Premise Gestionado</h2>
+            <p>Instalamos el appliance, lo actualizamos y lo resolvemos todo en remoto; usted solo tiene que mantenerlo encendido. Compra el hardware a precio de coste, no hay penalización de salida y conserva acceso de solo lectura a sus registros si se va. <a href="/es/on-premise-welding-software.html">Ver qué incluye el appliance de Elenchon&nbsp;→</a></p>
+{%- endcapture %}
+{% include closing-cta.html product="elenchon" intro=closing_intro %}

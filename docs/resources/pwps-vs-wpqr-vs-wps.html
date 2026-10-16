@@ -187,14 +187,9 @@ crumb: "pWPS vs WPQR vs WPS"
         </div>
     </section>
 
-    <section class="page-section container" id="cta">
-        <div class="cta-band">
+{%- capture closing_intro %}
             <span class="eyebrow">From the Authors</span>
-            <h2 class="text-glow">Where Delteris Fits</h2>
-            <p>We build <strong>Elenchon Atlas</strong>, a cloud library that keeps WPS, pWPS and WPQR as linked, searchable records, imported from the Excel and PDF files you already have. The full Elenchon platform runs the whole chain, from pWPS to finished WPS, on the shop floor.</p>
-            <div class="cta-group">
-                <a href="/wps-management-software.html" class="btn btn-primary">See Elenchon Atlas</a>
-                <a href="/resources/welder-qualification-validity/" class="btn btn-secondary">Next: Welder Qualification Validity</a>
-            </div>
-        </div>
-    </section>
+            <h2 class="text-glow">Keep Every WPS Tied to Its WPQR</h2>
+            <p>A WPS is only as valid as the WPQR behind it, and in a folder of files that link is the first thing to go missing. Atlas imports your WPS, pWPS and WPQR from Excel or PDF, keeps each WPS linked to its WPQR, and flags any WPS that falls outside its WPQR range.</p>
+{%- endcapture %}
+{% include closing-cta.html product="atlas" intro=closing_intro %}
