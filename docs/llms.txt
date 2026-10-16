@@ -4,6 +4,18 @@
 
 Status: Elenchon (the on-premise platform) launches in Q1 2027 — early deployment slots are reserved through the launch list on the contact page. Elenchon Atlas (the cloud product, formerly called WPS Manager) is available now.
 
+## Elenchon Atlas (cloud)
+Atlas is welder qualification and WPS management software (organisation software, not audit or compliance software): it tracks every welder's qualifications (WPQ) and keeps one current, searchable library of a shop's WPS and pWPS, with the WPQR behind each WPS. It records and warns; decisions on whether a welder is qualified stay with a qualified person.
+- Welder qualifications: continuity and expiry tracked as two clocks per qualification, colour-coded roster, signed requalification, email reminders before a qualification lapses.
+- Import: existing WPS from Excel or exported (text-based) PDF. Scanned PDFs are not read. Extraction is deterministic and rule-based, tuned to the customer's template; no OCR, no LLM or AI model.
+- WPQR range check (Atlas 1.1): the range of qualification is entered once from each WPQR certificate; every linked WPS is then checked field by field (processes, material groups, thickness, diameter, positions, preheat, interpass, PWHT, current, consumables, heat input) with each result inside / outside / differs / not checked. By default each run group (process + filler) must be covered by one WPQR; combining WPQRs is an opt-in per WPS. Consumables match by designation only (a different designation is "differs", for a person to judge). Atlas does not derive ranges from ISO 15614-1, ISO 9606-1 or ASME IX and does not decide qualification.
+- Welder coverage (Atlas 1.1): which welders' current certificates cover each WPS, and which WPS each welder can weld.
+- Monthly report: register-wide snapshot of range check results, changes since last month and welder qualification counts; exportable as PDF.
+- "What you see" (Atlas 1.1): each user can hide whole features from their own view; nothing is deleted and colleagues are unaffected.
+- Pricing: €60/month billed annually (€720/year), or €80 month to month. One flat, published price with no per-seat fees. 50 GB storage included; each extra 50 GB is €10/month. Onboarding and parser setup included.
+- Support: direct support by email, aiming to reply within one business day. Response guarantee: if a reported issue goes 3 business days (Portuguese working days) without a written reply from the team, that month is half price; after 5 business days it is free. One credit per month; annual plans get half a month or a month added to their term instead.
+
+## Elenchon (on-premise, launching Q1 2027)
 Elenchon is on-premise welding traceability software for fabrication shops and heavy industry. It runs the full WPS/WPQR/WPQ qualification workflow, turns floor capture into audit-ready ISO and ASME IX evidence, captures shop-floor data in seconds, and keeps every weld record on the client's own hardware via Phrakton — Delteris's zero-trust network overlay built on OpenZiti and secured with post-quantum cryptography.
 
 ## Core Pillars
@@ -28,17 +40,6 @@ A full plan-by-plan feature comparison (every capability by Lite/Standard/Premiu
 - Billing: nothing is charged at deployment except installation and training. The monthly subscription begins after go-live; the first monthly invoice falls on the 1st or the 15th, whichever is furthest from the go-live date. Twelve invoices per year, one per calendar month — no 28-day cycles and no thirteenth invoice.
 - No per-audit fees, no lock-in — customers who cancel keep view-only access to historical data for audits.
 
-## Elenchon Atlas (cloud)
-Atlas is organisation software, not audit or compliance software: one current, searchable library of a shop's WPS, pWPS and WPQR, with welder qualification (WPQ) tracking alongside. It records and warns; decisions on whether a welder is qualified stay with a qualified person.
-- Import: existing WPS from Excel or exported (text-based) PDF. Scanned PDFs are not read. Extraction is deterministic and rule-based, tuned to the customer's template; no OCR, no LLM or AI model.
-- Welder qualifications: continuity and expiry tracked as two clocks per qualification, colour-coded roster, signed requalification, email reminders before a qualification lapses.
-- WPQR range check (Atlas 1.1): the range of qualification is entered once from each WPQR certificate; every linked WPS is then checked field by field (processes, material groups, thickness, diameter, positions, preheat, interpass, PWHT, current, consumables, heat input) with each result inside / outside / differs / not checked. By default each run group (process + filler) must be covered by one WPQR; combining WPQRs is an opt-in per WPS. Consumables match by designation only (a different designation is "differs", for a person to judge). Atlas does not derive ranges from ISO 15614-1, ISO 9606-1 or ASME IX and does not decide qualification.
-- Welder coverage (Atlas 1.1): which welders' current certificates cover each WPS, and which WPS each welder can weld.
-- Monthly report: register-wide snapshot of range check results, changes since last month and welder qualification counts; exportable as PDF.
-- "What you see" (Atlas 1.1): each user can hide whole features from their own view; nothing is deleted and colleagues are unaffected.
-- Pricing: €60/month billed annually (€720/year), or €80 month to month. One flat, published price with no per-seat fees. 50 GB storage included; each extra 50 GB is €10/month. Onboarding and parser setup included.
-- Support: direct support by email, aiming to reply within one business day. Response guarantee: if a reported issue goes 3 business days (Portuguese working days) without a written reply from the team, that month is half price; after 5 business days it is free. One credit per month; annual plans get half a month or a month added to their term instead.
-
 ## Deployment
 Three steps: scoping session with the founders, on-site installation of the hardware appliance, then onboarding and go-live. Deployment slots per quarter are limited because every appliance is installed on-site by Delteris engineers. Lite deployments skip the separate scoping visit — one on-site trip instead of two — and include a single training session of two 2-hour blocks; Standard includes the scoping visit (typically about half a day on-site) and training run as two 3-hour blocks.
 
@@ -54,7 +55,7 @@ Three steps: scoping session with the founders, on-site installation of the hard
 - On-Premise & Offline Welding Software (data ownership, no cloud fees, offline capture): https://delteris.com/on-premise-welding-software.html
 - On-Premise vs. Cloud Welding Software (honest comparison, no competitor names): https://delteris.com/welding-software-on-premise-vs-cloud.html
 - How to Choose Welding Management Software (vendor-neutral buyer's guide — ownership, published pricing, security, offline, lock-in, floor coverage; where Elenchon fits, strengths and limits): https://delteris.com/how-to-choose-welding-software.html
-- Elenchon Atlas (cloud WPS library and welder qualification tracking — import, review, organise, search & export your master WPS register): https://delteris.com/wps-management-software.html
+- Elenchon Atlas (cloud welder qualification tracking and WPS management — welder expiry and continuity, welder coverage per WPS, WPQR range check, WPS import from Excel/PDF, searchable WPS register): https://delteris.com/wps-management-software.html
 - Atlas Welder Qualification Management (WPQ tracking — continuity and expiry, roster, signed requalification, email reminders): https://delteris.com/welder-qualification-management-software.html
 - Atlas Features (full capability tour with app screenshots — import, review, register, library, preview, heat input, security, export): https://delteris.com/wps-manager-features.html
 - WPS Import Software (native Excel & PDF parsers — PDFs must be exported/text-based, scanned PDFs are not read (no OCR); deterministic rule-based extraction, no LLM or AI model, documents never sent to one, bilingual EN/PT, batch import, heat input computed where blank, tuned to your template): https://delteris.com/wps-import-software.html
