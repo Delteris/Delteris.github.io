@@ -2,23 +2,6 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://delteris.com/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "How to Choose Welding Management Software",
-          "item": "https://delteris.com/how-to-choose-welding-software.html"
-        }
-      ]
-    },
-    {
       "@type": "Article",
       "@id": "https://delteris.com/how-to-choose-welding-software.html#article",
       "headline": "How to Choose Welding Management Software",

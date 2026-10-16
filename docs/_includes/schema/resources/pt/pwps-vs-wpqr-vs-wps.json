@@ -2,29 +2,6 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Início",
-          "item": "https://delteris.com/pt/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Recursos",
-          "item": "https://delteris.com/pt/resources/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "pWPS vs WPQR vs WPS: A Diferença Explicada",
-          "item": "https://delteris.com/pt/resources/pwps-vs-wpqr-vs-wps/"
-        }
-      ]
-    },
-    {
       "@type": "Article",
       "@id": "https://delteris.com/pt/resources/pwps-vs-wpqr-vs-wps/#article",
       "headline": "pWPS vs WPQR vs WPS: A Diferença Explicada",

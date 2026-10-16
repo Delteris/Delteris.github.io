@@ -3923,3 +3923,64 @@ button.app-figure-frame:focus-visible .app-figure-zoom-hint {
 }
 .subscribed-banner span { color: #22c55e; margin-right: 0.35rem; }
 .subscribed-banner[hidden] { display: none; }
+
+/* ------------------------------------------------------------
+   Breadcrumb (spoke pages; rendered by _includes/breadcrumb.html
+   right under the fixed nav, so it owns the nav clearance and the
+   hero that follows drops most of its own top padding).
+   ------------------------------------------------------------ */
+.breadcrumb {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: calc(var(--nav-h) + 1.1rem) 5% 0;
+    font-size: 0.82rem;
+    color: var(--text-muted);
+}
+.breadcrumb ol {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.35rem;
+    margin: 0;
+    padding: 0;
+}
+.breadcrumb li + li::before {
+    content: "›";
+    margin-right: 0.35rem;
+    opacity: 0.6;
+}
+.breadcrumb a {
+    color: var(--text-muted);
+    text-decoration: none;
+}
+.breadcrumb a:hover,
+.breadcrumb a:focus-visible { color: var(--link-hover); text-decoration: underline; }
+.breadcrumb .bc-current { color: var(--text-main); opacity: 0.85; }
+.breadcrumb + .page-hero { padding-top: 4rem; }
+
+@media (max-width: 768px) {
+    .breadcrumb { padding-top: calc(var(--nav-h) + 0.75rem); }
+    .breadcrumb .bc-home,
+    .breadcrumb .bc-current { display: none; }
+    .breadcrumb .bc-parent::before { content: "‹"; }
+    .breadcrumb + .page-hero { padding-top: 1.25rem; }
+}
+
+/* Shared closing block (_includes/closing-cta.html): the quiet line to the
+   other product, under the product's own action. */
+.cta-band .closing-crosslink {
+    margin: 1.5rem auto 0;
+    font-size: 0.92rem;
+}
+.cta-band .closing-crosslink a { color: var(--link); text-decoration: none; }
+.cta-band .closing-crosslink a:hover { color: var(--link-hover); text-decoration: underline; }
+
+/* One-line link from a spoke hero back to its hub (and a text-link alternative). */
+.hero-hub-link {
+    margin: 1.25rem auto 0;
+    font-size: 0.92rem;
+    color: var(--text-muted);
+}
+.hero-hub-link a { color: var(--link); }
+.hero-hub-link a:hover { color: var(--link-hover); }

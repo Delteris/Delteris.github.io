@@ -2,29 +2,6 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://delteris.com/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "WPS Management Software",
-          "item": "https://delteris.com/wps-management-software.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Features",
-          "item": "https://delteris.com/wps-manager-features.html"
-        }
-      ]
-    },
-    {
       "@type": "WebPage",
       "name": "Elenchon Atlas — Features",
       "url": "https://delteris.com/wps-manager-features.html",

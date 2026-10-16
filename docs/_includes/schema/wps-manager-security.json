@@ -2,14 +2,6 @@
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://delteris.com/" },
-            { "@type": "ListItem", "position": 2, "name": "Atlas", "item": "https://delteris.com/wps-management-software.html" },
-            { "@type": "ListItem", "position": 3, "name": "Atlas Security", "item": "https://delteris.com/wps-manager-security.html" }
-          ]
-        },
-        {
           "@type": "WebPage",
           "name": "Elenchon Atlas — Security",
           "description": "How Elenchon Atlas secures a cloud WPS register: a searchable history of every change, role-based access with a read-only inspector seat, single-tenant isolation, EU hosting, and encryption in transit.",

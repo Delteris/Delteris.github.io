@@ -2,23 +2,6 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://delteris.com/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Weld Project Structure & BOM Import Software",
-          "item": "https://delteris.com/weld-project-structure-software.html"
-        }
-      ]
-    },
-    {
       "@type": "SoftwareApplication",
       "name": "Elenchon — Weld Project Structure & BOM Import Software",
       "applicationCategory": "BusinessApplication",

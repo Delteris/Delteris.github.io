@@ -2,23 +2,6 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://delteris.com/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Shop-Floor Weld Data Capture Software",
-          "item": "https://delteris.com/welding-work-capture-software.html"
-        }
-      ]
-    },
-    {
       "@type": "SoftwareApplication",
       "name": "Elenchon — Shop-Floor Weld Data Capture Software",
       "applicationCategory": "BusinessApplication",
