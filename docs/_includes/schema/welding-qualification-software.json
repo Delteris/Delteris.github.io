@@ -3,7 +3,7 @@
   "@graph": [
     {
       "@type": "SoftwareApplication",
-      "name": "Elenchon — Welding Qualification Software",
+      "name": "Elenchon — Welding Qualification Workflow Software",
       "applicationCategory": "BusinessApplication",
       "applicationSubCategory": "Welding Qualification Software",
       "operatingSystem": "Linux/Appliance",

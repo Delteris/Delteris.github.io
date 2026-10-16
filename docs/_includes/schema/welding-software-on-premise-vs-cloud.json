@@ -7,50 +7,10 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "How does cost compare over time?",
+          "name": "Is on-premise or cloud cheaper?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Cloud pricing is usually per seat or usage-based behind a quote, so it is hard to predict and grows with people and data. Elenchon publishes everything: a flat rate per appliance with 20 or 50 workers included, extra seats at €9/month, hardware at cost. Both charge for scale; ours is knowable in advance."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Doesn't on-premise cost more to set up?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Usually the reverse. Cloud implementation and onboarding in industrial software routinely run into five figures on top of the subscription; an Elenchon deployment is a modest published figure, and the hardware is passed through at cost with no markup. Our own engineers install and configure the appliance on your floor, and the monthly rate stays flat."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can on-premise software still be reached remotely?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Elenchon's optional Phrakton overlay lets authorised staff — and even auditors — connect through mutually authenticated, post-quantum-safe tunnels, without the appliance exposing any public address — remote access without cloud exposure."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What happens to my data if I stop paying?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "With Elenchon, the data is on your hardware and you keep view-only access to your history for audits. With many cloud tools, access ends when the subscription does — worth confirming with any vendor you consider."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is on-premise welding software harder to run than cloud?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Less than shops expect. Our engineers deliver, install and configure the appliance on-site, so there is no IT project to staff. After that your only job is to keep it powered on: we update and monitor it remotely over Phrakton, and if a critical problem genuinely can't be fixed that way, we come on-site free of charge, anywhere in the world. Full guide: managed on-premise, explained."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does on-premise mean fewer features?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Not with Elenchon. It runs the full platform on-premise — traceability, the WPS/WPQR/WPQ workflow, floor capture, equipment control and more — not a reduced local edition."
+            "text": "It depends on time and headcount. Cloud usually costs less to start and more as people and data grow, especially when priced per seat. On-premise adds hardware and an installation up front, then a flat cost. Compare the total over three to five years at your expected team size, not the first invoice."
           }
         },
         {
@@ -58,7 +18,31 @@
           "name": "Is cloud welding software less secure?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "In a real sense, yes. A cloud service is reachable on the public internet and sits on shared infrastructure; that exposure is architectural, however well the vendor defends it. Elenchon keeps data in your building, opens no inbound ports at all, and runs every connection over Phrakton's post-quantum-safe tunnels. A well-run cloud can be secure; it cannot be un-exposed."
+            "text": "Not automatically. A well-run cloud service can be very secure, but it is reachable on the public internet by design. An on-premise system can stay off the public internet entirely — if remote access is built without open ports. Ask either kind of vendor how access is secured."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can on-premise software be reached from outside the shop?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It can, if the vendor provides a secure way in, such as an encrypted overlay network. Be wary of solutions that rely on open ports or a VPN you have to run yourself."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need IT staff to run on-premise software?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not if the vendor manages it: they install, update and repair the appliance remotely, and your part is keeping it powered. With classic self-hosted software, you do."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I start in the cloud and move on-premise later?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ask the vendor how records move between the two before you commit. With our products, Atlas customers can move their WPS library and welder qualifications into Elenchon at launch."
           }
         }
       ]

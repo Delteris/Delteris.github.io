@@ -44,7 +44,7 @@
           "name": "How does on-premise affect cost?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "It makes cost predictable: one published flat rate per appliance with workers included, extra seats at €9/month, hardware passed through at cost, and every add-on in plain euros — so total cost of ownership can be modelled up front. See the on-premise vs. cloud comparison."
+            "text": "It makes cost predictable: one published flat rate per appliance with workers included, extra seats at €9/month, hardware passed through at cost, and every add-on in plain euros — so total cost of ownership can be modelled up front."
           }
         },
         {
@@ -68,23 +68,7 @@
           "name": "Isn't on-premise more to maintain?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Not the way we run it: your only job is to keep the appliance powered on. We apply updates and monitor it remotely over the Phrakton fabric, and resolve the large majority of issues without anyone leaving their desk. If something critical genuinely can't be fixed remotely, we come to your facility at no charge, anywhere in the world. Full guide: managed on-premise, explained."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is on-premise welding software?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "It is welding software installed on hardware inside your own facility, rather than accessed as a cloud service. Your weld records live on your server, under your control, and the appliance runs on your own local network — no vendor cloud between you and your data. Elenchon is delivered exactly this way."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does running it ourselves mean maintaining a server and updates?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No. Elenchon ships as a self-contained containerised appliance that we install and configure — no server for your team to administer, no update project to run, nothing to patch on a schedule. You get the ownership of on-premise without the sysadmin work."
+            "text": "Not the way we run it: your only job is to keep the appliance powered on, and we handle the rest, as described under No Cloud to Depend On. For how the managed model works in general, read managed on-premise, explained."
           }
         }
       ]

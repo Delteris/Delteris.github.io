@@ -3,7 +3,7 @@
   "@graph": [
     {
       "@type": "SoftwareApplication",
-      "name": "Elenchon Atlas — Welder Qualification Management Software",
+      "name": "Elenchon Atlas — Welder Qualification Tracking Software",
       "applicationCategory": "BusinessApplication",
       "applicationSubCategory": "Welder Qualification Management Software",
       "operatingSystem": "Cloud / Web",
