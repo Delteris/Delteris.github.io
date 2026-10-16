@@ -110,7 +110,7 @@
         "priceCurrency": "EUR",
         "availability": "https://schema.org/InStock",
         "priceValidUntil": "2028-12-31",
-        "description": {% if sx_L == 'pt' %}"80 € por mês, ou 720 € por ano (60 €/mês efetivos) com faturação anual. Preço fixo e totalmente publicado, sem taxas por utilizador. Inclui 50 GB de armazenamento."{% elsif sx_L == 'es' %}"80 € al mes, o 720 € al año (60 €/mes efectivos) con facturación anual. Precio fijo y totalmente publicado, sin tarifas por usuario. Incluye 50 GB de almacenamiento."{% else %}"€80 per month, or €720 per year (effective €60/month) billed annually. Flat, fully published price with no per-seat fees. Includes 50 GB storage."{% endif %}
+        "description": {% if sx_L == 'pt' %}"60 € por mês com faturação anual (720 € por ano), ou 80 € mês a mês. Preço fixo e totalmente publicado, sem taxas por utilizador. Inclui 50 GB de armazenamento."{% elsif sx_L == 'es' %}"60 € al mes con facturación anual (720 € al año), u 80 € mes a mes. Precio fijo y totalmente publicado, sin tarifas por usuario. Incluye 50 GB de almacenamiento."{% else %}"€60 per month billed annually (€720 per year), or €80 month to month. Flat, fully published price with no per-seat fees. Includes 50 GB storage."{% endif %}
       },
       "provider": {
         "@id": "https://delteris.com/#organization"

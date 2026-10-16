@@ -36,7 +36,7 @@ Atlas is organisation software, not audit or compliance software: one current, s
 - Welder coverage (Atlas 1.1): which welders' current certificates cover each WPS, and which WPS each welder can weld.
 - Monthly report: register-wide snapshot of range check results, changes since last month and welder qualification counts; exportable as PDF.
 - "What you see" (Atlas 1.1): each user can hide whole features from their own view; nothing is deleted and colleagues are unaffected.
-- Pricing: €80/month, or €60/month billed annually (€720/year). One flat, published price with no per-seat fees. 50 GB storage included; each extra 50 GB is €10/month. Onboarding and parser setup included.
+- Pricing: €60/month billed annually (€720/year), or €80 month to month. One flat, published price with no per-seat fees. 50 GB storage included; each extra 50 GB is €10/month. Onboarding and parser setup included.
 - Support: direct support by email, aiming to reply within one business day. Response guarantee: if a reported issue goes 3 business days (Portuguese working days) without a written reply from the team, that month is half price; after 5 business days it is free. One credit per month; annual plans get half a month or a month added to their term instead.
 
 ## Deployment
