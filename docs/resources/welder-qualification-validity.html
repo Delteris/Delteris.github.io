@@ -153,14 +153,9 @@ crumb: "Welder Qualification Validity"
         </div>
     </section>
 
-    <section class="page-section container" id="cta">
-        <div class="cta-band">
+{%- capture closing_intro %}
             <span class="eyebrow">From the Authors</span>
-            <h2 class="text-glow">Where Delteris Fits</h2>
-            <p>We build <strong>Elenchon Atlas</strong>, which tracks each welder's qualifications by continuity and expiry and warns you before anything lapses, next to your WPS library. The full Elenchon platform also draws continuity evidence from production entries on the floor.</p>
-            <div class="cta-group">
-                <a href="/welder-qualification-management-software.html" class="btn btn-primary">See Welder Qualification in Atlas</a>
-                <a href="/resources/pwps-vs-wpqr-vs-wps/" class="btn btn-secondary">pWPS vs WPQR vs WPS</a>
-            </div>
-        </div>
-    </section>
+            <h2 class="text-glow">Let Atlas Watch Both Clocks</h2>
+            <p>The rules are simple; the bookkeeping across a whole floor is not. Atlas tracks continuity and expiry separately for every welder, warns you on the dashboard and by email before either runs out, and shows which WPS each welder’s certificates cover.</p>
+{%- endcapture %}
+{% include closing-cta.html product="atlas" intro=closing_intro %}

@@ -154,14 +154,9 @@ crumb: "Validez de la Cualificación de Soldadores"
         </div>
     </section>
 
-    <section class="page-section container" id="cta">
-        <div class="cta-band">
+{%- capture closing_intro %}
             <span class="eyebrow">De los Autores</span>
-            <h2 class="text-glow">Dónde Encaja Delteris</h2>
-            <p>Desarrollamos <strong>Elenchon Atlas</strong>, que sigue las cualificaciones de cada soldador por continuidad y validez y avisa antes de que algo caduque, junto a su biblioteca de WPS. La plataforma Elenchon completa además obtiene la evidencia de continuidad de los registros de producción en planta.</p>
-            <div class="cta-group">
-                <a href="/es/welder-qualification-management-software.html" class="btn btn-primary">Ver Cualificaciones en Atlas</a>
-                <a href="/es/resources/pwps-vs-wpqr-vs-wps/" class="btn btn-secondary">pWPS vs WPQR vs WPS</a>
-            </div>
-        </div>
-    </section>
+            <h2 class="text-glow">Deje que Atlas Vigile los Dos Plazos</h2>
+            <p>Las reglas son sencillas; llevar el control de toda una planta no lo es. Atlas sigue la continuidad y la caducidad de cada soldador por separado, le avisa en el panel y por correo antes de que venza cualquiera de las dos y muestra qué WPS cubren los certificados de cada soldador.</p>
+{%- endcapture %}
+{% include closing-cta.html product="atlas" intro=closing_intro %}

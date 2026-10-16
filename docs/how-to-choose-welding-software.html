@@ -21,7 +21,7 @@ crumb: "How to Choose Welding Software"
             <p class="hero-sub">Most welding software is capable on features. What decides how it serves you for years is what a checklist hides: whether it takes work off your hands, how it handles the qualification records your code demands, where your records live and what it really costs.</p>
             <p class="guide-meta">By the Delteris team · Last reviewed <time datetime="2026-09-23">23 September 2026</time> · <a href="/resources/">All guides</a></p>
             <div class="cta-group">
-                <a href="#matrix" class="btn btn-primary">See the Vendor Matrix</a>
+                <a href="#matrix" class="btn btn-secondary">See the Vendor Matrix</a>
             </div>
         </div>
         <a class="scroll-cue" href="#overview" aria-label="Scroll to see more">
@@ -153,24 +153,9 @@ crumb: "How to Choose Welding Software"
                 </div>
             </details>
         </div>
-    </section>
-
-    <section class="page-section container">
-        <div class="compliance-panel gold-edge">
+    </section>{%- capture doors_intro %}
             <span class="eyebrow">From the Authors</span>
             <h2 class="text-glow">Where Delteris Fits</h2>
-            <p>We build two products. <a href="/wps-management-software.html">Elenchon Atlas</a> is a cloud tool at one flat, published price: your WPS, pWPS and WPQR library, imported from Excel or PDF, with welder qualifications tracked alongside. The full <a href="/platform.html">Elenchon platform</a> is the on-premise archetype above — the complete WPS/WPQR/WPQ workflow, weld traceability, equipment and consumables, fully managed on-premise. Both are priced in the open: see <a href="/pricing.html">pricing</a>.</p>
-        </div>
-    </section>
-
-    <section class="page-section container" id="deployment-cta">
-        <div class="cta-band">
-            <span class="eyebrow">Keep Reading</span>
-            <h2 class="text-glow">Go Deeper on the Records</h2>
-            <p>The records behind these questions each have a short guide: the pWPS–WPQR–WPS chain, how welder qualifications stay valid, and how heat numbers tie a weld to its material.</p>
-            <div class="cta-group">
-                <a href="/resources/" class="btn btn-secondary">Browse the Guides</a>
-            </div>
-            <p class="hero-hub-link">Also: <a href="/resources/pwps-vs-wpqr-vs-wps/">pWPS vs WPQR vs WPS&nbsp;→</a> · <a href="/resources/welder-qualification-validity/">Welder Qualification Validity&nbsp;→</a></p>
-        </div>
-    </section>
+            <p>We build two products, both priced in the open. If your answers point to a cloud library for procedures and welder qualifications, that is Atlas, live today. If they point to traceability down to the joint on your own hardware, that is Elenchon.</p>
+{%- endcapture %}
+{% include door-chooser.html compact="true" intro=doors_intro %}

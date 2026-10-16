@@ -160,14 +160,9 @@ crumb: "Heat-Number Traceability"
         </div>
     </section>
 
-    <section class="page-section container" id="cta">
-        <div class="cta-band">
+{%- capture closing_intro %}
             <span class="eyebrow">From the Authors</span>
-            <h2 class="text-glow">Where Delteris Fits</h2>
-            <p><strong>Elenchon</strong>, our fully managed on-premise platform, carries heat numbers from goods-in down the project tree to every joint, with consumable batches and floor capture in the same record. We install it, update it and fix it remotely; you keep it powered on.</p>
-            <div class="cta-group">
-                <a href="/welding-traceability-software.html" class="btn btn-primary">See Weld Traceability</a>
-                <a href="/resources/pwps-vs-wpqr-vs-wps/" class="btn btn-secondary">pWPS vs WPQR vs WPS</a>
-            </div>
-        </div>
-    </section>
+            <h2 class="text-glow">Keep the Heat Number on Every Joint</h2>
+            <p>The chain breaks at the saw because paper can’t follow a cut piece. Elenchon carries heat numbers from goods-in down the project tree to every joint, with consumable batches and floor capture in the same record — on an appliance in your own building.</p>
+{%- endcapture %}
+{% include closing-cta.html product="elenchon" intro=closing_intro %}

@@ -161,14 +161,9 @@ crumb: "Trazabilidad por Número de Colada"
         </div>
     </section>
 
-    <section class="page-section container" id="cta">
-        <div class="cta-band">
+{%- capture closing_intro %}
             <span class="eyebrow">De los Autores</span>
-            <h2 class="text-glow">Dónde Encaja Delteris</h2>
-            <p><strong>Elenchon</strong>, nuestra plataforma on-premise gestionada íntegramente, lleva los números de colada desde la recepción por el árbol del proyecto hasta cada unión, con los lotes de consumibles y el registro en planta en el mismo registro. Lo instalamos, lo actualizamos y lo resolvemos todo en remoto — solo tiene que mantenerlo encendido.</p>
-            <div class="cta-group">
-                <a href="/es/welding-traceability-software.html" class="btn btn-primary">Ver la Trazabilidad</a>
-                <a href="/es/resources/pwps-vs-wpqr-vs-wps/" class="btn btn-secondary">pWPS vs WPQR vs WPS</a>
-            </div>
-        </div>
-    </section>
+            <h2 class="text-glow">El Número de Colada en Cada Unión</h2>
+            <p>La cadena se rompe en la sierra porque el papel no puede seguir a una pieza cortada. Elenchon lleva los números de colada desde la recepción de material, por el árbol del proyecto, hasta cada unión, con los lotes de consumibles y el registro en planta en el mismo registro — en un appliance en sus propias instalaciones.</p>
+{%- endcapture %}
+{% include closing-cta.html product="elenchon" intro=closing_intro %}

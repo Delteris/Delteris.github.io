@@ -23,7 +23,7 @@ crumb: "Cómo Elegir Software de Soldadura"
             <p class="hero-sub">La mayoría del software de soldadura es competente en funcionalidades. Lo que decide cómo le sirve durante años es lo que una lista oculta: si le quita trabajo, cómo trata los registros de cualificación que exige su código, dónde están sus registros y cuánto cuesta de verdad.</p>
             <p class="guide-meta">Por el equipo de Delteris · Última revisión el <time datetime="2026-09-23">23 de septiembre de 2026</time> · <a href="/es/resources/">Todas las guías</a></p>
             <div class="cta-group">
-                <a href="#matrix" class="btn btn-primary">Ver la Matriz de Proveedores</a>
+                <a href="#matrix" class="btn btn-secondary">Ver la Matriz de Proveedores</a>
             </div>
         </div>
         <a class="scroll-cue" href="#overview" aria-label="Desplazarse para ver más">
@@ -155,24 +155,9 @@ crumb: "Cómo Elegir Software de Soldadura"
                 </div>
             </details>
         </div>
-    </section>
-
-    <section class="page-section container">
-        <div class="compliance-panel gold-edge">
+    </section>{%- capture doors_intro %}
             <span class="eyebrow">De los Autores</span>
             <h2 class="text-glow">Dónde Encaja Delteris</h2>
-            <p>Desarrollamos dos productos. <a href="/es/wps-management-software.html">Elenchon Atlas</a> es una herramienta en la nube a un precio fijo y publicado: su biblioteca de WPS, pWPS y WPQR, importada de Excel o PDF, con las cualificaciones de soldadores seguidas al lado. La <a href="/es/platform.html">plataforma Elenchon</a> completa es el arquetipo on-premise de arriba — el flujo WPS/WPQR/WPQ completo, trazabilidad de soldadura, equipos y consumibles, on-premise gestionado íntegramente. Ambos tienen precios públicos: vea los <a href="/es/pricing.html">precios</a>.</p>
-        </div>
-    </section>
-
-    <section class="page-section container" id="deployment-cta">
-        <div class="cta-band">
-            <span class="eyebrow">Continúe Leyendo</span>
-            <h2 class="text-glow">Profundice en los Registros</h2>
-            <p>Los registros detrás de estas preguntas tienen cada uno una guía breve: la cadena pWPS–WPQR–WPS, cómo se mantienen válidas las cualificaciones de soldadores y cómo los números de colada vinculan una soldadura con su material.</p>
-            <div class="cta-group">
-                <a href="/es/resources/" class="btn btn-secondary">Ver las Guías</a>
-            </div>
-            <p class="hero-hub-link">También: <a href="/es/resources/pwps-vs-wpqr-vs-wps/">pWPS vs WPQR vs WPS&nbsp;→</a> · <a href="/es/resources/welder-qualification-validity/">Validez de la Cualificación&nbsp;→</a></p>
-        </div>
-    </section>
+            <p>Construimos dos productos, ambos con precios públicos. Si sus respuestas apuntan a una biblioteca en la nube de procedimientos y cualificaciones de soldadores, es Atlas, disponible hoy. Si apuntan a trazabilidad hasta la unión en su propio hardware, es Elenchon.</p>
+{%- endcapture %}
+{% include door-chooser.html compact="true" intro=doors_intro %}

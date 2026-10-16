@@ -188,14 +188,9 @@ crumb: "pWPS vs WPQR vs WPS"
         </div>
     </section>
 
-    <section class="page-section container" id="cta">
-        <div class="cta-band">
+{%- capture closing_intro %}
             <span class="eyebrow">De los Autores</span>
-            <h2 class="text-glow">Dónde Encaja Delteris</h2>
-            <p>Desarrollamos <strong>Elenchon Atlas</strong>, una biblioteca en la nube que guarda WPS, pWPS y WPQR como registros vinculados y buscables, importados de los archivos Excel y PDF que ya tiene. La plataforma Elenchon completa gestiona toda la cadena, de la pWPS a la WPS final, en planta.</p>
-            <div class="cta-group">
-                <a href="/es/wps-management-software.html" class="btn btn-primary">Ver Elenchon Atlas</a>
-                <a href="/es/resources/welder-qualification-validity/" class="btn btn-secondary">Siguiente: Validez de la Cualificación</a>
-            </div>
-        </div>
-    </section>
+            <h2 class="text-glow">Cada WPS Vinculada a su WPQR</h2>
+            <p>Una WPS solo es tan válida como el WPQR que la respalda, y en una carpeta de archivos ese vínculo es lo primero que se pierde. Atlas importa sus WPS, pWPS y WPQR desde Excel o PDF, mantiene cada WPS vinculada a su WPQR y señala cualquier WPS que se salga del rango de su WPQR.</p>
+{%- endcapture %}
+{% include closing-cta.html product="atlas" intro=closing_intro %}
