@@ -1,0 +1,120 @@
+# Guides shown in the "Keep reading" block at the end of every guide
+# (_includes/guide-next.html). Same groups, order and wording as the guides hub
+# (resources/index.html) — keep the two in step when a guide is added or renamed.
+#
+# groups: in hub order; `near` lists the neighbouring groups to borrow from, nearest
+#         first, when a guide's own group has fewer than three other entries.
+# guides: in hub order; `path` is the EN path (PT/ES get the /pt or /es prefix).
+
+groups:
+  procedures:
+    near: [welders, traceability, software]
+    name:
+      en: "WPS & procedure qualification"
+      pt: "WPS & qualificação de procedimentos"
+      es: "WPS & cualificación de procedimientos"
+  welders:
+    near: [procedures, traceability, software]
+    name:
+      en: "welder qualification"
+      pt: "qualificação de soldadores"
+      es: "cualificación de soldadores"
+  traceability:
+    near: [procedures, software, welders]
+    name:
+      en: "traceability"
+      pt: "rastreabilidade"
+      es: "trazabilidad"
+  software:
+    near: [traceability, procedures, welders]
+    name:
+      en: "choosing & deploying software"
+      pt: "escolher & implementar software"
+      es: "elegir & implantar software"
+
+guides:
+  - id: pwps-wpqr-wps
+    group: procedures
+    path: /resources/pwps-vs-wpqr-vs-wps/
+    kind: { en: "Guide", pt: "Guia", es: "Guía" }
+    title:
+      en: "pWPS vs WPQR vs WPS: the difference explained"
+      pt: "pWPS vs WPQR vs WPS: a diferença explicada"
+      es: "pWPS vs WPQR vs WPS: la diferencia explicada"
+    summary:
+      en: "Draft, proof, production: the three procedure records side by side, and the one real difference between ISO and ASME."
+      pt: "Rascunho, prova, produção: os três registos de procedimento lado a lado, e a única diferença real entre ISO e ASME."
+      es: "Borrador, prueba, producción: los tres registros de procedimiento lado a lado, y la única diferencia real entre ISO y ASME."
+  - id: heat-input-calculator
+    group: procedures
+    tool: true
+    path: /heat-input-calculator.html
+    kind: { en: "Tool in Atlas", pt: "Ferramenta no Atlas", es: "Herramienta en Atlas" }
+    title:
+      en: "Heat input calculator, clamped to your WPQR range"
+      pt: "Calculadora de aporte térmico, limitada à gama do seu WPQR"
+      es: "Calculadora de aporte térmico, limitada al rango de su WPQR"
+    summary:
+      en: "Set the window your WPQR qualified for root, fill and cap, then adjust current, voltage and travel speed without leaving it."
+      pt: "Defina a janela que o seu WPQR qualificou para raiz, enchimento e acabamento, e ajuste corrente, tensão e velocidade sem sair dela."
+      es: "Fije la ventana que su WPQR cualificó para raíz, relleno y peinado, y ajuste intensidad, tensión y velocidad sin salir de ella."
+  - id: welder-qualification-validity
+    group: welders
+    path: /resources/welder-qualification-validity/
+    kind: { en: "Guide", pt: "Guia", es: "Guía" }
+    title:
+      en: "Welder qualification validity: continuity, expiry and revalidation"
+      pt: "Validade da qualificação de soldadores: continuidade, caducidade e revalidação"
+      es: "Validez de la cualificación de soldadores: continuidad, caducidad y revalidación"
+    summary:
+      en: "The ISO 9606-1 six-month confirmation, the three revalidation routes and ASME IX's expiry rule, in one table."
+      pt: "A confirmação semestral da ISO 9606-1, as três vias de revalidação e a regra de caducidade da ASME IX, numa tabela."
+      es: "La confirmación semestral de la ISO 9606-1, las tres vías de revalidación y la regla de caducidad de la ASME IX, en una tabla."
+  - id: heat-number-traceability
+    group: traceability
+    path: /resources/heat-number-traceability/
+    kind: { en: "Guide", pt: "Guia", es: "Guía" }
+    title:
+      en: "How heat-number traceability works"
+      pt: "Como funciona a rastreabilidade por número de corrida"
+      es: "Cómo funciona la trazabilidad por número de colada"
+    summary:
+      en: "Mill certificates, transfer at cutting — where most shops break the chain — and what a traceable weld should link to."
+      pt: "Certificados de material, a transferência no corte — onde a maioria das oficinas quebra a cadeia — e o que uma soldadura rastreável deve ligar."
+      es: "Certificados de material, la transferencia en el corte — donde la mayoría de los talleres rompe la cadena — y con qué debe vincularse una soldadura trazable."
+  - id: how-to-choose
+    group: software
+    path: /how-to-choose-welding-software.html
+    kind: { en: "Buyer's guide", pt: "Guia de compra", es: "Guía de compra" }
+    title:
+      en: "How to choose welding management software"
+      pt: "Como escolher software de gestão de soldadura"
+      es: "Cómo elegir software de gestión de soldadura"
+    summary:
+      en: "The questions a feature checklist hides — qualification records, data ownership, pricing, lock-in — with a vendor-neutral matrix."
+      pt: "As perguntas que uma lista de funcionalidades esconde — registos de qualificação, dados, preços, dependência — com uma matriz neutra."
+      es: "Las preguntas que una lista de funciones oculta — registros de cualificación, datos, precios, dependencia — con una matriz neutral."
+  - id: on-premise-vs-cloud
+    group: software
+    path: /welding-software-on-premise-vs-cloud.html
+    kind: { en: "Decision guide", pt: "Guia de decisão", es: "Guía de decisión" }
+    title:
+      en: "On-premise vs cloud welding software"
+      pt: "Software de soldadura on-premise vs cloud"
+      es: "Software de soldadura on-premise vs nube"
+    summary:
+      en: "Ownership, cost over the years, offline work and lock-in, weighed fairly — and which situations favour each."
+      pt: "Propriedade, custo ao longo dos anos, trabalho offline e dependência, pesados com justiça — e que situações favorecem cada um."
+      es: "Propiedad, coste a lo largo de los años, trabajo offline y dependencia, sopesados con justicia — y qué situaciones favorecen a cada uno."
+  - id: managed-on-premise
+    group: software
+    path: /resources/managed-on-premise-software/
+    kind: { en: "Explainer", pt: "Explicação", es: "Explicación" }
+    title:
+      en: "Managed on-premise: on-premise without the IT burden"
+      pt: "On-premise gerido: on-premise sem a carga de TI"
+      es: "On-premise gestionado: on-premise sin la carga de TI"
+    summary:
+      en: "What changes when the vendor installs, updates and fixes the appliance remotely — plus five questions to ask any vendor."
+      pt: "O que muda quando o fornecedor instala, atualiza e repara o appliance remotamente — e cinco perguntas a fazer a qualquer fornecedor."
+      es: "Qué cambia cuando el proveedor instala, actualiza y repara el appliance en remoto — y cinco preguntas para cualquier proveedor."
