@@ -1,31 +1,127 @@
 {
-      "@context": "https://schema.org",
-      "@graph": [
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "name": "Elenchon — On-Premise Welding Management Software",
+      "url": "https://delteris.com/platform.html",
+      "description": "Elenchon is on-premise welding traceability and management software: shop-floor capture, project structure, the WPS/WPQR/WPQ workflow, equipment and consumables, and audit-ready ISO 3834 and ASME IX evidence on hardware you own. Launching Q1 2027.",
+      "publisher": {
+        "@id": "https://delteris.com/#organization"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
         {
-          "@type": "WebPage",
-          "name": "Platform Capabilities",
-          "url": "https://delteris.com/platform.html",
-          "description": "Elenchon's six capability pillars covering the full production loop — from BOM import to audit-ready ISO & ASME IX evidence.",
-          "publisher": { "@id": "https://delteris.com/#organization" }
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://delteris.com/"
         },
         {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://delteris.com/" },
-            { "@type": "ListItem", "position": 2, "name": "Platform", "item": "https://delteris.com/platform.html" }
-          ]
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Elenchon",
+          "item": "https://delteris.com/platform.html"
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "name": "Elenchon capability pillars",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Zero-Friction Work Capture",
+          "url": "https://delteris.com/platform.html#work-capture"
         },
         {
-          "@type": "ItemList",
-          "name": "Elenchon capability pillars",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Zero-Friction Work Capture", "url": "https://delteris.com/platform.html#work-capture" },
-            { "@type": "ListItem", "position": 2, "name": "One Project, Two Live Views", "url": "https://delteris.com/platform.html#live-views" },
-            { "@type": "ListItem", "position": 3, "name": "Management & Access Control", "url": "https://delteris.com/platform.html#management" },
-            { "@type": "ListItem", "position": 4, "name": "Qualifications & Procedures", "url": "https://delteris.com/platform.html#qualifications" },
-            { "@type": "ListItem", "position": 5, "name": "Floor Asset & Consumable Control", "url": "https://delteris.com/platform.html#assets" },
-            { "@type": "ListItem", "position": 6, "name": "Bulletproof Data Sovereignty", "url": "https://delteris.com/platform.html#sovereignty" }
-          ]
+          "@type": "ListItem",
+          "position": 2,
+          "name": "One Project, Two Live Views",
+          "url": "https://delteris.com/platform.html#live-views"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Management & Access Control",
+          "url": "https://delteris.com/platform.html#management"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Qualifications & Procedures",
+          "url": "https://delteris.com/platform.html#qualifications"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Floor Asset & Consumable Control",
+          "url": "https://delteris.com/platform.html#assets"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Bulletproof Data Sovereignty",
+          "url": "https://delteris.com/platform.html#sovereignty"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://delteris.com/platform.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is welding management software?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Welding management software digitizes a fabrication shop's welding records — welder qualifications (WPS, WPQR, WPQ), weld tracking and traceability, procedure control and inspection history — so every joint is traceable and audit-ready. Elenchon does this entirely on-premise, keeping the full weld record on hardware you own."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Elenchon cloud-based or on-premise?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Elenchon is a 100% on-premise appliance installed in your facility — the sovereign alternative to cloud welding software (see the honest comparison). Your manufacturing data never touches a shared server, there are no forced updates, and you don't depend on a vendor's cloud to reach your own records."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Elenchon just weld traceability, or does it run qualification too?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Both, in one system. Alongside traceability, Elenchon runs the full WPS/WPQR/WPQ workflow — live WPQR capture on the floor, automatic six-month continuity and expiry alerts — so a requalification is never missed and no welder works outside an approved range."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does it help with ISO 3834 and ASME IX compliance?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Every qualification, variable and process is verified and attributed the moment it is captured, so audit evidence for codes such as ISO 3834 and ASME IX is instant and undisputed."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can we access an on-premise system remotely?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, through the optional Remote Access Module. Authorised staff and auditors connect from anywhere — mobile data included — over Phrakton’s mutually authenticated, post-quantum-safe tunnels, while the appliance opens no inbound ports and stays invisible to the public internet."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does Elenchon cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pricing is published in the open: a flat monthly rate per appliance — Lite from €390/month with 20 workers included, Standard from €790/month with 50 — plus additional seats kept modest at €9/month, every add-on in plain euros, and no lock-in."
+          }
         }
       ]
     }
+  ]
+}

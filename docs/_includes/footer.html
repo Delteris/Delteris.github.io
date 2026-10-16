@@ -1,6 +1,7 @@
 {%- assign L = page.lang | default: 'en' -%}
 {%- comment %} Atlas pages (hub sets `product: atlas`, spokes `hub: atlas`) get Atlas wording and
-     its single action; everything else keeps the Elenchon/Delteris line. {%- endcomment %}
+     a quiet text link to its single action; everything else a quiet line to the founders.
+     Deliberately no button: the page's own closing block carries the action. {%- endcomment %}
 {%- assign fprod = page.product | default: page.hub -%}
 {%- if page.update_product == 'atlas' %}{% assign fprod = 'atlas' %}{% endif -%}
 {%- if L == 'pt' %}
@@ -9,11 +10,9 @@
             <h2 class="logo"><span>Delteris</span></h2>
             <p>A desenvolver a tecnologia para o futuro da Europa.</p>
             {%- if fprod == 'atlas' %}
-            <p class="footer-cta-text">Pronto para pôr as suas WPS e qualificações de soldadores em ordem?</p>
-            <a href="/pt/wps-manager-contact.html" class="btn btn-primary">Pedir Teste Gratuito</a>
+            <p class="footer-cta-text">Quer experimentar o Atlas? <a href="/pt/wps-manager-contact.html">Peça um teste gratuito&nbsp;→</a></p>
 {%- else %}
-            <p class="footer-cta-text">Pronto para otimizar a sua rastreabilidade?</p>
-            <a href="/pt/contact.html" class="btn btn-primary">Contacte os Fundadores</a>
+            <p class="footer-cta-text">Tem perguntas? <a href="/pt/contact.html">Fale com os fundadores&nbsp;→</a></p>
 {%- endif %}
         </div>
         <div class="copyright">
@@ -32,11 +31,9 @@
             <h2 class="logo"><span>Delteris</span></h2>
             <p>Desarrollando la tecnología para el futuro de Europa.</p>
             {%- if fprod == 'atlas' %}
-            <p class="footer-cta-text">¿Listo para poner en orden sus WPS y cualificaciones de soldadores?</p>
-            <a href="/es/wps-manager-contact.html" class="btn btn-primary">Solicitar Prueba Gratuita</a>
+            <p class="footer-cta-text">¿Quiere probar Atlas? <a href="/es/wps-manager-contact.html">Solicite una prueba gratuita&nbsp;→</a></p>
 {%- else %}
-            <p class="footer-cta-text">¿Listo para optimizar su trazabilidad?</p>
-            <a href="/es/contact.html" class="btn btn-primary">Contacte con los Fundadores</a>
+            <p class="footer-cta-text">¿Tiene preguntas? <a href="/es/contact.html">Hable con los fundadores&nbsp;→</a></p>
 {%- endif %}
         </div>
         <div class="copyright">
@@ -55,11 +52,9 @@
             <h2 class="logo"><span>Delteris</span></h2>
             <p>Engineering the technology for Europe's future.</p>
             {%- if fprod == 'atlas' %}
-            <p class="footer-cta-text">Ready to get your WPS and welder qualifications in order?</p>
-            <a href="/wps-manager-contact.html" class="btn btn-primary">Get a Free Trial</a>
+            <p class="footer-cta-text">Want to try Atlas? <a href="/wps-manager-contact.html">Get a free trial&nbsp;→</a></p>
 {%- else %}
-            <p class="footer-cta-text">Ready to optimize your traceability?</p>
-            <a href="/contact.html" class="btn btn-primary">Contact the Founders</a>
+            <p class="footer-cta-text">Questions? <a href="/contact.html">Talk to the founders&nbsp;→</a></p>
 {%- endif %}
         </div>
         <div class="copyright">
