@@ -21,9 +21,10 @@ crumb: "Features"
             <h1 class="text-glow">Every Capability, on the Real Screens.</h1>
             <p class="hero-sub">Both halves of the product, shown in the app rather than described: import, review, search and export your WPS register — and track every welder’s qualifications alongside it. This is the complete feature set behind <a href="wps-management-software.html">Elenchon Atlas</a>.</p>
             <div class="cta-group">
-                <a href="wps-manager-contact.html" class="btn btn-primary">Contact the Founders</a>
+                <a href="wps-manager-contact.html" class="btn btn-primary">Get a Free Trial</a>
                 <a href="wps-management-software.html#pricing" class="btn btn-secondary">See Pricing</a>
             </div>
+            <p class="hero-hub-link">Part of <a href="wps-management-software.html">Elenchon Atlas</a>, the cloud register for your WPS and welder qualifications.</p>
         </div>
         <a class="scroll-cue" href="#overview" aria-label="Scroll to see more">
             <span class="scroll-cue-text">Scroll</span>
@@ -374,7 +375,7 @@ crumb: "Features"
         <div class="section-header">
             <span class="eyebrow">Export Today, Authoring Next</span>
             <h2>A Clean Excel Export, and More to Come</h2>
-            <p class="subtitle">Atlas already emits a clean Excel workbook for any WPS you hold, and that file re-imports losslessly. Full in-cloud authoring builds on that foundation.</p>
+            <p class="subtitle">Atlas already emits a clean Excel workbook for any WPS you hold, and that file re-imports losslessly. Full in-cloud authoring builds on that foundation. Each step ships in a release you can follow in <a href="/atlas/updates/">Atlas updates</a>.</p>
         </div>
         <div class="pillar-grid">
             <div class="glass-card">
@@ -389,15 +390,9 @@ crumb: "Features"
     </section>
 
     <!-- ===================== CTA ===================== -->
-    <section class="page-section container" id="cta">
-        <div class="cta-band">
+{%- capture closing_intro %}
             <span class="eyebrow">Get Started</span>
             <h2 class="text-glow">Put Your Register on This</h2>
             <p>Onboarding is guided directly by the founders — send us a few of your WPS documents, we confirm the parser reads your template, and you go live with a register proven on your own paperwork. Everything handled confidentially.</p>
-            <div class="cta-group">
-                <a href="wps-manager-contact.html" class="btn btn-primary">Contact the Founders</a>
-                <a href="mailto:contact@delteris.com?subject=Elenchon%20Atlas%20%E2%80%94%20Parse%20Check%20For%20Our%20WPS" class="btn btn-secondary">Send Us a WPS — See It Parsed</a>
-            </div>
-            <p class="hero-urgency u-gap-top">One flat price, direct founder support, nothing hidden — you deal with the people who built it.</p>
-        </div>
-    </section>
+{%- endcapture %}
+{% include closing-cta.html product="atlas" id="cta" intro=closing_intro %}

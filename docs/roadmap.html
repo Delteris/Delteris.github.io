@@ -22,6 +22,7 @@ crumb: "Roadmap"
                 <a href="contact.html" class="btn btn-primary">Join the Launch List</a>
                 <a href="pricing.html" class="btn btn-secondary">See Open Pricing</a>
             </div>
+            <p class="hero-hub-link">Part of <a href="platform.html">Elenchon</a>, on-premise welding traceability launching Q1 2027.</p>
         </div>
     </header>
 
@@ -71,16 +72,11 @@ crumb: "Roadmap"
         <p class="feature-note">All plan, add-on, deployment and hardware prices are published in full on our <a href="pricing.html">pricing page</a> — including Premium once its feature set is finalized.</p>
     </section>
 
-    <section class="page-section container u-tight-bottom" id="roadmap-cta">
-        <div class="cta-band">
+{%- capture closing_intro %}
             <span class="eyebrow">Shape What's Next</span>
             <h2 class="text-glow">Missing Something Your Floor Needs?</h2>
             <p>A two-founder team on a modern stack turns a shop's request into shipped software in a release cycle, not a roadmap quarter. If something specific is missing, tell us — it's often how the next item gets here.</p>
-            <div class="cta-group">
-                <a href="contact.html" class="btn btn-primary">Contact the Founders</a>
-                <a href="platform.html" class="btn btn-secondary">Explore the Platform</a>
-            </div>
-        </div>
-    </section>
+{%- endcapture %}
+{% include closing-cta.html product="elenchon" id="roadmap-cta" class="u-tight-bottom" intro=closing_intro %}
 
 {% include newsletter-signup.html product="elenchon" %}

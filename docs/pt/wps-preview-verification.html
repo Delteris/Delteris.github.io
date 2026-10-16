@@ -22,9 +22,10 @@ crumb: "Pré-visualização e Verificação de WPS"
             <h1 class="text-glow">Veja Cada Leitura<br>Contra o Original.</h1>
             <p class="hero-sub">Um parser só é seguro se o puder conferir. A Pré-visualização divide o ecrã: cada campo que a aplicação leu de um lado, o seu ficheiro PDF ou Excel real do outro. Compare em segundos — e corrija uma leitura errada ali mesmo.</p>
             <div class="cta-group">
-                <a href="/pt/wps-manager-contact.html" class="btn btn-primary">Contacte os Fundadores</a>
-                <a href="/pt/wps-management-software.html#pricing" class="btn btn-secondary">Ver Preços</a>
+                <a href="/pt/wps-manager-contact.html" class="btn btn-primary">Pedir Teste Gratuito</a>
+                <a href="/pt/wps-manager-features.html" class="btn btn-secondary">Ver Todas as Funcionalidades &rarr;</a>
             </div>
+            <p class="hero-hub-link">Parte do <a href="/pt/wps-management-software.html">Elenchon Atlas</a>, o registo na cloud das suas WPS e qualificações de soldadores · <a href="/pt/wps-management-software.html#pricing">Ver preços&nbsp;→</a></p>
         </div>
         <a class="scroll-cue" href="#overview" aria-label="Deslocar para ver mais">
             <span class="scroll-cue-text">Deslocar</span>
@@ -147,15 +148,9 @@ crumb: "Pré-visualização e Verificação de WPS"
         </div>
     </section>
 
-    <section class="page-section container" id="cta">
-        <div class="cta-band">
+{%- capture closing_intro %}
             <span class="eyebrow">Comece</span>
             <h2 class="text-glow">Confie em Cada Número, Porque o Viu</h2>
             <p>Envie algumas das suas WPS, confirmamos que o parser lê o seu modelo e entra em funcionamento capaz de conferir cada leitura com a sua própria papelada — tudo tratado de forma confidencial.</p>
-            <div class="cta-group">
-                <a href="/pt/wps-manager-contact.html" class="btn btn-primary">Contacte os Fundadores</a>
-                <a href="mailto:contact@delteris.com?subject=Elenchon%20WPS%20Manager%20%E2%80%94%20Verifica%C3%A7%C3%A3o%20de%20Leitura%20da%20Nossa%20WPS" class="btn btn-secondary">Envie-nos uma WPS — Veja-a Analisada</a>
-            </div>
-            <p class="hero-urgency u-gap-top">Respostas diretas de quem escreveu o parser — normalmente dentro de um dia útil.</p>
-        </div>
-    </section>
+{%- endcapture %}
+{% include closing-cta.html product="atlas" id="cta" intro=closing_intro %}

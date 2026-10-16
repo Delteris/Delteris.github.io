@@ -24,6 +24,7 @@ crumb: "Segurança"
                 <a href="/pt/contact.html" class="btn btn-primary">Entrar na Lista de Lançamento</a>
                 <a href="/pt/pricing.html" class="btn btn-secondary">Ver a Garantia de Disponibilidade</a>
             </div>
+            <p class="hero-hub-link">Parte do <a href="/pt/platform.html">Elenchon</a>, rastreabilidade de soldadura on-premise com lançamento no 1.º trimestre de 2027.</p>
             <ul class="hero-proof">
                 <li>Sem portas abertas · sem superfície de ataque pública</li>
                 <li>Cifragem resistente a computação quântica</li>
@@ -304,9 +305,7 @@ crumb: "Segurança"
                 <span class="eyebrow">Fiabilidade</span>
                 <h2 class="text-glow">Segurança com que Pode Contar — por Escrito</h2>
                 <p class="security-intro">Ser invisível só ajuda se também estiver disponível. Operamos o Phrakton nós próprios e comprometemo-nos com 99,9% de disponibilidade mensal, projetada para o mais perto possível de 100% — e em qualquer mês em que falhemos, um crédito percentual é aplicado à sua fatura automaticamente. Sem reclamação, sem discussão.</p>
-                <div class="cta-group">
-                    <a href="/pt/pricing.html#uptime" class="btn btn-secondary">Ver a Garantia de Disponibilidade Completa</a>
-                </div>
+                <p class="u-gap-top"><a href="/pt/pricing.html#uptime">Ver a Garantia de Disponibilidade Completa&nbsp;→</a></p>
             </div>
             <div class="graphic-placeholder">
                 <div class="pulse-ring delay-2"></div>
@@ -317,15 +316,9 @@ crumb: "Segurança"
         </div>
     </section>
 
-    <section class="page-section container u-tight-bottom" id="security-cta">
-        <div class="cta-band">
+{%- capture closing_intro %}
             <span class="eyebrow">Implementação</span>
             <h2 class="text-glow">Torne a Sua Fábrica Invisível</h2>
             <p class="u-stack-sm">Cada appliance Phrakton é instalado e configurado no local pelos nossos próprios engenheiros, o que significa que as vagas de implementação em cada trimestre são deliberadamente limitadas. Contacte-nos hoje para reservar a sua — ou peça uma explicação técnica mais aprofundada da arquitetura.</p>
-            <div class="cta-group">
-                <a href="/pt/contact.html" class="btn btn-primary">Entrar na Lista de Lançamento</a>
-                <a href="/pt/contact.html" class="btn btn-secondary">Fale Connosco</a>
-            </div>
-            <p class="hero-urgency u-gap-top">Contacte os fundadores — sem camadas comerciais, sem filas de chamadas.</p>
-        </div>
-    </section>
+{%- endcapture %}
+{% include closing-cta.html product="elenchon" id="security-cta" class="u-tight-bottom" intro=closing_intro %}

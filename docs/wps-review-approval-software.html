@@ -21,9 +21,10 @@ crumb: "WPS Review & Approval"
             <h1 class="text-glow">Nothing Touches Your Register<br>Until You Approve It.</h1>
             <p class="hero-sub">Your WPS library is only as good as what goes into it. Imports never land silently: each one queues as a change-set you review cell by cell — current value beside new — and only the cells you confirm are applied.</p>
             <div class="cta-group">
-                <a href="wps-manager-contact.html" class="btn btn-primary">Contact the Founders</a>
-                <a href="wps-management-software.html#pricing" class="btn btn-secondary">See Pricing</a>
+                <a href="wps-manager-contact.html" class="btn btn-primary">Get a Free Trial</a>
+                <a href="wps-manager-features.html" class="btn btn-secondary">See Every Feature &rarr;</a>
             </div>
+            <p class="hero-hub-link">Part of <a href="wps-management-software.html">Elenchon Atlas</a>, the cloud register for your WPS and welder qualifications · <a href="wps-management-software.html#pricing">See pricing&nbsp;→</a></p>
         </div>
         <a class="scroll-cue" href="#overview" aria-label="Scroll to see more">
             <span class="scroll-cue-text">Scroll</span>
@@ -178,15 +179,9 @@ crumb: "WPS Review & Approval"
         </div>
     </section>
 
-    <section class="page-section container" id="cta">
-        <div class="cta-band">
+{%- capture closing_intro %}
             <span class="eyebrow">Get Started</span>
             <h2 class="text-glow">Keep Control of What Enters Your Register</h2>
             <p>Send a few of your WPS, we confirm the parser reads your template, and you go live with a register where nothing changes without your sign-off — all handled confidentially.</p>
-            <div class="cta-group">
-                <a href="wps-manager-contact.html" class="btn btn-primary">Contact the Founders</a>
-                <a href="mailto:contact@delteris.com?subject=Elenchon%20WPS%20Manager%20%E2%80%94%20Parse%20Check%20For%20Our%20WPS" class="btn btn-secondary">Send Us a WPS — See It Parsed</a>
-            </div>
-            <p class="hero-urgency u-gap-top">No sales layer, no call queue — founder-level support is part of the price, not an upgrade.</p>
-        </div>
-    </section>
+{%- endcapture %}
+{% include closing-cta.html product="atlas" id="cta" intro=closing_intro %}

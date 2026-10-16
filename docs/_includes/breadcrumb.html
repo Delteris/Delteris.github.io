@@ -14,13 +14,6 @@
 {%- elsif page.hub == 'elenchon' %}{% assign hub_name = 'Elenchon' %}{% assign hub_url = px | append: '/platform.html' %}
 {%- else %}{% assign hub_name = t_guides %}{% assign hub_url = px | append: '/resources/' %}{% endif -%}
 {%- assign crumb = page.crumb | default: page.title -%}
-    <nav class="breadcrumb" aria-label="{{ t_label }}">
-        <ol>
-            <li class="bc-home"><a href="{{ px }}/">{{ t_home }}</a></li>
-            <li class="bc-parent"><a href="{{ hub_url }}">{{ hub_name }}</a></li>
-            <li class="bc-current" aria-current="page">{{ crumb }}</li>
-        </ol>
-    </nav>
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -32,3 +25,10 @@
   ]
 }
     </script>
+    <div class="breadcrumb" role="navigation" aria-label="{{ t_label }}">
+        <ol>
+            <li class="bc-home"><a href="{{ px }}/">{{ t_home }}</a></li>
+            <li class="bc-parent"><a href="{{ hub_url }}">{{ hub_name }}</a></li>
+            <li class="bc-current" aria-current="page">{{ crumb }}</li>
+        </ol>
+    </div>

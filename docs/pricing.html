@@ -17,6 +17,10 @@ crumb: "Pricing"
         <div class="hero-content">
             <h1 class="text-glow">Priced in the Open.<br>No Hidden Fees.</h1>
             <p class="hero-sub">No mystery invoices. Every plan, add-on, setup fee and service credit here is the real number in plain euros — so your finance team can model the full cost before contacting us.</p>
+            <div class="cta-group">
+                <a href="contact.html" class="btn btn-primary">Join the Launch List</a>
+            </div>
+            <p class="hero-hub-link">Pricing for <a href="platform.html">Elenchon</a>, the on-premise platform launching Q1 2027.</p>
         </div>
     </header>
 
@@ -538,14 +542,8 @@ crumb: "Pricing"
         </div>
     </section>
 
-    <section class="page-section container u-tight-bottom">
-        <div class="cta-band">
+{%- capture closing_intro %}
             <h2 class="text-glow">Ready When You Are</h2>
             <p class="u-stack-sm">Our own engineers install every appliance on-site, so we take a deliberately limited number of deployments each quarter. Talk to us about pricing for your floor and the quarter that suits you.</p>
-            <div class="cta-group">
-                <a href="contact.html" class="btn btn-primary">Join the Launch List</a>
-                <a href="contact.html" class="btn btn-secondary">Contact Us Now</a>
-            </div>
-            <p class="hero-urgency u-gap-top">Contact the founders — no sales layers, no call queues.</p>
-        </div>
-    </section>
+{%- endcapture %}
+{% include closing-cta.html product="elenchon" class="u-tight-bottom" intro=closing_intro %}

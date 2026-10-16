@@ -4,8 +4,9 @@
        intro    optional page-specific eyebrow/h2/p markup (capture it); a generic
                 per-product intro is used when omitted
        id       section id (default "cta") — keep any id other pages anchor to
-       action   "false" to omit the button + subline (the action's own destination,
-                e.g. the contact pages), leaving only the intro and the cross-link
+       class    extra section classes (e.g. u-tight-bottom)
+       action   "false" on the action's own destination (the contact pages): renders
+                only the quiet cross-link line, no band and no button
      Labels live here so every page says the action the same way. {%- endcomment %}
 {%- assign L = page.lang | default: 'en' -%}
 {%- if L == 'en' %}{% assign px = '' %}{% else %}{% assign px = '/' | append: L %}{% endif -%}
@@ -73,15 +74,19 @@
 {%- assign x_text = 'Need WPS and welder control now? Atlas is live — and your data moves to Elenchon at launch' -%}
 {%- endif %}
 {%- endif %}
-    <section class="page-section container" id="{{ include.id | default: 'cta' }}">
+{%- if include.action == 'false' %}
+    <section class="page-section container u-tight-top closing-cta-slim">
+        <p class="closing-crosslink"><a href="{{ x_href }}">{{ x_text }}&nbsp;→</a></p>
+    </section>
+{%- else %}
+    <section class="page-section container{% if include.class %} {{ include.class }}{% endif %}" id="{{ include.id | default: 'cta' }}">
         <div class="cta-band closing-cta">
 {%- if include.intro and include.intro != '' %}{{ include.intro }}{% else %}{{ c_intro }}{% endif %}
-{%- unless include.action == 'false' %}
             <div class="cta-group">
                 <a href="{{ c_href }}" class="btn btn-primary">{{ c_label }}</a>
             </div>
             <p class="hero-urgency u-gap-top">{{ c_sub }}</p>
-{%- endunless %}
             <p class="closing-crosslink"><a href="{{ x_href }}">{{ x_text }}&nbsp;→</a></p>
         </div>
     </section>
+{%- endif %}

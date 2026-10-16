@@ -22,8 +22,8 @@ crumb: "Captura de Dados no Chão de Fábrica"
             <p class="hero-sub">Uma aplicação de chão de fábrica pensada para telemóvel que leva os soldadores ao passo certo e a registar em dez segundos ou menos — soldadura, montagem, corte ou qualquer tipo de trabalho personalizado. Funciona primeiro offline, por isso o registo nunca para. Num appliance on-premise que é seu.</p>
             <div class="cta-group">
                 <a href="/pt/contact.html" class="btn btn-primary">Entrar na Lista de Lançamento</a>
-                <a href="#faq" class="btn btn-secondary">Ver FAQ</a>
             </div>
+            <p class="hero-hub-link">Parte do <a href="/pt/platform.html">Elenchon</a>, rastreabilidade de soldadura on-premise com lançamento no 1.º trimestre de 2027 · <a href="#faq">Ler as FAQ&nbsp;↓</a></p>
         </div>
         <a class="scroll-cue" href="#overview" aria-label="Deslocar para ver mais">
             <span class="scroll-cue-text">Deslocar</span>
@@ -170,16 +170,9 @@ crumb: "Captura de Dados no Chão de Fábrica"
         </div>
     </section>
 
-    <section class="page-section container" id="deployment-cta">
-        <div class="cta-band">
+{%- capture closing_intro %}
             <span class="eyebrow">Implementação</span>
             <h2 class="text-glow">Coloque Captura Rápida e Soberana no Seu Chão de Fábrica</h2>
             <p>Os nossos próprios engenheiros instalam cada appliance Elenchon no local, por isso as implementações por trimestre são deliberadamente limitadas. Entre na lista de lançamento para reservar uma vaga, peça uma chamada de levantamento ou coloque primeiro as suas questões técnicas.</p>
-            <div class="cta-group">
-                <a href="/pt/contact.html" class="btn btn-primary">Entrar na Lista de Lançamento</a>
-                <a href="/pt/pricing.html" class="btn btn-secondary">Ver Preços</a>
-            </div>
-            <p class="hero-urgency u-gap-top">Contacte os fundadores — sem camadas comerciais, sem filas de chamadas.</p>
-            <p class="hero-urgency u-gap-top atlas-crosslink">Só precisa dos seus procedimentos e das qualificações dos soldadores organizados? O <a href="/pt/wps-management-software.html">Elenchon Atlas</a> faz isso na cloud.</p>
-        </div>
-    </section>
+{%- endcapture %}
+{% include closing-cta.html product="elenchon" id="deployment-cta" intro=closing_intro %}

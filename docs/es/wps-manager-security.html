@@ -22,9 +22,10 @@ crumb: "Seguridad"
             <h1 class="text-glow">Sus Procedimientos Son Propietarios.<br>Su Registro Es Prueba.</h1>
             <p class="hero-sub">Sus WPS son conocimiento competitivo, por eso Atlas está construido para protegerlas. Cada cambio se atribuye y se fecha, usted concede el acceso, hasta un único puesto de solo lectura, y sus datos quedan aislados en su propio inquilino — alojados en la UE y cifrados en tránsito.</p>
             <div class="cta-group">
-                <a href="wps-manager-contact.html" class="btn btn-primary">Hable con los Fundadores</a>
-                <a href="wps-management-software.html#pricing" class="btn btn-secondary">Ver Precios</a>
+                <a href="wps-manager-contact.html" class="btn btn-primary">Solicitar Prueba Gratuita</a>
+                <a href="/es/wps-manager-features.html" class="btn btn-secondary">Ver Todas las Funciones &rarr;</a>
             </div>
+            <p class="hero-hub-link">Parte de <a href="/es/wps-management-software.html">Elenchon Atlas</a>, el registro en la nube de sus WPS y cualificaciones de soldadores · <a href="/es/wps-management-software.html#pricing">Ver precios&nbsp;→</a></p>
         </div>
     </header>
 
@@ -104,15 +105,9 @@ crumb: "Seguridad"
         </div>
     </section>
 
-    <section class="page-section container" id="cta">
-        <div class="cta-band">
+{%- capture closing_intro %}
             <span class="eyebrow">Empiece</span>
             <h2 class="text-glow">Un Registro Que Puede Defender</h2>
             <p>Envíe algunas de sus WPS, confirmamos que el parser lee su plantilla y entra en funcionamiento en un inquilino aislado, registrado y suyo — todo tratado con confidencialidad.</p>
-            <div class="cta-group">
-                <a href="wps-manager-contact.html" class="btn btn-primary">Hable con los Fundadores</a>
-                <a href="mailto:contact@delteris.com?subject=Elenchon%20WPS%20Manager%20%E2%80%94%20Verificaci%C3%B3n%20de%20Lectura%20de%20Nuestra%20WPS" class="btn btn-secondary">Envíenos una WPS — Véala Analizada</a>
-            </div>
-            <p class="hero-urgency u-gap-top">Sus datos, su inquilino, sus reglas — y quien lo construyó respondiendo directamente.</p>
-        </div>
-    </section>
+{%- endcapture %}
+{% include closing-cta.html product="atlas" id="cta" intro=closing_intro %}

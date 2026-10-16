@@ -23,9 +23,10 @@ crumb: "Importación de WPS"
             <h1 class="text-glow">Software de Importación de WPS.<br>Excel y PDF, Leídos por Usted.</h1>
             <p class="hero-sub">Convertir una carpeta de WPS en un registro en vivo no debería significar semanas reescribiendo. Atlas lee los documentos que ya tiene con dos parsers dedicados — hojas Excel y formularios PDF — y coloca proceso, materiales, posiciones, gamas y parámetros pasada a pasada en campos estructurados.</p>
             <div class="cta-group">
-                <a href="/es/wps-manager-contact.html" class="btn btn-primary">Contacte con los Fundadores</a>
-                <a href="/es/wps-management-software.html#pricing" class="btn btn-secondary">Ver Precios</a>
+                <a href="/es/wps-manager-contact.html" class="btn btn-primary">Solicitar Prueba Gratuita</a>
+                <a href="/es/wps-manager-features.html" class="btn btn-secondary">Ver Todas las Funciones &rarr;</a>
             </div>
+            <p class="hero-hub-link">Parte de <a href="/es/wps-management-software.html">Elenchon Atlas</a>, el registro en la nube de sus WPS y cualificaciones de soldadores · <a href="/es/wps-management-software.html#pricing">Ver precios&nbsp;→</a></p>
         </div>
         <a class="scroll-cue" href="#overview" aria-label="Desplazarse para ver más">
             <span class="scroll-cue-text">Desplazar</span>
@@ -187,15 +188,9 @@ crumb: "Importación de WPS"
         </div>
     </section>
 
-    <section class="page-section container" id="cta">
-        <div class="cta-band">
+{%- capture closing_intro %}
             <span class="eyebrow">Empiece</span>
             <h2 class="text-glow">Traiga sus WPS, Estructuradas</h2>
             <p>Envíe algunas de sus WPS, confirmamos que el parser lee su plantilla y entra en funcionamiento con un registro construido a partir de su documentación — todo tratado de forma confidencial.</p>
-            <div class="cta-group">
-                <a href="/es/wps-manager-contact.html" class="btn btn-primary">Contacte con los Fundadores</a>
-                <a href="mailto:contact@delteris.com?subject=Elenchon%20WPS%20Manager%20%E2%80%94%20Verificaci%C3%B3n%20de%20Lectura%20de%20Nuestra%20WPS" class="btn btn-secondary">Envíenos una WPS — Véala Analizada</a>
-            </div>
-            <p class="hero-urgency u-gap-top">La incorporación empieza en sus propios formularios, no en una plantilla en blanco — y quien ajusta el parser es quien responde.</p>
-        </div>
-    </section>
+{%- endcapture %}
+{% include closing-cta.html product="atlas" id="cta" intro=closing_intro %}
