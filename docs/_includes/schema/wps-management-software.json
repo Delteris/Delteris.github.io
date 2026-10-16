@@ -1,21 +1,12 @@
+{%- assign L = page.lang | default: 'en' -%}{%- if L == 'en' %}{% assign px = '' %}{% else %}{% assign px = '/' | append: L %}{% endif -%}{%- if L == 'pt' %}{% assign t_home = 'Início' %}{% elsif L == 'es' %}{% assign t_home = 'Inicio' %}{% else %}{% assign t_home = 'Home' %}{% endif -%}
 {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://delteris.com/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "WPS Management Software",
-          "item": "https://delteris.com/wps-management-software.html"
-        }
+        { "@type": "ListItem", "position": 1, "name": {{ t_home | jsonify }}, "item": "{{ px | append: '/' | absolute_url }}" },
+        { "@type": "ListItem", "position": 2, "name": "Atlas", "item": "{{ page.url | absolute_url }}" }
       ]
     },
     {
