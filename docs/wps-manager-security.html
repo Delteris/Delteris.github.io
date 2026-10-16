@@ -21,9 +21,10 @@ crumb: "Security"
             <h1 class="text-glow">Your Procedures Are Proprietary.<br>Your Register Is Evidence.</h1>
             <p class="hero-sub">Your WPS are competitive know-how, so Atlas is built to protect them. Every change is attributed and timestamped, you grant access down to a single read-only seat, and your data stays isolated in your own tenancy — hosted in the EU and encrypted in transit.</p>
             <div class="cta-group">
-                <a href="wps-manager-contact.html" class="btn btn-primary">Contact the Founders</a>
-                <a href="wps-management-software.html#pricing" class="btn btn-secondary">See Pricing</a>
+                <a href="wps-manager-contact.html" class="btn btn-primary">Get a Free Trial</a>
+                <a href="wps-manager-features.html" class="btn btn-secondary">See Every Feature &rarr;</a>
             </div>
+            <p class="hero-hub-link">Part of <a href="wps-management-software.html">Elenchon Atlas</a>, the cloud register for your WPS and welder qualifications · <a href="wps-management-software.html#pricing">See pricing&nbsp;→</a></p>
         </div>
     </header>
 
@@ -103,15 +104,9 @@ crumb: "Security"
         </div>
     </section>
 
-    <section class="page-section container" id="cta">
-        <div class="cta-band">
+{%- capture closing_intro %}
             <span class="eyebrow">Get Started</span>
             <h2 class="text-glow">A Register You Can Defend</h2>
             <p>Send a few of your WPS, we confirm the parser reads your template, and you go live on a tenancy that's isolated, logged and yours — all handled confidentially.</p>
-            <div class="cta-group">
-                <a href="wps-manager-contact.html" class="btn btn-primary">Contact the Founders</a>
-                <a href="mailto:contact@delteris.com?subject=Elenchon%20WPS%20Manager%20%E2%80%94%20Parse%20Check%20For%20Our%20WPS" class="btn btn-secondary">Send Us a WPS — See It Parsed</a>
-            </div>
-            <p class="hero-urgency u-gap-top">Your data, your tenancy, your rules — and the people who built it answering directly.</p>
-        </div>
-    </section>
+{%- endcapture %}
+{% include closing-cta.html product="atlas" id="cta" intro=closing_intro %}

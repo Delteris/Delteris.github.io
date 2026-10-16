@@ -22,8 +22,8 @@ crumb: "On-Premise y Sin Conexión"
             <p class="hero-sub">Elenchon es un appliance instalado en sus instalaciones, no una suscripción en la nube. Los registros de soldadura se quedan en su hardware, servidos en local — y, con el Módulo de Acceso Remoto opcional, accesibles desde cualquier lugar a través de Phrakton. Lo instalamos y lo mantenemos actualizado en remoto — sin servidores que administrar, sin departamento de TI. Ninguna nube de proveedor guarda sus datos, y el coste se mantiene fijo en lugar de crecer con cada puesto.</p>
             <div class="cta-group">
                 <a href="/es/contact.html" class="btn btn-primary">Unirse a la Lista de Lanzamiento</a>
-                <a href="#faq" class="btn btn-secondary">Ver FAQ</a>
             </div>
+            <p class="hero-hub-link">Parte de <a href="/es/platform.html">Elenchon</a>, trazabilidad de soldadura on-premise con lanzamiento en el primer trimestre de 2027 · <a href="#faq">Leer las FAQ&nbsp;↓</a></p>
         </div>
         <a class="scroll-cue" href="#overview" aria-label="Desplazarse para ver más">
             <span class="scroll-cue-text">Desplazar</span>
@@ -170,16 +170,9 @@ crumb: "On-Premise y Sin Conexión"
         </div>
     </section>
 
-    <section class="page-section container" id="deployment-cta">
-        <div class="cta-band">
+{%- capture closing_intro %}
             <span class="eyebrow">Implementación</span>
             <h2 class="text-glow">Ponga sus Datos de Soldadura en Hardware que es Suyo</h2>
             <p>Nuestros propios ingenieros instalan cada appliance Elenchon en local, por eso las implementaciones por trimestre son deliberadamente limitadas. Únase a la lista de lanzamiento para reservar una plaza, solicite una llamada de levantamiento o plantee primero sus preguntas técnicas.</p>
-            <div class="cta-group">
-                <a href="/es/contact.html" class="btn btn-primary">Unirse a la Lista de Lanzamiento</a>
-                <a href="/es/pricing.html" class="btn btn-secondary">Ver Precios</a>
-            </div>
-            <p class="hero-urgency u-gap-top">Contacte con los fundadores — sin capas comerciales, sin colas de llamadas.</p>
-            <p class="hero-urgency u-gap-top atlas-crosslink">¿Solo necesita sus procedimientos y las cualificaciones de sus soldadores organizados? <a href="/es/wps-management-software.html">Elenchon Atlas</a> lo hace en la nube.</p>
-        </div>
-    </section>
+{%- endcapture %}
+{% include closing-cta.html product="elenchon" id="deployment-cta" intro=closing_intro %}

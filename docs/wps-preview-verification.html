@@ -20,9 +20,10 @@ crumb: "WPS Preview & Verification"
             <h1 class="text-glow">See Every Read<br>Against the Original.</h1>
             <p class="hero-sub">A parser is only safe if you can check it. Preview splits the screen: every field the app read on one side, your real PDF or Excel file on the other. Compare in seconds — and correct a misread right there.</p>
             <div class="cta-group">
-                <a href="wps-manager-contact.html" class="btn btn-primary">Contact the Founders</a>
-                <a href="wps-management-software.html#pricing" class="btn btn-secondary">See Pricing</a>
+                <a href="wps-manager-contact.html" class="btn btn-primary">Get a Free Trial</a>
+                <a href="wps-manager-features.html" class="btn btn-secondary">See Every Feature &rarr;</a>
             </div>
+            <p class="hero-hub-link">Part of <a href="wps-management-software.html">Elenchon Atlas</a>, the cloud register for your WPS and welder qualifications · <a href="wps-management-software.html#pricing">See pricing&nbsp;→</a></p>
         </div>
         <a class="scroll-cue" href="#overview" aria-label="Scroll to see more">
             <span class="scroll-cue-text">Scroll</span>
@@ -145,15 +146,9 @@ crumb: "WPS Preview & Verification"
         </div>
     </section>
 
-    <section class="page-section container" id="cta">
-        <div class="cta-band">
+{%- capture closing_intro %}
             <span class="eyebrow">Get Started</span>
             <h2 class="text-glow">Trust Every Number, Because You've Seen It</h2>
             <p>Send a few of your WPS, we confirm the parser reads your template, and you go live able to check every read against your own paperwork — all handled confidentially.</p>
-            <div class="cta-group">
-                <a href="wps-manager-contact.html" class="btn btn-primary">Contact the Founders</a>
-                <a href="mailto:contact@delteris.com?subject=Elenchon%20WPS%20Manager%20%E2%80%94%20Parse%20Check%20For%20Our%20WPS" class="btn btn-secondary">Send Us a WPS — See It Parsed</a>
-            </div>
-            <p class="hero-urgency u-gap-top">Direct answers from the people who wrote the parser — usually inside a business day.</p>
-        </div>
-    </section>
+{%- endcapture %}
+{% include closing-cta.html product="atlas" id="cta" intro=closing_intro %}

@@ -23,9 +23,10 @@ crumb: "Funcionalidades"
             <h1 class="text-glow">Cada Capacidade, nos Ecrãs Reais.</h1>
             <p class="hero-sub">As duas metades do produto, mostradas na aplicação em vez de descritas: importar, rever, pesquisar e exportar o seu registo de WPS — e acompanhar as qualificações de cada soldador ao lado. Este é o conjunto completo de funcionalidades por trás do <a href="/pt/wps-management-software.html">Elenchon Atlas</a>.</p>
             <div class="cta-group">
-                <a href="/pt/wps-manager-contact.html" class="btn btn-primary">Fale com os Fundadores</a>
+                <a href="/pt/wps-manager-contact.html" class="btn btn-primary">Pedir Teste Gratuito</a>
                 <a href="/pt/wps-management-software.html#pricing" class="btn btn-secondary">Ver Preços</a>
             </div>
+            <p class="hero-hub-link">Parte do <a href="/pt/wps-management-software.html">Elenchon Atlas</a>, o registo na cloud das suas WPS e qualificações de soldadores.</p>
         </div>
         <a class="scroll-cue" href="#overview" aria-label="Descer para ver mais">
             <span class="scroll-cue-text">Descer</span>
@@ -376,7 +377,7 @@ crumb: "Funcionalidades"
         <div class="section-header">
             <span class="eyebrow">Exportar Hoje, Criar a Seguir</span>
             <h2>Uma Exportação Excel Limpa, e Mais a Caminho</h2>
-            <p class="subtitle">O Atlas já emite uma folha Excel limpa para qualquer WPS que possua, e esse ficheiro reimporta sem perdas. A criação completa na cloud assenta nessa base.</p>
+            <p class="subtitle">O Atlas já emite uma folha Excel limpa para qualquer WPS que possua, e esse ficheiro reimporta sem perdas. A criação completa na cloud assenta nessa base. Cada passo chega numa versão que pode acompanhar nas <a href="/pt/atlas/updates/">novidades do Atlas</a>.</p>
         </div>
         <div class="pillar-grid">
             <div class="glass-card">
@@ -391,15 +392,9 @@ crumb: "Funcionalidades"
     </section>
 
     <!-- CTA -->
-    <section class="page-section container" id="cta">
-        <div class="cta-band">
+{%- capture closing_intro %}
             <span class="eyebrow">Comece Agora</span>
             <h2 class="text-glow">Ponha o Seu Registo Nisto</h2>
             <p>A integração é orientada diretamente pelos fundadores — envie-nos alguns dos seus documentos WPS, confirmamos que o parser lê o seu modelo, e entra em funcionamento com um registo comprovado na sua própria papelada. Tudo tratado com confidencialidade.</p>
-            <div class="cta-group">
-                <a href="/pt/wps-manager-contact.html" class="btn btn-primary">Fale com os Fundadores</a>
-                <a href="mailto:contact@delteris.com?subject=Elenchon%20Atlas%20%E2%80%94%20Verifica%C3%A7%C3%A3o%20de%20Leitura%20da%20Nossa%20WPS" class="btn btn-secondary">Envie-nos uma WPS — Veja-a Analisada</a>
-            </div>
-            <p class="hero-urgency u-gap-top">Um preço fixo, apoio direto dos fundadores, nada escondido — lida com quem o construiu.</p>
-        </div>
-    </section>
+{%- endcapture %}
+{% include closing-cta.html product="atlas" id="cta" intro=closing_intro %}

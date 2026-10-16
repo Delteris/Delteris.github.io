@@ -19,6 +19,10 @@ crumb: "Precios"
         <div class="hero-content">
             <h1 class="text-glow">Precios Claros.<br>Sin Tarifas Ocultas.</h1>
             <p class="hero-sub">Sin facturas-misterio. Cada plan, extra, tarifa de configuración y crédito de servicio aquí es el número real, en euros simples — para que su equipo financiero calcule el coste total antes de contactarnos.</p>
+            <div class="cta-group">
+                <a href="/es/contact.html" class="btn btn-primary">Unirse a la Lista de Lanzamiento</a>
+            </div>
+            <p class="hero-hub-link">Precios de <a href="/es/platform.html">Elenchon</a>, la plataforma on-premise con lanzamiento en el primer trimestre de 2027.</p>
         </div>
     </header>
 
@@ -540,14 +544,8 @@ crumb: "Precios"
         </div>
     </section>
 
-    <section class="page-section container u-tight-bottom">
-        <div class="cta-band">
+{%- capture closing_intro %}
             <h2 class="text-glow">Listos Cuando Usted lo Esté</h2>
             <p class="u-stack-sm">Nuestros propios ingenieros instalan cada appliance en local, por eso aceptamos un número deliberadamente limitado de implementaciones por trimestre. Hable con nosotros de precios para su planta y del trimestre que le convenga.</p>
-            <div class="cta-group">
-                <a href="/es/contact.html" class="btn btn-primary">Unirse a la Lista de Lanzamiento</a>
-                <a href="/es/contact.html" class="btn btn-secondary">Contáctenos</a>
-            </div>
-            <p class="hero-urgency u-gap-top">Contacte con los fundadores — sin capas comerciales, sin colas de llamadas.</p>
-        </div>
-    </section>
+{%- endcapture %}
+{% include closing-cta.html product="elenchon" class="u-tight-bottom" intro=closing_intro %}

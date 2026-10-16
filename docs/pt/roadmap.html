@@ -24,6 +24,7 @@ crumb: "Roteiro"
                 <a href="/pt/contact.html" class="btn btn-primary">Entrar na Lista de Lançamento</a>
                 <a href="/pt/pricing.html" class="btn btn-secondary">Ver Preços às Claras</a>
             </div>
+            <p class="hero-hub-link">Parte do <a href="/pt/platform.html">Elenchon</a>, rastreabilidade de soldadura on-premise com lançamento no 1.º trimestre de 2027.</p>
         </div>
     </header>
 
@@ -73,16 +74,11 @@ crumb: "Roteiro"
         <p class="feature-note">Todos os preços de plano, extras, implementação e hardware são publicados na íntegra na nossa <a href="/pt/pricing.html">página de preços</a> — incluindo o Premium assim que o seu conjunto de funcionalidades estiver finalizado.</p>
     </section>
 
-    <section class="page-section container u-tight-bottom" id="roadmap-cta">
-        <div class="cta-band">
+{%- capture closing_intro %}
             <span class="eyebrow">Molde o que Aí Vem</span>
             <h2 class="text-glow">Falta Algo de que o Seu Chão de Fábrica Precisa?</h2>
             <p>Uma equipa de dois fundadores numa stack moderna transforma o pedido de uma oficina em software lançado num ciclo de versão, não num trimestre de roteiro. Se falta algo específico, diga-nos — é muitas vezes assim que o próximo item chega aqui.</p>
-            <div class="cta-group">
-                <a href="/pt/contact.html" class="btn btn-primary">Contacte os Fundadores</a>
-                <a href="/pt/platform.html" class="btn btn-secondary">Explorar a Plataforma</a>
-            </div>
-        </div>
-    </section>
+{%- endcapture %}
+{% include closing-cta.html product="elenchon" id="roadmap-cta" class="u-tight-bottom" intro=closing_intro %}
 
 {% include newsletter-signup.html product="elenchon" %}

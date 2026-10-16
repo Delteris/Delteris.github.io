@@ -22,6 +22,7 @@ crumb: "Security"
                 <a href="contact.html" class="btn btn-primary">Join the Launch List</a>
                 <a href="pricing.html" class="btn btn-secondary">See the Uptime Guarantee</a>
             </div>
+            <p class="hero-hub-link">Part of <a href="platform.html">Elenchon</a>, on-premise welding traceability launching Q1 2027.</p>
             <ul class="hero-proof">
                 <li>No open ports · no public attack surface</li>
                 <li>Post-quantum-safe encryption</li>
@@ -328,9 +329,7 @@ crumb: "Security"
                 <span class="eyebrow">Reliability</span>
                 <h2 class="text-glow">Security You Can Depend On — In Writing</h2>
                 <p class="security-intro">Invisible only helps if it’s also available. We run Phrakton ourselves and commit to 99.9% monthly uptime, engineered for as close to 100% as possible — and any month we fall short, a percentage credit lands on your invoice automatically. No claim, no argument.</p>
-                <div class="cta-group">
-                    <a href="pricing.html#uptime" class="btn btn-secondary">See the Full Uptime Guarantee</a>
-                </div>
+                <p class="u-gap-top"><a href="pricing.html#uptime">See the Full Uptime Guarantee&nbsp;→</a></p>
             </div>
             <div class="graphic-placeholder">
                 <div class="pulse-ring delay-2"></div>
@@ -341,15 +340,9 @@ crumb: "Security"
         </div>
     </section>
 
-    <section class="page-section container u-tight-bottom" id="security-cta">
-        <div class="cta-band">
+{%- capture closing_intro %}
             <span class="eyebrow">Deployment</span>
             <h2 class="text-glow">Make Your Factory Invisible</h2>
             <p class="u-stack-sm">Every Phrakton appliance is installed and configured on-site by our own engineers, which means deployment slots each quarter are deliberately limited. Contact us today to secure yours — or reach out for a deeper technical walkthrough of the architecture.</p>
-            <div class="cta-group">
-                <a href="contact.html" class="btn btn-primary">Join the Launch List</a>
-                <a href="contact.html" class="btn btn-secondary">Contact Us Now</a>
-            </div>
-            <p class="hero-urgency u-gap-top">Contact the founders — no sales layers, no call queues.</p>
-        </div>
-    </section>
+{%- endcapture %}
+{% include closing-cta.html product="elenchon" id="security-cta" class="u-tight-bottom" intro=closing_intro %}

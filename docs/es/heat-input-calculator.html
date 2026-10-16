@@ -22,9 +22,10 @@ crumb: "Calculadora de Aporte Térmico"
             <h1 class="text-glow">Calculadora de Aporte Térmico.<br>Limitada a su Ventana Cualificada.</h1>
             <p class="hero-sub">El aporte térmico es donde un buen procedimiento sale silenciosamente de cualificación. Defina la gama que su WPQR cualificó para cada región del cordón y arrastre corriente, tensión y velocidad de avance — el resultado se actualiza en vivo, y los cursores nunca salen de la ventana cualificada.</p>
             <div class="cta-group">
-                <a href="/es/wps-manager-contact.html" class="btn btn-primary">Contacte con los Fundadores</a>
-                <a href="/es/wps-management-software.html#pricing" class="btn btn-secondary">Ver Precios</a>
+                <a href="/es/wps-manager-contact.html" class="btn btn-primary">Solicitar Prueba Gratuita</a>
+                <a href="/es/wps-manager-features.html" class="btn btn-secondary">Ver Todas las Funciones &rarr;</a>
             </div>
+            <p class="hero-hub-link">Parte de <a href="/es/wps-management-software.html">Elenchon Atlas</a>, el registro en la nube de sus WPS y cualificaciones de soldadores · <a href="/es/wps-management-software.html#pricing">Ver precios&nbsp;→</a></p>
         </div>
         <a class="scroll-cue" href="#overview" aria-label="Desplazarse para ver más">
             <span class="scroll-cue-text">Desplazar</span>
@@ -164,15 +165,9 @@ crumb: "Calculadora de Aporte Térmico"
         </div>
     </section>
 
-    <section class="page-section container" id="cta">
-        <div class="cta-band">
+{%- capture closing_intro %}
             <span class="eyebrow">Empiece</span>
             <h2 class="text-glow">Mantenga Cada Cordón Dentro de su Ventana</h2>
             <p>La ayuda de aporte térmico viene con Elenchon Atlas, ligada a la misma biblioteca que guarda sus procedimientos. La incorporación está guiada directamente por los fundadores, y todo se trata de forma confidencial.</p>
-            <div class="cta-group">
-                <a href="/es/wps-manager-contact.html" class="btn btn-primary">Contacte con los Fundadores</a>
-                <a href="/es/wps-management-software.html" class="btn btn-secondary">Volver a la Visión General del Atlas</a>
-            </div>
-            <p class="hero-urgency u-gap-top">Sin capas comerciales, sin colas de llamadas — habla con quien lo construyó.</p>
-        </div>
-    </section>
+{%- endcapture %}
+{% include closing-cta.html product="atlas" id="cta" intro=closing_intro %}

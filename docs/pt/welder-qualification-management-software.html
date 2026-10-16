@@ -23,9 +23,10 @@ crumb: "Qualificações de Soldadores"
             <h1 class="text-glow">Software de Gestão de Qualificação de Soldadores.<br>Saiba Quem Está Qualificado. Veja Cada Expiração a Chegar.</h1>
             <p class="hero-sub">Certificados em papel e a memória falham — até um trabalho precisar de um certificado que expirou no mês passado. O Atlas acompanha a validade e a continuidade de cada soldador como relógios distintos, destaca por cores quem está mais perto do prazo e envia um lembrete por email antes de qualquer expiração. Fica ao lado da sua biblioteca de WPS.</p>
             <div class="cta-group">
-                <a href="/pt/wps-manager-contact.html" class="btn btn-primary">Contacte os Fundadores</a>
-                <a href="/pt/wps-management-software.html#pricing" class="btn btn-secondary">Ver Preços</a>
+                <a href="/pt/wps-manager-contact.html" class="btn btn-primary">Pedir Teste Gratuito</a>
+                <a href="/pt/wps-manager-features.html" class="btn btn-secondary">Ver Todas as Funcionalidades &rarr;</a>
             </div>
+            <p class="hero-hub-link">Parte do <a href="/pt/wps-management-software.html">Elenchon Atlas</a>, o registo na cloud das suas WPS e qualificações de soldadores · <a href="/pt/wps-management-software.html#pricing">Ver preços&nbsp;→</a></p>
         </div>
         <a class="scroll-cue" href="#overview" aria-label="Deslocar para ver mais">
             <span class="scroll-cue-text">Deslocar</span>
@@ -210,14 +211,9 @@ crumb: "Qualificações de Soldadores"
         </div>
     </section>
 
-    <section class="page-section container" id="cta">
-        <div class="cta-band">
+{%- capture closing_intro %}
             <span class="eyebrow">Comece</span>
             <h2 class="text-glow">Deixe de Acompanhar Qualificações à Mão</h2>
             <p>O Atlas dá-lhe a gestão de WPS e o acompanhamento de qualificação de soldadores num só produto na cloud, a um preço fixo. Fale com os fundadores — sem camadas comerciais, sem filas de chamadas.</p>
-            <div class="cta-group">
-                <a href="/pt/wps-manager-contact.html" class="btn btn-primary">Contacte os Fundadores</a>
-                <a href="/pt/wps-management-software.html" class="btn btn-secondary">Ver Gestão de WPS</a>
-            </div>
-        </div>
-    </section>
+{%- endcapture %}
+{% include closing-cta.html product="atlas" id="cta" intro=closing_intro %}

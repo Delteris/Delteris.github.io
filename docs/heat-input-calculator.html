@@ -20,9 +20,10 @@ crumb: "Heat Input Calculator"
             <h1 class="text-glow">Heat Input Calculator.<br>Clamped to Your Qualified Window.</h1>
             <p class="hero-sub">Heat input is where a good procedure quietly falls out of qualification. Set the range your WPQR qualified for each weld region, then drag current, voltage and travel speed — the result updates live, and the sliders never leave the qualified window.</p>
             <div class="cta-group">
-                <a href="wps-manager-contact.html" class="btn btn-primary">Contact the Founders</a>
-                <a href="wps-management-software.html#pricing" class="btn btn-secondary">See Pricing</a>
+                <a href="wps-manager-contact.html" class="btn btn-primary">Get a Free Trial</a>
+                <a href="wps-manager-features.html" class="btn btn-secondary">See Every Feature &rarr;</a>
             </div>
+            <p class="hero-hub-link">Part of <a href="wps-management-software.html">Elenchon Atlas</a>, the cloud register for your WPS and welder qualifications · <a href="wps-management-software.html#pricing">See pricing&nbsp;→</a></p>
         </div>
         <a class="scroll-cue" href="#overview" aria-label="Scroll to see more">
             <span class="scroll-cue-text">Scroll</span>
@@ -162,15 +163,9 @@ crumb: "Heat Input Calculator"
         </div>
     </section>
 
-    <section class="page-section container" id="cta">
-        <div class="cta-band">
+{%- capture closing_intro %}
             <span class="eyebrow">Get Started</span>
             <h2 class="text-glow">Keep Every Weld Inside Its Window</h2>
             <p>The heat input helper ships with Elenchon Atlas, wired to the same library that holds your procedures. Onboarding is guided directly by the founders, and everything is handled confidentially.</p>
-            <div class="cta-group">
-                <a href="wps-manager-contact.html" class="btn btn-primary">Contact the Founders</a>
-                <a href="wps-management-software.html" class="btn btn-secondary">Back to Atlas Overview</a>
-            </div>
-            <p class="hero-urgency u-gap-top">No sales layers, no call queues — you talk to the people who built it.</p>
-        </div>
-    </section>
+{%- endcapture %}
+{% include closing-cta.html product="atlas" id="cta" intro=closing_intro %}

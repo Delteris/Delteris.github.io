@@ -24,6 +24,7 @@ crumb: "Hoja de Ruta"
                 <a href="/es/contact.html" class="btn btn-primary">Unirse a la Lista de Lanzamiento</a>
                 <a href="/es/pricing.html" class="btn btn-secondary">Ver Precios Claros</a>
             </div>
+            <p class="hero-hub-link">Parte de <a href="/es/platform.html">Elenchon</a>, trazabilidad de soldadura on-premise con lanzamiento en el primer trimestre de 2027.</p>
         </div>
     </header>
 
@@ -73,16 +74,11 @@ crumb: "Hoja de Ruta"
         <p class="feature-note">Todos los precios de plan, extras, implementación y hardware se publican íntegramente en nuestra <a href="/es/pricing.html">página de precios</a> — incluido el Premium en cuanto su conjunto de funcionalidades esté finalizado.</p>
     </section>
 
-    <section class="page-section container u-tight-bottom" id="roadmap-cta">
-        <div class="cta-band">
+{%- capture closing_intro %}
             <span class="eyebrow">Moldee lo que Viene</span>
             <h2 class="text-glow">¿Falta Algo que su Planta Necesita?</h2>
             <p>Un equipo de dos fundadores sobre una stack moderna convierte la petición de un taller en software lanzado en un ciclo de versión, no en un trimestre de hoja de ruta. Si falta algo concreto, díganoslo — así es, muchas veces, como el próximo elemento llega aquí.</p>
-            <div class="cta-group">
-                <a href="/es/contact.html" class="btn btn-primary">Contacte con los Fundadores</a>
-                <a href="/es/platform.html" class="btn btn-secondary">Explorar la Plataforma</a>
-            </div>
-        </div>
-    </section>
+{%- endcapture %}
+{% include closing-cta.html product="elenchon" id="roadmap-cta" class="u-tight-bottom" intro=closing_intro %}
 
 {% include newsletter-signup.html product="elenchon" %}

@@ -3957,14 +3957,14 @@ button.app-figure-frame:focus-visible .app-figure-zoom-hint {
 .breadcrumb a:hover,
 .breadcrumb a:focus-visible { color: var(--link-hover); text-decoration: underline; }
 .breadcrumb .bc-current { color: var(--text-main); opacity: 0.85; }
-.breadcrumb + .page-hero { padding-top: 4rem; }
+.breadcrumb ~ .page-hero { padding-top: 4rem; }
 
 @media (max-width: 768px) {
     .breadcrumb { padding-top: calc(var(--nav-h) + 0.75rem); }
     .breadcrumb .bc-home,
     .breadcrumb .bc-current { display: none; }
     .breadcrumb .bc-parent::before { content: "‹"; }
-    .breadcrumb + .page-hero { padding-top: 1.25rem; }
+    .breadcrumb ~ .page-hero { padding-top: 1.75rem; }
 }
 
 /* Shared closing block (_includes/closing-cta.html): the quiet line to the
@@ -3984,3 +3984,9 @@ button.app-figure-frame:focus-visible .app-figure-zoom-hint {
 }
 .hero-hub-link a { color: var(--link); }
 .hero-hub-link a:hover { color: var(--link-hover); }
+.closing-cta-slim .closing-crosslink {
+    text-align: center;
+    font-size: 0.95rem;
+    margin: 0;
+}
+.closing-cta-slim .closing-crosslink a { color: var(--link); }

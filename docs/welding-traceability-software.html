@@ -21,8 +21,8 @@ crumb: "Weld Traceability"
             <p class="hero-sub">Prove every joint was made by a qualified person, to a qualified procedure, from known material — and follow that chain either way on demand. Elenchon captures it as work happens, on an on-premise appliance you own.</p>
             <div class="cta-group">
                 <a href="contact.html" class="btn btn-primary">Join the Launch List</a>
-                <a href="#faq" class="btn btn-secondary">View FAQ</a>
             </div>
+            <p class="hero-hub-link">Part of <a href="platform.html">Elenchon</a>, on-premise welding traceability launching Q1 2027 · <a href="#faq">Read the FAQ&nbsp;↓</a></p>
         </div>
         <a class="scroll-cue" href="#overview" aria-label="Scroll to see more">
             <span class="scroll-cue-text">Scroll</span>
@@ -201,16 +201,9 @@ crumb: "Weld Traceability"
         </div>
     </section>
 
-    <section class="page-section container" id="deployment-cta">
-        <div class="cta-band">
+{%- capture closing_intro %}
             <span class="eyebrow">Deployment</span>
             <h2 class="text-glow">Put Unbreakable Traceability on Your Floor</h2>
             <p>Our own engineers install every Elenchon appliance on-site, so deployments each quarter are deliberately limited. Join the launch list to reserve a slot, request a scoping call, or ask your technical questions first.</p>
-            <div class="cta-group">
-                <a href="contact.html" class="btn btn-primary">Join the Launch List</a>
-                <a href="pricing.html" class="btn btn-secondary">See Pricing</a>
-            </div>
-            <p class="hero-urgency u-gap-top">Contact the founders — no sales layers, no call queues.</p>
-            <p class="hero-urgency u-gap-top atlas-crosslink">Just need your procedures and welder qualifications organised? <a href="wps-management-software.html">Elenchon Atlas</a> does that in the cloud.</p>
-        </div>
-    </section>
+{%- endcapture %}
+{% include closing-cta.html product="elenchon" id="deployment-cta" intro=closing_intro %}

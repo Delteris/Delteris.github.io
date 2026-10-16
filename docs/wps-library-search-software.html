@@ -21,9 +21,10 @@ crumb: "WPS Library & Search"
             <h1 class="text-glow">A WPS Library That<br>Understands Your Documents.</h1>
             <p class="hero-sub">Not a folder of files — a library where every WPS, pWPS and WPQR is a structured record you can search, compare, correct and link. Filter by what's inside each form — process, material, position, side and pass role — not by filename.</p>
             <div class="cta-group">
-                <a href="wps-manager-contact.html" class="btn btn-primary">Contact the Founders</a>
-                <a href="wps-management-software.html#pricing" class="btn btn-secondary">See Pricing</a>
+                <a href="wps-manager-contact.html" class="btn btn-primary">Get a Free Trial</a>
+                <a href="wps-manager-features.html" class="btn btn-secondary">See Every Feature &rarr;</a>
             </div>
+            <p class="hero-hub-link">Part of <a href="wps-management-software.html">Elenchon Atlas</a>, the cloud register for your WPS and welder qualifications · <a href="wps-management-software.html#pricing">See pricing&nbsp;→</a></p>
         </div>
         <a class="scroll-cue" href="#overview" aria-label="Scroll to see more">
             <span class="scroll-cue-text">Scroll</span>
@@ -184,15 +185,9 @@ crumb: "WPS Library & Search"
         </div>
     </section>
 
-    <section class="page-section container" id="cta">
-        <div class="cta-band">
+{%- capture closing_intro %}
             <span class="eyebrow">Get Started</span>
             <h2 class="text-glow">Run Your WPS Library From One Place</h2>
             <p>Send a few of your WPS, we confirm the parser reads your template, and you go live with a library you manage entirely in the app — all handled confidentially.</p>
-            <div class="cta-group">
-                <a href="wps-manager-contact.html" class="btn btn-primary">Contact the Founders</a>
-                <a href="mailto:contact@delteris.com?subject=Elenchon%20WPS%20Manager%20%E2%80%94%20Parse%20Check%20For%20Our%20WPS" class="btn btn-secondary">Send Us a WPS — See It Parsed</a>
-            </div>
-            <p class="hero-urgency u-gap-top">No ticket queue between you and the team — the people who built the library are the ones who answer.</p>
-        </div>
-    </section>
+{%- endcapture %}
+{% include closing-cta.html product="atlas" id="cta" intro=closing_intro %}
