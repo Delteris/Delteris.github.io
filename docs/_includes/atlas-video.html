@@ -1,14 +1,19 @@
 {%- assign l = page.lang | default: "en" -%}
-{%- if l == "es" -%}{%- assign t_h = "Véalo funcionando en 2 minutos" -%}{%- assign t_snd = "Con sonido" -%}{%- assign t_spd = "Velocidad" -%}{%- assign t_alt = "Vídeo de Elenchon Atlas: cualificaciones de soldadores y WPS" -%}
-{%- elsif l == "pt" -%}{%- assign t_h = "Veja-o a funcionar em 2 minutos" -%}{%- assign t_snd = "Com som" -%}{%- assign t_spd = "Velocidade" -%}{%- assign t_alt = "Vídeo do Elenchon Atlas: qualificações de soldadores e WPS" -%}
-{%- else -%}{%- assign t_h = "See it working in 2 minutes" -%}{%- assign t_snd = "With sound" -%}{%- assign t_spd = "Speed" -%}{%- assign t_alt = "Elenchon Atlas video: welder qualifications and WPS" -%}{%- endif -%}
+{%- if l == "es" -%}{%- assign t_h = "Véalo funcionando en 2 minutos" -%}{%- assign t_snd = "Con sonido" -%}{%- assign t_spd = "Velocidad" -%}{%- assign t_alt = "Vídeo de Elenchon Atlas: cualificaciones de soldadores y WPS" -%}{%- assign t_play = "Reproducir el vídeo" -%}
+{%- elsif l == "pt" -%}{%- assign t_h = "Veja-o a funcionar em 2 minutos" -%}{%- assign t_snd = "Com som" -%}{%- assign t_spd = "Velocidade" -%}{%- assign t_alt = "Vídeo do Elenchon Atlas: qualificações de soldadores e WPS" -%}{%- assign t_play = "Reproduzir o vídeo" -%}
+{%- else -%}{%- assign t_h = "See it working in 2 minutes" -%}{%- assign t_snd = "With sound" -%}{%- assign t_spd = "Speed" -%}{%- assign t_alt = "Elenchon Atlas video: welder qualifications and WPS" -%}{%- assign t_play = "Play the video" -%}{%- endif -%}
     <section class="page-section container u-tight-bottom" id="video">
         <div class="atlas-video">
             <h2 class="atlas-video-h">{{ t_h }}</h2>
+            <div class="atlas-video-frame">
             <video class="atlas-video-el" controls preload="metadata" playsinline
                    poster="/static/video/atlas-{{ l }}-poster.webp" aria-label="{{ t_alt }}">
                 <source src="/static/video/atlas-{{ l }}.mp4" type="video/mp4">
             </video>
+            <button type="button" class="atlas-video-play" aria-label="{{ t_play }}">
+                <svg viewBox="0 0 24 24" width="34" height="34" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg>
+            </button>
+            </div>
             <div class="atlas-video-bar">
                 <span class="atlas-video-sound">&#128264; {{ t_snd }}</span>
                 <span class="atlas-video-speed" role="group" aria-label="{{ t_spd }}">
