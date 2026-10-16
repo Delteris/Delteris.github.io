@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "WPS Library &amp; Search Software — Filter WPS by Process, Material &amp; Pass | Elenchon Atlas"
-description: "Manage your whole WPS library in the app — every WPS, pWPS and WPQR parsed into structured records you search, filter, compare, correct and link. Filter by welding process, material, position, role and pass; group revisions; link the whole qualification chain. From Delteris."
+description: "Manage your whole WPS library in the app — every WPS and pWPS parsed into structured records you search, filter, compare and correct, each linked to its WPQR. Filter by welding process, material, position, role and pass; group revisions; link the whole qualification chain. From Delteris."
 og_title: "WPS Library &amp; Search — Manage Every WPS in One Place | Elenchon Atlas"
 og_description: "A WPS library that understands its documents: filter by process, material, position, side and pass role; revisions grouped automatically; WPS↔WPQR↔pWPS linked; edit and verify in place. Manage the whole library in the app — no Excel needed."
 og_image: "/static/wpsm/library.webp"
@@ -49,20 +49,20 @@ crumb: "WPS Library & Search"
         {% include app-shot.html
             name="library" wide="true"
             alt="The Atlas library with WPS MER-WPS-002 open: the WPS list marked Parsed and Linked on the left, and on the right the WPS read into seventeen header fields and a four-pass table with process, filler, polarity, current, voltage, travel speed and heat input"
-            cap="The library: WPS / pWPS / WPQR tabs, each document marked Parsed and Linked, and a WPS read down to its header block and full pass table."
+            cap="The library: WPS / pWPS / WPQR tabs with parse and link status, and a WPS read down to its header block and full pass table."
             ph="The library — WPS/pWPS/WPQR tabs, a doc showing header fields + pass table (side/role), facet panel open, an “N revisions” chip." %}
     </section>
 
     <section class="page-section container" id="structured">
         <div class="section-header">
             <span class="eyebrow">Three Document Types, One Home</span>
-            <h2>WPS, pWPS and WPQR — All Fully Read</h2>
-            <p class="subtitle">Every document sits alongside the procedures it relates to, parsed into real detail, not just a filename.</p>
+            <h2>WPS and pWPS Fully Read, WPQRs Alongside</h2>
+            <p class="subtitle">Every WPS and pWPS is parsed into real detail, not just a filename, and sits alongside the WPQR that qualifies it.</p>
         </div>
         <div class="glass-card feature-block">
-            <p class="feature-lead">Each document is read down to its fields, so you work with structured data you can inspect and correct — not a PDF you have to squint at.</p>
+            <p class="feature-lead">Each WPS and pWPS is read down to its fields, so you work with structured data you can inspect and correct — not a PDF you have to squint at.</p>
             <ul class="feature-list">
-                <li><strong>Three linked types, one library:</strong> WPS, preliminary WPS (pWPS) and WPQR each get their own tab, each imported the same way — drop an Excel or PDF, or add a WPQR record by hand.</li>
+                <li><strong>Three linked types, one library:</strong> WPS, preliminary WPS (pWPS) and WPQR each get their own tab. WPS and pWPS import the same way — drop an Excel or PDF; a WPQR is a record you add with its certificate file and the range of qualification it states.</li>
                 <li><strong>The real detail:</strong> Header fields, the full pass table with each pass's side (inside / outside / both) and role (root / fill / cap / backing), base-material parts, filler and consumable, shielding and flux — all extracted and all editable.</li>
                 <li><strong>Add what the parser missed:</strong> If a read ever comes up short, add the row yourself — the library never traps you behind a parser's blind spot.</li>
             </ul>

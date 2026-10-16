@@ -9,7 +9,7 @@
       "applicationCategory": "BusinessApplication",
       "applicationSubCategory": "WPS Management Software",
       "operatingSystem": "Cloud",
-      "description": {% if sx_L == 'en' %}"Cloud WPS library software: every WPS, pWPS and WPQR parsed into a structured record you search, filter, compare, correct and link. Filter by process, material, position, side and pass role; revisions grouped automatically; the whole qualification chain linked; edit and verify in place — the library managed entirely in the app."{% else %}{{ sx_desc | jsonify }}{% endif %},
+      "description": {% if sx_L == 'en' %}"Cloud WPS library software: every WPS and pWPS parsed into a structured record you search, filter, compare and correct, each linked to its WPQR. Filter by process, material, position, side and pass role; revisions grouped automatically; the whole qualification chain linked; edit and verify in place — the library managed entirely in the app."{% else %}{{ sx_desc | jsonify }}{% endif %},
 {% if sx_L == 'en' %}      "keywords": "WPS library software, WPS search, filter WPS by process, WPS database, WPQR linking, pWPS management, WPS revisions, welding procedure library",{% endif %}
 {% if sx_L == 'en' %}      "featureList": [
         "WPS, pWPS and WPQR as structured, searchable records",
