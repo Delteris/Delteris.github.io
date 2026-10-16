@@ -1109,3 +1109,26 @@
     }, { rootMargin: '-20% 0px -55% 0px' });
     sections.forEach(function (s) { io.observe(s); });
 })();
+
+/* Atlas product video: never autoplays; first play starts at half volume
+   (no blasting); speed buttons with the music's pitch kept natural. */
+(function () {
+    document.querySelectorAll('.atlas-video').forEach(function (box) {
+        var v = box.querySelector('video');
+        if (!v) return;
+        v.volume = 0.5;
+        var tamed = false;
+        v.addEventListener('play', function () { if (!tamed) { v.volume = 0.5; tamed = true; } });
+        v.preservesPitch = true; v.mozPreservesPitch = true; v.webkitPreservesPitch = true;
+        var btns = box.querySelectorAll('.atlas-video-speed button');
+        btns.forEach(function (b) {
+            b.addEventListener('click', function () {
+                v.playbackRate = parseFloat(b.dataset.rate);
+                btns.forEach(function (o) { o.setAttribute('aria-pressed', o === b ? 'true' : 'false'); });
+            });
+        });
+        v.addEventListener('ratechange', function () {
+            btns.forEach(function (o) { o.setAttribute('aria-pressed', parseFloat(o.dataset.rate) === v.playbackRate ? 'true' : 'false'); });
+        });
+    });
+})();
