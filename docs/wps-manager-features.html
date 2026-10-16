@@ -19,7 +19,7 @@ crumb: "Features"
         <div class="hero-content">
             <span class="hero-eyebrow">Elenchon Atlas · Features</span>
             <h1 class="text-glow">Every Capability, on the Real Screens.</h1>
-            <p class="hero-sub">Both halves of the product, shown in the app rather than described: import, review, search and export your WPS register — and track every welder’s qualifications alongside it. This is the complete feature set behind <a href="wps-management-software.html">Elenchon Atlas</a>.</p>
+            <p class="hero-sub">Both halves of the product, shown in the app rather than described: import, review, search and export your WPS register — and track every welder’s qualifications alongside it.</p>
             <div class="cta-group">
                 <a href="wps-manager-contact.html" class="btn btn-primary">Get a Free Trial</a>
                 <a href="wps-management-software.html#pricing" class="btn btn-secondary">See Pricing</a>
@@ -32,226 +32,307 @@ crumb: "Features"
         </a>
     </header>
 
-    <!-- ===================== OVERVIEW ===================== -->
+    <div class="tour-layout container">
+        <div class="tour-nav" role="navigation" aria-label="On this page" data-tour-nav>
+            <p class="tour-nav-title">On this page</p>
+            <p class="tour-nav-group">WPS register</p>
+            <ul>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#import">Import</a></li>
+                <li><a href="#review">Review</a></li>
+                <li><a href="#registers">Register</a></li>
+                <li><a href="#library">Library &amp; compare</a></li>
+                <li><a href="#pqr">WPQR chain</a></li>
+                <li><a href="#range-check">Range check</a></li>
+                <li><a href="#welder-coverage">Welder coverage</a></li>
+                <li><a href="#heat-input">Heat input</a></li>
+            </ul>
+            <p class="tour-nav-group">Welders</p>
+            <ul>
+                <li><a href="#qualification-grid">Qualification board</a></li>
+                <li><a href="#qualification-warnings">Warnings</a></li>
+                <li><a href="#qualification-record">Records &amp; certificates</a></li>
+            </ul>
+            <p class="tour-nav-group">Across Atlas</p>
+            <ul>
+                <li><a href="#monthly-report">Monthly report</a></li>
+                <li><a href="#what-you-see">What you see</a></li>
+                <li><a href="#security">Security</a></li>
+                <li><a href="#authoring">Export &amp; authoring</a></li>
+            </ul>
+        </div>
+        <div class="tour-body">
     <section class="page-section container" id="overview">
         <div class="section-header">
             <span class="eyebrow">The Overview</span>
             <h2>Your Whole Register, at a Glance</h2>
             <p class="subtitle">What's confirmed, what needs a look, and exactly how many procedures you hold — the moment you sign in.</p>
         </div>
-        {% include app-shot.html
-            name="overview" wide="true" w="1600" h="900"
-            alt="Atlas overview: needs-attention cards for lapsed qualifications and welders due for reverification, email alerts on, and at-a-glance tiles for WPS, pWPS, WPQR, WPS outside their WPQR range and welder qualifications"
-            cap="The overview: fields flagged for a check, the register's status, what's due on the qualification side, and the full count — WPS, pWPS, WPQR and welders — in one place." %}
-        <p class="story-note">The <strong>Needs attention</strong> panel surfaces the parsed values read with low confidence and links straight to them; everything the app is confident about stays out of your way.</p>
+        <div class="tour-row">
+            <div class="tour-text">
+                <p class="story-note">The <strong>Needs attention</strong> panel surfaces the parsed values read with low confidence and links straight to them; everything the app is confident about stays out of your way.</p>
+            </div>
+            <div class="tour-media">
+                {% include app-shot.html
+                    name="overview" wide="true" w="1600" h="900"
+                    alt="Atlas overview: needs-attention cards for lapsed qualifications and welders due for reverification, email alerts on, and at-a-glance tiles for WPS, pWPS, WPQR, WPS outside their WPQR range and welder qualifications"
+                    cap="The overview: fields flagged for a check, the register's status, what's due on the qualification side, and the full count — WPS, pWPS, WPQR and welders — in one place." %}
+            </div>
+        </div>
     </section>
 
-    <!-- ===================== IMPORT ===================== -->
     <section class="page-section container" id="import">
         <div class="section-header">
             <span class="eyebrow">Import</span>
             <h2>Excel &amp; PDF, Read For You</h2>
-            <p class="subtitle">Pull the WPS you already hold straight into a register. Two purpose-built parsers do the data entry — no re-typing a procedure into someone else's template.</p>
+            <p class="subtitle">Two purpose-built parsers do the data entry — no re-typing a procedure into someone else's template.</p>
         </div>
-        <div class="glass-card feature-block feature-block-solo" id="import-detail">
-            <span class="feature-index">01</span>
-            <ul class="feature-list">
-                <li><strong>Excel and PDF, both native:</strong> One parser reads Excel WPS workbooks; another reconstructs an exported PDF form's ruled grid and reads its cells (scans aren't read). Process, materials, ranges and pass-by-pass parameters land as structured fields.</li>
-                <li><strong>Language-agnostic:</strong> The parser reads a form's structure, not a fixed vocabulary, and matches labels from a language pack — so a form in your language reads without special setup. English and Portuguese ship today; others are added during onboarding.</li>
-                <li><strong>Batch, and classified as it lands:</strong> Bring in a whole stack at once — each file sorted into a new WPS, a new revision, or a correction, with revisions grouped from the start.</li>
-                <li><strong>Tuned to your template:</strong> Standard ISO&nbsp;15609-style forms work immediately; during onboarding we tune the parser to your company's exact layout.</li>
-            </ul>
-            <p class="feature-out"><a href="wps-import-software.html">See WPS import in depth &rarr;</a></p>
+        <div class="tour-row">
+            <div class="tour-text">
+                <div class="glass-card feature-block feature-block-solo" id="import-detail">
+                    <span class="feature-index">01</span>
+                    <ul class="feature-list">
+                        <li><strong>Excel and PDF, both native:</strong> One parser reads Excel WPS workbooks; another reconstructs an exported PDF form's ruled grid and reads its cells (scans aren't read). Process, materials, ranges and pass-by-pass parameters land as structured fields.</li>
+                        <li><strong>Language-agnostic:</strong> The parser reads a form's structure, not a fixed vocabulary, and matches labels from a language pack — so a form in your language reads without special setup. English and Portuguese ship today; others are added during onboarding.</li>
+                        <li><strong>Batch, and classified as it lands:</strong> Bring in a whole stack at once — each file sorted into a new WPS, a new revision, or a correction, with revisions grouped from the start.</li>
+                        <li><strong>Tuned to your template:</strong> Standard ISO&nbsp;15609-style forms work immediately; during onboarding we tune the parser to your company's exact layout.</li>
+                    </ul>
+                    <p class="feature-out"><a href="wps-import-software.html">See WPS import in depth &rarr;</a></p>
+                </div>
+            </div>
+            <div class="tour-media">
+                {% include app-shot.html
+                    name="import" wide="true" w="1600" h="900"
+                    alt="The Add WPS dialog in the library: the Meridian Fabrication WPS form template selected, three Excel files uploaded, each listed as a new WPS read OK, and a Confirm 3 imports button"
+                    cap="Adding WPS to the library: drop Excel or PDF files and each one is read and staged — nothing is written until you confirm the import." %}
+            </div>
         </div>
-        {% include app-shot.html
-            name="import" wide="true" w="1600" h="900"
-            alt="The Add WPS dialog in the library: the Meridian Fabrication WPS form template selected, three Excel files uploaded, each listed as a new WPS read OK, and a Confirm 3 imports button"
-            cap="Adding WPS to the library: drop Excel or PDF files and each one is read and staged — nothing is written until you confirm the import." %}
     </section>
 
-    <!-- ===================== REVIEW ===================== -->
     <section class="page-section container" id="review">
         <div class="section-header">
             <span class="eyebrow">Human-Reviewed Edits</span>
             <h2>Nothing Lands Until You Approve It</h2>
             <p class="subtitle">A parser is only trustworthy if you can see what it read. Every import queues as a change-set you sign off, value by value.</p>
         </div>
-        <div class="glass-card feature-block feature-block-solo" id="review-detail">
-            <span class="feature-index">02</span>
-            <ul class="feature-list">
-                <li><strong>See exactly what would change:</strong> Each row is a document, a field, and the value read — nothing is written to your register until you confirm it.</li>
-                <li><strong>Low-confidence reads are flagged:</strong> Anything the parser wasn't sure of — or a heat input it computed — is shaded amber and surfaced, so your attention goes where it's needed.</li>
-                <li><strong>Verify without leaving:</strong> Confirm a computed value from the queue, or open the document in the library to check it against the source first.</li>
-                <li><strong>Set your own bar:</strong> Review every value, review only the uncertain ones (the default), or auto-apply and rely on versioning to undo.</li>
-            </ul>
-            <p class="feature-out"><a href="wps-review-approval-software.html">See reviewed edits in depth &rarr;</a></p>
+        <div class="tour-row">
+            <div class="tour-text">
+                <div class="glass-card feature-block feature-block-solo" id="review-detail">
+                    <span class="feature-index">02</span>
+                    <ul class="feature-list">
+                        <li><strong>See exactly what would change:</strong> Each row is a document, a field, and the value read — nothing is written to your register until you confirm it.</li>
+                        <li><strong>Low-confidence reads are flagged:</strong> Anything the parser wasn't sure of — or a heat input it computed — is shaded amber and surfaced, so your attention goes where it's needed.</li>
+                        <li><strong>Verify without leaving:</strong> Confirm a computed value from the queue, or open the document in the library to check it against the source first.</li>
+                        <li><strong>Set your own bar:</strong> Review every value, review only the uncertain ones (the default), or auto-apply and rely on versioning to undo.</li>
+                    </ul>
+                    <p class="feature-out"><a href="wps-review-approval-software.html">See reviewed edits in depth &rarr;</a></p>
+                </div>
+            </div>
+            <div class="tour-media">
+                {% include app-shot.html
+                    name="review" wide="true" w="1600" h="900"
+                    alt="The review queue: WPS rows whose heat input was left blank on the form and calculated from the arc parameters, each flagged as computed with an Open in library button and a Verify computed heat input button"
+                    cap="The review queue: computed heat-input values flagged amber, each with the passes it was calculated from — verify, or open the source to check first." %}
+            </div>
         </div>
-        {% include app-shot.html
-            name="review" wide="true" w="1600" h="900"
-            alt="The review queue: WPS rows whose heat input was left blank on the form and calculated from the arc parameters, each flagged as computed with an Open in library button and a Verify computed heat input button"
-            cap="The review queue: computed heat-input values flagged amber, each with the passes it was calculated from — verify, or open the source to check first." %}
-        <p class="story-note">These rows are heat inputs the app computed because the forms left them blank — never written in silently, always flagged, and shown with the passes behind each figure so you can confirm them against the WPQR.</p>
     </section>
 
-    <!-- ===================== REGISTER ===================== -->
     <section class="page-section container" id="registers">
         <div class="section-header">
             <span class="eyebrow">Your Register, Visualised &amp; Versioned</span>
             <h2>Your Own Workbook, Kept Current</h2>
             <p class="subtitle">The register you keep is <em>your</em> spreadsheet, held as a live grid and backed by a full version history — the master file head office asks for, one click away.</p>
         </div>
-        <div class="glass-card feature-block feature-block-solo" id="registers-detail">
-            <span class="feature-index">03</span>
-            <ul class="feature-list">
-                <li><strong>Visualised, not just stored:</strong> Your master sheet opens as a fast, filterable grid — here, 27 rows across 28 columns — instead of a spreadsheet you scroll by hand.</li>
-                <li><strong>Every version kept:</strong> Each approved change-set makes a new version. Roll back to any snapshot; the newest is always protected.</li>
-                <li><strong>Export on demand:</strong> Produce a clean Excel workbook whenever you need it — or an export bundle (.zip) with the register plus the folder of linked WPS files, so the paperwork travels with the sheet.</li>
-                <li><strong>Re-compute &amp; sync:</strong> Pull the latest values from the library into the register in one action, so the sheet never quietly drifts from the documents behind it.</li>
-            </ul>
+        <div class="tour-row">
+            <div class="tour-text">
+                <div class="glass-card feature-block feature-block-solo" id="registers-detail">
+                    <span class="feature-index">03</span>
+                    <ul class="feature-list">
+                        <li><strong>Visualised, not just stored:</strong> Your master sheet opens as a fast, filterable grid — here, 27 rows across 28 columns — instead of a spreadsheet you scroll by hand.</li>
+                        <li><strong>Every version kept:</strong> Each approved change-set makes a new version. Roll back to any snapshot; the newest is always protected.</li>
+                        <li><strong>Export on demand:</strong> Produce a clean Excel workbook whenever you need it — or an export bundle (.zip) with the register plus the folder of linked WPS files, so the paperwork travels with the sheet.</li>
+                        <li><strong>Re-compute &amp; sync:</strong> Pull the latest values from the library into the register in one action, so the sheet never quietly drifts from the documents behind it.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tour-media">
+                {% include app-shot.html
+                    name="register" wide="true" w="1600" h="900"
+                    alt="The Meridian Fabrication WPS register 2026 as a live grid: WPS number, revision, WPQR number, part, qualification standard, date, welding process, process type and transfer mode, with 23 of 29 signed and Edit, Import from library and Export .xlsx above"
+                    cap="The register as a live grid, with export, versioned backups, re-compute and the linked-files bundle one menu away." %}
+            </div>
         </div>
-        {% include app-shot.html
-            name="register" wide="true" w="1600" h="900"
-            alt="The Meridian Fabrication WPS register 2026 as a live grid: WPS number, revision, WPQR number, part, qualification standard, date, welding process, process type and transfer mode, with 23 of 29 signed and Edit, Import from library and Export .xlsx above"
-            cap="The register as a live grid, with export, versioned backups, re-compute and the linked-files bundle one menu away." %}
-        <p class="story-note">The register isn't a model the app regenerates and hands back changed — it's your workbook, kept current. Export .xlsx hands head office the master sheet; the export bundle hands a client or inspector the sheet and every linked file, zipped.</p>
     </section>
 
-    <!-- ===================== LIBRARY ===================== -->
     <section class="page-section container" id="library">
         <div class="section-header">
             <span class="eyebrow">A Library That Reads Your WPS</span>
             <h2>Every Field, Down to the Pass Table</h2>
             <p class="subtitle">Behind every register row is a fully-read document — header fields, the full pass table, materials and consumables, all structured and all searchable.</p>
         </div>
-        <div class="glass-card feature-block feature-block-solo" id="library-detail">
-            <span class="feature-index">04</span>
-            <ul class="feature-list">
-                <li><strong>Three document types, one home:</strong> WPS, pWPS and WPQR each get a tab, each parsed and linkable, each showing a Parsed and Linked status at a glance.</li>
-                <li><strong>The real detail:</strong> Header block — standard, base metal, thickness and diameter range, preheat, shielding — plus the full pass table with process, filler class, polarity, current, voltage, travel speed and heat input for every pass.</li>
-                <li><strong>Edit and verify in place:</strong> Correct any value or its label and save; a one-click verify clears a low-confidence flag, and computed heat input clears across every pass at once.</li>
-                <li><strong>Filter by what's inside:</strong> Narrow by process, material, position and thickness — even by values inside the passes, such as every WPS that runs a 111 root.</li>
-            </ul>
-            <p class="feature-out"><a href="wps-library-search-software.html">See the library &amp; search in depth &rarr;</a></p>
+        <div class="tour-row">
+            <div class="tour-text">
+                <div class="glass-card feature-block feature-block-solo" id="library-detail">
+                    <span class="feature-index">04</span>
+                    <ul class="feature-list">
+                        <li><strong>Three document types, one home:</strong> WPS, pWPS and WPQR each get a tab, each parsed and linkable, each showing a Parsed and Linked status at a glance.</li>
+                        <li><strong>The real detail:</strong> Header block — standard, base metal, thickness and diameter range, preheat, shielding — plus the full pass table with process, filler class, polarity, current, voltage, travel speed and heat input for every pass.</li>
+                        <li><strong>Edit and verify in place:</strong> Correct any value or its label and save; a one-click verify clears a low-confidence flag, and computed heat input clears across every pass at once.</li>
+                        <li><strong>Filter by what's inside:</strong> Narrow by process, material, position and thickness — even by values inside the passes, such as every WPS that runs a 111 root.</li>
+                    </ul>
+                    <p class="feature-out"><a href="wps-library-search-software.html">See the library &amp; search in depth &rarr;</a></p>
+                </div>
+            </div>
+            <div class="tour-media">
+                {% include app-shot.html
+                    name="library" wide="true" w="1600" h="900"
+                    alt="The Atlas library with WPS MER-WPS-002 open: the WPS list marked Parsed and Linked on the left, and on the right the WPS read into seventeen header fields and a four-pass table with process, filler, polarity, current, voltage, travel speed and heat input"
+                    cap="A document read to the field: the header block and every pass — root to cap — with its parameters and heat-input values, all structured and searchable." %}
+            </div>
         </div>
-        {% include app-shot.html
-            name="library" wide="true" w="1600" h="900"
-            alt="The Atlas library with WPS MER-WPS-002 open: the WPS list marked Parsed and Linked on the left, and on the right the WPS read into seventeen header fields and a four-pass table with process, filler, polarity, current, voltage, travel speed and heat input"
-            cap="A document read to the field: the header block and every pass — root to cap — with its parameters and heat-input values, all structured and searchable." %}
-        <p class="story-note">MER-WPS-002, read from an Excel workbook: ISO&nbsp;15614-1, a single-U butt weld for 3–6&nbsp;mm, four passes on process 135, each with its own current, voltage, wire-feed and travel-speed window and its heat input. When a form leaves heat input blank, the app computes it and holds it behind a single <strong>Verify computed heat input</strong> check until someone confirms it.</p>
-        {% include app-shot.html
-            name="compare-fields" wide="true" w="1600" h="900"
-            alt="Compare in Fields mode with WPS MER-WPS-001 and MER-WPS-002: 45 differences of 79 fields, each row showing the field, both values and the changed characters highlighted, from WPS number and revision to joint type, thickness range, position, shielding gas, WPQR number, preheat and interpass"
-            cap="Two WPS compared field by field: every value read from the documents, every difference highlighted." %}
+        <div class="tour-more">
+            {% include app-shot.html
+                name="compare-fields" wide="true" w="1600" h="900"
+                alt="Compare in Fields mode with WPS MER-WPS-001 and MER-WPS-002: 45 differences of 79 fields, each row showing the field, both values and the changed characters highlighted, from WPS number and revision to joint type, thickness range, position, shielding gas, WPQR number, preheat and interpass"
+                cap="Two WPS compared field by field: every value read from the documents, every difference highlighted." %}
+            <p class="story-note"><strong>Compare</strong> puts any two WPS side by side, field by field, with every difference highlighted — or opens the two original files together.</p>
+        </div>
     </section>
 
-    <!-- ===================== LINKED CHAIN ===================== -->
     <section class="page-section container" id="pqr">
         <div class="section-header">
             <span class="eyebrow">The Linked Chain</span>
             <h2>WPQR and pWPS, Attached to the Procedure</h2>
             <p class="subtitle">A WPS is qualified by a WPQR, which traces back to a pWPS. The library keeps that chain linked, so from any record you can see exactly what supports it.</p>
         </div>
-        <div class="glass-card feature-block feature-block-solo" id="pqr-detail">
-            <span class="feature-index">05</span>
-            <ul class="feature-list">
-                <li><strong>WPQR linked to the WPS it qualifies:</strong> A single WPQR can support several procedures, each linked to the WPS numbers it qualifies, picked from the library by number.</li>
-                <li><strong>pWPS linked to the WPQR:</strong> Trace each qualification record back to the preliminary WPS behind it — the full pWPS &rarr; WPQR &rarr; WPS chain, visible and one click apart.</li>
-                <li><strong>Collected data, structured:</strong> Qualification standard, process, test date and the rest are read into fields, not left buried in an attachment.</li>
-                <li><strong>Where Atlas stops:</strong> It attaches, links and displays these records — capturing WPQR results live on the floor is the job of the full <a href="welding-qualification-software.html">Elenchon platform</a>.</li>
-            </ul>
+        <div class="tour-row">
+            <div class="tour-text">
+                <div class="glass-card feature-block feature-block-solo" id="pqr-detail">
+                    <span class="feature-index">05</span>
+                    <ul class="feature-list">
+                        <li><strong>WPQR linked to the WPS it qualifies:</strong> A single WPQR can support several procedures, each linked to the WPS numbers it qualifies, picked from the library by number.</li>
+                        <li><strong>pWPS linked to the WPQR:</strong> Trace each qualification record back to the preliminary WPS behind it — the full pWPS &rarr; WPQR &rarr; WPS chain, visible and one click apart.</li>
+                        <li><strong>Collected data, structured:</strong> Qualification standard, process, test date and the rest are read into fields, not left buried in an attachment.</li>
+                        <li><strong>Where Atlas stops:</strong> It attaches, links and displays these records — capturing WPQR results live on the floor is the job of the full <a href="welding-qualification-software.html">Elenchon platform</a>.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tour-media">
+                {% include app-shot.html
+                    name="pqr-chain" wide="true" w="1600" h="900"
+                    alt="WPS MER-WPS-001 in the library with two linked WPQRs, MER-WPQR-2401 and MER-WPQR-2411, its signed copy on file, a WPQR range check with nothing outside, and the welders qualified to weld it"
+                    cap="A WPS with its qualification chain made explicit: the WPQR records that qualify it, linked and one click apart, above the header and pass table read from the document." %}
+            </div>
         </div>
-        {% include app-shot.html
-            name="pqr-chain" wide="true" w="1600" h="900"
-            alt="WPS MER-WPS-001 in the library with two linked WPQRs, MER-WPQR-2401 and MER-WPQR-2411, its signed copy on file, a WPQR range check with nothing outside, and the welders qualified to weld it"
-            cap="A WPS with its qualification chain made explicit: the WPQR records that qualify it, linked and one click apart, above the header and pass table read from the document." %}
     </section>
 
-        <!-- ===================== RANGE-CHECK ===================== -->
     <section class="page-section container" id="range-check">
         <div class="section-header">
             <span class="eyebrow">WPQR Range Check</span>
             <h2>Every WPS Checked Against Its WPQR</h2>
             <p class="subtitle">Enter the range of qualification once from each WPQR certificate. Atlas then checks every WPS that cites it, field by field, and shows you what sits outside.</p>
         </div>
-        <div class="glass-card feature-block feature-block-solo" id="range-check-detail">
-            <span class="feature-index">06</span>
-            <ul class="feature-list">
-                <li><strong>Field by field:</strong> processes, material groups, thickness, diameter, positions, preheat, interpass, PWHT, current, consumables and heat input — each marked inside, outside, differs or not checked.</li>
-                <li><strong>One WPQR per run group, by default:</strong> each run group (process and filler) has to be covered by one WPQR on every field. Combining WPQRs into one wider range is an opt-in per WPS, and every combined result is labelled.</li>
-                <li><strong>No guessing:</strong> a WPS with no preheat minimum is never assumed to be at room temperature, and a blank or unclear value is “not checked”, not a red flag.</li>
-                <li><strong>Where Atlas stops:</strong> it compares the values you entered from your certificates. It doesn't derive ranges from ISO 15614-1 or decide whether a WPS is qualified — a different consumable shows as “differs”, for the person responsible to judge.</li>
-            </ul>
+        <div class="tour-row">
+            <div class="tour-text">
+                <div class="glass-card feature-block feature-block-solo" id="range-check-detail">
+                    <span class="feature-index">06</span>
+                    <ul class="feature-list">
+                        <li><strong>Field by field:</strong> processes, material groups, thickness, diameter, positions, preheat, interpass, PWHT, current, consumables and heat input — each marked inside, outside, differs or not checked.</li>
+                        <li><strong>One WPQR per run group, by default:</strong> each run group (process and filler) has to be covered by one WPQR on every field. Combining WPQRs into one wider range is an opt-in per WPS, and every combined result is labelled.</li>
+                        <li><strong>No guessing:</strong> a WPS with no preheat minimum is never assumed to be at room temperature, and a blank or unclear value is “not checked”, not a red flag.</li>
+                        <li><strong>Where Atlas stops:</strong> it compares the values you entered from your certificates. It doesn't derive ranges from ISO 15614-1 or decide whether a WPS is qualified — a different consumable shows as “differs”, for the person responsible to judge.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tour-media">
+                {% include app-shot.html
+                    name="range-report" wide="true" w="1600" h="900"
+                    alt="Range check report for WPS MER-WPS-012 against WPQR MER-WPQR-2402, one WPQR per run group: one field outside (position PB is not listed on the WPQR), with the not-checked and inside-the-range fields grouped below and an Export PDF button"
+                    cap="The range check report: problems first, each one explained in plain words, and exportable as a PDF." %}
+            </div>
         </div>
-        {% include app-shot.html
-            name="range-report" wide="true" w="1600" h="900"
-            alt="Range check report for WPS MER-WPS-012 against WPQR MER-WPQR-2402, one WPQR per run group: one field outside (position PB is not listed on the WPQR), with the not-checked and inside-the-range fields grouped below and an Export PDF button"
-            cap="The range check report: problems first, each one explained in plain words, and exportable as a PDF." %}
     </section>
-    <!-- ===================== WELDER-COVERAGE ===================== -->
     <section class="page-section container" id="welder-coverage">
         <div class="section-header">
             <span class="eyebrow">Welder Coverage</span>
             <h2>Who Can Weld This WPS</h2>
             <p class="subtitle">Atlas matches each WPS to the welders whose current certificates cover it, and each welder to the WPS they can weld.</p>
         </div>
-        <div class="glass-card feature-block feature-block-solo" id="welder-coverage-detail">
-            <span class="feature-index">07</span>
-            <ul class="feature-list">
-                <li><strong>On every WPS:</strong> the welders qualified for it, the certificate that covers each one, and who holds the process but isn't covered.</li>
-                <li><strong>On every welder:</strong> the WPS their current qualifications cover — open any welder's record to see it.</li>
-                <li><strong>Nobody qualified?</strong> You see it on the WPS, and the monthly report lists every WPS with no qualified welder.</li>
-                <li><strong>Compared, not judged:</strong> results come from the range typed from each certificate; Atlas doesn't derive ranges from ISO 9606-1 or ASME IX.</li>
-            </ul>
+        <div class="tour-row">
+            <div class="tour-text">
+                <div class="glass-card feature-block feature-block-solo" id="welder-coverage-detail">
+                    <span class="feature-index">07</span>
+                    <ul class="feature-list">
+                        <li><strong>On every WPS:</strong> the welders qualified for it, the certificate that covers each one, and who holds the process but isn't covered.</li>
+                        <li><strong>On every welder:</strong> the WPS their current qualifications cover — open any welder's record to see it.</li>
+                        <li><strong>Nobody qualified?</strong> You see it on the WPS, and the monthly report lists every WPS with no qualified welder.</li>
+                        <li><strong>Compared, not judged:</strong> results come from the range typed from each certificate; Atlas doesn't derive ranges from ISO 9606-1 or ASME IX.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tour-media">
+                {% include app-shot.html
+                    name="coverage" wide="true" w="1600" h="900"
+                    alt="WPS MER-WPS-002 in the library: signed copy on file, a WPQR range check with nothing outside the linked WPQR, and Qualified welders listing the welders whose certificates cover it"
+                    cap="One WPS, both sides: its WPQR range check, and the welders qualified to weld it." %}
+            </div>
         </div>
-        {% include app-shot.html
-            name="coverage" wide="true" w="1600" h="900"
-            alt="WPS MER-WPS-002 in the library: signed copy on file, a WPQR range check with nothing outside the linked WPQR, and Qualified welders listing the welders whose certificates cover it"
-            cap="One WPS, both sides: its WPQR range check, and the welders qualified to weld it." %}
     </section>
 
-    <!-- ===================== HEAT INPUT ===================== -->
     <section class="page-section container" id="heat-input">
         <div class="section-header">
             <span class="eyebrow">Heat Input Helper</span>
             <h2>Stay Inside the Qualified Window</h2>
             <p class="subtitle">Heat input is where a good procedure quietly goes out of qualification. The helper computes it live and clamps the controls to the range your WPQR qualified.</p>
         </div>
-        <div class="glass-card feature-block feature-block-solo" id="heat-input-detail">
-            <span class="feature-index">08</span>
-            <ul class="feature-list">
-                <li><strong>Pull straight from a WPS:</strong> Load a parsed WPS and its per-region ranges and processes fill in automatically — here, the arc values from MER-WPS-026.</li>
-                <li><strong>Sliders that can't leave the window:</strong> Drag current, voltage and travel speed and watch the heat input compute live; the controls clamp to your WPQR-qualified range, so an out-of-range result can't be dialled in.</li>
-                <li><strong>Root, fill and cap independently:</strong> Each weld region gets its own qualified range and its own live read — green when it's inside the range.</li>
-                <li><strong>Multi-arc aware:</strong> Tandem and twin-arc setups sum across heads, the way the standard expects. It's a scratch pad — nothing is saved or written to any sheet.</li>
-            </ul>
-            <p class="feature-out"><a href="heat-input-calculator.html">See the heat-input calculator in depth &rarr;</a></p>
+        <div class="tour-row">
+            <div class="tour-text">
+                <div class="glass-card feature-block feature-block-solo" id="heat-input-detail">
+                    <span class="feature-index">08</span>
+                    <ul class="feature-list">
+                        <li><strong>Pull straight from a WPS:</strong> Load a parsed WPS and its per-region ranges and processes fill in automatically — here, the arc values from MER-WPS-026.</li>
+                        <li><strong>Sliders that can't leave the window:</strong> Drag current, voltage and travel speed and watch the heat input compute live; the controls clamp to your WPQR-qualified range, so an out-of-range result can't be dialled in.</li>
+                        <li><strong>Root, fill and cap independently:</strong> Each weld region gets its own qualified range and its own live read — green when it's inside the range.</li>
+                        <li><strong>Multi-arc aware:</strong> Tandem and twin-arc setups sum across heads, the way the standard expects. It's a scratch pad — nothing is saved or written to any sheet.</li>
+                    </ul>
+                    <p class="feature-out"><a href="heat-input-calculator.html">See the heat-input calculator in depth &rarr;</a></p>
+                </div>
+            </div>
+            <div class="tour-media">
+                {% include app-shot.html
+                    name="heat-input" wide="true" w="1600" h="900"
+                    alt="The heat-input helper with arc values pulled from MER-WPS-012: root, fill and cap each with its WPQR-qualified heat-input range, current, voltage and travel-speed sliders, and a live result marked Inside WPQR range"
+                    cap="Arc values pulled from a WPS: root, fill and cap each computed live and sitting inside the range the WPQR qualified." %}
+            </div>
         </div>
-        {% include app-shot.html
-            name="heat-input" wide="true" w="1600" h="900"
-            alt="The heat-input helper with arc values pulled from MER-WPS-012: root, fill and cap each with its WPQR-qualified heat-input range, current, voltage and travel-speed sliders, and a live result marked Inside WPQR range"
-            cap="Arc values pulled from a WPS: root, fill and cap each computed live and sitting inside the range the WPQR qualified." %}
     </section>
 
-    <!-- ===================== WELDER QUALIFICATION ===================== -->
     <section class="page-section container" id="qualification-grid">
         <div class="section-header">
             <span class="eyebrow">Welder Qualification · The Grid</span>
             <h2>Every Welder, Every Process, Every Date</h2>
-            <p class="subtitle">The other half of Atlas: a filterable grid of who’s qualified for what, coloured by whatever’s due next. <a href="welder-qualification-management-software.html">See welder qualification in depth &rarr;</a></p>
+            <p class="subtitle">The other half of Atlas: a filterable grid of who’s qualified for what, coloured by whatever’s due next.</p>
         </div>
-        <div class="glass-card feature-block feature-block-solo" id="qualification-grid-detail">
-            <span class="feature-index">09</span>
-            <ul class="feature-list">
-                <li><strong>Welders down, processes across:</strong> each cell is that welder’s soonest-due qualification in that process, coloured green through red, so the whole roster is your planning view.</li>
-                <li><strong>Filter by anything recorded:</strong> welder, process, standard, what’s expiring — even values inside a qualification, like whether the knowledge test was recorded.</li>
-                <li><strong>Drill into a welder:</strong> every active record and the full retained history, nothing overwritten when a qualification is renewed or superseded.</li>
-                <li><strong>Built around your standards:</strong> ISO 9606, ASME IX and AWS variables pre-built, custom fields where you need them, and both the ISO and ASME reverification models.</li>
-            </ul>
+        <div class="tour-row">
+            <div class="tour-text">
+                <div class="glass-card feature-block feature-block-solo" id="qualification-grid-detail">
+                    <span class="feature-index">09</span>
+                    <ul class="feature-list">
+                        <li><strong>Welders down, processes across:</strong> each cell is that welder’s soonest-due qualification in that process, coloured green through red, so the whole roster is your planning view.</li>
+                        <li><strong>Filter by anything recorded:</strong> welder, process, standard, what’s expiring — even values inside a qualification, like whether the knowledge test was recorded.</li>
+                        <li><strong>Drill into a welder:</strong> every active record and the full retained history, nothing overwritten when a qualification is renewed or superseded.</li>
+                        <li><strong>Built around your standards:</strong> ISO 9606, ASME IX and AWS variables pre-built, custom fields where you need them, and both the ISO and ASME reverification models.</li>
+                    </ul>
+                    <p class="feature-out"><a href="welder-qualification-management-software.html">See welder qualification in depth &rarr;</a></p>
+                </div>
+            </div>
+            <div class="tour-media">
+                {% include app-shot.html
+                    name="quals-grid" wide="true" w="1600" h="900"
+                    alt="The qualification board: welders in rows against processes 111, 121, 135, 136, 138 and 141, each held qualification coloured by status from clear through due within a month, two weeks or this week to expired, with a legend, a Show standard toggle and a Filter button"
+                    cap="The qualification board: welders against the processes they hold, each cell coloured by what’s due soonest — from clear through to expired — and filterable down to a single process or standard." %}
+            </div>
         </div>
-        {% include app-shot.html
-            name="quals-grid" wide="true" w="1600" h="900"
-            alt="The qualification board: welders in rows against processes 111, 121, 135, 136, 138 and 141, each held qualification coloured by status from clear through due within a month, two weeks or this week to expired, with a legend, a Show standard toggle and a Filter button"
-            cap="The qualification board: welders against the processes they hold, each cell coloured by what’s due soonest — from clear through to expired — and filterable down to a single process or standard." %}
     </section>
 
     <section class="page-section container" id="qualification-warnings">
@@ -260,19 +341,25 @@ crumb: "Features"
             <h2>A Lapse You See Coming</h2>
             <p class="subtitle">Expiry and continuity tracked as two separate dates, warned ahead on the dashboard and — if you switch it on — by email.</p>
         </div>
-        <div class="glass-card feature-block feature-block-solo" id="qualification-warnings-detail">
-            <span class="feature-index">10</span>
-            <ul class="feature-list">
-                <li><strong>Two clocks, watched apart:</strong> an expiry date and a continuity date, each with its own warning tiers — a month out, two weeks, the week of — at lead times you set.</li>
-                <li><strong>The dashboard flags what’s due:</strong> a count of qualifications entering a warning period, one click to filter the grid to exactly who.</li>
-                <li><strong>Email reminders, opt-in:</strong> add up to ten recipients — the QM, a supervisor, whoever plans the floor — to get the heads-up in their inbox ahead of each deadline.</li>
-                <li><strong>It records and warns:</strong> Atlas surfaces the dates and the facts; whether a qualification is valid for a job stays a human call.</li>
-            </ul>
+        <div class="tour-row">
+            <div class="tour-text">
+                <div class="glass-card feature-block feature-block-solo" id="qualification-warnings-detail">
+                    <span class="feature-index">10</span>
+                    <ul class="feature-list">
+                        <li><strong>Two clocks, watched apart:</strong> an expiry date and a continuity date, each with its own warning tiers — a month out, two weeks, the week of — at lead times you set.</li>
+                        <li><strong>The dashboard flags what’s due:</strong> a count of qualifications entering a warning period, one click to filter the grid to exactly who.</li>
+                        <li><strong>Email reminders, opt-in:</strong> add up to ten recipients — the QM, a supervisor, whoever plans the floor — to get the heads-up in their inbox ahead of each deadline.</li>
+                        <li><strong>It records and warns:</strong> Atlas surfaces the dates and the facts; whether a qualification is valid for a job stays a human call.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tour-media">
+                {% include app-shot.html
+                    name="quals-warnings" wide="true" w="1600" h="257"
+                    alt="The Needs attention panel on the overview: WPS fields all reviewed, register up to date, qualifications that have lapsed, welders due for reverification broken down by how close, and email alerts on"
+                    cap="Warnings on the dashboard: a lapsed qualification, what’s expiring soon, and who’s due for reverification — broken down by how close, one click from the board." %}
+            </div>
         </div>
-        {% include app-shot.html
-            name="quals-warnings" wide="true" w="1600" h="257"
-            alt="The Needs attention panel on the overview: WPS fields all reviewed, register up to date, qualifications that have lapsed, welders due for reverification broken down by how close, and email alerts on"
-            cap="Warnings on the dashboard: a lapsed qualification, what’s expiring soon, and who’s due for reverification — broken down by how close, one click from the board." %}
     </section>
 
     <section class="page-section container" id="qualification-record">
@@ -281,76 +368,90 @@ crumb: "Features"
             <h2>Signed Requalification, and the Certificate Beside It</h2>
             <p class="subtitle">Renew a qualification with an attributed signature, and keep the certificate on the record — viewable against any other file.</p>
         </div>
-        <div class="glass-card feature-block feature-block-solo" id="qualification-record-detail">
-            <span class="feature-index">11</span>
-            <ul class="feature-list">
-                <li><strong>Requalification, signed and dated:</strong> renew continuity behind a password signature — an immutable stamp reading verified on this date, by this person, with your notes.</li>
-                <li><strong>The certificate, kept with the record:</strong> attach a scan, PDF or image and view it on the qualification it belongs to.</li>
-                <li><strong>Side by side, your choice of both:</strong> open any two files together — a welder's certificate against the WPS it covers, or two WPS field by field — picking each side yourself.</li>
-                <li><strong>Full history retained:</strong> every qualification a welder has ever held stays on file, so the past is never lost when the present is renewed.</li>
-            </ul>
-            <p class="feature-out"><a href="welder-qualification-management-software.html">See welder qualification in depth &rarr;</a></p>
+        <div class="tour-row">
+            <div class="tour-text">
+                <div class="glass-card feature-block feature-block-solo" id="qualification-record-detail">
+                    <span class="feature-index">11</span>
+                    <ul class="feature-list">
+                        <li><strong>Requalification, signed and dated:</strong> renew continuity behind a password signature — an immutable stamp reading verified on this date, by this person, with your notes.</li>
+                        <li><strong>The certificate, kept with the record:</strong> attach a scan, PDF or image and view it on the qualification it belongs to.</li>
+                        <li><strong>Side by side, your choice of both:</strong> open any two files together — a welder's certificate against the WPS it covers, or two WPS field by field — picking each side yourself.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tour-media">
+                {% include app-shot.html
+                    name="quals-record" wide="true" w="1600" h="900"
+                    alt="A welder's record: two ISO 9606-1 qualifications, processes 135 and 141, each with expiry and continuity due dates, the signed six-month confirmation with the evidence behind it, edit, confirm-validity and retire actions, and the WPS this welder can weld"
+                    cap="A welder’s record: each qualification’s expiry and continuity dates, the signed and dated confirmation with the evidence behind it, and the next action — catch up, confirm or retire — one click away." %}
+            </div>
         </div>
-        {% include app-shot.html
-            name="quals-record" wide="true" w="1600" h="900"
-            alt="A welder's record: two ISO 9606-1 qualifications, processes 135 and 141, each with expiry and continuity due dates, the signed six-month confirmation with the evidence behind it, edit, confirm-validity and retire actions, and the WPS this welder can weld"
-            cap="A welder’s record: each qualification’s expiry and continuity dates, the signed and dated confirmation with the evidence behind it, and the next action — catch up, confirm or retire — one click away." %}
-        {% include app-shot.html
-            name="quals-certificate" wide="true" w="1600" h="900"
-            alt="The certificate viewer open on a welder's process 135 qualification: certificate WQ-2026-0156, an EN ISO 9606-1 welder qualification test certificate showing the welder, the examining body and the range of qualification"
-            cap="The certificate kept on the record: attach a scan, PDF or image and open it right on the qualification it belongs to."
-            ph="Qualifications — a welder’s qualification card with a certificate attached (not “No certificate attached”), the certificate open in the viewer." %}
-        {% include app-shot.html
-            name="compare-cert-wps" wide="true" w="1600" h="900"
-            alt="Compare with a welder's process 135 certificate (WQ-2026-0156, EN ISO 9606-1) on the left and WPS MER-WPS-002 on the right, both as PDFs, with a Welder coverage bar above reading Qualified, checked against the range entered from the certificate"
-            cap="Compare: a welder's certificate beside the WPS it covers, with the welder-coverage result above. Any two files work, each side picked by you." %}
+        <div class="tour-more">
+            {% include app-shot.html
+                name="quals-certificate" wide="true" w="1600" h="900"
+                alt="The certificate viewer open on a welder's process 135 qualification: certificate WQ-2026-0156, an EN ISO 9606-1 welder qualification test certificate showing the welder, the examining body and the range of qualification"
+                cap="The certificate kept on the record: attach a scan, PDF or image and open it right on the qualification it belongs to."
+                ph="Qualifications — a welder’s qualification card with a certificate attached (not “No certificate attached”), the certificate open in the viewer." %}
+            {% include app-shot.html
+                name="compare-cert-wps" wide="true" w="1600" h="900"
+                alt="Compare with a welder's process 135 certificate (WQ-2026-0156, EN ISO 9606-1) on the left and WPS MER-WPS-002 on the right, both as PDFs, with a Welder coverage bar above reading Qualified, checked against the range entered from the certificate"
+                cap="Compare: a welder's certificate beside the WPS it covers, with the welder-coverage result above. Any two files work, each side picked by you." %}
+        </div>
     </section>
 
-        <!-- ===================== MONTHLY-REPORT ===================== -->
     <section class="page-section container" id="monthly-report">
         <div class="section-header">
             <span class="eyebrow">Monthly Report</span>
             <h2>Every Month, What Changed and What Needs Attention</h2>
             <p class="subtitle">On by default. Each month Atlas freezes a snapshot of your register and your welders, so you can see what moved — and generate one on demand whenever you need it.</p>
         </div>
-        <div class="glass-card feature-block feature-block-solo" id="monthly-report-detail">
-            <span class="feature-index">12</span>
-            <ul class="feature-list">
-                <li><strong>Range check across the register:</strong> how many WPS were checked, and how many sit outside, differ or weren't checked.</li>
-                <li><strong>What changed:</strong> new problems and resolved ones since the last report.</li>
-                <li><strong>Welder qualifications:</strong> lapsed, expiring within a month, confirmations due and expired this month.</li>
-                <li><strong>Welder coverage:</strong> the WPS with no qualified welder, and every WPS needing attention, one click away. Export the whole report as a PDF.</li>
-            </ul>
+        <div class="tour-row">
+            <div class="tour-text">
+                <div class="glass-card feature-block feature-block-solo" id="monthly-report-detail">
+                    <span class="feature-index">12</span>
+                    <ul class="feature-list">
+                        <li><strong>Range check across the register:</strong> how many WPS were checked, and how many sit outside, differ or weren't checked.</li>
+                        <li><strong>What changed:</strong> new problems and resolved ones since the last report.</li>
+                        <li><strong>Welder qualifications:</strong> lapsed, expiring within a month, confirmations due and expired this month.</li>
+                        <li><strong>Welder coverage:</strong> the WPS with no qualified welder, and every WPS needing attention, one click away. Export the whole report as a PDF.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tour-media">
+                {% include app-shot.html
+                    name="monthly-report" wide="true" w="1600" h="900"
+                    alt="Monthly qualification report: WPQR range check totals (24 of 29 WPS checked, 4 outside, 3 differ, 17 inside, 3 not checked), changes since the last report, welder qualification counts, welder coverage and the WPS needing attention, with an Export PDF button"
+                    cap="The monthly report: the register's range check, your welders' deadlines and coverage, on one page." %}
+            </div>
         </div>
-        {% include app-shot.html
-            name="monthly-report" wide="true" w="1600" h="900"
-            alt="Monthly qualification report: WPQR range check totals (24 of 29 WPS checked, 4 outside, 3 differ, 17 inside, 3 not checked), changes since the last report, welder qualification counts, welder coverage and the WPS needing attention, with an Export PDF button"
-            cap="The monthly report: the register's range check, your welders' deadlines and coverage, on one page." %}
     </section>
-    <!-- ===================== WHAT-YOU-SEE ===================== -->
     <section class="page-section container" id="what-you-see">
         <div class="section-header">
             <span class="eyebrow">What You See</span>
             <h2>Hide What You Don't Use</h2>
             <p class="subtitle">Not every shop uses every feature. Each person can switch off whole features in their own view — nothing is deleted, and colleagues still see everything.</p>
         </div>
-        <div class="glass-card feature-block feature-block-solo" id="what-you-see-detail">
-            <span class="feature-index">13</span>
-            <ul class="feature-list">
-                <li><strong>One switch per feature:</strong> signed copies, the WPQR range check, welder coverage, the monthly report, Compare, the heat-input helper and the board.</li>
-                <li><strong>Saved to your account:</strong> the setting follows you to any browser.</li>
-                <li><strong>Nothing forgotten:</strong> after each sign-in, a short note lists what you've hidden, with a link to switch it back on.</li>
-                <li><strong>Problems don't go silent:</strong> if the range check is hidden and a WPS sits outside its WPQR range, the note still gives you the count.</li>
-            </ul>
+        <div class="tour-row">
+            <div class="tour-text">
+                <div class="glass-card feature-block feature-block-solo" id="what-you-see-detail">
+                    <span class="feature-index">13</span>
+                    <ul class="feature-list">
+                        <li><strong>One switch per feature:</strong> signed copies, the WPQR range check, welder coverage, the monthly report, Compare, the heat-input helper and the board.</li>
+                        <li><strong>Saved to your account:</strong> the setting follows you to any browser.</li>
+                        <li><strong>Nothing forgotten:</strong> after each sign-in, a short note lists what you've hidden, with a link to switch it back on.</li>
+                        <li><strong>Problems don't go silent:</strong> if the range check is hidden and a WPS sits outside its WPQR range, the note still gives you the count.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tour-media">
+                {% include app-shot.html
+                    name="what-you-see" wide="true" w="1600" h="336"
+                    alt="The What you see panel on the overview: one switch per feature — signed copies, WPQR range check, welder coverage, monthly report, Compare, heat input helper and board — each marked Shown"
+                    cap="One switch per feature, for your own view only." %}
+            </div>
         </div>
-        {% include app-shot.html
-            name="what-you-see" wide="true" w="1600" h="336"
-            alt="The What you see panel on the overview: one switch per feature — signed copies, WPQR range check, welder coverage, monthly report, Compare, heat input helper and board — each marked Shown"
-            cap="One switch per feature, for your own view only." %}
     </section>
 
-    <!-- ===================== SECURITY ===================== -->
-    <!-- ===================== SECURITY TEASER ===================== -->
     <section class="page-section container" id="security">
         <div class="dark-panel grid-2 align-center">
             <div>
@@ -370,12 +471,11 @@ crumb: "Features"
         </div>
     </section>
 
-    <!-- ===================== AUTHORING ===================== -->
     <section class="page-section container" id="authoring">
         <div class="section-header">
             <span class="eyebrow">Export Today, Authoring Next</span>
             <h2>A Clean Excel Export, and More to Come</h2>
-            <p class="subtitle">Atlas already emits a clean Excel workbook for any WPS you hold, and that file re-imports losslessly. Full in-cloud authoring builds on that foundation. Each step ships in a release you can follow in <a href="/atlas/updates/">Atlas updates</a>.</p>
+            <p class="subtitle">Export works today; authoring builds on it. Each step ships in a release you can follow in <a href="/atlas/updates/">Atlas updates</a>.</p>
         </div>
         <div class="pillar-grid">
             <div class="glass-card">
@@ -388,8 +488,9 @@ crumb: "Features"
             </div>
         </div>
     </section>
+        </div>
+    </div>
 
-    <!-- ===================== CTA ===================== -->
 {%- capture closing_intro %}
             <span class="eyebrow">Get Started</span>
             <h2 class="text-glow">Put Your Register on This</h2>

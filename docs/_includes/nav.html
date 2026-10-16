@@ -16,6 +16,10 @@
      Products word and is toggled client-side by main.js to the visitor's last dropdown choice. {%- endcomment %}
 {%- assign is_wpsm = false -%}
 {%- if page.url contains 'wps-management-software' or page.url contains 'wps-manager-features' or page.url contains 'wps-manager-contact' or page.url contains 'wps-manager-security' or page.url contains 'wps-import-software' or page.url contains 'wps-review-approval-software' or page.url contains 'wps-library-search-software' or page.url contains 'wps-preview-verification' or page.url contains 'heat-input-calculator' or page.url contains 'welder-qualification-management-software' or page.url contains '/atlas/updates/' %}{% assign is_wpsm = true %}{% endif -%}
+{%- comment %} Company-level pages (homepage, guides, legal) get a neutral nav: both products
+     named side by side, Resources and a quiet Contact — no product's own links or action. {%- endcomment %}
+{%- assign is_company = false -%}
+{%- if page.url == '/' or page.url == '/pt/' or page.url == '/es/' or page.url == '/index.html' or page.url == '/pt/index.html' or page.url == '/es/index.html' or page.hub == 'guides' or page.url contains '/resources/' or page.url contains 'privacy' or page.url contains 'terms' or page.url contains '404' %}{% assign is_company = true %}{% endif -%}
 {%- if L == 'pt' %}{% assign wpsm_home = '/pt/wps-management-software.html' %}{% assign wpsm_contact = '/pt/wps-manager-contact.html' %}{% assign wpsm_wpq = '/pt/welder-qualification-management-software.html' %}{% elsif L == 'es' %}{% assign wpsm_home = '/es/wps-management-software.html' %}{% assign wpsm_contact = '/es/wps-manager-contact.html' %}{% assign wpsm_wpq = '/es/welder-qualification-management-software.html' %}{% else %}{% assign wpsm_home = '/wps-management-software.html' %}{% assign wpsm_contact = '/wps-manager-contact.html' %}{% assign wpsm_wpq = '/welder-qualification-management-software.html' %}{% endif -%}
 {%- comment %} Dropdown button label = the current product family, else the neutral Products word. {%- endcomment %}
     <nav aria-label="{% if L == 'pt' %}Navegação principal{% elsif L == 'es' %}Navegación principal{% else %}Main navigation{% endif %}">
@@ -54,6 +58,11 @@
             <a href="{% if L == 'pt' %}/pt/atlas/updates/{% else %}/atlas/updates/{% endif %}"{% if page.url contains '/atlas/updates/' %} aria-current="page"{% endif %}>Novidades</a>
             <a href="{{ wpsm_home }}#pricing">Preços</a>
             <a href="{{ wpsm_contact }}" class="btn btn-small"{% if page.url contains 'wps-manager-contact' %} aria-current="page"{% endif %}>Pedir Teste Gratuito</a>
+{%- elsif is_company %}
+            <a href="/pt/wps-management-software.html">Atlas</a>
+            <a href="/pt/platform.html">Elenchon</a>
+            <a href="/pt/resources/"{% if page.url contains '/pt/resources' %} aria-current="page"{% endif %}>Recursos</a>
+            <a href="/pt/contact.html" class="btn btn-small">Contacto</a>
 {%- else %}
             <a href="/pt/security.html"{% if page.url == '/pt/security.html' %} aria-current="page"{% endif %}>Segurança</a>
             <a href="/pt/pricing.html"{% if page.url == '/pt/pricing.html' %} aria-current="page"{% endif %}>Preços</a>
@@ -87,6 +96,11 @@
             <a href="/es/atlas/updates/"{% if page.url contains '/atlas/updates/' %} aria-current="page"{% endif %}>Novedades</a>
             <a href="{{ wpsm_home }}#pricing">Precios</a>
             <a href="{{ wpsm_contact }}" class="btn btn-small"{% if page.url contains 'wps-manager-contact' %} aria-current="page"{% endif %}>Solicitar Prueba Gratuita</a>
+{%- elsif is_company %}
+            <a href="/es/wps-management-software.html">Atlas</a>
+            <a href="/es/platform.html">Elenchon</a>
+            <a href="/es/resources/"{% if page.url contains '/es/resources' %} aria-current="page"{% endif %}>Recursos</a>
+            <a href="/es/contact.html" class="btn btn-small">Contacto</a>
 {%- else %}
             <a href="/es/security.html"{% if page.url == '/es/security.html' %} aria-current="page"{% endif %}>Seguridad</a>
             <a href="/es/pricing.html"{% if page.url == '/es/pricing.html' %} aria-current="page"{% endif %}>Precios</a>
@@ -120,6 +134,11 @@
             <a href="{% if L == 'pt' %}/pt/atlas/updates/{% else %}/atlas/updates/{% endif %}"{% if page.url contains '/atlas/updates/' %} aria-current="page"{% endif %}>Updates</a>
             <a href="{{ wpsm_home }}#pricing">Pricing</a>
             <a href="{{ wpsm_contact }}" class="btn btn-small"{% if page.url contains 'wps-manager-contact' %} aria-current="page"{% endif %}>Get a Free Trial</a>
+{%- elsif is_company %}
+            <a href="/wps-management-software.html">Atlas</a>
+            <a href="/platform.html">Elenchon</a>
+            <a href="/resources/"{% if page.url contains '/resources' %} aria-current="page"{% endif %}>Resources</a>
+            <a href="/contact.html" class="btn btn-small">Contact</a>
 {%- else %}
             <a href="/security.html"{% if page.url == '/security.html' %} aria-current="page"{% endif %}>Security</a>
             <a href="/pricing.html"{% if page.url == '/pricing.html' %} aria-current="page"{% endif %}>Pricing</a>

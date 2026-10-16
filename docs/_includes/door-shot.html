@@ -1,0 +1,24 @@
+{%- comment %}
+  Small product picture for the homepage door cards.
+    include.product — "atlas" (a cropped Atlas library screenshot, in the page's language)
+                      or "elenchon" (a drawn traceability chain: Elenchon has no public
+                      screenshots before launch, so this is an illustration, not the UI).
+{%- endcomment -%}
+{%- assign L = page.lang | default: 'en' -%}
+{%- if include.product == 'atlas' -%}
+{%- if L == 'pt' %}{% assign src = '/static/wpsm/pt/library.webp' %}{% assign alt = 'Biblioteca de WPS do Atlas: lista de WPS importadas com os campos lidos e o WPQR ligado' %}{% elsif L == 'es' %}{% assign src = '/static/wpsm/es/library.webp' %}{% assign alt = 'Biblioteca de WPS de Atlas: lista de WPS importadas con los campos leídos y el WPQR vinculado' %}{% else %}{% assign src = '/static/wpsm/library.webp' %}{% assign alt = 'Atlas WPS library: imported WPS with their parsed fields and linked WPQR' %}{% endif %}
+                    <div class="door-shot door-shot-photo">
+                        <img src="{{ src }}" width="1600" height="900" loading="lazy" decoding="async" alt="{{ alt }}">
+                    </div>
+{%- else -%}
+{%- if L == 'pt' %}{% assign t_heat = 'Nº DE CORRIDA' %}{% assign t_part = 'PEÇA' %}{% assign t_joint = 'JUNTA' %}{% assign t_weld = 'SOLDADURA' %}{% assign t_who = 'Soldador A3001' %}{% assign alt = 'Ilustração: a cadeia de rastreabilidade do Elenchon, do número de corrida à peça, à junta e à soldadura, com soldador, WPS e WPQ' %}{% elsif L == 'es' %}{% assign t_heat = 'Nº DE COLADA' %}{% assign t_part = 'PIEZA' %}{% assign t_joint = 'UNIÓN' %}{% assign t_weld = 'SOLDADURA' %}{% assign t_who = 'Soldador A3001' %}{% assign alt = 'Ilustración: la cadena de trazabilidad de Elenchon, del número de colada a la pieza, la unión y la soldadura, con soldador, WPS y WPQ' %}{% else %}{% assign t_heat = 'HEAT NO.' %}{% assign t_part = 'PART' %}{% assign t_joint = 'JOINT' %}{% assign t_weld = 'WELD' %}{% assign t_who = 'Welder A3001' %}{% assign alt = 'Illustration: the Elenchon traceability chain from heat number to part, joint and weld, with welder, WPS and WPQ' %}{% endif %}
+                    <div class="door-shot door-shot-art">
+                        <svg viewBox="0 0 520 160" role="img" aria-label="{{ alt }}" preserveAspectRatio="xMidYMid meet">
+                            <g class="ds-link"><path d="M150 46h44M325 46h44M435 66v26"/></g>
+                            <g class="ds-node"><rect x="20" y="22" width="130" height="48" rx="8"/><text x="85" y="40" class="ds-k">{{ t_heat }}</text><text x="85" y="59" class="ds-v">4471-B</text></g>
+                            <g class="ds-node"><rect x="195" y="22" width="130" height="48" rx="8"/><text x="260" y="40" class="ds-k">{{ t_part }}</text><text x="260" y="59" class="ds-v">P-12</text></g>
+                            <g class="ds-node ds-hot"><rect x="370" y="22" width="130" height="48" rx="8"/><text x="435" y="40" class="ds-k">{{ t_joint }}</text><text x="435" y="59" class="ds-v">J-14</text></g>
+                            <g class="ds-node ds-weld"><rect x="20" y="92" width="480" height="48" rx="8"/><text x="40" y="111" class="ds-k ds-l">{{ t_weld }}</text><text x="40" y="130" class="ds-v ds-l">{{ t_who }} · MER-WPS-002 · WPQ ✓</text></g>
+                        </svg>
+                    </div>
+{%- endif %}

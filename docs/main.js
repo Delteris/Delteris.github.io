@@ -1074,3 +1074,38 @@
     if (b) b.hidden = false;
     if (history.replaceState) history.replaceState(null, '', location.pathname + location.hash);
 })();
+
+/* Feature tour jump menu: highlight the section being read. A section counts as
+   current once its top passes a line just under the nav; on the chip bar (narrow
+   screens) the active chip is scrolled into view sideways, never the page. */
+(function () {
+    var nav = document.querySelector('[data-tour-nav]');
+    if (!nav || !('IntersectionObserver' in window)) return;
+    var links = {};
+    Array.prototype.forEach.call(nav.querySelectorAll('a[href^="#"]'), function (a) {
+        links[a.getAttribute('href').slice(1)] = a;
+    });
+    var sections = Object.keys(links).map(function (id) { return document.getElementById(id); }).filter(Boolean);
+    var visible = {};
+    var current = null;
+    function setActive(id) {
+        if (id === current) return;
+        current = id;
+        Object.keys(links).forEach(function (k) {
+            links[k].classList.toggle('is-active', k === id);
+            if (k === id) links[k].setAttribute('aria-current', 'true'); else links[k].removeAttribute('aria-current');
+        });
+        var a = links[id];
+        if (a && nav.scrollWidth > nav.clientWidth + 4) {
+            var left = a.offsetLeft - (nav.clientWidth - a.offsetWidth) / 2;
+            nav.scrollTo({ left: Math.max(0, left), behavior: 'smooth' });
+        }
+    }
+    var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) { visible[e.target.id] = e.isIntersecting; });
+        for (var i = 0; i < sections.length; i++) {
+            if (visible[sections[i].id]) { setActive(sections[i].id); return; }
+        }
+    }, { rootMargin: '-20% 0px -55% 0px' });
+    sections.forEach(function (s) { io.observe(s); });
+})();
