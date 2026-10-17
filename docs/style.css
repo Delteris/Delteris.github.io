@@ -4384,7 +4384,7 @@ button.app-figure-frame:focus-visible .app-figure-zoom-hint {
 .atlas-video-speed button:hover { border-color: var(--accent-blue); }
 .atlas-video-speed button[aria-pressed="true"] { background: var(--accent-blue-soft); border-color: var(--accent-blue); }
 .atlas-video-frame { position: relative; }
-.atlas-video-play { position: absolute; left: 50%; top: 76%; transform: translate(-50%, -50%);
+.atlas-video-play { position: absolute; left: 50%; top: 65%; transform: translate(-50%, -50%);
     width: 92px; height: 92px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
     padding: 0; color: #fff; cursor: pointer;
     background: rgba(10, 18, 36, 0.5); border: 1.5px solid rgba(255, 255, 255, 0.55);
@@ -4393,7 +4393,7 @@ button.app-figure-frame:focus-visible .app-figure-zoom-hint {
     transition: background .15s, transform .15s; }
 .atlas-video-play:hover { background: rgba(59, 130, 246, 0.6); transform: translate(-50%, -50%) scale(1.06); }
 .atlas-video-frame.is-started .atlas-video-play { display: none; }
-@media (max-width: 600px) { .atlas-video-play { width: 52px; height: 52px; top: 81%; } .atlas-video-play svg { width: 30px; height: 30px; } }
+@media (max-width: 600px) { .atlas-video-play { width: 52px; height: 52px; top: 70%; } .atlas-video-play svg { width: 30px; height: 30px; } }
 /* Rare watery shimmer across the play button: one light-blue sweep, then a rest. */
 .atlas-video-play { overflow: hidden; isolation: isolate; }
 .atlas-video-play svg { position: relative; z-index: 1; }
