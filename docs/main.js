@@ -1122,7 +1122,13 @@
         v.preservesPitch = true; v.mozPreservesPitch = true; v.webkitPreservesPitch = true;
         var frame = box.querySelector('.atlas-video-frame'), big = box.querySelector('.atlas-video-play');
         if (big) big.addEventListener('click', function () { v.play(); });
-        v.addEventListener('play', function () { if (frame) frame.classList.add('is-started'); });
+        var KEY = 'atlasVideoWatched';
+        try { if (frame && sessionStorage.getItem(KEY)) frame.classList.add('is-watched'); } catch (e) {}
+        v.addEventListener('play', function () {
+            if (!frame) return;
+            frame.classList.add('is-started', 'is-watched');
+            try { sessionStorage.setItem(KEY, '1'); } catch (e) {}
+        });
         v.addEventListener('ended', function () { if (frame) frame.classList.remove('is-started'); });
         var btns = box.querySelectorAll('.atlas-video-speed button');
         btns.forEach(function (b) {
