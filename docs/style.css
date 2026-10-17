@@ -4404,3 +4404,17 @@ button.app-figure-frame:focus-visible .app-figure-zoom-hint {
 @keyframes atlas-shimmer { 0% { transform: translateX(-120%); } 26% { transform: translateX(120%); } 100% { transform: translateX(120%); } }
 @media (prefers-reduced-motion: reduce) { .atlas-video-play::after { animation: none; display: none; } }
 .atlas-video-frame.is-watched .atlas-video-play::after { animation: none; display: none; }
+/* Water-surface shimmer (caustic net) on the play button: a faint light-blue hint
+   that drifts in every 8 s, then rests. The straight sheen above is kept as the
+   fallback: re-enable it by removing the next line. */
+.atlas-video-play::after { display: none; }
+.atlas-video-water { position: absolute; inset: 0; z-index: 0; pointer-events: none; border-radius: 50%; overflow: hidden;
+    mix-blend-mode: screen; opacity: 0; animation: avw-fade 8s ease-in-out 1s infinite; }
+.atlas-video-water svg { position: absolute; width: 160%; height: 160%; left: -30%; top: -30%; }
+.atlas-video-water .w1 { animation: avw-d1 8s linear 1s infinite; }
+.atlas-video-water .w2 { animation: avw-d2 8s linear 1s infinite; opacity: .8; }
+@keyframes avw-fade { 0% { opacity: 0; } 12% { opacity: .32; } 30% { opacity: .32; } 45% { opacity: 0; } 100% { opacity: 0; } }
+@keyframes avw-d1 { 0% { transform: translate(-6%, -3%); } 45% { transform: translate(5%, 3%); } 100% { transform: translate(5%, 3%); } }
+@keyframes avw-d2 { 0% { transform: translate(5%, 4%) rotate(8deg); } 45% { transform: translate(-5%, -3%) rotate(8deg); } 100% { transform: translate(-5%, -3%) rotate(8deg); } }
+.atlas-video-frame.is-watched .atlas-video-water { display: none; }
+@media (prefers-reduced-motion: reduce) { .atlas-video-water { display: none; } }
