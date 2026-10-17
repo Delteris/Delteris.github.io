@@ -4393,7 +4393,7 @@ button.app-figure-frame:focus-visible .app-figure-zoom-hint {
     transition: background .15s, transform .15s; }
 .atlas-video-play:hover { background: rgba(59, 130, 246, 0.6); transform: translate(-50%, -50%) scale(1.06); }
 .atlas-video-frame.is-started .atlas-video-play { display: none; }
-@media (max-width: 600px) { .atlas-video-play { width: 68px; height: 68px; } .atlas-video-play svg { width: 30px; height: 30px; } }
+@media (max-width: 600px) { .atlas-video-play { width: 52px; height: 52px; top: 81%; } .atlas-video-play svg { width: 24px; height: 24px; } }
 /* Rare watery shimmer across the play button: one light-blue sweep, then a rest. */
 .atlas-video-play { overflow: hidden; isolation: isolate; }
 .atlas-video-play svg { position: relative; z-index: 1; }
