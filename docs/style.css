@@ -4408,7 +4408,7 @@ button.app-figure-frame:focus-visible .app-figure-zoom-hint {
    background's blues (#bfdbfe cores, #60a5fa glow), two textures sliding past each
    other. One layer drifting left to right; fades in every 6 s, then rests. The straight sheen above is the fallback:
    re-enable it by removing the next line. */
-.atlas-video-play::after { display: none; }
+.atlas-video-water { display: none !important; } /* water effect parked; straight sheen is live */
 .atlas-video-water { position: absolute; inset: 0; z-index: 0; pointer-events: none; border-radius: 50%; overflow: hidden;
     mix-blend-mode: screen; opacity: 0; animation: avw-fade 6s ease-in-out 1s infinite; }
 .atlas-video-water i { position: absolute; inset: 0; background-size: 170px 170px; background-repeat: repeat; }
