@@ -4404,17 +4404,18 @@ button.app-figure-frame:focus-visible .app-figure-zoom-hint {
 @keyframes atlas-shimmer { 0% { transform: translateX(-120%); } 26% { transform: translateX(120%); } 100% { transform: translateX(120%); } }
 @media (prefers-reduced-motion: reduce) { .atlas-video-play::after { animation: none; display: none; } }
 .atlas-video-frame.is-watched .atlas-video-play::after { animation: none; display: none; }
-/* Water-surface shimmer (caustic net) on the play button: a faint light-blue hint
-   that drifts in every 8 s, then rests. The straight sheen above is kept as the
-   fallback: re-enable it by removing the next line. */
+/* Water-surface shimmer on the play button: a sparse net of thin lines in the
+   background's blues (#bfdbfe cores, #60a5fa glow), two textures sliding past each
+   other. Drifts in every 6 s, then rests. The straight sheen above is the fallback:
+   re-enable it by removing the next line. */
 .atlas-video-play::after { display: none; }
 .atlas-video-water { position: absolute; inset: 0; z-index: 0; pointer-events: none; border-radius: 50%; overflow: hidden;
-    mix-blend-mode: screen; opacity: 0; animation: avw-fade 8s ease-in-out 1s infinite; }
-.atlas-video-water svg { position: absolute; width: 160%; height: 160%; left: -30%; top: -30%; }
-.atlas-video-water .w1 { animation: avw-d1 8s linear 1s infinite; }
-.atlas-video-water .w2 { animation: avw-d2 8s linear 1s infinite; opacity: .8; }
-@keyframes avw-fade { 0% { opacity: 0; } 12% { opacity: .32; } 30% { opacity: .32; } 45% { opacity: 0; } 100% { opacity: 0; } }
-@keyframes avw-d1 { 0% { transform: translate(-6%, -3%); } 45% { transform: translate(5%, 3%); } 100% { transform: translate(5%, 3%); } }
-@keyframes avw-d2 { 0% { transform: translate(5%, 4%) rotate(8deg); } 45% { transform: translate(-5%, -3%) rotate(8deg); } 100% { transform: translate(-5%, -3%) rotate(8deg); } }
+    mix-blend-mode: screen; opacity: 0; animation: avw-fade 6s ease-in-out 1s infinite; }
+.atlas-video-water i { position: absolute; inset: 0; background-size: 170px 170px; background-repeat: repeat; }
+.atlas-video-water .w1 { background-image: url(/static/video/water1.webp); animation: avw-a 2.2s ease-in-out infinite alternate; }
+.atlas-video-water .w2 { background-image: url(/static/video/water2.webp); opacity: .6; animation: avw-b 2.9s ease-in-out infinite alternate; }
+@keyframes avw-fade { 0% { opacity: 0; } 10% { opacity: .75; } 40% { opacity: .75; } 52% { opacity: 0; } 100% { opacity: 0; } }
+@keyframes avw-a { from { background-position: 0 0; } to { background-position: 26px 15px; } }
+@keyframes avw-b { from { background-position: 40px 10px; } to { background-position: 12px 34px; } }
 .atlas-video-frame.is-watched .atlas-video-water { display: none; }
 @media (prefers-reduced-motion: reduce) { .atlas-video-water { display: none; } }
