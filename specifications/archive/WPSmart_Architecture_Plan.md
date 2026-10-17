@@ -1,3 +1,5 @@
+> **Archived (Oct 2026).** Superseded: the product is **Elenchon Atlas**, the site was built differently, and parts of this plan (PQR printing, the Excel builder) were dropped. Kept for history only; don't use it as a reference.
+
 # Second Product on delteris.com — Architecture, SEO, Positioning & Naming Plan
 
 **Placeholder product:** "WPSmart" — a cloud **WPS management / registry** system (a Delteris product)
