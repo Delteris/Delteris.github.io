@@ -1122,6 +1122,18 @@
         v.preservesPitch = true; v.mozPreservesPitch = true; v.webkitPreservesPitch = true;
         var frame = box.querySelector('.atlas-video-frame'), big = box.querySelector('.atlas-video-play');
         if (big) big.addEventListener('click', function () { v.play(); });
+        // Native controls only once the visitor has started it: before that, mobile
+        // browsers paint their own big play button over ours.
+        v.addEventListener('play', function () { v.controls = true; });
+        var snd = box.querySelector('.atlas-video-sound');
+        function syncSound() {
+            if (!snd) return;
+            snd.setAttribute('aria-pressed', v.muted ? 'true' : 'false');
+            snd.classList.toggle('is-muted', v.muted);
+            snd.querySelector('.lbl').textContent = v.muted ? snd.dataset.off : snd.dataset.on;
+        }
+        if (snd) snd.addEventListener('click', function () { v.muted = !v.muted; syncSound(); });
+        v.addEventListener('volumechange', syncSound);
         var KEY = 'atlasVideoWatched';
         try { if (frame && sessionStorage.getItem(KEY)) frame.classList.add('is-watched'); } catch (e) {}
         v.addEventListener('play', function () {
