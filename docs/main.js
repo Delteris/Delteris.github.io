@@ -1136,3 +1136,10 @@
         });
     });
 })();
+
+/* Arriving at …#video (e.g. from an email link via /es/trial): land on the player. */
+(function () {
+    if (location.hash !== '#video') return;
+    var go = function () { var el = document.getElementById('video'); if (el) el.scrollIntoView({ block: 'start' }); };
+    window.addEventListener('load', function () { setTimeout(go, 50); });
+})();
