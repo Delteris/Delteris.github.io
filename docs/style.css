@@ -4418,3 +4418,13 @@ button.app-figure-frame:focus-visible .app-figure-zoom-hint {
 @keyframes avw-a { from { background-position: 0 0; } to { background-position: 170px 0; } }
 .atlas-video-frame.is-watched .atlas-video-water { display: none; }
 @media (prefers-reduced-motion: reduce) { .atlas-video-water { display: none; } }
+/* Sound toggle under the video */
+.atlas-video-sound { display: inline-flex; align-items: center; gap: .45rem; font: inherit; color: var(--text-muted);
+    background: none; border: 1px solid transparent; border-radius: 6px; padding: .3rem .55rem; margin-left: -.55rem; cursor: pointer; }
+.atlas-video-sound:hover { color: var(--text-main); border-color: var(--glass-border); }
+.atlas-video-sound .off { display: none; }
+.atlas-video-sound.is-muted .on { display: none; }
+.atlas-video-sound.is-muted .off { display: inline; }
+.atlas-video-frame:not(.is-started) .atlas-video-el { cursor: pointer; }
+/* Our play button: keep it a clean round button on phones too */
+.atlas-video-play { -webkit-appearance: none; appearance: none; line-height: 0; }

@@ -1,12 +1,12 @@
 {%- assign l = page.lang | default: "en" -%}
-{%- if l == "es" -%}{%- assign t_h = "Véalo funcionando en 2 minutos" -%}{%- assign t_snd = "Con sonido" -%}{%- assign t_spd = "Velocidad" -%}{%- assign t_alt = "Vídeo de Elenchon Atlas: cualificaciones de soldadores y WPS" -%}{%- assign t_play = "Reproducir el vídeo" -%}
-{%- elsif l == "pt" -%}{%- assign t_h = "Veja-o a funcionar em 2 minutos" -%}{%- assign t_snd = "Com som" -%}{%- assign t_spd = "Velocidade" -%}{%- assign t_alt = "Vídeo do Elenchon Atlas: qualificações de soldadores e WPS" -%}{%- assign t_play = "Reproduzir o vídeo" -%}
-{%- else -%}{%- assign t_h = "See it working in 2 minutes" -%}{%- assign t_snd = "With sound" -%}{%- assign t_spd = "Speed" -%}{%- assign t_alt = "Elenchon Atlas video: welder qualifications and WPS" -%}{%- assign t_play = "Play the video" -%}{%- endif -%}
+{%- if l == "es" -%}{%- assign t_h = "Véalo funcionando en 2 minutos" -%}{%- assign t_snd = "Con sonido" -%}{%- assign t_mute = "Sin sonido" -%}{%- assign t_spd = "Velocidad" -%}{%- assign t_alt = "Vídeo de Elenchon Atlas: cualificaciones de soldadores y WPS" -%}{%- assign t_play = "Reproducir el vídeo" -%}
+{%- elsif l == "pt" -%}{%- assign t_h = "Veja-o a funcionar em 2 minutos" -%}{%- assign t_snd = "Com som" -%}{%- assign t_mute = "Sem som" -%}{%- assign t_spd = "Velocidade" -%}{%- assign t_alt = "Vídeo do Elenchon Atlas: qualificações de soldadores e WPS" -%}{%- assign t_play = "Reproduzir o vídeo" -%}
+{%- else -%}{%- assign t_h = "See it working in 2 minutes" -%}{%- assign t_snd = "With sound" -%}{%- assign t_mute = "Sound off" -%}{%- assign t_spd = "Speed" -%}{%- assign t_alt = "Elenchon Atlas video: welder qualifications and WPS" -%}{%- assign t_play = "Play the video" -%}{%- endif -%}
     <section class="page-section container u-tight-bottom" id="video">
         <div class="atlas-video">
             <h2 class="atlas-video-h">{{ t_h }}</h2>
             <div class="atlas-video-frame">
-            <video class="atlas-video-el" controls preload="metadata" playsinline
+            <video class="atlas-video-el" preload="metadata" playsinline
                    poster="/static/video/atlas-{{ l }}-poster.webp" aria-label="{{ t_alt }}">
                 <source src="/static/video/atlas-{{ l }}.mp4" type="video/mp4">
             </video>
@@ -16,7 +16,7 @@
             </button>
             </div>
             <div class="atlas-video-bar">
-                <span class="atlas-video-sound">&#128264; {{ t_snd }}</span>
+                <button type="button" class="atlas-video-sound" aria-pressed="false" data-on="{{ t_snd }}" data-off="{{ t_mute }}"><svg class="on" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z" fill="currentColor"/><path d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><svg class="off" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z" fill="currentColor"/><path d="M16 9.5l5 5M21 9.5l-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span class="lbl">{{ t_snd }}</span></button>
                 <span class="atlas-video-speed" role="group" aria-label="{{ t_spd }}">
                     <span class="atlas-video-speed-l">{{ t_spd }}</span>
                     <button type="button" data-rate="0.75">0.75×</button>
