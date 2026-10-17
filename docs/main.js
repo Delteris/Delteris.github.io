@@ -1147,5 +1147,6 @@
 (function () {
     if (location.hash !== '#video') return;
     var go = function () { var el = document.getElementById('video'); if (el) el.scrollIntoView({ block: 'start' }); };
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', go); else go();
     window.addEventListener('load', function () { setTimeout(go, 50); });
 })();
