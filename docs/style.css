@@ -4406,16 +4406,15 @@ button.app-figure-frame:focus-visible .app-figure-zoom-hint {
 .atlas-video-frame.is-watched .atlas-video-play::after { animation: none; display: none; }
 /* Water-surface shimmer on the play button: a sparse net of thin lines in the
    background's blues (#bfdbfe cores, #60a5fa glow), two textures sliding past each
-   other. Drifts in every 6 s, then rests. The straight sheen above is the fallback:
+   other. One layer drifting left to right; fades in every 6 s, then rests. The straight sheen above is the fallback:
    re-enable it by removing the next line. */
 .atlas-video-play::after { display: none; }
 .atlas-video-water { position: absolute; inset: 0; z-index: 0; pointer-events: none; border-radius: 50%; overflow: hidden;
     mix-blend-mode: screen; opacity: 0; animation: avw-fade 6s ease-in-out 1s infinite; }
 .atlas-video-water i { position: absolute; inset: 0; background-size: 170px 170px; background-repeat: repeat; }
-.atlas-video-water .w1 { background-image: url(/static/video/water1.webp); animation: avw-a 2.2s ease-in-out infinite alternate; }
-.atlas-video-water .w2 { background-image: url(/static/video/water2.webp); opacity: .6; animation: avw-b 2.9s ease-in-out infinite alternate; }
+.atlas-video-water .w1 { background-image: url(/static/video/water1.webp); animation: avw-a 4s linear infinite; }
+.atlas-video-water .w2 { display: none; }
 @keyframes avw-fade { 0% { opacity: 0; } 10% { opacity: .75; } 40% { opacity: .75; } 52% { opacity: 0; } 100% { opacity: 0; } }
-@keyframes avw-a { from { background-position: 0 0; } to { background-position: 26px 15px; } }
-@keyframes avw-b { from { background-position: 40px 10px; } to { background-position: 12px 34px; } }
+@keyframes avw-a { from { background-position: 0 0; } to { background-position: 170px 0; } }
 .atlas-video-frame.is-watched .atlas-video-water { display: none; }
 @media (prefers-reduced-motion: reduce) { .atlas-video-water { display: none; } }
