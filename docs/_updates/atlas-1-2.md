@@ -11,7 +11,7 @@ sitemap: false
 permalink: /atlas/updates/1-2-preview-k7m2x9/
 title: "Atlas 1.2: A Sharper WPS Reader, and Nothing Left Behind | Elenchon Atlas"
 heading: "Atlas 1.2: a sharper WPS reader, and nothing left behind"
-description: "Atlas 1.2 reads more of every WPS form on its own, keeps everything on the form it can't place for you to sort, remembers how your forms word things, and previews a re-read before anything changes."
+description: "Atlas 1.2 reads more of every WPS form on its own, keeps everything on the form it can't place for you to sort, and remembers how your forms word things."
 summary: "The reader behind your WPS imports is rebuilt: less to fill in by hand, new forms read from the first import, and nothing on the form left behind."
 chip: "New in Atlas 1.2: a sharper WPS reader"
 en_url: "/atlas/updates/1-2-preview-k7m2x9/"
@@ -23,7 +23,7 @@ Atlas reads your WPS straight from your own forms, so nobody retypes a procedure
 - **Less to fill in by hand.** More of each WPS lands in Atlas when you import it, down to the details further down the form: tack welding, weaving, torch angle, post-heating, heating and cooling rates.
 - **New forms read from the first import.** A supplier's WPS, a revised layout, the forms of a site you've just taken on: Atlas reads them straight away, without waiting for us to set it up for that form.
 - **Still no guessing.** Where Atlas isn't sure of a value, it leaves the field blank for you instead of filling it wrong.
-- **What you have stays as it is.** Nothing you've already imported changes. If you re-read a WPS, you see the difference first (more on that below).
+- **What you have stays as it is.** Nothing you've already imported changes. If you re-read a WPS, you see what would change first.
 
 <!-- SCREENSHOT: a freshly imported WPS with the detail fields filled -->
 
@@ -45,18 +45,9 @@ Every company words its forms its own way. When you add an Other field to a stan
 - **Yours alone.** Your wordings never change how Atlas reads another company's forms.
 - **Optional: help us improve the reader.** An admin can download a wordings report and send it to us. It holds labels and counts only, never values or documents. Wordings that several companies share go into a later Atlas release, for everyone.
 
-## Re-read a WPS without risk
-
-When you re-read a WPS, Atlas now shows the current read and the new one side by side, field by field, before anything changes.
-
-- **Differences or everything:** filter to what changed, or see every field.
-- **Nothing is saved until you choose:** *Apply new read* or *Keep current read*.
-- **Your corrections stay visible.** A field you fixed by hand that the new read would replace shows up as a difference, so you see it before you choose.
-
-<!-- SCREENSHOT: re-read preview, current and new read side by side -->
-
 ## Smaller changes
 
+- **Re-reading a WPS asks first.** Atlas now shows the current read and the new one side by side before anything changes, filtered to the differences or showing every field. Nothing is saved until you choose *Apply new read* or *Keep current read*, and a field you fixed by hand that the new read would replace shows up as a difference.
 - **N/A fields are shown.** A field your form marks N/A now appears on the WPS, so it reads like the form. If you'd rather not see them, hide them for yourself in Settings → Templates → WPS display, or on one WPS with its Show N/A / Hide N/A switch.
 - Everything new is in English, Portuguese and Spanish.
 
