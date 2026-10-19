@@ -18,7 +18,7 @@ en_url: "/atlas/updates/1-2-preview-k7m2x9/"
 ---
 Atlas 1.2 is mostly about the WPS reader, the part that turns your forms into records. Every company words its forms differently, so we've made Atlas adapt to yours as you use it, and given you a way to tell us when it doesn't read something.
 
-It comes a week after 1.1. The reader is the part of Atlas you use on every import, and we didn't want an improvement to it waiting on a bigger release, so it ships on its own.
+It comes a week after 1.1. The reader is something we've been working on for a while, and now that it's in shape we didn't want to sit on it: it's the part of Atlas you use on every import.
 
 ## Other fields on this form
 
