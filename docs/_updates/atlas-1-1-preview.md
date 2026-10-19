@@ -31,7 +31,7 @@ Each result is one of four: **inside**, **outside**, **differs** or **not checke
 
 A few choices we made on purpose:
 
-- One WPQR per run group, by default. Each run group (process and filler) has to be covered by a single linked WPQR on every field. You can combine several WPQRs into one wider range on a WPS, but it's opt-in, and every combined result says so.
+- One WPQR per run group, by default. Each run group (process and filler) has to be covered by a single linked WPQR on every field. This follows our reading of ISO/TC 44's published interpretations of ISO 15614-1: separate procedure tests can't be combined to widen a range of qualification, but each process in a joint can rest on its own WPQR. You can still combine several WPQRs into one wider range on a WPS, but it's opt-in, and every combined result says so.
 - Consumables are matched by designation. A different designation shows as *differs*, never *outside*: whether it's covered is a call for the person responsible, not for us.
 - No assumptions. A WPS with no preheat minimum isn't treated as room temperature, and a blank or unclear value is *not checked* rather than a red flag.
 
