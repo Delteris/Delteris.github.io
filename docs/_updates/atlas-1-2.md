@@ -62,10 +62,10 @@ For those who want the detail:
 - It reads the full ISO 15609-1 detail set: jigs and fixtures, tack welding, weld sequence, special baking or drying, tungsten electrode, contact tube to work distance, preheat maintenance, post-heating, heating and cooling rates, weaving, oscillation, torch or electrode angle, pulse welding, run-out length and interpass cleaning.
 - The run table is read column by column, with pass roles and heat input worked out. Base materials (including outside diameter or pipe range), fillers, shielding gas and flux are read from a table or as single fields.
 - Layouts it handles include PDFs typed without table lines, right-aligned number columns, wrapped notes, a caption and its value in one cell, text above a ruled table, and forms that run over several pages.
-- No OCR: a scanned PDF is stored but not read. No AI: the same file always gives the same result, and the reader can't write a value that isn't on the page.
+- It only reads text that's actually in the file, so it can't produce a value that isn't on the form. That's why it doesn't guess characters out of an image (OCR) and doesn't use AI: the same file always gives the same result. A scanned PDF is stored with the WPS; its fields are filled in by hand.
 - It takes about a second per form.
 
-<p class="feature-note">As always: Atlas copies the values off your forms. It doesn't check them against a standard or decide whether a WPS is right, so review each import as you do today.</p>
+<p class="feature-note">As always: the reader copies the values off your forms as they are. Once a WPS is in, Atlas checks it against the WPQR ranges you've entered, but it doesn't judge code compliance or decide whether a WPS is right. That stays with the person responsible, so review each import as you do today.</p>
 
 ## What's next
 
