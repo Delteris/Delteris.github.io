@@ -4,7 +4,7 @@ lang: en
 version: "Atlas 1.2"
 date: 2026-10-19
 # DRAFT: hidden preview. To publish: delete the next three lines, set permalink to
-# /atlas/updates/1-2/ and en_url to match, add pt_url/es_url and an image.
+# /atlas/updates/1-2/ and en_url to match, add pt_url/es_url.
 preview: true
 noindex: true
 sitemap: false
@@ -13,6 +13,7 @@ title: "Atlas 1.2: A WPS Reader That Adapts to Your Forms | Elenchon Atlas"
 heading: "Atlas 1.2: a WPS reader that adapts to your forms"
 description: "Atlas 1.2 is about the WPS reader: it keeps every line on your forms, remembers how your company words things, and lets you share with us what it doesn't read yet."
 summary: "This release is about the WPS reader: it keeps every line on your forms, remembers how your company words things, and lets you share with us what it doesn't read yet."
+image: "/static/updates/atlas-1-2-fields.webp"
 chip: "New in Atlas 1.2: a WPS reader that adapts to your forms"
 en_url: "/atlas/updates/1-2-preview-k7m2x9/"
 ---
@@ -26,7 +27,12 @@ When a form has a line that doesn't match one of our fields (a purging gas, an i
 
 For each one you can add it to an empty field, keep it as a field of its own, or delete it. When you add one, we suggest the likely fields first, from the words in the label: *Purging* points to backing gas, *Diameter* to the pipe range. The value is taken from the form as it is, so there's nothing to retype.
 
-<!-- SCREENSHOT: the Other fields notice, and one field with Add / Keep / Delete -->
+<figure class="app-figure app-figure-wide update-figure">
+    <button type="button" class="app-figure-frame app-figure-zoom" data-zoomable aria-label="Zoom: Other fields on this form">
+        <img src="/static/updates/atlas-1-2-other-fields.webp" width="1600" height="375" loading="lazy" decoding="async" alt="Other fields on this form (2): DRAWING REF. with the value DWG-2207-14 rev B, and PURGING with the value Argon 99.99 %, 8 L/min and Backing gas chosen in its field picker; each row has Add, Keep as its own field and Delete buttons">
+    </button>
+    <figcaption>Two lines from a supplier's form that don't match a standard field. For <em>Purging</em>, Atlas suggests backing gas first.</figcaption>
+</figure>
 
 ## Form wordings
 
@@ -49,9 +55,16 @@ It's also the quickest way to sort out a form that reads oddly. With the report 
 
 ## Smaller changes
 
-- Re-reading a WPS shows you what would change first. The current read and the new one sit side by side, filtered to the differences or showing every field, and nothing is saved until you choose **Apply new read** or **Keep current read**. A field you corrected by hand that the new read would replace shows up as a difference. This is handy after a release like this one: re-read a WPS to pick up what's new, and keep your read if you prefer it.
+- Re-parsing a WPS shows you what would change first. The current read and the new one sit side by side, filtered to the differences or showing every field, and nothing is saved until you choose **Apply new read** or **Keep current read**. A field you corrected by hand that the new read would replace shows up as a difference. This is handy after a release like this one: re-parse a WPS to pick up what's new, and keep your read if you prefer it.
 - N/A fields are shown on the WPS, so it reads like the form. You can hide them for yourself in **Settings → Templates → WPS display**, or on one WPS with its **Show N/A / Hide N/A** switch.
 - Everything new is in English, Portuguese and Spanish.
+
+<figure class="app-figure app-figure-wide update-figure">
+    <button type="button" class="app-figure-frame app-figure-zoom" data-zoomable aria-label="Zoom: re-parse preview">
+        <img src="/static/updates/atlas-1-2-reparse.webp" width="1600" height="438" loading="lazy" decoding="async" alt="Re-parse: what would change. Differences 2 of 83 fields: Torch / electrode angle, current read 10°–20° push (corrected by hand), new read 10°–15° push; Interpass cleaning, current read Grinding only, new read Wire brush / grinding. Buttons: Keep current read, Apply new read">
+    </button>
+    <figcaption>Two fields corrected by hand show up as differences before you choose.</figcaption>
+</figure>
 
 ## Under the hood
 
@@ -64,6 +77,13 @@ For those who want the detail:
 - Layouts it handles include PDFs typed without table lines, right-aligned number columns, wrapped notes, a caption and its value in one cell, text above a ruled table, and forms that run over several pages.
 - It only reads text that's actually in the file, so it can't produce a value that isn't on the form. That's why it doesn't guess characters out of an image (OCR) and doesn't use AI: the same file always gives the same result. A scanned PDF is stored with the WPS; its fields are filled in by hand.
 - It takes about a second per form.
+
+<figure class="app-figure app-figure-wide update-figure">
+    <button type="button" class="app-figure-frame app-figure-zoom" data-zoomable aria-label="Zoom: header fields read from a supplier's WPS">
+        <img src="/static/updates/atlas-1-2-fields.webp" width="1600" height="808" loading="lazy" decoding="async" alt="Header fields (41) of NSW-WPS-114 from Nordvik Steelworks AS, read from the company's own form: manufacturer, WPS and WPQR numbers, joint type, preheat, interpass, back gouging, process 135, position PB, transfer mode, jigging, tack welding, weld sequence, contact tube to work distance, weaving and torch angle, with N/A fields shown">
+    </button>
+    <figcaption>A supplier's WPS as Atlas read it, including the ISO 15609-1 detail fields.</figcaption>
+</figure>
 
 <p class="feature-note">As always: the reader copies the values off your forms as they are. Once a WPS is in, Atlas checks it against the WPQR ranges you've entered, but it doesn't judge code compliance or decide whether a WPS is right. That stays with the person responsible, so review each import as you do today.</p>
 
