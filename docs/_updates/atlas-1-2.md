@@ -13,12 +13,12 @@ title: "Atlas 1.2: Read Any WPS Form, and Lose Nothing on It | Elenchon Atlas"
 heading: "Atlas 1.2: read any WPS form, and lose nothing on it"
 description: "Atlas 1.2 reads WPS forms it has no template for, keeps every field it can't name for you to sort, remembers your forms' wordings, and previews a re-parse before anything changes."
 summary: "Atlas can now read a WPS from a form it has never seen, keep every field it can't name for you to sort, remember how your forms word things, and show a re-parse side by side before anything changes."
-chip: "New in Atlas 1.2: read any WPS form (beta)"
+chip: "New in Atlas 1.2: read any WPS form"
 en_url: "/atlas/updates/1-2-preview-k7m2x9/"
 ---
-## Any form (beta): no template needed
+## Any form: no template needed
 
-Atlas reads your WPS through a template tuned to your form. That stays, and your template reads exactly as it did. Atlas 1.2 adds one more choice beside it: **Any form (BETA)**, for a form nobody has built a template for yet. A supplier's WPS, an older layout, the forms of a company you just took over.
+Atlas reads your WPS through a template tuned to your form. That stays, and your template reads exactly as it did. Atlas 1.2 adds one more choice beside it: **Any form**, for a form nobody has built a template for yet. A supplier's WPS, an older layout, the forms of a company you just took over.
 
 It reads the layout from the file itself: the cells of an Excel workbook, or the lines and word positions of a text PDF. It finds the labels it knows, in English, Portuguese or Spanish, and takes the value beside, below or inside each one. Then it checks the value has the right shape for that field: a date where a date belongs, an ISO 4063 process number where a process belongs.
 
@@ -26,11 +26,9 @@ It reads the layout from the file itself: the cells of an Excel workbook, or the
 - **The whole form:** the full ISO 15609-1 detail set, the run table, base materials, fillers, shielding gas and flux, with pass roles and heat input worked out as they are with your template.
 - **Awkward layouts too:** PDFs typed without table lines, a caption and its value in one cell, forms that run over several pages.
 - **Same rules as the rest of Atlas.** No OCR, so a scanned PDF is stored but not read. No AI: the same file always gives the same result, and it can't write a value that isn't on the page.
-- **Pick it per import.** It's in the template list when you add a WPS or re-parse one. It can't be set as your default, so your own template stays in charge.
+- **Pick it per import.** It's in the template list when you add a WPS or re-parse one.
 
-It's a beta because we've tested it on our own collection of forms, and not yet on yours. If it misses something on your form, send us the file and we'll improve it.
-
-<!-- SCREENSHOT: Add WPS dialog with "Any form (BETA)" selected -->
+<!-- SCREENSHOT: Add WPS dialog with "Any form" selected -->
 
 <p class="feature-note">What it is and isn't: Any form copies values off your form into Atlas. It doesn't check them against a standard or decide whether a WPS is right. Review each import as you do today.</p>
 
