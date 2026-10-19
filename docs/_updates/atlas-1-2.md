@@ -67,7 +67,7 @@ For the people who want the detail:
 - **Labels in English, Portuguese and Spanish**, plus common French and German wording. Every value is checked for the right shape before it's kept: a date, an ISO 4063 process number, a revision, a number. Where Atlas isn't sure, the field stays blank for you rather than filled wrong.
 - **The full ISO 15609-1 detail set:** jigs and fixtures, tack welding, weld sequence, special baking or drying, tungsten electrode, contact tube to work distance, preheat maintenance, post-heating, heating and cooling rates, weaving, oscillation, torch or electrode angle, pulse welding, run-out length, interpass cleaning.
 - **Run table read column by column**, with pass roles and heat input worked out. Base materials (including outside diameter or pipe range), fillers, shielding gas and flux are read from a table or as single fields.
-- **Any layout:** PDFs typed without table lines, right-aligned number columns, wrapped notes, a caption and its value in one cell, text above a ruled table, forms that run over several pages.
+- **Layouts it handles:** PDFs typed without table lines, right-aligned number columns, wrapped notes, a caption and its value in one cell, text above a ruled table, forms that run over several pages.
 - **No OCR:** a scanned PDF is stored but not read. **No AI:** the same file always gives the same result, and Atlas can't write a value that isn't on the page.
 - **About a second per form.**
 
