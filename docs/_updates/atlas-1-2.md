@@ -60,7 +60,7 @@ We streamlined how Atlas reads your forms with one goal: the best service we can
 - **We know where to look.** The wordings report points straight at the lines Atlas isn't placing on your forms, so you don't have to send documents or describe the problem.
 - **One fix, every form.** A fix ships once and applies to every form that uses that wording, yours and everyone else's.
 - **You decide when it lands.** Re-read any WPS after an update and Atlas shows what would change before anything is saved. Keep what you had if you prefer.
-- **Backed by our [response guarantee](/wps-management-software.html):** a written reply within 3 business days, or that month is half price.
+- **Backed by our [response guarantee](/wps-management-software.html#response-guarantee):** a written reply within 3 business days, or that month is half price.
 
 ## Smaller changes
 
