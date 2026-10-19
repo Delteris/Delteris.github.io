@@ -2,7 +2,7 @@
 {%- if L == 'en' %}{% assign px = '' %}{% else %}{% assign px = '/' | append: L %}{% endif -%}
 {%- if page.update_product == 'atlas' %}{% assign pname = 'Elenchon Atlas' %}{% else %}{% assign pname = 'Elenchon' %}{% endif -%}
 {%- if L == 'pt' %}{% assign t_upd = 'Atualizações' %}{% elsif L == 'es' %}{% assign t_upd = 'Novedades' %}{% else %}{% assign t_upd = 'Updates' %}{% endif -%}
-{%- assign posts = site.updates | where: 'update_product', page.update_product | where: 'lang', L | sort: 'date' | reverse -%}
+{%- assign posts = site.updates | where_exp: 'p', 'p.preview != true' | where: 'update_product', page.update_product | where: 'lang', L | sort: 'date' | reverse -%}
 {
   "@context": "https://schema.org",
   "@graph": [

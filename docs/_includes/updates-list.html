@@ -4,7 +4,7 @@
 {%- if L == 'pt' %}{% assign months = 'janeiro,fevereiro,março,abril,maio,junho,julho,agosto,setembro,outubro,novembro,dezembro' | split: ',' %}{% assign t_of = ' de ' %}{% assign t_read = 'Ler →' %}{% assign t_none = 'Ainda não há publicações.' %}
 {%- elsif L == 'es' %}{% assign months = 'enero,febrero,marzo,abril,mayo,junio,julio,agosto,septiembre,octubre,noviembre,diciembre' | split: ',' %}{% assign t_of = ' de ' %}{% assign t_read = 'Leer →' %}{% assign t_none = 'Aún no hay publicaciones.' %}
 {%- else %}{% assign months = 'January,February,March,April,May,June,July,August,September,October,November,December' | split: ',' %}{% assign t_of = ' ' %}{% assign t_read = 'Read →' %}{% assign t_none = 'Nothing published yet.' %}{% endif -%}
-{%- assign posts = site.updates | where: 'update_product', include.product | where: 'lang', L | sort: 'date' | reverse -%}
+{%- assign posts = site.updates | where_exp: 'p', 'p.preview != true' | where: 'update_product', include.product | where: 'lang', L | sort: 'date' | reverse -%}
 {%- if L == 'pt' %}{% assign t_subd = 'Subscrição confirmada. Enviamos-lhe um email a cada nova versão.' %}{% elsif L == 'es' %}{% assign t_subd = 'Suscripción confirmada. Le enviaremos un email con cada nueva versión.' %}{% else %}{% assign t_subd = "You're subscribed. We'll email you with each new release." %}{% endif %}
         <p class="subscribed-banner" role="status" data-subscribed-banner hidden><span aria-hidden="true">✓</span> {{ t_subd }}</p>
         <div class="updates-list">
