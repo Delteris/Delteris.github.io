@@ -53,6 +53,15 @@ An admin can download a **wordings report** and send it to us: the wordings you 
 - **Optional.** Nothing is sent unless you send it.
 - **It comes back to you.** We review every report. A wording several companies share becomes part of Atlas, and a field many of you keep becomes a candidate for a new standard one, shipped in a release for everyone.
 
+## Streamlined, so we can look after you better
+
+We streamlined how Atlas reads your forms with one goal: the best service we can give you. If a form ever reads differently from what you expect, it's quick to find out why and quick to put right.
+
+- **We know where to look.** The wordings report points straight at the lines Atlas isn't placing on your forms, so you don't have to send documents or describe the problem.
+- **One fix, every form.** A fix ships once and applies to every form that uses that wording, yours and everyone else's.
+- **You decide when it lands.** Re-read any WPS after an update and Atlas shows what would change before anything is saved. Keep what you had if you prefer.
+- **Backed by our [response guarantee](/wps-management-software.html):** a written reply within 3 business days, or that month is half price.
+
 ## Smaller changes
 
 - **Re-reading a WPS shows you what would change.** The current read and the new one appear side by side, filtered to the differences or showing every field. Nothing is saved until you choose *Apply new read* or *Keep current read*, and a field you fixed by hand that the new read would replace shows up as a difference.
