@@ -11,8 +11,8 @@ sitemap: false
 permalink: /atlas/updates/1-2-preview-k7m2x9/
 title: "Atlas 1.2: A WPS Reader That Adapts to Your Forms | Elenchon Atlas"
 heading: "Atlas 1.2: a WPS reader that adapts to your forms"
-description: "Atlas 1.2 is about the WPS reader: it keeps every line on your forms, remembers how your company words things, and gives you a way to tell us what it doesn't read yet."
-summary: "This release is about the WPS reader: it keeps every line on your forms, remembers how your company words things, and gives you a way to tell us what it doesn't read yet."
+description: "Atlas 1.2 is about the WPS reader: it keeps every line on your forms, remembers how your company words things, and lets you share with us what it doesn't read yet."
+summary: "This release is about the WPS reader: it keeps every line on your forms, remembers how your company words things, and lets you share with us what it doesn't read yet."
 chip: "New in Atlas 1.2: a WPS reader that adapts to your forms"
 en_url: "/atlas/updates/1-2-preview-k7m2x9/"
 ---
@@ -37,13 +37,15 @@ Two choices we made on purpose:
 - It only matches the exact wording. *Purging* won't stretch to *Purge gas*. Near-misses like that are where wrong values come from, and we'd rather ask you twice than fill a field wrong once.
 - Your wordings only apply to your organisation. Nothing you map changes how Atlas reads another company's forms.
 
-## The wordings report
+## Sharing your wordings report with us
 
-Admins can download a wordings report from the same screen and send it to us. It lists the wordings you've mapped, the fields you've kept as your own, and the lines nobody has sorted yet. It carries labels and counts only: no values, no documents. Whether to send it is up to you.
+Atlas keeps a wordings report for your organisation: the wordings you've mapped, the fields you've kept as your own, and the lines nobody has sorted yet. It carries labels and counts only: no values, no documents.
 
-We read every report that comes in. When several companies map the same wording, it goes into the reader for everyone in a release. When many of you keep the same field of your own, it becomes a candidate for a new standard one.
+An admin can choose to share it with us, with **Share wordings report with Delteris** in **Settings → Templates → Form wordings**. It's off until you switch it on, and you can switch it off again at any time. Admins can also download the report from the same screen to see exactly what it holds.
 
-It's also the quickest way to sort out a form that reads oddly. Send us the report with a line about what you saw: it shows us exactly which labels Atlas isn't placing, without you sending the document or describing the layout, and the fix we ship applies to every form that uses that wording. Our [response guarantee](/wps-management-software.html#response-guarantee) applies as always: a written reply within 3 business days, or that month is half price.
+We read every report we receive. When several companies map the same wording, it goes into the reader for everyone in a release. When many of you keep the same field of your own, it becomes a candidate for a new standard one.
+
+It's also the quickest way to sort out a form that reads oddly. With the report shared, a line from you about what you saw is enough: we can see exactly which labels Atlas isn't placing, without you sending the document or describing the layout, and the fix we ship applies to every form that uses that wording. Our [response guarantee](/wps-management-software.html#response-guarantee) applies as always: a written reply within 3 business days, or that month is half price.
 
 ## Smaller changes
 
