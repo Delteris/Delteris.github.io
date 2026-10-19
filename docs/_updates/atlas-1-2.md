@@ -4,7 +4,7 @@ lang: en
 version: "Atlas 1.2"
 date: 2026-10-19
 # DRAFT: hidden preview. To publish: delete the next three lines, set permalink to
-# /atlas/updates/1-2/ and en_url to match, add pt_url/es_url.
+# /atlas/updates/1-2/ and en_url/pt_url/es_url to the /1-2/ addresses (same in the .pt/.es files).
 preview: true
 noindex: true
 sitemap: false
@@ -16,6 +16,8 @@ summary: "This release is about the WPS reader: it keeps every line on your form
 image: "/static/updates/atlas-1-2-fields.webp"
 chip: "New in Atlas 1.2: a WPS reader that adapts to your forms"
 en_url: "/atlas/updates/1-2-preview-k7m2x9/"
+pt_url: "/pt/atlas/updates/1-2-preview-k7m2x9/"
+es_url: "/es/atlas/updates/1-2-preview-k7m2x9/"
 ---
 Atlas 1.2 is mostly about the WPS reader, the part that turns your forms into records. Every company words its forms differently, so we've made Atlas adapt to yours as you use it, and given you a way to tell us when it doesn't read something.
 
