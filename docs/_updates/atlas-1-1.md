@@ -6,35 +6,39 @@ date: 2026-10-11
 permalink: /atlas/updates/1-1/
 title: "Atlas 1.1: WPS Matching and a View You Can Declutter | Elenchon Atlas"
 heading: "Atlas 1.1: WPS matching, and a view you can declutter"
-description: "Atlas 1.1 checks every WPS against the WPQR it rests on, matches it to the welders who can weld it, and lets each person hide the features they don't use."
-summary: "Every WPS is now checked against the range of the WPQR it rests on and matched to the welders whose certificates cover it. And each person can hide the features they don't use."
+description: "Atlas 1.1 checks each WPS against the WPQR it rests on and against the welders qualified to weld it, and lets each person hide the features they don't use."
+summary: "This release checks each WPS against the WPQR it rests on and against the welders qualified to weld it, and lets each person hide the parts of Atlas they don't use."
 chip: "New in Atlas 1.1: WPS matching, and hide what you don't use"
 image: "/static/updates/atlas-1-1-matching.webp"
 en_url: "/atlas/updates/1-1/"
 pt_url: "/pt/atlas/updates/1-1/"
 es_url: "/es/atlas/updates/1-1/"
 ---
-## Matching: every WPS against its WPQR and its welders
+Atlas 1.1 brings two things. Matching checks each WPS against the WPQR behind it and against the welders who can weld it. And **What you see** lets each person hide the parts of Atlas they don't use.
 
-A WPS is only as good as the two things behind it: the WPQR it rests on, and the welders who can weld it. Atlas 1.1 checks both sides, for every WPS in your library.
+## Matching
+
+A WPS rests on two things: the WPQR that qualifies it, and the welders qualified to weld it. Matching checks both, for every WPS in your library.
 
 ### Against the WPQR
 
-Enter the range of qualification once from the WPQR certificate. The editor opens the certificate beside the form, on the page you were last reading, and can copy a range from another WPQR. From then on, every WPS linked to that WPQR is checked against it, field by field: processes, material groups, thickness, diameter, positions, preheat, interpass, PWHT, current, consumables and heat input.
+You enter the range of qualification once, from the WPQR certificate. The editor opens the certificate beside the form, on the page you last read, and you can copy a range from another WPQR to start from. From then on, every WPS linked to that WPQR is checked against it field by field: processes, material groups, thickness, diameter, positions, preheat, interpass, PWHT, current, consumables and heat input.
 
-Every result is one of four: **inside**, **outside**, **differs** or **not checked**.
+Each result is one of four: **inside**, **outside**, **differs** or **not checked**.
 
-- **One WPQR per run group, by default.** Each run group (process and filler) has to be covered by one linked WPQR on every field. Combining several WPQRs into one wider range is an opt-in setting per WPS, and every combined result is labelled as such.
-- **Consumables match by designation.** A different designation shows as *differs*, for the person responsible to judge. Atlas never marks it *outside*, because whether it's covered is that person's call.
-- **No guessing.** A WPS with no preheat minimum is never assumed to be at room temperature. A blank or unclear value is *not checked*, not a red flag.
-- **Every result explains itself** in plain words, for example "PB is not listed on WPQR-2402 (PF, PC)". The range check report puts problems first, grouped by run group, and exports as a PDF.
-- **The Library shows it at a glance**: an *Outside* or *Differs* pill on each WPS card, and a filter to list just those.
+A few choices we made on purpose:
+
+- One WPQR per run group, by default. Each run group (process and filler) has to be covered by a single linked WPQR on every field. This follows our reading of ISO/TC 44's published interpretations of ISO 15614-1: separate procedure tests can't be combined to widen a range of qualification, but each process in a joint can rest on its own WPQR. You can still combine several WPQRs into one wider range on a WPS, but it's opt-in, and every combined result says so.
+- Consumables are matched by designation. A different designation shows as *differs*, never *outside*: whether it's covered is a call for the person responsible, not for us.
+- No assumptions. A WPS with no preheat minimum isn't treated as room temperature, and a blank or unclear value is *not checked* rather than a red flag.
+
+Every result explains itself in plain words, for example "PB is not listed on WPQR-2402 (PF, PC)". The range check report lists problems first, grouped by run group, and exports as a PDF. In the Library, a WPS with an issue carries an *Outside* or *Differs* pill, and a filter lists just those.
 
 ### Against the welders
 
-Welder coverage matches each WPS to the welders whose current certificates cover it, and each welder to the WPS they can weld. If nobody is currently qualified for a WPS, you see it. If a qualification it relies on lapses, you see that too.
+Welder coverage matches each WPS to the welders whose current certificates cover it, and each welder to the WPS they can weld. You'll see when nobody is currently qualified for a WPS, and when a qualification it relies on lapses.
 
-The monthly report brings both together for the whole register: what changed since last month, which WPS sit outside their WPQR range, and which WPS have no qualified welder.
+The monthly report brings both sides together for the whole register: what changed since last month, which WPS sit outside their WPQR range, and which have no qualified welder.
 
 <figure class="app-figure app-figure-wide update-figure">
     <button type="button" class="app-figure-frame app-figure-zoom" data-zoomable aria-label="Zoom: a WPS with its WPQR range check and its qualified welders">
@@ -43,16 +47,16 @@ The monthly report brings both together for the whole register: what changed sin
     <figcaption>One WPS, both sides: the range check against its WPQR, and the welders qualified to weld it.</figcaption>
 </figure>
 
-<p class="feature-note">What it is and isn't: Atlas compares the values on your WPS with the ranges you entered from your certificates. It does not derive ranges from ISO 15614-1, ISO 9606-1 or ASME IX, and it doesn't decide whether a WPS or a welder is qualified. Results are for confirmation by the person responsible.</p>
+<p class="feature-note">What it is and isn't: Atlas compares the values on your WPS with the ranges you entered from your certificates. It doesn't derive ranges from ISO 15614-1, ISO 9606-1 or ASME IX, and it doesn't decide whether a WPS or a welder is qualified. The results are for the person responsible to confirm.</p>
 
-## What you see: hide what you don't use
+## What you see
 
-Not every shop uses every feature, and a screen full of things you don't need is noise. **What you see**, on Overview, lets each person switch off whole features in their own view: signed copies, the WPQR range check, welder coverage, the monthly report, and the Compare, Heat input helper and Board pages.
+Not every shop uses every part of Atlas, and features you don't use are just noise on screen. **What you see**, on Overview, lets each person switch off whole features in their own view: signed copies, the WPQR range check, welder coverage, the monthly report, and the Compare, Heat input helper and Board pages.
 
-- **Only your view changes.** Nothing is deleted, and your colleagues still see everything.
-- **It follows you.** The setting is saved to your account, not your browser.
-- **You won't forget what you hid.** After each sign-in, a short note lists what's hidden, with a link back to switch it on.
-- **Problems don't go silent.** If you've hidden the range check and a WPS is outside its WPQR range, the note still gives you the count.
+- It only changes your view. Nothing is deleted, and your colleagues still see everything.
+- It's saved to your account, not your browser, so it follows you to any device.
+- After each sign-in, a short note lists what you've hidden, with a link to switch it back on.
+- Hiding a feature doesn't hide its problems. If you've hidden the range check and a WPS falls outside its WPQR range, the note still gives you the count.
 
 <figure class="app-figure app-figure-wide update-figure">
     <button type="button" class="app-figure-frame app-figure-zoom" data-zoomable aria-label="Zoom: the What you see panel on Overview">
@@ -61,6 +65,6 @@ Not every shop uses every feature, and a screen full of things you don't need is
     <figcaption>What you see: one switch per feature, for your own view only.</figcaption>
 </figure>
 
-## Availability
+Atlas 1.1 is live for every Atlas customer, at no extra cost. Questions: [write to us](/wps-manager-contact.html).
 
-Atlas 1.1 is live for every Atlas customer, at no extra cost: same flat price, no per-seat fees. Want to see it on your own WPS? Limited offer: [a free trial](/wps-manager-contact.html), with your data imported for you.
+The Delteris team
