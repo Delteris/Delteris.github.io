@@ -1162,3 +1162,58 @@
     if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', go); else go();
     window.addEventListener('load', function () { setTimeout(go, 50); });
 })();
+
+/* Campaign metrics: anonymous totals on our own server (Delteris/InternalMetrics).
+   Sends only the event, the page path and the link's utm_* tags. No cookies, no
+   storage, no IDs, no referrer, no full URL. The tags live in this variable for the
+   page's lifetime and are removed from the address bar, so a reload or a shared
+   copy of the URL is not counted as another campaign visit. */
+(function () {
+    var meta = document.querySelector('meta[name="metrics-endpoint"]');
+    var url = meta && meta.content;
+    if (!url || navigator.webdriver || !window.JSON) return;
+    var tags = {}, rest = [];
+    location.search.replace(/^\?/, '').split('&').forEach(function (kv) {
+        if (!kv) return;
+        var m = /^utm_(campaign|source|medium|content)=(.*)$/.exec(kv);
+        if (!m) { rest.push(kv); return; }
+        try { tags[m[1]] = decodeURIComponent(m[2].replace(/\+/g, ' ')).toLowerCase().slice(0, 48); } catch (e) {}
+    });
+    if (!tags.campaign) tags = {};
+    if (rest.length !== location.search.replace(/^\?/, '').split('&').filter(Boolean).length && history.replaceState) {
+        history.replaceState(history.state, '', location.pathname + (rest.length ? '?' + rest.join('&') : '') + location.hash);
+    }
+    var sent = {};
+    function send(event) {
+        if (sent[event]) return;
+        sent[event] = true;
+        var body = { event: event, path: location.pathname, t: Math.round(window.performance ? performance.now() : 0) };
+        for (var k in tags) body[k] = tags[k];
+        body = JSON.stringify(body);
+        try { if (navigator.sendBeacon && navigator.sendBeacon(url, body)) return; } catch (e) {}
+        try { fetch(url, { method: 'POST', body: body, keepalive: true, mode: 'no-cors', credentials: 'omit' }); } catch (e) {}
+    }
+    // A visit counts once the page has been visible for a second (background tabs wait).
+    function arm() {
+        if (document.visibilityState === 'hidden') {
+            document.addEventListener('visibilitychange', function once() {
+                document.removeEventListener('visibilitychange', once); arm();
+            });
+            return;
+        }
+        setTimeout(function () { if (document.visibilityState !== 'hidden') send('visit'); else arm(); }, 1000);
+    }
+    arm();
+    document.querySelectorAll('.atlas-video video').forEach(function (v) {
+        v.addEventListener('play', function () { send('play'); });
+        v.addEventListener('timeupdate', function () { if (v.duration && v.currentTime / v.duration >= 0.75) send('watched'); });
+    });
+    document.addEventListener('click', function (e) {
+        var t = e.target && e.target.closest && e.target.closest('a[href^="mailto:"], #copy-email');
+        if (t) send('contact');
+    }, true);
+    document.addEventListener('submit', function (e) {
+        var f = e.target, hp = f && f.querySelector && f.querySelector('.newsletter-hp');
+        if (f && f.matches && f.matches('form[data-newsletter]') && !(hp && hp.value)) send('signup');
+    }, true);
+})();
