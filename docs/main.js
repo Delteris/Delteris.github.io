@@ -1163,7 +1163,7 @@
     window.addEventListener('load', function () { setTimeout(go, 50); });
 })();
 
-/* Campaign metrics: anonymous totals on our own server (Delteris/InternalMetrics).
+/* Campaign metrics: anonymous totals on our own server (Archon, archon.delteris.com).
    Sends only the event, the page path and the link's utm_* tags. No cookies, no
    storage, no IDs, no referrer, no full URL. The tags live in this variable for the
    page's lifetime and are removed from the address bar, so a reload or a shared

@@ -1,13 +1,14 @@
 # Analytics — delteris.com
 
 Decided 22 Oct 2026: **in-house campaign analytics**, no Plausible / Umami / Cloudflare / GA.
-Anonymous daily totals on our own EU server (repo `Delteris/InternalMetrics`, dashboard
-https://metrics.delteris.com). No cookies, no storage on the visitor's device, no IPs, no profiles,
+Anonymous daily totals on our own EU server (Archon, repo `Delteris/Archon`, dashboard
+https://archon.delteris.com → Email campaigns / Website, behind login + 2FA). No cookies, no storage on the visitor's device, no IPs, no profiles,
 so no consent banner. Privacy policy §2 and §3.4 (EN/ES/PT) describe it.
 
 ## How it works
 
-- `docs/_config.yml` → `metrics_endpoint: "https://metrics.delteris.com/c"` (blank = off).
+- `docs/_config.yml` → `metrics_endpoint: "https://archon.delteris.com/c"` (blank = off). Archon allows beacons only
+  from the origins in its `METRICS_ALLOWED_ORIGINS` (default `https://delteris.com,https://www.delteris.com`).
 - `_layouts/default.html` emits `<meta name="metrics-endpoint">` on every page except `noindex` ones (404).
 - The last block of `docs/main.js` sends beacons with `navigator.sendBeacon` (fetch keepalive as fallback):
 
