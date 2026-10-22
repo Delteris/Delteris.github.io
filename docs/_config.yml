@@ -3,10 +3,10 @@ url: "https://delteris.com"
 baseurl: ""
 timezone: Europe/Lisbon
 
-# Campaign metrics (our own server, repo Delteris/InternalMetrics). main.js sends anonymous
+# Campaign metrics (our own server, Archon at archon.delteris.com, repo Delteris/Archon). main.js sends anonymous
 # beacons here: visits, video plays, contact clicks, per page and per utm_campaign.
 # Leave blank to switch them off. Spec: specifications/ANALYTICS_SETUP.md
-metrics_endpoint: "https://metrics.delteris.com/c"
+metrics_endpoint: "https://archon.delteris.com/c"
 
 plugins:
   - jekyll-sitemap   # auto-generates /sitemap.xml with lastmod (whitelisted on GitHub Pages)
