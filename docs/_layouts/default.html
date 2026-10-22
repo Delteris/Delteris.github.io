@@ -125,6 +125,9 @@
 {%- endif %}
 
     <link rel="stylesheet" href="/style.css?v={{ site.time | date: '%s' }}">
+{%- if site.metrics_endpoint and page.noindex != true %}
+    <meta name="metrics-endpoint" content="{{ site.metrics_endpoint }}">
+{%- endif %}
     <script src="/main.js?v={{ site.time | date: '%s' }}" defer></script>
 </head>
 <body>
@@ -145,9 +148,5 @@
 
 {% include footer.html %}
 {%- endunless %}
-{%- if site.cloudflare_analytics_token %}
-
-    <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "{{ site.cloudflare_analytics_token }}"}'></script>
-{%- endif %}
 </body>
 </html>

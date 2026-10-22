@@ -3,9 +3,10 @@ url: "https://delteris.com"
 baseurl: ""
 timezone: Europe/Lisbon
 
-# Cloudflare Web Analytics: paste the token from your CF dashboard beacon snippet.
-# Leave blank to disable. When set, the beacon is injected on every page via _layouts/default.html.
-cloudflare_analytics_token: ""
+# Campaign metrics (our own server, Archon at archon.delteris.com, repo Delteris/Archon). main.js sends anonymous
+# beacons here: visits, video plays, contact clicks, per page and per utm_campaign.
+# Leave blank to switch them off. Spec: specifications/ANALYTICS_SETUP.md
+metrics_endpoint: "https://archon.delteris.com/c"
 
 plugins:
   - jekyll-sitemap   # auto-generates /sitemap.xml with lastmod (whitelisted on GitHub Pages)
