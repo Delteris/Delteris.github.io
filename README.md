@@ -8,7 +8,7 @@ Pages builds it.
 
 ```
 docs/                       # everything GitHub Pages publishes
-├── _config.yml             # site URL, plugins, the updates collection, Brevo newsletter forms, analytics token
+├── _config.yml             # site URL, plugins, the updates collection, Brevo newsletter forms, metrics endpoint
 ├── _layouts/default.html   # the ONE place <head>, meta/OG tags & body shell live
 ├── _includes/
 │   ├── nav.html / footer.html
@@ -26,7 +26,7 @@ docs/                       # everything GitHub Pages publishes
 ├── style.css / main.js
 └── llms.txt / robots.txt / CNAME / site.webmanifest / 404.html
 email-templates/            # Brevo double opt-in e-mails (not published)
-specifications/             # setup notes and plans (not published)
+specifications/             # setup notes and plans (not published); ANALYTICS_SETUP.md = how visit counting works
 ```
 
 ## Editing
