@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Privacy Policy | Delteris"
-description: "How delteris.com handles personal data: no cookies, no tracking, only anonymous visit totals. What the server logs, what happens when you email us, and how to exercise your GDPR rights."
+description: "How delteris.com handles personal data: no cookies, no tracking, only aggregated visit statistics. What the server logs, what happens when you email us, and how to exercise your GDPR rights."
 og_image: "/static/DelterisCrest.webp"
 schema: schema/privacy.json
 en_url: "/privacy.html"
@@ -30,7 +30,7 @@ alt_url: "/pt/privacy.html"
             <p>We are the controller of the personal data described below. We are not required to appoint a Data Protection Officer and have not done so.</p>
 
             <h2>2. The short version</h2>
-            <p>This site is a set of static pages. It sets no cookies, embeds no tracking pixels, hosts no advertising and has no login. We count page visits, video plays and clicks on our contact address as anonymous totals, per page and per email campaign, on our own European server. No cookies, no IP addresses, no profiles. We do not build profiles of visitors and, from a visit alone, we cannot identify you. The only personal data we actively collect is what you choose to put in an email to us.</p>
+            <p>This site is a set of static pages. It sets no cookies, embeds no tracking pixels, hosts no advertising and has no login. We count page visits, video plays and clicks on our contact address as anonymous totals, per page and per email campaign, on our own European server, and we use Cloudflare Web Analytics for general, cookieless traffic statistics. No cookies, no profiles. We do not build profiles of visitors and, from a visit alone, we cannot identify you. The only personal data we actively collect is what you choose to put in an email to us.</p>
 
             <h2>3. Data processed when you visit</h2>
 
@@ -46,6 +46,9 @@ alt_url: "/pt/privacy.html"
             <h3>3.4 Visit counts</h3>
             <p>When a page has been open for a second, it sends one small message to a server we operate ourselves in the European Union, and another when you first play the product video, watch most of it, click our email address or subscribe to updates. The message holds only the kind of event, the page path, and the campaign labels of the link you arrived through, if any (for example, which of our emails it came from). The server adds one to a daily total for that combination and keeps nothing else: no IP address, no browser details, no identifier, no cookie, and no record of the individual visit. Your IP address is used only in memory, for a few minutes, to limit abuse, and is never written down.</p>
             <p>Our legal basis is our legitimate interest in knowing, in aggregate, whether our pages and emails are useful (Art. 6(1)(f) GDPR). Because the totals cannot be linked back to anyone, there is nothing in them to access or erase; a browser that blocks scripts or uses a tracking blocker sends nothing at all.</p>
+
+            <h3>3.5 Cloudflare Web Analytics</h3>
+            <p>We also use Cloudflare Web Analytics, from Cloudflare, Inc., for general traffic statistics: how many pages are viewed, from which websites and countries visitors arrive, which kinds of device they use, and how fast the pages load. A small script from Cloudflare reports this for each page view. It sets no cookies, stores nothing on your device and does not fingerprint your browser; like any web request, it reaches Cloudflare with your IP address and browser details, which Cloudflare states it does not use to identify or track individual visitors. We see only aggregated figures. Our legal basis is our legitimate interest in understanding, in aggregate, how the site is used and performs (Art. 6(1)(f) GDPR). Cloudflare may process this data in the United States, under the EU&ndash;U.S. Data Privacy Framework. A tracking blocker stops the script.</p>
 
             <h2>4. Data processed when you contact us</h2>
             <p>The contact page invites you to email us. When you do, we process the content of your message and whatever details you include &mdash; typically a name, an email address, a company, and sometimes a phone number. We use it to answer you, and to keep a record of the exchange.</p>
@@ -70,7 +73,7 @@ alt_url: "/pt/privacy.html"
             <h2>6. Who else is involved</h2>
             <p>The list is deliberately short:</p>
             <ul>
-                <li><strong>GitHub, NameCheap, Cloudflare</strong> &mdash; serves these pages and keeps the request logs described above.</li>
+                <li><strong>GitHub, NameCheap, Cloudflare</strong> &mdash; serves these pages and keeps the request logs described above; Cloudflare also provides the web analytics in section 3.5.</li>
                 <li><strong>Google Ireland Limited</strong> &mdash; delivers the web fonts.</li>
                 <li><strong>Google Gmail</strong> &mdash; hosts our mailboxes, and therefore processes correspondence you send us.</li>{% if site.newsletter.live %}
                 <li><strong>{{ site.newsletter.provider }}</strong> &mdash; stores the subscriber list and sends the product update emails.</li>{% endif %}

@@ -3,7 +3,13 @@ url: "https://delteris.com"
 baseurl: ""
 timezone: Europe/Lisbon
 
-# Campaign metrics (our own server, Archon at archon.delteris.com, repo Delteris/Archon). main.js sends anonymous
+# Two analytics, side by side (specifications/ANALYTICS_SETUP.md):
+#
+# 1. Cloudflare Web Analytics: general traffic (referrers, countries, devices, page speed).
+#    Paste the token from the CF dashboard beacon snippet. Blank = off.
+cloudflare_analytics_token: ""
+
+# 2. Campaign metrics (our own server, Archon at archon.delteris.com, repo Delteris/Archon). main.js sends anonymous
 # beacons here: visits, video plays, contact clicks, per page and per utm_campaign.
 # Leave blank to switch them off. Spec: specifications/ANALYTICS_SETUP.md
 metrics_endpoint: "https://archon.delteris.com/c"

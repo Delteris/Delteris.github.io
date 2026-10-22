@@ -8,7 +8,7 @@ Pages builds it.
 
 ```
 docs/                       # everything GitHub Pages publishes
-├── _config.yml             # site URL, plugins, the updates collection, Brevo newsletter forms, metrics endpoint
+├── _config.yml             # site URL, plugins, the updates collection, Brevo newsletter forms, Cloudflare analytics token + campaign metrics endpoint
 ├── _layouts/default.html   # the ONE place <head>, meta/OG tags & body shell live
 ├── _includes/
 │   ├── nav.html / footer.html

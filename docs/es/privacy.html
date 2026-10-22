@@ -3,7 +3,7 @@ layout: default
 lang: es
 permalink: /es/privacy.html
 title: "Política de Privacidad | Delteris"
-description: "Cómo delteris.com trata los datos personales: sin cookies, sin rastreo, solo totales anónimos de visitas. Qué registra el servidor, qué ocurre cuando nos envía un correo y cómo ejercer sus derechos bajo el RGPD."
+description: "Cómo delteris.com trata los datos personales: sin cookies, sin rastreo, solo estadísticas agregadas de visitas. Qué registra el servidor, qué ocurre cuando nos envía un correo y cómo ejercer sus derechos bajo el RGPD."
 og_image: "/static/DelterisCrest.webp"
 schema: schema/privacy.json
 en_url: "/privacy.html"
@@ -32,7 +32,7 @@ alt_url: "/privacy.html"
             <p>Somos el responsable del tratamiento de los datos personales descritos abajo. No estamos obligados a designar un Delegado de Protección de Datos y no lo hemos hecho.</p>
 
             <h2>2. La versión corta</h2>
-            <p>Este sitio es un conjunto de páginas estáticas. No define cookies, no incorpora píxeles de rastreo, no aloja publicidad y no tiene inicio de sesión. Contamos las visitas a las páginas, las reproducciones del vídeo y los clics en nuestra dirección de contacto como totales anónimos, por página y por campaña de correo, en nuestro propio servidor europeo. Sin cookies, sin direcciones IP, sin perfiles. No construimos perfiles de visitantes y, únicamente a partir de una visita, no podemos identificarle. Los únicos datos personales que recopilamos activamente son los que decide poner en un correo dirigido a nosotros.</p>
+            <p>Este sitio es un conjunto de páginas estáticas. No define cookies, no incorpora píxeles de rastreo, no aloja publicidad y no tiene inicio de sesión. Contamos las visitas a las páginas, las reproducciones del vídeo y los clics en nuestra dirección de contacto como totales anónimos, por página y por campaña de correo, en nuestro propio servidor europeo, y usamos Cloudflare Web Analytics para estadísticas generales de tráfico sin cookies. Sin cookies, sin perfiles. No construimos perfiles de visitantes y, únicamente a partir de una visita, no podemos identificarle. Los únicos datos personales que recopilamos activamente son los que decide poner en un correo dirigido a nosotros.</p>
 
             <h2>3. Datos tratados cuando visita</h2>
 
@@ -48,6 +48,9 @@ alt_url: "/privacy.html"
             <h3>3.4 Recuento de visitas</h3>
             <p>Cuando una página lleva un segundo abierta, envía un pequeño mensaje a un servidor que gestionamos nosotros mismos en la Unión Europea, y otro cuando reproduce por primera vez el vídeo del producto, ve la mayor parte, hace clic en nuestra dirección de correo o se suscribe a las novedades. El mensaje contiene solo el tipo de evento, la ruta de la página y, si la hay, la etiqueta de campaña del enlace por el que llegó (por ejemplo, de cuál de nuestros correos venía). El servidor suma uno al total diario de esa combinación y no guarda nada más: ninguna dirección IP, ningún dato del navegador, ningún identificador, ninguna cookie y ningún registro de la visita individual. Su dirección IP se usa solo en memoria, durante unos minutos, para limitar abusos, y nunca se anota.</p>
             <p>Nuestra base jurídica es el interés legítimo en saber, de forma agregada, si nuestras páginas y correos resultan útiles (art. 6.1.f del RGPD). Como los totales no pueden vincularse a nadie, no contienen nada que consultar o suprimir; un navegador que bloquee los scripts o use un bloqueador de rastreo no envía nada.</p>
+
+            <h3>3.5 Cloudflare Web Analytics</h3>
+            <p>También usamos Cloudflare Web Analytics, de Cloudflare, Inc., para estadísticas generales de tráfico: cuántas páginas se ven, desde qué sitios y países llegan los visitantes, qué tipo de dispositivo usan y con qué rapidez cargan las páginas. Un pequeño script de Cloudflare lo comunica en cada visita a una página. No define cookies, no guarda nada en su dispositivo y no crea una huella de su navegador; como cualquier petición web, llega a Cloudflare con su dirección IP y los datos de su navegador, que Cloudflare declara no usar para identificar ni seguir a visitantes concretos. Nosotros solo vemos cifras agregadas. Nuestra base jurídica es el interés legítimo en entender, de forma agregada, cómo se usa el sitio y cómo funciona (art. 6.1.f del RGPD). Cloudflare puede tratar estos datos en los Estados Unidos, al amparo del Marco de Privacidad de Datos UE&ndash;EE.&nbsp;UU. Un bloqueador de rastreo impide el script.</p>
 
             <h2>4. Datos tratados cuando nos contacta</h2>
             <p>La página de contacto le invita a enviarnos un correo. Cuando lo hace, tratamos el contenido de su mensaje y los detalles que incluya &mdash; típicamente un nombre, una dirección de correo, una empresa y, a veces, un número de teléfono. Los usamos para responderle y para mantener un registro del intercambio.</p>
@@ -72,7 +75,7 @@ alt_url: "/privacy.html"
             <h2>6. Quién más está involucrado</h2>
             <p>La lista es deliberadamente corta:</p>
             <ul>
-                <li><strong>GitHub, NameCheap, Cloudflare</strong> &mdash; sirven estas páginas y mantienen los registros de solicitudes descritos arriba.</li>
+                <li><strong>GitHub, NameCheap, Cloudflare</strong> &mdash; sirven estas páginas y mantienen los registros de solicitudes descritos arriba; Cloudflare presta además la analítica web del apartado 3.5.</li>
                 <li><strong>Google Ireland Limited</strong> &mdash; entrega los tipos de letra web.</li>
                 <li><strong>Google Gmail</strong> &mdash; aloja nuestros buzones de correo y, por tanto, trata la correspondencia que nos envía.</li>{% if site.newsletter.live %}
                 <li><strong>{{ site.newsletter.provider }}</strong> &mdash; guarda la lista de suscriptores y envía los emails de novedades.</li>{% endif %}

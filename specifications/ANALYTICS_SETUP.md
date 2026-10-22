@@ -1,11 +1,35 @@
 # Analytics — delteris.com
 
-Decided 22 Oct 2026: **in-house campaign analytics**, no Plausible / Umami / Cloudflare / GA.
-Anonymous daily totals on our own EU server (Archon, repo `Delteris/Archon`, dashboard
-https://archon.delteris.com → Email campaigns / Website, behind login + 2FA). No cookies, no storage on the visitor's device, no IPs, no profiles,
-so no consent banner. Privacy policy §2 and §3.4 (EN/ES/PT) describe it.
+Two systems run side by side, each for what it is good at:
 
-## How it works
+| | Cloudflare Web Analytics | Campaign metrics (Archon) |
+|---|---|---|
+| answers | how much traffic, from where (referrers, countries), devices, page speed | which **e-mail campaign** brought visits, video plays, contact clicks, signups; visits per 100 e-mails |
+| where | Cloudflare dashboard → Web Analytics | https://archon.delteris.com → Email campaigns / Website (login + 2FA) |
+| switch | `cloudflare_analytics_token` in `docs/_config.yml` | `metrics_endpoint` in `docs/_config.yml` |
+| campaign tags | no (Cloudflare drops the query string) | yes (`utm_*` from mailspam links) |
+
+Both are cookieless, so no consent banner. Privacy policy §2, §3.4 (ours) and §3.5 (Cloudflare) in EN/ES/PT
+describe them; `terms.html` §8 summarises.
+
+## Cloudflare Web Analytics
+
+1. Cloudflare dashboard → Analytics & Logs → Web Analytics → add site `delteris.com` (JS snippet, not the
+   automatic proxy setup) → copy the `token` from the snippet.
+2. Paste it into `docs/_config.yml` → `cloudflare_analytics_token: "<token>"` and push to `main`.
+3. `_layouts/default.html` then adds `beacon.min.js` (deferred, end of `<body>`) to every page.
+
+The beacon loads after `main.js` has removed the `utm_*` tags from the address bar, which doesn't matter:
+Cloudflare ignores query strings anyway. Campaign numbers come from Archon only.
+
+## Campaign metrics (Archon)
+
+Decided 22 Oct 2026: **in-house campaign analytics** for the e-mail campaigns, alongside Cloudflare.
+Anonymous daily totals on our own EU server (Archon, repo `Delteris/Archon`, dashboard
+https://archon.delteris.com → Email campaigns / Website, behind login + 2FA). No cookies, no storage on the
+visitor's device, no IPs, no profiles.
+
+### How it works
 
 - `docs/_config.yml` → `metrics_endpoint: "https://archon.delteris.com/c"` (blank = off). Archon allows beacons only
   from the origins in its `METRICS_ALLOWED_ORIGINS` (default `https://delteris.com,https://www.delteris.com`).
@@ -29,14 +53,14 @@ so no consent banner. Privacy policy §2 and §3.4 (EN/ES/PT) describe it.
 - Skipped entirely when `navigator.webdriver` is set (automation). The server also drops bot user agents,
   visits under 1 s, foreign origins, and anything that fails its field allowlist.
 
-## Tagging links
+### Tagging links
 
 Campaign e-mails get tags from mailspam (`InternalTools/mailspam/mailspam/tracking.py`):
 `?utm_source=email&utm_medium=cold&utm_campaign=<name>&utm_content=video|trial|site`.
 Any other link you want to measure (LinkedIn post, a PDF) just needs a `utm_campaign`; values must be
 lowercase `a-z 0-9 . _ -`, max 48 characters, or the server drops the beacon.
 
-## If the site ever gets a referrer policy
+### If the site ever gets a referrer policy
 
 Beacons are cross-origin POSTs and the server requires the `Origin` header. A page-wide
 `<meta name="referrer" content="no-referrer">` makes browsers send `Origin: null`, which the server
@@ -44,7 +68,8 @@ refuses. Keep the default policy (or `strict-origin-when-cross-origin`).
 
 ## Rejected
 
-- Separate landing paths (`/es/correo/N/`) + Cloudflare Web Analytics: a third party, and it drops the query string.
+- Cloudflare alone for campaigns: it drops the query string, so it can't tell which e-mail a visit came from.
+- Separate landing paths per e-mail (`/es/correo/N/`): more pages to keep, and still no video/contact events.
 - Google Analytics: cookies, so a consent banner.
 
 ---
