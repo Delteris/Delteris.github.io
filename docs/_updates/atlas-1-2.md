@@ -36,6 +36,8 @@ es_url: "/es/atlas/updates/1-2-preview-k7m2x9/"
 
 The reader is the part of Atlas that turns your forms into records. It now works out each form's layout from the file itself instead of relying on a fixed template, and it learns your company's wordings as you use it.
 
+We hold the reader to one commitment: no silent errors. A blank field is easy to spot and takes seconds to fill; a wrong value can go unnoticed all the way to the shop floor. So when the reader isn't sure, it leaves the field blank and tells you. That commitment is also why it doesn't use OCR or AI: guessing characters out of an image, or a model filling the gaps, would mean values we can't stand behind.
+
 - **ASME and AWS forms.** Alongside ISO 15609-1, it reads ASME IX (QW-482 style) and AWS D1.1 forms: per-process columns such as *GTAW | SMAW*, sections headed QW-402 to QW-410, and *Prequalified* where an AWS WPS has no PQR. Welding progression is read as up or down, including from ISO 6947 position codes (*PF* is up, *PG* is down).
 - **PDFs with several WPSs.** Atlas asks once per upload what to do: split it into one file per WPS (the default), import the first only, or skip every file like it.
 - **Other fields on this form.** A line that doesn't match one of our fields (a purging gas, an in-house reference) is kept on the WPS for you to place: add it to a field, keep it as a field of its own, or delete it. We suggest the likely fields first, and the value is taken from the form as it is.
@@ -122,8 +124,8 @@ The qualification board has two new settings, in **Settings → Qualification bo
 
 - The reader works out each form's layout from the file itself (cells in Excel; table lines, word positions and fonts in text PDFs) and recognises its sections, whether ISO, ASME or AWS.
 - It reads the full ISO 15609-1 detail set, the run table column by column with heat input worked out, and base materials, fillers, gas and flux per process.
-- It checks that each value has the right shape before keeping it. If it isn't sure, it leaves the field blank: a blank takes seconds to fill, while a wrong value can go unnoticed.
-- No OCR and no AI. It only reads text that's actually in the file, so the same file always gives the same result, in about a second.
+- It checks that each value has the right shape before keeping it, and if it isn't sure, it leaves the field blank.
+- It only reads text that's actually in the file, so the same file always gives the same result, in about a second.
 
 <figure class="app-figure app-figure-wide update-figure">
     <button type="button" class="app-figure-frame app-figure-zoom" data-zoomable aria-label="Zoom: header fields read from a supplier's WPS">
@@ -142,7 +144,7 @@ The qualification board has two new settings, in **Settings → Qualification bo
 
 ## What's next
 
-More work on the everyday experience, and more ways to take work off your plate. If something in Atlas costs you time, tell us: that's how we decide what comes next.
+No big new features for now. We'll keep doing what this release does: going through Atlas, finding where it still costs you time or attention, and taking that away. If something in Atlas costs you time, tell us; it goes straight on the list.
 
 Atlas 1.2 is live for every Atlas customer, at no extra cost. Questions, or a form that reads oddly: [write to us](/wps-manager-contact.html).
 
