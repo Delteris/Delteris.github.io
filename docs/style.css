@@ -3832,6 +3832,8 @@ button.app-figure-frame:focus-visible .app-figure-zoom-hint {
 
 .update-body .update-figure figcaption { margin-top: 0.6rem; }
 
+.update-body .update-figure-narrow { max-width: 520px; }
+
 .update-body .update-lead {
     margin: 0 0 1.75rem;
     padding: 1.25rem 1.5rem;

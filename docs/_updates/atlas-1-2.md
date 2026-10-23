@@ -64,6 +64,20 @@ Atlas had grown busy: pills on every row, banners repeating what the menu alread
 - **Settings.** One line per section, opened with a click, and Atlas remembers which ones you keep open.
 - **Every page.** The large banner at the top is now a slim title, since the menu already says where you are. Where a value isn't known, Atlas says *Not known* instead of showing a dash.
 
+<figure class="app-figure app-figure-wide update-figure">
+    <button type="button" class="app-figure-frame app-figure-zoom" data-zoomable aria-label="Zoom: the Library with a WPS open">
+        <img src="/static/updates/atlas-1-2-library.webp" width="1600" height="868" loading="lazy" decoding="async" alt="The Library: a list of WPS where only MER-WPS-003 and MER-WPS-010 (Differs) and MER-WPS-005, 006, 011 and 012 (Outside) are flagged and the rest carry a quiet tick; MER-WPS-005 is open, with Edit, Download and Compare on the toolbar, Approval, Signed copy, WPQR range check and Qualified welders as one compact list, and the header fields grouped as on the form">
+    </button>
+    <figcaption>The Library: only the exceptions are flagged, and the WPS opens with what needs you on top.</figcaption>
+</figure>
+
+<figure class="app-figure app-figure-wide update-figure">
+    <button type="button" class="app-figure-frame app-figure-zoom" data-zoomable aria-label="Zoom: Overview, needs attention">
+        <img src="/static/updates/atlas-1-2-overview.webp" width="1600" height="163" loading="lazy" decoding="async" alt="Overview: two cards that need attention (4 qualifications have lapsed, 6 welders need reverification) and the all-clear areas as green chips: WPS fields all reviewed, Register is up to date, Email alerts on">
+    </button>
+    <figcaption>Overview: what needs someone is a card; what's fine is one line of green ticks.</figcaption>
+</figure>
+
 ### Where things moved
 
 - **On a WPS:** Export PDF, Preview, Print form, Qualification rules, New revision and Delete are in the ⋯ menu. Edit, Download and Compare stay on the toolbar.
@@ -76,7 +90,23 @@ Until now, a WPS came into Atlas as a file written somewhere else. You can now w
 
 Pick the WPQR(s) the WPS stands on and it starts from their range of qualification. Values that every WPQR shares are filled in, and filler, current and gas come from the WPQR that names each process. Where the WPQRs disagree, the field is left blank for you to decide. Every field of the form is there, in the order it's printed.
 
-As you edit, the range check runs on what you type and marks any field that falls outside the linked WPQRs. Nothing is saved until you save. Under each field, **Past values in your library** offers the values your shop has already used, most used first, so a familiar value is one click away instead of retyped.
+As you edit, the range check runs on what you type and marks any field that falls outside the linked WPQRs. Nothing is saved until you save.
+
+<figure class="app-figure app-figure-wide update-figure">
+    <button type="button" class="app-figure-frame app-figure-zoom" data-zoomable aria-label="Zoom: live range check while writing a WPS">
+        <img src="/static/updates/atlas-1-2-write.webp" width="1600" height="486" loading="lazy" decoding="async" alt="A new WPS, MER-WPS-030, written in Atlas and linked to MER-WPQR-2402, in edit mode. The WPQR range check (as you edit) shows Outside 1: Positions, PB is not listed on MER-WPQR-2402 (PF, PC)">
+    </button>
+    <figcaption>Typing PB as the position: the range check flags it before anything is saved.</figcaption>
+</figure>
+
+Under each field, **Past values in your library** offers the values your shop has already used, most used first, so a familiar value is one click away instead of retyped.
+
+<figure class="app-figure app-figure-wide update-figure">
+    <button type="button" class="app-figure-frame app-figure-zoom" data-zoomable aria-label="Zoom: past values in your library">
+        <img src="/static/updates/atlas-1-2-past-values.webp" width="1600" height="642" loading="lazy" decoding="async" alt="The Preheat field in edit mode with a Past values in your library list open: Not required (workpiece ≥ 5 °C), 150 °C, 120 °C and 100 °C">
+    </button>
+    <figcaption>Past values in your library: the values your shop already uses, most used first.</figcaption>
+</figure>
 
 When it's ready, **Print form** prints it in Atlas's own form (Excel, which you can export to PDF), laid out for the code it's qualified to: ISO 15609-1, ASME IX (grouped as in QW-482) or AWS D1.1 (as in Annex J). The layout is ours, not a copy of any code's form. Every process is printed, with a column per process for fillers and gases, and once the WPS is approved in Atlas, the approval goes in the approval box.
 
@@ -85,6 +115,13 @@ When it's ready, **Print form** prints it in Atlas's own form (Excel, which you 
 ## Approve with a signature
 
 You can now approve a WPS or pWPS in Atlas. You confirm with your password, and Atlas records a simple electronic signature: your name, the date and time, and a fingerprint of exactly what you approved. Select several in the Library and one signature approves them all.
+
+<figure class="app-figure update-figure update-figure-narrow">
+    <button type="button" class="app-figure-frame app-figure-zoom" data-zoomable aria-label="Zoom: approve a WPS">
+        <img src="/static/updates/atlas-1-2-approve.webp" width="920" height="766" loading="lazy" decoding="async" alt="The Approve this WPS dialog: I approve MER-WPS-030 · Rev 0 as it stands now, the note on what is recorded, an optional comment, a password field to sign, and Sign and approve">
+    </button>
+    <figcaption>Approving with your password: Atlas records who approved exactly what, and when.</figcaption>
+</figure>
 
 - A WPS written in Atlas is approved as its values. If it's edited afterwards, it's marked *Edited since approval*. Nothing is blocked or voided, and **Re-confirm** approves it as it now stands.
 - An imported WPS is approved as its file, so correcting something Atlas read from it doesn't touch the approval.
@@ -98,6 +135,13 @@ Confirming qualifications used to be one record at a time. **Confirmation round*
 
 - **ISO / EN:** everything due soon or in its grace window is ticked for you. One signature confirms them all to the date you give, and each record gets its own signed entry.
 - **ASME / AWS:** you record the date the welders last ran the process, for many welders at once, and Atlas recalculates each one's continuity from it.
+
+<figure class="app-figure update-figure update-figure-narrow">
+    <button type="button" class="app-figure-frame app-figure-zoom" data-zoomable aria-label="Zoom: confirmation round">
+        <img src="/static/updates/atlas-1-2-confirmation-round.webp" width="1312" height="1408" loading="lazy" decoding="async" alt="The Confirmation round dialog on the ISO / EN tab: eight qualifications, four due soonest ticked (one in its grace window), a new reverification due date, what the confirmation is based on, a note, a password to sign, and Sign and confirm 4">
+    </button>
+    <figcaption>One signature confirms every ticked qualification; each record gets its own signed entry.</figcaption>
+</figure>
 
 Every record goes through the same checks as when you confirm it on its own, and any that can't be updated are listed with the reason. You enter the dates yourself; Atlas doesn't assume an interval for you.
 
