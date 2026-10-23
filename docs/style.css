@@ -3834,8 +3834,10 @@ button.app-figure-frame:focus-visible .app-figure-zoom-hint {
 
 .update-body .update-lead {
     margin: 0 0 1.75rem;
-    padding: 0.25rem 0 0.25rem 1.25rem;
-    border-left: 2px solid var(--accent-blue);
+    padding: 1.25rem 1.5rem;
+    border-left: 3px solid var(--gold-solid);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    background: linear-gradient(90deg, rgba(201, 165, 63, 0.10), rgba(201, 165, 63, 0) 75%);
 }
 
 .update-body .update-lead p {
