@@ -62,7 +62,7 @@ Atlas had grown busy: pills on every row, banners repeating what the menu alread
 - **Overview.** Areas with nothing to report fold into one line of green ticks. Only what needs someone is shown as a card, and tiles that repeated the deadline card are gone.
 - **Qualifications.** Each record shows the one thing it's waiting on (confirm, record a weld, catch up) as a button.
 - **Settings.** One line per section, opened with a click, and Atlas remembers which ones you keep open.
-- **Every page.** The large banner at the top is now a slim title, since the menu already says where you are. Where a value isn't known, Atlas says *Not known* instead of showing a dash.
+- **Every page.** The large banner at the top is now a slim title, since the menu already says where you are.
 
 <figure class="app-figure app-figure-wide update-figure">
     <button type="button" class="app-figure-frame app-figure-zoom" data-zoomable aria-label="Zoom: the Library with a WPS open">
@@ -154,6 +154,7 @@ The qualification board has two new settings, in **Settings → Qualification bo
 - Re-parsing a WPS shows the current read and the new one side by side, and nothing is saved until you choose **Apply new read** or **Keep current read**. A field you corrected by hand shows up as a difference.
 - N/A fields are shown on the WPS, so it reads like the form. You can hide them for yourself in **Settings → Templates → WPS display**, or on one WPS with its **Show N/A / Hide N/A** switch, which Atlas now remembers.
 - When a WPS gives an open-ended range (≥ 25 mm, say) and its WPQR caps it, the range check now says what's missing: *The WPS sets no upper limit (≥ 25 mm); the WPQR covers 25–450 mm.*
+- Where a value isn't known, Atlas now says *Not known* instead of showing a dash.
 - The administrator account that came with your Atlas is marked **System** in Users; its password is managed on the server.
 - Everything new is in English, Portuguese and Spanish.
 
