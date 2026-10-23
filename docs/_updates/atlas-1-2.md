@@ -20,8 +20,8 @@ pt_url: "/pt/atlas/updates/1-2-preview-k7m2x9/"
 es_url: "/es/atlas/updates/1-2-preview-k7m2x9/"
 ---
 <div class="update-lead">
-    <p>Since we launched Atlas, we've kept asking ourselves two things: what more can we take off your plate, and how can we show you what matters more clearly? <strong>Atlas 1.2 is the first big answer.</strong></p>
-    <p>Write and approve your WPSs in Atlas. Confirm a whole round of welder qualifications with one signature. Import ASME and AWS forms alongside your ISO ones. And on every screen, find what needs you first.</p>
+    <p>Since we launched Atlas, we've kept asking ourselves two things: what more can we take off your plate, and how can we show you what matters more clearly? Atlas 1.2 is the first big result.</p>
+    <p>With this release you can write and approve WPSs in Atlas, confirm a whole round of welder qualifications with one signature, and import ASME and AWS forms alongside your ISO ones. We've also been through every screen so that what needs you comes first.</p>
 </div>
 
 <ul class="update-highlights">

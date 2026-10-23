@@ -3834,27 +3834,18 @@ button.app-figure-frame:focus-visible .app-figure-zoom-hint {
 
 .update-body .update-lead {
     margin: 0 0 1.75rem;
-    padding: 1.25rem 1.5rem;
-    border-left: 3px solid var(--gold-solid);
-    border-radius: 0 var(--radius) var(--radius) 0;
-    background: linear-gradient(90deg, rgba(201, 165, 63, 0.12), rgba(201, 165, 63, 0) 75%);
+    padding: 0.25rem 0 0.25rem 1.25rem;
+    border-left: 2px solid var(--accent-blue);
 }
 
 .update-body .update-lead p {
-    font-size: 1.2rem;
-    line-height: 1.6;
+    font-size: 1.12rem;
+    line-height: 1.65;
     color: var(--text-main);
     margin-bottom: 0.85rem;
 }
 
 .update-body .update-lead p:last-child { margin-bottom: 0; }
-
-.update-body .update-lead strong {
-    background: var(--gold-sheen);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-}
 
 .update-body .update-highlights {
     display: grid;
@@ -3875,16 +3866,14 @@ button.app-figure-frame:focus-visible .app-figure-zoom-hint {
     line-height: 1.5;
     color: var(--text-muted);
     text-decoration: none;
-    background: rgba(59, 130, 246, 0.06);
     border: 1px solid var(--glass-border);
     border-radius: var(--radius);
-    transition: border-color 0.2s ease, background 0.2s ease;
+    transition: border-color 0.2s ease;
 }
 
 .update-body .update-highlights a:hover {
     color: var(--text-muted);
     border-color: var(--accent-blue);
-    background: rgba(59, 130, 246, 0.12);
 }
 
 .update-body .update-highlights .hl-title {
