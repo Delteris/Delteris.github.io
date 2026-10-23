@@ -26,7 +26,7 @@ es_url: "/es/atlas/updates/1-2-preview-k7m2x9/"
 
 <ul class="update-highlights">
     <li><a href="#a-wps-reader-that-adapts-to-your-forms"><span class="hl-title">A reader that adapts to your forms</span>ASME IX and AWS D1.1 forms, PDFs that hold several WPSs, and your own wordings.</a></li>
-    <li><a href="#every-screen-reworked"><span class="hl-title">Every screen, reworked</span>Each page leads with what needs you; the rest stays quiet.</a></li>
+    <li><a href="#every-screen-reworked"><span class="hl-title">Every screen, reworked</span>Less clutter, nothing you need taken away: what needs you comes first.</a></li>
     <li><a href="#write-a-wps-in-atlas"><span class="hl-title">Write a WPS in Atlas</span>Starts from the WPQRs it stands on, checked against them as you type.</a></li>
     <li><a href="#approve-with-a-signature"><span class="hl-title">Approve with a signature</span>One WPS or many at once, with a full history.</a></li>
     <li><a href="#welders-a-confirmation-round-and-a-welder-pass"><span class="hl-title">Confirmation round</span>Many welder qualifications in one go, and a welder pass for each welder.</a></li>
@@ -54,13 +54,19 @@ An admin can share your organisation's wordings report with us, in **Settings �
 
 ## Every screen, reworked
 
-We've been through every screen in Atlas with one rule: show what needs a person first, and keep the rest quiet.
+Atlas had grown busy: pills on every row, banners repeating what the menu already says, buttons for things you use once a month. We've been through every screen to take that clutter out without taking away what you need. What needs a person is shown first; the rest is one click away.
 
-- **Library:** the list flags only what needs attention: outside the WPQR range, fields to sort, not read, a draft or an edit since approval, a WPS no WPQR qualifies. A WPS with nothing to act on gets a quiet tick. On the WPS itself, the fields are grouped as on the form, the less-used actions are in a ⋯ menu, and the list and the WPS scroll separately.
-- **Overview:** areas with nothing to report fold into one green line. Only what needs someone is shown as a card.
-- **Qualifications:** each record shows the one thing it's waiting on (confirm, record a weld, catch up) as a button.
-- **Settings:** one line per section, opened with a click, and Atlas remembers which ones you keep open. The monthly report switch has moved here, under **Monthly report**.
-- Where a value isn't known, Atlas now says *Not known* instead of showing a dash.
+- **Library.** The list only flags what needs attention: outside the WPQR range, fields to sort, not read, a draft or an edit since approval, a WPS no WPQR qualifies. A WPS with nothing to act on gets a quiet tick instead of a row of pills. On the WPS itself, the fields are grouped as they are on the form, long values open on click instead of scrolling inside their cell, and the list and the WPS scroll separately.
+- **Overview.** Areas with nothing to report fold into one line of green ticks. Only what needs someone is shown as a card, and tiles that repeated the deadline card are gone.
+- **Qualifications.** Each record shows the one thing it's waiting on (confirm, record a weld, catch up) as a button.
+- **Settings.** One line per section, opened with a click, and Atlas remembers which ones you keep open.
+- **Every page.** The large banner at the top is now a slim title, since the menu already says where you are. Where a value isn't known, Atlas says *Not known* instead of showing a dash.
+
+### Where things moved
+
+- **On a WPS:** Export PDF, Preview, Print form, Qualification rules, New revision and Delete are in the ⋯ menu. Edit, Download and Compare stay on the toolbar.
+- **Above the Library list:** Select several, Re-check WPQR links and Attach signed copies are in the ⋯ menu.
+- **Monthly report:** the switch is now in **Settings → Monthly report**. Generate now stays on Overview.
 
 ## Write a WPS in Atlas
 
