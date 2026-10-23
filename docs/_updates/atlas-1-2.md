@@ -154,7 +154,7 @@ The qualification board has two new settings, in **Settings → Qualification bo
 - Re-parsing a WPS shows the current read and the new one side by side, and nothing is saved until you choose **Apply new read** or **Keep current read**. A field you corrected by hand shows up as a difference.
 - N/A fields are shown on the WPS, so it reads like the form. You can hide them for yourself in **Settings → Templates → WPS display**, or on one WPS with its **Show N/A / Hide N/A** switch, which Atlas now remembers.
 - When a WPS gives an open-ended range (≥ 25 mm, say) and its WPQR caps it, the range check now says what's missing: *The WPS sets no upper limit (≥ 25 mm); the WPQR covers 25–450 mm.*
-- Where a value isn't known, Atlas now says *Not known* instead of showing a dash.
+- When something was never recorded, such as a welder's name or who signed a line, Atlas now says *Not known* instead of showing a dash. A dash looked like a broken cell, and *N/A* would mean it doesn't apply.
 - The administrator account that came with your Atlas is marked **System** in Users; its password is managed on the server.
 - Everything new is in English, Portuguese and Spanish.
 
