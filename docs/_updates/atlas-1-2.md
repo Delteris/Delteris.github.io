@@ -69,21 +69,12 @@ The qualification board has two new settings, in **Settings → Qualification bo
 
 ## A WPS reader that adapts to your forms
 
-The reader is the part of Atlas that turns your forms into records, and you use it on every import. It now works out each form's layout from the file itself instead of relying on a fixed template, and because every company words its forms differently, it learns your wordings as you use it.
+The reader is the part of Atlas that turns your forms into records. It now works out each form's layout from the file itself instead of relying on a fixed template, and it learns your company's wordings as you use it.
 
-### ASME and AWS forms
-
-Alongside ISO 15609-1 forms, the reader now reads ASME IX (QW-482 style) and AWS D1.1 forms: per-process columns such as *GTAW | SMAW*, sections headed QW-402 to QW-410, and *Prequalified* where an AWS WPS has no PQR. Welding progression is read as up or down, including from ISO 6947 position codes when that's all the form gives (*PF* is up, *PG* is down).
-
-### PDFs with several WPSs
-
-When a PDF holds several WPSs, Atlas asks once per upload what to do: split it into one file per WPS (the default), import the first only, or skip every file like it. Each split WPS is read on its own, as if you'd uploaded it separately.
-
-### Other fields on this form
-
-When a form has a line that doesn't match one of our fields (a purging gas, an in-house reference, a note), Atlas keeps it on the WPS for you to place, under the section of the form it came from. You'll see a count at the top of the WPS with a **Review** button, and an *N to sort* pill on it in the Library.
-
-For each one you can add it to an empty field, keep it as a field of its own, or delete it. When you add one, we suggest the likely fields first, from the words in the label: *Purging* points to backing gas, *Diameter* to the pipe range. The value is taken from the form as it is, so there's nothing to retype.
+- **ASME and AWS forms.** Alongside ISO 15609-1, it reads ASME IX (QW-482 style) and AWS D1.1 forms: per-process columns such as *GTAW | SMAW*, sections headed QW-402 to QW-410, and *Prequalified* where an AWS WPS has no PQR. Welding progression is read as up or down, including from ISO 6947 position codes (*PF* is up, *PG* is down).
+- **PDFs with several WPSs.** Atlas asks once per upload what to do: split it into one file per WPS (the default), import the first only, or skip every file like it.
+- **Other fields on this form.** A line that doesn't match one of our fields (a purging gas, an in-house reference) is kept on the WPS for you to place: add it to a field, keep it as a field of its own, or delete it. We suggest the likely fields first, and the value is taken from the form as it is.
+- **Form wordings.** When you add an Other field to one of ours, Atlas remembers that wording for your organisation and reads the next form that uses it straight into that field. It only matches the exact wording, and only for your organisation: we'd rather ask you twice than fill a field wrong once. The list is in **Settings → Templates → Form wordings**.
 
 <figure class="app-figure app-figure-wide update-figure">
     <button type="button" class="app-figure-frame app-figure-zoom" data-zoomable aria-label="Zoom: Other fields on this form">
@@ -92,24 +83,9 @@ For each one you can add it to an empty field, keep it as a field of its own, or
     <figcaption>Two lines from a supplier's form that don't match a standard field. For <em>Purging</em>, Atlas suggests backing gas first.</figcaption>
 </figure>
 
-### Form wordings
-
-When you add an Other field to one of ours, Atlas remembers that wording for your organisation, and the next form that uses it is read straight into that field. The list is in **Settings → Templates → Form wordings**, and an admin can remove any entry.
-
-Two choices we made on purpose:
-
-- It only matches the exact wording. *Purging* won't stretch to *Purge gas*. Near-misses like that are where wrong values come from, and we'd rather ask you twice than fill a field wrong once.
-- Your wordings only apply to your organisation. Nothing you map changes how Atlas reads another company's forms.
-
 ### Sharing your wordings report with us
 
-Atlas keeps a wordings report for your organisation: the wordings you've mapped, the fields you've kept as your own, and the lines nobody has sorted yet. It holds labels and counts only, never values or documents.
-
-An admin can choose to share it with us, with **Share wordings report with Delteris** in **Settings → Templates → Form wordings**. It's off until you switch it on, and you can switch it off again at any time. Admins can also download the report from the same screen to see exactly what it holds.
-
-We read every report we receive. When several companies map the same wording, it goes into the reader for everyone in a release. When many of you keep the same field of your own, it becomes a candidate for a new standard one.
-
-It's also the quickest way to sort out a form that reads oddly. With the report shared, a line from you about what you saw is enough: we can see exactly which labels Atlas isn't placing, without you sending the document or describing the layout, and the fix we ship applies to every form that uses that wording. Our [response guarantee](/wps-management-software.html#response-guarantee) applies as always: a written reply within 3 business days, or that month is half price.
+An admin can share your organisation's wordings report with us, in **Settings → Templates → Form wordings**. It holds labels and counts only, never values or documents, and it's off until you switch it on. Wordings that several companies map go into the reader for everyone in a release. With it shared, a one-line message is enough for us to fix a form that reads oddly, and our [response guarantee](/wps-management-software.html#response-guarantee) applies: a written reply within 3 business days, or that month is half price.
 
 ## Less on screen
 
@@ -123,7 +99,7 @@ We've been through every screen in Atlas with one rule: show what needs a person
 
 ## Smaller changes
 
-- Re-parsing a WPS shows you what would change first. The current read and the new one sit side by side, filtered to the differences or showing every field, and nothing is saved until you choose **Apply new read** or **Keep current read**. A field you corrected by hand that the new read would replace shows up as a difference. This is handy after a release like this one: re-parse a WPS to pick up what's new, and keep your read if you prefer it.
+- Re-parsing a WPS shows the current read and the new one side by side, and nothing is saved until you choose **Apply new read** or **Keep current read**. A field you corrected by hand shows up as a difference.
 - N/A fields are shown on the WPS, so it reads like the form. You can hide them for yourself in **Settings → Templates → WPS display**, or on one WPS with its **Show N/A / Hide N/A** switch, which Atlas now remembers.
 - When a WPS gives an open-ended range (≥ 25 mm, say) and its WPQR caps it, the range check now says what's missing: *The WPS sets no upper limit (≥ 25 mm); the WPQR covers 25–450 mm.*
 - The administrator account that came with your Atlas is marked **System** in Users; its password is managed on the server.
@@ -138,16 +114,10 @@ We've been through every screen in Atlas with one rule: show what needs a person
 
 ## Under the hood
 
-For those who want the detail:
-
-- The reader works out each form's layout from the file itself: cells and merged cells in Excel; table lines, word positions and fonts in text PDFs. It recognises a form's sections (ISO numbered titles, ASME QW-402 to QW-410, AWS headings) and places each field within them.
-- It finds labels in English, Portuguese and Spanish, plus common French and German wording and ASME and AWS terms, and checks that each value has the right shape before keeping it (a date, an ISO 4063 process number, a revision, a number). If it isn't sure, it leaves the field blank. A blank takes you seconds to fill; a wrong value can go unnoticed.
-- It reads the full ISO 15609-1 detail set: jigs and fixtures, tack welding, weld sequence, special baking or drying, tungsten electrode, contact tube to work distance, preheat maintenance, post-heating, heating and cooling rates, weaving, oscillation, torch or electrode angle, pulse welding, run-out length and interpass cleaning.
-- The run table is read column by column, with pass roles and heat input worked out. Base materials (including outside diameter or pipe range), fillers, shielding gas and flux are read from a table, as single fields, or per process on multi-process forms.
-- Layouts it handles include PDFs typed without table lines, sections framed by headings, cells that hold several labels and values (*P-No.: 4 Group No.: 1*), right-aligned number columns, wrapped notes, a caption and its value in one cell, text above a ruled table, and forms that run over several pages, including gas details on a later page than the process they belong to.
-- It only reads text that's actually in the file, so it can't produce a value that isn't on the form. That's why it doesn't guess characters out of an image (OCR) and doesn't use AI: the same file always gives the same result. A scanned PDF is stored with the WPS; its fields are filled in by hand.
-- It takes about a second per form.
-- The built-in reader is the default for every form. If one of your forms needs it, we can still build a template for that form specifically: just get in touch.
+- The reader works out each form's layout from the file itself (cells in Excel; table lines, word positions and fonts in text PDFs) and recognises its sections, whether ISO, ASME or AWS.
+- It reads the full ISO 15609-1 detail set, the run table column by column with heat input worked out, and base materials, fillers, gas and flux per process.
+- It checks that each value has the right shape before keeping it. If it isn't sure, it leaves the field blank: a blank takes seconds to fill, while a wrong value can go unnoticed.
+- No OCR and no AI. It only reads text that's actually in the file, so the same file always gives the same result, in about a second.
 
 <figure class="app-figure app-figure-wide update-figure">
     <button type="button" class="app-figure-frame app-figure-zoom" data-zoomable aria-label="Zoom: header fields read from a supplier's WPS">
@@ -156,7 +126,13 @@ For those who want the detail:
     <figcaption>A supplier's WPS as Atlas read it, including the ISO 15609-1 detail fields.</figcaption>
 </figure>
 
-<p class="feature-note">As always: the reader copies the values off your forms as they are, and a WPS written in Atlas starts from the ranges of the WPQRs you pick. Atlas checks each WPS against the WPQR ranges you've entered, but it doesn't judge code compliance or decide whether a WPS is right. That stays with the person responsible, and an approval in Atlas records who that was and what they approved.</p>
+## Good to know
+
+- **Re-parse to pick up the new reader.** WPSs imported before 1.2 keep their current read. Re-parse one to see what the new reader finds; nothing changes until you choose **Apply new read**.
+- **Scanned PDFs aren't read.** They're stored with the WPS, and their fields are filled in by hand.
+- **The approval is a simple electronic signature.** It records who approved what, and when; it isn't a qualified electronic signature.
+- **Dates are yours.** In a confirmation round, you enter the date; Atlas doesn't assume an interval.
+- **Atlas checks, you decide.** Atlas checks each WPS against the WPQR ranges you've entered, but it doesn't judge code compliance or decide whether a WPS is right. That stays with the person responsible.
 
 ## What's next
 
