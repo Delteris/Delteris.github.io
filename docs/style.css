@@ -3832,6 +3832,68 @@ button.app-figure-frame:focus-visible .app-figure-zoom-hint {
 
 .update-body .update-figure figcaption { margin-top: 0.6rem; }
 
+.update-body .update-lead {
+    margin: 0 0 1.75rem;
+    padding: 1.25rem 1.5rem;
+    border-left: 3px solid var(--gold-solid);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    background: linear-gradient(90deg, rgba(201, 165, 63, 0.12), rgba(201, 165, 63, 0) 75%);
+}
+
+.update-body .update-lead p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: var(--text-main);
+    margin-bottom: 0.85rem;
+}
+
+.update-body .update-lead p:last-child { margin-bottom: 0; }
+
+.update-body .update-lead strong {
+    background: var(--gold-sheen);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.update-body .update-highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 0.75rem;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2.5rem;
+}
+
+.update-body .update-highlights li { margin: 0; }
+
+.update-body .update-highlights a {
+    display: block;
+    height: 100%;
+    padding: 1rem 1.1rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--text-muted);
+    text-decoration: none;
+    background: rgba(59, 130, 246, 0.06);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius);
+    transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.update-body .update-highlights a:hover {
+    color: var(--text-muted);
+    border-color: var(--accent-blue);
+    background: rgba(59, 130, 246, 0.12);
+}
+
+.update-body .update-highlights .hl-title {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-weight: 600;
+    color: #fff;
+}
+
 .update-body .feature-note {
     font-size: 0.92rem;
     color: var(--text-muted);
