@@ -19,7 +19,7 @@ alt_url: "/pt/privacy.html"
 
     <section class="page-section container u-flush-top u-tight-bottom">
         <div class="legal-body">
-            <span class="legal-meta">Last updated: 22 October 2026 &nbsp;&middot;&nbsp; Applies to the website delteris.com.</span>
+            <span class="legal-meta">Last updated: 23 October 2026 &nbsp;&middot;&nbsp; Applies to the website delteris.com.</span>
 
             <div class="legal-callout">
                 <p><strong>Scope.</strong> This document covers this website, delteris.com, and nothing else. It does not govern the Elenchon platform, your subscription, or the appliance in your facility &mdash; those are covered by the supply agreement and, where applicable, the data processing agreement issued with your quotation. If you are an Elenchon customer looking for your contract, email <a href="mailto:contact@delteris.com">contact@delteris.com</a> and we will send you a copy. The rules for using this website itself are in our <a href="/terms.html">Terms of Use</a>.</p>
@@ -35,7 +35,7 @@ alt_url: "/pt/privacy.html"
             <h2>3. Data processed when you visit</h2>
 
             <h3>3.1 Server logs</h3>
-            <p>Our hosting provider automatically records standard technical request data &mdash; IP address, timestamp, requested page, referrer and user-agent string &mdash; in order to serve the site and protect it from abuse. These logs sit with the provider under its own retention schedule, typically a matter of days. We do not consult them for marketing, and we do not combine them with anything else.</p>
+            <p>The site is served through Cloudflare, which sits in front of our hosting (GitHub Pages) as a content-delivery and security network. Cloudflare automatically records standard technical request data &mdash; IP address, timestamp, requested page, referrer and user-agent string &mdash; in order to serve the site and protect it from abuse, and keeps these logs under its own retention schedule, typically a matter of days. Cloudflare also shows us aggregate traffic statistics derived from them, such as requests per page and per country, which we look at to understand how the site is used. We do not use them to identify or follow individual visitors, and we do not combine them with anything else.</p>
 
             <h3>3.2 Web fonts</h3>
             <p>The site loads typefaces from Google Fonts. Making that request discloses your IP address and browser details to Google Ireland Limited. If you would rather it did not, a browser extension that blocks third-party font requests prevents it, and the site renders correctly with system fonts.</p>
@@ -70,7 +70,7 @@ alt_url: "/pt/privacy.html"
             <h2>6. Who else is involved</h2>
             <p>The list is deliberately short:</p>
             <ul>
-                <li><strong>GitHub, NameCheap, Cloudflare</strong> &mdash; serves these pages and keeps the request logs described above.</li>
+                <li><strong>GitHub, Cloudflare, NameCheap</strong> &mdash; GitHub hosts these pages, Cloudflare delivers and protects them and keeps the request logs described above, and NameCheap manages the domain.</li>
                 <li><strong>Google Ireland Limited</strong> &mdash; delivers the web fonts.</li>
                 <li><strong>Google Gmail</strong> &mdash; hosts our mailboxes, and therefore processes correspondence you send us.</li>{% if site.newsletter.live %}
                 <li><strong>{{ site.newsletter.provider }}</strong> &mdash; stores the subscriber list and sends the product update emails.</li>{% endif %}
