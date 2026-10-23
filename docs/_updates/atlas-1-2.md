@@ -9,28 +9,58 @@ preview: true
 noindex: true
 sitemap: false
 permalink: /atlas/updates/1-2-preview-k7m2x9/
-title: "Atlas 1.2: Write, Approve and Read Your WPS in One Place | Elenchon Atlas"
+title: "Atlas 1.2: A WPS Reader That Adapts to Your Forms, and a Cleaner Atlas | Elenchon Atlas"
 heading: "Atlas 1.2: our first major update"
-description: "Atlas 1.2 lets you write and approve a WPS in Atlas, confirm many welder qualifications with one signature, reads ASME and AWS forms as well as ISO ones, and shows you what needs you first on every screen."
-summary: "Write and approve a WPS in Atlas, confirm many welder qualifications at once, a WPS reader that adapts to your forms (ASME and AWS included), and screens that show you what needs you first."
+description: "Atlas 1.2 brings a WPS reader that adapts to your forms, ASME and AWS included, and a rework of every screen so that what needs you comes first. You can also write and approve WPSs in Atlas and confirm welder qualifications in one round."
+summary: "A WPS reader that adapts to your forms, ASME and AWS included, and a rework of every screen so that what needs you comes first. Plus: write and approve WPSs in Atlas, and confirm welder qualifications in one round."
 image: "/static/updates/atlas-1-2-fields.webp"
-chip: "New in Atlas 1.2: write, approve and read your WPS in one place"
+chip: "New in Atlas 1.2: a WPS reader that adapts to your forms, and a cleaner Atlas"
 en_url: "/atlas/updates/1-2-preview-k7m2x9/"
 pt_url: "/pt/atlas/updates/1-2-preview-k7m2x9/"
 es_url: "/es/atlas/updates/1-2-preview-k7m2x9/"
 ---
 <div class="update-lead">
     <p>Since we launched Atlas, we've kept asking ourselves two things: what more can we take off your plate, and how can we show you what matters more clearly? Atlas 1.2 is the first big result.</p>
-    <p>With this release you can write and approve WPSs in Atlas, confirm a whole round of welder qualifications with one signature, and import ASME and AWS forms alongside your ISO ones. We've also been through every screen so that what needs you comes first.</p>
+    <p>The two big changes: the WPS reader now adapts to your forms, ASME and AWS included, and we've been through every screen so that what needs you comes first. You can also write and approve WPSs in Atlas, and confirm a whole round of welder qualifications with one signature.</p>
 </div>
 
 <ul class="update-highlights">
+    <li><a href="#a-wps-reader-that-adapts-to-your-forms"><span class="hl-title">A reader that adapts to your forms</span>ASME IX and AWS D1.1 forms, PDFs that hold several WPSs, and your own wordings.</a></li>
+    <li><a href="#every-screen-reworked"><span class="hl-title">Every screen, reworked</span>Each page leads with what needs you; the rest stays quiet.</a></li>
     <li><a href="#write-a-wps-in-atlas"><span class="hl-title">Write a WPS in Atlas</span>Starts from the WPQRs it stands on, checked against them as you type.</a></li>
     <li><a href="#approve-with-a-signature"><span class="hl-title">Approve with a signature</span>One WPS or many at once, with a full history.</a></li>
     <li><a href="#welders-a-confirmation-round-and-a-welder-pass"><span class="hl-title">Confirmation round</span>Many welder qualifications in one go, and a welder pass for each welder.</a></li>
-    <li><a href="#a-wps-reader-that-adapts-to-your-forms"><span class="hl-title">A reader that adapts to your forms</span>ASME IX and AWS D1.1 forms, and PDFs that hold several WPSs.</a></li>
-    <li><a href="#less-on-screen"><span class="hl-title">Less on screen</span>Every page leads with what needs you; the rest stays quiet.</a></li>
 </ul>
+
+## A WPS reader that adapts to your forms
+
+The reader is the part of Atlas that turns your forms into records. It now works out each form's layout from the file itself instead of relying on a fixed template, and it learns your company's wordings as you use it.
+
+- **ASME and AWS forms.** Alongside ISO 15609-1, it reads ASME IX (QW-482 style) and AWS D1.1 forms: per-process columns such as *GTAW | SMAW*, sections headed QW-402 to QW-410, and *Prequalified* where an AWS WPS has no PQR. Welding progression is read as up or down, including from ISO 6947 position codes (*PF* is up, *PG* is down).
+- **PDFs with several WPSs.** Atlas asks once per upload what to do: split it into one file per WPS (the default), import the first only, or skip every file like it.
+- **Other fields on this form.** A line that doesn't match one of our fields (a purging gas, an in-house reference) is kept on the WPS for you to place: add it to a field, keep it as a field of its own, or delete it. We suggest the likely fields first, and the value is taken from the form as it is.
+- **Form wordings.** When you add an Other field to one of ours, Atlas remembers that wording for your organisation and reads the next form that uses it straight into that field. It only matches the exact wording, and only for your organisation: we'd rather ask you twice than fill a field wrong once. The list is in **Settings → Templates → Form wordings**.
+
+<figure class="app-figure app-figure-wide update-figure">
+    <button type="button" class="app-figure-frame app-figure-zoom" data-zoomable aria-label="Zoom: Other fields on this form">
+        <img src="/static/updates/atlas-1-2-other-fields.webp" width="1600" height="375" loading="lazy" decoding="async" alt="Other fields on this form (2): DRAWING REF. with the value DWG-2207-14 rev B, and PURGING with the value Argon 99.99 %, 8 L/min and Backing gas chosen in its field picker; each row has Add, Keep as its own field and Delete buttons">
+    </button>
+    <figcaption>Two lines from a supplier's form that don't match a standard field. For <em>Purging</em>, Atlas suggests backing gas first.</figcaption>
+</figure>
+
+### Sharing your wordings report with us
+
+An admin can share your organisation's wordings report with us, in **Settings → Templates → Form wordings**. It holds labels and counts only, never values or documents, and it's off until you switch it on. Wordings that several companies map go into the reader for everyone in a release. With it shared, a one-line message is enough for us to fix a form that reads oddly, and our [response guarantee](/wps-management-software.html#response-guarantee) applies: a written reply within 3 business days, or that month is half price.
+
+## Every screen, reworked
+
+We've been through every screen in Atlas with one rule: show what needs a person first, and keep the rest quiet.
+
+- **Library:** the list flags only what needs attention: outside the WPQR range, fields to sort, not read, a draft or an edit since approval, a WPS no WPQR qualifies. A WPS with nothing to act on gets a quiet tick. On the WPS itself, the fields are grouped as on the form, the less-used actions are in a ⋯ menu, and the list and the WPS scroll separately.
+- **Overview:** areas with nothing to report fold into one green line. Only what needs someone is shown as a card.
+- **Qualifications:** each record shows the one thing it's waiting on (confirm, record a weld, catch up) as a button.
+- **Settings:** one line per section, opened with a click, and Atlas remembers which ones you keep open. The monthly report switch has moved here, under **Monthly report**.
+- Where a value isn't known, Atlas now says *Not known* instead of showing a dash.
 
 ## Write a WPS in Atlas
 
@@ -66,36 +96,6 @@ Every record goes through the same checks as when you confirm it on its own, and
 **Welder pass (PDF)** prints one page per welder with the qualifications they hold today, ready for the welder, a client or an inspector.
 
 The qualification board has two new settings, in **Settings → Qualification board**: the **order of welders** (most urgent first, by name or by worker ID), which an admin sets for the whole shop, and its **size on your screen** (Compact, Normal or Roomy), which each person sets for themselves.
-
-## A WPS reader that adapts to your forms
-
-The reader is the part of Atlas that turns your forms into records. It now works out each form's layout from the file itself instead of relying on a fixed template, and it learns your company's wordings as you use it.
-
-- **ASME and AWS forms.** Alongside ISO 15609-1, it reads ASME IX (QW-482 style) and AWS D1.1 forms: per-process columns such as *GTAW | SMAW*, sections headed QW-402 to QW-410, and *Prequalified* where an AWS WPS has no PQR. Welding progression is read as up or down, including from ISO 6947 position codes (*PF* is up, *PG* is down).
-- **PDFs with several WPSs.** Atlas asks once per upload what to do: split it into one file per WPS (the default), import the first only, or skip every file like it.
-- **Other fields on this form.** A line that doesn't match one of our fields (a purging gas, an in-house reference) is kept on the WPS for you to place: add it to a field, keep it as a field of its own, or delete it. We suggest the likely fields first, and the value is taken from the form as it is.
-- **Form wordings.** When you add an Other field to one of ours, Atlas remembers that wording for your organisation and reads the next form that uses it straight into that field. It only matches the exact wording, and only for your organisation: we'd rather ask you twice than fill a field wrong once. The list is in **Settings → Templates → Form wordings**.
-
-<figure class="app-figure app-figure-wide update-figure">
-    <button type="button" class="app-figure-frame app-figure-zoom" data-zoomable aria-label="Zoom: Other fields on this form">
-        <img src="/static/updates/atlas-1-2-other-fields.webp" width="1600" height="375" loading="lazy" decoding="async" alt="Other fields on this form (2): DRAWING REF. with the value DWG-2207-14 rev B, and PURGING with the value Argon 99.99 %, 8 L/min and Backing gas chosen in its field picker; each row has Add, Keep as its own field and Delete buttons">
-    </button>
-    <figcaption>Two lines from a supplier's form that don't match a standard field. For <em>Purging</em>, Atlas suggests backing gas first.</figcaption>
-</figure>
-
-### Sharing your wordings report with us
-
-An admin can share your organisation's wordings report with us, in **Settings → Templates → Form wordings**. It holds labels and counts only, never values or documents, and it's off until you switch it on. Wordings that several companies map go into the reader for everyone in a release. With it shared, a one-line message is enough for us to fix a form that reads oddly, and our [response guarantee](/wps-management-software.html#response-guarantee) applies: a written reply within 3 business days, or that month is half price.
-
-## Less on screen
-
-We've been through every screen in Atlas with one rule: show what needs a person first, and keep the rest quiet.
-
-- **Library:** the list flags only what needs attention: outside the WPQR range, fields to sort, not read, a draft or an edit since approval, a WPS no WPQR qualifies. A WPS with nothing to act on gets a quiet tick. On the WPS itself, the fields are grouped as on the form, the less-used actions are in a ⋯ menu, and the list and the WPS scroll separately.
-- **Overview:** areas with nothing to report fold into one green line. Only what needs someone is shown as a card.
-- **Qualifications:** each record shows the one thing it's waiting on (confirm, record a weld, catch up) as a button.
-- **Settings:** one line per section, opened with a click, and Atlas remembers which ones you keep open. The monthly report switch has moved here, under **Monthly report**.
-- Where a value isn't known, Atlas now says *Not known* instead of showing a dash.
 
 ## Smaller changes
 
@@ -141,3 +141,4 @@ More work on the everyday experience, and more ways to take work off your plate.
 Atlas 1.2 is live for every Atlas customer, at no extra cost. Questions, or a form that reads oddly: [write to us](/wps-manager-contact.html).
 
 The Delteris team
+
