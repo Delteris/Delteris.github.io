@@ -19,15 +19,18 @@ en_url: "/atlas/updates/1-2-preview-k7m2x9/"
 pt_url: "/pt/atlas/updates/1-2-preview-k7m2x9/"
 es_url: "/es/atlas/updates/1-2-preview-k7m2x9/"
 ---
-Since we launched Atlas, we've kept asking ourselves two things: what more can we take off your plate, and how can we show you what matters more clearly? That's how we build Atlas, and how we'll keep building it. Atlas 1.2 is the first big result.
+<div class="update-lead">
+    <p>Since we launched Atlas, we've kept asking ourselves two things: what more can we take off your plate, and how can we show you what matters more clearly? <strong>Atlas 1.2 is the first big answer.</strong></p>
+    <p>Write and approve your WPSs in Atlas. Confirm a whole round of welder qualifications with one signature. Import ASME and AWS forms alongside your ISO ones. And on every screen, find what needs you first.</p>
+</div>
 
-In short:
-
-- **Write a WPS in Atlas**, starting from the WPQRs it stands on and checked against them as you type.
-- **Approve with a signature**, one WPS at a time or many at once, with a full history.
-- **Confirm welder qualifications in one round**, and print a welder pass for each welder.
-- **A WPS reader that adapts to your forms**, now including ASME IX and AWS D1.1 forms and PDFs that hold several WPSs.
-- **Less on screen**: every page leads with what needs you, and the rest stays quiet.
+<ul class="update-highlights">
+    <li><a href="#write-a-wps-in-atlas"><span class="hl-title">Write a WPS in Atlas</span>Starts from the WPQRs it stands on, checked against them as you type.</a></li>
+    <li><a href="#approve-with-a-signature"><span class="hl-title">Approve with a signature</span>One WPS or many at once, with a full history.</a></li>
+    <li><a href="#welders-a-confirmation-round-and-a-welder-pass"><span class="hl-title">Confirmation round</span>Many welder qualifications in one go, and a welder pass for each welder.</a></li>
+    <li><a href="#a-wps-reader-that-adapts-to-your-forms"><span class="hl-title">A reader that adapts to your forms</span>ASME IX and AWS D1.1 forms, and PDFs that hold several WPSs.</a></li>
+    <li><a href="#less-on-screen"><span class="hl-title">Less on screen</span>Every page leads with what needs you; the rest stays quiet.</a></li>
+</ul>
 
 ## Write a WPS in Atlas
 
