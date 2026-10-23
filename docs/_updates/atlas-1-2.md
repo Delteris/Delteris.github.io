@@ -25,7 +25,7 @@ es_url: "/es/atlas/updates/1-2-preview-k7m2x9/"
 </div>
 
 <ul class="update-highlights">
-    <li><a href="#a-wps-reader-that-adapts-to-your-forms"><span class="hl-title">A reader that adapts to your forms</span>ASME IX and AWS D1.1 forms, PDFs that hold several WPSs, and your own wordings.</a></li>
+    <li><a href="#a-wps-reader-that-adapts-to-your-forms"><span class="hl-title">A reader that adapts to your forms</span>ASME IX and AWS D1.1 forms, files that hold several WPSs, and your own wordings.</a></li>
     <li><a href="#every-screen-reworked"><span class="hl-title">Every screen, reworked</span>Less clutter, nothing you need taken away: what needs you comes first.</a></li>
     <li><a href="#write-a-wps-in-atlas"><span class="hl-title">Write a WPS in Atlas</span>Starts from the WPQRs it stands on, checked against them as you type.</a></li>
     <li><a href="#approve-with-a-signature"><span class="hl-title">Approve with a signature</span>One WPS or many at once, with a full history.</a></li>
@@ -34,14 +34,15 @@ es_url: "/es/atlas/updates/1-2-preview-k7m2x9/"
 
 ## A WPS reader that adapts to your forms
 
-The reader is the part of Atlas that turns your forms into records. It now works out each form's layout from the file itself instead of relying on a fixed template, and it learns your company's wordings as you use it.
+The reader is the part of Atlas that turns your forms into records. It now works out each form's layout from the file itself instead of relying on a fixed template, and it learns your company's wordings and readings as you use it.
 
-We hold the reader to one commitment: no silent errors. A blank field is easy to spot and takes seconds to fill; a wrong value can go unnoticed all the way to the shop floor. So when the reader isn't sure, it leaves the field blank and tells you. That commitment is also why it doesn't use OCR or AI: guessing characters out of an image, or a model filling the gaps, would mean values we can't stand behind.
+We hold the reader to one commitment: no silent errors. A blank field is easy to spot and takes seconds to fill; a wrong value can go unnoticed all the way to the shop floor. So when the reader isn't sure, it leaves the field blank or flags it for a look, and tells you. That commitment is also why it doesn't use OCR or AI: guessing characters out of an image, or a model filling the gaps, would mean values we can't stand behind.
 
 - **ASME and AWS forms.** Alongside ISO 15609-1, it reads ASME IX (QW-482 style) and AWS D1.1 forms: a column per process (*GTAW* and *SMAW* side by side, say), sections headed QW-402 to QW-410, and *Prequalified* where an AWS WPS has no PQR. Welding progression is read as up or down, including from ISO 6947 position codes (*PF* is up, *PG* is down).
-- **PDFs with several WPSs.** Atlas asks once per upload what to do: split it into one file per WPS (the default), import the first only, or skip every file like it.
+- **Files with several WPSs.** A PDF bundle, or an Excel workbook with one WPS per sheet: Atlas asks once per upload what to do. Split it into one file per WPS (the default), import the first only, or skip every file like it.
 - **Other fields on this form.** A line that doesn't match one of our fields (a purging gas, an in-house reference) is kept on the WPS for you to place: add it to a field, keep it as a field of its own, or delete it. We suggest the likely fields first, and the value is taken from the form as it is.
 - **Form wordings.** When you add an Other field to one of ours, Atlas remembers that wording for your organisation and reads the next form that uses it straight into that field. It only matches the exact wording, and only for your organisation: we'd rather ask you twice than fill a field wrong once. The list is in **Settings → Templates → Form wordings**.
+- **Readings you keep confirming.** Some values come with a flag for a look: a pass role the reader had to assume, or a standard taken from the form's title. Once your team has confirmed the same reading on five documents of the same form, by at least two people, Atlas stops flagging it on that form. It never fills in or changes a value, anything new is still flagged, and if anyone ever sets that reading differently, it's flagged again everywhere. The list is in **Settings → Templates → Learned readings**, where an admin can revoke one. When you verify several flags at once, Atlas asks whether they should count.
 
 <figure class="app-figure app-figure-wide update-figure">
     <button type="button" class="app-figure-frame app-figure-zoom" data-zoomable aria-label="Zoom: Other fields on this form">
@@ -133,17 +134,17 @@ If you approve your WPSs on paper, nothing changes: the signed scan stays where 
 
 Confirming qualifications used to be one record at a time. **Confirmation round**, in Qualifications, does many at once:
 
-- **ISO / EN:** everything due soon or in its grace window is ticked for you. One signature confirms them all to the date you give, and each record gets its own signed entry.
-- **ASME / AWS:** you record the date the welders last ran the process, for many welders at once, and Atlas recalculates each one's continuity from it.
+- **ISO / EN:** everything due soon or in its grace window is ticked for you. Each welder has their own **Signed on** date: today, or the day they signed on the floor if you're entering it later. Atlas works out how long each confirmation lasts, six months from signing (ISO 9606-1), never past the certificate's own expiry. Or choose **Manual** and set the dates yourself; Atlas marks any that differ from the code. One password signs them all, and each record gets its own signed entry.
+- **ASME / AWS:** you record the date the welders last ran the process, for many welders at once, and Atlas recalculates each one's continuity from it: six months from that weld.
 
 <figure class="app-figure update-figure update-figure-narrow">
     <button type="button" class="app-figure-frame app-figure-zoom" data-zoomable aria-label="Zoom: confirmation round">
-        <img src="/static/updates/atlas-1-2-confirmation-round.webp" width="1312" height="1408" loading="lazy" decoding="async" alt="The Confirmation round dialog on the ISO / EN tab: eight qualifications, four due soonest ticked (one in its grace window), a new reverification due date, what the confirmation is based on, a note, a password to sign, and Sign and confirm 4">
+        <img src="/static/updates/atlas-1-2-confirmation-round.webp" width="1400" height="1400" loading="lazy" decoding="async" alt="The Confirmation round dialog on the ISO / EN tab: Valid until worked out by ISO 9606-1, signed on + 6 months; the four qualifications due soonest ticked, each with its own Signed on date (one signed on paper three days earlier, so valid until 19/04/2027, the others 22/04/2027) and what its confirmation is based on; Sign and confirm 4">
     </button>
-    <figcaption>One signature confirms every ticked qualification; each record gets its own signed entry.</figcaption>
+    <figcaption>Each welder with their own signing date; one signature confirms them all, and each record gets its own signed entry.</figcaption>
 </figure>
 
-Every record goes through the same checks as when you confirm it on its own, and any that can't be updated are listed with the reason. You enter the dates yourself; Atlas doesn't assume an interval for you.
+Every record goes through the same checks as when you confirm it on its own, and any that can't be updated are listed with the reason. Confirming one welder on their own works the same way.
 
 **Welder pass (PDF)** prints one page per welder with the qualifications they hold today, ready for the welder, a client or an inspector.
 
@@ -182,9 +183,9 @@ The qualification board has two new settings, in **Settings → Qualification bo
 ## Good to know
 
 - **Re-parse to pick up the new reader.** WPSs imported before 1.2 keep their current read. Re-parse one to see what the new reader finds; nothing changes until you choose **Apply new read**.
-- **Scanned PDFs aren't read.** They're stored with the WPS, and their fields are filled in by hand.
+- **Scanned PDFs aren't read.** Atlas has no OCR, on purpose: a scan is stored as the WPS's file, and any field you want in Atlas you add yourself under Edit. If you have the digital original (the Excel file, or a PDF exported from it), upload that instead and Atlas reads it.
 - **The approval is a simple electronic signature.** It records who approved what, and when; it isn't a qualified electronic signature.
-- **Dates are yours.** In a confirmation round, you enter the date; Atlas doesn't assume an interval.
+- **The code's interval, or yours.** A confirmation's new date follows the code you pick (ISO 9606-1, or ASME / AWS continuity). Your confirmation grace in Settings is your shop's tolerance; ISO 9606-1 itself has no grace period.
 - **Atlas checks, you decide.** Atlas checks each WPS against the WPQR ranges you've entered, but it doesn't judge code compliance or decide whether a WPS is right. That stays with the person responsible.
 
 ## What's next
