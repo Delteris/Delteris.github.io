@@ -58,7 +58,7 @@ crumb: "Features"
                 <li><a href="#monthly-report">Monthly report</a></li>
                 <li><a href="#what-you-see">What you see</a></li>
                 <li><a href="#security">Security</a></li>
-                <li><a href="#authoring">Export &amp; authoring</a></li>
+                <li><a href="#authoring">Write, print &amp; export</a></li>
             </ul>
         </div>
         <div class="tour-body">
@@ -93,9 +93,9 @@ crumb: "Features"
                     <span class="feature-index">01</span>
                     <ul class="feature-list">
                         <li><strong>Excel and PDF, both native:</strong> One parser reads Excel WPS workbooks; another reconstructs an exported PDF form's ruled grid and reads its cells (scans aren't read). Process, materials, ranges and pass-by-pass parameters land as structured fields.</li>
-                        <li><strong>Language-agnostic:</strong> The parser reads a form's structure, not a fixed vocabulary, and matches labels from a language pack — so a form in your language reads without special setup. English and Portuguese ship today; others are added during onboarding.</li>
+                        <li><strong>Language-agnostic:</strong> The parser reads a form's structure, not a fixed vocabulary, and matches labels by their wording — so a form in your language reads without special setup. English, Portuguese and Spanish labels are built in; any other wording is placed once and remembered for your organisation.</li>
                         <li><strong>Batch, and classified as it lands:</strong> Bring in a whole stack at once — each file sorted into a new WPS, a new revision, or a correction, with revisions grouped from the start.</li>
-                        <li><strong>Tuned to your template:</strong> During onboarding we tune the parser to your company's exact layout.</li>
+                        <li><strong>Adapts to your forms:</strong> No template to pick. The parser works out each form's layout from the file, ISO 15609-1, ASME IX and AWS D1.1 forms included, and splits files that hold several WPSs.</li>
                     </ul>
                     <p class="feature-out"><a href="wps-import-software.html">See WPS import in depth &rarr;</a></p>
                 </div>
@@ -103,7 +103,7 @@ crumb: "Features"
             <div class="tour-media">
                 {% include app-shot.html
                     name="import" wide="true" w="1600" h="900"
-                    alt="The Add WPS dialog in the library: the Meridian Fabrication WPS form template selected, three Excel files uploaded, each listed as a new WPS read OK, and a Confirm 3 imports button"
+                    alt="The Add WPS dialog in the library: three Excel files uploaded, each listed as a new WPS read OK, and a Confirm 3 imports button"
                     cap="Adding WPS to the library: drop Excel or PDF files and each one is read and staged — nothing is written until you confirm the import." %}
             </div>
         </div>
@@ -473,18 +473,22 @@ crumb: "Features"
 
     <section class="page-section container" id="authoring">
         <div class="section-header">
-            <span class="eyebrow">Export Today, Authoring Next</span>
-            <h2>A Clean Excel Export, and More to Come</h2>
-            <p class="subtitle">Export works today; authoring builds on it. Each step ships in a release you can follow in <a href="/atlas/updates/">Atlas updates</a>.</p>
+            <span class="eyebrow">Write, Print and Export</span>
+            <h2>Write a WPS in Atlas, and Take It Anywhere</h2>
+            <p class="subtitle">New features ship in releases you can follow in <a href="/atlas/updates/">Atlas updates</a>.</p>
         </div>
         <div class="pillar-grid">
             <div class="glass-card">
-                <h3>Lossless round trip, today</h3>
-                <p>Generate a tidy single-WPS workbook — or the whole register as one spreadsheet — that opens in Excel and re-imports without losing a value.</p>
+                <h3>Write a WPS from its WPQRs</h3>
+                <p>Pick the WPQRs a WPS stands on and it starts from their range of qualification. The range check runs as you type, and the values your shop already uses are one click away.</p>
             </div>
             <div class="glass-card">
-                <h3>Spreadsheet-simple authoring, next</h3>
-                <p>Define headers, fill cells, and an automatic styling script turns them into a finished, formatted WPS — the fragile hand-built template, retired. On the roadmap.</p>
+                <h3>Print it on a clean form</h3>
+                <p>Print form lays the WPS out for the code it's qualified to (ISO 15609-1, ASME IX or AWS D1.1) as an Excel file you can export to PDF, with the approval in the approval box once it's approved in Atlas.</p>
+            </div>
+            <div class="glass-card">
+                <h3>Lossless Excel round trip</h3>
+                <p>Generate a tidy single-WPS workbook — or the whole register as one spreadsheet — that opens in Excel and re-imports without losing a value.</p>
             </div>
         </div>
     </section>
@@ -494,6 +498,6 @@ crumb: "Features"
 {%- capture closing_intro %}
             <span class="eyebrow">Get Started</span>
             <h2 class="text-glow">Put Your Register on This</h2>
-            <p>Onboarding is guided directly by the founders — send us a few of your WPS documents, we confirm the parser reads your template, and you go live with a register proven on your own paperwork. Everything handled confidentially.</p>
+            <p>Onboarding is guided directly by the founders — send us a few of your WPS documents, we run them through the parser with you, and you go live with a register proven on your own paperwork. Everything handled confidentially.</p>
 {%- endcapture %}
 {% include closing-cta.html product="atlas" id="cta" intro=closing_intro %}

@@ -9,16 +9,17 @@
       "applicationCategory": "BusinessApplication",
       "applicationSubCategory": "WPS Management Software",
       "operatingSystem": "Cloud",
-      "description": {% if sx_L == 'en' %}"Cloud WPS import software with native Excel and PDF parsers: reads process, materials, positions, ranges and pass-by-pass parameters into structured fields. The parser reads a form's structure rather than a fixed vocabulary, so it is language-agnostic — it matches labels from a per-customer language pack, imports in batch, computes heat input where a form omits it, and is tuned to your company's exact template."{% else %}{{ sx_desc | jsonify }}{% endif %},
+      "description": {% if sx_L == 'en' %}"Cloud WPS import software with native Excel and PDF parsers: reads process, materials, positions, ranges and pass-by-pass parameters into structured fields. The parser reads a form's structure rather than a fixed vocabulary, so it is language-agnostic — it works out each form's layout from the file (ISO 15609-1, ASME IX and AWS D1.1 forms), remembers each organisation's own label wordings, imports in batch and computes heat input where a form omits it."{% else %}{{ sx_desc | jsonify }}{% endif %},
 {% if sx_L == 'en' %}      "keywords": "WPS import software, WPS parser, Excel WPS import, PDF WPS import, welding procedure import, WPS data extraction, ISO 15609 WPS",{% endif %}
 {% if sx_L == 'en' %}      "featureList": [
         "Native Excel WPS workbook parser",
         "PDF WPS form grid reconstruction and cell reading",
         "Structured extraction of process, materials, ranges and pass-by-pass parameters",
-        "Language-agnostic label matching from a per-customer language pack (English and Portuguese shipped)",
+        "Language-agnostic label matching (English, Portuguese and Spanish built in), with per-organisation form wordings remembered",
         "Batch import with automatic new/revision/correction classification",
         "Heat input computed from arc parameters (EN 1011-1) where a form leaves it blank",
-        "Parser tuned to your company's exact WPS template during onboarding"
+        "Form layout worked out from each file: ISO 15609-1, ASME IX and AWS D1.1 forms, multi-WPS files split",
+        "Unknown lines kept on the WPS for you to place; uncertain values left blank or flagged, never guessed"
       ],{% endif %}
       "offers": {
         "@type": "Offer",

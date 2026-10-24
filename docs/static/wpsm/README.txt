@@ -11,3 +11,5 @@ app UI and demo data in Portuguese / Spanish. The app-shot include picks
 Compare shots: compare-cert-wps (a welder's certificate beside the WPS it covers, PDF view)
 and compare-fields (two WPS, Fields mode with differences). The demo seed's WPQR files are
 placeholders, so no shot shows a WPQR PDF.
+
+import.webp (EN/PT/ES) recaptured 24 Oct 2026 for Atlas 1.2: the Add WPS dialog no longer has a template picker.

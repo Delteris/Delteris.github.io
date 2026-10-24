@@ -2,22 +2,17 @@
 update_product: atlas
 lang: pt
 version: "Atlas 1.2"
-date: 2026-10-23
-# DRAFT: hidden preview. To publish: delete the next three lines, set permalink to
-# /pt/atlas/updates/1-2/ and en_url/pt_url/es_url to the /1-2/ addresses (same in the .md/.es files).
-preview: true
-noindex: true
-sitemap: false
-permalink: /pt/atlas/updates/1-2-preview-k7m2x9/
+date: 2026-10-24
+permalink: /pt/atlas/updates/1-2/
 title: "Atlas 1.2: Um Leitor de WPS que se Adapta aos Seus Formulários, e um Atlas Mais Limpo | Elenchon Atlas"
 heading: "Atlas 1.2: a nossa primeira grande atualização"
 description: "O Atlas 1.2 traz um leitor de WPS que se adapta aos seus formulários, ASME e AWS incluídos, e uma revisão de cada ecrã para que o que precisa de si apareça primeiro. Também pode escrever e aprovar WPS no Atlas e confirmar qualificações de soldadores numa só ronda."
 summary: "Um leitor de WPS que se adapta aos seus formulários, ASME e AWS incluídos, e uma revisão de cada ecrã para que o que precisa de si apareça primeiro. E ainda: escrever e aprovar WPS no Atlas, e confirmar qualificações de soldadores numa só ronda."
 image: "/static/updates/pt/atlas-1-2-fields.webp"
 chip: "Novo no Atlas 1.2: um leitor de WPS que se adapta aos seus formulários, e um Atlas mais limpo"
-en_url: "/atlas/updates/1-2-preview-k7m2x9/"
-pt_url: "/pt/atlas/updates/1-2-preview-k7m2x9/"
-es_url: "/es/atlas/updates/1-2-preview-k7m2x9/"
+en_url: "/atlas/updates/1-2/"
+pt_url: "/pt/atlas/updates/1-2/"
+es_url: "/es/atlas/updates/1-2/"
 ---
 <div class="update-lead">
     <p>Desde que lançámos o Atlas, não deixámos de nos perguntar duas coisas: o que mais lhe podemos tirar de cima, e como lhe mostrar com mais clareza o que importa? O Atlas 1.2 é o primeiro grande resultado.</p>

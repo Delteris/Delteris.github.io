@@ -1,9 +1,9 @@
 ---
 layout: default
 title: "WPS Import Software — Excel &amp; PDF Parser | Elenchon Atlas"
-description: "Import WPS documents in Excel or PDF and let the parser do the data entry. Two native parsers read process, materials, ranges and pass-by-pass parameters as structured fields — language-agnostic, batch, and tuned to your own template. From Delteris."
+description: "Import WPS documents in Excel or PDF and let the parser do the data entry. Two native parsers read process, materials, ranges and pass-by-pass parameters as structured fields — language-agnostic, batch, and reading your own forms as they are. From Delteris."
 og_title: "WPS Import — Excel &amp; PDF Parser | Elenchon Atlas"
-og_description: "Turn a folder of existing WPS into structured records in minutes. Native Excel and PDF parsers, language-agnostic label matching, batch import, heat input computed where it's blank, and tuned to your company's exact layout."
+og_description: "Turn a folder of existing WPS into structured records in minutes. Native Excel and PDF parsers, language-agnostic label matching, batch import, heat input computed where it's blank, and a parser that adapts to your company's own forms."
 og_image: "/static/wpsm/import.webp"
 og_image_alt: "Elenchon Atlas — importing an Excel and a PDF WPS side by side into structured fields"
 twitter_large: true
@@ -40,7 +40,7 @@ crumb: "WPS Import"
                 <li><strong>PDF forms</strong> rebuilt grid line by grid line and read cell by cell — from the exported file, where you can select the text, not a scan.</li>
                 <li><strong>Excel WPS</strong> parsed straight from the workbook.</li>
                 <li><strong>Any language, whole batches</strong> — the parser reads a form's structure, not a fixed vocabulary.</li>
-                <li><strong>Tuned to your form</strong> — matched to your exact layout and wording during onboarding.</li>
+                <li><strong>Your form, as it is</strong> — the parser works out each form's layout from the file, ISO, ASME and AWS included, and remembers your organisation's wordings.</li>
             </ul>
         </div>
     </section>
@@ -48,7 +48,7 @@ crumb: "WPS Import"
     <section class="page-section container u-tight-top" id="screenshot-hero">
         {% include app-shot.html
             name="import"
-            alt="The Add WPS dialog in the library: the Meridian Fabrication WPS form template selected, three Excel files uploaded, each listed as a new WPS read OK, and a Confirm 3 imports button"
+            alt="The Add WPS dialog in the library: three Excel files uploaded, each listed as a new WPS read OK, and a Confirm 3 imports button"
             cap="Import: several files at once, each read and staged until you confirm."
             ph="Import in progress — one Excel + one PDF WPS side by side, with the “added — N fields to check” toast." %}
     </section>
@@ -79,8 +79,8 @@ crumb: "WPS Import"
             <p class="feature-lead">Cross-border shops rarely have single-language forms. Atlas reads the structure of a WPS form and matches its labels from a language pack — so the language they're written in doesn't matter.</p>
             <ul class="feature-list">
                 <li><strong>Structure first, words second:</strong> The parser recognises the layout of a WPS — header block, pass table, ranges — and reads it correctly regardless of the label language, so a form in your language maps on the first pass.</li>
-                <li><strong>Your language, your wording:</strong> Labels are matched from a per-customer language pack, so your in-house terms and your language are added by supplying the terms — no rebuilt template, no code change.</li>
-                <li><strong>Shipped and extensible:</strong> English and Portuguese ship today; any further language or shop-specific vocabulary is added the same way during onboarding.</li>
+                <li><strong>Your wording, remembered:</strong> When a label on your form doesn't match one of our fields, you place it once and Atlas reads that wording straight into place on your next forms. It matches the exact wording only, and only for your organisation.</li>
+                <li><strong>Built in:</strong> English, Portuguese and Spanish labels are built in; any other language or in-house term is placed the same way, with no code change.</li>
             </ul>
         </div>
     </section>
@@ -119,15 +119,18 @@ crumb: "WPS Import"
 
     <section class="page-section container" id="tuned">
         <div class="section-header">
-            <span class="eyebrow">Tuned to Your Template</span>
+            <span class="eyebrow">Adapts to Your Forms</span>
             <h2>It Reads Your Paperwork — Not a Form You Conform To</h2>
-            <p class="subtitle">Standard forms work immediately; your exact layout is tuned in during onboarding.</p>
+            <p class="subtitle">No template to pick: the parser works out each form's layout from the file itself.</p>
         </div>
         <div class="glass-card feature-block">
-            <p class="feature-lead">The difference between a demo and a register you trust is whether the parser reads <em>your</em> forms. We tune the parser to your company's layout during onboarding and prove it on your real WPS before you go live.</p>
+            <p class="feature-lead">The difference between a demo and a register you trust is whether the parser reads <em>your</em> forms. It reads the layout of each file as it comes, so your own form, a supplier's and a customer's all go through the same import.</p>
             <ul class="feature-list">
-                <li><strong>Your layout, tuned in:</strong> During onboarding we adapt the parser to your company's exact form — its labels, its grid, its quirks — so your real paperwork reads cleanly.</li>
-                <li><strong>Proven before you commit:</strong> You send a few real WPS, we confirm the parser reads them, and only then do you go live — no guessing whether it'll fit. Everything handled confidentially.</li>
+                <li><strong>ISO, ASME and AWS forms:</strong> ISO 15609-1 forms, ASME IX forms (QW-482 style, a column per process) and AWS D1.1 forms, prequalified WPSs included.</li>
+                <li><strong>Files with several WPSs:</strong> A PDF bundle or a workbook with one WPS per sheet is split into one WPS each, or you import only the first.</li>
+                <li><strong>Lines it doesn't know, kept for you:</strong> A line that matches none of our fields, like a purging gas or an in-house reference, stays on the WPS for you to place, with the likely fields suggested first.</li>
+                <li><strong>No silent errors:</strong> When the parser isn't sure, it leaves the field blank or flags it, and tells you. A blank takes seconds to fill; a wrong value can go unnoticed all the way to the shop floor.</li>
+                <li><strong>Proven before you commit:</strong> You send a few real WPS, we run them through the parser with you, and only then do you go live. Everything handled confidentially.</li>
             </ul>
             <p class="feature-out"><a href="wps-management-software.html#onboarding">See how onboarding proves the parser on your forms &rarr;</a></p>
         </div>
@@ -149,13 +152,13 @@ crumb: "WPS Import"
             <details class="faq-item">
                 <summary><h3>Does it use AI to extract the data?</h3></summary>
                 <div class="faq-body">
-                    <p>Not the generative kind — deliberately. The parser is a deterministic extraction engine: it rebuilds the form's structure and matches your labels using rules tuned to your template. The same file always gives the same result, it can't invent a value that isn't on the page, and your documents are never sent to an AI model. Anything it isn't sure of is flagged for a person to review.</p>
+                    <p>Not the generative kind — deliberately. The parser is a deterministic extraction engine: it rebuilds the form's structure and matches your labels with fixed rules, plus the wordings your organisation has placed. The same file always gives the same result, it can't invent a value that isn't on the page, and your documents are never sent to an AI model. Anything it isn't sure of is flagged for a person to review.</p>
                 </div>
             </details>
             <details class="faq-item">
                 <summary><h3>What if my WPS aren't in English?</h3></summary>
                 <div class="faq-body">
-                    <p>The parser reads a form's structure, not a fixed set of English words, and matches your labels from a language pack — so the language on the form doesn't change whether it's understood. English and Portuguese ship today; your language and in-house wording are added during onboarding by supplying the terms, with no code change.</p>
+                    <p>The parser reads a form's structure, not a fixed set of English words, and matches your labels by their wording — so the language on the form doesn't change whether it's understood. English, Portuguese and Spanish labels are built in. Any other language or in-house term is placed once, on your first forms, and Atlas remembers it for your organisation, with no code change.</p>
                 </div>
             </details>
             <details class="faq-item">
@@ -179,7 +182,7 @@ crumb: "WPS Import"
             <details class="faq-item">
                 <summary><h3>Will it read <em>our</em> specific form, or just a generic one?</h3></summary>
                 <div class="faq-body">
-                    <p>Your exact layout is tuned in before you go live. You send a few real WPS, we confirm the parser reads them and adjust the profile if needed, and only then do you commit — so import is proven on your own paperwork, handled in strict confidence.</p>
+                    <p>Your own. The parser works out each form's layout from the file rather than from a fixed template, so there's nothing to set up per form. Before you go live you send a few real WPS, we run them through with you, and only then do you commit — so import is proven on your own paperwork, handled in strict confidence.</p>
                 </div>
             </details>
         </div>
@@ -188,6 +191,6 @@ crumb: "WPS Import"
 {%- capture closing_intro %}
             <span class="eyebrow">Get Started</span>
             <h2 class="text-glow">Bring Your WPS In, Structured</h2>
-            <p>Send a few of your WPS, we confirm the parser reads your template, and you go live with a register built from your own paperwork — all handled confidentially.</p>
+            <p>Send a few of your WPS, we run them through the parser with you, and you go live with a register built from your own paperwork — all handled confidentially.</p>
 {%- endcapture %}
 {% include closing-cta.html product="atlas" id="cta" intro=closing_intro %}
