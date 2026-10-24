@@ -147,7 +147,8 @@ O quadro de qualificações tem duas novas definições, em **Definições → Q
 
 ## Alterações mais pequenas
 
-- Reprocessar uma WPS mostra a leitura atual e a nova lado a lado, e nada é guardado até escolher **Aplicar nova leitura** ou **Manter leitura atual**. Um campo que corrigiu à mão aparece como diferença.
+- Reprocessar uma WPS mostra a leitura atual e a nova lado a lado, e nada é guardado até escolher **Aplicar nova leitura** ou **Manter leitura atual**. Um campo que corrigiu à mão aparece como diferença. Um separador **A verificar** mostra o que precisaria de verificação depois de aplicar a nova leitura, incluindo campos que já tinha verificado e de que o leitor não tem certeza.
+- Pode reprocessar várias WPS de uma vez: marque-as em **Selecionar vários** e escolha **Reprocessar**. Uma lista mostra, para cada WPS, quantos campos mudariam e quantos precisariam de verificação; abra qualquer uma para ver o detalhe, e só as que marcar ficam com a nova leitura.
 - Os campos N/A aparecem na WPS, para que se leia como o formulário. Pode ocultá-los só para si em **Definições → Modelos → Apresentação das WPS**, ou numa WPS com o seu interruptor **Mostrar N/A / Ocultar N/A**, de que o Atlas agora se lembra.
 - Quando uma WPS indica uma gama aberta (≥ 25 mm, por exemplo) e o seu WPQR a limita, a verificação de gama diz agora o que falta: *A WPS não define limite superior (≥ 25 mm); o WPQR cobre 25–450 mm.*
 - Quando algo nunca foi registado, como o nome de um soldador ou quem assinou uma linha, o Atlas diz agora *Não indicado* em vez de mostrar um traço. Um traço parecia uma célula avariada, e *N/A* quereria dizer que não se aplica.
@@ -177,7 +178,7 @@ O quadro de qualificações tem duas novas definições, em **Definições → Q
 
 ## Bom saber
 
-- **Reprocesse para aproveitar o novo leitor.** As WPS importadas antes da 1.2 mantêm a leitura atual. Reprocesse uma para ver o que o novo leitor encontra; nada muda até escolher **Aplicar nova leitura**.
+- **Reprocesse para aproveitar o novo leitor.** As WPS importadas antes da 1.2 mantêm a leitura atual. Reprocesse uma, ou várias de uma vez a partir de **Selecionar vários**, para ver o que o novo leitor encontra; nada muda até aplicar.
 - **Os PDF digitalizados não são lidos.** O Atlas não usa OCR, de propósito: a digitalização fica guardada como o ficheiro da WPS, e os campos que quiser no Atlas acrescenta-os em Editar. Se tiver o original digital (o ficheiro Excel, ou um PDF exportado a partir dele), carregue esse e o Atlas lê-o.
 - **A aprovação é uma assinatura eletrónica simples.** Regista quem aprovou o quê, e quando; não é uma assinatura eletrónica qualificada.
 - **O intervalo da norma, ou o seu.** A nova data de uma confirmação segue a norma que escolher (ISO 9606-1, ou a continuidade ASME / AWS). A tolerância de confirmação nas Definições é a tolerância da sua empresa; a ISO 9606-1 em si não tem período de tolerância.
