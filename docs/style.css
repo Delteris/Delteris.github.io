@@ -4489,9 +4489,9 @@ button.app-figure-frame:focus-visible .app-figure-zoom-hint {
 .wp-group:first-of-type { margin-top: 0.5rem; }
 .wp-group-h { font-size: 1.15rem; display: flex; gap: 0.7rem; align-items: baseline; flex-wrap: wrap; margin: 0 0 0.9rem; }
 .wp-group-h span { font-size: 0.88rem; font-weight: 400; color: var(--text-muted); }
-.wp-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 14px; }
+.wp-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(165px, 1fr)); gap: 14px; }
 .wp-card { margin: 0; background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: var(--radius); padding: 8px 14px 14px; display: flex; flex-direction: column; }
-.wp-svg { width: 100%; height: auto; aspect-ratio: 240 / 190; display: block; }
+.wp-svg { width: 100%; height: auto; aspect-ratio: 200 / 158; display: block; }
 .wp-card figcaption { margin-top: 2px; }
 .wp-codes { display: flex; align-items: center; gap: 0.6rem; }
 .wp-iso { font-family: 'Space Grotesk', sans-serif; font-size: 1.55rem; font-weight: 700; color: var(--text-main); letter-spacing: 0.01em; }
