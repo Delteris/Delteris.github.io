@@ -151,6 +151,7 @@ El panel de cualificaciones tiene dos ajustes nuevos, en **Configuración → Pa
 - Puede volver a interpretar varias WPS a la vez: márquelas en **Seleccionar varios** y elija **Volver a interpretar**. Una lista muestra, para cada WPS, cuántos campos cambiarían y cuántos habría que comprobar; abra cualquiera para ver el detalle, y solo las que marque reciben la nueva lectura.
 - Los campos N/A aparecen en la WPS, para que se lea como el formulario. Puede ocultarlos solo para usted en **Configuración → Plantillas → Presentación de las WPS**, o en una WPS con su interruptor **Mostrar N/A / Ocultar N/A**, que Atlas ahora recuerda.
 - Cuando una WPS indica un rango abierto (≥ 25 mm, por ejemplo) y su WPQR lo limita, la comprobación de rango dice ahora lo que falta: *La WPS no fija límite superior (≥ 25 mm); el WPQR cubre 25–450 mm.*
+- El aporte térmico que calcula Atlas se escribe ahora con el mismo separador decimal que el resto del formulario: punto, o coma cuando el formulario escribe así sus números.
 - Cuando algo nunca se registró, como el nombre de un soldador o quién firmó una línea, Atlas dice ahora *No indicado* en lugar de mostrar un guion. Un guion parecía una celda rota, y *N/A* querría decir que no se aplica.
 - La cuenta de administrador que vino con su Atlas está marcada como **Sistema** en Usuarios; su contraseña se gestiona en el servidor.
 - Todo lo nuevo está en inglés, portugués y español.

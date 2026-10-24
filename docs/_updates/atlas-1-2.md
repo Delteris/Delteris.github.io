@@ -151,6 +151,7 @@ The qualification board has two new settings, in **Settings → Qualification bo
 - You can re-parse several WPSs at once: tick them in **Select several**, then **Re-parse**. One list shows, for each WPS, how many fields would change and how many would need a look; open any of them for the detail, and only the ones you tick get the new read.
 - N/A fields are shown on the WPS, so it reads like the form. You can hide them for yourself in **Settings → Templates → WPS display**, or on one WPS with its **Show N/A / Hide N/A** switch, which Atlas now remembers.
 - When a WPS gives an open-ended range (≥ 25 mm, say) and its WPQR caps it, the range check now says what's missing: *The WPS sets no upper limit (≥ 25 mm); the WPQR covers 25–450 mm.*
+- A heat input Atlas calculates is now written with the same decimal mark as the rest of the form: a point, or a comma where the form writes its numbers that way.
 - When something was never recorded, such as a welder's name or who signed a line, Atlas now says *Not known* instead of showing a dash. A dash looked like a broken cell, and *N/A* would mean it doesn't apply.
 - The administrator account that came with your Atlas is marked **System** in Users; its password is managed on the server.
 - Everything new is in English, Portuguese and Spanish.
