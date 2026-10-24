@@ -4483,3 +4483,34 @@ button.app-figure-frame:focus-visible .app-figure-zoom-hint {
 .atlas-video-frame:not(.is-started) .atlas-video-el { cursor: pointer; }
 /* Our play button: keep it a clean round button on phones too */
 .atlas-video-play { -webkit-appearance: none; appearance: none; line-height: 0; }
+
+/* ---- Resources: welding positions chart ---------------------------------- */
+.wp-group { margin-top: 2.2rem; }
+.wp-group:first-of-type { margin-top: 0.5rem; }
+.wp-group-h { font-size: 1.15rem; display: flex; gap: 0.7rem; align-items: baseline; flex-wrap: wrap; margin: 0 0 0.9rem; }
+.wp-group-h span { font-size: 0.88rem; font-weight: 400; color: var(--text-muted); }
+.wp-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 14px; }
+.wp-card { margin: 0; background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: var(--radius); padding: 8px 14px 14px; display: flex; flex-direction: column; }
+.wp-svg { width: 100%; height: auto; aspect-ratio: 240 / 190; display: block; }
+.wp-card figcaption { margin-top: 2px; }
+.wp-codes { display: flex; align-items: center; gap: 0.6rem; }
+.wp-iso { font-family: 'Space Grotesk', sans-serif; font-size: 1.55rem; font-weight: 700; color: var(--text-main); letter-spacing: 0.01em; }
+.wp-asme { font-size: 0.92rem; font-weight: 600; color: #fbbf24; border: 1px solid rgba(251, 191, 36, 0.35); background: rgba(251, 191, 36, 0.08); border-radius: 6px; padding: 1px 8px; }
+.wp-name { display: block; font-weight: 600; margin-top: 4px; color: var(--text-main); }
+.wp-note { display: block; color: var(--text-muted); font-size: 0.86rem; margin-top: 3px; line-height: 1.45; }
+.wp-print-row { margin-top: 1.6rem; display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
+.wp-print-note { color: var(--text-muted); font-size: 0.88rem; }
+@media print {
+    body * { visibility: hidden; }
+    .wp-chart, .wp-chart * { visibility: visible; }
+    .wp-chart { position: absolute; left: 0; top: 0; width: 100%; padding: 0; color: #000; }
+    .wp-chart .section-header .eyebrow, .wp-print-row { display: none; }
+    .wp-chart h2, .wp-group-h, .wp-iso, .wp-name { color: #000; }
+    .wp-chart .subtitle, .wp-group-h span, .wp-note { color: #333; }
+    .wp-group { break-after: page; }
+    .wp-grid { grid-template-columns: repeat(3, 1fr); }
+    .wp-card { background: #0a1224; border-color: #0a1224; break-inside: avoid; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .wp-card .wp-name { color: #f1f5f9; }
+    .wp-card .wp-note { color: #cbd5e1; }
+    .wp-card .wp-iso { color: #fff; }
+}
