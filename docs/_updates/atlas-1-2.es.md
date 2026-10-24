@@ -147,7 +147,8 @@ El panel de cualificaciones tiene dos ajustes nuevos, en **Configuración → Pa
 
 ## Cambios menores
 
-- Volver a interpretar una WPS muestra la lectura actual y la nueva lado a lado, y no se guarda nada hasta que elige **Aplicar nueva lectura** o **Mantener lectura actual**. Un campo que corrigió a mano aparece como diferencia.
+- Volver a interpretar una WPS muestra la lectura actual y la nueva lado a lado, y no se guarda nada hasta que elige **Aplicar nueva lectura** o **Mantener lectura actual**. Un campo que corrigió a mano aparece como diferencia. Una pestaña **Por comprobar** muestra lo que habría que comprobar una vez aplicada la nueva lectura, incluidos campos que ya había comprobado y de los que el lector no está seguro.
+- Puede volver a interpretar varias WPS a la vez: márquelas en **Seleccionar varios** y elija **Volver a interpretar**. Una lista muestra, para cada WPS, cuántos campos cambiarían y cuántos habría que comprobar; abra cualquiera para ver el detalle, y solo las que marque reciben la nueva lectura.
 - Los campos N/A aparecen en la WPS, para que se lea como el formulario. Puede ocultarlos solo para usted en **Configuración → Plantillas → Presentación de las WPS**, o en una WPS con su interruptor **Mostrar N/A / Ocultar N/A**, que Atlas ahora recuerda.
 - Cuando una WPS indica un rango abierto (≥ 25 mm, por ejemplo) y su WPQR lo limita, la comprobación de rango dice ahora lo que falta: *La WPS no fija límite superior (≥ 25 mm); el WPQR cubre 25–450 mm.*
 - Cuando algo nunca se registró, como el nombre de un soldador o quién firmó una línea, Atlas dice ahora *No indicado* en lugar de mostrar un guion. Un guion parecía una celda rota, y *N/A* querría decir que no se aplica.
@@ -177,7 +178,7 @@ El panel de cualificaciones tiene dos ajustes nuevos, en **Configuración → Pa
 
 ## Conviene saber
 
-- **Vuelva a interpretar para aprovechar el nuevo lector.** Las WPS importadas antes de la 1.2 mantienen su lectura actual. Vuelva a interpretar una para ver lo que encuentra el nuevo lector; nada cambia hasta que elige **Aplicar nueva lectura**.
+- **Vuelva a interpretar para aprovechar el nuevo lector.** Las WPS importadas antes de la 1.2 mantienen su lectura actual. Vuelva a interpretar una, o varias a la vez desde **Seleccionar varios**, para ver lo que encuentra el nuevo lector; nada cambia hasta que lo aplique.
 - **Los PDF escaneados no se leen.** Atlas no usa OCR, a propósito: el escaneo se guarda como el archivo de la WPS, y los campos que quiera en Atlas los añade usted en Editar. Si tiene el original digital (el archivo Excel, o un PDF exportado desde él), súbalo y Atlas lo lee.
 - **La aprobación es una firma electrónica simple.** Registra quién aprobó qué, y cuándo; no es una firma electrónica cualificada.
 - **El intervalo de la norma, o el suyo.** La nueva fecha de una confirmación sigue la norma que elija (ISO 9606-1, o la continuidad ASME / AWS). El periodo de gracia de confirmación en la Configuración es la tolerancia de su empresa; la ISO 9606-1 en sí no tiene periodo de gracia.

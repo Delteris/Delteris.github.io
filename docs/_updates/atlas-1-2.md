@@ -147,7 +147,8 @@ The qualification board has two new settings, in **Settings → Qualification bo
 
 ## Smaller changes
 
-- Re-parsing a WPS shows the current read and the new one side by side, and nothing is saved until you choose **Apply new read** or **Keep current read**. A field you corrected by hand shows up as a difference.
+- Re-parsing a WPS shows the current read and the new one side by side, and nothing is saved until you choose **Apply new read** or **Keep current read**. A field you corrected by hand shows up as a difference. A **To check** tab lists what would need a look once the new read is applied, including fields you'd already checked that the reader isn't sure of.
+- You can re-parse several WPSs at once: tick them in **Select several**, then **Re-parse**. One list shows, for each WPS, how many fields would change and how many would need a look; open any of them for the detail, and only the ones you tick get the new read.
 - N/A fields are shown on the WPS, so it reads like the form. You can hide them for yourself in **Settings → Templates → WPS display**, or on one WPS with its **Show N/A / Hide N/A** switch, which Atlas now remembers.
 - When a WPS gives an open-ended range (≥ 25 mm, say) and its WPQR caps it, the range check now says what's missing: *The WPS sets no upper limit (≥ 25 mm); the WPQR covers 25–450 mm.*
 - When something was never recorded, such as a welder's name or who signed a line, Atlas now says *Not known* instead of showing a dash. A dash looked like a broken cell, and *N/A* would mean it doesn't apply.
@@ -177,7 +178,7 @@ The qualification board has two new settings, in **Settings → Qualification bo
 
 ## Good to know
 
-- **Re-parse to pick up the new reader.** WPSs imported before 1.2 keep their current read. Re-parse one to see what the new reader finds; nothing changes until you choose **Apply new read**.
+- **Re-parse to pick up the new reader.** WPSs imported before 1.2 keep their current read. Re-parse one, or several at once from **Select several**, to see what the new reader finds; nothing changes until you apply it.
 - **Scanned PDFs aren't read.** Atlas has no OCR, on purpose: a scan is stored as the WPS's file, and any field you want in Atlas you add yourself under Edit. If you have the digital original (the Excel file, or a PDF exported from it), upload that instead and Atlas reads it.
 - **The approval is a simple electronic signature.** It records who approved what, and when; it isn't a qualified electronic signature.
 - **The code's interval, or yours.** A confirmation's new date follows the code you pick (ISO 9606-1, or ASME / AWS continuity). Your confirmation grace in Settings is your shop's tolerance; ISO 9606-1 itself has no grace period.
