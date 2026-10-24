@@ -2,22 +2,17 @@
 update_product: atlas
 lang: es
 version: "Atlas 1.2"
-date: 2026-10-23
-# DRAFT: hidden preview. To publish: delete the next three lines, set permalink to
-# /es/atlas/updates/1-2/ and en_url/pt_url/es_url to the /1-2/ addresses (same in the .md/.pt files).
-preview: true
-noindex: true
-sitemap: false
-permalink: /es/atlas/updates/1-2-preview-k7m2x9/
+date: 2026-10-24
+permalink: /es/atlas/updates/1-2/
 title: "Atlas 1.2: Un Lector de WPS que se Adapta a sus Formularios, y un Atlas más Limpio | Elenchon Atlas"
 heading: "Atlas 1.2: nuestra primera gran actualización"
 description: "Atlas 1.2 trae un lector de WPS que se adapta a sus formularios, ASME y AWS incluidos, y una revisión de cada pantalla para que lo que le necesita aparezca primero. También puede redactar y aprobar WPS en Atlas y confirmar cualificaciones de soldadores en una sola ronda."
 summary: "Un lector de WPS que se adapta a sus formularios, ASME y AWS incluidos, y una revisión de cada pantalla para que lo que le necesita aparezca primero. Y además: redactar y aprobar WPS en Atlas, y confirmar cualificaciones de soldadores en una sola ronda."
 image: "/static/updates/es/atlas-1-2-fields.webp"
 chip: "Nuevo en Atlas 1.2: un lector de WPS que se adapta a sus formularios, y un Atlas más limpio"
-en_url: "/atlas/updates/1-2-preview-k7m2x9/"
-pt_url: "/pt/atlas/updates/1-2-preview-k7m2x9/"
-es_url: "/es/atlas/updates/1-2-preview-k7m2x9/"
+en_url: "/atlas/updates/1-2/"
+pt_url: "/pt/atlas/updates/1-2/"
+es_url: "/es/atlas/updates/1-2/"
 ---
 <div class="update-lead">
     <p>Desde que lanzamos Atlas, no hemos dejado de preguntarnos dos cosas: ¿qué más podemos quitarle de encima, y cómo mostrarle con más claridad lo que importa? Atlas 1.2 es el primer gran resultado.</p>
@@ -161,7 +156,7 @@ El panel de cualificaciones tiene dos ajustes nuevos, en **Configuración → Pa
 
 <figure class="app-figure app-figure-wide update-figure">
     <button type="button" class="app-figure-frame app-figure-zoom" data-zoomable aria-label="Ampliar: vista previa al volver a interpretar">
-        <img src="/static/updates/es/atlas-1-2-reparse.webp" width="1600" height="460" loading="lazy" decoding="async" alt="Volver a analizar: qué cambiaría. Diferencias 2 de 70 campos: Ángulo de la antorcha / electrodo, lectura actual 10°–20° empujando (corregido a mano), nueva lectura 10°–15° empujando; Limpieza entre pasadas, lectura actual Solo amolado, nueva lectura Cepillo de alambre / amolado. Botones: Mantener lectura actual, Aplicar nueva lectura">
+        <img src="/static/updates/es/atlas-1-2-reparse.webp" width="1600" height="460" loading="lazy" decoding="async" alt="Volver a interpretar: qué cambiaría. Diferencias 2 de 70 campos: Ángulo de la antorcha / electrodo, lectura actual 10°–20° empujando (corregido a mano), nueva lectura 10°–15° empujando; Limpieza entre pasadas, lectura actual Solo amolado, nueva lectura Cepillo de alambre / amolado. Botones: Mantener lectura actual, Aplicar nueva lectura">
     </button>
     <figcaption>Dos campos corregidos a mano aparecen como diferencias antes de elegir.</figcaption>
 </figure>

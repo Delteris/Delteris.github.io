@@ -61,7 +61,7 @@ crumb: "Funciones"
                 <li><a href="#monthly-report">Informe mensual</a></li>
                 <li><a href="#what-you-see">Lo que ve</a></li>
                 <li><a href="#security">Seguridad</a></li>
-                <li><a href="#authoring">Exportar y crear</a></li>
+                <li><a href="#authoring">Redactar, imprimir y exportar</a></li>
             </ul>
         </div>
         <div class="tour-body">
@@ -97,9 +97,9 @@ crumb: "Funciones"
                     <span class="feature-index">01</span>
                     <ul class="feature-list">
                         <li><strong>Excel y PDF, ambos nativos:</strong> Un parser lee hojas WPS en Excel; otro reconstruye la cuadrícula de un formulario PDF exportado y lee sus celdas (los escaneos no se leen). Proceso, materiales, gamas y parámetros pasada a pasada entran como campos estructurados.</li>
-                        <li><strong>Agnóstico al idioma:</strong> El parser lee la estructura de un formulario, no un vocabulario fijo, y corresponde las etiquetas a partir de un paquete de idioma — por lo que un formulario en su idioma se lee sin configuración especial. Inglés y portugués están incluidos hoy; otros idiomas se añaden durante la incorporación.</li>
+                        <li><strong>Agnóstico al idioma:</strong> El parser lee la estructura de un formulario, no un vocabulario fijo, y corresponde las etiquetas por su denominación — por lo que un formulario en su idioma se lee sin configuración especial. Las etiquetas en inglés, portugués y español vienen incluidas; cualquier otra denominación se coloca una vez y se recuerda para su organización.</li>
                         <li><strong>En lote, y clasificado al entrar:</strong> Traiga una pila entera de una vez — cada fichero ordenado como nueva WPS, nueva revisión o corrección, con las revisiones agrupadas desde el principio.</li>
-                        <li><strong>Ajustado a su plantilla:</strong> Durante la incorporación, ajustamos el parser al esquema exacto de su empresa.</li>
+                        <li><strong>Se adapta a sus formularios:</strong> Sin plantilla que elegir. El parser deduce el esquema de cada formulario a partir del archivo, formularios ISO 15609-1, ASME IX y AWS D1.1 incluidos, y divide los archivos que reúnen varias WPS.</li>
                     </ul>
                     <p class="feature-out"><a href="/es/wps-import-software.html">Ver la importación de WPS en detalle &rarr;</a></p>
                 </div>
@@ -107,7 +107,7 @@ crumb: "Funciones"
             <div class="tour-media">
                 {% include app-shot.html
                     name="import" wide="true" w="1600" h="900"
-                    alt="La ventana Añadir WPS de la biblioteca: la plantilla de formulario WPS de Meridian Fabrication seleccionada, tres archivos Excel cargados, cada uno listado como WPS nueva leída sin problemas, y el botón Confirmar 3 importaciones"
+                    alt="La ventana Añadir WPS de la biblioteca: tres archivos Excel cargados, cada uno listado como WPS nueva leída sin problemas, y el botón Confirmar 3 importaciones"
                     cap="Añadir WPS a la biblioteca: suelte archivos Excel o PDF y cada uno se lee y queda en espera — no se escribe nada hasta que confirme la importación." %}
             </div>
         </div>
@@ -486,18 +486,22 @@ crumb: "Funciones"
     <!-- CREACIÓN -->
     <section class="page-section container" id="authoring">
         <div class="section-header">
-            <span class="eyebrow">Exportar Hoy, Crear Después</span>
-            <h2>Una Exportación Excel Limpia, y Más en Camino</h2>
-            <p class="subtitle">La exportación ya funciona; la creación se apoya en ella. Cada paso llega en una versión que puede seguir en las <a href="/es/atlas/updates/">novedades de Atlas</a>.</p>
+            <span class="eyebrow">Redactar, Imprimir y Exportar</span>
+            <h2>Redacte una WPS en Atlas, y Llévela Donde la Necesite</h2>
+            <p class="subtitle">Las nuevas funciones llegan en versiones que puede seguir en las <a href="/es/atlas/updates/">novedades de Atlas</a>.</p>
         </div>
         <div class="pillar-grid">
             <div class="glass-card">
-                <h3>Ida y vuelta sin pérdidas, hoy</h3>
-                <p>Genere una hoja limpia de un solo WPS — o el registro entero como una hoja — que abre en Excel y se reimporta sin perder un valor.</p>
+                <h3>Redacte una WPS a partir de sus WPQR</h3>
+                <p>Elija los WPQR en los que se apoya la WPS y parte de su rango de cualificación. La comprobación de rango se ejecuta mientras escribe, y los valores que su taller ya usa quedan a un clic.</p>
             </div>
             <div class="glass-card">
-                <h3>Creación simple como hoja, después</h3>
-                <p>Defina cabeceras, rellene celdas, y un script de estilo automático los convierte en una WPS terminada y formateada — la frágil plantilla hecha a mano, reformada. En la hoja de ruta.</p>
+                <h3>Imprímala en un formulario limpio</h3>
+                <p>Imprimir formulario dispone la WPS según la norma a la que está cualificada (ISO 15609-1, ASME IX o AWS D1.1) en un archivo Excel que puede exportar a PDF, con la aprobación en la casilla de aprobación una vez aprobada en Atlas.</p>
+            </div>
+            <div class="glass-card">
+                <h3>Ida y vuelta en Excel sin pérdidas</h3>
+                <p>Genere una hoja limpia de un solo WPS — o el registro entero como una hoja — que abre en Excel y se reimporta sin perder un valor.</p>
             </div>
         </div>
     </section>
@@ -509,6 +513,6 @@ crumb: "Funciones"
 {%- capture closing_intro %}
             <span class="eyebrow">Empiece Ahora</span>
             <h2 class="text-glow">Ponga su Registro en Esto</h2>
-            <p>La incorporación está guiada directamente por los fundadores — envíenos algunos de sus documentos WPS, confirmamos que el parser lee su plantilla, y entra en funcionamiento con un registro comprobado en su propia documentación. Todo tratado con confidencialidad.</p>
+            <p>La incorporación está guiada directamente por los fundadores — envíenos algunos de sus documentos WPS, los pasamos por el parser con usted, y entra en funcionamiento con un registro comprobado en su propia documentación. Todo tratado con confidencialidad.</p>
 {%- endcapture %}
 {% include closing-cta.html product="atlas" id="cta" intro=closing_intro %}

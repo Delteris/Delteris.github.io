@@ -2,22 +2,17 @@
 update_product: atlas
 lang: en
 version: "Atlas 1.2"
-date: 2026-10-23
-# DRAFT: hidden preview. To publish: delete the next three lines, set permalink to
-# /atlas/updates/1-2/ and en_url/pt_url/es_url to the /1-2/ addresses (same in the .pt/.es files).
-preview: true
-noindex: true
-sitemap: false
-permalink: /atlas/updates/1-2-preview-k7m2x9/
+date: 2026-10-24
+permalink: /atlas/updates/1-2/
 title: "Atlas 1.2: A WPS Reader That Adapts to Your Forms, and a Cleaner Atlas | Elenchon Atlas"
 heading: "Atlas 1.2: our first major update"
 description: "Atlas 1.2 brings a WPS reader that adapts to your forms, ASME and AWS included, and a rework of every screen so that what needs you comes first. You can also write and approve WPSs in Atlas and confirm welder qualifications in one round."
 summary: "A WPS reader that adapts to your forms, ASME and AWS included, and a rework of every screen so that what needs you comes first. Plus: write and approve WPSs in Atlas, and confirm welder qualifications in one round."
 image: "/static/updates/atlas-1-2-fields.webp"
 chip: "New in Atlas 1.2: a WPS reader that adapts to your forms, and a cleaner Atlas"
-en_url: "/atlas/updates/1-2-preview-k7m2x9/"
-pt_url: "/pt/atlas/updates/1-2-preview-k7m2x9/"
-es_url: "/es/atlas/updates/1-2-preview-k7m2x9/"
+en_url: "/atlas/updates/1-2/"
+pt_url: "/pt/atlas/updates/1-2/"
+es_url: "/es/atlas/updates/1-2/"
 ---
 <div class="update-lead">
     <p>Since we launched Atlas, we've kept asking ourselves two things: what more can we take off your plate, and how can we show you what matters more clearly? Atlas 1.2 is the first big result.</p>
