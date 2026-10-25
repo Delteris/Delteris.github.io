@@ -161,26 +161,25 @@ guides:
   - id: welding-positions
     group: welders
     type: reference
-    langs: [en]
     path: /resources/welding-positions/
-    keywords: "ISO 6947 AWS 1G 2G 3G 4G 5G 6G 1F 2F 3F 4F 5F 2FR PA PB PC PD PE PF PG PH PJ H-L045 J-L045 uphill downhill vertical overhead horizontal flat plate pipe butt fillet groove printable"
+    keywords: "ISO 6947 AWS 1G 2G 3G 4G 5G 6G 1F 2F 3F 4F 5F 2FR PA PB PC PD PE PF PG PH PJ H-L045 J-L045 uphill downhill vertical overhead horizontal flat plate pipe butt fillet groove printable ascendente descendente ao baixo ao teto plana bajo techo cornija cornisa tope ângulo"
     kind: { en: "Chart", pt: "Tabela", es: "Tabla" }
     title:
       en: "Welding positions chart: ISO 6947 vs ASME 1G–6G, 1F–5F"
-      pt: "Welding positions chart: ISO 6947 vs ASME 1G–6G, 1F–5F"
-      es: "Welding positions chart: ISO 6947 vs ASME 1G–6G, 1F–5F"
+      pt: "Tabela de posições de soldadura: ISO 6947 vs ASME 1G–6G, 1F–5F"
+      es: "Tabla de posiciones de soldadura: ISO 6947 vs ASME 1G–6G, 1F–5F"
     summary:
       en: "Every position for plate and pipe, butt and fillet, drawn with its ISO and ASME code. Printable."
-      pt: "Every position for plate and pipe, butt and fillet, drawn with its ISO and ASME code. Printable."
-      es: "Every position for plate and pipe, butt and fillet, drawn with its ISO and ASME code. Printable."
+      pt: "Todas as posições para chapa e tubo, topo a topo e de ângulo, desenhadas com o código ISO e ASME. Para imprimir."
+      es: "Todas las posiciones para chapa y tubo, a tope y en ángulo, dibujadas con su código ISO y ASME. Para imprimir."
     blurb:
       en: "PA to J-L045 and 1G to 6G: every position for plate and pipe, butt and fillet, drawn with its ISO and ASME code, plus a one-page cross-reference to print."
-      pt: "PA to J-L045 and 1G to 6G: every position for plate and pipe, butt and fillet, drawn with its ISO and ASME code, plus a one-page cross-reference to print."
-      es: "PA to J-L045 and 1G to 6G: every position for plate and pipe, butt and fillet, drawn with its ISO and ASME code, plus a one-page cross-reference to print."
+      pt: "De PA a J-L045 e de 1G a 6G: todas as posições para chapa e tubo, topo a topo e de ângulo, desenhadas com o código ISO e ASME, e uma correspondência numa página para imprimir."
+      es: "De PA a J-L045 y de 1G a 6G: todas las posiciones para chapa y tubo, a tope y en ángulo, dibujadas con su código ISO y ASME, y una tabla de equivalencias de una página para imprimir."
     cta:
       en: "See every position"
-      pt: "See every position"
-      es: "See every position"
+      pt: "Ver todas as posições"
+      es: "Ver todas las posiciones"
   - id: heat-number-traceability
     group: traceability
     type: guide

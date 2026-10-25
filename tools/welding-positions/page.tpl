@@ -6,6 +6,9 @@ description: "Every welding position in one chart: ISO 6947 codes (PA, PB, PC, P
 og_description: "ISO 6947 and ASME/AWS welding positions in one chart: plate and pipe, butt and fillet, uphill and downhill. Free to print."
 og_image_alt: "Welding positions chart: ISO 6947 codes beside ASME 1G to 6G and 1F to 5F"
 en_url: "/resources/welding-positions/"
+pt_url: "/pt/resources/welding-positions/"
+es_url: "/es/resources/welding-positions/"
+alt_url: "/pt/resources/welding-positions/"
 hub: guides
 crumb: "Welding Positions"
 guide_group: welders
@@ -18,7 +21,7 @@ guide_pitch_link: "Atlas reads them, PF as uphill and PG as downhill"
             <span class="hero-eyebrow">Resources · Chart</span>
             <h1 class="text-glow">Welding Positions:<br>ISO 6947 and ASME, in One Chart.</h1>
             <p class="hero-sub">PA to J-L045, 1G to 6G, 1F to 5F: every position for plate and pipe, butt and fillet, drawn side by side.</p>
-            <p class="guide-meta">By the Delteris team · Last reviewed <time datetime="2026-10-24">24 October 2026</time> · <a href="/resources/">All guides</a></p>
+            <p class="guide-meta">By the Delteris team · Last reviewed <time datetime="2026-10-25">25 October 2026</time> · <a href="/resources/">All guides</a></p>
         </div>
     </header>
 

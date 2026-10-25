@@ -70,7 +70,7 @@ Three steps: scoping session with the founders, on-site installation of the hard
   - pWPS vs WPQR vs WPS (the three procedure records, ISO 15609-1/15614-1 vs ASME IX, where qualified ranges live): https://delteris.com/resources/pwps-vs-wpqr-vs-wps/
   - Welder Qualification Validity (ISO 9606-1 six-month confirmation, revalidation routes 9.3 a/b/c, ASME IX QW-322 expiry and renewal): https://delteris.com/resources/welder-qualification-validity/
   - Heat Input Calculator (free, in the browser: one or more arcs summed for tandem / multi-wire; ISO/TR 17671-1 / EN 1011-1 heat input in kJ/mm with a k factor the user types in, arc energy, ASME IX QW-409.1(a) J/in; nothing saved): https://delteris.com/resources/heat-input-calculator/
-  - Welding Positions Chart (ISO 6947 PA–PJ, H-L045, J-L045 drawn beside ASME/AWS 1G–6G and 1F–5F for plate and pipe, butt and fillet; printable chart and cross-reference; English only): https://delteris.com/resources/welding-positions/
+  - Welding Positions Chart (ISO 6947 PA–PJ, H-L045, J-L045 drawn beside ASME/AWS 1G–6G and 1F–5F for plate and pipe, butt and fillet; printable chart and cross-reference; EN/PT/ES): https://delteris.com/resources/welding-positions/
   - Heat-Number Traceability (mill certificates, EN 10204 2.1/2.2/3.1/3.2, transfer at cutting, EN 1090-2 traceability by execution class): https://delteris.com/resources/heat-number-traceability/
   - Managed On-Premise (vendor-installed and vendor-maintained appliance vs classic self-hosted vs cloud; when cloud fits better): https://delteris.com/resources/managed-on-premise-software/
 - Security (Phrakton — zero-trust, post-quantum): https://delteris.com/security.html

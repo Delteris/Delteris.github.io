@@ -43,8 +43,8 @@
           {
             "@type": "ListItem",
             "position": 2,
-            "name": "Heat input calculator, clamped to your WPQR range",
-            "url": "https://delteris.com/heat-input-calculator.html"
+            "name": "Heat input calculator: ISO/TR 17671-1 and ASME IX",
+            "url": "https://delteris.com/resources/heat-input-calculator/"
           },
           {
             "@type": "ListItem",
