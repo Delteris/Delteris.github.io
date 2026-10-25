@@ -44,6 +44,24 @@ groups=[
  ]),
 ]
 from i18n import FM, BODY, UI, GROUPS, CARDS
+import os, re
+
+# Each drawing is also a file under docs/static/welding-positions/ (one name for all three
+# languages), so search engines can index it; the page loads it with <img>.
+OUT='../../docs/static/welding-positions'
+os.makedirs(OUT, exist_ok=True)
+KIND={'plate-butt':'plate butt weld','plate-fillet':'plate fillet weld','pipe-butt':'pipe butt weld','pipe-fillet':'pipe fillet weld'}
+def words(asme): return asme.replace(' ↑',' uphill').replace(' ↓',' downhill')
+def slug(t): return re.sub(r'[^a-z0-9]+','-',t.lower()).strip('-')
+FILES={}
+for gid,h,sub,cards in groups:
+    for key,iso,asme,name,note in cards:
+        title=f"{iso} ({words(asme)}) welding position: {KIND[gid]}, {name[0].lower()+name[1:]}"
+        fn=slug(f"{gid} {iso} {words(asme)} {name}")+'.svg'
+        svg=S[key].replace('<svg ','<svg xmlns="http://www.w3.org/2000/svg" ',1)
+        svg=re.sub(r' role="img" aria-label="[^"]*" class="wp-svg">', f'><title>{html.escape(title)}</title>', svg, count=1)
+        open(f'{OUT}/{fn}','w').write(svg+'\n')
+        FILES[key]=fn
 
 def build(lang):
     ui=UI[lang]
@@ -51,7 +69,8 @@ def build(lang):
         return asme.replace('↑', ui['up']).replace('↓', ui['down'])
     def card_l(key, iso, asme, name, note, group_h):
         a=label(iso, asme, name)
-        svg=S[key].replace(f'aria-label="{key}"', 'aria-label="'+html.escape(f"{iso} / {a}: {name} — {group_h.replace(' · ', ', ')}")+'"')
+        alt=f"{ui['pos']} {iso} / {a}: {name} ({group_h.replace(' · ', ', ').lower()})"
+        svg=f'<img src="/static/welding-positions/{FILES[key]}" alt="{html.escape(alt)}" class="wp-svg" width="400" height="316" decoding="async">'
         return f'''                <figure class="wp-card">
                     <button type="button" class="wp-card-open" aria-label="{html.escape(f"{ui['enlarge']} {iso}, {a}: {name}")}" aria-haspopup="dialog"></button>
                     {svg}

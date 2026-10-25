@@ -1,10 +1,13 @@
 ---
 layout: default
 permalink: /resources/welding-positions/
-title: "Welding Positions Chart: ISO 6947 vs ASME 1G–6G, 1F–5F | Elenchon"
-description: "Every welding position in one chart: ISO 6947 codes (PA, PB, PC, PD, PE, PF, PG, PH, PJ, H-L045, J-L045) side by side with the ASME and AWS designations (1G to 6G, 1F to 5F), for plate and pipe, butt and fillet welds."
+title: "Welding Positions Chart: 1G–6G, 1F–5F and ISO 6947 PA–PJ | Elenchon"
+description: "Every welding position in one free, printable chart: ASME and AWS 1G to 6G and 1F to 5F beside the ISO 6947 codes PA to J-L045, for plate and pipe, butt and fillet welds, plus the four basic positions explained."
 og_description: "ISO 6947 and ASME/AWS welding positions in one chart: plate and pipe, butt and fillet, uphill and downhill. Free to print."
-og_image_alt: "Welding positions chart: ISO 6947 codes beside ASME 1G to 6G and 1F to 5F"
+og_image: "/static/welding-positions/welding-positions-chart.png"
+og_image_alt: "Welding positions chart: ASME 1G to 6G and 1F to 5F beside the ISO 6947 codes"
+twitter_large: true
+schema: schema/resources/welding-positions.json
 en_url: "/resources/welding-positions/"
 pt_url: "/pt/resources/welding-positions/"
 es_url: "/es/resources/welding-positions/"
@@ -19,8 +22,8 @@ guide_pitch_link: "Atlas reads them, PF as uphill and PG as downhill"
     <header class="page-hero">
         <div class="hero-content">
             <span class="hero-eyebrow">Resources · Chart</span>
-            <h1 class="text-glow">Welding Positions:<br>ISO 6947 and ASME, in One Chart.</h1>
-            <p class="hero-sub">PA to J-L045, 1G to 6G, 1F to 5F: every position for plate and pipe, butt and fillet, drawn side by side.</p>
+            <h1 class="text-glow">Welding Positions:<br>1G to 6G and ISO 6947, in One Chart.</h1>
+            <p class="hero-sub">Flat, horizontal, vertical and overhead, on plate and pipe, butt and fillet: every ASME and AWS position (1G to 6G, 1F to 5F) drawn beside its ISO 6947 code (PA to J-L045).</p>
             <p class="guide-meta">By the Delteris team · Last reviewed <time datetime="2026-10-25">25 October 2026</time> · <a href="/resources/">All guides</a></p>
         </div>
     </header>
@@ -28,7 +31,7 @@ guide_pitch_link: "Atlas reads them, PF as uphill and PG as downhill"
     <section class="page-section container u-flush-top">
         <div class="summary-panel">
             <h2 class="text-glow">The Short Answer</h2>
-            <p><strong>ISO 6947 names a welding position with letters: PA is flat, PB horizontal-vertical, PC horizontal, PD horizontal-overhead, PE overhead, PF vertical up and PG vertical down; for fixed pipe, PH welds upwards, PJ downwards, and H-L045 and J-L045 do the same on a pipe inclined at 45°. ASME Section IX and AWS use a number and a letter instead: 1 to 6 for the position, G for a groove (butt) weld and F for a fillet weld.</strong> The two systems mostly line up. The one real difference: ASME's 3G, 5G and 6G don't say up or down, which ISO puts in the code.</p>
+            <p><strong>There are four basic welding positions: flat, horizontal, vertical and overhead. ISO 6947 names a welding position with letters: PA is flat, PB horizontal-vertical, PC horizontal, PD horizontal-overhead, PE overhead, PF vertical up and PG vertical down; for fixed pipe, PH welds upwards, PJ downwards, and H-L045 and J-L045 do the same on a pipe inclined at 45°. ASME Section IX and AWS use a number and a letter instead: 1 to 6 for the position, G for a groove (butt) weld and F for a fillet weld.</strong> The two systems mostly line up. The one real difference: ASME's 3G, 5G and 6G don't say up or down, which ISO puts in the code.</p>
         </div>
     </section>
 
@@ -99,6 +102,23 @@ guide_pitch_link: "Atlas reads them, PF as uphill and PG as downhill"
         <p class="wp-print-row"><button type="button" class="btn btn-secondary" data-wp-print="table">Print the table</button><span class="wp-print-note">Fits on one A4 or Letter page.</span></p>
     </section>
 
+    <section class="page-section container" id="basics">
+        <details class="wp-more">
+            <summary class="section-header">
+                <span class="eyebrow">The Basics</span>
+                <h2>The Four Basic Positions, and What 1G to 6G Mean</h2>
+            </summary>
+            <div class="glass-card feature-block">
+                <ul class="feature-list">
+                    <li><strong>There are four basic positions.</strong> Flat, horizontal, vertical and overhead. ASME and AWS number them 1 to 4; ISO 6947 gives them letters: PA flat, PC horizontal, PF and PG vertical, PE overhead, with PB and PD for a fillet weld in a corner, made from above or from below. Every other position is one of these four met on a pipe.</li>
+                    <li><strong>1G, 2G, 3G and 4G are groove welds on plate.</strong> The number is the position and G means groove, a butt weld: 1G flat, 2G horizontal, 3G vertical, 4G overhead. 1F to 4F are the same positions for a fillet weld.</li>
+                    <li><strong>5G and 6G are fixed pipe.</strong> In 5G the pipe lies horizontal and doesn't move, so one weld round it passes through flat, vertical and overhead. In 6G the pipe is fixed at 45°, which brings in the horizontal position as well. 6GR is the 6G test with a restriction ring beside the joint, used under AWS D1.1 for tubular T-, K- and Y-connections.</li>
+                    <li><strong>Which position is hardest.</strong> Flat is the easiest, which is why training starts there. Overhead is hard because gravity pulls the weld pool away from the joint, and fixed pipe is harder still because the position keeps changing as the welder works round it. 6G combines all of it, which is why a 6G or H-L045 test covers so many production positions.</li>
+                </ul>
+            </div>
+        </details>
+    </section>
+
     <section class="page-section container">
         <div class="section-header">
             <span class="eyebrow">Reading the Codes</span>
@@ -116,7 +136,7 @@ guide_pitch_link: "Atlas reads them, PF as uphill and PG as downhill"
         </div>
     </section>
 
-    <section class="page-section container">
+    <section class="page-section container" id="standards">
         <div class="glass-card feature-block">
             <p class="feature-lead"><strong>Standards referenced</strong></p>
             <ul class="feature-list">
@@ -124,7 +144,7 @@ guide_pitch_link: "Atlas reads them, PF as uphill and PG as downhill"
                 <li><a href="https://www.asme.org/codes-standards/find-codes-standards/bpvc-ix-bpvc-section-ix-welding-brazing-fusing-qualifications">ASME BPVC Section IX</a> — QW-461, positions; QW-461.9, positions qualified by each test position.</li>
                 <li><a href="https://www.iso.org/standard/54936.html">ISO 9606-1</a> — qualification testing of welders, fusion welding, steels.</li>
             </ul>
-            <p class="feature-note">The drawings are our own illustrations, not copies of the figures in these standards.</p>
+            <p class="feature-note">The drawings are our own illustrations, not copies of the figures in these standards. You are free to reuse them, in print or online, with credit to delteris.com (<a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>).</p>
         </div>
     </section>
 {% include guide-next.html %}

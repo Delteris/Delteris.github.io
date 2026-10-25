@@ -4566,7 +4566,21 @@ button.app-figure-frame:focus-visible .app-figure-zoom-hint {
 .wp-group-h span { font-size: 0.88rem; font-weight: 400; color: var(--text-muted); }
 .wp-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(165px, 1fr)); gap: 14px; }
 .wp-card { margin: 0; background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: var(--radius); padding: 8px 14px 14px; display: flex; flex-direction: column; }
-.wp-svg { width: 100%; height: auto; aspect-ratio: 200 / 158; display: block; }
+.wp-svg { width: 100%; height: auto; aspect-ratio: 200 / 158; display: block; object-fit: contain; }
+.wp-more > summary { cursor: pointer; list-style: none; }
+.wp-more > summary::-webkit-details-marker { display: none; }
+.wp-more > summary h2::after {
+    content: '▾';
+    display: inline-block;
+    margin-left: 0.4em;
+    font-size: 0.55em;
+    vertical-align: middle;
+    color: var(--text-muted);
+    transform: rotate(-90deg);
+    transition: transform 0.2s ease;
+}
+.wp-more[open] > summary h2::after { transform: none; }
+.wp-more > summary:hover h2::after { color: var(--accent-blue); }
 .wp-card figcaption { margin-top: 2px; }
 .wp-codes { display: flex; align-items: center; gap: 0.6rem; }
 .wp-iso { font-family: 'Space Grotesk', sans-serif; font-size: 1.55rem; font-weight: 700; color: var(--text-main); letter-spacing: 0.01em; }

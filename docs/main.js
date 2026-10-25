@@ -1342,7 +1342,7 @@
             var c = cards[at], g = c.closest('.wp-group');
             m.group.textContent = g ? g.getAttribute('data-group') : '';
             m.figure.innerHTML = '';
-            m.figure.appendChild(c.querySelector('svg').cloneNode(true));
+            m.figure.appendChild(c.querySelector('.wp-svg').cloneNode(true));
             m.iso.textContent = c.querySelector('.wp-iso').textContent;
             m.asme.textContent = c.querySelector('.wp-asme').textContent;
             m.name.textContent = c.querySelector('.wp-name').textContent;

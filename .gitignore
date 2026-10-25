@@ -2,3 +2,4 @@ docs/_site
 docs/vendor
 .fuse_hidden*
 Claude outputs/
+__pycache__/

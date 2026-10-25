@@ -4,3 +4,4 @@ python3 gen.py   -> svgs.json (the 22 drawings, isometric, inline SVG)
 python3 page.py  -> ../../docs/resources/welding-positions.html from page.tpl
 
 Styles live in docs/style.css under "Resources: welding positions chart".
+python3 og.py    -> ../../docs/static/welding-positions/welding-positions-chart.png (share image)
