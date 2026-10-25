@@ -27,6 +27,7 @@
                 <span class="eyebrow">{{ t[0] }}</span>
                 <h2>{{ t[1] }}</h2>
                 <p class="hi-calc-lead">{{ t[2] }}</p>
+                <div class="hi-calc-body">
                 <div class="hi-calc-fields">
                     <div class="hi-arcs" data-hi-arcs data-arc="{{ t2[0] }}">
                         <div class="hi-arc" data-hi-arc>
@@ -54,6 +55,7 @@
                         <span class="hi-input"><input type="text" inputmode="decimal" autocomplete="off" data-hi="k" aria-describedby="hi-k-hint"></span>
                         <small id="hi-k-hint">{{ t[7] }}</small></label>
                 </div>
+                <div class="hi-calc-out">
                 <div class="hi-results" aria-live="polite">
                     <div class="hi-result hi-result-main">
                         <span class="hi-r-label">{{ t[8] }}</span>
@@ -71,6 +73,8 @@
                     </div>
                 </div>
                 <p class="hi-msg" data-hi-out="msg">{{ t[13] }}</p>
+                </div>
+                </div>
             </div>
         </div>
     </section>

@@ -4707,7 +4707,7 @@ button.app-figure-frame:focus-visible .app-figure-zoom-hint {
 /* ------------------------------------------------------------
    Free heat input calculator (_includes/hi-calc.html, main.js [data-hi-calc])
    ------------------------------------------------------------ */
-.hi-calc { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1.25rem; max-width: 860px; margin: 0 auto; align-items: start; }
+.hi-calc { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1.25rem; max-width: 1100px; margin: 0 auto; align-items: start; }
 .hi-calc-main { padding: 1.8rem 2rem 1.6rem; }
 .hi-calc-main h2 { margin: 0.35rem 0 0.4rem; font-size: clamp(1.5rem, 2.6vw, 1.95rem); }
 .hi-calc-lead { color: var(--text-muted); margin: 0 0 1.4rem; font-size: 0.95rem; }
@@ -4788,3 +4788,16 @@ button.app-figure-frame:focus-visible .app-figure-zoom-hint {
 .hi-atlas-shot { min-width: 0; }
 .hi-atlas-shot > * { margin: 0; }
 @media (max-width: 900px) { .hi-atlas-card { grid-template-columns: minmax(0, 1fr); padding: 1.5rem 1.2rem; } }
+
+/* Tool pages: a compact hero so the work starts above the fold, and on wide screens the
+   calculator's results sit beside its inputs (the Atlas card then peeks in at 1080p). */
+.page-hero.page-hero-tool { padding-top: 2.2rem; padding-bottom: 1.6rem; min-height: 0; }
+.page-hero-tool h1 { font-size: clamp(2rem, 3.6vw, 2.9rem); margin-bottom: 0.6rem; }
+.page-hero-tool .hero-sub { margin-bottom: 0.6rem; }
+.hi-calc-body { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 1.6rem; align-items: start; }
+.hi-calc-out .hi-results { margin-top: 0; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+.hi-calc-out .hi-result-main { grid-column: 1 / -1; }
+.hi-calc-main .hi-calc-lead { margin-bottom: 1.1rem; }
+@media (max-width: 900px) {
+    .hi-calc-body { grid-template-columns: minmax(0, 1fr); gap: 1.2rem; }
+}
