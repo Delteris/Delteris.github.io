@@ -1,0 +1,49 @@
+---
+layout: default
+lang: pt
+permalink: /pt/resources/heat-input-calculator/
+title: "Calculadora de Aporte Térmico: ISO/TR 17671-1 e ASME IX | Elenchon"
+description: "Calculadora de aporte térmico gratuita: aporte térmico em kJ/mm segundo a ISO/TR 17671-1 (EN 1011-1) com o seu fator k, e em J/in segundo a ASME IX QW-409.1. Um arco ou vários (tandem, multi-fio)."
+og_description: "Grátis: aporte térmico a partir da corrente, tensão e velocidade de avanço, para um arco ou vários. kJ/mm com o seu fator k, e J/in da ASME."
+og_image_alt: "Elenchon by Delteris — calculadora de aporte térmico gratuita"
+schema: schema/resources/heat-input-calculator.json
+en_url: "/resources/heat-input-calculator/"
+pt_url: "/pt/resources/heat-input-calculator/"
+es_url: "/es/resources/heat-input-calculator/"
+alt_url: "/resources/heat-input-calculator/"
+hub: guides
+crumb: "Calculadora de Aporte Térmico"
+---
+    <header class="page-hero">
+        <div class="hero-content">
+            <span class="hero-eyebrow">Recursos · Calculadora</span>
+            <h1 class="text-glow">Calculadora de Aporte Térmico.<br>ISO/TR 17671-1 e ASME IX.</h1>
+            <p class="hero-sub">Calcule o aporte térmico a partir da corrente, tensão e velocidade de avanço, para um arco ou vários: kJ/mm segundo a ISO/TR 17671-1 (EN 1011-1) e J/in segundo a ASME IX QW-409.1.</p>
+            <p class="guide-meta">Pela equipa Delteris · Revisto a <time datetime="2026-10-25">25 de outubro de 2026</time> · <a href="/pt/resources/">Todos os guias</a></p>
+        </div>
+    </header>
+
+{% include hi-calc.html %}
+
+    <section class="page-section container" id="atlas">
+        <div class="glass-card hi-atlas-card">
+            <div class="hi-atlas-text">
+                <span class="eyebrow">Elenchon Atlas</span>
+                <h2>Fique Dentro da Janela que o Seu WPQR Qualificou — com o Atlas</h2>
+                <p>A calculadora acima faz a conta. O assistente de aporte térmico do Elenchon Atlas parte do seu procedimento em vez de um formulário em branco:</p>
+                <ul class="feature-list">
+                    <li><strong>O k vem da WPS:</strong> tirado do processo de soldadura, sem tabela para consultar.</li>
+                    <li><strong>Limitado ao seu WPQR:</strong> defina a janela qualificada para cada região do cordão e os cursores param nos limites.</li>
+                    <li><strong>Carregado da biblioteca:</strong> abra uma WPS e as gamas e cabeças preenchem-se, tandem e multi-fio incluídos.</li>
+                </ul>
+                <a class="btn btn-secondary" href="/pt/heat-input-calculator.html">Ver o assistente de aporte térmico no Atlas&nbsp;→</a>
+            </div>
+            <div class="hi-atlas-shot">
+        {% include app-shot.html
+            name="heat-input"
+            alt="O assistente de aporte térmico com valores de arco da MER-WPS-012: raiz, enchimento e acabamento, cada um com a gama de aporte térmico qualificada pelo WPQR, cursores de corrente, tensão e velocidade e um resultado ao vivo dentro da gama do WPQR"
+            cap="O assistente de aporte térmico: cursores limitados à janela qualificada pelo WPQR, com o resultado calculado ao vivo."
+            ph="A ajuda — uma gama de WPQR definida, os cursores de corrente/tensão/velocidade, e o resultado ao vivo, com um cursor no seu limite." %}
+            </div>
+        </div>
+    </section>

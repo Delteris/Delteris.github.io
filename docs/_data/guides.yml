@@ -117,7 +117,7 @@ guides:
     group: procedures
     type: tool
     tool: true
-    path: /heat-input-calculator.html
+    path: /resources/heat-input-calculator/
     keywords: "kJ/mm J/in arc energy amps volts travel speed k factor thermal efficiency ISO 1011-1 ISO/TR 17671-1 QW-409 root fill cap"
     kind: { en: "Free calculator", pt: "Calculadora gratuita", es: "Calculadora gratuita" }
     title:

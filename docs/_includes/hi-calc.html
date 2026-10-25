@@ -1,8 +1,7 @@
-{%- comment %} Free, basic heat input calculator (heat-input-calculator.html, EN/PT/ES).
+{%- comment %} Free heat input calculator — resources/heat-input-calculator.html (EN/PT/ES).
      Deliberately basic: k typed in by hand (no process list, no pre-fill), arcs typed in
-     row by row (tandem / multi-wire summed), no WPQR window. Atlas's edge — k from the
-     WPS's process, clamping to the WPQR window, loading a WPS head by head — is one quiet line under
-     the results, no button: this is a tool first. Logic in main.js ([data-hi-calc]).
+     row by row (tandem / multi-wire summed), no WPQR window. Atlas's edge (k from the WPS,
+     clamping to the WPQR window, loading a WPS head by head) is the card below it on the page. Logic in main.js ([data-hi-calc]).
      Formulas: ISO/TR 17671-1 (EN 1011-1) Q = k·Σ(U·I)·60/(v·1000) kJ/mm;
                ASME IX QW-409.1(a) heat input = Σ(V·A)·60/v J/in (v in in/min, no k).
 {%- endcomment %}
@@ -16,13 +15,10 @@
 {%- assign t = 'Free calculator|Work Out Heat Input|One arc or several, values typed in. Nothing is saved or sent anywhere.|Current|Voltage|Travel speed|k factor|Thermal efficiency for your process, from ISO/TR 17671-1 (EN 1011-1). Type it in.|Heat input, ISO/TR 17671-1 · EN 1011-1|Enter k to see this value|Arc energy (k = 1)|ASME IX, QW-409.1(a)|no k factor, per inch|Enter current, voltage and travel speed.|A k above 1 isn’t an efficiency — check the value.' | split: '|' -%}
 {%- endif %}
 {%- if L == 'pt' %}
-{%- assign t3 = 'No Elenchon Atlas, o mesmo cálculo vai buscar o k à WPS, fica dentro da janela do seu WPQR e carrega por si as montagens com várias cabeças.|Como funciona&nbsp;↓' | split: '|' -%}
 {%- assign t2 = 'Arco|+ Adicionar arco|Remover arco|Tandem ou multi-fio: uma linha por arco, cada uma com a sua corrente e tensão; a velocidade de avanço é comum. Fio duplo numa só fonte conta como um arco.' | split: '|' -%}
 {%- elsif L == 'es' %}
-{%- assign t3 = 'En Elenchon Atlas, el mismo cálculo toma el k de la WPS, se queda dentro de la ventana de su WPQR y carga por usted los montajes con varios cabezales.|Cómo funciona&nbsp;↓' | split: '|' -%}
 {%- assign t2 = 'Arco|+ Añadir arco|Quitar arco|Tándem o multihilo: una fila por arco, cada una con su intensidad y tensión; la velocidad de avance es común. El doble hilo en una sola fuente cuenta como un arco.' | split: '|' -%}
 {%- else %}
-{%- assign t3 = 'In Elenchon Atlas the same calculation takes k from the WPS, stays inside your WPQR’s window and loads multi-head set-ups for you.|How it works&nbsp;↓' | split: '|' -%}
 {%- assign t2 = 'Arc|+ Add an arc|Remove arc|Tandem or multi-wire: one row per arc, each with its own current and voltage; the travel speed is shared. Twin wire on one power source counts as one arc.' | split: '|' -%}
 {%- endif %}
     <section class="page-section container u-flush-top hi-calc-wrap" id="calculator">
@@ -75,7 +71,6 @@
                     </div>
                 </div>
                 <p class="hi-msg" data-hi-out="msg">{{ t[13] }}</p>
-                <p class="hi-calc-atlas-line">{{ t3[0] }} <a href="#overview">{{ t3[1] }}</a></p>
             </div>
         </div>
     </section>

@@ -1,0 +1,22 @@
+{%- comment %} Free calculator page (resources/heat-input-calculator.html, EN/PT/ES).
+     Localised by the sx_* variables set in _layouts/default.html. Breadcrumbs come
+     from _includes/breadcrumb.html, not from here. {%- endcomment %}
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "@id": "{{ sx_url }}#app",
+      "name": {{ sx_name | jsonify }},
+      "url": "{{ sx_url }}",
+      "description": {{ sx_desc | jsonify }},
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any (runs in the browser)",
+      "browserRequirements": "Requires JavaScript",
+      "isAccessibleForFree": true,
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+      "publisher": { "@id": "https://delteris.com/#organization" },
+      "inLanguage": "{{ sx_lang }}"
+    }
+  ]
+}

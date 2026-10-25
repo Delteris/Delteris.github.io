@@ -1,0 +1,48 @@
+---
+layout: default
+permalink: /resources/heat-input-calculator/
+title: "Welding Heat Input Calculator: ISO/TR 17671-1 and ASME IX | Elenchon"
+description: "Free welding heat input calculator: heat input in kJ/mm per ISO/TR 17671-1 (EN 1011-1) with your k factor, and in J/in per ASME IX QW-409.1. One arc or several (tandem, multi-wire)."
+og_description: "Free: heat input from current, voltage and travel speed, for one arc or several. kJ/mm with your k factor, plus ASME's J/in."
+og_image_alt: "Elenchon by Delteris — free welding heat input calculator"
+schema: schema/resources/heat-input-calculator.json
+en_url: "/resources/heat-input-calculator/"
+pt_url: "/pt/resources/heat-input-calculator/"
+es_url: "/es/resources/heat-input-calculator/"
+alt_url: "/pt/resources/heat-input-calculator/"
+hub: guides
+crumb: "Heat Input Calculator"
+---
+    <header class="page-hero">
+        <div class="hero-content">
+            <span class="hero-eyebrow">Resources · Calculator</span>
+            <h1 class="text-glow">Heat Input Calculator.<br>ISO/TR 17671-1 and ASME IX.</h1>
+            <p class="hero-sub">Work out welding heat input from current, voltage and travel speed, for one arc or several: kJ/mm per ISO/TR 17671-1 (EN 1011-1), and J/in per ASME IX QW-409.1.</p>
+            <p class="guide-meta">By the Delteris team · Last reviewed <time datetime="2026-10-25">25 October 2026</time> · <a href="/resources/">All guides</a></p>
+        </div>
+    </header>
+
+{% include hi-calc.html %}
+
+    <section class="page-section container" id="atlas">
+        <div class="glass-card hi-atlas-card">
+            <div class="hi-atlas-text">
+                <span class="eyebrow">Elenchon Atlas</span>
+                <h2>Stay Inside the Window Your WPQR Qualified — with Atlas</h2>
+                <p>The calculator above does the arithmetic. The heat-input helper in Elenchon Atlas starts from your procedure instead of a blank form:</p>
+                <ul class="feature-list">
+                    <li><strong>k from the WPS:</strong> taken from the welding process, so there's no table to look up.</li>
+                    <li><strong>Clamped to your WPQR:</strong> set the window it qualified for each weld region and the sliders stop at its limits.</li>
+                    <li><strong>Loaded from your library:</strong> open a WPS and its ranges and heads fill in, tandem and multi-wire included.</li>
+                </ul>
+                <a class="btn btn-secondary" href="/heat-input-calculator.html">See the heat-input helper in Atlas&nbsp;→</a>
+            </div>
+            <div class="hi-atlas-shot">
+        {% include app-shot.html
+            name="heat-input"
+            alt="The heat-input helper with arc values pulled from MER-WPS-012: root, fill and cap each with its WPQR-qualified heat-input range, current, voltage and travel-speed sliders, and a live result marked Inside WPQR range"
+            cap="The heat-input helper: sliders clamped to your WPQR-qualified window, with the result computed live."
+            ph="The helper — a WPQR range set, current/voltage/travel-speed sliders, and the live result, with one slider at its clamp limit." %}
+            </div>
+        </div>
+    </section>

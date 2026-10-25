@@ -4768,9 +4768,6 @@ button.app-figure-frame:focus-visible .app-figure-zoom-hint {
 .hi-r-sub { overflow-wrap: anywhere; font-size: 0.78rem; color: var(--text-muted); line-height: 1.4; }
 .hi-msg { margin: 0.9rem 0 0; min-height: 1.3em; font-size: 0.86rem; color: var(--text-muted); }
 .hi-msg.is-warn { color: #fbbf24; }
-.hi-calc-atlas-line { margin: 1.1rem 0 0; padding-top: 1rem; border-top: 1px solid rgba(148, 163, 184, 0.14); font-size: 0.88rem; line-height: 1.55; color: var(--text-muted); }
-.hi-calc-atlas-line a { color: var(--link); text-decoration: none; white-space: nowrap; }
-.hi-calc-atlas-line a:hover { color: var(--link-hover); text-decoration: underline; }
 @media (max-width: 900px) {
     .hi-calc { grid-template-columns: minmax(0, 1fr); }
     .hi-results { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
@@ -4782,3 +4779,12 @@ button.app-figure-frame:focus-visible .app-figure-zoom-hint {
     .hi-arc, .hi-arcs.is-multi .hi-arc { gap: 0.4rem 0.6rem; }
     .hi-arc-remove { width: 36px; }
 }
+
+/* Atlas card under the free calculator (resources/heat-input-calculator.html) */
+.hi-atlas-card { max-width: 1100px; margin: 0 auto; padding: 2rem 2.2rem; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 2rem; align-items: center; }
+.hi-atlas-text h2 { margin: 0.4rem 0 0.7rem; font-size: clamp(1.35rem, 2.3vw, 1.75rem); }
+.hi-atlas-text > p { color: var(--text-muted); margin: 0 0 0.9rem; }
+.hi-atlas-text .feature-list { margin-bottom: 1.4rem; }
+.hi-atlas-shot { min-width: 0; }
+.hi-atlas-shot > * { margin: 0; }
+@media (max-width: 900px) { .hi-atlas-card { grid-template-columns: minmax(0, 1fr); padding: 1.5rem 1.2rem; } }
