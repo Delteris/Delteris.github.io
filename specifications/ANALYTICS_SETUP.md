@@ -15,6 +15,7 @@ so no consent banner. Privacy policy §2 and §3.4 (EN/ES/PT) describe it.
 | event | when |
 |---|---|
 | `visit` | the page has been visible for 1 s |
+| `human` | first real gesture (wheel, pointer move/press, touch, key) 3 s or more after load, page visible — the *verified* signal |
 | `play` | first play of the Atlas video on the page |
 | `watched` | the video reached 75 % |
 | `contact` | click on any `mailto:` link or the copy-address button |
@@ -26,8 +27,11 @@ so no consent banner. Privacy policy §2 and §3.4 (EN/ES/PT) describe it.
   reload or a forwarded copy of the URL is not another campaign visit. Nothing is written to cookies,
   localStorage or sessionStorage. (The `/es/trial` redirect stubs keep `location.search`, so the tags
   reach `wps-manager-contact.html`, where the video is.)
-- Skipped entirely when `navigator.webdriver` is set (automation). The server also drops bot user agents,
-  visits under 1 s, foreign origins, and anything that fails its field allowlist.
+- Skipped entirely when `navigator.webdriver` is set (automation). The server drops visits under 1 s, `human`
+  under 3 s, foreign origins and anything that fails its field allowlist, and **flags** (stores, but never counts as
+  verified) bot user agents, beacons from cloud / hosting / mail-security networks (Microsoft Safe Links, Mimecast,
+  Proofpoint, AWS, …) and several links of one campaign opened from one address within 2 s. Archon shows raw and
+  verified side by side; compare campaigns and A/B variants on **verified**.
 
 ## Tagging links
 

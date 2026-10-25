@@ -1220,6 +1220,21 @@
         setTimeout(function () { if (document.visibilityState !== 'hidden') send('visit'); else arm(); }, 1000);
     }
     arm();
+    // Human confirmation: one real gesture (wheel, pointer move/press, touch, key) at
+    // least 3 s after load, while the page is visible. Mail scanners (Safe Links,
+    // Mimecast, Proofpoint) load the page and run this script but don't use it, so
+    // Archon counts a visit as verified only when this arrives. Sends the event name
+    // only; nothing about the gesture itself.
+    var HUMAN_MS = 3000, gestures = ['wheel', 'pointermove', 'pointerdown', 'touchstart', 'keydown'];
+    function now() { return window.performance ? performance.now() : HUMAN_MS; }
+    function onGesture(e) {
+        if (!e.isTrusted || sent.human || document.visibilityState === 'hidden') return;
+        if (e.type === 'pointermove' && !(e.movementX || e.movementY)) return;
+        if (now() < HUMAN_MS) return;
+        gestures.forEach(function (g) { window.removeEventListener(g, onGesture, true); });
+        send('human');
+    }
+    gestures.forEach(function (g) { window.addEventListener(g, onGesture, { capture: true, passive: true }); });
     document.querySelectorAll('.atlas-video video').forEach(function (v) {
         v.addEventListener('play', function () { send('play'); });
         v.addEventListener('timeupdate', function () { if (v.duration && v.currentTime / v.duration >= 0.75) send('watched'); });
