@@ -2,7 +2,7 @@
 layout: default
 permalink: /resources/
 title: "Resources | Welding Qualification & Traceability Guides | Elenchon"
-description: "Short, sourced guides to welding qualification and traceability: pWPS vs WPQR vs WPS, welder qualification validity under ISO 9606-1 and ASME IX, heat-number traceability, on-premise vs cloud, managed on-premise and choosing welding software — grouped by the problem you are solving."
+description: "Short, sourced guides to welding qualification and traceability: pWPS vs WPQR vs WPS, welder qualification validity under ISO 9606-1 and ASME IX, heat-number traceability, on-premise vs cloud, managed on-premise and choosing welding software — grouped by topic."
 og_description: "Short, sourced guides to welding qualification and traceability — WPS, WPQR, welder qualification validity, heat numbers and more."
 og_image_alt: "Elenchon by Delteris — welding qualification and traceability resources"
 og_image_dims: true
@@ -16,97 +16,12 @@ alt_url: "/pt/resources/"
         <div class="hero-content">
             <span class="hero-eyebrow">Guides</span>
             <h1 class="text-glow">Welding Qualification<br>&amp; Traceability Guides.</h1>
-            <p class="hero-sub">Short, sourced guides to the records behind welding quality, grouped by the problem in front of you. Written by the team building the software that manages them.</p>
-            <div class="guide-jump" role="navigation" aria-label="Guide topics">
-                <a href="#procedures">WPS &amp; procedure qualification</a>
-                <a href="#welders">Welder qualification</a>
-                <a href="#traceability">Traceability</a>
-                <a href="#software">Choosing &amp; deploying software</a>
-            </div>
+            <p class="hero-sub">Short, sourced guides to the records behind welding quality, grouped by topic. Written by the team building the software that manages them.</p>
+            {% include guide-hub.html %}
         </div>
     </header>
 
-    <section class="page-section container u-flush-top guide-group" id="procedures">
-        <div class="guide-group-head">
-            <span class="eyebrow">Problem 1</span>
-            <h2>WPS &amp; Procedure Qualification</h2>
-            <p>Which record proves what, and how far a qualified procedure stretches before it needs a new test. Start here if an auditor has asked which WPQR supports a WPS.</p>
-        </div>
-        <div class="guide-list">
-            <a href="/resources/pwps-vs-wpqr-vs-wps/" class="glass-card guide-card">
-                <span class="guide-kind">Guide</span>
-                <h3>pWPS vs WPQR vs WPS: the difference explained</h3>
-                <p>Draft, proof, production: the three procedure records side by side, how one becomes the next, and the one real difference between ISO and ASME.</p>
-                <span class="card-link">Compare the three records →</span>
-            </a>
-            <a href="/heat-input-calculator.html" class="glass-card guide-card">
-                <span class="guide-kind guide-kind-tool">Tool in Atlas</span>
-                <h3>Heat input calculator, clamped to your WPQR range</h3>
-                <p>Set the heat-input window your WPQR qualified for root, fill and cap, then drag current, voltage and travel speed without leaving it.</p>
-                <span class="card-link">See how the calculator works →</span>
-            </a>
-        </div>
-    </section>
-
-    <section class="page-section container guide-group" id="welders">
-        <div class="guide-group-head">
-            <span class="eyebrow">Problem 2</span>
-            <h2>Welder Qualification</h2>
-            <p>A certificate on file is not the same as a qualified welder. For when you need to know what keeps a qualification alive and what quietly ends it.</p>
-        </div>
-        <div class="guide-list">
-            <a href="/resources/welder-qualification-validity/" class="glass-card guide-card">
-                <span class="guide-kind">Guide</span>
-                <h3>Welder qualification validity: continuity, expiry and revalidation</h3>
-                <p>The ISO 9606-1 six-month confirmation, the three revalidation routes and ASME IX's expiry rule — in one table, with what good tracking looks like.</p>
-                <span class="card-link">Check the two clocks →</span>
-            </a>
-        </div>
-    </section>
-
-    <section class="page-section container guide-group" id="traceability">
-        <div class="guide-group-head">
-            <span class="eyebrow">Problem 3</span>
-            <h2>Traceability</h2>
-            <p>Linking a finished weld back to the steel it was made from, for ISO 3834 and EN 1090. For when the certificates are filed but nobody can say which plate went into which joint.</p>
-        </div>
-        <div class="guide-list">
-            <a href="/resources/heat-number-traceability/" class="glass-card guide-card">
-                <span class="guide-kind">Guide</span>
-                <h3>How heat-number traceability works</h3>
-                <p>Mill certificates and the EN 10204 types, transfer at cutting — the step where most shops break the chain — and what a traceable weld should link to.</p>
-                <span class="card-link">Follow the chain from mill to weld →</span>
-            </a>
-        </div>
-    </section>
-
-    <section class="page-section container guide-group" id="software">
-        <div class="guide-group-head">
-            <span class="eyebrow">Problem 4</span>
-            <h2>Choosing &amp; Deploying Software</h2>
-            <p>Before you buy: the questions a feature checklist hides, and where the system should run. Read them in this order if you are starting from a spreadsheet.</p>
-        </div>
-        <div class="guide-list">
-            <a href="/how-to-choose-welding-software.html" class="glass-card guide-card">
-                <span class="guide-kind">Buyer's guide</span>
-                <h3>How to choose welding management software</h3>
-                <p>The questions that decide it long-term — qualification records, data ownership, published pricing, offline capture, lock-in — with a vendor-neutral matrix.</p>
-                <span class="card-link">Get the buyer's questions →</span>
-            </a>
-            <a href="/welding-software-on-premise-vs-cloud.html" class="glass-card guide-card">
-                <span class="guide-kind">Decision guide</span>
-                <h3>On-premise vs cloud welding software</h3>
-                <p>Ownership, cost over the years, offline work and lock-in, weighed fairly — and which situations favour each.</p>
-                <span class="card-link">Decide where it should run →</span>
-            </a>
-            <a href="/resources/managed-on-premise-software/" class="glass-card guide-card">
-                <span class="guide-kind">Explainer</span>
-                <h3>Managed on-premise: on-premise without the IT burden</h3>
-                <p>What changes when the vendor installs, updates and fixes the appliance remotely — plus five questions to ask any on-premise vendor.</p>
-                <span class="card-link">See how the managed model works →</span>
-            </a>
-        </div>
-    </section>
+{% include guide-hub.html part="list" %}
 
 {%- capture doors_intro %}
             <span class="eyebrow">Put the Records to Work</span>

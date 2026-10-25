@@ -1,0 +1,98 @@
+{%- comment %} Guides hub body (resources/index.html in EN, PT and ES): the search bar, the
+     topic jump row and one section per topic group, all from _data/guides.yml.
+     Include it right after the hero's lead paragraph, inside .hero-content:
+       {% include guide-hub.html %}            (hero part: search + jump row)
+       {% include guide-hub.html part="list" %} (after </header>: the topic sections)
+
+     Search appears only once the hub has `search_min` resources (it is noise on a short
+     page; Ctrl+F does the job) or when the URL has ?search=1, for previewing it. The type
+     filter inside it appears only when at least two types are in use. Without JS the
+     search stays hidden and every card shows.
+{%- endcomment %}
+{%- assign search_min = 12 -%}
+{%- assign L = page.lang | default: 'en' -%}
+{%- if L == 'en' %}{% assign px = '' %}{% else %}{% assign px = '/' | append: L %}{% endif -%}
+{%- assign gd = site.data.guides -%}
+{%- assign live = gd.guides | where_exp: 'g', 'g.hidden != true' -%}
+{%- if L == 'pt' %}
+{%- assign t_search = 'Pesquisar guias' -%}{%- assign t_ph = 'Pesquisar: WPQR, ISO 9606…' -%}
+{%- assign t_all = 'Todos' -%}{%- assign t_types = 'Tipo de recurso' -%}{%- assign t_topics = 'Temas dos guias' -%}
+{%- assign t_one = '1 recurso' -%}{%- assign t_many = '{n} recursos' -%}
+{%- assign t_found_one = '1 resultado' -%}{%- assign t_found_many = '{n} resultados' -%}
+{%- assign t_empty = 'Ainda não temos nada sobre isso.' -%}
+{%- assign t_empty_more = 'Escrevemos um guia quando as oficinas nos fazem a mesma pergunta duas vezes.' -%}
+{%- assign t_empty_link = 'Diga-nos o que procurava' -%}
+{%- elsif L == 'es' %}
+{%- assign t_search = 'Buscar guías' -%}{%- assign t_ph = 'Buscar: WPQR, ISO 9606…' -%}
+{%- assign t_all = 'Todo' -%}{%- assign t_types = 'Tipo de recurso' -%}{%- assign t_topics = 'Temas de las guías' -%}
+{%- assign t_one = '1 recurso' -%}{%- assign t_many = '{n} recursos' -%}
+{%- assign t_found_one = '1 resultado' -%}{%- assign t_found_many = '{n} resultados' -%}
+{%- assign t_empty = 'Todavía no tenemos nada sobre eso.' -%}
+{%- assign t_empty_more = 'Escribimos una guía cuando los talleres nos hacen la misma pregunta dos veces.' -%}
+{%- assign t_empty_link = 'Díganos qué buscaba' -%}
+{%- else %}
+{%- assign t_search = 'Search the guides' -%}{%- assign t_ph = 'Search: WPQR, ISO 9606…' -%}
+{%- assign t_all = 'All' -%}{%- assign t_types = 'Resource type' -%}{%- assign t_topics = 'Guide topics' -%}
+{%- assign t_one = '1 resource' -%}{%- assign t_many = '{n} resources' -%}
+{%- assign t_found_one = '1 result' -%}{%- assign t_found_many = '{n} results' -%}
+{%- assign t_empty = 'Nothing on that yet.' -%}
+{%- assign t_empty_more = 'We write a guide when shops ask us the same question twice.' -%}
+{%- assign t_empty_link = 'Tell us what you were looking for' -%}
+{%- endif -%}
+
+{%- if include.part == 'list' %}
+{%- assign first = true -%}
+{%- for gp in gd.groups %}
+{%- assign gid = gp[0] -%}{%- assign grp = gp[1] -%}
+{%- assign items = live | where: 'group', gid -%}
+{%- if items.size == 0 %}{% continue %}{% endif %}
+    <section class="page-section container{% if first %} u-flush-top{% endif %} guide-group" id="{{ gid }}" data-guide-group>
+        <div class="guide-group-head">
+            <span class="eyebrow" data-guide-count>{% if items.size == 1 %}{{ t_one }}{% else %}{{ t_many | replace: '{n}', items.size }}{% endif %}</span>
+            <h2>{{ grp.title[L] | escape }}</h2>
+            <p>{{ grp.intro[L] }}</p>
+        </div>
+        <div class="guide-list">
+{%- for it in items %}
+{%- capture hay %}{{ it.title[L] }} {{ it.blurb[L] }} {{ it.kind[L] }} {{ grp.name[L] }} {{ gd.types[it.type][L] }} {{ it.keywords }}{% endcapture %}
+            <a href="{{ px }}{{ it.path }}" class="glass-card guide-card" data-guide-card data-type="{{ it.type }}" data-search="{{ hay | strip_newlines | downcase | escape }}">
+                <span class="guide-kind{% if it.tool %} guide-kind-tool{% endif %}">{{ it.kind[L] }}</span>
+                <h3>{{ it.title[L] }}</h3>
+                <p>{{ it.blurb[L] }}</p>
+                <span class="card-link">{{ it.cta[L] }} →</span>
+            </a>
+{%- endfor %}
+        </div>
+    </section>
+{%- assign first = false -%}
+{%- endfor %}
+    <section class="page-section container u-flush-top guide-empty" data-guide-empty hidden>
+        <p class="guide-empty-title">{{ t_empty }}</p>
+        <p>{{ t_empty_more }} <a href="{{ px }}/contact.html">{{ t_empty_link }}&nbsp;→</a></p>
+    </section>
+{%- else %}
+{%- assign used = live | map: 'type' | uniq -%}
+            <div class="guide-search" data-guide-search data-min="{{ search_min }}" data-total="{{ live.size }}"
+                 data-one="{{ t_one }}" data-many="{{ t_many }}" data-found-one="{{ t_found_one }}" data-found-many="{{ t_found_many }}" hidden>
+                <label class="guide-search-field">
+                    <span class="guide-search-label">{{ t_search }}</span>
+                    <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 20l-3.6-3.6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                    <input type="search" name="q" placeholder="{{ t_ph }}" autocomplete="off" spellcheck="false" enterkeyhint="search" data-guide-q>
+                </label>
+{%- if used.size > 1 %}
+                <div class="guide-types" role="group" aria-label="{{ t_types }}">
+                    <button type="button" data-guide-type="" aria-pressed="true">{{ t_all }}</button>
+{%- for tp in gd.types %}{% if used contains tp[0] %}
+                    <button type="button" data-guide-type="{{ tp[0] }}" aria-pressed="false">{{ tp[1][L] }}</button>
+{%- endif %}{% endfor %}
+                </div>
+{%- endif %}
+                <p class="guide-search-status" role="status" aria-live="polite" data-guide-status></p>
+            </div>
+            <div class="guide-jump" role="navigation" aria-label="{{ t_topics }}">
+{%- for gp in gd.groups %}{% assign n = live | where: 'group', gp[0] %}{% if n.size > 0 %}
+{%- assign nm = gp[1].name[L] %}
+                <a href="#{{ gp[0] }}">{{ nm | slice: 0 | upcase }}{{ nm | slice: 1, 200 | escape }}</a>
+{%- endif %}{% endfor %}
+            </div>
+{%- endif %}

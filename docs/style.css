@@ -4320,8 +4320,8 @@ button.app-figure-frame:focus-visible .app-figure-zoom-hint {
 }
 
 /* ------------------------------------------------------------
-   Guides hub: problem groups (heading + intro beside a stack of
-   guide cards), a jump row in the hero, and the compact two-door
+   Guides hub: topic groups (heading + intro beside a stack of
+   guide cards), search + jump row in the hero, and the compact two-door
    chooser used to close the hub and the neutral guides.
    ------------------------------------------------------------ */
 .guide-jump {
@@ -4342,6 +4342,81 @@ button.app-figure-frame:focus-visible .app-figure-zoom-hint {
     background: rgba(15, 23, 42, 0.5);
 }
 .guide-jump a:hover { border-color: rgba(96, 165, 250, 0.8); color: #fff; }
+.guide-jump a.is-empty { opacity: 0.4; }
+
+/* Hub search (_includes/guide-hub.html + main.js): shown only once the hub is long
+   enough, or with ?search=1. */
+.guide-search { max-width: 640px; margin: 1.9rem auto 0; text-align: left; }
+.guide-search[hidden] { display: none; }
+.guide-search-field {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.guide-search-label {
+    position: absolute; width: 1px; height: 1px; overflow: hidden;
+    clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap;
+}
+.guide-search-field svg {
+    position: absolute;
+    left: 1.05rem;
+    color: var(--text-muted);
+    pointer-events: none;
+}
+.guide-search-field input {
+    width: 100%;
+    padding: 0.85rem 1.1rem 0.85rem 2.9rem;
+    border: 1px solid rgba(59, 130, 246, 0.35);
+    border-radius: 999px;
+    background: rgba(15, 23, 42, 0.7);
+    color: var(--text-main);
+    font: inherit;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.guide-search-field input::placeholder { color: var(--text-muted); opacity: 0.85; }
+.guide-search-field input:focus {
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+.guide-types {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.4rem;
+    margin-top: 0.85rem;
+}
+.guide-types button {
+    padding: 0.35rem 0.85rem;
+    border: 1px solid rgba(148, 163, 184, 0.25);
+    border-radius: 999px;
+    background: transparent;
+    color: var(--text-muted);
+    font: inherit;
+    font-size: 0.84rem;
+    cursor: pointer;
+}
+.guide-types button:hover { color: var(--text-main); border-color: rgba(148, 163, 184, 0.5); }
+.guide-types button[aria-pressed="true"] {
+    color: #fff;
+    border-color: rgba(96, 165, 250, 0.8);
+    background: rgba(59, 130, 246, 0.18);
+}
+.guide-search-status {
+    min-height: 1.2em;
+    margin: 0.6rem 0 0;
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+.guide-search ~ .guide-jump { margin-top: 1rem; }
+.guide-card[hidden], .guide-group[hidden] { display: none; }
+.guide-group.u-flush-top { border-top: 0; }
+.guide-empty { max-width: 640px; text-align: center; }
+.guide-empty[hidden] { display: none; }
+.guide-empty-title { font-size: 1.15rem; color: var(--text-main); margin-bottom: 0.4rem; }
+.guide-empty p { color: var(--text-muted); }
 .guide-group {
     display: grid;
     grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.4fr);

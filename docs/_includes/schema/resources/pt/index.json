@@ -23,7 +23,7 @@
       "@id": "https://delteris.com/pt/resources/#page",
       "url": "https://delteris.com/pt/resources/",
       "name": "Recursos | Guias de Qualificação & Rastreabilidade de Soldadura | Elenchon",
-      "description": "Guias curtos e com fontes sobre qualificação e rastreabilidade de soldadura: pWPS vs WPQR vs WPS, validade da qualificação de soldadores segundo a ISO 9606-1 e a ASME IX, rastreabilidade por número de corrida, on-premise vs cloud, on-premise gerido e como escolher software de soldadura — organizados pelo problema que tem em mãos.",
+      "description": "Guias curtos e com fontes sobre qualificação e rastreabilidade de soldadura: pWPS vs WPQR vs WPS, validade da qualificação de soldadores segundo a ISO 9606-1 e a ASME IX, rastreabilidade por número de corrida, on-premise vs cloud, on-premise gerido e como escolher software de soldadura — organizados por tema.",
       "inLanguage": "pt-PT",
       "isPartOf": {
         "@id": "https://delteris.com/#website"

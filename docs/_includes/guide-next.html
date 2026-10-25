@@ -17,7 +17,7 @@
 {%- assign n = 0 -%}
 {%- for g in order -%}
 {%- for it in gd.guides -%}
-{%- if it.group == g and it.path != self_path and n < 3 -%}
+{%- if it.group == g and it.path != self_path and it.hidden != true and n < 3 -%}
 {%- assign picked = picked | append: it.id | append: ',' -%}
 {%- assign n = n | plus: 1 -%}
 {%- endif -%}

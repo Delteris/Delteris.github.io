@@ -23,7 +23,7 @@
       "@id": "https://delteris.com/resources/#page",
       "url": "https://delteris.com/resources/",
       "name": "Resources | Welding Qualification & Traceability Guides | Elenchon",
-      "description": "Short, sourced guides to welding qualification and traceability: pWPS vs WPQR vs WPS, welder qualification validity under ISO 9606-1 and ASME IX, heat-number traceability, on-premise vs cloud, managed on-premise and choosing welding software — grouped by the problem you are solving.",
+      "description": "Short, sourced guides to welding qualification and traceability: pWPS vs WPQR vs WPS, welder qualification validity under ISO 9606-1 and ASME IX, heat-number traceability, on-premise vs cloud, managed on-premise and choosing welding software — grouped by topic.",
       "inLanguage": "en",
       "isPartOf": {
         "@id": "https://delteris.com/#website"

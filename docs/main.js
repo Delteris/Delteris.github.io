@@ -1233,3 +1233,82 @@
         if (f && f.matches && f.matches('form[data-newsletter]') && !(hp && hp.value)) send('signup');
     }, true);
 })();
+
+/* Guides hub search (_includes/guide-hub.html). Hidden until the hub has data-min
+   resources, or with ?search=1. Filters cards by text (accent- and case-insensitive,
+   every word must match) and by type; empty topic sections hide, topic counts update,
+   and the query is kept in the address bar (?q=) so a search can be linked. */
+(function () {
+    var box = document.querySelector('[data-guide-search]');
+    if (!box) return;
+    var params = new URLSearchParams(location.search);
+    var total = +box.getAttribute('data-total') || 0;
+    if (total < (+box.getAttribute('data-min') || 0) && params.get('search') !== '1' && !params.get('q')) return;
+    box.hidden = false;
+
+    var input = box.querySelector('[data-guide-q]');
+    var status = box.querySelector('[data-guide-status]');
+    var typeBtns = Array.prototype.slice.call(box.querySelectorAll('[data-guide-type]'));
+    var groups = Array.prototype.slice.call(document.querySelectorAll('[data-guide-group]'));
+    var empty = document.querySelector('[data-guide-empty]');
+    var jump = {};
+    Array.prototype.forEach.call(document.querySelectorAll('.guide-jump a[href^="#"]'), function (a) {
+        jump[a.getAttribute('href').slice(1)] = a;
+    });
+    function fold(s) {
+        return (s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+    }
+    // data-one/data-many: the section counts; data-found-one/-many: the result line.
+    function word(prefix, n) {
+        return box.getAttribute('data-' + prefix + (n === 1 ? 'one' : 'many')).replace('{n}', n);
+    }
+    var cards = [];
+    groups.forEach(function (g) {
+        Array.prototype.forEach.call(g.querySelectorAll('[data-guide-card]'), function (c) {
+            cards.push({ el: c, group: g, type: c.getAttribute('data-type'), text: fold(c.getAttribute('data-search')) });
+        });
+    });
+    var type = '';
+
+    function apply() {
+        var terms = fold(input.value).split(/\s+/).filter(Boolean);
+        var shown = 0, perGroup = new Map();
+        cards.forEach(function (c) {
+            var ok = (!type || c.type === type) && terms.every(function (t) { return c.text.indexOf(t) !== -1; });
+            c.el.hidden = !ok;
+            if (ok) shown++;
+            perGroup.set(c.group, (perGroup.get(c.group) || 0) + (ok ? 1 : 0));
+        });
+        groups.forEach(function (g) {
+            var n = perGroup.get(g) || 0;
+            g.hidden = n === 0;
+            var count = g.querySelector('[data-guide-count]');
+            if (count) count.textContent = word('', n);
+            if (jump[g.id]) jump[g.id].classList.toggle('is-empty', n === 0);
+        });
+        // Keep the first visible section flush under the hero.
+        var firstShown = groups.filter(function (g) { return !g.hidden; })[0];
+        groups.forEach(function (g) { g.classList.toggle('u-flush-top', g === firstShown); });
+        var filtering = terms.length || type;
+        if (empty) empty.hidden = shown !== 0;
+        status.textContent = filtering ? word('found-', shown) : '';
+        if (history.replaceState) {
+            var p = new URLSearchParams(location.search);
+            if (input.value.trim()) p.set('q', input.value.trim()); else p.delete('q');
+            var qs = p.toString();
+            history.replaceState(null, '', location.pathname + (qs ? '?' + qs : '') + location.hash);
+        }
+    }
+    input.addEventListener('input', apply);
+    input.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && input.value) { input.value = ''; apply(); }
+    });
+    typeBtns.forEach(function (b) {
+        b.addEventListener('click', function () {
+            type = b.getAttribute('data-guide-type');
+            typeBtns.forEach(function (o) { o.setAttribute('aria-pressed', String(o === b)); });
+            apply();
+        });
+    });
+    if (params.get('q')) { input.value = params.get('q'); apply(); }
+})();

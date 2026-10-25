@@ -3,7 +3,7 @@ layout: default
 lang: es
 permalink: /es/resources/
 title: "Recursos | Guías de Cualificación &amp; Trazabilidad de Soldadura | Elenchon"
-description: "Guías breves y con fuentes sobre cualificación y trazabilidad de soldadura: pWPS vs WPQR vs WPS, validez de la cualificación de soldadores según la ISO 9606-1 y la ASME IX, trazabilidad por número de colada, on-premise vs nube, on-premise gestionado y cómo elegir software de soldadura — agrupadas por el problema que quiere resolver."
+description: "Guías breves y con fuentes sobre cualificación y trazabilidad de soldadura: pWPS vs WPQR vs WPS, validez de la cualificación de soldadores según la ISO 9606-1 y la ASME IX, trazabilidad por número de colada, on-premise vs nube, on-premise gestionado y cómo elegir software de soldadura — agrupadas por tema."
 og_description: "Guías breves y con fuentes sobre cualificación y trazabilidad de soldadura — WPS, WPQR, validez de la cualificación de soldadores, números de colada y más."
 og_image_alt: "Elenchon by Delteris — recursos de cualificación y trazabilidad de soldadura"
 og_image_dims: true
@@ -17,97 +17,12 @@ alt_url: "/resources/"
         <div class="hero-content">
             <span class="hero-eyebrow">Guías</span>
             <h1 class="text-glow">Guías de Cualificación<br>&amp; Trazabilidad de Soldadura.</h1>
-            <p class="hero-sub">Guías breves y con fuentes sobre los registros detrás de la calidad en soldadura, agrupadas por el problema que tiene delante. Escritas por el equipo que construye el software que los gestiona.</p>
-            <div class="guide-jump" role="navigation" aria-label="Temas de las guías">
-                <a href="#procedures">WPS &amp; cualificación de procedimientos</a>
-                <a href="#welders">Cualificación de soldadores</a>
-                <a href="#traceability">Trazabilidad</a>
-                <a href="#software">Elegir &amp; implantar software</a>
-            </div>
+            <p class="hero-sub">Guías breves y con fuentes sobre los registros detrás de la calidad en soldadura, agrupadas por tema. Escritas por el equipo que construye el software que los gestiona.</p>
+            {% include guide-hub.html %}
         </div>
     </header>
 
-    <section class="page-section container u-flush-top guide-group" id="procedures">
-        <div class="guide-group-head">
-            <span class="eyebrow">Problema 1</span>
-            <h2>WPS &amp; Cualificación de Procedimientos</h2>
-            <p>Qué registro prueba qué, y hasta dónde llega un procedimiento cualificado antes de necesitar un nuevo ensayo. Empiece aquí si un auditor le ha preguntado qué WPQR respalda una WPS.</p>
-        </div>
-        <div class="guide-list">
-            <a href="/es/resources/pwps-vs-wpqr-vs-wps/" class="glass-card guide-card">
-                <span class="guide-kind">Guía</span>
-                <h3>pWPS vs WPQR vs WPS: la diferencia explicada</h3>
-                <p>Borrador, prueba, producción: los tres registros de procedimiento lado a lado, cómo uno da paso al siguiente y la única diferencia real entre ISO y ASME.</p>
-                <span class="card-link">Comparar los tres registros →</span>
-            </a>
-            <a href="/es/heat-input-calculator.html" class="glass-card guide-card">
-                <span class="guide-kind guide-kind-tool">Herramienta en Atlas</span>
-                <h3>Calculadora de aporte térmico, limitada al rango de su WPQR</h3>
-                <p>Fije la ventana de aporte térmico que su WPQR cualificó para raíz, relleno y peinado, y mueva intensidad, tensión y velocidad de avance sin salir de ella.</p>
-                <span class="card-link">Ver cómo funciona la calculadora →</span>
-            </a>
-        </div>
-    </section>
-
-    <section class="page-section container guide-group" id="welders">
-        <div class="guide-group-head">
-            <span class="eyebrow">Problema 2</span>
-            <h2>Cualificación de Soldadores</h2>
-            <p>Un certificado archivado no es lo mismo que un soldador cualificado. Para cuando necesita saber qué mantiene viva una cualificación y qué la hace caducar sin avisar.</p>
-        </div>
-        <div class="guide-list">
-            <a href="/es/resources/welder-qualification-validity/" class="glass-card guide-card">
-                <span class="guide-kind">Guía</span>
-                <h3>Validez de la cualificación de soldadores: continuidad, caducidad y revalidación</h3>
-                <p>La confirmación semestral de la ISO 9606-1, las tres vías de revalidación y la regla de caducidad de la ASME IX — en una tabla, con cómo es un buen seguimiento.</p>
-                <span class="card-link">Conocer los dos plazos →</span>
-            </a>
-        </div>
-    </section>
-
-    <section class="page-section container guide-group" id="traceability">
-        <div class="guide-group-head">
-            <span class="eyebrow">Problema 3</span>
-            <h2>Trazabilidad</h2>
-            <p>Vincular una soldadura terminada con el acero del que se hizo, para la ISO 3834 y la EN 1090. Para cuando los certificados están archivados pero nadie sabe decir qué chapa fue a qué unión.</p>
-        </div>
-        <div class="guide-list">
-            <a href="/es/resources/heat-number-traceability/" class="glass-card guide-card">
-                <span class="guide-kind">Guía</span>
-                <h3>Cómo funciona la trazabilidad por número de colada</h3>
-                <p>Certificados de material y los tipos EN 10204, la transferencia en el corte — el paso donde la mayoría de los talleres rompe la cadena — y con qué debe vincularse una soldadura trazable.</p>
-                <span class="card-link">Seguir la cadena de la acería a la soldadura →</span>
-            </a>
-        </div>
-    </section>
-
-    <section class="page-section container guide-group" id="software">
-        <div class="guide-group-head">
-            <span class="eyebrow">Problema 4</span>
-            <h2>Elegir &amp; Implantar Software</h2>
-            <p>Antes de comprar: las preguntas que una lista de funciones oculta, y dónde debe funcionar el sistema. Léalas en este orden si parte de una hoja de cálculo.</p>
-        </div>
-        <div class="guide-list">
-            <a href="/es/how-to-choose-welding-software.html" class="glass-card guide-card">
-                <span class="guide-kind">Guía de compra</span>
-                <h3>Cómo elegir software de gestión de soldadura</h3>
-                <p>Las preguntas que deciden a largo plazo — registros de cualificación, propiedad de los datos, precios publicados, registro offline, dependencia — con una matriz neutral.</p>
-                <span class="card-link">Ver las preguntas clave →</span>
-            </a>
-            <a href="/es/welding-software-on-premise-vs-cloud.html" class="glass-card guide-card">
-                <span class="guide-kind">Guía de decisión</span>
-                <h3>Software de soldadura on-premise vs nube</h3>
-                <p>Propiedad, coste a lo largo de los años, trabajo offline y dependencia, sopesados con justicia — y qué situaciones favorecen a cada uno.</p>
-                <span class="card-link">Decidir dónde debe funcionar →</span>
-            </a>
-            <a href="/es/resources/managed-on-premise-software/" class="glass-card guide-card">
-                <span class="guide-kind">Explicación</span>
-                <h3>On-premise gestionado: on-premise sin la carga de TI</h3>
-                <p>Qué cambia cuando el proveedor instala, actualiza y repara el appliance en remoto — y cinco preguntas para cualquier proveedor on-premise.</p>
-                <span class="card-link">Ver cómo funciona el modelo gestionado →</span>
-            </a>
-        </div>
-    </section>
+{% include guide-hub.html part="list" %}
 
 {%- capture doors_intro %}
             <span class="eyebrow">Poner los Registros a Trabajar</span>
