@@ -1312,3 +1312,51 @@
     });
     if (params.get('q')) { input.value = params.get('q'); apply(); }
 })();
+
+/* Welding positions chart (resources/welding-positions.html): select a card to see it
+   larger in a dialog, with previous/next (also ←/→); print buttons pick what prints. */
+(function () {
+    var dlg = document.querySelector('[data-wp-modal]');
+    if (dlg && dlg.showModal) {
+        var cards = Array.prototype.slice.call(document.querySelectorAll('.wp-card'));
+        var m = {};
+        Array.prototype.forEach.call(dlg.querySelectorAll('[data-wp-m]'), function (el) { m[el.getAttribute('data-wp-m')] = el; });
+        var at = 0;
+        function show(i) {
+            at = (i + cards.length) % cards.length;
+            var c = cards[at], g = c.closest('.wp-group');
+            m.group.textContent = g ? g.getAttribute('data-group') : '';
+            m.figure.innerHTML = '';
+            m.figure.appendChild(c.querySelector('svg').cloneNode(true));
+            m.iso.textContent = c.querySelector('.wp-iso').textContent;
+            m.asme.textContent = c.querySelector('.wp-asme').textContent;
+            m.name.textContent = c.querySelector('.wp-name').textContent;
+            m.note.textContent = c.querySelector('.wp-note').textContent;
+            m.pos.textContent = (at + 1) + ' / ' + cards.length;
+        }
+        cards.forEach(function (c, i) {
+            var b = c.querySelector('.wp-card-open');
+            if (b) b.addEventListener('click', function () { show(i); dlg.showModal(); });
+        });
+        Array.prototype.forEach.call(dlg.querySelectorAll('[data-wp-step]'), function (b) {
+            b.addEventListener('click', function () { show(at + (+b.getAttribute('data-wp-step'))); });
+        });
+        dlg.querySelector('[data-wp-close]').addEventListener('click', function () { dlg.close(); });
+        dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
+        dlg.addEventListener('keydown', function (e) {
+            if (e.key === 'ArrowRight') { show(at + 1); e.preventDefault(); }
+            else if (e.key === 'ArrowLeft') { show(at - 1); e.preventDefault(); }
+        });
+        dlg.addEventListener('close', function () {
+            var b = cards[at] && cards[at].querySelector('.wp-card-open');
+            if (b) b.focus();
+        });
+    }
+    Array.prototype.forEach.call(document.querySelectorAll('[data-wp-print]'), function (b) {
+        b.addEventListener('click', function () {
+            document.documentElement.setAttribute('data-print', b.getAttribute('data-wp-print'));
+            window.print();
+        });
+    });
+    window.addEventListener('afterprint', function () { document.documentElement.removeAttribute('data-print'); });
+})();

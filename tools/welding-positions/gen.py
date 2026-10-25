@@ -80,10 +80,26 @@ class Scene:
         else:
             s.over.append(f'<path d="{d}" fill="none" stroke="#b45309" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/><path d="{d}" fill="none" stroke="#fbbf24" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><path d="{d}" fill="none" stroke="#fff3c4" stroke-width="1.2" stroke-dasharray="1.5 3" stroke-linecap="round" opacity="0.8"/>')
         s.allpts+=ps
-    def torch(s, at, direction, L=34):
-        d=norm(direction); tip=P(at); base=P(add(at,mul(d,L))); mid=P(add(at,mul(d,9)))
-        s.over.append(f'<line x1="{base[0]:.1f}" y1="{base[1]:.1f}" x2="{mid[0]:.1f}" y2="{mid[1]:.1f}" stroke="#cbd5e1" stroke-width="7" stroke-linecap="round"/><line x1="{mid[0]:.1f}" y1="{mid[1]:.1f}" x2="{tip[0]:.1f}" y2="{tip[1]:.1f}" stroke="#e2e8f0" stroke-width="2" stroke-linecap="round"/><circle cx="{tip[0]:.1f}" cy="{tip[1]:.1f}" r="2.6" fill="#fff7d6"/>')
-        s.allpts+=[tip,base]
+    def torch(s, at, direction, L=38):
+        # Torch / electrode holder: rose body and nozzle with a dark outline (reads on the
+        # dark card and on white paper, and against the grey steel), a short white wire
+        # and a glowing arc at the tip. Colour used by nothing else in the drawings.
+        d=norm(direction); q=lambda k: P(add(at,mul(d,k)))
+        tip=q(0); w1=q(5); n0=q(5.5); n1=q(14); b1=q(L)
+        dx,dy=b1[0]-tip[0],b1[1]-tip[1]; l=(dx*dx+dy*dy)**.5 or 1; nx,ny=-dy/l,dx/l
+        def quad(a,b,ha,hb): return [(a[0]+nx*ha,a[1]+ny*ha),(b[0]+nx*hb,b[1]+ny*hb),(b[0]-nx*hb,b[1]-ny*hb),(a[0]-nx*ha,a[1]-ny*ha)]
+        body=quad(n1,b1,4.2,4.2); noz=quad(n0,n1,2.4,4.6)
+        o='#0b1324'
+        s.over.append(
+            f'<g class="wp-torch">'
+            f'<circle cx="{tip[0]:.1f}" cy="{tip[1]:.1f}" r="7" fill="#fde68a" opacity="0.35"/>'
+            f'<line x1="{tip[0]:.1f}" y1="{tip[1]:.1f}" x2="{w1[0]:.1f}" y2="{w1[1]:.1f}" stroke="{o}" stroke-width="3.6" stroke-linecap="round"/>'
+            f'<line x1="{tip[0]:.1f}" y1="{tip[1]:.1f}" x2="{w1[0]:.1f}" y2="{w1[1]:.1f}" stroke="#f8fafc" stroke-width="1.6" stroke-linecap="round"/>'
+            f'<polygon points="{pts(body)}" fill="#e11d48" stroke="{o}" stroke-width="1.3" stroke-linejoin="round"/>'
+            f'<polygon points="{pts(noz)}" fill="#fb7185" stroke="{o}" stroke-width="1.3" stroke-linejoin="round"/>'
+            f'<circle cx="{tip[0]:.1f}" cy="{tip[1]:.1f}" r="2.8" fill="#fffbeb" stroke="#f59e0b" stroke-width="1.2"/>'
+            f'</g>')
+        s.allpts+=[tip,b1]
     def arrow(s, ps3):
         ps=[P(p) for p in ps3]; s.allpts+=ps
         d="M"+" L".join(f"{x:.1f},{y:.1f}" for x,y in ps)

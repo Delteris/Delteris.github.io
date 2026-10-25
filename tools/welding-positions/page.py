@@ -1,7 +1,9 @@
 import json, html
 S=json.load(open('./svgs.json'))
 def card(key, iso, asme, name, note):
+    label=html.escape(f"Enlarge {iso}, {asme.replace('↑','up').replace('↓','down')}: {name}")
     return f'''                <figure class="wp-card">
+                    <button type="button" class="wp-card-open" aria-label="{label}" aria-haspopup="dialog"></button>
                     {S[key]}
                     <figcaption>
                         <span class="wp-codes"><span class="wp-iso">{iso}</span><span class="wp-asme">{asme}</span></span>
@@ -41,7 +43,8 @@ groups=[
   ("pf-PJ","PJ","5F ↓","Fixed, axis horizontal, down","Welding round the pipe from top to bottom."),
  ]),
 ]
-chart="\n".join(f'''            <div class="wp-group" id="{gid}">
+chart="\n".join(f'''            <div class="wp-group" id="{gid}" data-group="{h}">
+                <p class="wp-print-head" aria-hidden="true"><span>Welding positions · ISO 6947 and ASME IX / AWS</span><span>delteris.com/resources/welding-positions/</span></p>
                 <h3 class="wp-group-h">{h}<span>{sub}</span></h3>
                 <div class="wp-grid">
 {chr(10).join(card(*c) for c in cards)}

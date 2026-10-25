@@ -38,13 +38,33 @@ guide_pitch_link: "Atlas reads them, PF as uphill and PG as downhill"
         <div class="section-header">
             <span class="eyebrow">The Chart</span>
             <h2>Every Position, Plate and Pipe</h2>
-            <p class="subtitle">The big code is ISO 6947; beside it, ASME/AWS. Up and down in a drawing are up and down in the workshop. Blue arrows show the welding direction, or the pipe turning.</p>
+            <p class="subtitle">The big code is ISO 6947; beside it, ASME/AWS. Up and down in a drawing are up and down in the workshop. Blue arrows show the welding direction, or the pipe turning; the red torch marks where the weld is made. Select a drawing to see it larger.</p>
         </div>
 {{CHART}}
-        <p class="wp-print-row"><button type="button" class="btn btn-secondary" onclick="window.print()">Print the chart</button><span class="wp-print-note">Prints on A4 or Letter, one page per group.</span></p>
+        <p class="wp-print-row"><button type="button" class="btn btn-secondary" data-wp-print="chart">Print the chart</button><span class="wp-print-note">A4 or Letter, one page per group, on white to save ink.</span></p>
+        <dialog class="wp-modal" aria-labelledby="wp-modal-name" data-wp-modal>
+            <div class="wp-modal-inner">
+                <div class="wp-modal-top">
+                    <span class="wp-modal-group" data-wp-m="group"></span>
+                    <button type="button" class="wp-modal-close" aria-label="Close" data-wp-close>×</button>
+                </div>
+                <div class="wp-modal-figure" data-wp-m="figure"></div>
+                <div class="wp-modal-cap">
+                    <span class="wp-codes"><span class="wp-iso" data-wp-m="iso"></span><span class="wp-asme" data-wp-m="asme"></span></span>
+                    <h3 class="wp-name" id="wp-modal-name" data-wp-m="name"></h3>
+                    <p class="wp-note" data-wp-m="note"></p>
+                </div>
+                <div class="wp-modal-nav">
+                    <button type="button" data-wp-step="-1" aria-label="Previous position">← Previous</button>
+                    <span class="wp-modal-pos" data-wp-m="pos"></span>
+                    <button type="button" data-wp-step="1" aria-label="Next position">Next →</button>
+                </div>
+            </div>
+        </dialog>
     </section>
 
-    <section class="page-section container">
+    <section class="page-section container wp-xref" id="cross-reference">
+        <p class="wp-print-head" aria-hidden="true"><span>Welding positions · ISO 6947 and ASME IX / AWS</span><span>delteris.com/resources/welding-positions/</span></p>
         <div class="section-header">
             <span class="eyebrow">Cross-Reference</span>
             <h2>ISO 6947 to ASME and AWS</h2>
@@ -65,6 +85,7 @@ guide_pitch_link: "Atlas reads them, PF as uphill and PG as downhill"
             </table>
         </div>
         <p class="feature-note">The equivalents are for the test positions. Each system draws its own tolerances on how far a joint may tilt or turn before it counts as another position, so a production joint near a boundary is judged by the standard your work is qualified to.</p>
+        <p class="wp-print-row"><button type="button" class="btn btn-secondary" data-wp-print="table">Print the table</button><span class="wp-print-note">Fits on one A4 or Letter page.</span></p>
     </section>
 
     <section class="page-section container">
@@ -78,52 +99,9 @@ guide_pitch_link: "Atlas reads them, PF as uphill and PG as downhill"
                 <li><strong>H-L045 and J-L045 are the inclined pipe.</strong> H welds upwards, J downwards, L045 is the 45° slope of the pipe axis. It's the most demanding fixed-pipe position, and a common choice for welder tests because it covers the most ground.</li>
                 <li><strong>ASME numbers go 1 to 6.</strong> 1 flat, 2 horizontal, 3 vertical, 4 overhead for plate; for pipe, 1 is rotated, 2 has the axis vertical, 5 the axis horizontal and fixed, 6 the axis at 45° and fixed. G is a groove weld, F a fillet weld, and R in 2FR means the pipe is rotated.</li>
                 <li><strong>Up or down lives in different places.</strong> ISO writes it in the code (PF up, PG down). ASME writes 3G for both and records the progression as its own variable, so a WPS or welder qualification to ASME says "uphill" or "downhill" separately.</li>
+                <li><strong>Downhill has its own uses.</strong> Welding downwards (PG on plate, PJ and J-L045 on pipe) is common on pipelines with cellulosic electrodes and on thin sheet.</li>
+                <li><strong>The test position decides what a welder may weld.</strong> One test usually covers several production positions, and the rules come from the qualification standard, not from ISO 6947: ISO 9606-1 and ASME Section IX (QW-461.9) each have a table of which test position covers which. The harder positions cover more, so a 6G or H-L045 pipe test covers most of them. Direction counts too: a test welded upwards doesn't cover welding downwards.</li>
             </ul>
-        </div>
-    </section>
-
-    <section class="page-section container" id="faq">
-        <div class="section-header">
-            <span class="eyebrow">Questions &amp; Answers</span>
-            <h2>Welding Positions, Answered</h2>
-        </div>
-        <div class="faq-list">
-            <details class="faq-item">
-                <summary><h3>Is PF the same as 3G?</h3></summary>
-                <div class="faq-body">
-                    <p>For a plate butt weld welded upwards, yes. 3G on its own covers both directions; PF is specifically vertical up, and PG vertical down. On a fillet weld the ASME equivalent is 3F.</p>
-                </div>
-            </details>
-            <details class="faq-item">
-                <summary><h3>What's the difference between 5G and 6G?</h3></summary>
-                <div class="faq-body">
-                    <p>Both are fixed pipe. In 5G the axis is horizontal, so the welder goes round the pipe through flat, vertical and overhead (ISO PH upwards, PJ downwards). In 6G the axis is inclined at 45°, which adds the horizontal component on top (ISO H-L045 upwards, J-L045 downwards).</p>
-                </div>
-            </details>
-            <details class="faq-item">
-                <summary><h3>What does H-L045 mean?</h3></summary>
-                <div class="faq-body">
-                    <p>It's ISO 6947's code for a fixed pipe with its axis at 45°, welded upwards: H for upwards, L045 for the 45° slope. J-L045 is the same pipe welded downwards. The ASME equivalent is 6G.</p>
-                </div>
-            </details>
-            <details class="faq-item">
-                <summary><h3>What is 2FR?</h3></summary>
-                <div class="faq-body">
-                    <p>A pipe-to-plate fillet weld with the pipe axis horizontal and the pipe rotated during welding, so the weld is always made in the horizontal position at the top. In ISO 6947 it's PB with the pipe rotated.</p>
-                </div>
-            </details>
-            <details class="faq-item">
-                <summary><h3>Does one position test qualify a welder for the others?</h3></summary>
-                <div class="faq-body">
-                    <p>Usually for several, and the rules are set by the qualification standard, not by ISO 6947. ISO 9606-1 and ASME Section IX (QW-461.9) each have a table of which test position qualifies which production positions. The harder positions cover more: a 6G or H-L045 pipe test covers most positions. Welding direction matters too, so a test welded upwards doesn't cover welding downwards.</p>
-                </div>
-            </details>
-            <details class="faq-item">
-                <summary><h3>Which way is the welding direction in PF?</h3></summary>
-                <div class="faq-body">
-                    <p>Upwards, from the bottom of the joint to the top. PG is the opposite, top to bottom. Welding downwards (PG, or PJ and J-L045 on pipe) is common on pipelines with cellulosic electrodes and on thin sheet.</p>
-                </div>
-            </details>
         </div>
     </section>
 

@@ -4575,17 +4575,110 @@ button.app-figure-frame:focus-visible .app-figure-zoom-hint {
 .wp-note { display: block; color: var(--text-muted); font-size: 0.86rem; margin-top: 3px; line-height: 1.45; }
 .wp-print-row { margin-top: 1.6rem; display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
 .wp-print-note { color: var(--text-muted); font-size: 0.88rem; }
+.wp-print-head { display: none; }
+
+/* Click a card to see it larger (main.js: [data-wp-modal]). The button covers the card. */
+.wp-card { position: relative; transition: border-color 0.15s ease, transform 0.15s ease; }
+.wp-card:hover { border-color: rgba(96, 165, 250, 0.55); }
+.wp-card-open {
+    position: absolute; inset: 0; z-index: 1;
+    border: 0; padding: 0; margin: 0; background: none;
+    border-radius: inherit; cursor: zoom-in;
+}
+.wp-card-open:focus-visible { outline: 2px solid var(--accent-blue); outline-offset: 2px; }
+.wp-modal {
+    margin: auto;
+    width: min(680px, calc(100vw - 32px));
+    max-height: calc(100dvh - 32px);
+    padding: 0;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    border-radius: 18px;
+    background: #0b1428;
+    color: var(--text-main);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.55);
+    overflow: auto;
+}
+.wp-modal::backdrop { background: rgba(2, 6, 16, 0.72); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); }
+.wp-modal[open] { animation: wp-modal-in 0.18s ease-out; }
+@keyframes wp-modal-in { from { opacity: 0; transform: scale(0.96); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .wp-modal[open] { animation: none; } }
+.wp-modal-inner { padding: 14px 22px 18px; }
+.wp-modal-top { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.wp-modal-group {
+    font-family: 'Space Grotesk', sans-serif; font-size: 0.75rem; font-weight: 600;
+    letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent-blue);
+}
+.wp-modal-close {
+    width: 36px; height: 36px; border-radius: 50%;
+    border: 1px solid rgba(148, 163, 184, 0.25); background: transparent;
+    color: var(--text-main); font-size: 1.35rem; line-height: 1; cursor: pointer;
+}
+.wp-modal-close:hover { border-color: rgba(148, 163, 184, 0.6); }
+.wp-modal-figure .wp-svg { max-height: 58dvh; margin: 0 auto; }
+.wp-modal-cap { margin-top: 4px; }
+.wp-modal-cap .wp-iso { font-size: 2.3rem; }
+.wp-modal-cap .wp-asme { font-size: 1.1rem; }
+.wp-modal-cap .wp-name { font-size: 1.2rem; margin: 6px 0 0; }
+.wp-modal-cap .wp-note { font-size: 0.98rem; margin: 4px 0 0; }
+.wp-modal-nav { display: flex; align-items: center; justify-content: space-between; gap: 0.8rem; margin-top: 16px; padding-top: 12px; border-top: 1px solid rgba(148, 163, 184, 0.14); }
+.wp-modal-nav button {
+    border: 1px solid rgba(59, 130, 246, 0.35); background: transparent; color: var(--text-main);
+    border-radius: 999px; padding: 0.4rem 0.9rem; font: inherit; font-size: 0.88rem; cursor: pointer;
+}
+.wp-modal-nav button:hover { border-color: rgba(96, 165, 250, 0.8); }
+.wp-modal-pos { font-size: 0.85rem; color: var(--text-muted); }
+
+/* Print (main.js sets html[data-print] to "chart" or "table" from the buttons; Ctrl+P
+   prints both). Only the chart and the cross-reference print, on white, no page chrome. */
+@page { margin: 12mm; }
 @media print {
-    body * { visibility: hidden; }
-    .wp-chart, .wp-chart * { visibility: visible; }
-    .wp-chart { position: absolute; left: 0; top: 0; width: 100%; padding: 0; color: #000; }
-    .wp-chart .section-header .eyebrow, .wp-print-row { display: none; }
-    .wp-chart h2, .wp-group-h, .wp-iso, .wp-name { color: #000; }
-    .wp-chart .subtitle, .wp-group-h span, .wp-note { color: #333; }
-    .wp-group { break-after: page; }
-    .wp-grid { grid-template-columns: repeat(3, 1fr); }
-    .wp-card { background: #0a1224; border-color: #0a1224; break-inside: avoid; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-    .wp-card .wp-name { color: #f1f5f9; }
-    .wp-card .wp-note { color: #cbd5e1; }
-    .wp-card .wp-iso { color: #fff; }
+    html, body { background: #fff !important; color: #000 !important; }
+    body > *:not(main) { display: none !important; }
+    main > * { display: none !important; }
+    main > .wp-chart, main > .wp-xref { display: block !important; }
+    html[data-print="chart"] main > .wp-xref,
+    html[data-print="table"] main > .wp-chart { display: none !important; }
+    .wp-chart, .wp-xref { padding: 0 !important; margin: 0 !important; max-width: none !important; width: auto !important; }
+    .wp-chart > .section-header, .wp-print-row, .wp-modal, .wp-card-open, .wp-xref .eyebrow { display: none !important; }
+    .wp-xref { break-before: page; }
+    html[data-print="table"] .wp-xref { break-before: auto; }
+    .wp-print-head {
+        display: flex; justify-content: space-between; gap: 1rem;
+        font: 8pt/1.3 Inter, system-ui, sans-serif; color: #555;
+        border-bottom: 0.5pt solid #bbb; padding-bottom: 2mm; margin: 0 0 5mm;
+    }
+    .wp-group { margin: 0 !important; break-after: page; }
+    .wp-group:last-of-type { break-after: auto; }
+    .wp-group-h { color: #000; font-size: 16pt; margin-bottom: 4mm; }
+    .wp-group-h span { color: #444; font-size: 10pt; }
+    .wp-grid { grid-template-columns: repeat(3, 1fr); gap: 4mm; }
+    .wp-card {
+        background: #fff !important; border: 0.6pt solid #c3cad5 !important; border-radius: 3mm;
+        backdrop-filter: none !important; box-shadow: none !important; break-inside: avoid;
+        padding: 2mm 3.5mm 3.5mm;
+    }
+    .wp-svg, .wp-asme { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .wp-iso { color: #000 !important; font-size: 17pt; }
+    .wp-asme { color: #92400e !important; border-color: #d97706 !important; background: #fffbeb !important; }
+    .wp-name { color: #000 !important; }
+    .wp-note { color: #333 !important; font-size: 8.5pt; }
+    .wp-xref .section-header { text-align: left; margin: 0 0 4mm; }
+    .wp-xref h2 { color: #000 !important; font-size: 16pt; text-shadow: none; }
+    .wp-xref .matrix-scroll { overflow: visible; max-width: none; }
+    .wp-xref table {
+        min-width: 0 !important; width: 100%; background: none !important; border: 0.6pt solid #999 !important;
+        backdrop-filter: none !important; border-radius: 0; font-size: 9.5pt;
+    }
+    .wp-xref th, .wp-xref td {
+        color: #000 !important; background: none !important; border-bottom: 0.5pt solid #ccc !important;
+        padding: 1.5mm 3mm !important; font-size: 9.5pt !important; position: static !important;
+    }
+    .wp-xref thead th { background: #eef1f5 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; font-size: 8.5pt !important; color: #000 !important; }
+    .wp-xref tr { break-inside: avoid; }
+    .wp-xref .fm-name { display: inline !important; color: #000 !important; font-size: 9pt !important; font-weight: 600; }
+    .wp-xref .fm-sub { display: inline !important; color: #555 !important; margin: 0 0 0 2mm !important; font-size: 9pt !important; }
+    .wp-xref tbody th, .wp-xref tbody td { padding: 1.2mm 3mm !important; line-height: 1.3 !important; }
+    .wp-xref thead th.fm-feature-head, .wp-xref tbody th[scope="row"] { width: 58% !important; }
+    .wp-xref thead th:not(.fm-feature-head), .wp-xref td { width: 21% !important; }
+    .wp-xref .feature-note { color: #333 !important; font-size: 8.5pt; margin-top: 3mm; }
 }

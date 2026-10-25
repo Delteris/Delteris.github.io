@@ -112,6 +112,9 @@ guides:
       pt: "Comparar os três registos"
       es: "Comparar los tres registros"
   - id: heat-input-calculator
+    # Hidden: the page is an Atlas feature page with no calculator on it, which reads as
+    # an ad among the guides. Unhide if a free working calculator is built for /resources/.
+    hidden: true
     group: procedures
     type: tool
     tool: true
