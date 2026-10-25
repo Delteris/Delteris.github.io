@@ -84,9 +84,14 @@ class Scene:
         # Torch / electrode holder: rose body and nozzle with a dark outline (reads on the
         # dark card and on white paper, and against the grey steel), a short white wire
         # and a glowing arc at the tip. Colour used by nothing else in the drawings.
-        d=norm(direction); q=lambda k: P(add(at,mul(d,k)))
-        tip=q(0); w1=q(5); n0=q(5.5); n1=q(14); b1=q(L)
-        dx,dy=b1[0]-tip[0],b1[1]-tip[1]; l=(dx*dx+dy*dy)**.5 or 1; nx,ny=-dy/l,dx/l
+        # Laid out in SCREEN space along the projected direction, so every torch is the
+        # same length on the card however much it points towards the viewer.
+        tip=P(at); far=P(add(at,mul(norm(direction),10)))
+        dx,dy=far[0]-tip[0],far[1]-tip[1]; l=(dx*dx+dy*dy)**.5
+        if l<2.5: dx,dy,l=0.55,-0.83,1.0          # pointing straight at the viewer: lean it up-right
+        ux,uy=dx/l,dy/l; nx,ny=-uy,ux
+        q=lambda k:(tip[0]+ux*k, tip[1]+uy*k)
+        w1=q(5); n0=q(5.5); n1=q(14); b1=q(L)
         def quad(a,b,ha,hb): return [(a[0]+nx*ha,a[1]+ny*ha),(b[0]+nx*hb,b[1]+ny*hb),(b[0]-nx*hb,b[1]-ny*hb),(a[0]-nx*ha,a[1]-ny*ha)]
         body=quad(n1,b1,4.2,4.2); noz=quad(n0,n1,2.4,4.6)
         o='#0b1324'
@@ -253,7 +258,8 @@ def pipe_fillet(kind):
         n=norm((1,1,0)); u=norm((1,-1,0))
         s.box(add(add((0,0,0),mul(u,-PW)),add(mul(n,-T),(0,0,-PW))),mul(u,2*PW),mul(n,T),(0,0,2*PW))
         s.pipe((0,0,0),n,R,PL+6); s.ring(mul(n,1.5),n,R*1.08)
-        s.torch(add(mul(n,2),mul(norm(add(u,mul(n,0))), -0.0)) if False else add(mul(n,2),(0,R+2,0)),(0.2,1,0.3))
+        top=norm((-1,1,0))                       # radial direction of the ring's highest point
+        s.torch(add(mul(n,1.5),mul(top,R*1.08+1)),add(add(top,(0,0.6,0)),(0,0,0.35)))
         s.arc_arrow(mul(n,PL+12),n,R*1.25,0.3,2.9)
     return s
 for k in ('PA','PB','PB-rot','PD','PH','PJ'):
