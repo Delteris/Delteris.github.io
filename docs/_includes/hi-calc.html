@@ -1,24 +1,28 @@
 {%- comment %} Free, basic heat input calculator (heat-input-calculator.html, EN/PT/ES).
      Deliberately basic: k typed in by hand (no process list, no pre-fill), arcs typed in
      row by row (tandem / multi-wire summed), no WPQR window. Atlas's edge — k from the
-     WPS's process, clamping to the WPQR window, loading a WPS head by head — is listed beside it. Logic in main.js ([data-hi-calc]).
+     WPS's process, clamping to the WPQR window, loading a WPS head by head — is one quiet line under
+     the results, no button: this is a tool first. Logic in main.js ([data-hi-calc]).
      Formulas: ISO/TR 17671-1 (EN 1011-1) Q = k·Σ(U·I)·60/(v·1000) kJ/mm;
                ASME IX QW-409.1(a) heat input = Σ(V·A)·60/v J/in (v in in/min, no k).
 {%- endcomment %}
 {%- assign L = page.lang | default: 'en' -%}
 {%- if L == 'en' %}{% assign px = '' %}{% else %}{% assign px = '/' | append: L %}{% endif -%}
 {%- if L == 'pt' %}
-{%- assign t = 'Calculadora gratuita|Calcule o aporte térmico|Um arco ou vários, valores introduzidos à mão. Nada é guardado nem enviado.|Corrente|Tensão|Velocidade de avanço|Fator k|Rendimento térmico do seu processo, da ISO/TR 17671-1 (EN 1011-1). Introduza-o à mão.|Aporte térmico, ISO/TR 17671-1 · EN 1011-1|Introduza k para ver este valor|Energia do arco (k = 1)|ASME IX, QW-409.1(a)|sem fator k, por polegada|Introduza corrente, tensão e velocidade.|k acima de 1 não é um rendimento — confirme o valor.|No Elenchon Atlas|O k vem do processo da WPS.|Defina a janela que o seu WPQR qualificou e os cursores param nos limites.|Carregue uma WPS da biblioteca e as gamas preenchem-se sozinhas.|Montagens tandem e multi-fio carregadas da WPS, cabeça a cabeça.|Pedir teste gratuito|Ver como funciona&nbsp;↓' | split: '|' -%}
+{%- assign t = 'Calculadora gratuita|Calcule o aporte térmico|Um arco ou vários, valores introduzidos à mão. Nada é guardado nem enviado.|Corrente|Tensão|Velocidade de avanço|Fator k|Rendimento térmico do seu processo, da ISO/TR 17671-1 (EN 1011-1). Introduza-o à mão.|Aporte térmico, ISO/TR 17671-1 · EN 1011-1|Introduza k para ver este valor|Energia do arco (k = 1)|ASME IX, QW-409.1(a)|sem fator k, por polegada|Introduza corrente, tensão e velocidade.|k acima de 1 não é um rendimento — confirme o valor.' | split: '|' -%}
 {%- elsif L == 'es' %}
-{%- assign t = 'Calculadora gratuita|Calcule el aporte térmico|Un arco o varios, valores introducidos a mano. No se guarda ni se envía nada.|Intensidad|Tensión|Velocidad de avance|Factor k|Rendimiento térmico de su proceso, de la ISO/TR 17671-1 (EN 1011-1). Introdúzcalo a mano.|Aporte térmico, ISO/TR 17671-1 · EN 1011-1|Introduzca k para ver este valor|Energía del arco (k = 1)|ASME IX, QW-409.1(a)|sin factor k, por pulgada|Introduzca intensidad, tensión y velocidad.|Un k por encima de 1 no es un rendimiento — compruebe el valor.|En Elenchon Atlas|El k sale del proceso de la WPS.|Fije la ventana que su WPQR cualificó y los cursores se detienen en sus límites.|Cargue una WPS de la biblioteca y los rangos se rellenan solos.|Montajes tándem y multihilo cargados desde la WPS, cabezal a cabezal.|Solicitar prueba gratuita|Ver cómo funciona&nbsp;↓' | split: '|' -%}
+{%- assign t = 'Calculadora gratuita|Calcule el aporte térmico|Un arco o varios, valores introducidos a mano. No se guarda ni se envía nada.|Intensidad|Tensión|Velocidad de avance|Factor k|Rendimiento térmico de su proceso, de la ISO/TR 17671-1 (EN 1011-1). Introdúzcalo a mano.|Aporte térmico, ISO/TR 17671-1 · EN 1011-1|Introduzca k para ver este valor|Energía del arco (k = 1)|ASME IX, QW-409.1(a)|sin factor k, por pulgada|Introduzca intensidad, tensión y velocidad.|Un k por encima de 1 no es un rendimiento — compruebe el valor.' | split: '|' -%}
 {%- else %}
-{%- assign t = 'Free calculator|Work Out Heat Input|One arc or several, values typed in. Nothing is saved or sent anywhere.|Current|Voltage|Travel speed|k factor|Thermal efficiency for your process, from ISO/TR 17671-1 (EN 1011-1). Type it in.|Heat input, ISO/TR 17671-1 · EN 1011-1|Enter k to see this value|Arc energy (k = 1)|ASME IX, QW-409.1(a)|no k factor, per inch|Enter current, voltage and travel speed.|A k above 1 isn’t an efficiency — check the value.|In Elenchon Atlas|k comes from the process on the WPS.|Set the window your WPQR qualified and the sliders stop at its limits.|Load a WPS from your library and its ranges fill in.|Tandem and multi-wire set-ups loaded from the WPS, head by head.|Get a free trial|See how it works&nbsp;↓' | split: '|' -%}
+{%- assign t = 'Free calculator|Work Out Heat Input|One arc or several, values typed in. Nothing is saved or sent anywhere.|Current|Voltage|Travel speed|k factor|Thermal efficiency for your process, from ISO/TR 17671-1 (EN 1011-1). Type it in.|Heat input, ISO/TR 17671-1 · EN 1011-1|Enter k to see this value|Arc energy (k = 1)|ASME IX, QW-409.1(a)|no k factor, per inch|Enter current, voltage and travel speed.|A k above 1 isn’t an efficiency — check the value.' | split: '|' -%}
 {%- endif %}
 {%- if L == 'pt' %}
+{%- assign t3 = 'No Elenchon Atlas, o mesmo cálculo vai buscar o k à WPS, fica dentro da janela do seu WPQR e carrega por si as montagens com várias cabeças.|Como funciona&nbsp;↓' | split: '|' -%}
 {%- assign t2 = 'Arco|+ Adicionar arco|Remover arco|Tandem ou multi-fio: uma linha por arco, cada uma com a sua corrente e tensão; a velocidade de avanço é comum. Fio duplo numa só fonte conta como um arco.' | split: '|' -%}
 {%- elsif L == 'es' %}
+{%- assign t3 = 'En Elenchon Atlas, el mismo cálculo toma el k de la WPS, se queda dentro de la ventana de su WPQR y carga por usted los montajes con varios cabezales.|Cómo funciona&nbsp;↓' | split: '|' -%}
 {%- assign t2 = 'Arco|+ Añadir arco|Quitar arco|Tándem o multihilo: una fila por arco, cada una con su intensidad y tensión; la velocidad de avance es común. El doble hilo en una sola fuente cuenta como un arco.' | split: '|' -%}
 {%- else %}
+{%- assign t3 = 'In Elenchon Atlas the same calculation takes k from the WPS, stays inside your WPQR’s window and loads multi-head set-ups for you.|How it works&nbsp;↓' | split: '|' -%}
 {%- assign t2 = 'Arc|+ Add an arc|Remove arc|Tandem or multi-wire: one row per arc, each with its own current and voltage; the travel speed is shared. Twin wire on one power source counts as one arc.' | split: '|' -%}
 {%- endif %}
     <section class="page-section container u-flush-top hi-calc-wrap" id="calculator">
@@ -71,17 +75,7 @@
                     </div>
                 </div>
                 <p class="hi-msg" data-hi-out="msg">{{ t[13] }}</p>
+                <p class="hi-calc-atlas-line">{{ t3[0] }} <a href="#overview">{{ t3[1] }}</a></p>
             </div>
-            <aside class="hi-calc-atlas glass-card">
-                <span class="eyebrow">{{ t[15] }}</span>
-                <ul>
-                    <li>{{ t[16] }}</li>
-                    <li>{{ t[17] }}</li>
-                    <li>{{ t[18] }}</li>
-                    <li>{{ t[19] }}</li>
-                </ul>
-                <a class="btn btn-primary" href="{{ px }}/wps-manager-contact.html">{{ t[20] }}</a>
-                <a class="hi-calc-more" href="#overview">{{ t[21] }}</a>
-            </aside>
         </div>
     </section>

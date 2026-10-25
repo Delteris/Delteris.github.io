@@ -129,9 +129,9 @@ guides:
       pt: "Aporte térmico a partir de corrente, tensão, velocidade e do seu fator k, em kJ/mm e em J/in da ASME."
       es: "Aporte térmico a partir de intensidad, tensión, velocidad y su factor k, en kJ/mm y en J/in de la ASME."
     blurb:
-      en: "Heat input from current, voltage, travel speed and your k factor, in kJ/mm and in ASME's J/in. In Atlas it also stays inside your WPQR's window."
-      pt: "Aporte térmico a partir de corrente, tensão, velocidade e do seu fator k, em kJ/mm e em J/in da ASME. No Atlas fica também dentro da janela do seu WPQR."
-      es: "Aporte térmico a partir de intensidad, tensión, velocidad y su factor k, en kJ/mm y en J/in de la ASME. En Atlas, además, se queda dentro de la ventana de su WPQR."
+      en: "Heat input from current, voltage, travel speed and your k factor, in kJ/mm and in ASME's J/in."
+      pt: "Aporte térmico a partir de corrente, tensão, velocidade e do seu fator k, em kJ/mm e em J/in da ASME."
+      es: "Aporte térmico a partir de intensidad, tensión, velocidad y su factor k, en kJ/mm y en J/in de la ASME."
     cta:
       en: "Calculate heat input"
       pt: "Calcular o aporte térmico"
