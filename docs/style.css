@@ -4726,13 +4726,30 @@ button.app-figure-frame:focus-visible .app-figure-zoom-hint {
     color: var(--text-main); font: inherit; font-size: 1.1rem; font-weight: 600; font-variant-numeric: tabular-nums;
 }
 .hi-input.is-bad { border-color: #f87171; }
+.hi-arcs { grid-column: 1 / -1; display: grid; gap: 0.9rem; }
+.hi-arc { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0.4rem 1.2rem; align-items: end; }
+.hi-arcs.is-multi .hi-arc { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) auto; }
+.hi-arc-n { grid-column: 1 / -1; font-size: 0.74rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent-blue); }
+.hi-arc-n[hidden], .hi-arc-remove[hidden], .hi-add-arc[hidden], .hi-arcs-note[hidden] { display: none; }
+.hi-arc-remove {
+    width: 40px; height: 46px; border-radius: 10px; border: 1px solid rgba(148, 163, 184, 0.25);
+    background: transparent; color: var(--text-muted); font-size: 1.3rem; line-height: 1; cursor: pointer;
+}
+.hi-arc-remove:hover { color: #fca5a5; border-color: rgba(248, 113, 113, 0.6); }
+.hi-arcs-foot { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1rem; }
+.hi-add-arc {
+    border: 1px dashed rgba(59, 130, 246, 0.5); background: transparent; color: var(--link);
+    border-radius: 999px; padding: 0.4rem 0.95rem; font: inherit; font-size: 0.86rem; font-weight: 500; cursor: pointer;
+}
+.hi-add-arc:hover { border-style: solid; color: var(--link-hover); }
+.hi-arcs-note { flex: 1 1 260px; color: var(--text-muted); font-size: 0.8rem; line-height: 1.45; }
 .hi-unit { padding: 0 0.85rem; color: var(--text-muted); font-weight: 500; font-size: 0.9rem; }
 .hi-input select {
     border: 0; border-left: 1px solid rgba(59, 130, 246, 0.25); background: transparent; color: var(--text-main);
     font: inherit; font-size: 0.88rem; font-weight: 500; padding: 0.7rem 0.6rem; outline: none; cursor: pointer;
 }
 .hi-input select option { background: #0b1428; color: var(--text-main); }
-.hi-results { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 0.8rem; margin-top: 1.5rem; }
+.hi-results { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 1fr); gap: 0.8rem; margin-top: 1.5rem; }
 .hi-result {
     display: flex; flex-direction: column; gap: 0.25rem; padding: 0.9rem 1rem;
     border-radius: 12px; border: 1px solid rgba(148, 163, 184, 0.16); background: rgba(5, 10, 20, 0.45);
@@ -4742,7 +4759,7 @@ button.app-figure-frame:focus-visible .app-figure-zoom-hint {
 .hi-r-value { font-family: 'Space Grotesk', sans-serif; font-size: 1.35rem; font-weight: 700; color: var(--text-main); font-variant-numeric: tabular-nums; }
 .hi-result-main .hi-r-value { font-size: 1.9rem; color: #fff; }
 .hi-r-value > span { font-family: Inter, sans-serif; font-size: 0.85rem; font-weight: 500; color: var(--text-muted); }
-.hi-r-sub { font-size: 0.78rem; color: var(--text-muted); line-height: 1.4; }
+.hi-r-sub { overflow-wrap: anywhere; font-size: 0.78rem; color: var(--text-muted); line-height: 1.4; }
 .hi-msg { margin: 0.9rem 0 0; min-height: 1.3em; font-size: 0.86rem; color: var(--text-muted); }
 .hi-msg.is-warn { color: #fbbf24; }
 .hi-calc-atlas { padding: 1.6rem 1.6rem 1.5rem; border-color: rgba(52, 211, 153, 0.3); }
@@ -4754,11 +4771,13 @@ button.app-figure-frame:focus-visible .app-figure-zoom-hint {
 .hi-calc-more { display: block; margin-top: 0.8rem; text-align: center; font-size: 0.88rem; color: var(--link); text-decoration: none; }
 .hi-calc-more:hover { color: var(--link-hover); text-decoration: underline; }
 @media (max-width: 900px) {
-    .hi-calc { grid-template-columns: 1fr; }
-    .hi-results { grid-template-columns: 1fr 1fr; }
+    .hi-calc { grid-template-columns: minmax(0, 1fr); }
+    .hi-results { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
     .hi-result-main { grid-column: 1 / -1; }
 }
 @media (max-width: 520px) {
     .hi-calc-main { padding: 1.4rem 1.1rem 1.2rem; }
-    .hi-calc-fields { grid-template-columns: 1fr; }
+    .hi-calc-fields { grid-template-columns: minmax(0, 1fr); }
+    .hi-arc, .hi-arcs.is-multi .hi-arc { gap: 0.4rem 0.6rem; }
+    .hi-arc-remove { width: 36px; }
 }

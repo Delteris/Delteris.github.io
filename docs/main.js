@@ -1376,19 +1376,27 @@
     window.addEventListener('afterprint', function () { document.documentElement.removeAttribute('data-print'); });
 })();
 
-/* Free heat input calculator (_includes/hi-calc.html). One arc, k typed in by hand.
-   ISO/TR 17671-1 (EN 1011-1): Q = k·U·I·60 / (v·1000) kJ/mm, v in mm/min.
-   ASME IX QW-409.1(a): V·A·60 / v J/in, v in in/min, no efficiency factor.
+/* Free heat input calculator (_includes/hi-calc.html). k typed in by hand; one row per
+   arc (tandem / multi-wire), travel speed shared, U·I summed across arcs.
+   ISO/TR 17671-1 (EN 1011-1): Q = k·Σ(U·I)·60 / (v·1000) kJ/mm, v in mm/min.
+   ASME IX QW-409.1(a): Σ(V·A)·60 / v J/in, v in in/min, no efficiency factor.
    Accepts a decimal comma (PT/ES keyboards). */
 (function () {
     var box = document.querySelector('[data-hi-calc]');
     if (!box) return;
+    var MAX_ARCS = 6;
     var lang = box.getAttribute('data-lang') || 'en';
-    var f = {};
-    Array.prototype.forEach.call(box.querySelectorAll('[data-hi]'), function (el) { f[el.getAttribute('data-hi')] = el; });
+    var arcsBox = box.querySelector('[data-hi-arcs]');
+    var foot = arcsBox.querySelector('.hi-arcs-foot');
+    var addBtn = box.querySelector('[data-hi-add]');
+    var note = box.querySelector('[data-hi-arcs-note]');
+    var arcWord = arcsBox.getAttribute('data-arc');
+    var template = arcsBox.querySelector('[data-hi-arc]').cloneNode(true);
+    var vIn = box.querySelector('[data-hi="v"]'), vu = box.querySelector('[data-hi="vu"]'), kIn = box.querySelector('[data-hi="k"]');
     var o = {};
     Array.prototype.forEach.call(box.querySelectorAll('[data-hi-out]'), function (el) { o[el.getAttribute('data-hi-out')] = el; });
     var formula = o.qsub.textContent;
+    function arcs() { return Array.prototype.slice.call(arcsBox.querySelectorAll('[data-hi-arc]')); }
     function num(el) {
         var s = (el.value || '').trim().replace(/\s/g, '').replace(',', '.');
         if (s === '') return null;
@@ -1397,19 +1405,47 @@
     }
     function fmt(n, d) { return n.toLocaleString(lang, { minimumFractionDigits: d, maximumFractionDigits: d }); }
     function mark(el, bad) { el.closest('.hi-input').classList.toggle('is-bad', bad); }
+    function relabel() {
+        var list = arcs(), many = list.length > 1;
+        list.forEach(function (a, n) {
+            var tag = a.querySelector('[data-hi-arc-n]');
+            tag.textContent = arcWord + ' ' + (n + 1);
+            tag.hidden = !many;
+            a.querySelector('[data-hi-remove]').hidden = !many;
+            a.querySelector('[data-hi-remove]').setAttribute('aria-label', a.querySelector('[data-hi-remove]').getAttribute('aria-label').replace(/\s\d+$/, '') + ' ' + (n + 1));
+            a.querySelectorAll('input').forEach(function (inp) {
+                inp.setAttribute('aria-label', inp.getAttribute('aria-label').replace(/^.*?:\s/, '').trim());
+                if (many) inp.setAttribute('aria-label', arcWord + ' ' + (n + 1) + ': ' + inp.getAttribute('aria-label'));
+            });
+        });
+        note.hidden = !many;
+        addBtn.hidden = list.length >= MAX_ARCS;
+        arcsBox.classList.toggle('is-multi', many);
+    }
     function run() {
-        var I = num(f.i), U = num(f.u), v = num(f.v), k = num(f.k), vmm = v * (+f.vu.value);
-        [['i', I], ['u', U], ['v', v]].forEach(function (p) { mark(f[p[0]], p[1] !== null && !(p[1] > 0)); });
-        mark(f.k, k !== null && !(k > 0));
-        var ok = I > 0 && U > 0 && v > 0;
+        var v = num(vIn), k = num(kIn), vmm = v * (+vu.value);
+        mark(vIn, v !== null && !(v > 0));
+        mark(kIn, k !== null && !(k > 0));
+        var sum = 0, parts = [], complete = 0, broken = false;
+        arcs().forEach(function (a) {
+            var iIn = a.querySelector('[data-hi="i"]'), uIn = a.querySelector('[data-hi="u"]');
+            var I = num(iIn), U = num(uIn);
+            mark(iIn, I !== null && !(I > 0));
+            mark(uIn, U !== null && !(U > 0));
+            if (I === null && U === null) return;          // an empty row is ignored
+            if (I > 0 && U > 0) { sum += U * I; complete++; parts.push(fmt(U, 1) + ' V × ' + fmt(I, 0) + ' A'); }
+            else broken = true;
+        });
+        var ok = complete > 0 && !broken && v > 0;
         var warn = '';
         if (ok) {
-            var e = U * I * 60 / (vmm * 1000);
+            var e = sum * 60 / (vmm * 1000);
             o.e.textContent = fmt(e, 2);
-            o.asme.textContent = Math.round(U * I * 60 / (vmm / 25.4)).toLocaleString(lang);
+            o.asme.textContent = Math.round(sum * 60 / (vmm / 25.4)).toLocaleString(lang);
+            var ui = parts.length > 1 ? '(' + parts.join(' + ') + ')' : parts[0];
             if (k > 0) {
                 o.q.textContent = fmt(k * e, 2);
-                o.qsub.textContent = fmt(k, 2) + ' × ' + fmt(U, 1) + ' V × ' + fmt(I, 0) + ' A × 60 / (' + fmt(vmm, 0) + ' mm/min × 1000)';
+                o.qsub.textContent = fmt(k, 2) + ' × ' + ui + ' × 60 / (' + fmt(vmm, 0) + ' mm/min × 1000)';
                 if (k > 1) warn = box.getAttribute('data-msg-k');
             } else {
                 o.q.textContent = '—';
@@ -1422,7 +1458,23 @@
         o.msg.textContent = warn || (ok ? '' : box.getAttribute('data-msg-empty'));
         o.msg.classList.toggle('is-warn', !!warn);
     }
+    addBtn.addEventListener('click', function () {
+        if (arcs().length >= MAX_ARCS) return;
+        var row = template.cloneNode(true);
+        arcsBox.insertBefore(row, foot);
+        relabel(); run();
+        row.querySelector('[data-hi="i"]').focus();
+    });
+    arcsBox.addEventListener('click', function (e) {
+        var b = e.target.closest('[data-hi-remove]');
+        if (!b || arcs().length < 2) return;
+        var row = b.closest('[data-hi-arc]'), list = arcs(), at = list.indexOf(row);
+        row.remove();
+        relabel(); run();
+        var next = arcs()[Math.max(0, at - 1)];
+        if (next) next.querySelector('[data-hi="i"]').focus();
+    });
     box.addEventListener('input', run);
     box.addEventListener('change', run);
-    run();
+    relabel(); run();
 })();
