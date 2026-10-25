@@ -23,24 +23,24 @@
 {%- if L == 'pt' %}
 {%- assign t_search = 'Pesquisar guias' -%}{%- assign t_ph = 'Pesquisar: WPQR, ISO 9606…' -%}
 {%- assign t_all = 'Todos' -%}{%- assign t_types = 'Tipo de recurso' -%}{%- assign t_topics = 'Temas dos guias' -%}
-{%- assign t_one = '1 recurso' -%}{%- assign t_many = '{n} recursos' -%}
-{%- assign t_found_one = '1 resultado' -%}{%- assign t_found_many = '{n} resultados' -%}
+{%- assign t_one = '1 recurso' -%}{%- assign t_many = '[n] recursos' -%}
+{%- assign t_found_one = '1 resultado' -%}{%- assign t_found_many = '[n] resultados' -%}
 {%- assign t_empty = 'Ainda não temos nada sobre isso.' -%}
 {%- assign t_empty_more = 'Escrevemos um guia quando as oficinas nos fazem a mesma pergunta duas vezes.' -%}
 {%- assign t_empty_link = 'Diga-nos o que procurava' -%}
 {%- elsif L == 'es' %}
 {%- assign t_search = 'Buscar guías' -%}{%- assign t_ph = 'Buscar: WPQR, ISO 9606…' -%}
 {%- assign t_all = 'Todo' -%}{%- assign t_types = 'Tipo de recurso' -%}{%- assign t_topics = 'Temas de las guías' -%}
-{%- assign t_one = '1 recurso' -%}{%- assign t_many = '{n} recursos' -%}
-{%- assign t_found_one = '1 resultado' -%}{%- assign t_found_many = '{n} resultados' -%}
+{%- assign t_one = '1 recurso' -%}{%- assign t_many = '[n] recursos' -%}
+{%- assign t_found_one = '1 resultado' -%}{%- assign t_found_many = '[n] resultados' -%}
 {%- assign t_empty = 'Todavía no tenemos nada sobre eso.' -%}
 {%- assign t_empty_more = 'Escribimos una guía cuando los talleres nos hacen la misma pregunta dos veces.' -%}
 {%- assign t_empty_link = 'Díganos qué buscaba' -%}
 {%- else %}
 {%- assign t_search = 'Search the guides' -%}{%- assign t_ph = 'Search: WPQR, ISO 9606…' -%}
 {%- assign t_all = 'All' -%}{%- assign t_types = 'Resource type' -%}{%- assign t_topics = 'Guide topics' -%}
-{%- assign t_one = '1 resource' -%}{%- assign t_many = '{n} resources' -%}
-{%- assign t_found_one = '1 result' -%}{%- assign t_found_many = '{n} results' -%}
+{%- assign t_one = '1 resource' -%}{%- assign t_many = '[n] resources' -%}
+{%- assign t_found_one = '1 result' -%}{%- assign t_found_many = '[n] results' -%}
 {%- assign t_empty = 'Nothing on that yet.' -%}
 {%- assign t_empty_more = 'We write a guide when shops ask us the same question twice.' -%}
 {%- assign t_empty_link = 'Tell us what you were looking for' -%}
@@ -54,7 +54,7 @@
 {%- if items.size == 0 %}{% continue %}{% endif %}
     <section class="page-section container{% if first %} u-flush-top{% endif %} guide-group" id="{{ gid }}" data-guide-group>
         <div class="guide-group-head">
-            <span class="eyebrow" data-guide-count>{% if items.size == 1 %}{{ t_one }}{% else %}{{ t_many | replace: '{n}', items.size }}{% endif %}</span>
+            <span class="eyebrow" data-guide-count>{% if items.size == 1 %}{{ t_one }}{% else %}{{ t_many | replace: '[n]', items.size }}{% endif %}</span>
             <h2>{{ grp.title[L] | escape }}</h2>
             <p>{{ grp.intro[L] }}</p>
         </div>

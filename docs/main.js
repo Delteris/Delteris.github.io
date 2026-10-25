@@ -1275,7 +1275,7 @@
     }
     // data-one/data-many: the section counts; data-found-one/-many: the result line.
     function word(prefix, n) {
-        return box.getAttribute('data-' + prefix + (n === 1 ? 'one' : 'many')).replace('{n}', n);
+        return box.getAttribute('data-' + prefix + (n === 1 ? 'one' : 'many')).replace('[n]', n);
     }
     var cards = [];
     groups.forEach(function (g) {
