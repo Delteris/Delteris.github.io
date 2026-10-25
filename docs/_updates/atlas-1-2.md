@@ -189,7 +189,7 @@ The qualification board has two new settings, in **Settings → Qualification bo
 
 No big new features for now. We'll keep doing what this release does: going through Atlas, finding where it still costs you time or attention, and taking that away. If something in Atlas costs you time, tell us; it goes straight on the list.
 
-Atlas 1.2 is live for every Atlas customer, at no extra cost. Questions, or a form that reads oddly: [write to us](/wps-manager-contact.html).
+Atlas 1.2 is live for every Atlas customer, at no extra cost. Questions, or a form that reads oddly: [write to us](/atlas-free-trial.html).
 
 The Delteris team
 

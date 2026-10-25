@@ -189,6 +189,6 @@ El panel de cualificaciones tiene dos ajustes nuevos, en **Configuración → Pa
 
 Ninguna gran funcionalidad nueva por ahora. Seguiremos haciendo lo que hace esta versión: recorrer Atlas, encontrar dónde todavía le cuesta tiempo o atención, y quitarlo. Si algo en Atlas le hace perder tiempo, díganoslo; va directamente a la lista.
 
-Atlas 1.2 ya está disponible para todos los clientes de Atlas, sin coste adicional. Dudas, o un formulario que se lee de forma extraña: [escríbanos](/es/wps-manager-contact.html).
+Atlas 1.2 ya está disponible para todos los clientes de Atlas, sin coste adicional. Dudas, o un formulario que se lee de forma extraña: [escríbanos](/es/atlas-free-trial.html).
 
 El equipo de Delteris

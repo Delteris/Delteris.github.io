@@ -79,14 +79,14 @@
       ],{% endif %}
       "offers": {
         "@type": "Offer",
-        "url": "https://delteris.com{{ sx_px }}/pricing.html",
+        "url": "https://delteris.com{{ sx_px }}/elenchon-pricing.html",
         "availability": "https://schema.org/PreOrder",
         "availabilityStarts": "2027-01-01"
       },
       "provider": {
         "@id": "https://delteris.com/#organization"
       },
-      "url": "https://delteris.com{{ sx_px }}/platform.html"
+      "url": "https://delteris.com{{ sx_px }}/elenchon-platform.html"
     },
     {
       "@type": "SoftwareApplication",

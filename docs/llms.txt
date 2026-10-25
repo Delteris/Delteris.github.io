@@ -30,7 +30,7 @@ Elenchon is on-premise welding traceability software for fabrication shops and h
 - Floor Asset & Consumable Control (maintenance hub, machine certification tracking, batch inventory) - Standard only; Lite excludes these
 - Bulletproof Data Sovereignty (on-premise appliance, automated local backups, tamper-evident hash-chained log of weighty management-console actions, post-quantum-safe encryption)
 
-A full plan-by-plan feature comparison (every capability by Lite/Standard/Premium) is on the pricing page: https://delteris.com/pricing.html#compare
+A full plan-by-plan feature comparison (every capability by Lite/Standard/Premium) is on the pricing page: https://delteris.com/elenchon-pricing.html#compare
 
 ## Elenchon Pricing (on-premise platform; EUR, per appliance, per month, excl. VAT)
 - Lite: €390/month, 20 workers included. The full traceability core — work capture, project tree and flowchart, BOM import, WPS/WPQR/WPQ workflow, ISO & ASME IX records, global custom roles and granular permissions, elastic templates, Phrakton networking, local backups, founder support by email. Expandable by up to two 10-worker blocks, to a 40-worker ceiling. Lite excludes the maintenance hub, machine certification tracking, consumable traceability, and offline work capture.
@@ -49,7 +49,7 @@ Three steps: scoping session with the founders, on-site installation of the hard
 
 ## Links
 - Home: https://delteris.com/
-- Platform (all six capabilities): https://delteris.com/platform.html
+- Platform (all six capabilities): https://delteris.com/elenchon-platform.html
 - Welding Traceability Software (capstone — heat-number-to-finished-piece chain, weld tracking): https://delteris.com/welding-traceability-software.html
 - Shop-Floor Weld Data Capture Software (10-second capture, universal work types, offline capture): https://delteris.com/welding-work-capture-software.html
 - Weld Project Structure & BOM Import Software (tree/flowchart, one-paste BOM import from Tekla or most CAD packages): https://delteris.com/weld-project-structure-software.html
@@ -61,7 +61,7 @@ Three steps: scoping session with the founders, on-site installation of the hard
 - How to Choose Welding Management Software (vendor-neutral buyer's guide — ownership, published pricing, security, offline, lock-in, floor coverage; where Elenchon fits, strengths and limits): https://delteris.com/how-to-choose-welding-software.html
 - Elenchon Atlas (cloud welder qualification tracking and WPS management — welder expiry and continuity, welder coverage per WPS, WPQR range check, WPS import from Excel/PDF, searchable WPS register): https://delteris.com/wps-management-software.html
 - Atlas Welder Qualification Management (WPQ tracking — continuity and expiry, roster, signed requalification, email reminders): https://delteris.com/welder-qualification-management-software.html
-- Atlas Features (full capability tour with app screenshots — import, review, register, library, preview, heat input, security, write/print/export): https://delteris.com/wps-manager-features.html
+- Atlas Features (full capability tour with app screenshots — import, review, register, library, preview, heat input, security, write/print/export): https://delteris.com/atlas-features.html
 - WPS Import Software (native Excel & PDF parsers — PDFs must be exported/text-based, scanned PDFs are not read (no OCR); deterministic rule-based extraction, no LLM or AI model, documents never sent to one, EN/PT/ES labels plus per-organisation wordings, form layout read from the file, ISO/ASME/AWS forms, batch import, heat input computed where blank): https://delteris.com/wps-import-software.html
 - WPS Review & Approval Software (human-reviewed change-sets, cell-by-cell current→new, low-confidence flags, drift detection, only approved cells patched): https://delteris.com/wps-review-approval-software.html
 - WPS Library & Search Software (WPS/pWPS/WPQR structured records, filter by process/material/side/pass role, revisions grouped, qualification chain linked): https://delteris.com/wps-library-search-software.html
@@ -74,8 +74,8 @@ Three steps: scoping session with the founders, on-site installation of the hard
   - Welding Positions Chart (the four basic positions; ASME/AWS 1G–6G and 1F–5F drawn beside ISO 6947 PA–PJ, H-L045, J-L045 for plate and pipe, butt and fillet; printable chart and cross-reference; drawings free to reuse with credit, CC BY 4.0; EN/PT/ES): https://delteris.com/resources/welding-positions/
   - Heat-Number Traceability (mill certificates, EN 10204 2.1/2.2/3.1/3.2, transfer at cutting, EN 1090-2 traceability by execution class): https://delteris.com/resources/heat-number-traceability/
   - Managed On-Premise (vendor-installed and vendor-maintained appliance vs classic self-hosted vs cloud; when cloud fits better): https://delteris.com/resources/managed-on-premise-software/
-- Security (Phrakton — zero-trust, post-quantum): https://delteris.com/security.html
-- Pricing: https://delteris.com/pricing.html
+- Security (Phrakton — zero-trust, post-quantum): https://delteris.com/elenchon-security.html
+- Pricing: https://delteris.com/elenchon-pricing.html
 - Deployment: https://delteris.com/deployment.html
 - Contact: https://delteris.com/contact.html
 - Terms of Use (website): https://delteris.com/terms.html

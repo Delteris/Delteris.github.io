@@ -189,6 +189,6 @@ O quadro de qualificações tem duas novas definições, em **Definições → Q
 
 Nada de grandes funcionalidades novas por agora. Vamos continuar a fazer o que esta versão faz: percorrer o Atlas, encontrar onde ainda lhe custa tempo ou atenção, e tirar isso. Se alguma coisa no Atlas lhe faz perder tempo, diga-nos; vai diretamente para a lista.
 
-O Atlas 1.2 já está disponível para todos os clientes do Atlas, sem custo adicional. Dúvidas, ou um formulário lido de forma estranha: [escreva-nos](/pt/wps-manager-contact.html).
+O Atlas 1.2 já está disponível para todos os clientes do Atlas, sem custo adicional. Dúvidas, ou um formulário lido de forma estranha: [escreva-nos](/pt/atlas-free-trial.html).
 
 A equipa Delteris

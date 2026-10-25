@@ -23,7 +23,7 @@
       },
       "offers": {
         "@type": "Offer",
-        "url": "https://delteris.com{{ sx_px }}/pricing.html",
+        "url": "https://delteris.com{{ sx_px }}/elenchon-pricing.html",
         "price": "390.00",
         "priceCurrency": "EUR",
         "availability": "https://schema.org/PreOrder",
@@ -46,7 +46,7 @@
       },
       "offers": {
         "@type": "Offer",
-        "url": "https://delteris.com{{ sx_px }}/pricing.html",
+        "url": "https://delteris.com{{ sx_px }}/elenchon-pricing.html",
         "price": "790.00",
         "priceCurrency": "EUR",
         "availability": "https://schema.org/PreOrder",

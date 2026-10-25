@@ -65,6 +65,6 @@ No todos los talleres usan todas las partes de Atlas, y las funciones que no usa
     <figcaption>Lo que ve: un interruptor por función, solo para su vista.</figcaption>
 </figure>
 
-Atlas 1.1 ya está disponible para todos los clientes de Atlas, sin coste adicional. Dudas: [escríbanos](/es/wps-manager-contact.html).
+Atlas 1.1 ya está disponible para todos los clientes de Atlas, sin coste adicional. Dudas: [escríbanos](/es/atlas-free-trial.html).
 
 El equipo de Delteris

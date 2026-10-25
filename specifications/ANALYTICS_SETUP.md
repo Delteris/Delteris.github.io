@@ -26,7 +26,7 @@ so no consent banner. Privacy policy §2 and §3.4 (EN/ES/PT) describe it.
 - The `utm_*` parameters are read once and removed from the address bar (`history.replaceState`), so a
   reload or a forwarded copy of the URL is not another campaign visit. Nothing is written to cookies,
   localStorage or sessionStorage. (The `/es/trial` redirect stubs keep `location.search`, so the tags
-  reach `wps-manager-contact.html`, where the video is.)
+  reach `atlas-free-trial.html`, where the video is.)
 - Skipped entirely when `navigator.webdriver` is set (automation). The server drops visits under 1 s, `human`
   under 3 s, foreign origins and anything that fails its field allowlist, and **flags** (stores, but never counts as
   verified) bot user agents, beacons from cloud / hosting / mail-security networks (Microsoft Safe Links, Mimecast,

@@ -594,7 +594,7 @@
 })();
 
 /* ==========================================================
-   Encryption-layers interactive (security.html)
+   Encryption-layers interactive (elenchon-security.html)
    Observer selector — seals the layers an observer cannot read
    and spotlights where it sits on the path. All three tunnels are
    post-quantum-safe and opened only at the endpoints.
@@ -761,7 +761,7 @@
 })();
 
 /* ==========================================================
-   Pricing view toggle (pricing.html)
+   Pricing view toggle (elenchon-pricing.html)
    Segmented control switches between the plan cards and the
    full feature-comparison matrix. Progressive enhancement:
    without JS both panels' markup is present and the simple

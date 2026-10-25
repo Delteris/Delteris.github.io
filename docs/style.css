@@ -1,7 +1,7 @@
 /* ==========================================================
    Elenchon by Delteris — Landing page styles
    Accent: #3b82f6 (brand blue)
-   Pages: index.html · platform.html · deployment.html · pricing.html
+   Pages: index.html · elenchon-platform.html · deployment.html · elenchon-pricing.html
    ========================================================== */
 
 :root {
@@ -1724,7 +1724,7 @@ footer {
 
 /* ============================================================
    PRICING — landing teaser + pricing page
-   Added for pricing.html and the #pricing section on index.html
+   Added for elenchon-pricing.html and the #pricing section on index.html
    ============================================================ */
 
 /* ---------- Landing-page pricing teaser ---------- */
@@ -2401,7 +2401,7 @@ a.glass-card:hover h3,
     }
 }
 
-/* ---------- Home: plan strip (names only — prices live on /pricing.html) ---------- */
+/* ---------- Home: plan strip (names only — prices live on /elenchon-pricing.html) ---------- */
 .plan-strip {
     list-style: none;
     text-align: left;
@@ -2564,7 +2564,7 @@ a.glass-card:hover h3,
 .u-tight-bottom-lg { margin-bottom: 4rem; }
 
 /* ==========================================================
-   Encryption-layers interactive (security.html #encryption-layers)
+   Encryption-layers interactive (elenchon-security.html #encryption-layers)
    Ported from the Phrakton cryptography visual, re-themed to the
    site palette. Everything is scoped under .cl- to avoid collisions.
    ========================================================== */
@@ -2759,7 +2759,7 @@ a.glass-card:hover h3,
 }
 
 /* ============================================================
-   Pricing view toggle + feature comparison matrix (pricing.html)
+   Pricing view toggle + feature comparison matrix (elenchon-pricing.html)
    Segmented control switches between the plan cards ("Plan
    overview") and the full capability table ("Full feature
    comparison"). Blue for actions, gold reserved for the price /

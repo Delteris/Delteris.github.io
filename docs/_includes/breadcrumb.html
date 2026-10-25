@@ -11,7 +11,7 @@
 {%- elsif L == 'es' %}{% assign t_home = 'Inicio' %}{% assign t_guides = 'Guías' %}{% assign t_label = 'Ruta de navegación' %}
 {%- else %}{% assign t_home = 'Home' %}{% assign t_guides = 'Guides' %}{% assign t_label = 'Breadcrumb' %}{% endif -%}
 {%- if page.hub == 'atlas' %}{% assign hub_name = 'Atlas' %}{% assign hub_url = px | append: '/wps-management-software.html' %}
-{%- elsif page.hub == 'elenchon' %}{% assign hub_name = 'Elenchon' %}{% assign hub_url = px | append: '/platform.html' %}
+{%- elsif page.hub == 'elenchon' %}{% assign hub_name = 'Elenchon' %}{% assign hub_url = px | append: '/elenchon-platform.html' %}
 {%- else %}{% assign hub_name = t_guides %}{% assign hub_url = px | append: '/resources/' %}{% endif -%}
 {%- assign crumb = page.crumb | default: page.title -%}
     <script type="application/ld+json">

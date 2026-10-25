@@ -20,7 +20,7 @@
      named side by side, Resources and a quiet Contact — no product's own links or action. {%- endcomment %}
 {%- assign is_company = false -%}
 {%- if page.url == '/' or page.url == '/pt/' or page.url == '/es/' or page.url == '/index.html' or page.url == '/pt/index.html' or page.url == '/es/index.html' or page.hub == 'guides' or page.url contains '/resources/' or page.url contains 'privacy' or page.url contains 'terms' or page.url contains '404' %}{% assign is_company = true %}{% endif -%}
-{%- if L == 'pt' %}{% assign wpsm_home = '/pt/wps-management-software.html' %}{% assign wpsm_contact = '/pt/wps-manager-contact.html' %}{% assign wpsm_wpq = '/pt/welder-qualification-management-software.html' %}{% elsif L == 'es' %}{% assign wpsm_home = '/es/wps-management-software.html' %}{% assign wpsm_contact = '/es/wps-manager-contact.html' %}{% assign wpsm_wpq = '/es/welder-qualification-management-software.html' %}{% else %}{% assign wpsm_home = '/wps-management-software.html' %}{% assign wpsm_contact = '/wps-manager-contact.html' %}{% assign wpsm_wpq = '/welder-qualification-management-software.html' %}{% endif -%}
+{%- if L == 'pt' %}{% assign wpsm_home = '/pt/wps-management-software.html' %}{% assign wpsm_contact = '/pt/atlas-free-trial.html' %}{% assign wpsm_wpq = '/pt/welder-qualification-management-software.html' %}{% elsif L == 'es' %}{% assign wpsm_home = '/es/wps-management-software.html' %}{% assign wpsm_contact = '/es/atlas-free-trial.html' %}{% assign wpsm_wpq = '/es/welder-qualification-management-software.html' %}{% else %}{% assign wpsm_home = '/wps-management-software.html' %}{% assign wpsm_contact = '/atlas-free-trial.html' %}{% assign wpsm_wpq = '/welder-qualification-management-software.html' %}{% endif -%}
 {%- comment %} Dropdown button label = the current product family, else the neutral Products word. {%- endcomment %}
     <nav aria-label="{% if L == 'pt' %}Navegação principal{% elsif L == 'es' %}Navegación principal{% else %}Main navigation{% endif %}">
         <a href="{% if L == 'pt' %}/pt/{% elsif L == 'es' %}/es/{% else %}/{% endif %}" class="logo nav-logo">
@@ -40,7 +40,7 @@
                     <svg class="nav-dropdown-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg>
                 </button>
                 <div class="nav-dropdown-menu" role="menu" aria-label="Produtos" hidden>
-                    <a href="/pt/platform.html" role="menuitem" data-product="elenchon" data-product-label="Elenchon"{% if page.url == '/pt/platform.html' %} aria-current="page"{% endif %}>
+                    <a href="/pt/elenchon-platform.html" role="menuitem" data-product="elenchon" data-product-label="Elenchon"{% if page.url == '/pt/elenchon-platform.html' %} aria-current="page"{% endif %}>
                         <span class="nav-dropdown-name">Elenchon</span>
                         <span class="nav-dropdown-desc">Rastreabilidade, qualificação e captura no chão de fábrica — no local</span>
                     </a>
@@ -51,19 +51,19 @@
                 </div>
             </div>
 {%- if is_wpsm %}
-            <a href="{% if L == 'pt' %}/pt/wps-manager-features.html{% else %}/wps-manager-features.html{% endif %}">Funcionalidades</a>
+            <a href="{% if L == 'pt' %}/pt/atlas-features.html{% else %}/atlas-features.html{% endif %}">Funcionalidades</a>
             <a href="{{ wpsm_wpq }}"{% if page.url contains 'welder-qualification-management-software' %} aria-current="page"{% endif %}>Qualificação de Soldadores</a>
             <a href="{% if L == 'pt' %}/pt/atlas/updates/{% else %}/atlas/updates/{% endif %}"{% if page.url contains '/atlas/updates/' %} aria-current="page"{% endif %}>Novidades</a>
             <a href="{{ wpsm_home }}#pricing">Preços</a>
             <a href="{{ wpsm_contact }}" class="btn btn-small"{% if page.url contains 'wps-manager-contact' %} aria-current="page"{% endif %}>Pedir Teste Gratuito</a>
 {%- elsif is_company %}
             <a href="/pt/wps-management-software.html">Atlas</a>
-            <a href="/pt/platform.html">Elenchon</a>
+            <a href="/pt/elenchon-platform.html">Elenchon</a>
             <a href="/pt/resources/"{% if page.url contains '/pt/resources' %} aria-current="page"{% endif %}>Recursos</a>
             <a href="/pt/contact.html" class="btn btn-small">Contacto</a>
 {%- else %}
-            <a href="/pt/security.html"{% if page.url == '/pt/security.html' %} aria-current="page"{% endif %}>Segurança</a>
-            <a href="/pt/pricing.html"{% if page.url == '/pt/pricing.html' %} aria-current="page"{% endif %}>Preços</a>
+            <a href="/pt/elenchon-security.html"{% if page.url == '/pt/elenchon-security.html' %} aria-current="page"{% endif %}>Segurança</a>
+            <a href="/pt/elenchon-pricing.html"{% if page.url == '/pt/elenchon-pricing.html' %} aria-current="page"{% endif %}>Preços</a>
             <a href="/pt/deployment.html"{% if page.url == '/pt/deployment.html' %} aria-current="page"{% endif %}>Implementação</a>
             <a href="/pt/roadmap.html"{% if page.url == '/pt/roadmap.html' %} aria-current="page"{% endif %}>Roteiro</a>
             <a href="/pt/resources/"{% if page.url contains '/pt/resources' %} aria-current="page"{% endif %}>Recursos</a>
@@ -76,7 +76,7 @@
                     <svg class="nav-dropdown-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg>
                 </button>
                 <div class="nav-dropdown-menu" role="menu" aria-label="Productos" hidden>
-                    <a href="/es/platform.html" role="menuitem" data-product="elenchon" data-product-label="Elenchon"{% if page.url == '/es/platform.html' %} aria-current="page"{% endif %}>
+                    <a href="/es/elenchon-platform.html" role="menuitem" data-product="elenchon" data-product-label="Elenchon"{% if page.url == '/es/elenchon-platform.html' %} aria-current="page"{% endif %}>
                         <span class="nav-dropdown-name">Elenchon</span>
                         <span class="nav-dropdown-desc">Trazabilidad, cualificación y captura en planta — en local</span>
                     </a>
@@ -87,19 +87,19 @@
                 </div>
             </div>
 {%- if is_wpsm %}
-            <a href="/es/wps-manager-features.html">Funcionalidades</a>
+            <a href="/es/atlas-features.html">Funcionalidades</a>
             <a href="{{ wpsm_wpq }}"{% if page.url contains 'welder-qualification-management-software' %} aria-current="page"{% endif %}>Cualificación de Soldadores</a>
             <a href="/es/atlas/updates/"{% if page.url contains '/atlas/updates/' %} aria-current="page"{% endif %}>Novedades</a>
             <a href="{{ wpsm_home }}#pricing">Precios</a>
             <a href="{{ wpsm_contact }}" class="btn btn-small"{% if page.url contains 'wps-manager-contact' %} aria-current="page"{% endif %}>Solicitar Prueba Gratuita</a>
 {%- elsif is_company %}
             <a href="/es/wps-management-software.html">Atlas</a>
-            <a href="/es/platform.html">Elenchon</a>
+            <a href="/es/elenchon-platform.html">Elenchon</a>
             <a href="/es/resources/"{% if page.url contains '/es/resources' %} aria-current="page"{% endif %}>Recursos</a>
             <a href="/es/contact.html" class="btn btn-small">Contacto</a>
 {%- else %}
-            <a href="/es/security.html"{% if page.url == '/es/security.html' %} aria-current="page"{% endif %}>Seguridad</a>
-            <a href="/es/pricing.html"{% if page.url == '/es/pricing.html' %} aria-current="page"{% endif %}>Precios</a>
+            <a href="/es/elenchon-security.html"{% if page.url == '/es/elenchon-security.html' %} aria-current="page"{% endif %}>Seguridad</a>
+            <a href="/es/elenchon-pricing.html"{% if page.url == '/es/elenchon-pricing.html' %} aria-current="page"{% endif %}>Precios</a>
             <a href="/es/deployment.html"{% if page.url == '/es/deployment.html' %} aria-current="page"{% endif %}>Implementación</a>
             <a href="/es/roadmap.html"{% if page.url == '/es/roadmap.html' %} aria-current="page"{% endif %}>Hoja de Ruta</a>
             <a href="/es/resources/"{% if page.url contains '/es/resources' %} aria-current="page"{% endif %}>Recursos</a>
@@ -112,7 +112,7 @@
                     <svg class="nav-dropdown-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg>
                 </button>
                 <div class="nav-dropdown-menu" role="menu" aria-label="Products" hidden>
-                    <a href="/platform.html" role="menuitem" data-product="elenchon" data-product-label="Elenchon"{% if page.url == '/platform.html' %} aria-current="page"{% endif %}>
+                    <a href="/elenchon-platform.html" role="menuitem" data-product="elenchon" data-product-label="Elenchon"{% if page.url == '/elenchon-platform.html' %} aria-current="page"{% endif %}>
                         <span class="nav-dropdown-name">Elenchon</span>
                         <span class="nav-dropdown-desc">On-premise traceability, qualification &amp; shop-floor capture</span>
                     </a>
@@ -123,19 +123,19 @@
                 </div>
             </div>
 {%- if is_wpsm %}
-            <a href="{% if L == 'pt' %}/pt/wps-manager-features.html{% else %}/wps-manager-features.html{% endif %}">Features</a>
+            <a href="{% if L == 'pt' %}/pt/atlas-features.html{% else %}/atlas-features.html{% endif %}">Features</a>
             <a href="{{ wpsm_wpq }}"{% if page.url contains 'welder-qualification-management-software' %} aria-current="page"{% endif %}>Welder Qualification</a>
             <a href="{% if L == 'pt' %}/pt/atlas/updates/{% else %}/atlas/updates/{% endif %}"{% if page.url contains '/atlas/updates/' %} aria-current="page"{% endif %}>Updates</a>
             <a href="{{ wpsm_home }}#pricing">Pricing</a>
             <a href="{{ wpsm_contact }}" class="btn btn-small"{% if page.url contains 'wps-manager-contact' %} aria-current="page"{% endif %}>Get a Free Trial</a>
 {%- elsif is_company %}
             <a href="/wps-management-software.html">Atlas</a>
-            <a href="/platform.html">Elenchon</a>
+            <a href="/elenchon-platform.html">Elenchon</a>
             <a href="/resources/"{% if page.url contains '/resources' %} aria-current="page"{% endif %}>Resources</a>
             <a href="/contact.html" class="btn btn-small">Contact</a>
 {%- else %}
-            <a href="/security.html"{% if page.url == '/security.html' %} aria-current="page"{% endif %}>Security</a>
-            <a href="/pricing.html"{% if page.url == '/pricing.html' %} aria-current="page"{% endif %}>Pricing</a>
+            <a href="/elenchon-security.html"{% if page.url == '/elenchon-security.html' %} aria-current="page"{% endif %}>Security</a>
+            <a href="/elenchon-pricing.html"{% if page.url == '/elenchon-pricing.html' %} aria-current="page"{% endif %}>Pricing</a>
             <a href="/deployment.html"{% if page.url == '/deployment.html' %} aria-current="page"{% endif %}>Deployment</a>
             <a href="/roadmap.html"{% if page.url == '/roadmap.html' %} aria-current="page"{% endif %}>Roadmap</a>
             <a href="/resources/"{% if page.url contains '/resources' %} aria-current="page"{% endif %}>Resources</a>

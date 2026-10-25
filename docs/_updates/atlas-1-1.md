@@ -65,6 +65,6 @@ Not every shop uses every part of Atlas, and features you don't use are just noi
     <figcaption>What you see: one switch per feature, for your own view only.</figcaption>
 </figure>
 
-Atlas 1.1 is live for every Atlas customer, at no extra cost. Questions: [write to us](/wps-manager-contact.html).
+Atlas 1.1 is live for every Atlas customer, at no extra cost. Questions: [write to us](/atlas-free-trial.html).
 
 The Delteris team

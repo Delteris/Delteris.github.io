@@ -31,4 +31,4 @@ O lançamento continua previsto para o 1.º trimestre de 2027. Se essa data muda
 
 ## Para que serve esta lista
 
-Subscreva e enviamos-lhe um email no lançamento, com as primeiras vagas de implementação. Cada appliance é instalado no local por nós, por isso as vagas por trimestre são limitadas. A [página da plataforma](/pt/platform.html) tem tudo o que o Elenchon faz, e o [Atlas](/pt/wps-management-software.html) já está disponível.
+Subscreva e enviamos-lhe um email no lançamento, com as primeiras vagas de implementação. Cada appliance é instalado no local por nós, por isso as vagas por trimestre são limitadas. A [página da plataforma](/pt/elenchon-platform.html) tem tudo o que o Elenchon faz, e o [Atlas](/pt/wps-management-software.html) já está disponível.

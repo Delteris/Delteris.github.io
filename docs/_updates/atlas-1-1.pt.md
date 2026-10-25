@@ -65,6 +65,6 @@ Nem todas as oficinas usam todas as partes do Atlas, e funcionalidades que não 
     <figcaption>O que vê: um interruptor por funcionalidade, só para a sua vista.</figcaption>
 </figure>
 
-O Atlas 1.1 já está disponível para todos os clientes do Atlas, sem custo adicional. Dúvidas: [escreva-nos](/pt/wps-manager-contact.html).
+O Atlas 1.1 já está disponível para todos os clientes do Atlas, sem custo adicional. Dúvidas: [escreva-nos](/pt/atlas-free-trial.html).
 
 A equipa Delteris

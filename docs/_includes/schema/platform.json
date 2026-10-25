@@ -28,37 +28,37 @@
           "@type": "ListItem",
           "position": 1,
           "name": {% if sx_L == 'pt' %}"Captura de Trabalho sem Atritos"{% elsif sx_L == 'es' %}"Captura de Trabajo sin Fricción"{% else %}"Zero-Friction Work Capture"{% endif %},
-          "url": "https://delteris.com{{ sx_px }}/platform.html#work-capture"
+          "url": "https://delteris.com{{ sx_px }}/elenchon-platform.html#work-capture"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": {% if sx_L == 'pt' %}"Um Projeto, Duas Vistas em Tempo Real"{% elsif sx_L == 'es' %}"Un Proyecto, Dos Vistas en Tiempo Real"{% else %}"One Project, Two Live Views"{% endif %},
-          "url": "https://delteris.com{{ sx_px }}/platform.html#live-views"
+          "url": "https://delteris.com{{ sx_px }}/elenchon-platform.html#live-views"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": {% if sx_L == 'pt' %}"Gestão & Controlo de Acessos"{% elsif sx_L == 'es' %}"Gestión & Control de Accesos"{% else %}"Management & Access Control"{% endif %},
-          "url": "https://delteris.com{{ sx_px }}/platform.html#management"
+          "url": "https://delteris.com{{ sx_px }}/elenchon-platform.html#management"
         },
         {
           "@type": "ListItem",
           "position": 4,
           "name": {% if sx_L == 'pt' %}"Qualificações & Procedimentos"{% elsif sx_L == 'es' %}"Cualificaciones & Procedimientos"{% else %}"Qualifications & Procedures"{% endif %},
-          "url": "https://delteris.com{{ sx_px }}/platform.html#qualifications"
+          "url": "https://delteris.com{{ sx_px }}/elenchon-platform.html#qualifications"
         },
         {
           "@type": "ListItem",
           "position": 5,
           "name": {% if sx_L == 'pt' %}"Controlo de Ativos & Consumíveis no Chão de Fábrica"{% elsif sx_L == 'es' %}"Control de Activos & Consumibles en la Planta"{% else %}"Floor Asset & Consumable Control"{% endif %},
-          "url": "https://delteris.com{{ sx_px }}/platform.html#assets"
+          "url": "https://delteris.com{{ sx_px }}/elenchon-platform.html#assets"
         },
         {
           "@type": "ListItem",
           "position": 6,
           "name": {% if sx_L == 'pt' %}"Soberania de Dados à Prova de Bala"{% elsif sx_L == 'es' %}"Soberanía de Datos a Prueba de Balas"{% else %}"Bulletproof Data Sovereignty"{% endif %},
-          "url": "https://delteris.com{{ sx_px }}/platform.html#sovereignty"
+          "url": "https://delteris.com{{ sx_px }}/elenchon-platform.html#sovereignty"
         }
       ]
     }

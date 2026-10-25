@@ -31,4 +31,4 @@ Launch is still planned for Q1 2027. If that date moves, you'll hear it here fir
 
 ## What this list is for
 
-Subscribe and we'll email you at launch, with the first deployment slots. Each appliance is installed on site by us, so slots per quarter are limited. The [platform page](/platform.html) has everything Elenchon does, and [Atlas](/wps-management-software.html) is available today.
+Subscribe and we'll email you at launch, with the first deployment slots. Each appliance is installed on site by us, so slots per quarter are limited. The [platform page](/elenchon-platform.html) has everything Elenchon does, and [Atlas](/wps-management-software.html) is available today.

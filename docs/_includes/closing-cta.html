@@ -11,8 +11,8 @@
 {%- assign L = page.lang | default: 'en' -%}
 {%- if L == 'en' %}{% assign px = '' %}{% else %}{% assign px = '/' | append: L %}{% endif -%}
 {%- if include.product == 'atlas' %}
-{%- assign c_href = px | append: '/wps-manager-contact.html' -%}
-{%- assign x_href = px | append: '/platform.html' -%}
+{%- assign c_href = px | append: '/atlas-free-trial.html' -%}
+{%- assign x_href = px | append: '/elenchon-platform.html' -%}
 {%- if L == 'pt' %}
 {%- assign c_label = 'Pedir Teste Gratuito' -%}
 {%- capture c_intro %}
@@ -44,7 +44,7 @@
 {%- else %}
 {%- assign c_href = px | append: '/contact.html' -%}
 {%- assign x_href = px | append: '/wps-management-software.html' -%}
-{%- assign p_href = px | append: '/pricing.html' -%}
+{%- assign p_href = px | append: '/elenchon-pricing.html' -%}
 {%- if L == 'pt' %}
 {%- assign c_label = 'Entrar na Lista de Lançamento' -%}
 {%- capture c_intro %}

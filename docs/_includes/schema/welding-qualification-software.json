@@ -22,7 +22,7 @@
       ],{% endif %}
       "offers": {
         "@type": "Offer",
-        "url": "https://delteris.com{{ sx_px }}/pricing.html",
+        "url": "https://delteris.com{{ sx_px }}/elenchon-pricing.html",
         "availability": "https://schema.org/PreOrder",
         "availabilityStarts": "2027-01-01"
       },

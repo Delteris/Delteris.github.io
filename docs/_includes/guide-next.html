@@ -28,13 +28,13 @@
 {%- assign picked = picked | split: ',' -%}
 {%- if L == 'pt' %}
 {%- assign t_head = 'Continue a Ler' -%}{%- assign t_all = 'Todos os guias sobre' -%}
-{%- assign t_both = 'Também fazemos software para isto: o <a href="' | append: px | append: '/wps-management-software.html">Atlas</a> para WPS e qualificações de soldadores na cloud, já disponível, e o <a href="' | append: px | append: '/platform.html">Elenchon</a> para rastreabilidade no chão de fábrica no seu próprio hardware, a partir do 1.º trimestre de 2027.' -%}
+{%- assign t_both = 'Também fazemos software para isto: o <a href="' | append: px | append: '/wps-management-software.html">Atlas</a> para WPS e qualificações de soldadores na cloud, já disponível, e o <a href="' | append: px | append: '/elenchon-platform.html">Elenchon</a> para rastreabilidade no chão de fábrica no seu próprio hardware, a partir do 1.º trimestre de 2027.' -%}
 {%- elsif L == 'es' %}
 {%- assign t_head = 'Siga Leyendo' -%}{%- assign t_all = 'Todas las guías sobre' -%}
-{%- assign t_both = 'También hacemos software para esto: <a href="' | append: px | append: '/wps-management-software.html">Atlas</a> para WPS y cualificaciones de soldadores en la nube, ya disponible, y <a href="' | append: px | append: '/platform.html">Elenchon</a> para trazabilidad en planta en su propio hardware, a partir del primer trimestre de 2027.' -%}
+{%- assign t_both = 'También hacemos software para esto: <a href="' | append: px | append: '/wps-management-software.html">Atlas</a> para WPS y cualificaciones de soldadores en la nube, ya disponible, y <a href="' | append: px | append: '/elenchon-platform.html">Elenchon</a> para trazabilidad en planta en su propio hardware, a partir del primer trimestre de 2027.' -%}
 {%- else %}
 {%- assign t_head = 'Keep Reading' -%}{%- assign t_all = 'All guides on' -%}
-{%- assign t_both = 'We build software for this too: <a href="' | append: px | append: '/wps-management-software.html">Atlas</a> for WPS and welder qualifications in the cloud, live now, and <a href="' | append: px | append: '/platform.html">Elenchon</a> for shop-floor traceability on your own hardware, from Q1 2027.' -%}
+{%- assign t_both = 'We build software for this too: <a href="' | append: px | append: '/wps-management-software.html">Atlas</a> for WPS and welder qualifications in the cloud, live now, and <a href="' | append: px | append: '/elenchon-platform.html">Elenchon</a> for shop-floor traceability on your own hardware, from Q1 2027.' -%}
 {%- endif %}
     <section class="page-section container guide-next" id="keep-reading" aria-labelledby="keep-reading-title">
         <div class="guide-next-head">
@@ -53,6 +53,6 @@
         </div>
         <p class="guide-product-line">
 {%- if page.guide_product == 'both' %}{{ t_both }}
-{%- else %}{% if page.guide_product == 'atlas' %}{% assign p_href = px | append: '/wps-management-software.html' %}{% else %}{% assign p_href = px | append: '/platform.html' %}{% endif %}{{ page.guide_pitch }} <a href="{{ p_href }}">{{ page.guide_pitch_link }}&nbsp;→</a>
+{%- else %}{% if page.guide_product == 'atlas' %}{% assign p_href = px | append: '/wps-management-software.html' %}{% else %}{% assign p_href = px | append: '/elenchon-platform.html' %}{% endif %}{{ page.guide_pitch }} <a href="{{ p_href }}">{{ page.guide_pitch_link }}&nbsp;→</a>
 {%- endif %}</p>
     </section>

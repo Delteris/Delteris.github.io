@@ -58,3 +58,14 @@ specifications/             # setup notes and plans (not published); ANALYTICS_S
 ```
 cd docs && bundle install && bundle exec jekyll serve --livereload
 ```
+
+## URL conventions (since 25 Oct 2026)
+
+- **Search-term pages** (one product capability per page): `/<what-people-search>.html`, e.g. `/wps-management-software.html`. Keep these; they carry the rankings.
+- **Pages about a product itself** carry its name: `/atlas-*.html` (`atlas-features`, `atlas-security`, `atlas-free-trial`) and `/elenchon-*.html` (`elenchon-platform`, `elenchon-pricing`, `elenchon-security`). Nothing generic like `/pricing.html` that only one product owns.
+- **Guides and free tools:** `/resources/<slug>/`. **Update notes:** `/atlas/updates/…`, `/elenchon/updates/…`.
+- **PT/ES** mirror the English path under `/pt/` and `/es/`; the slug stays in English.
+- **Short links** for emails and video: `/trial/`, `/pt/trial/`, `/es/trial/`, `/atlas/trial/` (redirect stubs, `sitemap: false`). Put these in emails, not the full page URL, so a later rename never touches campaigns.
+- **Renaming a page:** `git mv`, update every link, then leave a redirect stub at the old path (`layout: null`, `permalink:` old URL, `sitemap: false`, canonical + meta refresh + `location.replace` that keeps `?utm…` and `#video`). Never delete an old URL. Point existing stubs straight at the new page (no chains).
+
+Renamed 25 Oct 2026 (old URL → new, same under `/pt/` and `/es/`; stubs live at the old paths): `wps-manager-contact` → `atlas-free-trial`, `wps-manager-features` → `atlas-features`, `wps-manager-security` → `atlas-security`, `pricing` → `elenchon-pricing`, `security` → `elenchon-security`, `platform` → `elenchon-platform`.
