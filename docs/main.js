@@ -1116,6 +1116,20 @@
     document.querySelectorAll('.atlas-video').forEach(function (box) {
         var v = box.querySelector('video');
         if (!v) return;
+        // Head start: once the page has loaded and the browser is idle, buffer the
+        // full-quality video in the background so play is instant. Skipped on
+        // data-saver or slow (2G/3G) connections so we don't eat mobile data.
+        (function () {
+            var c = navigator.connection || {};
+            if (c.saveData || /2g|3g/.test(c.effectiveType || '')) return;
+            var warm = function () {
+                if (v.preload === 'auto' || !v.paused || v.currentTime > 0) return;
+                v.preload = 'auto';
+                if (v.readyState < 3) v.load();
+            };
+            var later = function () { (window.requestIdleCallback || function (f) { setTimeout(f, 1500); })(warm, { timeout: 4000 }); };
+            if (document.readyState === 'complete') later(); else window.addEventListener('load', later);
+        })();
         v.volume = 0.5;
         var tamed = false;
         v.addEventListener('play', function () { if (!tamed) { v.volume = 0.5; tamed = true; } });
