@@ -98,9 +98,9 @@ guides:
     keywords: "PQR WPAR ISO 15614 ISO 15607 ISO 15609 ASME IX QW-200 procedure qualification record preliminary"
     kind: { en: "Guide", pt: "Guia", es: "Guía" }
     title:
-      en: "pWPS vs WPQR vs WPS: the difference explained"
-      pt: "pWPS vs WPQR vs WPS: a diferença explicada"
-      es: "pWPS vs WPQR vs WPS: la diferencia explicada"
+      en: "pWPS vs WPQR vs WPS: meaning and differences"
+      pt: "pWPS vs WPQR vs WPS: significado e diferenças"
+      es: "pWPS vs WPQR vs WPS: significado y diferencias"
     summary:
       en: "Draft, proof, production: the three procedure records side by side, and the one real difference between ISO and ASME."
       pt: "Rascunho, prova, produção: os três registos de procedimento lado a lado, e a única diferença real entre ISO e ASME."
