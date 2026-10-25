@@ -15,6 +15,8 @@
 #         `keywords` are extra search terms (standards, record names, synonyms) that are
 #         not already in the title or blurb; language-neutral, space separated.
 #         `hidden: true` keeps a drafted guide out of the hub and "Keep reading".
+#         `langs: [en]` limits a guide to the languages it exists in (default: all three);
+#         the other hubs and their "Keep reading" leave it out.
 
 groups:
   procedures:
@@ -112,31 +114,28 @@ guides:
       pt: "Comparar os três registos"
       es: "Comparar los tres registros"
   - id: heat-input-calculator
-    # Hidden: the page is an Atlas feature page with no calculator on it, which reads as
-    # an ad among the guides. Unhide if a free working calculator is built for /resources/.
-    hidden: true
     group: procedures
     type: tool
     tool: true
     path: /heat-input-calculator.html
-    keywords: "kJ/mm arc energy amps volts travel speed k factor ISO 1011-1 ISO/TR 17671 root fill cap"
-    kind: { en: "Tool in Atlas", pt: "Ferramenta no Atlas", es: "Herramienta en Atlas" }
+    keywords: "kJ/mm J/in arc energy amps volts travel speed k factor thermal efficiency ISO 1011-1 ISO/TR 17671-1 QW-409 root fill cap"
+    kind: { en: "Free calculator", pt: "Calculadora gratuita", es: "Calculadora gratuita" }
     title:
-      en: "Heat input calculator, clamped to your WPQR range"
-      pt: "Calculadora de aporte térmico, limitada à gama do seu WPQR"
-      es: "Calculadora de aporte térmico, limitada al rango de su WPQR"
+      en: "Heat input calculator: ISO/TR 17671-1 and ASME IX"
+      pt: "Calculadora de aporte térmico: ISO/TR 17671-1 e ASME IX"
+      es: "Calculadora de aporte térmico: ISO/TR 17671-1 y ASME IX"
     summary:
-      en: "Set the window your WPQR qualified for root, fill and cap, then adjust current, voltage and travel speed without leaving it."
-      pt: "Defina a janela que o seu WPQR qualificou para raiz, enchimento e acabamento, e ajuste corrente, tensão e velocidade sem sair dela."
-      es: "Fije la ventana que su WPQR cualificó para raíz, relleno y peinado, y ajuste intensidad, tensión y velocidad sin salir de ella."
+      en: "Heat input from current, voltage, travel speed and your k factor, in kJ/mm and in ASME's J/in."
+      pt: "Aporte térmico a partir de corrente, tensão, velocidade e do seu fator k, em kJ/mm e em J/in da ASME."
+      es: "Aporte térmico a partir de intensidad, tensión, velocidad y su factor k, en kJ/mm y en J/in de la ASME."
     blurb:
-      en: "Set the heat-input window your WPQR qualified for root, fill and cap, then drag current, voltage and travel speed without leaving it."
-      pt: "Defina a janela de aporte térmico que o seu WPQR qualificou para raiz, enchimento e acabamento, e ajuste corrente, tensão e velocidade de avanço sem sair dela."
-      es: "Fije la ventana de aporte térmico que su WPQR cualificó para raíz, relleno y peinado, y mueva intensidad, tensión y velocidad de avance sin salir de ella."
+      en: "Heat input from current, voltage, travel speed and your k factor, in kJ/mm and in ASME's J/in. In Atlas it also stays inside your WPQR's window."
+      pt: "Aporte térmico a partir de corrente, tensão, velocidade e do seu fator k, em kJ/mm e em J/in da ASME. No Atlas fica também dentro da janela do seu WPQR."
+      es: "Aporte térmico a partir de intensidad, tensión, velocidad y su factor k, en kJ/mm y en J/in de la ASME. En Atlas, además, se queda dentro de la ventana de su WPQR."
     cta:
-      en: "See how the calculator works"
-      pt: "Ver como funciona a calculadora"
-      es: "Ver cómo funciona la calculadora"
+      en: "Calculate heat input"
+      pt: "Calcular o aporte térmico"
+      es: "Calcular el aporte térmico"
   - id: welder-qualification-validity
     group: welders
     type: guide
@@ -159,6 +158,29 @@ guides:
       en: "Check the two clocks"
       pt: "Conhecer os dois prazos"
       es: "Conocer los dos plazos"
+  - id: welding-positions
+    group: welders
+    type: reference
+    langs: [en]
+    path: /resources/welding-positions/
+    keywords: "ISO 6947 AWS 1G 2G 3G 4G 5G 6G 1F 2F 3F 4F 5F 2FR PA PB PC PD PE PF PG PH PJ H-L045 J-L045 uphill downhill vertical overhead horizontal flat plate pipe butt fillet groove printable"
+    kind: { en: "Chart", pt: "Tabela", es: "Tabla" }
+    title:
+      en: "Welding positions chart: ISO 6947 vs ASME 1G–6G, 1F–5F"
+      pt: "Welding positions chart: ISO 6947 vs ASME 1G–6G, 1F–5F"
+      es: "Welding positions chart: ISO 6947 vs ASME 1G–6G, 1F–5F"
+    summary:
+      en: "Every position for plate and pipe, butt and fillet, drawn with its ISO and ASME code. Printable."
+      pt: "Every position for plate and pipe, butt and fillet, drawn with its ISO and ASME code. Printable."
+      es: "Every position for plate and pipe, butt and fillet, drawn with its ISO and ASME code. Printable."
+    blurb:
+      en: "PA to J-L045 and 1G to 6G: every position for plate and pipe, butt and fillet, drawn with its ISO and ASME code, plus a one-page cross-reference to print."
+      pt: "PA to J-L045 and 1G to 6G: every position for plate and pipe, butt and fillet, drawn with its ISO and ASME code, plus a one-page cross-reference to print."
+      es: "PA to J-L045 and 1G to 6G: every position for plate and pipe, butt and fillet, drawn with its ISO and ASME code, plus a one-page cross-reference to print."
+    cta:
+      en: "See every position"
+      pt: "See every position"
+      es: "See every position"
   - id: heat-number-traceability
     group: traceability
     type: guide

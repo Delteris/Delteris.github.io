@@ -101,11 +101,22 @@ class Scene:
             f'</g>')
         s.allpts+=[tip,b1]
     def arrow(s, ps3):
+        # Shaft stops at the head's notch (no round cap poking through the tip); the head
+        # is a sharp, notched dart aimed along the last few units of the path.
         ps=[P(p) for p in ps3]; s.allpts+=ps
-        d="M"+" L".join(f"{x:.1f},{y:.1f}" for x,y in ps)
-        (x0,y0),(x1,y1)=ps[-2],ps[-1]; ang=math.atan2(y1-y0,x1-x0)
-        h=[(x1,y1),(x1-9*math.cos(ang-0.45),y1-9*math.sin(ang-0.45)),(x1-9*math.cos(ang+0.45),y1-9*math.sin(ang+0.45))]
-        s.over.append(f'<path d="{d}" fill="none" stroke="#0b1324" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><polygon points="{pts(h)}" fill="#0b1324" stroke="#0b1324" stroke-width="3" stroke-linejoin="round"/><path d="{d}" fill="none" stroke="#38bdf8" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><polygon points="{pts(h)}" fill="#38bdf8"/>')
+        tip=ps[-1]; HL=12.0; HW=5.6; NOTCH=0.6
+        k=len(ps)-2; back=ps[k]
+        while k>0 and math.dist(back,tip)<7: k-=1; back=ps[k]
+        dx,dy=tip[0]-back[0],tip[1]-back[1]; l=(dx*dx+dy*dy)**.5 or 1; ux,uy=dx/l,dy/l; nx,ny=-uy,ux
+        notch=(tip[0]-ux*HL*NOTCH, tip[1]-uy*HL*NOTCH)
+        shaft=[p for p in ps[:-1] if math.dist(p,tip)>HL*NOTCH+0.5]+[notch]
+        d="M"+" L".join(f"{x:.1f},{y:.1f}" for x,y in shaft)
+        h=[tip,(tip[0]-ux*HL+nx*HW,tip[1]-uy*HL+ny*HW),notch,(tip[0]-ux*HL-nx*HW,tip[1]-uy*HL-ny*HW)]
+        o='#0b1324'
+        s.over.append(f'<g class="wp-arrow"><path d="{d}" fill="none" stroke="{o}" stroke-width="5.4" stroke-linecap="round" stroke-linejoin="round"/>'
+                      f'<polygon points="{pts(h)}" fill="{o}" stroke="{o}" stroke-width="2.8" stroke-linejoin="round"/>'
+                      f'<path d="{d}" fill="none" stroke="#38bdf8" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>'
+                      f'<polygon points="{pts(h)}" fill="#38bdf8" stroke="#38bdf8" stroke-width="0.6" stroke-linejoin="miter"/></g>')
     def arc_arrow(s, c, a, r, t0, t1):
         a=norm(a); e1=norm(cross(a,(0.3,0.5,0.81) if abs(dot(a,(0.3,0.5,0.81)))<0.95 else (1,0,0))); e2=cross(a,e1)
         n=24; ps=[add(c,add(mul(e1,r*math.cos(t0+(t1-t0)*i/n)),mul(e2,r*math.sin(t0+(t1-t0)*i/n)))) for i in range(n+1)]
@@ -202,7 +213,7 @@ def pipe_butt(kind):
         s.torch((0,R+1,0),(0.15,1,0.25)); s.arc_arrow((PL+4,0,0),X,R*1.25,-0.6,2.2)
     elif kind=='PC':    # axis vertical
         s.pipe((0,-PL-1,0),Y,R,PL); s.pipe((0,1,0),Y,R,PL); s.ring((0,0,0),Y,R*1.04)
-        s.torch(add((0,0,0),mul(norm((1,0,1)),R+1)),(1,0.25,1))
+        rr=norm((1,0,-0.35)); s.torch(mul(rr,R+1),add(rr,(0,0.3,0)))
     elif kind in ('PH','PJ'):   # axis horizontal along x? use z for better view of ring face
         s.pipe((-PL-1,0,0),X,R,PL); s.pipe((1,0,0),X,R,PL); s.ring((0,0,0),X,R*1.04)
         up = kind=='PH'
@@ -226,10 +237,10 @@ def pipe_fillet(kind):
     s=Scene(); PW=44
     if kind=='PB':        # plate horizontal, pipe standing up
         s.box((-PW,-T,-PW),(2*PW,0,0),(0,T,0),(0,0,2*PW)); s.pipe((0,0,0),Y,R,PL+6); s.ring((0,1.5,0),Y,R*1.08)
-        s.torch(add((0,2,0),mul(norm((1,0,1)),R+2)),(1,0.9,1))
+        rr=norm((1,0,-0.35)); s.torch(add((0,2,0),mul(rr,R+2)),add(rr,(0,0.9,0)))
     elif kind=='PD':      # plate horizontal overhead, pipe hanging down
         s.box((-PW,0,-PW),(2*PW,0,0),(0,T,0),(0,0,2*PW)); s.pipe((0,-PL-6,0),Y,R,PL+6); s.ring((0,-1.5,0),Y,R*1.08)
-        s.torch(add((0,-2,0),mul(norm((1,0,1)),R+2)),(1,-0.9,1))
+        rr=norm((1,0,-0.35)); s.torch(add((0,-2,0),mul(rr,R+2)),add(rr,(0,-0.9,0)))
     elif kind in ('PB-rot','PH','PJ'):   # plate vertical (XY), pipe horizontal along z towards viewer
         s.box((-PW,-PW,-T),(2*PW,0,0),(0,2*PW,0),(0,0,T)); s.pipe((0,0,0),Z,R,PL+6); s.ring((0,0,1.5),Z,R*1.08)
         if kind=='PB-rot':

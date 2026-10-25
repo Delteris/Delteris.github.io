@@ -3,7 +3,7 @@ layout: default
 lang: es
 permalink: /es/heat-input-calculator.html
 title: "Calculadora de Aporte Térmico de Soldadura — Limitada a su Gama de WPQR | Elenchon Atlas"
-description: "Una calculadora de aporte térmico en vivo que se limita a su gama cualificada por el WPQR. Defina las ventanas de raíz, relleno y peineta, arrastre los cursores de corriente, tensión y velocidad de avance, y vea el aporte térmico calculado en vivo — consciente de multi-arco, y toma gamas directamente de una WPS analizada. De Delteris."
+description: "Calculadora de aporte térmico gratuita: aporte térmico en kJ/mm según la ISO/TR 17671-1 (EN 1011-1) con su factor k, y en J/in según la ASME IX QW-409.1. En Elenchon Atlas, el k sale de su WPS, los valores quedan limitados al rango del WPQR y el arco tándem se suma."
 og_title: "Calculadora de Aporte Térmico — Manténgase Dentro de su Ventana Cualificada | Elenchon Atlas"
 og_description: "Defina su gama de aporte térmico cualificada por el WPQR por región del cordón, arrastre los cursores de los parámetros del arco, y vea el aporte térmico calculado en vivo — limitado para que no pueda salir de la ventana. Consciente de tándem/twin-arc; carga gamas de una WPS analizada."
 og_image: "/static/DelterisCrest.webp"
@@ -20,18 +20,20 @@ crumb: "Calculadora de Aporte Térmico"
         <div class="hero-content">
             <span class="hero-eyebrow">Elenchon Atlas · Aporte Térmico</span>
             <h1 class="text-glow">Calculadora de Aporte Térmico.<br>Limitada a su Ventana Cualificada.</h1>
-            <p class="hero-sub">El aporte térmico es donde un buen procedimiento sale silenciosamente de cualificación. Defina la gama que su WPQR cualificó para cada región del cordón y arrastre corriente, tensión y velocidad de avance — el resultado se actualiza en vivo, y los cursores nunca salen de la ventana cualificada.</p>
+            <p class="hero-sub">Calcule el aporte térmico a partir de la intensidad, la tensión y la velocidad de avance — gratis, aquí debajo. En Elenchon Atlas, el mismo cálculo toma el k de su WPS y mantiene cada valor dentro de la ventana que su WPQR cualificó.</p>
             <div class="cta-group">
-                <a href="/es/wps-manager-contact.html" class="btn btn-primary">Solicitar Prueba Gratuita</a>
-                <a href="/es/wps-manager-features.html" class="btn btn-secondary">Ver Todas las Funciones &rarr;</a>
+                <a href="#calculator" class="btn btn-primary">Calcular Aporte Térmico&nbsp;↓</a>
+                <a href="/es/wps-manager-contact.html" class="btn btn-secondary">Solicitar Prueba Gratuita</a>
             </div>
             <p class="hero-hub-link">Parte de <a href="/es/wps-management-software.html">Elenchon Atlas</a>, el registro en la nube de sus WPS y cualificaciones de soldadores · <a href="/es/wps-management-software.html#pricing">Ver precios&nbsp;→</a></p>
         </div>
-        <a class="scroll-cue" href="#overview" aria-label="Desplazarse para ver más">
+        <a class="scroll-cue" href="#calculator" aria-label="Desplazarse para ver más">
             <span class="scroll-cue-text">Desplazar</span>
             <span class="scroll-cue-chevron" aria-hidden="true"></span>
         </a>
     </header>
+
+{% include hi-calc.html %}
 
     <section class="page-section container" id="overview">
         <div class="summary-panel">

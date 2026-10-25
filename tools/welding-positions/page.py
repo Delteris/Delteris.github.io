@@ -44,7 +44,7 @@ groups=[
  ]),
 ]
 chart="\n".join(f'''            <div class="wp-group" id="{gid}" data-group="{h}">
-                <p class="wp-print-head" aria-hidden="true"><span>Welding positions · ISO 6947 and ASME IX / AWS</span><span>delteris.com/resources/welding-positions/</span></p>
+                <p class="wp-print-head" aria-hidden="true"><span>Welding positions · big code ISO 6947, tag ASME IX / AWS · yellow bead, blue direction, red torch</span><span>delteris.com/resources/welding-positions/</span></p>
                 <h3 class="wp-group-h">{h}<span>{sub}</span></h3>
                 <div class="wp-grid">
 {chr(10).join(card(*c) for c in cards)}

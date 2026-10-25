@@ -1,16 +1,11 @@
 ---
 layout: default
-# DRAFT: hidden preview. To publish: delete the next three lines, set permalink to
-# /resources/welding-positions/, add the guide to _data/guides.yml and the resources hub.
-preview: true
-noindex: true
-sitemap: false
-permalink: /resources/welding-positions-preview-q4t8n2/
+permalink: /resources/welding-positions/
 title: "Welding Positions Chart: ISO 6947 vs ASME 1G–6G, 1F–5F | Elenchon"
 description: "Every welding position in one chart: ISO 6947 codes (PA, PB, PC, PD, PE, PF, PG, PH, PJ, H-L045, J-L045) side by side with the ASME and AWS designations (1G to 6G, 1F to 5F), for plate and pipe, butt and fillet welds."
 og_description: "ISO 6947 and ASME/AWS welding positions in one chart: plate and pipe, butt and fillet, uphill and downhill. Free to print."
 og_image_alt: "Welding positions chart: ISO 6947 codes beside ASME 1G to 6G and 1F to 5F"
-en_url: "/resources/welding-positions-preview-q4t8n2/"
+en_url: "/resources/welding-positions/"
 hub: guides
 crumb: "Welding Positions"
 guide_group: welders
@@ -38,7 +33,20 @@ guide_pitch_link: "Atlas reads them, PF as uphill and PG as downhill"
         <div class="section-header">
             <span class="eyebrow">The Chart</span>
             <h2>Every Position, Plate and Pipe</h2>
-            <p class="subtitle">The big code is ISO 6947; beside it, ASME/AWS. Up and down in a drawing are up and down in the workshop. Blue arrows show the welding direction, or the pipe turning; the red torch marks where the weld is made. Select a drawing to see it larger.</p>
+            <p class="subtitle">Up and down in a drawing are up and down in the workshop. Select a drawing to see it larger.</p>
+        </div>
+        <div class="wp-legend" aria-labelledby="wp-legend-h">
+            <h3 id="wp-legend-h" class="wp-legend-h">How to Read the Drawings</h3>
+            <div class="wp-legend-codes">
+                <span class="wp-codes"><span class="wp-iso">ISO</span><span class="wp-asme">ASME</span></span>
+                <p>The big white code is <strong>ISO 6947</strong>; the yellow tag beside it is the <strong>ASME IX / AWS</strong> equivalent. So <em>PF</em> <em>3G&nbsp;↑</em> reads “PF in ISO, 3G uphill in ASME”.</p>
+            </div>
+            <ul class="wp-legend-keys">
+                <li><svg viewBox="0 0 40 16" aria-hidden="true"><path d="M4 8 L36 8" stroke="#b45309" stroke-width="6.5" stroke-linecap="round"/><path d="M4 8 L36 8" stroke="#fbbf24" stroke-width="3.2" stroke-linecap="round"/><path d="M4 8 L36 8" stroke="#fff3c4" stroke-width="1.2" stroke-dasharray="1.5 3" stroke-linecap="round" opacity="0.8"/></svg><span><strong>Yellow</strong> is the weld bead.</span></li>
+                <li><svg viewBox="0 0 40 16" aria-hidden="true"><path d="M4 8 L27 8" stroke="#0b1324" stroke-width="5.4" stroke-linecap="round"/><polygon points="37,8 25,2.4 29.8,8 25,13.6" fill="#0b1324" stroke="#0b1324" stroke-width="2.8" stroke-linejoin="round"/><path d="M4 8 L29.8 8" stroke="#38bdf8" stroke-width="2.6" stroke-linecap="round"/><polygon points="37,8 25,2.4 29.8,8 25,13.6" fill="#38bdf8"/></svg><span><strong>Blue</strong> is the direction of welding, or the pipe turning on rotated pipe.</span></li>
+                <li><svg viewBox="0 0 40 16" aria-hidden="true"><circle cx="6" cy="8" r="5" fill="#fde68a" opacity="0.35"/><polygon points="16,5.6 36,5.6 36,10.4 16,10.4" fill="#e11d48" stroke="#0b1324" stroke-width="1.3" stroke-linejoin="round"/><polygon points="10,6.6 16,4.4 16,11.6 10,9.4" fill="#fb7185" stroke="#0b1324" stroke-width="1.3" stroke-linejoin="round"/><circle cx="6" cy="8" r="2.6" fill="#fffbeb" stroke="#f59e0b" stroke-width="1.2"/></svg><span><strong>Red</strong> is the torch or electrode.</span></li>
+                <li><svg viewBox="0 0 40 16" aria-hidden="true"><path d="M8 8 L32 8" stroke="#94a3b8" stroke-width="1.6" stroke-dasharray="3 3" stroke-linecap="round"/></svg><span><strong>No blue arrow:</strong> the welding direction doesn’t change the position.</span></li>
+            </ul>
         </div>
 {{CHART}}
         <p class="wp-print-row"><button type="button" class="btn btn-secondary" data-wp-print="chart">Print the chart</button><span class="wp-print-note">A4 or Letter, one page per group, on white to save ink.</span></p>

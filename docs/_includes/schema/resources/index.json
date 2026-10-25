@@ -75,6 +75,12 @@
             "position": 7,
             "name": "Managed on-premise: on-premise without the IT burden",
             "url": "https://delteris.com/resources/managed-on-premise-software/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 8,
+            "name": "Welding positions chart: ISO 6947 vs ASME 1G–6G, 1F–5F",
+            "url": "https://delteris.com/resources/welding-positions/"
           }
         ]
       }

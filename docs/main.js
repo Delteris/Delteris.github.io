@@ -1360,3 +1360,54 @@
     });
     window.addEventListener('afterprint', function () { document.documentElement.removeAttribute('data-print'); });
 })();
+
+/* Free heat input calculator (_includes/hi-calc.html). One arc, k typed in by hand.
+   ISO/TR 17671-1 (EN 1011-1): Q = k·U·I·60 / (v·1000) kJ/mm, v in mm/min.
+   ASME IX QW-409.1(a): V·A·60 / v J/in, v in in/min, no efficiency factor.
+   Accepts a decimal comma (PT/ES keyboards). */
+(function () {
+    var box = document.querySelector('[data-hi-calc]');
+    if (!box) return;
+    var lang = box.getAttribute('data-lang') || 'en';
+    var f = {};
+    Array.prototype.forEach.call(box.querySelectorAll('[data-hi]'), function (el) { f[el.getAttribute('data-hi')] = el; });
+    var o = {};
+    Array.prototype.forEach.call(box.querySelectorAll('[data-hi-out]'), function (el) { o[el.getAttribute('data-hi-out')] = el; });
+    var formula = o.qsub.textContent;
+    function num(el) {
+        var s = (el.value || '').trim().replace(/\s/g, '').replace(',', '.');
+        if (s === '') return null;
+        var n = Number(s);
+        return isFinite(n) ? n : NaN;
+    }
+    function fmt(n, d) { return n.toLocaleString(lang, { minimumFractionDigits: d, maximumFractionDigits: d }); }
+    function mark(el, bad) { el.closest('.hi-input').classList.toggle('is-bad', bad); }
+    function run() {
+        var I = num(f.i), U = num(f.u), v = num(f.v), k = num(f.k), vmm = v * (+f.vu.value);
+        [['i', I], ['u', U], ['v', v]].forEach(function (p) { mark(f[p[0]], p[1] !== null && !(p[1] > 0)); });
+        mark(f.k, k !== null && !(k > 0));
+        var ok = I > 0 && U > 0 && v > 0;
+        var warn = '';
+        if (ok) {
+            var e = U * I * 60 / (vmm * 1000);
+            o.e.textContent = fmt(e, 2);
+            o.asme.textContent = Math.round(U * I * 60 / (vmm / 25.4)).toLocaleString(lang);
+            if (k > 0) {
+                o.q.textContent = fmt(k * e, 2);
+                o.qsub.textContent = fmt(k, 2) + ' × ' + fmt(U, 1) + ' V × ' + fmt(I, 0) + ' A × 60 / (' + fmt(vmm, 0) + ' mm/min × 1000)';
+                if (k > 1) warn = box.getAttribute('data-msg-k');
+            } else {
+                o.q.textContent = '—';
+                o.qsub.textContent = box.getAttribute('data-msg-nok');
+            }
+        } else {
+            o.q.textContent = o.e.textContent = o.asme.textContent = '—';
+            o.qsub.textContent = formula;
+        }
+        o.msg.textContent = warn || (ok ? '' : box.getAttribute('data-msg-empty'));
+        o.msg.classList.toggle('is-warn', !!warn);
+    }
+    box.addEventListener('input', run);
+    box.addEventListener('change', run);
+    run();
+})();

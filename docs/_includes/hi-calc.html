@@ -1,0 +1,70 @@
+{%- comment %} Free, basic heat input calculator (heat-input-calculator.html, EN/PT/ES).
+     Deliberately basic: one arc, k typed in by hand (no process list, no pre-fill), no
+     WPQR window. Atlas's edge — k from the WPS's process, clamping to the WPQR window,
+     loading a WPS, multi-arc — is listed beside it. Logic in main.js ([data-hi-calc]).
+     Formulas: ISO/TR 17671-1 (EN 1011-1) Q = k·U·I·60/(v·1000) kJ/mm;
+               ASME IX QW-409.1(a) heat input = V·A·60/v J/in (v in in/min, no k).
+{%- endcomment %}
+{%- assign L = page.lang | default: 'en' -%}
+{%- if L == 'en' %}{% assign px = '' %}{% else %}{% assign px = '/' | append: L %}{% endif -%}
+{%- if L == 'pt' %}
+{%- assign t = 'Calculadora gratuita|Calcule o aporte térmico|Um arco, valores introduzidos à mão. Nada é guardado nem enviado.|Corrente|Tensão|Velocidade de avanço|Fator k|Rendimento térmico do seu processo, da ISO/TR 17671-1 (EN 1011-1). Introduza-o à mão.|Aporte térmico, ISO/TR 17671-1 · EN 1011-1|Introduza k para ver este valor|Energia do arco (k = 1)|ASME IX, QW-409.1(a)|sem fator k, por polegada|Introduza corrente, tensão e velocidade.|k acima de 1 não é um rendimento — confirme o valor.|No Elenchon Atlas|O k vem do processo da WPS.|Defina a janela que o seu WPQR qualificou e os cursores param nos limites.|Carregue uma WPS da biblioteca e as gamas preenchem-se sozinhas.|Tandem e arco duplo, somados por cabeça.|Pedir teste gratuito|Ver como funciona&nbsp;↓' | split: '|' -%}
+{%- elsif L == 'es' %}
+{%- assign t = 'Calculadora gratuita|Calcule el aporte térmico|Un arco, valores introducidos a mano. No se guarda ni se envía nada.|Intensidad|Tensión|Velocidad de avance|Factor k|Rendimiento térmico de su proceso, de la ISO/TR 17671-1 (EN 1011-1). Introdúzcalo a mano.|Aporte térmico, ISO/TR 17671-1 · EN 1011-1|Introduzca k para ver este valor|Energía del arco (k = 1)|ASME IX, QW-409.1(a)|sin factor k, por pulgada|Introduzca intensidad, tensión y velocidad.|Un k por encima de 1 no es un rendimiento — compruebe el valor.|En Elenchon Atlas|El k sale del proceso de la WPS.|Fije la ventana que su WPQR cualificó y los cursores se detienen en sus límites.|Cargue una WPS de la biblioteca y los rangos se rellenan solos.|Tándem y doble arco, sumados por cabezal.|Solicitar prueba gratuita|Ver cómo funciona&nbsp;↓' | split: '|' -%}
+{%- else %}
+{%- assign t = 'Free calculator|Work Out Heat Input|One arc, values typed in. Nothing is saved or sent anywhere.|Current|Voltage|Travel speed|k factor|Thermal efficiency for your process, from ISO/TR 17671-1 (EN 1011-1). Type it in.|Heat input, ISO/TR 17671-1 · EN 1011-1|Enter k to see this value|Arc energy (k = 1)|ASME IX, QW-409.1(a)|no k factor, per inch|Enter current, voltage and travel speed.|A k above 1 isn’t an efficiency — check the value.|In Elenchon Atlas|k comes from the process on the WPS.|Set the window your WPQR qualified and the sliders stop at its limits.|Load a WPS from your library and its ranges fill in.|Tandem and twin-arc, summed across heads.|Get a free trial|See how it works&nbsp;↓' | split: '|' -%}
+{%- endif %}
+    <section class="page-section container u-flush-top hi-calc-wrap" id="calculator">
+        <div class="hi-calc" data-hi-calc data-lang="{{ L }}" data-msg-empty="{{ t[13] }}" data-msg-k="{{ t[14] }}" data-msg-nok="{{ t[9] }}">
+            <div class="hi-calc-main glass-card">
+                <span class="eyebrow">{{ t[0] }}</span>
+                <h2>{{ t[1] }}</h2>
+                <p class="hi-calc-lead">{{ t[2] }}</p>
+                <div class="hi-calc-fields">
+                    <label class="hi-field"><span>{{ t[3] }} <em>I</em></span>
+                        <span class="hi-input"><input type="text" inputmode="decimal" autocomplete="off" data-hi="i" aria-describedby="hi-unit-a"><span class="hi-unit" id="hi-unit-a">A</span></span></label>
+                    <label class="hi-field"><span>{{ t[4] }} <em>U</em></span>
+                        <span class="hi-input"><input type="text" inputmode="decimal" autocomplete="off" data-hi="u" aria-describedby="hi-unit-v"><span class="hi-unit" id="hi-unit-v">V</span></span></label>
+                    <label class="hi-field"><span>{{ t[5] }} <em>v</em></span>
+                        <span class="hi-input"><input type="text" inputmode="decimal" autocomplete="off" data-hi="v">
+                            <select data-hi="vu" aria-label="{{ t[5] }}">
+                                <option value="1">mm/min</option>
+                                <option value="60">mm/s</option>
+                                <option value="10">cm/min</option>
+                                <option value="25.4">in/min</option>
+                            </select></span></label>
+                    <label class="hi-field"><span>{{ t[6] }} <em>k</em></span>
+                        <span class="hi-input"><input type="text" inputmode="decimal" autocomplete="off" data-hi="k" aria-describedby="hi-k-hint"></span>
+                        <small id="hi-k-hint">{{ t[7] }}</small></label>
+                </div>
+                <div class="hi-results" aria-live="polite">
+                    <div class="hi-result hi-result-main">
+                        <span class="hi-r-label">{{ t[8] }}</span>
+                        <span class="hi-r-value"><output data-hi-out="q">—</output> <span>kJ/mm</span></span>
+                        <span class="hi-r-sub" data-hi-out="qsub">Q = k × U × I × 60 / (v × 1000)</span>
+                    </div>
+                    <div class="hi-result">
+                        <span class="hi-r-label">{{ t[10] }}</span>
+                        <span class="hi-r-value"><output data-hi-out="e">—</output> <span>kJ/mm</span></span>
+                    </div>
+                    <div class="hi-result">
+                        <span class="hi-r-label">{{ t[11] }}</span>
+                        <span class="hi-r-value"><output data-hi-out="asme">—</output> <span>J/in</span></span>
+                        <span class="hi-r-sub">{{ t[12] }}</span>
+                    </div>
+                </div>
+                <p class="hi-msg" data-hi-out="msg">{{ t[13] }}</p>
+            </div>
+            <aside class="hi-calc-atlas glass-card">
+                <span class="eyebrow">{{ t[15] }}</span>
+                <ul>
+                    <li>{{ t[16] }}</li>
+                    <li>{{ t[17] }}</li>
+                    <li>{{ t[18] }}</li>
+                    <li>{{ t[19] }}</li>
+                </ul>
+                <a class="btn btn-primary" href="{{ px }}/wps-manager-contact.html">{{ t[20] }}</a>
+                <a class="hi-calc-more" href="#overview">{{ t[21] }}</a>
+            </aside>
+        </div>
+    </section>

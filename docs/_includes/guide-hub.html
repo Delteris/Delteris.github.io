@@ -13,7 +13,13 @@
 {%- assign L = page.lang | default: 'en' -%}
 {%- if L == 'en' %}{% assign px = '' %}{% else %}{% assign px = '/' | append: L %}{% endif -%}
 {%- assign gd = site.data.guides -%}
-{%- assign live = gd.guides | where_exp: 'g', 'g.hidden != true' -%}
+{%- comment %} Guides shown on this hub: not hidden, and available in this language. {% endcomment -%}
+{%- assign live = '' | split: '' -%}
+{%- for g in gd.guides -%}
+{%- if g.hidden %}{% continue %}{% endif -%}
+{%- if g.langs %}{% unless g.langs contains L %}{% continue %}{% endunless %}{% endif -%}
+{%- assign live = live | push: g -%}
+{%- endfor -%}
 {%- if L == 'pt' %}
 {%- assign t_search = 'Pesquisar guias' -%}{%- assign t_ph = 'Pesquisar: WPQR, ISO 9606…' -%}
 {%- assign t_all = 'Todos' -%}{%- assign t_types = 'Tipo de recurso' -%}{%- assign t_topics = 'Temas dos guias' -%}

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Welding Heat Input Calculator — Clamped to Your WPQR Range | Elenchon Atlas"
-description: "A live welding heat input calculator that clamps to your WPQR-qualified range. Set the root, fill and cap windows, drag current, voltage and travel-speed sliders, and see heat input computed live — multi-arc aware, and it pulls ranges straight from a parsed WPS. From Delteris."
+description: "Free welding heat input calculator: ISO/TR 17671-1 (EN 1011-1) heat input in kJ/mm with your k factor, plus ASME IX QW-409.1 in J/in. In Elenchon Atlas it takes k from your WPS, clamps to your WPQR-qualified range and handles tandem arcs."
 og_title: "Welding Heat Input Calculator — Stay Inside Your Qualified Window | Elenchon Atlas"
 og_description: "Set your WPQR-qualified heat-input range per weld region, drag the arc-parameter sliders, and watch heat input computed live — clamped so you can't leave the window. Tandem/twin-arc aware; loads ranges from a parsed WPS."
 og_image: "/static/DelterisCrest.webp"
@@ -18,18 +18,20 @@ crumb: "Heat Input Calculator"
         <div class="hero-content">
             <span class="hero-eyebrow">Elenchon Atlas · Heat Input</span>
             <h1 class="text-glow">Heat Input Calculator.<br>Clamped to Your Qualified Window.</h1>
-            <p class="hero-sub">Heat input is where a good procedure quietly falls out of qualification. Set the range your WPQR qualified for each weld region, then drag current, voltage and travel speed — the result updates live, and the sliders never leave the qualified window.</p>
+            <p class="hero-sub">Work out welding heat input from current, voltage and travel speed — free, right below. In Elenchon Atlas the same calculation takes k from your WPS and keeps every value inside the window your WPQR qualified.</p>
             <div class="cta-group">
-                <a href="wps-manager-contact.html" class="btn btn-primary">Get a Free Trial</a>
-                <a href="wps-manager-features.html" class="btn btn-secondary">See Every Feature &rarr;</a>
+                <a href="#calculator" class="btn btn-primary">Calculate Heat Input&nbsp;↓</a>
+                <a href="wps-manager-contact.html" class="btn btn-secondary">Get a Free Trial</a>
             </div>
             <p class="hero-hub-link">Part of <a href="wps-management-software.html">Elenchon Atlas</a>, the cloud register for your WPS and welder qualifications · <a href="wps-management-software.html#pricing">See pricing&nbsp;→</a></p>
         </div>
-        <a class="scroll-cue" href="#overview" aria-label="Scroll to see more">
+        <a class="scroll-cue" href="#calculator" aria-label="Scroll to see more">
             <span class="scroll-cue-text">Scroll</span>
             <span class="scroll-cue-chevron" aria-hidden="true"></span>
         </a>
     </header>
+
+{% include hi-calc.html %}
 
     <section class="page-section container" id="overview">
         <div class="summary-panel">
