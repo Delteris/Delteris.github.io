@@ -4745,9 +4745,15 @@ button.app-figure-frame:focus-visible .app-figure-zoom-hint {
 .hi-arcs-note { flex: 1 1 260px; color: var(--text-muted); font-size: 0.8rem; line-height: 1.45; }
 .hi-unit { padding: 0 0.85rem; color: var(--text-muted); font-weight: 500; font-size: 0.9rem; }
 .hi-input select {
-    border: 0; border-left: 1px solid rgba(59, 130, 246, 0.25); background: transparent; color: var(--text-main);
-    font: inherit; font-size: 0.88rem; font-weight: 500; padding: 0.7rem 0.6rem; outline: none; cursor: pointer;
+    -webkit-appearance: none; -moz-appearance: none; appearance: none;
+    align-self: stretch; margin: 0; box-shadow: none; outline: none; cursor: pointer;
+    border: 0; border-left: 1px solid rgba(59, 130, 246, 0.25); border-radius: 0 10px 10px 0;
+    padding: 0 2rem 0 0.8rem;
+    background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%2394a3b8' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat right 0.8rem center;
+    color: var(--text-main); font: inherit; font-size: 0.88rem; font-weight: 500;
 }
+.hi-input select:hover { background-color: rgba(59, 130, 246, 0.08); }
+.hi-input select::-ms-expand { display: none; }
 .hi-input select option { background: #0b1428; color: var(--text-main); }
 .hi-results { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 1fr); gap: 0.8rem; margin-top: 1.5rem; }
 .hi-result {
