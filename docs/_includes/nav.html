@@ -15,7 +15,7 @@
      / heat-input-calculator). The dropdown button LABEL is not set here — it stays the neutral
      Products word and is toggled client-side by main.js to the visitor's last dropdown choice. {%- endcomment %}
 {%- assign is_wpsm = false -%}
-{%- if page.url contains 'wps-management-software' or page.url contains 'wps-manager-features' or page.url contains 'wps-manager-contact' or page.url contains 'wps-manager-security' or page.url contains 'wps-import-software' or page.url contains 'wps-review-approval-software' or page.url contains 'wps-library-search-software' or page.url contains 'wps-preview-verification' or page.url contains 'heat-input-calculator' or page.url contains 'welder-qualification-management-software' or page.url contains '/atlas/updates/' %}{% assign is_wpsm = true %}{% endif -%}
+{%- if page.url contains 'wps-management-software' or page.url contains 'wps-manager-features' or page.url contains 'wps-manager-contact' or page.url contains 'wps-manager-security' or page.url contains 'wps-import-software' or page.url contains 'wps-review-approval-software' or page.url contains 'wps-library-search-software' or page.url contains 'wps-preview-verification' or page.url contains 'heat-input-calculator.html' or page.url contains 'welder-qualification-management-software' or page.url contains '/atlas/updates/' %}{% assign is_wpsm = true %}{% endif -%}
 {%- comment %} Company-level pages (homepage, guides, legal) get a neutral nav: both products
      named side by side, Resources and a quiet Contact — no product's own links or action. {%- endcomment %}
 {%- assign is_company = false -%}
