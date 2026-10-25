@@ -4,7 +4,7 @@
 {%- else -%}{%- assign t_h = "See it working in 2 minutes" -%}{%- assign t_snd = "With sound" -%}{%- assign t_mute = "Sound off" -%}{%- assign t_spd = "Speed" -%}{%- assign t_alt = "Elenchon Atlas video: welder qualifications and WPS" -%}{%- assign t_play = "Play the video" -%}{%- endif -%}
     <section class="page-section container u-tight-bottom" id="video">
         <div class="atlas-video">
-            <h2 class="atlas-video-h">{{ t_h }}</h2>
+            <h2 class="atlas-video-h">NEW · {{ t_h }}</h2>{%- comment %} TEMP marker for checking the new encode: remove once video quality is signed off {% endcomment -%}
             <div class="atlas-video-frame">
             <video class="atlas-video-el" preload="metadata" playsinline
                    poster="/static/video/atlas-{{ l }}-poster.webp?v=1.2f" aria-label="{{ t_alt }}">
