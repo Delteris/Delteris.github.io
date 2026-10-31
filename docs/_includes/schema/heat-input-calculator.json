@@ -5,7 +5,7 @@
   "@graph": [
     {
       "@type": "SoftwareApplication",
-      "name": {% if sx_L == 'en' %}"Elenchon Atlas — Welding Heat Input Calculator"{% else %}{{ sx_name | jsonify }}{% endif %},
+      "name": {% if sx_L == 'en' %}"Elenchon Atlas — Heat Input Window"{% else %}{{ sx_name | jsonify }}{% endif %},
       "applicationCategory": "BusinessApplication",
       "applicationSubCategory": "WPS Management Software",
       "operatingSystem": "Cloud",
