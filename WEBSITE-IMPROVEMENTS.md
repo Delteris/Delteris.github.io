@@ -7,6 +7,7 @@ Ordered by importance within each section. Tick items off as they ship.
 **Snapshot:** 34 search clicks / 3,810 impressions in 3 months (CTR 0.9%, avg position 30.4). 89 pages indexed.
 Archon, last 7 days: 21 verified non-campaign visits; 0 video plays, 0 contact clicks, 0 update signups.
 Spanish email follow-up: 85 sent → 5 verified visits → 4 video plays → 3 watched 75% → **0 contact clicks**.
+**Caveat:** Archon figures before 31 Oct 2026 ~20:30 include the team's own visits (upper bounds). See `Claude outputs/docs/analytics-data-notes.md`.
 
 ---
 
