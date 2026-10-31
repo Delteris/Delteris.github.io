@@ -5,6 +5,8 @@
                 per-product intro is used when omitted
        id       section id (default "cta") — keep any id other pages anchor to
        class    extra section classes (e.g. u-tight-bottom)
+       contact  "true" where the ask is "tell us" (roadmap pages): the button goes to the
+                contact page as "Contact Us" instead of the product's own action
        action   "false" on the action's own destination (the contact pages): renders
                 only the quiet cross-link line, no band and no button
      Labels live here so every page says the action the same way. {%- endcomment %}
@@ -81,6 +83,13 @@
 {%- else %}
     <section class="page-section container{% if include.class %} {{ include.class }}{% endif %}" id="{{ include.id | default: 'cta' }}">
         <div class="cta-band closing-cta">
+{%- if include.contact == 'true' %}
+{%- assign c_href = px | append: '/contact.html' -%}
+{%- if L == 'pt' %}{% assign c_label = 'Contacte-nos' %}{% elsif L == 'es' %}{% assign c_label = 'Contáctenos' %}{% else %}{% assign c_label = 'Contact Us' %}{% endif -%}
+{%- if include.product == 'atlas' %}
+{%- if L == 'pt' %}{% assign c_sub = 'Quem desenvolve o Atlas é quem responde.' %}{% elsif L == 'es' %}{% assign c_sub = 'Quien desarrolla Atlas es quien responde.' %}{% else %}{% assign c_sub = 'The people who build Atlas are the ones who reply.' %}{% endif -%}
+{%- endif %}
+{%- endif %}
 {%- if include.intro and include.intro != '' %}{{ include.intro }}{% else %}{{ c_intro }}{% endif %}
             <div class="cta-group">
                 <a href="{{ c_href }}" class="btn btn-primary">{{ c_label }}</a>
