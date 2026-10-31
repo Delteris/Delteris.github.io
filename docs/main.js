@@ -1158,13 +1158,12 @@
             try { sessionStorage.setItem(KEY, '1'); } catch (e) {}
         });
         v.addEventListener('ended', function () { if (frame) frame.classList.remove('is-started'); });
-        // Optional end card (atlas-video.html next=true): the next step, shown when the video ends.
-        var endCard = box.querySelector('.atlas-video-end');
-        if (endCard) {
-            v.addEventListener('ended', function () { v.controls = false; endCard.hidden = false; });
-            v.addEventListener('play', function () { endCard.hidden = true; });
-            var again = endCard.querySelector('.atlas-video-replay');
-            if (again) again.addEventListener('click', function () { v.currentTime = 0; v.play(); });
+        // Optional next step (atlas-video.html next=true): when the video ends, keep its last
+        // frame clear (no play button over it) and show the trial button under the video.
+        var next = box.querySelector('.atlas-video-next');
+        if (next) {
+            v.addEventListener('ended', function () { if (frame) frame.classList.add('is-ended'); next.hidden = false; });
+            v.addEventListener('play', function () { if (frame) frame.classList.remove('is-ended'); });
         }
         var btns = box.querySelectorAll('.atlas-video-speed button');
         btns.forEach(function (b) {

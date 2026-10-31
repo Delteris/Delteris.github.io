@@ -19,20 +19,15 @@
                 <span class="atlas-video-water" aria-hidden="true"><i class="w1"></i><i class="w2"></i></span>
                 <svg viewBox="0 0 24 24" width="50" height="50" aria-hidden="true"><path d="M6.5 4.5 19.5 12 6.5 19.5 10 12Z" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linejoin="round"/></svg>
             </button>
-            {%- if include.next %}
-            {%- if l == "es" -%}{%- assign n_h = "Pruébelo gratis durante un mes." -%}{%- assign n_p = "Escriba a contact@delteris.com y le preparamos su mes gratuito. Sin tarjeta, sin compromiso." -%}{%- assign n_b = "Pedir la prueba gratuita" -%}{%- assign n_s = "Elenchon%20Atlas%20%E2%80%94%20Solicitud%20de%20Prueba%20Gratuita" -%}{%- assign n_r = "Ver de nuevo" -%}
-            {%- elsif l == "pt" -%}{%- assign n_h = "Experimente um mês, grátis." -%}{%- assign n_p = "Escreva para contact@delteris.com e preparamos o seu mês gratuito. Sem cartão, sem compromisso." -%}{%- assign n_b = "Pedir o teste gratuito" -%}{%- assign n_s = "Elenchon%20Atlas%20%E2%80%94%20Pedido%20de%20Teste%20Gratuito" -%}{%- assign n_r = "Ver outra vez" -%}
-            {%- else -%}{%- assign n_h = "Try it free for a month." -%}{%- assign n_p = "Write to contact@delteris.com and we’ll set up your free month. No card, no commitment." -%}{%- assign n_b = "Ask for the free trial" -%}{%- assign n_s = "Elenchon%20Atlas%20%E2%80%94%20Free%20Trial%20Request" -%}{%- assign n_r = "Watch again" -%}{%- endif %}
-            <div class="atlas-video-end" hidden>
-                <p class="atlas-video-end-h">{{ n_h }}</p>
-                <p class="atlas-video-end-p">{{ n_p }}</p>
-                <a class="btn btn-primary" href="mailto:contact@delteris.com?subject={{ n_s }}">{{ n_b }}</a>
-                <button type="button" class="atlas-video-replay">{{ n_r }}</button>
-            </div>
-            {%- endif %}
             </div>
             <div class="atlas-video-bar">
                 <button type="button" class="atlas-video-sound" aria-pressed="false" data-on="{{ t_snd }}" data-off="{{ t_mute }}"><svg class="on" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z" fill="currentColor"/><path d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><svg class="off" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z" fill="currentColor"/><path d="M16 9.5l5 5M21 9.5l-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span class="lbl">{{ t_snd }}</span></button>
+                {%- if include.next %}
+                {%- if l == "es" -%}{%- assign n_b = "Pedir la prueba gratuita" -%}{%- assign n_s = "Elenchon%20Atlas%20%E2%80%94%20Solicitud%20de%20Prueba%20Gratuita" -%}
+                {%- elsif l == "pt" -%}{%- assign n_b = "Pedir o teste gratuito" -%}{%- assign n_s = "Elenchon%20Atlas%20%E2%80%94%20Pedido%20de%20Teste%20Gratuito" -%}
+                {%- else -%}{%- assign n_b = "Ask for the free trial" -%}{%- assign n_s = "Elenchon%20Atlas%20%E2%80%94%20Free%20Trial%20Request" -%}{%- endif %}
+                <a class="btn btn-primary atlas-video-next" href="mailto:contact@delteris.com?subject={{ n_s }}" hidden>{{ n_b }}</a>
+                {%- endif %}
                 <span class="atlas-video-speed" role="group" aria-label="{{ t_spd }}">
                     <span class="atlas-video-speed-l">{{ t_spd }}</span>
                     <button type="button" data-rate="0.75">0.75×</button>

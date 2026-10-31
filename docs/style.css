@@ -4985,11 +4985,8 @@ button.app-figure-frame:focus-visible .app-figure-zoom-hint {
     box-shadow: inset 0 0 0 1px rgba(216, 180, 74, 0.45);
 }
 
-/* Atlas video: end card with the next step (atlas-video.html next=true). */
-.atlas-video-end { position: absolute; inset: 0; z-index: 3; display: flex; flex-direction: column; align-items: center; justify-content: center;
-    gap: 1rem; padding: 1.5rem; text-align: center; background: radial-gradient(120% 90% at 50% 0%, #10224a 0%, #050a14 70%); border-radius: inherit; }
-.atlas-video-end[hidden] { display: none; }
-.atlas-video-end-h { margin: 0; font-family: "Space Grotesk", sans-serif; font-size: clamp(1.4rem, 3vw, 2.2rem); font-weight: 700; line-height: 1.15; color: #f8fafc; }
-.atlas-video-end-p { margin: 0; max-width: 26rem; color: #cbd5e1; text-wrap: balance; }
-.atlas-video-replay { background: none; border: 0; color: #94a3b8; text-decoration: underline; cursor: pointer; font: inherit; }
-@media (max-width: 600px) { .atlas-video-end { gap: 0.5rem; padding: 0.75rem; } .atlas-video-end-h { font-size: 1.1rem; } .atlas-video-end-p { font-size: 0.85rem; } }
+/* Atlas video: next step after the video (atlas-video.html next=true). */
+.atlas-video-frame.is-ended .atlas-video-play { display: none; }
+.atlas-video-next[hidden] { display: none; }
+.atlas-video-next { padding: 0.55rem 1.2rem; }
+@media (max-width: 600px) { .atlas-video-next { order: 3; width: 100%; margin-top: 0.6rem; text-align: center; } }
