@@ -2,8 +2,8 @@
 # swapping these exact strings in the same template, so the three pages never drift apart.
 FM = {
  'pt': {'permalink': '/pt/resources/welding-positions/',
-  'title': 'Posições de Soldadura: Tabela 1G–6G, 1F–5F e ISO 6947 PA–PJ | Elenchon',
-  'description': 'Todas as posições de soldadura numa tabela gratuita para imprimir: ASME e AWS 1G a 6G e 1F a 5F ao lado dos códigos ISO 6947 de PA a J-L045, para chapa e tubo, topo a topo e de ângulo, e as quatro posições básicas explicadas.',
+  'title': 'Posições de Soldadura: Tabela 1G–6G, 1F–5F, ISO 6947 PA–PJ',
+  'description': 'Tabela de posições de soldadura gratuita para imprimir: ASME/AWS 1G–6G e 1F–5F desenhadas ao lado de ISO 6947 PA, PB, PC, PD, PE, PF, PG, PH, PJ, H-L045 e J-L045, em chapa e tubo.',
   'og_description': 'Posições de soldadura ISO 6947 e ASME/AWS numa só tabela: chapa e tubo, topo a topo e de ângulo, ascendente e descendente. Para imprimir.',
   'og_image_alt': 'Tabela de posições de soldadura: códigos ISO 6947 ao lado de ASME 1G a 6G e 1F a 5F',
   'crumb': 'Posições de Soldadura',

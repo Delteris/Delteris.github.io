@@ -1,8 +1,8 @@
 ---
 layout: default
 permalink: /resources/welding-positions/
-title: "Welding Positions Chart: 1G–6G, 1F–5F and ISO 6947 PA–PJ | Elenchon"
-description: "Every welding position in one free, printable chart: ASME and AWS 1G to 6G and 1F to 5F beside the ISO 6947 codes PA to J-L045, for plate and pipe, butt and fillet welds, plus the four basic positions explained."
+title: "Welding Positions Chart: 1G–6G, 1F–5F, ISO 6947 PA–PJ"
+description: "Free printable welding positions chart: ASME/AWS 1G–6G and 1F–5F drawn beside ISO 6947 PA, PB, PC, PD, PE, PF, PG, PH, PJ, H-L045 and J-L045, for plate and pipe."
 og_description: "ISO 6947 and ASME/AWS welding positions in one chart: plate and pipe, butt and fillet, uphill and downhill. Free to print."
 og_image: "/static/welding-positions/welding-positions-chart.png"
 og_image_alt: "Welding positions chart: ASME 1G to 6G and 1F to 5F beside the ISO 6947 codes"
