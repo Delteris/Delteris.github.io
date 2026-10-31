@@ -4988,5 +4988,6 @@ button.app-figure-frame:focus-visible .app-figure-zoom-hint {
 /* Atlas video: next step after the video (atlas-video.html next=true). */
 .atlas-video-frame.is-ended .atlas-video-play { display: none; }
 .atlas-video-next[hidden] { display: none; }
-.atlas-video-next { padding: 0.55rem 1.2rem; }
-@media (max-width: 600px) { .atlas-video-next { order: 3; width: 100%; margin-top: 0.6rem; text-align: center; } }
+.atlas-video-bar:has(.atlas-video-next) { position: relative; }
+.atlas-video-next { padding: 0.55rem 1.2rem; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); white-space: nowrap; }
+@media (max-width: 600px) { .atlas-video-next { position: static; transform: none; order: 3; width: 100%; margin-top: 0.6rem; text-align: center; } }
