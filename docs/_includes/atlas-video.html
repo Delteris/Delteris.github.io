@@ -19,6 +19,17 @@
                 <span class="atlas-video-water" aria-hidden="true"><i class="w1"></i><i class="w2"></i></span>
                 <svg viewBox="0 0 24 24" width="50" height="50" aria-hidden="true"><path d="M6.5 4.5 19.5 12 6.5 19.5 10 12Z" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linejoin="round"/></svg>
             </button>
+            {%- if include.next %}
+            {%- if l == "es" -%}{%- assign n_h = "Eso es Atlas." -%}{%- assign n_p = "Si le encaja, una línea basta: responda a nuestro correo o escríbanos y le preparamos el mes gratuito. Sin compromiso, sin tarjeta." -%}{%- assign n_b = "Pedir la prueba gratuita" -%}{%- assign n_s = "Elenchon%20Atlas%20%E2%80%94%20Solicitud%20de%20Prueba%20Gratuita" -%}{%- assign n_r = "Ver de nuevo" -%}
+            {%- elsif l == "pt" -%}{%- assign n_h = "Isto é o Atlas." -%}{%- assign n_p = "Se lhe servir, basta uma linha: responda ao nosso email ou escreva-nos e preparamos o mês gratuito. Sem compromisso, sem cartão." -%}{%- assign n_b = "Pedir o teste gratuito" -%}{%- assign n_s = "Elenchon%20Atlas%20%E2%80%94%20Pedido%20de%20Teste%20Gratuito" -%}{%- assign n_r = "Ver outra vez" -%}
+            {%- else -%}{%- assign n_h = "That's Atlas." -%}{%- assign n_p = "If it fits, one line is enough: reply to our email or write to us and we set up your free month. No commitment, no card." -%}{%- assign n_b = "Ask for the free trial" -%}{%- assign n_s = "Elenchon%20Atlas%20%E2%80%94%20Free%20Trial%20Request" -%}{%- assign n_r = "Watch again" -%}{%- endif %}
+            <div class="atlas-video-end" hidden>
+                <p class="atlas-video-end-h">{{ n_h }}</p>
+                <p class="atlas-video-end-p">{{ n_p }}</p>
+                <a class="btn btn-primary" href="mailto:contact@delteris.com?subject={{ n_s }}">{{ n_b }}</a>
+                <button type="button" class="atlas-video-replay">{{ n_r }}</button>
+            </div>
+            {%- endif %}
             </div>
             <div class="atlas-video-bar">
                 <button type="button" class="atlas-video-sound" aria-pressed="false" data-on="{{ t_snd }}" data-off="{{ t_mute }}"><svg class="on" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z" fill="currentColor"/><path d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><svg class="off" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z" fill="currentColor"/><path d="M16 9.5l5 5M21 9.5l-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span class="lbl">{{ t_snd }}</span></button>

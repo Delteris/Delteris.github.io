@@ -4984,3 +4984,12 @@ button.app-figure-frame:focus-visible .app-figure-zoom-hint {
     background: rgba(216, 180, 74, 0.16);
     box-shadow: inset 0 0 0 1px rgba(216, 180, 74, 0.45);
 }
+
+/* Atlas video: end card with the next step (atlas-video.html next=true). */
+.atlas-video-end { position: absolute; inset: 0; z-index: 3; display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 0.9rem; padding: 1.5rem; text-align: center; background: rgba(5, 10, 20, 0.88); border-radius: inherit; }
+.atlas-video-end[hidden] { display: none; }
+.atlas-video-end-h { margin: 0; font-size: 1.5rem; font-weight: 700; color: #f8fafc; }
+.atlas-video-end-p { margin: 0; max-width: 34rem; color: #cbd5e1; }
+.atlas-video-replay { background: none; border: 0; color: #94a3b8; text-decoration: underline; cursor: pointer; font: inherit; }
+@media (max-width: 600px) { .atlas-video-end { gap: 0.5rem; padding: 0.75rem; } .atlas-video-end-h { font-size: 1.1rem; } .atlas-video-end-p { font-size: 0.85rem; } }

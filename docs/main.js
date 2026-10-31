@@ -1158,6 +1158,14 @@
             try { sessionStorage.setItem(KEY, '1'); } catch (e) {}
         });
         v.addEventListener('ended', function () { if (frame) frame.classList.remove('is-started'); });
+        // Optional end card (atlas-video.html next=true): the next step, shown when the video ends.
+        var endCard = box.querySelector('.atlas-video-end');
+        if (endCard) {
+            v.addEventListener('ended', function () { v.controls = false; endCard.hidden = false; });
+            v.addEventListener('play', function () { endCard.hidden = true; });
+            var again = endCard.querySelector('.atlas-video-replay');
+            if (again) again.addEventListener('click', function () { v.currentTime = 0; v.play(); });
+        }
         var btns = box.querySelectorAll('.atlas-video-speed button');
         btns.forEach(function (b) {
             b.addEventListener('click', function () {
