@@ -14,13 +14,13 @@
       "inLanguage": "{{ sx_lang }}"
     },
     {
-      "@type": "Product",
+      "@type": "SoftwareApplication",
+      "applicationCategory": "BusinessApplication",
+      "applicationSubCategory": "Welding Management Software",
+      "operatingSystem": "Linux/Appliance",
       "name": "Elenchon Lite",
       "description": {% if sx_L == 'pt' %}"Rastreabilidade de soldadura on-premise para oficinas de fabricação mais pequenas: registo de trabalho, vistas de árvore e fluxograma do projeto, o fluxo completo de qualificação WPS/WPQR/WPQ, evidência ISO e ASME IX pronta para auditoria, rede segura pós-quântica e cópias de segurança locais. Inclui 20 trabalhadores, expansível com até dois blocos de dez."{% elsif sx_L == 'es' %}"Trazabilidad de soldadura on-premise para talleres de fabricación más pequeños: registro de trabajo, vistas de árbol y diagrama de flujo del proyecto, el flujo completo de cualificación WPS/WPQR/WPQ, evidencias ISO y ASME IX listas para auditoría, red segura poscuántica y copias de seguridad locales. Incluye 20 trabajadores, ampliable con hasta dos bloques de diez."{% else %}"On-premise welding traceability for smaller fabrication shops: work capture, project tree and flowchart views, the full WPS/WPQR/WPQ qualification workflow, audit-ready ISO and ASME IX evidence, post-quantum-safe networking and local backups. Includes 20 workers, expandable by up to two blocks of ten."{% endif %},
-      "brand": {
-        "@type": "Brand",
-        "name": "Delteris"
-      },
+      "publisher": { "@id": "https://delteris.com/#organization" },
       "offers": {
         "@type": "Offer",
         "url": "https://delteris.com{{ sx_px }}/elenchon-pricing.html",
@@ -37,13 +37,13 @@
       }
     },
     {
-      "@type": "Product",
+      "@type": "SoftwareApplication",
+      "applicationCategory": "BusinessApplication",
+      "applicationSubCategory": "Welding Management Software",
+      "operatingSystem": "Linux/Appliance",
       "name": "Elenchon Standard",
       "description": {% if sx_L == 'pt' %}"A plataforma completa de rastreabilidade de soldadura on-premise Elenchon: os seis pilares de funcionalidades, levantamento no local, instalação e formação no chão de fábrica, evidência ISO e ASME IX pronta para auditoria, rede segura pós-quântica e suporte direto dos fundadores. Inclui 50 trabalhadores e expansão ilimitada de trabalhadores."{% elsif sx_L == 'es' %}"La plataforma completa de trazabilidad de soldadura on-premise Elenchon: los seis pilares de funcionalidades, levantamiento in situ, instalación y formación en planta, evidencias ISO y ASME IX listas para auditoría, red segura poscuántica y soporte directo de los fundadores. Incluye 50 trabajadores y ampliación ilimitada de trabajadores."{% else %}"The complete Elenchon on-premise welding traceability platform: all six capability pillars, on-site scoping, installation and floor training, audit-ready ISO & ASME IX evidence, post-quantum-safe networking, and direct founder support. Includes 50 workers and unlimited worker expansion."{% endif %},
-      "brand": {
-        "@type": "Brand",
-        "name": "Delteris"
-      },
+      "publisher": { "@id": "https://delteris.com/#organization" },
       "offers": {
         "@type": "Offer",
         "url": "https://delteris.com{{ sx_px }}/elenchon-pricing.html",
