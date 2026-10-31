@@ -1247,6 +1247,12 @@
         var f = e.target, hp = f && f.querySelector && f.querySelector('.newsletter-hp');
         if (f && f.matches && f.matches('form[data-newsletter]') && !(hp && hp.value)) send('signup');
     }, true);
+    // Print buttons on resources pages ([data-wp-print] on the welding positions
+    // page). Counts the click once per page view; it can't know whether the
+    // print dialog was then cancelled, and Ctrl+P is not counted.
+    document.addEventListener('click', function (e) {
+        if (e.target && e.target.closest && e.target.closest('[data-wp-print]')) send('print');
+    }, true);
 })();
 
 /* Guides hub search (_includes/guide-hub.html). Hidden until the hub has data-min
