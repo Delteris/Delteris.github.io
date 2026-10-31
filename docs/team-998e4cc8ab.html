@@ -1,0 +1,36 @@
+---
+layout: default
+# Hidden team page: excludes this browser from Archon's website counts. Not linked
+# anywhere; the address is kept in ..DELTERIS CODE/tokens.txt.
+noindex: true
+sitemap: false
+permalink: /team-998e4cc8ab/
+title: "Team browser | Delteris"
+description: "Internal page."
+---
+    <section class="page-section container">
+        <div class="summary-panel" style="max-width:40rem;margin:0 auto;text-align:center">
+            <h1 class="text-glow" style="font-size:1.8rem">Team browser</h1>
+            <p id="team-state">Checking this browser…</p>
+            <p><button type="button" class="btn btn-primary" id="team-toggle" hidden></button></p>
+            <p style="font-size:.85rem;color:var(--text-muted)">Applies to this browser on this device only. Do it once in each browser you use, phones included. Clearing site data undoes it.</p>
+        </div>
+    </section>
+    <script>
+    (function () {
+        var KEY = 'delterisTeam', state = document.getElementById('team-state'), btn = document.getElementById('team-toggle');
+        function on() { try { return localStorage.getItem(KEY) === '1'; } catch (e) { return null; } }
+        function show() {
+            var v = on();
+            if (v === null) { state.textContent = 'This browser blocks site storage, so it can\'t be marked.'; btn.hidden = true; return; }
+            state.textContent = v ? 'This browser is excluded from Delteris analytics.' : 'This browser is counted in Delteris analytics.';
+            btn.textContent = v ? 'Count this browser again' : 'Exclude this browser';
+            btn.hidden = false;
+        }
+        btn.addEventListener('click', function () {
+            try { if (on()) localStorage.removeItem(KEY); else localStorage.setItem(KEY, '1'); } catch (e) {}
+            show();
+        });
+        show();
+    })();
+    </script>

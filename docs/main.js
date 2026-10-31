@@ -1188,13 +1188,15 @@
 
 /* Campaign metrics: anonymous totals on our own server (Archon, archon.delteris.com).
    Sends only the event, the page path and the link's utm_* tags. No cookies, no
-   storage, no IDs, no referrer, no full URL. The tags live in this variable for the
+   storage written, no IDs, no referrer, no full URL. The tags live in this variable for the
    page's lifetime and are removed from the address bar, so a reload or a shared
    copy of the URL is not counted as another campaign visit. */
 (function () {
     var meta = document.querySelector('meta[name="metrics-endpoint"]');
     var url = meta && meta.content;
     if (!url || navigator.webdriver || !window.JSON) return;
+    // Team browsers send nothing: set by clicking the button on the hidden team page.
+    try { if (localStorage.getItem('delterisTeam') === '1') return; } catch (e) {}
     var tags = {}, rest = [];
     location.search.replace(/^\?/, '').split('&').forEach(function (kv) {
         if (!kv) return;
