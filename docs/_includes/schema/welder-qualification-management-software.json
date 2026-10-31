@@ -5,7 +5,7 @@
   "@graph": [
     {
       "@type": "SoftwareApplication",
-      "name": {% if sx_L == 'en' %}"Elenchon Atlas — Welder Qualification Tracking Software"{% else %}{{ sx_name | jsonify }}{% endif %},
+      "name": {% if sx_L == 'en' %}"Elenchon Atlas — Welder Qualification Tracking"{% else %}{{ sx_name | jsonify }}{% endif %},
       "applicationCategory": "BusinessApplication",
       "applicationSubCategory": "Welder Qualification Management Software",
       "operatingSystem": "Cloud / Web",
