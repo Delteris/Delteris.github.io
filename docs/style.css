@@ -4815,3 +4815,172 @@ button.app-figure-frame:focus-visible .app-figure-zoom-hint {
 @media (max-width: 900px) {
     .hi-calc-body { grid-template-columns: minmax(0, 1fr); gap: 1.2rem; }
 }
+
+/* ------------------------------------------------------------
+   Roadmaps: the hub (/roadmap.html), the two product roadmaps
+   (/atlas/roadmap/, /elenchon/roadmap/) and the homepage band.
+   A vertical timeline of stages; each stage holds one or more
+   panels of one-line items. Status reuses .roadmap-badge.
+   ------------------------------------------------------------ */
+.rm-timeline {
+    list-style: none;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0;
+}
+.rm-stage {
+    position: relative;
+    padding: 0 0 3rem 2.6rem;
+}
+.rm-stage:last-child { padding-bottom: 0; }
+.rm-stage::before {
+    content: "";
+    position: absolute;
+    left: 0.58rem;
+    top: 1.35rem;
+    bottom: 0.15rem;
+    width: 1px;
+    background: linear-gradient(180deg, rgba(59, 130, 246, 0.45), rgba(59, 130, 246, 0.08));
+}
+.rm-stage:last-child::before { display: none; }
+.rm-stage::after {
+    content: "";
+    position: absolute;
+    left: 0.2rem;
+    top: 0.32rem;
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    border: 2px solid rgba(59, 130, 246, 0.7);
+    background: var(--bg-deep);
+}
+.rm-stage.is-live::after { background: var(--accent-blue); border-color: var(--accent-blue); }
+.rm-stage.is-progress::after {
+    background: #d8b44a;
+    border-color: #d8b44a;
+    box-shadow: 0 0 0 5px rgba(216, 180, 74, 0.14);
+}
+.rm-stage-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem 0.85rem;
+    margin-bottom: 0.7rem;
+}
+.rm-stage-head .roadmap-badge { margin: 0; }
+.rm-when {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+}
+.rm-stage h2 {
+    font-size: clamp(1.4rem, 2.6vw, 1.9rem);
+    margin: 0 0 0.6rem;
+    text-wrap: balance;
+}
+.rm-lead {
+    color: var(--text-muted);
+    max-width: 66ch;
+    margin: 0 0 1.4rem;
+}
+.rm-lead:last-child { margin-bottom: 0; }
+.rm-lead a, .rm-links a { color: var(--link); text-decoration: none; }
+.rm-lead a:hover, .rm-links a:hover { color: var(--link-hover); text-decoration: underline; }
+.rm-panel {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius);
+    padding: 1.4rem 1.6rem 1.5rem;
+}
+.rm-panel + .rm-panel { margin-top: 1rem; }
+.rm-panel.is-lead {
+    border-color: rgba(216, 180, 74, 0.32);
+    background: linear-gradient(145deg, rgba(216, 180, 74, 0.06) 0%, var(--glass-bg) 60%);
+}
+.rm-panel h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--accent-blue);
+    margin: 0 0 1rem;
+}
+.rm-panel.is-lead h3 { color: #d8b44a; }
+.rm-panel h3 .rm-tier { color: var(--text-muted); font-weight: 400; letter-spacing: 0.06em; text-transform: none; }
+.rm-items {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem 2rem;
+}
+.rm-items li {
+    font-size: 0.93rem;
+    line-height: 1.55;
+    color: var(--text-muted);
+}
+.rm-items li strong {
+    display: block;
+    color: var(--text-main);
+    font-size: 0.98rem;
+    font-weight: 600;
+    margin-bottom: 0.1rem;
+}
+.rm-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1.4rem;
+    margin: 1rem 0 0;
+    font-size: 0.93rem;
+    font-weight: 600;
+}
+.rm-note { margin: 1rem 0 0; font-size: 0.88rem; color: var(--text-muted); }
+.rm-note a { color: var(--link); }
+@media (max-width: 720px) {
+    .rm-stage { padding-left: 2.1rem; }
+    .rm-items { grid-template-columns: 1fr; gap: 0.85rem; }
+    .rm-panel { padding: 1.2rem 1.15rem 1.3rem; }
+}
+
+/* Roadmap split (hub at full size, homepage compact): the door-split pair with
+   each product's next milestone and links to its roadmap and updates. */
+.rm-split .door-card { display: flex; flex-direction: column; }
+.rm-split .door-card > p { color: var(--text-muted); }
+.rm-split-list {
+    list-style: none;
+    margin: 0 0 1.4rem;
+    padding: 0;
+    text-align: left;
+}
+.rm-split-list li {
+    padding: 0.6rem 0;
+    border-top: 1px solid rgba(148, 163, 184, 0.13);
+    font-size: 0.93rem;
+    color: var(--text-main);
+}
+.rm-split-list li:last-child { border-bottom: 1px solid rgba(148, 163, 184, 0.13); }
+.rm-split-links {
+    margin-top: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.4rem 1.5rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+.rm-split-links a { color: var(--link); text-decoration: none; }
+.rm-split-links a:hover { color: var(--link-hover); text-decoration: underline; }
+.door-split-compact.rm-split .door-card > p { margin-bottom: 1.2rem; }
+
+/* "Next" chip under the "New" chip in a product hero (hero-next include). */
+.hero-news + .hero-news { margin-top: 0.6rem; }
+.hero-news-tag.is-next {
+    color: #f0d27a;
+    background: rgba(216, 180, 74, 0.16);
+    box-shadow: inset 0 0 0 1px rgba(216, 180, 74, 0.45);
+}

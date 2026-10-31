@@ -1,0 +1,87 @@
+---
+layout: default
+permalink: /atlas/roadmap/
+lang: en
+title: "Elenchon Atlas Roadmap | What's Next for Atlas | Delteris"
+description: "What's coming in Elenchon Atlas, the cloud WPS and welder qualification software: Atlas 1.3 brings Project check, joint drawings on the WPS, a QR code on the welder pass, and operator and NDT inspector qualifications. Included at no extra cost."
+og_title: "Elenchon Atlas Roadmap | Atlas 1.3"
+og_description: "Atlas 1.3, in development: Project check, joint drawings on the WPS, a WPS from a drawing, a QR code on the welder pass, and operators and NDT inspectors."
+og_image: "/static/DelterisCrest.webp"
+schema: schema/roadmap-atlas.json
+en_url: "/atlas/roadmap/"
+pt_url: "/pt/atlas/roadmap/"
+es_url: "/es/atlas/roadmap/"
+alt_url: "/pt/atlas/roadmap/"
+hub: atlas
+crumb: "Roadmap"
+---
+    <header class="page-hero is-short">
+        <div class="hero-content">
+            <span class="hero-eyebrow">Elenchon Atlas · Roadmap</span>
+            <h1 class="text-glow">What’s Next<br>in Atlas.</h1>
+            <p class="hero-sub">What we’re building for Atlas, in the order it ships. Every release is included in your subscription and explained in the updates when it lands.</p>
+            <p class="guide-meta"><a href="/wps-management-software.html">About Atlas</a> · <a href="/atlas/updates/">Updates</a> · <a href="/roadmap.html">All roadmaps</a></p>
+        </div>
+    </header>
+
+    <section class="page-section container u-flush-top">
+        <ol class="rm-timeline">
+            <li class="rm-stage is-live" id="atlas-1-2">
+                <div class="rm-stage-head"><span class="roadmap-badge is-live">Shipped</span><span class="rm-when">October 2026</span></div>
+                <h2>Atlas 1.2: A WPS Reader That Adapts to Your Forms</h2>
+                <p class="rm-lead">Our first major update. Atlas works out each form’s layout from the file itself, and you can now write, approve and print WPSs in Atlas and confirm many welder qualifications in one round.</p>
+                <p class="rm-links"><a href="/atlas/updates/1-2/">Read the 1.2 notes&nbsp;→</a> <a href="/atlas/updates/">All updates&nbsp;→</a></p>
+            </li>
+
+            <li class="rm-stage is-progress" id="atlas-1-3">
+                <div class="rm-stage-head"><span class="roadmap-badge is-progress">In development</span><span class="rm-when">Next release · date when it’s close</span></div>
+                <h2>Atlas 1.3: Can We Weld This Job?</h2>
+                <p class="rm-lead">At its centre is Project check: the joints a job needs, checked against the WPQRs and welder qualifications you already keep in Atlas. Included for every Atlas customer at no extra cost.</p>
+                <div class="rm-panel is-lead">
+                    <h3>Project check</h3>
+                    <ul class="rm-items">
+                        <li><strong>Projects</strong>List a job’s joints and see which WPQR and WPS cover each one, and which welders hold a current qualification.</li>
+                        <li><strong>A drawing of every joint</strong>A clean drawing built from the values you enter, updated as you type.</li>
+                        <li><strong>Planner</strong>Try one joint at a time and get the answer as you type; keep the good ones on a shortlist.</li>
+                        <li><strong>Project report</strong>A PDF of what the job is covered for, on which WPQR and WPS, and by which welders.</li>
+                        <li><strong>Coverage map</strong>Everything your WPQRs, or your welders, cover by thickness and diameter or position, with gaps and overlaps marked.</li>
+                    </ul>
+                </div>
+                <div class="rm-panel">
+                    <h3>WPS &amp; WPQR</h3>
+                    <ul class="rm-items">
+                        <li><strong>Joint drawings on the WPS</strong>The joint preparation with editable dimensions and runs, printed on Atlas’s WPS form.</li>
+                        <li><strong>A WPS from a drawing</strong>Start a WPS from the joint itself, the other way round from importing one.</li>
+                        <li><strong>Edit a WPS together</strong>See who else is working on a WPS and step in, without overwriting each other.</li>
+                        <li><strong>WPS form in your language</strong>English, Portuguese or Spanish, with an optional second language under every label.</li>
+                        <li><strong>Weld sequence on import</strong>The welding sequence of a double-sided weld, picked up when a WPS is imported.</li>
+                        <li><strong>Faster WPQR entry</strong>Copy just the fields you choose from a similar WPQR, and move through the ranges from the keyboard.</li>
+                    </ul>
+                </div>
+                <div class="rm-panel">
+                    <h3>Qualifications</h3>
+                    <ul class="rm-items">
+                        <li><strong>QR code on the welder pass</strong>Scan it with a phone to see that welder’s current qualifications.</li>
+                        <li><strong>Qualified welders, on a phone</strong>Which welders are qualified for a WPS, on a page made for a phone.</li>
+                        <li><strong>Operators and NDT inspectors</strong>Welding operator (ISO 14732) and NDT inspector (ISO 9712) qualifications on the same board, with the same reminders.</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li class="rm-stage" id="elenchon">
+                <div class="rm-stage-head"><span class="roadmap-badge is-planned">Planned</span><span class="rm-when">Q1 2027</span></div>
+                <h2>Move Into Elenchon When You Need the Floor</h2>
+                <p class="rm-lead">When Elenchon launches, your Atlas library and qualifications move into it, for shops that want full shop-floor traceability on their own hardware. Atlas carries on for shops that only need procedures and welders in the cloud.</p>
+                <p class="rm-links"><a href="/elenchon/roadmap/">Elenchon roadmap&nbsp;→</a></p>
+            </li>
+        </ol>
+    </section>
+
+{%- capture closing_intro %}
+            <span class="eyebrow">Shape What’s Next</span>
+            <h2 class="text-glow">Missing Something You Need?</h2>
+            <p>Tell us. A request from a shop is often how the next item gets on this page.</p>
+{%- endcapture %}
+{% include closing-cta.html product="atlas" id="roadmap-cta" class="u-tight-bottom" intro=closing_intro %}
+
+{% include newsletter-signup.html product="atlas" %}

@@ -2,126 +2,25 @@
 layout: default
 lang: es
 permalink: /es/roadmap.html
-title: "Hoja de Ruta del Producto | Elenchon by Delteris"
-description: "Hacia dónde va Elenchon: puesta en marcha en el primer trimestre de 2027, cinco meses de refinamiento en uso real, y luego una versión V2 que cierra el ciclo de conformidad aguas abajo de la soldadura y hace medible la producción. Compromisos, no aspiraciones."
-og_title: "Hoja de Ruta del Producto | Elenchon"
-og_description: "La hoja de ruta de Elenchon — puesta en marcha en el primer trimestre de 2027, refinamiento continuo, y luego una versión V2: conformidad aguas abajo (END + PWHT) y visibilidad de la producción. Precios claros."
+title: "Hojas de Ruta de los Productos | Elenchon Atlas y Elenchon | Delteris"
+description: "Lo próximo en los dos productos de Delteris: Atlas 1.3, la próxima versión en la nube con la Comprobación de proyecto, y el lanzamiento on-premise de Elenchon en el primer trimestre de 2027, seguido de una versión V2. Una hoja de ruta por producto."
+og_title: "Hojas de ruta de Delteris | Elenchon Atlas y Elenchon"
+og_description: "Atlas 1.3 está en desarrollo, con la Comprobación de proyecto en su centro; Elenchon entra en funcionamiento en el T1 2027, luego la V2. Una hoja de ruta por producto."
 og_image: "/static/DelterisCrest.webp"
 schema: schema/roadmap.json
 en_url: "/roadmap.html"
 pt_url: "/pt/roadmap.html"
 es_url: "/es/roadmap.html"
 alt_url: "/roadmap.html"
-hub: elenchon
-crumb: "Hoja de Ruta"
 ---
-    <header class="page-hero">
+    <header class="page-hero is-short">
         <div class="hero-content">
-            <span class="hero-eyebrow">Hoja de Ruta del Producto</span>
-            <h1 class="text-glow">Trazado. Soldado. Correcto.<br>Y Siempre Avanzando.</h1>
-            <p class="hero-sub">Hacia dónde va Elenchon: del primer registro de soldadura a un taller que demuestra su conformidad y ve su producción de un vistazo. Estos hitos son compromisos — si una fecha cambia, lo sabrá primero por nosotros.</p>
-            <div class="cta-group">
-                <a href="/es/contact.html" class="btn btn-primary">Unirse a la Lista de Lanzamiento</a>
-                <a href="/es/elenchon-pricing.html" class="btn btn-secondary">Ver Precios Claros</a>
-            </div>
-            <p class="hero-hub-link">Parte de <a href="/es/elenchon-platform.html">Elenchon</a>, trazabilidad de soldadura on-premise con lanzamiento en el primer trimestre de 2027.</p>
+            <span class="hero-eyebrow">Hoja de Ruta</span>
+            <h1 class="text-glow">Lo que Estamos<br>Construyendo.</h1>
+            <p class="hero-sub">Dos productos, una hoja de ruta cada uno. Abra una para ver el plan completo; lo que ya se ha publicado está en las novedades de cada producto.</p>
         </div>
     </header>
 
-    <section class="page-section container u-flush-top" id="deployment">
-        <div class="section-header">
-            <span class="eyebrow">T1 2027 · Lanzamiento</span>
-            <h2>La Plataforma Entra en Funcionamiento en su Planta</h2>
-            <p class="subtitle">Su equipo hace seguimiento de conformidad sobre trabajo real, en poder interno desde el primer día — con captura offline-first incluida, antes del plan original del mes seis. Todo el detalle en la <a href="/es/deployment.html">página de implementación</a>.</p>
-        </div>
+    <section class="page-section container u-flush-top">
+{% include roadmap-split.html %}
     </section>
-
-    <section class="page-section container" id="refinement">
-        <div class="section-header">
-            <span class="eyebrow">Meses 1–5 · Refinamiento en Uso Real</span>
-            <h2>El Producto se Ajusta a Cómo Trabaja Realmente</h2>
-            <p class="subtitle">Cuando su opinión da más forma a Elenchon: la aplicación de planta sigue siendo rápida en condiciones reales, las funciones se ajustan a cómo trabaja su equipo, y llegan nuevas plantillas y formatos de exportación según los necesite su papeleo.</p>
-        </div>
-    </section>
-
-    <section class="page-section container" id="v2">
-        <div class="section-header">
-            <span class="eyebrow">Mes 6 · Versión V2</span>
-            <h2>Dos Resultados, Una Versión</h2>
-            <p class="subtitle">La próxima versión principal entrega dos cosas que la planta pidió. Las funcionalidades del nivel Standard llegan sin coste adicional; el Premium es una actualización opcional, con precio publicado claramente en el lanzamiento.</p>
-        </div>
-
-        <div class="pillar-grid">
-            <div class="glass-card roadmap-card">
-                <span class="roadmap-badge is-planned">V2 · Standard</span>
-                <h3>Cerrar el Ciclo de Conformidad Aguas Abajo de la Soldadura</h3>
-                <p>Los registros que un auditor de código espera <em>después</em> de que el arco se detenga, ligados nativamente a la junta — sin dosier aparte, sin cargo adicional.</p>
-                <ul class="feature-list">
-                    <li><strong>Seguimiento granular de END:</strong> solicitudes de ensayo, resultados y su vínculo con la junta y el ciclo de reparación específicos.</li>
-                    <li><strong>Seguimiento de ciclos de PWHT:</strong> tratamiento térmico posterior a la soldadura por número total de ciclos y tiempo total de ciclo, ligado a las juntas que cubre.</li>
-                </ul>
-            </div>
-            <div class="glass-card roadmap-card">
-                <span class="roadmap-badge is-planned">V2 · Premium</span>
-                <h3>Ver y Medir su Producción</h3>
-                <p>Convierta los datos que la planta ya captura en una lectura en tiempo real de la producción y de dónde se está atascando el trabajo — evidencia que puede presentar a un cliente o usar para presupuestar el próximo trabajo.</p>
-                <ul class="feature-list">
-                    <li><strong>Gestor de Productividad:</strong> producción por trabajador, tipo de trabajo y fase del proyecto, con tendencias históricas.</li>
-                    <li><strong>Monitor Visual de Producción:</strong> un mapa en tiempo real del proyecto que muestra qué se mueve ahora y dónde se forman cuellos de botella, mientras aún hay tiempo para actuar.</li>
-                </ul>
-            </div>
-        </div>
-        <p class="feature-note">Todos los precios de plan, extras, implementación y hardware se publican íntegramente en nuestra <a href="/es/elenchon-pricing.html">página de precios</a> — incluido el Premium en cuanto su conjunto de funcionalidades esté finalizado.</p>
-    </section>
-
-    <section class="page-section container" id="atlas-1-3">
-        <div class="section-header">
-            <span class="eyebrow">Elenchon Atlas · Próxima versión</span>
-            <h2>Atlas 1.3: ¿Podemos Soldar Esta Obra?</h2>
-            <p class="subtitle">La próxima versión de Atlas, ya en desarrollo e incluida sin coste extra para todos los clientes de Atlas. En su centro está la Comprobación de proyecto: las uniones que necesita una obra, comprobadas contra los WPQR y las homologaciones de soldadores que ya guarda en Atlas. Daremos una fecha cuando esté cerca.</p>
-        </div>
-
-        <div class="pillar-grid pillar-grid-3">
-            <div class="glass-card roadmap-card">
-                <span class="roadmap-badge is-progress">Atlas 1.3 · Comprobación de proyecto</span>
-                <h3>Sepa lo Que Pide una Obra Antes de Empezar</h3>
-                <ul class="feature-list">
-                    <li><strong>Proyectos:</strong> enumere las uniones que necesita una obra (chapa o tubo, espesor, posición, procesos) y vea para cada una qué WPQR y qué WPS la cubren y qué soldadores tienen una homologación vigente, tal como se introdujeron.</li>
-                    <li><strong>Un dibujo de cada unión:</strong> un dibujo limpio hecho a partir de los valores que introduce, actualizado mientras escribe.</li>
-                    <li><strong>Planificador:</strong> pruebe una unión cada vez y tenga la respuesta mientras escribe; guarde las que interesan en una preselección.</li>
-                    <li><strong>Informe del proyecto:</strong> un PDF con aquello para lo que la obra está cubierta, en qué WPQR y WPS, y por qué soldadores, en español, inglés o portugués.</li>
-                    <li><strong>Mapa de cobertura:</strong> todo lo que cubren sus WPQR, o sus soldadores, por espesor y diámetro o posición, con los huecos y solapes marcados.</li>
-                </ul>
-            </div>
-            <div class="glass-card roadmap-card">
-                <span class="roadmap-badge is-progress">Atlas 1.3 · WPS y WPQR</span>
-                <h3>Dibuje, Redacte e Imprima WPS</h3>
-                <ul class="feature-list">
-                    <li><strong>Dibujos de uniones en la WPS:</strong> la preparación de la unión dibujada con cotas y pasadas editables, impresa en el formulario de WPS de Atlas.</li>
-                    <li><strong>Una WPS a partir de un dibujo:</strong> empiece una WPS por la propia unión, el camino inverso a importarla.</li>
-                    <li><strong>Editar una WPS en equipo:</strong> vea quién más está trabajando en una WPS y únase, sin que los cambios de uno borren los del otro.</li>
-                    <li><strong>Formulario de WPS en su idioma:</strong> el formulario de WPS de Atlas en español, inglés o portugués, con un segundo idioma bajo cada etiqueta cuando lo lee un cliente o inspector extranjero.</li>
-                    <li><strong>Secuencia de soldeo al importar:</strong> la secuencia de soldeo de una soldadura por ambos lados, leída al importar una WPS.</li>
-                    <li><strong>WPQR más rápidos de introducir:</strong> copie solo los campos que elija de un WPQR parecido y recorra los rangos con el teclado.</li>
-                </ul>
-            </div>
-            <div class="glass-card roadmap-card">
-                <span class="roadmap-badge is-progress">Atlas 1.3 · Homologaciones</span>
-                <h3>Compruebe una Homologación Junto a la Unión</h3>
-                <ul class="feature-list">
-                    <li><strong>Código QR en la tarjeta del soldador:</strong> escanéelo con el móvil para ver las homologaciones vigentes de ese soldador.</li>
-                    <li><strong>Soldadores homologados, en el móvil:</strong> vea qué soldadores están homologados para una WPS, en una página pensada para el móvil.</li>
-                    <li><strong>Operadores e inspectores de END:</strong> cualificaciones de operadores de soldadura (ISO 14732) y de inspectores de END (ISO 9712) en el mismo tablero, con los mismos avisos.</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-{%- capture closing_intro %}
-            <span class="eyebrow">Moldee lo que Viene</span>
-            <h2 class="text-glow">¿Falta Algo que su Planta Necesita?</h2>
-            <p>Un equipo de dos fundadores sobre una stack moderna convierte la petición de un taller en software lanzado en un ciclo de versión, no en un trimestre de hoja de ruta. Si falta algo concreto, díganoslo — así es, muchas veces, como el próximo elemento llega aquí.</p>
-{%- endcapture %}
-{% include closing-cta.html product="elenchon" id="roadmap-cta" class="u-tight-bottom" intro=closing_intro %}
-
-{% include newsletter-signup.html product="elenchon" %}

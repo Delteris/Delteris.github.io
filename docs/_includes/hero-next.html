@@ -1,0 +1,10 @@
+{%- comment %} One-line link to a product's roadmap, for a hero, styled like latest-update
+     with a "Next" tag. Param: include.product (atlas only for now). {%- endcomment %}
+{%- assign L = page.lang | default: 'en' -%}
+{%- if L == 'en' %}{% assign px = '' %}{% else %}{% assign px = '/' | append: L %}{% endif -%}
+{%- if include.product == 'atlas' %}
+{%- if L == 'pt' %}{% assign n_tag = 'A seguir' %}{% assign n_text = 'Atlas 1.3: verifique as juntas de uma obra contra os seus WPQR e soldadores' %}
+{%- elsif L == 'es' %}{% assign n_tag = 'Lo próximo' %}{% assign n_text = 'Atlas 1.3: compruebe las uniones de una obra con sus WPQR y soldadores' %}
+{%- else %}{% assign n_tag = 'Next' %}{% assign n_text = 'Atlas 1.3: check a job’s joints against your WPQRs and welders' %}{% endif %}
+            <p class="hero-news"><a href="{{ px }}/atlas/roadmap/"><span class="hero-news-tag is-next">{{ n_tag }}</span><span class="hero-news-text">{{ n_text }}</span><span aria-hidden="true"> →</span></a></p>
+{%- endif %}

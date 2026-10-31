@@ -1,0 +1,78 @@
+---
+layout: default
+permalink: /pt/elenchon/roadmap/
+lang: pt
+title: "Roteiro do Elenchon | Lançamento em 2027 e V2 | Delteris"
+description: "Para onde caminha o Elenchon: arranque no primeiro trimestre de 2027, cinco meses de refinamento em uso real, e depois uma versão V2 que fecha o ciclo de conformidade a jusante da soldadura e torna a produção mensurável. Compromissos, não aspirações."
+og_title: "Roteiro do Elenchon | Lançamento e V2"
+og_description: "O roteiro do Elenchon: arranque no primeiro trimestre de 2027, refinamento contínuo, e depois uma versão V2 com conformidade a jusante (END + PWHT) e visibilidade da produção. Preços às claras."
+og_image: "/static/DelterisCrest.webp"
+schema: schema/roadmap-elenchon.json
+en_url: "/elenchon/roadmap/"
+pt_url: "/pt/elenchon/roadmap/"
+es_url: "/es/elenchon/roadmap/"
+alt_url: "/elenchon/roadmap/"
+hub: elenchon
+crumb: "Roteiro"
+---
+    <header class="page-hero is-short">
+        <div class="hero-content">
+            <span class="hero-eyebrow">Elenchon · Roteiro</span>
+            <h1 class="text-glow">Rastreado. Soldado. Correto.<br>E Sempre a Avançar.</h1>
+            <p class="hero-sub">Do primeiro registo de soldadura a uma oficina que prova a sua conformidade e vê a sua produção num relance. Estes marcos são compromissos: se uma data mudar, sabe-o primeiro por nós.</p>
+            <p class="guide-meta"><a href="/pt/elenchon-platform.html">Sobre o Elenchon</a> · <a href="/pt/elenchon/updates/">Novidades</a> · <a href="/pt/roadmap.html">Todos os roteiros</a></p>
+        </div>
+    </header>
+
+    <section class="page-section container u-flush-top">
+        <ol class="rm-timeline">
+            <li class="rm-stage is-progress" id="now">
+                <div class="rm-stage-head"><span class="roadmap-badge is-progress">Em desenvolvimento</span><span class="rm-when">Agora</span></div>
+                <h2>A Caminho do Lançamento</h2>
+                <p class="rm-lead">O Elenchon está em desenvolvimento, com as primeiras vagas de implementação reservadas através da lista de lançamento. O ponto em que está fica escrito nas novidades à medida que avança.</p>
+                <p class="rm-links"><a href="/pt/elenchon/updates/">Novidades do Elenchon&nbsp;→</a> <a href="/pt/contact.html">Entrar na lista de lançamento&nbsp;→</a></p>
+            </li>
+
+            <li class="rm-stage" id="deployment">
+                <div class="rm-stage-head"><span class="roadmap-badge is-planned">Planeado</span><span class="rm-when">1.º trimestre de 2027 · Lançamento</span></div>
+                <h2>A Plataforma Entra em Funcionamento no Seu Chão de Fábrica</h2>
+                <p class="rm-lead">A sua equipa faz acompanhamento de conformidade em trabalho real, detido internamente desde o primeiro dia, com captura offline-first incluída antes do plano original do mês seis. Todo o detalhe na <a href="/pt/deployment.html">página de implementação</a>.</p>
+            </li>
+
+            <li class="rm-stage" id="refinement">
+                <div class="rm-stage-head"><span class="roadmap-badge is-planned">Planeado</span><span class="rm-when">Meses 1–5 · Refinamento em uso real</span></div>
+                <h2>O Produto Ajusta-se ao Modo como Realmente Trabalha</h2>
+                <p class="rm-lead">Quando o seu feedback molda mais o Elenchon: a aplicação de chão de fábrica mantém-se rápida em condições reais, as funcionalidades ajustam-se à forma como a equipa trabalha, e chegam novos modelos e formatos de exportação conforme a sua papelada precisa.</p>
+            </li>
+
+            <li class="rm-stage" id="v2">
+                <div class="rm-stage-head"><span class="roadmap-badge is-planned">Planeado</span><span class="rm-when">Mês 6 · Versão V2</span></div>
+                <h2>Dois Resultados, Uma Versão</h2>
+                <p class="rm-lead">A próxima versão principal entrega duas coisas que o chão de fábrica pediu. As funcionalidades do nível Standard chegam sem custo adicional; o Premium é uma atualização opcional, com preço publicado às claras no lançamento.</p>
+                <div class="rm-panel">
+                    <h3>Fechar o ciclo de conformidade a jusante da soldadura <span class="rm-tier">· Standard, incluído</span></h3>
+                    <ul class="rm-items">
+                        <li><strong>Acompanhamento granular de END</strong>Pedidos de ensaio, resultados e a sua ligação à junta e ao ciclo de reparação específicos.</li>
+                        <li><strong>Acompanhamento de ciclos de PWHT</strong>Tratamento térmico pós-soldadura por número total de ciclos e tempo total de ciclo, ligado às juntas que cobre.</li>
+                    </ul>
+                </div>
+                <div class="rm-panel">
+                    <h3>Ver e medir a sua produção <span class="rm-tier">· Premium, opcional</span></h3>
+                    <ul class="rm-items">
+                        <li><strong>Gestor de Produtividade</strong>Produção por trabalhador, tipo de trabalho e fase do projeto, com tendências históricas.</li>
+                        <li><strong>Monitor Visual de Produção</strong>Um mapa em tempo real do projeto: o que se move agora e onde se formam estrangulamentos, enquanto ainda há tempo para agir.</li>
+                    </ul>
+                </div>
+                <p class="rm-note">Todos os preços de plano, extras, implementação e hardware estão na <a href="/pt/elenchon-pricing.html">página de preços</a>, incluindo o Premium assim que o seu conjunto de funcionalidades estiver finalizado.</p>
+            </li>
+        </ol>
+    </section>
+
+{%- capture closing_intro %}
+            <span class="eyebrow">Molde o que Aí Vem</span>
+            <h2 class="text-glow">Falta Algo de que o Seu Chão de Fábrica Precisa?</h2>
+            <p>Uma equipa de dois fundadores numa stack moderna transforma o pedido de uma oficina em software lançado num ciclo de versão, não num trimestre de roteiro. Se falta algo específico, diga-nos.</p>
+{%- endcapture %}
+{% include closing-cta.html product="elenchon" id="roadmap-cta" class="u-tight-bottom" intro=closing_intro %}
+
+{% include newsletter-signup.html product="elenchon" %}

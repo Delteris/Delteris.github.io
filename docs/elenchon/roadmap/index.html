@@ -1,0 +1,78 @@
+---
+layout: default
+permalink: /elenchon/roadmap/
+lang: en
+title: "Elenchon Roadmap | Launch in Q1 2027, Then V2 | Delteris"
+description: "Where Elenchon is heading: go-live in Q1 2027, five months of refinement in real use, then a V2 release that closes the compliance loop downstream of the weld and makes production measurable. Commitments, not aspirations."
+og_title: "Elenchon Roadmap | Q1 2027 Launch and V2"
+og_description: "Elenchon's roadmap: Q1 2027 go-live, continuous refinement, then a V2 release with downstream compliance (NDT + PWHT) and production visibility. Priced openly."
+og_image: "/static/DelterisCrest.webp"
+schema: schema/roadmap-elenchon.json
+en_url: "/elenchon/roadmap/"
+pt_url: "/pt/elenchon/roadmap/"
+es_url: "/es/elenchon/roadmap/"
+alt_url: "/pt/elenchon/roadmap/"
+hub: elenchon
+crumb: "Roadmap"
+---
+    <header class="page-hero is-short">
+        <div class="hero-content">
+            <span class="hero-eyebrow">Elenchon · Roadmap</span>
+            <h1 class="text-glow">Traced. Welded. Correct.<br>And Always Moving Forward.</h1>
+            <p class="hero-sub">From the first weld captured to a shop that proves its compliance and sees its production at a glance. These milestones are commitments: if a date moves, you hear it from us first.</p>
+            <p class="guide-meta"><a href="/elenchon-platform.html">About Elenchon</a> · <a href="/elenchon/updates/">Updates</a> · <a href="/roadmap.html">All roadmaps</a></p>
+        </div>
+    </header>
+
+    <section class="page-section container u-flush-top">
+        <ol class="rm-timeline">
+            <li class="rm-stage is-progress" id="now">
+                <div class="rm-stage-head"><span class="roadmap-badge is-progress">In development</span><span class="rm-when">Now</span></div>
+                <h2>Building Toward Launch</h2>
+                <p class="rm-lead">Elenchon is in development, with early deployment slots reserved through the launch list. Where it stands is written up in the updates as it moves.</p>
+                <p class="rm-links"><a href="/elenchon/updates/">Elenchon updates&nbsp;→</a> <a href="/contact.html">Join the launch list&nbsp;→</a></p>
+            </li>
+
+            <li class="rm-stage" id="deployment">
+                <div class="rm-stage-head"><span class="roadmap-badge is-planned">Planned</span><span class="rm-when">Q1 2027 · Launch</span></div>
+                <h2>The Platform Goes Live on Your Floor</h2>
+                <p class="rm-lead">Your team runs compliance tracking on real work, owned internally from day one, with offline-first capture included ahead of its original month-six plan. Full detail on the <a href="/deployment.html">deployment page</a>.</p>
+            </li>
+
+            <li class="rm-stage" id="refinement">
+                <div class="rm-stage-head"><span class="roadmap-badge is-planned">Planned</span><span class="rm-when">Months 1–5 · Refinement in real use</span></div>
+                <h2>The Product Bends to How You Actually Work</h2>
+                <p class="rm-lead">When your feedback shapes Elenchon most: the floor app stays fast in real conditions, features adjust to how your team works, and new templates and export formats arrive as your paperwork needs them.</p>
+            </li>
+
+            <li class="rm-stage" id="v2">
+                <div class="rm-stage-head"><span class="roadmap-badge is-planned">Planned</span><span class="rm-when">Month 6 · V2 release</span></div>
+                <h2>Two Outcomes, One Release</h2>
+                <p class="rm-lead">The next major version delivers two things the floor has asked for. Standard-tier features arrive at no extra cost; Premium is an optional upgrade, priced openly at launch.</p>
+                <div class="rm-panel">
+                    <h3>Close the compliance loop downstream of the weld <span class="rm-tier">· Standard, included</span></h3>
+                    <ul class="rm-items">
+                        <li><strong>Granular NDT tracking</strong>Test requests, results, and their link to the specific joint and repair cycle.</li>
+                        <li><strong>PWHT cycle tracking</strong>Post-weld heat treatment by total cycles and total cycle time, tied to the joints it covers.</li>
+                    </ul>
+                </div>
+                <div class="rm-panel">
+                    <h3>See and measure your production <span class="rm-tier">· Premium, optional</span></h3>
+                    <ul class="rm-items">
+                        <li><strong>Productivity Manager</strong>Throughput per worker, work type and project stage, with historical trends.</li>
+                        <li><strong>Visual Production Tracker</strong>A live map of the project: what’s moving now and where bottlenecks form, while there’s still time to act.</li>
+                    </ul>
+                </div>
+                <p class="rm-note">Every plan, add-on, deployment and hardware price is on the <a href="/elenchon-pricing.html">pricing page</a>, including Premium once its feature set is final.</p>
+            </li>
+        </ol>
+    </section>
+
+{%- capture closing_intro %}
+            <span class="eyebrow">Shape What’s Next</span>
+            <h2 class="text-glow">Missing Something Your Floor Needs?</h2>
+            <p>A two-founder team on a modern stack turns a shop’s request into shipped software in a release cycle, not a roadmap quarter. If something specific is missing, tell us.</p>
+{%- endcapture %}
+{% include closing-cta.html product="elenchon" id="roadmap-cta" class="u-tight-bottom" intro=closing_intro %}
+
+{% include newsletter-signup.html product="elenchon" %}

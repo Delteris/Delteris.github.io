@@ -1,0 +1,39 @@
+{%- comment %} Atlas roadmap (/atlas/roadmap/). Localised by the sx_* variables set in
+     _layouts/default.html. The breadcrumb comes from the breadcrumb include. {%- endcomment %}
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "name": {{ sx_name | jsonify }},
+      "url": "{{ sx_url }}",
+      "description": {{ sx_desc | jsonify }},
+      "publisher": { "@id": "https://delteris.com/#organization" },
+      "inLanguage": "{{ sx_lang }}"
+    },
+    {
+      "@type": "ItemList",
+      "name": {% if sx_L == 'pt' %}"Versões do Elenchon Atlas"{% elsif sx_L == 'es' %}"Versiones de Elenchon Atlas"{% else %}"Elenchon Atlas releases"{% endif %},
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": {% if sx_L == 'pt' %}"Atlas 1.2 (lançado, outubro de 2026)"{% elsif sx_L == 'es' %}"Atlas 1.2 (publicado, octubre de 2026)"{% else %}"Atlas 1.2 (shipped, October 2026)"{% endif %},
+          "description": {% if sx_L == 'pt' %}"Um leitor de WPS que percebe a disposição de cada formulário a partir do próprio ficheiro; escrever, aprovar e imprimir WPS; rondas de confirmação de qualificações de soldadores."{% elsif sx_L == 'es' %}"Un lector de WPS que deduce la disposición de cada formulario a partir del propio archivo; redactar, aprobar e imprimir WPS; rondas de confirmación de homologaciones de soldadores."{% else %}"A WPS reader that works out each form's layout from the file itself; writing, approving and printing WPSs; welder qualification confirmation rounds."{% endif %}
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": {% if sx_L == 'pt' %}"Atlas 1.3 (em desenvolvimento)"{% elsif sx_L == 'es' %}"Atlas 1.3 (en desarrollo)"{% else %}"Atlas 1.3 (in development)"{% endif %},
+          "description": {% if sx_L == 'pt' %}"Verificação de projeto, com desenho de cada junta, planeador, relatório e mapa de cobertura; desenhos de juntas na WPS e uma WPS a partir de um desenho; código QR no cartão do soldador; operadores (ISO 14732) e inspetores de END (ISO 9712)."{% elsif sx_L == 'es' %}"Comprobación de proyecto, con dibujo de cada unión, planificador, informe y mapa de cobertura; dibujos de uniones en la WPS y una WPS a partir de un dibujo; código QR en la tarjeta del soldador; operadores (ISO 14732) e inspectores de END (ISO 9712)."{% else %}"Project check, with a drawing of every joint, a Planner, a project report and a coverage map; joint drawings on the WPS and a WPS from a drawing; a QR code on the welder pass; welding operators (ISO 14732) and NDT inspectors (ISO 9712)."{% endif %}
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": {% if sx_L == 'pt' %}"Passagem para o Elenchon (1.º trimestre de 2027)"{% elsif sx_L == 'es' %}"Paso a Elenchon (T1 2027)"{% else %}"Move into Elenchon (Q1 2027)"{% endif %},
+          "description": {% if sx_L == 'pt' %}"A biblioteca e as qualificações do Atlas passam para o Elenchon no seu lançamento."{% elsif sx_L == 'es' %}"La biblioteca y las homologaciones de Atlas pasan a Elenchon en su lanzamiento."{% else %}"Atlas libraries and qualifications move into Elenchon at its launch."{% endif %}
+        }
+      ]
+    }
+  ]
+}

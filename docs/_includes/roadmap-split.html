@@ -1,0 +1,82 @@
+{%- comment %} Both products' next milestone side by side, each linking to its own roadmap
+     and updates. One source for the roadmap hub (/roadmap.html) and the homepage band.
+     Params:
+       compact  "true" — homepage size: no milestone list, card names as h3
+{%- endcomment %}
+{%- assign L = page.lang | default: 'en' -%}
+{%- if L == 'en' %}{% assign px = '' %}{% else %}{% assign px = '/' | append: L %}{% endif -%}
+{%- if L == 'pt' %}
+{%- assign a_eyebrow = 'A seguir · Atlas 1.3' -%}
+{%- assign a_text = 'Verificação de projeto: as juntas de que uma obra precisa, verificadas contra os seus WPQR e as qualificações dos soldadores.' -%}
+{%- assign a_1 = 'Verificação de projeto e mapa de cobertura' -%}
+{%- assign a_2 = 'Desenhos de juntas na WPS, e uma WPS a partir de um desenho' -%}
+{%- assign a_3 = 'Código QR no cartão do soldador; operadores e inspetores de END' -%}
+{%- assign a_road = 'Roteiro do Atlas' -%}
+{%- assign a_upd = 'Novidades' -%}
+{%- assign e_eyebrow = 'A seguir · Lançamento no 1.º trim. 2027' -%}
+{%- assign e_text = 'Entra em funcionamento no seu chão de fábrica, seguem-se cinco meses de refinamento e uma versão V2 ao sexto mês.' -%}
+{%- assign e_1 = 'Arranque no local, com captura offline-first' -%}
+{%- assign e_2 = 'Refinamento em uso real, meses 1 a 5' -%}
+{%- assign e_3 = 'V2: END e PWHT, e visibilidade da produção' -%}
+{%- assign e_road = 'Roteiro do Elenchon' -%}
+{%- assign e_upd = 'Novidades' -%}
+{%- elsif L == 'es' %}
+{%- assign a_eyebrow = 'Lo próximo · Atlas 1.3' -%}
+{%- assign a_text = 'Comprobación de proyecto: las uniones que necesita una obra, comprobadas contra sus WPQR y las homologaciones de sus soldadores.' -%}
+{%- assign a_1 = 'Comprobación de proyecto y mapa de cobertura' -%}
+{%- assign a_2 = 'Dibujos de uniones en la WPS, y una WPS a partir de un dibujo' -%}
+{%- assign a_3 = 'Código QR en la tarjeta del soldador; operadores e inspectores de END' -%}
+{%- assign a_road = 'Hoja de ruta de Atlas' -%}
+{%- assign a_upd = 'Novedades' -%}
+{%- assign e_eyebrow = 'Lo próximo · Lanzamiento en el T1 2027' -%}
+{%- assign e_text = 'Entra en funcionamiento en su planta, seguido de cinco meses de refinamiento y una versión V2 en el sexto mes.' -%}
+{%- assign e_1 = 'Puesta en marcha in situ, con captura offline-first' -%}
+{%- assign e_2 = 'Refinamiento en uso real, meses 1 a 5' -%}
+{%- assign e_3 = 'V2: END y PWHT, y visibilidad de la producción' -%}
+{%- assign e_road = 'Hoja de ruta de Elenchon' -%}
+{%- assign e_upd = 'Novedades' -%}
+{%- else %}
+{%- assign a_eyebrow = 'Next · Atlas 1.3' -%}
+{%- assign a_text = 'Project check: the joints a job needs, checked against your WPQRs and welder qualifications.' -%}
+{%- assign a_1 = 'Project check and coverage map' -%}
+{%- assign a_2 = 'Joint drawings on the WPS, and a WPS from a drawing' -%}
+{%- assign a_3 = 'QR code on the welder pass; operators and NDT inspectors' -%}
+{%- assign a_road = 'Atlas roadmap' -%}
+{%- assign a_upd = 'What’s new' -%}
+{%- assign e_eyebrow = 'Next · Launching Q1 2027' -%}
+{%- assign e_text = 'Goes live on your floor, followed by five months of refinement and a V2 release at month six.' -%}
+{%- assign e_1 = 'On-site go-live, with offline-first capture' -%}
+{%- assign e_2 = 'Refinement in real use, months 1 to 5' -%}
+{%- assign e_3 = 'V2: NDT and PWHT tracking, and production visibility' -%}
+{%- assign e_road = 'Elenchon roadmap' -%}
+{%- assign e_upd = 'Updates' -%}
+{%- endif -%}
+{%- if include.compact == 'true' %}{% assign hn = 'h3' %}{% else %}{% assign hn = 'h2' %}{% endif %}
+            <div class="door-split rm-split{% if include.compact == 'true' %} door-split-compact{% endif %}">
+                <div class="product-card door-card is-atlas" id="atlas">
+                    <span class="eyebrow atlas-eyebrow"><span class="live-dot" aria-hidden="true"></span>{{ a_eyebrow }}</span>
+                    <{{ hn }} class="door-name text-glow">Elenchon Atlas</{{ hn }}>
+                    <p>{{ a_text }}</p>
+{%- unless include.compact == 'true' %}
+                    <ul class="rm-split-list">
+                        <li>{{ a_1 }}</li>
+                        <li>{{ a_2 }}</li>
+                        <li>{{ a_3 }}</li>
+                    </ul>
+{%- endunless %}
+                    <p class="rm-split-links"><a href="{{ px }}/atlas/roadmap/">{{ a_road }}&nbsp;→</a> <a href="{{ px }}/atlas/updates/">{{ a_upd }}&nbsp;→</a></p>
+                </div>
+                <div class="product-card door-card" id="elenchon">
+                    <span class="eyebrow">{{ e_eyebrow }}</span>
+                    <{{ hn }} class="door-name text-glow">Elenchon</{{ hn }}>
+                    <p>{{ e_text }}</p>
+{%- unless include.compact == 'true' %}
+                    <ul class="rm-split-list">
+                        <li>{{ e_1 }}</li>
+                        <li>{{ e_2 }}</li>
+                        <li>{{ e_3 }}</li>
+                    </ul>
+{%- endunless %}
+                    <p class="rm-split-links"><a href="{{ px }}/elenchon/roadmap/">{{ e_road }}&nbsp;→</a> <a href="{{ px }}/elenchon/updates/">{{ e_upd }}&nbsp;→</a></p>
+                </div>
+            </div>
