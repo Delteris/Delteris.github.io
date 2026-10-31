@@ -24,7 +24,7 @@
         {
           "@type": "ListItem",
           "position": 2,
-          "name": {% if sx_L == 'pt' %}"Atlas 1.3 (em desenvolvimento)"{% elsif sx_L == 'es' %}"Atlas 1.3 (en desarrollo)"{% else %}"Atlas 1.3 (in development)"{% endif %},
+          "name": {% if sx_L == 'pt' %}"Atlas 1.3 (segunda quinzena de novembro de 2026)"{% elsif sx_L == 'es' %}"Atlas 1.3 (segunda quincena de noviembre de 2026)"{% else %}"Atlas 1.3 (second half of November 2026)"{% endif %},
           "description": {% if sx_L == 'pt' %}"Verificação de projeto, com desenho de cada junta, planeador, relatório e mapa de cobertura; desenhos de juntas na WPS e uma WPS a partir de um desenho; código QR no cartão do soldador; operadores (ISO 14732) e inspetores de END (ISO 9712)."{% elsif sx_L == 'es' %}"Comprobación de proyecto, con dibujo de cada unión, planificador, informe y mapa de cobertura; dibujos de uniones en la WPS y una WPS a partir de un dibujo; código QR en la tarjeta del soldador; operadores (ISO 14732) e inspectores de END (ISO 9712)."{% else %}"Project check, with a drawing of every joint, a Planner, a project report and a coverage map; joint drawings on the WPS and a WPS from a drawing; a QR code on the welder pass; welding operators (ISO 14732) and NDT inspectors (ISO 9712)."{% endif %}
         },
         {
