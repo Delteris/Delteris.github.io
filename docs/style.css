@@ -5525,6 +5525,14 @@ button.app-figure-frame:focus-visible .app-figure-zoom-hint {
 /* Print (main.js sets html[data-print] to "chart" or "table" from the buttons; Ctrl+P
    prints both). Only the chart and the cross-reference print, on white, no page chrome. */
 @page { margin: 12mm; }
+/* Secondary demo offer under the Atlas free-trial buttons */
+.demo-line {
+    margin-top: 0.9rem;
+    font-size: 0.92rem;
+    color: var(--text-muted);
+}
+.hero .demo-line, .page-hero .demo-line, .contact-note + .demo-line { text-align: center; }
+
 /* ---------- Light / dark theme toggle ---------- */
 .theme-toggle {
     -webkit-appearance: none;

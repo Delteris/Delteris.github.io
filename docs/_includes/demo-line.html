@@ -1,0 +1,13 @@
+{%- comment %} Secondary, low-pressure demo offer for Atlas, under the free-trial CTA.
+     Demos run in English or Portuguese only (no Spanish demos), so the line says so.
+     Opens an email with the subject filled in (the site has no forms). {%- endcomment %}
+{%- assign dl = page.lang | default: 'en' -%}
+<p class="demo-line">
+{%- if dl == 'pt' -%}
+Prefere ver primeiro? <a href="mailto:contact@delteris.com?subject=Elenchon%20Atlas%20%E2%80%94%20Pedido%20de%20demonstra%C3%A7%C3%A3o">Marque uma demonstração de 20 minutos</a>.
+{%- elsif dl == 'es' -%}
+¿Prefiere verlo antes? <a href="mailto:contact@delteris.com?subject=Elenchon%20Atlas%20%E2%80%94%20Solicitud%20de%20demostraci%C3%B3n">Reserve una demostración de 20 minutos</a> (en inglés o portugués).
+{%- else -%}
+Prefer to see it first? <a href="mailto:contact@delteris.com?subject=Elenchon%20Atlas%20%E2%80%94%20Demo%20request">Book a 20-minute demo</a> &mdash; in English or Portuguese.
+{%- endif -%}
+</p>
