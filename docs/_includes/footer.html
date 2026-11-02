@@ -1,6 +1,6 @@
 {%- assign L = page.lang | default: 'en' -%}
 {%- comment %} Atlas pages (hub sets `product: atlas`, spokes `hub: atlas`) get Atlas wording and
-     a quiet text link to its single action; everything else a quiet line to the founders.
+     a quiet text link to its single action; everything else a quiet line to the team.
      Deliberately no button: the page's own closing block carries the action. {%- endcomment %}
 {%- assign fprod = page.product | default: page.hub -%}
 {%- if page.update_product == 'atlas' %}{% assign fprod = 'atlas' %}{% endif -%}
@@ -12,7 +12,7 @@
             {%- if fprod == 'atlas' %}
             <p class="footer-cta-text">Quer experimentar o Atlas? <a href="/pt/atlas-free-trial.html">Peça um teste gratuito&nbsp;→</a></p>
 {%- else %}
-            <p class="footer-cta-text">Tem perguntas? <a href="/pt/contact.html">Fale com os fundadores&nbsp;→</a></p>
+            <p class="footer-cta-text">Tem perguntas? <a href="/pt/contact.html">Fale com quem desenvolve o software&nbsp;→</a></p>
 {%- endif %}
         </div>
         <div class="copyright">
@@ -33,7 +33,7 @@
             {%- if fprod == 'atlas' %}
             <p class="footer-cta-text">¿Quiere probar Atlas? <a href="/es/atlas-free-trial.html">Solicite una prueba gratuita&nbsp;→</a></p>
 {%- else %}
-            <p class="footer-cta-text">¿Tiene preguntas? <a href="/es/contact.html">Hable con los fundadores&nbsp;→</a></p>
+            <p class="footer-cta-text">¿Tiene preguntas? <a href="/es/contact.html">Hable con quienes desarrollan el software&nbsp;→</a></p>
 {%- endif %}
         </div>
         <div class="copyright">
@@ -54,7 +54,7 @@
             {%- if fprod == 'atlas' %}
             <p class="footer-cta-text">Want to try Atlas? <a href="/atlas-free-trial.html">Get a free trial&nbsp;→</a></p>
 {%- else %}
-            <p class="footer-cta-text">Questions? <a href="/contact.html">Talk to the founders&nbsp;→</a></p>
+            <p class="footer-cta-text">Questions? <a href="/contact.html">Talk to the people who build it&nbsp;→</a></p>
 {%- endif %}
         </div>
         <div class="copyright">

@@ -21,7 +21,7 @@
           "@type": "HowToStep",
           "position": 1,
           "name": {% if sx_L == 'pt' %}"Sessão de Levantamento"{% elsif sx_L == 'es' %}"Sesión de Levantamiento"{% else %}"Scoping Session"{% endif %},
-          "text": {% if sx_L == 'pt' %}"Uma chamada focada com os fundadores para mapear estruturas de projeto, requisitos de conformidade e fluxos de trabalho no chão de fábrica."{% elsif sx_L == 'es' %}"Una llamada centrada con los fundadores para mapear estructuras de proyecto, requisitos de cumplimiento y flujos de trabajo en planta."{% else %}"A focused call with the founders to map project structures, compliance requirements, and floor workflows."{% endif %}
+          "text": {% if sx_L == 'pt' %}"Uma chamada focada com a nossa equipa para mapear estruturas de projeto, requisitos de conformidade e fluxos de trabalho no chão de fábrica."{% elsif sx_L == 'es' %}"Una llamada centrada con nuestro equipo para mapear estructuras de proyecto, requisitos de cumplimiento y flujos de trabajo en planta."{% else %}"A focused call with our team to map project structures, compliance requirements, and floor workflows."{% endif %}
         },
         {
           "@type": "HowToStep",
