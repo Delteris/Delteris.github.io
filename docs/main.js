@@ -280,8 +280,23 @@
     let frame = 0;
 
     const CONNECTION_DISTANCE = 165;
-    const BLUE = '96, 165, 250';        // #60a5fa — a brighter, easier-to-see blue
-    const BLUE_CORE = '191, 219, 254';  // #bfdbfe — near-white node cores
+    // Colours follow the active theme: bright blue + near-white cores on dark,
+    // a quieter brand blue on light (read from CSS so the toggle updates them).
+    let BLUE = '96, 165, 250';          // #60a5fa on dark
+    let BLUE_CORE = '191, 219, 254';    // #bfdbfe on dark
+    let LIGHT_THEME = false;
+    function readCanvasTheme() {
+        LIGHT_THEME = getComputedStyle(document.documentElement).colorScheme.indexOf('dark') === -1;
+        BLUE = LIGHT_THEME ? '37, 99, 235' : '96, 165, 250';
+        BLUE_CORE = LIGHT_THEME ? '59, 130, 246' : '191, 219, 254';
+        canvas.style.opacity = LIGHT_THEME ? '0.45' : '';
+    }
+    readCanvasTheme();
+    document.addEventListener('delteris:themechange', readCanvasTheme);
+    if (window.matchMedia) {
+        const mq = window.matchMedia('(prefers-color-scheme: dark)');
+        if (mq.addEventListener) mq.addEventListener('change', readCanvasTheme);
+    }
     const MOUSE_RADIUS = 190;           // cursor influence radius
 
     // Cursor interaction is a pointer-with-hover affordance (desktop/trackpad).
@@ -492,7 +507,7 @@
         ctx.clearRect(0, 0, width, height);
 
         // Additive blending gives the whole field a soft neon glow
-        ctx.globalCompositeOperation = 'lighter';
+        ctx.globalCompositeOperation = LIGHT_THEME ? 'source-over' : 'lighter';
 
         for (let i = 0; i < particles.length; i++) particles[i].update();
         drawConnections();
@@ -1492,4 +1507,34 @@
     box.addEventListener('input', run);
     box.addEventListener('change', run);
     relabel(); run();
+})();
+
+/* ---------- Light / dark theme toggle ----------
+   Default follows the OS/browser setting. A click stores an explicit choice
+   (localStorage, best effort) which the inline <head> script re-applies
+   before paint on the next page. */
+(function () {
+    const btn = document.getElementById('theme-toggle');
+    if (!btn) return;
+    const root = document.documentElement;
+    const mq = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
+    function isDark() {
+        const t = root.getAttribute('data-theme');
+        if (t) return t === 'dark';
+        return !!(mq && mq.matches);
+    }
+    function sync() {
+        const dark = isDark();
+        btn.setAttribute('aria-pressed', dark ? 'true' : 'false');
+        btn.setAttribute('aria-label', dark ? btn.dataset.labelLight : btn.dataset.labelDark);
+    }
+    btn.addEventListener('click', function () {
+        const next = isDark() ? 'light' : 'dark';
+        root.setAttribute('data-theme', next);
+        try { localStorage.setItem('delteris-theme', next); } catch (e) {}
+        sync();
+        document.dispatchEvent(new Event('delteris:themechange'));
+    });
+    if (mq && mq.addEventListener) mq.addEventListener('change', sync);
+    sync();
 })();
