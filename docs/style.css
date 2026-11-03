@@ -1676,6 +1676,67 @@ nav {
     padding: 9.5rem 5% 4.5rem;
 }
 
+/* ------------------------------------------------------------
+   Hero atmosphere — static, shading-only depth (Nov 2026)
+   A soft cool-blue glow high in the centre plus a fainter one low on the
+   right, painted behind the hero content. No lines, nodes or grain; the
+   text/card areas stay close to the plain base colour. Both gradients fade
+   to transparent well inside the hero, so there is no seam where it ends.
+   Light values are a gentle tint; the dark theme overrides follow.
+   ------------------------------------------------------------ */
+:root {
+    --hero-glow-a: rgba(37, 99, 235, 0.15);
+    --hero-glow-b: rgba(37, 99, 235, 0.09);
+    --hero-glow-c: rgba(99, 102, 241, 0.07);
+    --hero-shade: rgba(30, 58, 138, 0.10);
+}
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+        --hero-glow-a: rgba(42, 115, 204, 0.15);
+        --hero-glow-b: rgba(25, 70, 130, 0.09);
+        --hero-glow-c: rgba(70, 80, 190, 0.07);
+        --hero-shade: rgba(0, 0, 0, 0.62);
+    }
+}
+:root[data-theme="dark"] {
+    --hero-glow-a: rgba(42, 115, 204, 0.15);
+    --hero-glow-b: rgba(25, 70, 130, 0.09);
+    --hero-glow-c: rgba(70, 80, 190, 0.07);
+    --hero-shade: rgba(0, 0, 0, 0.62);
+}
+
+.hero,
+.page-hero {
+    /* New stacking context so the glow's z-index:-1 stays inside the hero
+       (behind its content, never behind the page background). */
+    isolation: isolate;
+}
+.hero::before,
+.page-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    /* Full-bleed even when the hero itself is width-capped (.hero-split). */
+    left: 50%;
+    width: 100vw;
+    margin-left: -50vw;
+    z-index: -1;
+    pointer-events: none;
+    background:
+        /* tighter main glow = a lit area with real falloff, not an even wash */
+        radial-gradient(ellipse 55% 40% at 50% 16%, var(--hero-glow-a), transparent 72%),
+        radial-gradient(ellipse 45% 38% at 92% 62%, var(--hero-glow-b), transparent 75%),
+        /* faint cooler-violet offset on the opposite side for tonal variation */
+        radial-gradient(ellipse 40% 35% at 6% 48%, var(--hero-glow-c), transparent 75%),
+        /* edge shading: clear through the middle, noticeably darker toward the sides */
+        radial-gradient(ellipse 80% 75% at 50% 32%, transparent 38%, var(--hero-shade) 100%);
+    /* Fade the whole layer out toward the hero's bottom so no seam shows
+       where the next section begins. */
+    -webkit-mask-image: linear-gradient(to bottom, #000 65%, transparent 100%);
+    mask-image: linear-gradient(to bottom, #000 65%, transparent 100%);
+}
+
 .hero-content {
     max-width: 940px;
 }
