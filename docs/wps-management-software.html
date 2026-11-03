@@ -33,24 +33,24 @@ product: atlas
     </header>
 
     <section class="page-section container" id="overview">
-        <div class="summary-panel">
+        <div class="feature-row">
+            <div class="feature-row-text">
             <span class="eyebrow">One Tool, Two Halves</span>
-            <h2 class="text-glow">Who Can Weld It, and How</h2>
+            <h2>Who Can Weld It, and How</h2>
             <p><strong>Atlas answers the two questions that stop a job: is this welder qualified for this weld today, and which approved procedure covers it?</strong> Atlas keeps both in one place: it tracks your welders, reads your procedures, and checks one against the other.</p>
             <ul class="feature-list">
                 <li><strong>Welder qualification.</strong> Every welder’s qualifications tracked by expiry and continuity — a colour-coded grid, signed requalification, reminders before anything lapses, and which welders are covered for each WPS. <a href="#wpq">See it&nbsp;↓</a></li>
                 <li><strong>WPS management.</strong> Every WPS and pWPS imported from Excel or PDF into searchable records, every WPQR kept alongside — revisions grouped, each WPS tied to its WPQR, a clean master register exported with the linked files alongside. <a href="#capabilities">How it works&nbsp;↓</a></li>
             </ul>
+            </div>
+            <div class="feature-row-shot">
+            {% include app-shot.html
+                name="crop-overview" w="1170" h="490"
+                alt="Atlas overview: needs-attention cards for lapsed qualifications and welders due for reverification, email alerts on, and at-a-glance tiles for WPS, pWPS, WPQR, WPS outside their WPQR range and welder qualifications"
+                cap="Everything at a glance: what needs review, which qualifications are due, and the full count of procedures and welders you hold."
+                ph="crop-overview" %}
+            </div>
         </div>
-    </section>
-
-    <section class="page-section container u-tight-top" id="screenshot-overview">
-        {% include app-shot.html
-            name="overview"
-            wide="true"
-            alt="Atlas overview: needs-attention cards for lapsed qualifications and welders due for reverification, email alerts on, and at-a-glance tiles for WPS, pWPS, WPQR, WPS outside their WPQR range and welder qualifications"
-            cap="Everything at a glance: what needs review, which qualifications are due, and the full count of procedures and welders you hold."
-            ph="App overview dashboard — the greeting, the “Needs attention” cards and the WPS / pWPS / WPQR / qualified stat tiles." %}
     </section>
 
     <section class="page-section container" id="capabilities">
@@ -99,26 +99,23 @@ product: atlas
     </section>
 
     <section class="page-section container" id="wpq">
-        <div class="section-header">
-            <span class="eyebrow">Welder Qualification</span>
-            <h2>Your Welders' Qualifications, Tracked in the Same Place</h2>
-            <p class="subtitle">The same system keeps every welder's qualifications current — who's qualified for what, and which lapse is coming. <a href="welder-qualification-management-software.html">See welder qualification management &rarr;</a></p>
-        </div>
-        <div class="pillar-grid pillar-grid-3">
-            <div class="glass-card feature-teaser">
-                <span class="feature-index">01</span>
-                <h3>One Grid for the Whole Floor</h3>
-                <p>See which welders hold which processes and what is due soonest, colour-coded from clear to expired.</p>
+        <div class="feature-row feature-row-reverse">
+            <div class="feature-row-text">
+                <span class="eyebrow">Welder Qualification</span>
+                <h2>Your Welders' Qualifications, Tracked in the Same Place</h2>
+                <p>The same system keeps every welder's qualifications current — who's qualified for what, and which lapse is coming. <a href="welder-qualification-management-software.html">See welder qualification management &rarr;</a></p>
+                <ul class="feature-list">
+                    <li><strong>One grid for the whole floor.</strong> See which welders hold which processes and what is due soonest, colour-coded from clear to expired.</li>
+                    <li><strong>Two clocks, warned ahead.</strong> Expiry and continuity watched as separate dates, warned on the dashboard and by email.</li>
+                    <li><strong>Coverage for every WPS.</strong> Which welders’ current certificates cover each WPS — and which WPS nobody covers yet.</li>
+                </ul>
             </div>
-            <div class="glass-card feature-teaser">
-                <span class="feature-index">02</span>
-                <h3>Two Clocks, Warned Ahead</h3>
-                <p>Expiry and continuity watched as separate dates, warned on the dashboard and by email.</p>
-            </div>
-            <div class="glass-card feature-teaser">
-                <span class="feature-index">03</span>
-                <h3>Coverage for Every WPS</h3>
-                <p>Which welders’ current certificates cover each WPS — and which WPS nobody covers yet.</p>
+            <div class="feature-row-shot">
+            {% include app-shot.html
+                name="crop-board" w="1200" h="680"
+                alt="Qualification board: welders down the side, processes 111 to 141 across, each cell coloured clear, due within a month, two weeks, this week, or expired"
+                cap="The qualification board: every welder and process, soonest due first."
+                ph="crop-board" %}
             </div>
         </div>
     </section>
@@ -137,11 +134,12 @@ product: atlas
                 </ul>
                 <p class="u-gap-top"><a href="atlas-free-trial.html">Get a free trial — early-customer offer: we import your WPS for you&nbsp;→</a></p>
             </div>
-            <div class="graphic-placeholder">
-                <div class="pulse-ring delay-2"></div>
-                <div class="pulse-ring delay-1"></div>
-                <div class="pulse-ring"></div>
-                <div class="pulse-core"></div>
+            <div>
+            {% include app-shot.html
+                name="crop-import" w="620" h="640"
+                alt="The Add WPS dialog: three WPS files uploaded and read, each marked New WPS and OK, waiting for Confirm import"
+                cap="Your files, read and staged — nothing is written until you confirm."
+                ph="crop-import" %}
             </div>
         </div>
     </section>

@@ -35,24 +35,24 @@ product: atlas
     </header>
 
     <section class="page-section container" id="overview">
-        <div class="summary-panel">
+        <div class="feature-row">
+            <div class="feature-row-text">
             <span class="eyebrow">Una Herramienta, Dos Mitades</span>
-            <h2 class="text-glow">Quién Puede Soldar, y Cómo</h2>
+            <h2>Quién Puede Soldar, y Cómo</h2>
             <p><strong>Atlas responde a las dos preguntas que paran un trabajo: ¿está este soldador cualificado hoy para esta soldadura, y qué procedimiento aprobado la cubre?</strong> Atlas reúne ambas respuestas en un solo lugar: controla a sus soldadores, lee sus procedimientos y comprueba unos contra otros.</p>
             <ul class="feature-list">
                 <li><strong>Cualificación de soldadores.</strong> Las cualificaciones de cada soldador con seguimiento por caducidad y continuidad — una cuadrícula con código de colores, recualificación firmada, recordatorios antes de cualquier caducidad y qué soldadores están cubiertos para cada WPS. <a href="#wpq">Verla&nbsp;↓</a></li>
                 <li><strong>Gestión de WPS.</strong> Sus WPS y pWPS, importadas de Excel o PDF a registros con búsqueda, con cada WPQR al lado — revisiones agrupadas, cada WPS ligada a su WPQR, un registro maestro limpio exportado con los archivos vinculados. <a href="#capabilities">Cómo funciona&nbsp;↓</a></li>
             </ul>
+            </div>
+            <div class="feature-row-shot">
+            {% include app-shot.html
+                name="crop-overview" w="1170" h="490"
+                alt="Resumen de Atlas: avisos de cualificaciones vencidas y de soldadores con revalidación pendiente, alertas por email activas y mosaicos con WPS, pWPS, WPQR, WPS fuera del rango del WPQR y cualificaciones de soldadores"
+                cap="Todo de un vistazo: lo que necesita revisión, qué cualificaciones vencen, y el recuento completo de procedimientos y soldadores."
+                ph="crop-overview" %}
+            </div>
         </div>
-    </section>
-
-    <section class="page-section container u-tight-top" id="screenshot-overview">
-        {% include app-shot.html
-            name="overview"
-            wide="true"
-            alt="Resumen de Atlas: avisos de cualificaciones vencidas y de soldadores con revalidación pendiente, alertas por email activas y mosaicos con WPS, pWPS, WPQR, WPS fuera del rango del WPQR y cualificaciones de soldadores"
-            cap="Todo de un vistazo: lo que necesita revisión, qué cualificaciones vencen, y el recuento completo de procedimientos y soldadores."
-            ph="Panel de resumen de la aplicación — el saludo, las tarjetas “Necesita atención” y los mosaicos WPS / pWPS / WPQR / cualificadas." %}
     </section>
 
     <section class="page-section container" id="capabilities">
@@ -101,26 +101,23 @@ product: atlas
     </section>
 
     <section class="page-section container" id="wpq">
-        <div class="section-header">
-            <span class="eyebrow">Cualificación de Soldadores</span>
-            <h2>Las Cualificaciones de Sus Soldadores, en el Mismo Lugar</h2>
-            <p class="subtitle">El mismo sistema mantiene al día las cualificaciones de cada soldador — quién está cualificado para qué y qué caducidad se acerca. <a href="/es/welder-qualification-management-software.html">Ver gestión de cualificación de soldadores &rarr;</a></p>
-        </div>
-        <div class="pillar-grid pillar-grid-3">
-            <div class="glass-card feature-teaser">
-                <span class="feature-index">01</span>
-                <h3>Una Cuadrícula para Toda la Planta</h3>
-                <p>Vea qué soldadores tienen qué procesos y qué caduca antes, con colores de vigente a caducado.</p>
+        <div class="feature-row feature-row-reverse">
+            <div class="feature-row-text">
+                <span class="eyebrow">Cualificación de Soldadores</span>
+                <h2>Las Cualificaciones de Sus Soldadores, en el Mismo Lugar</h2>
+                <p>El mismo sistema mantiene al día las cualificaciones de cada soldador — quién está cualificado para qué y qué caducidad se acerca. <a href="/es/welder-qualification-management-software.html">Ver gestión de cualificación de soldadores &rarr;</a></p>
+                <ul class="feature-list">
+                    <li><strong>Una cuadrícula para toda la planta.</strong> Vea qué soldadores tienen qué procesos y qué caduca antes, con colores de vigente a caducado.</li>
+                    <li><strong>Dos relojes, avisados con antelación.</strong> Caducidad y continuidad vigiladas como fechas distintas, con avisos en el panel y por email.</li>
+                    <li><strong>Cobertura para cada WPS.</strong> Qué soldadores tienen certificados vigentes que cubren cada WPS — y qué WPS aún no cubre nadie.</li>
+                </ul>
             </div>
-            <div class="glass-card feature-teaser">
-                <span class="feature-index">02</span>
-                <h3>Dos Relojes, Avisados con Antelación</h3>
-                <p>Caducidad y continuidad vigiladas como fechas distintas, con avisos en el panel y por email.</p>
-            </div>
-            <div class="glass-card feature-teaser">
-                <span class="feature-index">03</span>
-                <h3>Cobertura para Cada WPS</h3>
-                <p>Qué soldadores tienen certificados vigentes que cubren cada WPS — y qué WPS aún no cubre nadie.</p>
+            <div class="feature-row-shot">
+            {% include app-shot.html
+                name="crop-board" w="1200" h="680"
+                alt="Cuadro de cualificaciones: soldadores en vertical, procesos 111 a 141 en horizontal, cada celda con el color de su estado: vigente, vence en un mes, en dos semanas, esta semana, o caducada"
+                cap="El cuadro de cualificaciones: todos los soldadores y procesos, lo que vence antes arriba."
+                ph="crop-board" %}
             </div>
         </div>
     </section>
@@ -139,11 +136,12 @@ product: atlas
                 </ul>
                 <p class="u-gap-top"><a href="/es/atlas-free-trial.html">Solicite una prueba gratuita — oferta para los primeros clientes: importamos sus WPS por usted&nbsp;→</a></p>
             </div>
-            <div class="graphic-placeholder">
-                <div class="pulse-ring delay-2"></div>
-                <div class="pulse-ring delay-1"></div>
-                <div class="pulse-ring"></div>
-                <div class="pulse-core"></div>
+            <div>
+            {% include app-shot.html
+                name="crop-import" w="620" h="640"
+                alt="La ventana Añadir WPS: tres archivos de WPS subidos y leídos, cada uno marcado como WPS nueva y OK, a la espera de Confirmar importación"
+                cap="Sus archivos, leídos y preparados: nada se guarda hasta que usted confirme."
+                ph="crop-import" %}
             </div>
         </div>
     </section>
