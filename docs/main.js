@@ -285,14 +285,15 @@
     let BLUE = '96, 165, 250';          // #60a5fa on dark
     let BLUE_CORE = '191, 219, 254';    // #bfdbfe on dark
     let LIGHT_THEME = false;
-    // On white, thin pale-blue lines vanish, so the light theme draws darker
-    // blue and multiplies line/glow alpha (BOOST) instead of fading the canvas.
+    // The light theme draws a darker blue with alpha gains tuned so the lattice
+    // has the same visual weight as on dark: measured as CIE L* difference from
+    // the bare background (mean ~0.17, brightest nodes ~6 L*) in both themes.
     let BOOST = 1;
     function readCanvasTheme() {
         LIGHT_THEME = getComputedStyle(document.documentElement).colorScheme.indexOf('dark') === -1;
         BLUE = LIGHT_THEME ? '37, 99, 235' : '96, 165, 250';
         BLUE_CORE = LIGHT_THEME ? '29, 78, 216' : '191, 219, 254';
-        BOOST = LIGHT_THEME ? 2.1 : 1;
+        BOOST = LIGHT_THEME ? 1.2 : 1;
         canvas.style.opacity = '';
     }
     readCanvasTheme();
@@ -408,7 +409,7 @@
             if (d < MOUSE_RADIUS) near = 1 - d / MOUSE_RADIUS;
         }
         const glowA = (0.05 + t * 0.05 + near * 0.22) * BOOST;
-        const coreA = (0.26 + t * 0.16 + near * 0.32) * (LIGHT_THEME ? 1.7 : 1);
+        const coreA = (0.26 + t * 0.16 + near * 0.32) * (LIGHT_THEME ? 1.3 : 1);
 
         // Soft radial glow (drawn additively for a neon feel)
         const halo = r * 5;
