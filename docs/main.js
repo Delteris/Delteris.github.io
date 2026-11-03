@@ -285,11 +285,15 @@
     let BLUE = '96, 165, 250';          // #60a5fa on dark
     let BLUE_CORE = '191, 219, 254';    // #bfdbfe on dark
     let LIGHT_THEME = false;
+    // On white, thin pale-blue lines vanish, so the light theme draws darker
+    // blue and multiplies line/glow alpha (BOOST) instead of fading the canvas.
+    let BOOST = 1;
     function readCanvasTheme() {
         LIGHT_THEME = getComputedStyle(document.documentElement).colorScheme.indexOf('dark') === -1;
         BLUE = LIGHT_THEME ? '37, 99, 235' : '96, 165, 250';
-        BLUE_CORE = LIGHT_THEME ? '59, 130, 246' : '191, 219, 254';
-        canvas.style.opacity = LIGHT_THEME ? '0.45' : '';
+        BLUE_CORE = LIGHT_THEME ? '29, 78, 216' : '191, 219, 254';
+        BOOST = LIGHT_THEME ? 2.1 : 1;
+        canvas.style.opacity = '';
     }
     readCanvasTheme();
     document.addEventListener('delteris:themechange', readCanvasTheme);
@@ -403,8 +407,8 @@
             const d = Math.hypot(this.x - mouse.x, this.y - mouse.y);
             if (d < MOUSE_RADIUS) near = 1 - d / MOUSE_RADIUS;
         }
-        const glowA = 0.05 + t * 0.05 + near * 0.22;
-        const coreA = 0.26 + t * 0.16 + near * 0.32;
+        const glowA = (0.05 + t * 0.05 + near * 0.22) * BOOST;
+        const coreA = (0.26 + t * 0.16 + near * 0.32) * (LIGHT_THEME ? 1.7 : 1);
 
         // Soft radial glow (drawn additively for a neon feel)
         const halo = r * 5;
@@ -451,7 +455,7 @@
                     ctx.beginPath();
                     ctx.moveTo(a.x, a.y);
                     ctx.lineTo(b.x, b.y);
-                    ctx.strokeStyle = 'rgba(' + BLUE + ', ' + Math.min(0.4, opacity * 0.19) + ')';
+                    ctx.strokeStyle = 'rgba(' + BLUE + ', ' + Math.min(0.4 * BOOST, opacity * 0.19 * BOOST) + ')';
                     ctx.lineWidth = 1.1;
                     ctx.stroke();
                 }
@@ -481,7 +485,7 @@
         const rr = 2.6 * fade + 0.6;
         const halo = rr * 4;
         const g = ctx.createRadialGradient(x, y, 0, x, y, halo);
-        g.addColorStop(0, 'rgba(' + BLUE_CORE + ', ' + (0.4 * fade) + ')');
+        g.addColorStop(0, 'rgba(' + BLUE_CORE + ', ' + (Math.min(1, 0.4 * fade * BOOST)) + ')');
         g.addColorStop(1, 'rgba(' + BLUE + ', 0)');
         ctx.fillStyle = g;
         ctx.beginPath();
