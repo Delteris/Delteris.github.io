@@ -6,7 +6,7 @@
 {%- endcomment -%}
 {%- assign L = page.lang | default: 'en' -%}
 {%- if include.product == 'atlas' -%}
-{%- if L == 'pt' %}{% assign src = '/static/wpsm/pt/library.webp' %}{% assign alt = 'Biblioteca de WPS do Atlas: lista de WPS importadas com os campos lidos e o WPQR ligado' %}{% elsif L == 'es' %}{% assign src = '/static/wpsm/es/library.webp' %}{% assign alt = 'Biblioteca de WPS de Atlas: lista de WPS importadas con los campos leídos y el WPQR vinculado' %}{% else %}{% assign src = '/static/wpsm/library.webp' %}{% assign alt = 'Atlas WPS library: imported WPS with their parsed fields and linked WPQR' %}{% endif %}
+{%- if L == 'pt' %}{% assign src = '/static/wpsm/pt/door-library.webp' %}{% assign alt = 'Biblioteca de WPS do Atlas: lista de WPS importadas com os campos lidos e o WPQR ligado' %}{% elsif L == 'es' %}{% assign src = '/static/wpsm/es/door-library.webp' %}{% assign alt = 'Biblioteca de WPS de Atlas: lista de WPS importadas con los campos leídos y el WPQR vinculado' %}{% else %}{% assign src = '/static/wpsm/door-library.webp' %}{% assign alt = 'Atlas WPS library: imported WPS with their parsed fields and linked WPQR' %}{% endif %}
                     <div class="door-shot door-shot-photo">
                         <img class="shot-light" src="{{ src | replace: '/static/wpsm/', '/static/wpsm/light/' }}" width="1600" height="900" loading="lazy" decoding="async" alt="{{ alt }}">
                         <img class="shot-dark" src="{{ src }}" width="1600" height="900" loading="lazy" decoding="async" alt="{{ alt }}">

@@ -6,6 +6,8 @@ the overview), recaptured 3 Nov 2026 with the Meridian Fabrication demo seed
   /static/wpsm/[pt|es/]<name>.webp         dark theme (shown when the site is dark)
   /static/wpsm/light/[pt|es/]<name>.webp   light theme (the site's default)
 The app-shot and door-shot includes put both in the page; CSS shows the one matching the theme.
+door-library.webp is the homepage Atlas card (Library top, MER-WPS-001 open); its crop is set in
+style.css (.door-shot-photo img). library.webp shows MER-WPS-001's header block and full pass table.
 For the review shot, heat input on MER-WPS-001..010 was marked as calculated (the form left it
 blank), as an import of such forms does, so the queue has work in it. Recapture at 1.3 release.
 

@@ -5038,7 +5038,7 @@ button.app-figure-frame:focus-visible .app-figure-zoom-hint {
     top: 0;
     left: 0;
     width: 165%;
-    transform: translate(-0.5%, -38%);
+    transform: translate(-0.5%, -28%);   /* door-library.webp (Atlas 1.2): list + MER-WPS-001 status rows */
     max-width: none;
     height: auto;
     opacity: 0.92;
