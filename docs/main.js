@@ -294,7 +294,6 @@
         BLUE = LIGHT_THEME ? '37, 99, 235' : '96, 165, 250';
         BLUE_CORE = LIGHT_THEME ? '29, 78, 216' : '191, 219, 254';
         BOOST = LIGHT_THEME ? 1.2 : 1;
-        canvas.style.opacity = '';
     }
     readCanvasTheme();
     document.addEventListener('delteris:themechange', readCanvasTheme);
@@ -518,8 +517,9 @@
         drawConnections();
         for (let i = 0; i < particles.length; i++) particles[i].draw();
 
-        // Occasionally emit a new data pulse (density scaled to node count)
-        if (!prefersReducedMotion && frame % 26 === 0 && pulses.length < 14) spawnPulse();
+        // Rarely emit a data pulse: travelling light is the most attention-grabbing
+        // part of the field, so it stays an occasional accent (was every 26 frames, 14 max).
+        if (!prefersReducedMotion && frame % 90 === 0 && pulses.length < 4) spawnPulse();
         pulses = pulses.filter(function (p) {
             const alive = p.update();
             if (alive) p.draw();
@@ -534,6 +534,28 @@
         drawFrame();
         animationId = requestAnimationFrame(animate);
     }
+    function stop() { if (animationId) cancelAnimationFrame(animationId); animationId = null; }
+
+    // ---- Fade out as the reader scrolls past the first screen ----
+    // The field is an opening statement, not wallpaper: it is fully there on the
+    // first screen, fades out over the next ~60% of a screen, and stops drawing
+    // once invisible (scrolling back up brings it back). Motion behind body copy
+    // pulls the eye away from reading, which is where buyers decide.
+    let scrollFade = 1;
+    let fadeQueued = false;
+    function applyFade() {
+        fadeQueued = false;
+        const vh = window.innerHeight || 800;
+        const t = (window.scrollY - vh * 0.25) / (vh * 0.6);
+        scrollFade = Math.max(0, Math.min(1, 1 - t));
+        canvas.style.opacity = String(scrollFade);
+        if (prefersReducedMotion) return;
+        if (scrollFade === 0) stop();
+        else if (!animationId && !document.hidden) animate();
+    }
+    window.addEventListener('scroll', function () {
+        if (!fadeQueued) { fadeQueued = true; requestAnimationFrame(applyFade); }
+    }, { passive: true });
 
     // ---- Pointer tracking — cursor (desktop) and finger (touch) ----
     // The field follows the pointer while it moves and releases the moment it
@@ -597,7 +619,7 @@
         if (document.hidden) {
             if (animationId) cancelAnimationFrame(animationId);
             animationId = null;
-        } else if (!animationId) {
+        } else if (!animationId && scrollFade > 0) {
             animate();
         }
     });
@@ -608,8 +630,10 @@
     if (prefersReducedMotion) {
         // Render a single static frame — no motion, no pulses
         drawFrame();
+        applyFade();
     } else {
         animate();
+        applyFade();
     }
 })();
 

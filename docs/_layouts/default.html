@@ -138,7 +138,13 @@
 {%- unless page.minimal_head %}
     <a class="skip-link" href="#main">Skip to content</a>
 {%- endunless %}
+{%- comment %} The network lattice belongs to the network products: the homepage and the Elenchon
+     platform/security pages (and any page with `lattice: true`, e.g. future Phrakton pages).
+     Atlas pages, guides and pricing stay plain so the copy and screenshots carry them. {%- endcomment %}
+{%- assign lattice_pages = '/,/pt/,/es/,/index.html,/pt/index.html,/es/index.html,/elenchon-platform.html,/pt/elenchon-platform.html,/es/elenchon-platform.html,/elenchon-security.html,/pt/elenchon-security.html,/es/elenchon-security.html' | split: ',' -%}
+{%- if page.lattice or lattice_pages contains page.url %}
     <canvas id="network-canvas" aria-hidden="true"></canvas>
+{%- endif %}
 
 {% include nav.html %}
 
