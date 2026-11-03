@@ -1051,7 +1051,10 @@
 
     triggers.forEach(function (btn) {
         btn.addEventListener('click', function () {
-            var img = btn.querySelector('img');
+            // A frame can hold a light and a dark capture; zoom the one the theme shows.
+            var img = Array.prototype.filter.call(btn.querySelectorAll('img'), function (i) {
+                return i.getClientRects().length > 0;
+            })[0] || btn.querySelector('img');
             var fig = btn.closest('figure');
             var cap = fig ? fig.querySelector('figcaption') : null;
             if (img) openBox(img, cap ? cap.textContent.trim() : '');

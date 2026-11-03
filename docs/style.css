@@ -5533,6 +5533,15 @@ button.app-figure-frame:focus-visible .app-figure-zoom-hint {
 }
 .hero .demo-line, .page-hero .demo-line, .contact-note + .demo-line { text-align: center; }
 
+/* Light/dark app screenshots: show the capture that matches the theme */
+.shot-dark { display: none !important; }
+:root[data-theme="dark"] .shot-light { display: none !important; }
+:root[data-theme="dark"] .shot-dark { display: block !important; }
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .shot-light { display: none !important; }
+    :root:not([data-theme="light"]) .shot-dark { display: block !important; }
+}
+
 /* ---------- Light / dark theme toggle ---------- */
 .theme-toggle {
     -webkit-appearance: none;
