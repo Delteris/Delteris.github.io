@@ -1881,7 +1881,7 @@ nav {
 .summary-panel h2,
 .compliance-panel h2,
 .roadmap-panel h2 {
-    font-size: clamp(1.5rem, 3.5vw, 2.1rem);
+    font-size: clamp(1.7rem, 4vw, 2.4rem);
     margin-bottom: 1.25rem;
 }
 
@@ -2179,6 +2179,10 @@ nav {
     border: 1px solid var(--t-3b82f6-18);
     border-radius: var(--radius);
     padding: 3.5rem 3rem;
+}
+
+.dark-panel h2 {
+    font-size: clamp(1.7rem, 4vw, 2.4rem);
 }
 
 .security-intro {
@@ -5606,7 +5610,7 @@ button.app-figure-frame:focus-visible .app-figure-zoom-hint {
 }
 .feature-row-reverse .feature-row-text { order: 2; }
 .feature-row-reverse .feature-row-shot { order: 1; }
-.feature-row-text h2 { margin: 0.4rem 0 0.9rem; }
+.feature-row-text h2 { margin: 0.4rem 0 0.9rem; font-size: clamp(1.7rem, 4vw, 2.4rem); }
 .feature-row-text p { color: var(--text-muted); }
 @media (max-width: 900px) {
     .feature-row { grid-template-columns: 1fr; }
