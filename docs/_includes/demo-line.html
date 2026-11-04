@@ -13,6 +13,7 @@ Prefer to see it first? <a href="mailto:contact@delteris.com?subject=Elenchon%20
 </p>
 
 {%- comment %} Honest-fit line (4 Nov 2026): invites doubters to say why Atlas may not fit; the team replies honestly, even when the answer is "not us". {%- endcomment %}
+{%- unless include.fit == "no" %}
 <p class="demo-line fit-line">
 {%- if dl == 'pt' -%}
 Não tem a certeza de que o Atlas serve a sua empresa? <a href="mailto:contact@delteris.com?subject=Elenchon%20Atlas%20%E2%80%94%20Ser%C3%A1%20que%20nos%20serve%3F">Diga-nos porquê</a>. Damos-lhe uma resposta sincera, normalmente no próprio dia, mesmo que seja «o Atlas não é para vocês».
@@ -22,3 +23,4 @@ Não tem a certeza de que o Atlas serve a sua empresa? <a href="mailto:contact@d
 Not sure Atlas fits your shop? <a href="mailto:contact@delteris.com?subject=Elenchon%20Atlas%20%E2%80%94%20Is%20it%20right%20for%20us%3F">Tell us why</a>. We'll give you an honest answer, usually within a day, even if it's &ldquo;Atlas isn&rsquo;t for you&rdquo;.
 {%- endif -%}
 </p>
+{%- endunless %}
