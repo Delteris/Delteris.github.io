@@ -1235,7 +1235,8 @@
 
 /* Campaign metrics: anonymous totals on our own server (Archon, archon.delteris.com).
    Sends only the event, the page path and the link's utm_* tags. No cookies, no
-   storage written, no IDs, no referrer, no full URL. The tags live in this variable for the
+   storage written, no IDs, no referrer, no full URL. Whether the page was reached
+   from outside the site is worked out here and sent only as the "arrival" event. The tags live in this variable for the
    page's lifetime and are removed from the address bar, so a reload or a shared
    copy of the URL is not counted as another campaign visit. */
 (function () {
@@ -1265,6 +1266,21 @@
         try { if (navigator.sendBeacon && navigator.sendBeacon(url, body)) return; } catch (e) {}
         try { fetch(url, { method: 'POST', body: body, keepalive: true, mode: 'no-cors', credentials: 'omit' }); } catch (e) {}
     }
+    // Arrival: the page was reached from outside the site (another site, an e-mail,
+    // a typed or bookmarked address), not by a link on the site, a reload or
+    // back/forward. Archon counts these as estimated sessions; the referrer itself
+    // never leaves the browser.
+    function isArrival() {
+        try {
+            var nav = performance.getEntriesByType && performance.getEntriesByType('navigation')[0];
+            if (nav && (nav.type === 'reload' || nav.type === 'back_forward')) return false;
+        } catch (e) {}
+        var host = '';
+        try { host = document.referrer ? new URL(document.referrer).hostname : ''; } catch (e) {}
+        var bare = function (h) { return h.replace(/^www\./, ''); };
+        return !host || bare(host) !== bare(location.hostname);
+    }
+    var arrival = isArrival();
     // A visit counts once the page has been visible for a second (background tabs wait).
     function arm() {
         if (document.visibilityState === 'hidden') {
@@ -1273,7 +1289,11 @@
             });
             return;
         }
-        setTimeout(function () { if (document.visibilityState !== 'hidden') send('visit'); else arm(); }, 1000);
+        setTimeout(function () {
+            if (document.visibilityState === 'hidden') { arm(); return; }
+            send('visit');
+            if (arrival) send('arrival');
+        }, 1000);
     }
     arm();
     // Human confirmation: one real gesture (wheel, pointer move/press, touch, key) at
