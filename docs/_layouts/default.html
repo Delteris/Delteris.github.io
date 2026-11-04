@@ -83,9 +83,7 @@
     <meta name="twitter:image" content="{{ page.og_image | default: '/static/favicon-512.png' | absolute_url }}">
 {%- endunless %}
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;600;700&display=swap">
+    <link rel="preload" href="/static/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 {%- comment %} Structured data. The schema templates (_includes/schema/) are shared by the
      EN/PT/ES versions of a page and read these sx_* variables, so each language
      outputs its own URL, name, description and inLanguage. Product names stay as
