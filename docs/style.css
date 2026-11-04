@@ -5593,6 +5593,7 @@ button.app-figure-frame:focus-visible .app-figure-zoom-hint {
     color: var(--text-muted);
 }
 .hero .demo-line, .page-hero .demo-line, .contact-note + .demo-line { text-align: center; }
+.demo-line + .fit-line { margin-top: 0.35rem; }
 
 /* ---------- Text beside screenshot (Atlas page rows, Nov 2026) ---------- */
 .feature-row .app-figure { max-width: none; margin: 0; }
