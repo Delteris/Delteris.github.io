@@ -1236,7 +1236,8 @@
 /* Campaign metrics: anonymous totals on our own server (Archon, archon.delteris.com).
    Sends only the event, the page path and the link's utm_* tags. No cookies, no
    storage written, no IDs, no referrer, no full URL. Whether the page was reached
-   from outside the site is worked out here and sent only as the "arrival" event. The tags live in this variable for the
+   from outside the site is worked out here and sent only as the "arrival" and
+   "arrival-human" events. The tags live in this variable for the
    page's lifetime and are removed from the address bar, so a reload or a shared
    copy of the URL is not counted as another campaign visit. */
 (function () {
@@ -1309,6 +1310,9 @@
         if (now() < HUMAN_MS) return;
         gestures.forEach(function (g) { window.removeEventListener(g, onGesture, true); });
         send('human');
+        // Same page view was an arrival: lets Archon count verified arrivals
+        // without linking the two beacons.
+        if (arrival) send('arrival-human');
     }
     gestures.forEach(function (g) { window.addEventListener(g, onGesture, { capture: true, passive: true }); });
     document.querySelectorAll('.atlas-video video').forEach(function (v) {
