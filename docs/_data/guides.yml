@@ -38,11 +38,11 @@ groups:
     name:
       en: "welder qualification"
       pt: "qualificação de soldadores"
-      es: "cualificación de soldadores"
+      es: "homologación de soldadores"
     title:
       en: "Welder Qualification"
       pt: "Qualificação de Soldadores"
-      es: "Cualificación de Soldadores"
+      es: "Homologación de Soldadores"
     intro:
       en: "A certificate on file is not the same as a qualified welder. For when you need to know what keeps a qualification alive and what quietly ends it."
       pt: "Um certificado arquivado não é o mesmo que um soldador qualificado. Para quando precisa de saber o que mantém uma qualificação válida e o que a faz caducar sem aviso."
@@ -145,7 +145,7 @@ guides:
     title:
       en: "Welder qualification validity: continuity, expiry and revalidation"
       pt: "Validade da qualificação de soldadores: continuidade, caducidade e revalidação"
-      es: "Validez de la cualificación de soldadores: continuidad, caducidad y revalidación"
+      es: "Validez de la homologación de soldadores: continuidad, caducidad y revalidación"
     summary:
       en: "The ISO 9606-1 six-month confirmation, the three revalidation routes and ASME IX's expiry rule, in one table."
       pt: "A confirmação semestral da ISO 9606-1, as três vias de revalidação e a regra de caducidade da ASME IX, numa tabela."
