@@ -1235,9 +1235,10 @@
 
 /* Campaign metrics: anonymous totals on our own server (Archon, archon.delteris.com).
    Sends only the event, the page path and the link's utm_* tags. No cookies, no
-   storage written, no IDs, no referrer, no full URL. Whether the page was reached
-   from outside the site is worked out here and sent only as the "arrival" and
-   "arrival-human" events. The tags live in this variable for the
+   storage written, no IDs, no full URL. Whether the page was reached from outside
+   the site is worked out here and sent as the "arrival" and "arrival-human"
+   events; for untagged arrivals they also carry the referring site's domain
+   ("google.com", or "direct"), never its page or URL. The tags live in this variable for the
    page's lifetime and are removed from the address bar, so a reload or a shared
    copy of the URL is not counted as another campaign visit. */
 (function () {
@@ -1258,30 +1259,33 @@
         history.replaceState(history.state, '', location.pathname + (rest.length ? '?' + rest.join('&') : '') + location.hash);
     }
     var sent = {};
-    function send(event) {
+    function send(event, extra) {
         if (sent[event]) return;
         sent[event] = true;
         var body = { event: event, path: location.pathname, t: Math.round(window.performance ? performance.now() : 0) };
         for (var k in tags) body[k] = tags[k];
+        for (var x in extra || {}) body[x] = extra[x];
         body = JSON.stringify(body);
         try { if (navigator.sendBeacon && navigator.sendBeacon(url, body)) return; } catch (e) {}
         try { fetch(url, { method: 'POST', body: body, keepalive: true, mode: 'no-cors', credentials: 'omit' }); } catch (e) {}
     }
     // Arrival: the page was reached from outside the site (another site, an e-mail,
     // a typed or bookmarked address), not by a link on the site, a reload or
-    // back/forward. Archon counts these as estimated sessions; the referrer itself
-    // never leaves the browser.
+    // back/forward. Archon counts these as estimated sessions. Of the referrer only
+    // the site's domain is sent, and only on untagged arrivals (Archon's
+    // "Where arrivals came from"); its page and URL never leave the browser.
+    var refHost = '';
+    try { refHost = document.referrer ? new URL(document.referrer).hostname.toLowerCase() : ''; } catch (e) {}
+    function bare(h) { return h.replace(/^www\./, ''); }
     function isArrival() {
         try {
             var nav = performance.getEntriesByType && performance.getEntriesByType('navigation')[0];
             if (nav && (nav.type === 'reload' || nav.type === 'back_forward')) return false;
         } catch (e) {}
-        var host = '';
-        try { host = document.referrer ? new URL(document.referrer).hostname : ''; } catch (e) {}
-        var bare = function (h) { return h.replace(/^www\./, ''); };
-        return !host || bare(host) !== bare(location.hostname);
+        return !refHost || bare(refHost) !== bare(location.hostname);
     }
     var arrival = isArrival();
+    var arrivalInfo = tags.campaign ? {} : { ref: refHost ? bare(refHost).slice(0, 64) : 'direct' };
     // A visit counts once the page has been visible for a second (background tabs wait).
     function arm() {
         if (document.visibilityState === 'hidden') {
@@ -1293,7 +1297,7 @@
         setTimeout(function () {
             if (document.visibilityState === 'hidden') { arm(); return; }
             send('visit');
-            if (arrival) send('arrival');
+            if (arrival) send('arrival', arrivalInfo);
         }, 1000);
     }
     arm();
@@ -1312,7 +1316,7 @@
         send('human');
         // Same page view was an arrival: lets Archon count verified arrivals
         // without linking the two beacons.
-        if (arrival) send('arrival-human');
+        if (arrival) send('arrival-human', arrivalInfo);
     }
     gestures.forEach(function (g) { window.addEventListener(g, onGesture, { capture: true, passive: true }); });
     document.querySelectorAll('.atlas-video video').forEach(function (v) {
