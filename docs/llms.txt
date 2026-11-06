@@ -45,7 +45,7 @@ A full plan-by-plan feature comparison (every capability by Lite/Standard/Premiu
 - No per-audit fees, no lock-in — customers who cancel keep view-only access to historical data for audits.
 
 ## Deployment
-Three steps: scoping session with our team, on-site installation of the hardware appliance, then onboarding and go-live. Deployment slots per quarter are limited because every appliance is installed on-site by Delteris engineers. Lite deployments skip the separate scoping visit — one on-site trip instead of two — and include a single training session of two 2-hour blocks; Standard includes the scoping visit (typically about half a day on-site) and training run as two 3-hour blocks.
+Three steps: scoping session with our team, on-site installation of the hardware appliance, then onboarding and go-live. Deployment slots per quarter are limited because every appliance is installed on-site by the Delteris team. Lite deployments skip the separate scoping visit — one on-site trip instead of two — and include a single training session of two 2-hour blocks; Standard includes the scoping visit (typically about half a day on-site) and training run as two 3-hour blocks.
 
 ## Links
 - Home: https://delteris.com/
